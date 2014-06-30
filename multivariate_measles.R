@@ -1,7 +1,7 @@
 ## regression analyses - measles
 ## get data
 # set wd
-setwd("~/Cambridge/Massey 2014/DHayman_20140627")
+setwd("~/Massey 2014/DHayman_20140627")
 # read data
 data<-read.csv("DHayman_20140627.csv",header=T)
 names(data)
@@ -92,3 +92,15 @@ summary.lm(model6)
 ## results - though many age categries, richer more likely, 1-3 & 9-13 Yrs, Europeans 
 ## caveats - temporal and spatial autocorrelation, though year random effect
 ## caveats - no "per capita" analyses - just raw data
+
+## glm
+hist(testtable$Cases,breaks=seq(0,max(testtable$Cases),by=5))
+## doesn't appear zero inflated, poisson should be okay - can check
+
+## glm with Poisson errors
+# start with full model
+model7<-glm(Cases~NZDep*Age*Ethnicity,data=testtable,family=poisson)
+summary(model7)
+summary.lm(model7)
+?summary.lm
+# why difference?
