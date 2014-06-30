@@ -74,7 +74,7 @@ levels(testtable$Age)[c(5:10)]<-"Old"
 
 model3<-aov(Cases~NZDep*Age*Ethnicity,data=testtable)
 summary(model3)
-summary.lm(model3)
+summary.aov(model3)
 # looks like no need to keep interaction terms
 
 ## account for random year effect (proxy for outbreak)
@@ -87,7 +87,7 @@ summary(model5)
 
 model6<-aov(Cases~NZDep+Age+Ethnicity,data=testtable)
 summary(model6)
-summary.lm(model6)
+summary.aov(model6)
 
 ## results - though many age categries, richer more likely, 1-3 & 9-13 Yrs, Europeans 
 ## caveats - temporal and spatial autocorrelation, though year random effect
