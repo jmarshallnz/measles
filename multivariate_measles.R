@@ -100,7 +100,7 @@ hist(testtable$Cases,breaks=seq(0,max(testtable$Cases),by=5))
 ## glm with Poisson errors
 # start with full model
 model7<-glm(Cases~NZDep*Age*Ethnicity,data=testtable,family=poisson)
+
 summary(model7)
-summary.lm(model7)
-?summary.lm
+anova(model7,test="Chi")
 # why difference?

@@ -1,0 +1,524 @@
+
+\documentclass{article}
+
+\usepackage{times}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{bibunits}
+\usepackage{natbib}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage[utf8]{inputenc}
+
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\cov}{cov}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\title{Measles risk assessment and cost interim report\\ \vspace{2 mm} {\large David T S Hayman, Tim Carpenter,\\ Jonathan C Marshall, Nigel P French}}
+\author{mEpiLab and EpiCentre,\\ Infectious Diseases Research Centre,\\
+Massey University,\\
+Palmerston North 4442,\\
+New Zealand\\
+\href{mailto: D.T.S.Hayman@massey.ac.nz}{D.T.S.Hayman@massey.ac.nz}}  %\texttt formats the text to a typewriter style font
+\date{\today}  %\today is replaced with the current date
+\maketitle
+
+\section{Abstract}
+
+Summary of findings
+
+\section{Background}
+
+As a member of the World Health Organization (WHO) Western Pacific Region, New Zealand is committted to work towards measles elimination, defined as the interruption of endemic (domestic) measles virus transmission, as achieved in the Americas in 2002. The Western Pacific Region is expected to be the second WHO region to  achieve measles elimination and it was announced that in March 2014 that Australia, Macao, Mongolia and the Republic of Korea have achieved this.
+
+The last widespread measles outbreaks in New Zealand occurred in 1991 and in 1997. Since then, smaller but significant outbreaks have occurred in 2009 (mainly in Canterbury) and in 2011/2012 (mainly in Auckland region) and another significant outbreak is currently going on in Auckland region. The outbreak in 2011-2012 lasted for more than 12 months and the current 2013/2014 outbreak started at the end of December 2013 (as on \date{\today}). In 2013, prior to the 2013/2014 outbreak, New Zealand was advised by the Western Pacific Regional Verification Commission for Measles Elimination (RVC) it can request verification of non-endemic status three years after the last case of the 2011-12 outbreak in June 2012.
+
+Previous analyses, including two of measles in New Zealand by Prof. Roberts (INSERT REFS), have estimated that the interruption of measles virus transmission can be achieved by herd immunity when approximately 95 percent of the population is homogeneously immune to measles. Thus, while New Zealand immunisation activities have led to measles outbreaks becoming less frequent, with decreasing numbers of cases, as described above, outbreaks still occur. Current overall population immunity estimates suggest that approximately 85 to 90 percent of the population is immune to measles, thus the reasons for the ongoing outbreaks are perhaps likely due to overall population immunity being less than 95 percent and there being pockets of susceptible, non-immune population remaining. Since 2009, all the outbreaks in New Zealand were linked to infections acquired (imported) from overseas, though previous work suggests these outbreaks still largely affect school-aged children and children under two years of age. Under two year olds are thought be be consistently among the most affected age groups because the first of two doses of measles, mumps and rubella vaccine (MMR) is not due until fifteen months.
+
+\section{Risk analysis review}
+
+A measles risk assessment has been started by the Ministry of Health to better assess current and future population immunity and high risk groups. Given the current measles outbreak, measles control is a priority for the Ministry and resources are available to control this outbreak and decrease the risk of future outbreaks.
+\begin{itemize}
+\item In this section we review the confidential report to the Western Pacific Regional Verification Commission for Measles Elimination risk assessment provided by the Ministry, titled \emph {Progress Towards Measles Elimination in New Zealand - Final}.
+\end{itemize}
+
+Overall, we thought the review was very thorough. The report included substantial background information on measles immunisation in New Zealand (\emph{section 1.3}), the epidemiology of measles in New Zealand (\emph{section 2}), the quality of epidemiological surveillance and laboratory testing for measles (\emph{section 3}), and the levels of population immunity against the virus (\emph{section 4}). Additional details are included for many aspects of measles epidemiology and control, not least regarding the recent MMR coverage rates by birth cohort in New Zealand (\emph{section 4.2}) and the sustainability of the national immunisation programme (\emph{section 5}).
+
+Within the report there are many tables and figures which given substantial detail on the measles situation in New Zealand. Overall these were of high quality, reporting both absolute measles case numbers and rates per 100,000 population in New Zealand.
+
+Specific epidemiological details were provided for the 2011/2012 outbreak including \emph{Figure 4}, the number and classification of measles notifications in New Zealand by month, 2011 and 2012, with additional breakdown by age group, 2011 and 2012 (\emph{Figure 5}) and per 100,000 population (e.g. \emph{Figures 6-8}). Similar presentation of the case data are provided for ethnicity (e.g. \emph{Figures 9-10}) and New Zealand Index of Deprivation (NZDep) (e.g. \emph{Figures 11-13}). Three figures,\emph{Figures 12, 13, and 28}, show that there is spatial clustering of cases.
+
+[INSERT NEED FOR MULTIVARIATE ANALYSES HERE?]
+
+The report concludes that New Zealand's surveillance system has been performing well and that the Ministry is confident that measles has not been circulating since June 2012 and has not become endemic in NZ. We agree with this statement, but have included additional analyses on the current outbreak that [DEMONSTRATE/SUGGEST ...INSERT THE CONCLUSIONS RE R0]
+
+Vaccination coverage presented in the report and to ourselves confirms that immunisation levels are approaching 94\% for MMR dose one (birth cohorts 2009 and 2010) and 89\% for MMR dose two (birth cohorts 2006 and 2007) and only Asian and Pacific ethnicities have consistently had MMR dose one coverage approching or over 95\% levels for cohorts from 2007 onwards. [COMMENT ON AGREEMENT HERE?] Furthermore, ... [COMMENT ON REFUSAL RATE?]
+
+The report also concludes that increased immunisation uptake during the 2011-2012 outbreak, especially in the Auckland region, likely contributed to minimise the number of cases. [COMMENT? Unsure, though don't want to be dismissive].
+
+The development of a National Immunisation Register (NIR) that allows tracking of the vaccination status of children is very useful. [COMMENT ON NEED FOR FINER IMMUNISATION LEVEL DATA HERE?]. The report conludes that the surveillance performance indicators demonstrate a reasonable measles surveillance capability in New Zealand. We [COMMENT ON THIS, GIVEN JONATHAN'S FINDINGS]?.
+
+We agree with the report's conclusions that testing for measles is performed appropriately within the required timeframe, but clearly improving inter-laboratory communication and collaboration and timeliness of the testing and reporting is necessary.
+
+\section{Additional risk analyses}
+
+In this section we provide ... [].
+
+\section{Cost analyses}
+
+In this section we provide ... [].
+
+
+<<frequentist>>=
+library(mcmc)
+data(logit)
+out <- glm(y ~ x1 + x2 + x3 + x4, data = logit,
+    family = binomial())
+summary(out)
+@
+
+...text
+
+
+<<log.unnormalized.posterior>>=
+x <- logit
+x$y <- NULL
+x <- as.matrix(x)
+x <- cbind(1, x)
+dimnames(x) <- NULL
+
+y <- logit$y
+
+lupost <- function(beta, x, y) {
+    eta <- x %*% beta
+    p <- 1 / (1 + exp(- eta))   # note: works even when eta is Inf or -Inf
+    logl <- sum(log(p[y == 1])) + sum(log(1 - p[y == 0]))
+    return(logl + sum(dnorm(beta, 0, 2, log = TRUE)))
+}
+@
+
+\section{Future analyses}
+
+We received The Institute of Environmental Science and Research Ltd (ESR) EpiSurv measles case data on the 27 June 2014. Additional analyses we wish to do are:
+\begin{itemize}
+\item ...[]
+\end{itemize}
+
+\section{Future analyses}
+
+We received The Institute of Environmental Science and Research Ltd (ESR) EpiSurv measles case data on the 27 June 2014. Additional analyses we wish to do are:
+\begin{itemize}
+\item ...[]
+\end{itemize}
+
+<<metropolis-try-1>>=
+set.seed(42)    # to get reproducible results
+beta.init <- as.numeric(coefficients(out))
+out <- metrop(lupost, beta.init, 1e3, x = x, y = y)
+names(out)
+out$accept
+@
+
+...text
+
+\begin{itemize}
+\item ...text.
+\end{itemize}
+
+...text
+
+\citet{geyer-temp} ...text
+
+<<metropolis-try-2>>=
+out <- metrop(out, scale = 0.1, x = x, y = y)
+out$accept
+out <- metrop(out, scale = 0.3, x = x, y = y)
+out$accept
+out <- metrop(out, scale = 0.5, x = x, y = y)
+out$accept
+out <- metrop(out, scale = 0.4, x = x, y = y)
+out$accept
+@
+
+...text
+
+<<label=metropolis-try-3>>=
+out <- metrop(out, nbatch = 1e4, x = x, y = y)
+out$accept
+out$time
+@
+
+Figure~\ref{fig:fig1} (page~\pageref{fig:fig1})
+shows the time series plot made by the R statement
+<<label=fig1too,include=FALSE>>=
+plot(ts(out$batch))
+@
+\begin{figure}
+\begin{center}
+<<label=fig1,fig=TRUE,echo=FALSE>>=
+<<fig1too>>
+@
+\end{center}
+\caption{Time series plot of MCMC output.}
+\label{fig:fig1}
+\end{figure}
+
+Another way to look at the output is an autocorrelation plot.
+Figure~\ref{fig:fig2} (page~\pageref{fig:fig2})
+shows the time series plot made by the R statement
+<<label=fig2too,include=FALSE>>=
+acf(out$batch)
+@
+\begin{figure}
+\begin{center}
+<<label=fig2,fig=TRUE,echo=FALSE>>=
+<<fig2too>>
+@
+\end{center}
+\caption{Autocorrelation plot of MCMC output.}
+\label{fig:fig2}
+\end{figure}
+
+...text
+\begin{verbatim}
+http://www.stat.umn.edu/~charlie/mcmc/diag.html
+\end{verbatim}
+says
+\begin{quotation}
+...text
+\end{quotation}
+...text
+...text
+\section{Monte Carlo Estimates and Standard Errors}
+
+<<label=metropolis-try-4>>=
+out <- metrop(out, nbatch = 1e2, blen = 100,
+    outfun = function(z, ...) c(z, z^2), x = x, y = y)
+out$accept
+out$time
+@
+
+We have added an argument \verb@outfun@ ...text
+We need to
+use the identity
+$$
+   \var(X) = E(X^2) - E(X)^2
+$$
+...text
+Hence our \verb@outfun@ returns
+\verb@c(z, z^2)@ for an argument (the state vector) \verb@z@.
+
+The \verb@...@ argument to \verb@outfun@ is required, since the
+function is also passed the other arguments (here \verb@x@ and \verb@y@)
+to \verb@metrop@.
+
+\subsection{Simple Means}
+
+The grand means (means of batch means) are
+<<label=metropolis-batch>>=
+apply(out$batch, 2, mean)
+@
+...text
+<<label=metropolis-batch-too>>=
+foo <- apply(out$batch, 2, mean)
+mu <- foo[1:5]
+sigmasq <- foo[6:10] - mu^2
+mu
+sigmasq
+@
+
+...text
+<<label=metropolis-mcse-mu>>=
+mu.mcse <- apply(out$batch[ , 1:5], 2, sd) / sqrt(out$nbatch)
+mu.mcse
+@
+The extra factor \verb@sqrt(out$nbatch)@ arises because the batch means
+have variance $\sigma^2 / b$ where $b$ is the batch length, which is
+\verb@out$blen@,
+whereas the overall means \verb@mu@ have variance $\sigma^2 / n$ where
+$n$ is the total number of iterations, which is \verb@out$blen * out$nbatch@.
+
+\subsection{Functions of Means}
+
+To get the MCSE for the posterior variances we apply the delta method.
+Let $u_i$ denote the sequence of batch means of the first kind for one
+parameter and $\bar{u}$ the grand mean (the estimate of the posterior mean
+of that parameter),
+let $v_i$ denote the sequence of batch means of the second kind for the
+same parameter and $\bar{v}$ the grand mean (the estimate of the posterior
+second absolute moment of that parameter), and let $\mu = E(\bar{u})$ and
+$\nu = E(\bar{v})$.  Then the delta method linearizes the nonlinear function
+$$
+   g(\mu, \nu) = \nu - \mu^2
+$$
+as
+$$
+   \Delta g(\mu, \nu) = \Delta \nu - 2 \mu \Delta \mu
+$$
+saying that
+$$
+   g(\bar{u}, \bar{v}) - g(\mu, \nu)
+$$
+has the same asymptotic normal distribution as
+$$
+   (\bar{v} - \nu) - 2 \mu (\bar{u} - \mu)
+$$
+which, of course, has variance \verb@1 / nbatch@ times that of
+$$
+   (v_i - \nu) - 2 \mu (u_i - \mu)
+$$
+and this variance is estimated by
+$$
+   \frac{1}{n_{\text{batch}}} \sum_{i = 1}^{n_{\text{batch}}}
+   \bigl[ (v_i - \bar{v}) - 2 \bar{u} (u_i - \bar{u}) \bigr]^2
+$$
+So
+<<label=metropolis-mcse-sigmasq>>=
+u <- out$batch[ , 1:5]
+v <- out$batch[ , 6:10]
+ubar <- apply(u, 2, mean)
+vbar <- apply(v, 2, mean)
+deltau <- sweep(u, 2, ubar)
+deltav <- sweep(v, 2, vbar)
+foo <- sweep(deltau, 2, ubar, "*")
+sigmasq.mcse <- sqrt(apply((deltav - 2 * foo)^2, 2, mean) / out$nbatch)
+sigmasq.mcse
+@
+does the MCSE for the posterior variance.
+
+Let's just check that this complicated \verb@sweep@ and \verb@apply@ stuff
+does do the right thing.
+<<label=metropolis-mcse-sigmasq-too>>=
+sqrt(mean(((v[ , 2] - vbar[2]) - 2 * ubar[2] * (u[ , 2] - ubar[2]))^2) /
+    out$nbatch)
+@
+
+\paragraph{Comment} Through version 0.5 of this vignette it contained
+an incorrect procedure for calculating this MCSE, justified by a handwave.
+Essentially, it said to use the standard deviation of the batch means called
+\verb@v@ here, which appears to be very conservative.
+
+\subsection{Functions of Functions of Means}
+
+If we are also interested in the posterior standard deviation
+(a natural question, although not asked on the exam problem),
+the delta method gives its standard error in terms of that
+for the variance
+<<label=metropolis-mcse-sigma>>=
+sigma <- sqrt(sigmasq)
+sigma.mcse <- sigmasq.mcse / (2 * sigma)
+sigma
+sigma.mcse
+@
+
+\section{A Final Run}
+
+...text...
+(the exam problem directed ``use a long enough run of your Markov chain
+sampler so that the MCSE are less than 0.01'')
+<<label=metropolis-try-5>>=
+out <- metrop(out, nbatch = 5e2, blen = 400, x = x, y = y)
+out$accept
+out$time
+<<metropolis-batch-too>>
+<<metropolis-mcse-mu>>
+<<metropolis-mcse-sigmasq>>
+<<metropolis-mcse-sigma>>
+@
+...text... \verb@xtable@ command in the \verb@xtable@ library.
+
+First the posterior means,
+\begin{table}[ht]
+\caption{Posterior Means}
+\label{tab:mu}
+\begin{center}
+<<label=tab1,echo=FALSE,results=tex>>=
+foo <- rbind(mu, mu.mcse)
+dimnames(foo) <- list(c("estimate", "MCSE"),
+    c("constant", paste("$x_", 1:4, "$", sep = "")))
+library(xtable)
+print(xtable(foo, digits = rep(4, 6),
+    align = c("l", rep("c", 5))), floating = FALSE,
+    caption.placement = "top",
+    sanitize.colnames.function = function(x) return(x))
+@
+\end{center}
+\end{table}
+then the posterior variances (table on page~\pageref{tab:sigmasq}),
+\begin{table}[ht]
+\caption{Posterior Variances}
+\label{tab:sigmasq}
+\begin{center}
+<<label=tab1,echo=FALSE,results=tex>>=
+foo <- rbind(sigmasq, sigmasq.mcse)
+dimnames(foo) <- list(c("estimate", "MCSE"),
+    c("constant", paste("$x_", 1:4, "$", sep = "")))
+library(xtable)
+print(xtable(foo, digits = rep(4, 6),
+    align = c("l", rep("c", 5))), floating = FALSE,
+    caption.placement = "top",
+    sanitize.colnames.function = function(x) return(x))
+@
+\end{center}
+\end{table}
+and finally the posterior standard deviations
+(table on page~\pageref{tab:sigma}).
+\begin{table}[ht]
+\caption{Posterior Standard Deviations}
+\label{tab:sigma}
+\begin{center}
+<<label=tab1,echo=FALSE,results=tex>>=
+foo <- rbind(sigma, sigma.mcse)
+dimnames(foo) <- list(c("estimate", "MCSE"),
+    c("constant", paste("$x_", 1:4, "$", sep = "")))
+library(xtable)
+print(xtable(foo, digits = rep(4, 6),
+    align = c("l", rep("c", 5))), floating = FALSE,
+    caption.placement = "top",
+    sanitize.colnames.function = function(x) return(x))
+@
+\end{center}
+\end{table}
+
+Note for ...
+<<label=time,echo=FALSE,results=tex>>=
+cat(out$time[1], "\n")
+@
+...text...
+
+\section{New Variance Estimation Functions}
+
+A new function \texttt{initseq} estimates variances in the Markov chain
+central limit theorem (CLT) following the methodology introduced by
+\citet[Section~3.3]{practical}.  These methods only apply to scalar-valued
+functionals of
+reversible Markov chains, but the Markov chains produced by the \texttt{metrop}
+function satisfy this condition, even, as we shall see below, when batching
+is used.
+
+...text.. AR(1) ...text... \texttt{initseq}.
+<<x>>=
+n <- 2e4
+rho <- 0.99
+x <- arima.sim(model = list(ar = rho), n = n)
+@
+...text...
+
+Define
+\begin{equation} \label{eq:little}
+   \gamma_k = \cov(X_i, X_{i + k})
+\end{equation}
+where the covariances refer to the stationary Markov chain having the
+same transition probabilities as \texttt{x}.  Then the variance in the CLT
+is
+$$
+   \sigma^2 = \gamma_0 + 2 \sum_{k = 1}^\infty \gamma_k
+$$
+\citep[Theorem~2.1]{practical}, that is,
+$$
+   \bar{x}_n \approx \text{Normal}\left(\mu, \frac{\sigma^2}{n}\right),
+$$
+where $\mu = E(X_i)$ is the quantity being estimated by MCMC (in this
+toy problem we know $\mu = 0$).
+
+Naive estimates of $\sigma^2$ obtained by plugging in empirical
+estimates of the gammas do not provide consistent estimation
+\citep[Section~3.1]{practical}.  Thus the scheme implemented
+by the R function \texttt{initseq}.  Define
+\begin{equation} \label{eq:big}
+   \Gamma_k = \gamma_{2 k} + \gamma_{2 k + 1}
+\end{equation}
+\citet[Theorem~3.1]{practical} says that $\Gamma_k$ ...text..
+\citet[Section~3.3]{practical} ...text.. Theorem~3.2.
+
+Figure~\ref{fig:gamma} (page~\pageref{fig:gamma})
+shows the time series plot made by the R statement
+<<label=figgamtoo,include=FALSE>>=
+out <- initseq(x)
+plot(seq(along = out$Gamma.pos) - 1, out$Gamma.pos,
+        xlab = "k", ylab = expression(Gamma[k]), type = "l")
+lines(seq(along = out$Gamma.dec) - 1, out$Gamma.dec, lty = "dotted")
+lines(seq(along = out$Gamma.con) - 1, out$Gamma.con, lty = "dashed")
+@
+\begin{figure}
+\begin{center}
+<<label=figgam,fig=TRUE,echo=FALSE>>=
+<<figgamtoo>>
+@
+\end{center}
+\caption{Plot ``Big Gamma'' defined by \eqref{eq:little} and \eqref{eq:big}.
+Solid line, initial positive sequence estimator.
+Dotted line, initial monotone sequence estimator.
+Dashed line, initial convex sequence estimator.}
+\label{fig:gamma}
+\end{figure}
+...text... Figure~\ref{fig:gamma}, ...text... $\sigma^2$, .... 
+<<assvar>>=
+out$var.con
+(1 + rho) / (1 - rho) * 1 / (1 - rho^2)
+@
+where for comparison we have given the exact theoretical value of $\sigma^2$,
+...text...
+<<batx>>=
+blen <- 5
+x.batch <- apply(matrix(x, nrow = blen), 2, mean)
+bout <- initseq(x.batch)
+@
+Because the batch length is too short, the variance of the batch means
+does not estimate $\sigma^2$.  We must account for the autocorrelation
+of the batches, shown in Figure~\ref{fig:gambat}.
+<<label=figgambattoo,include=FALSE>>=
+plot(seq(along = bout$Gamma.con) - 1, bout$Gamma.con,
+        xlab = "k", ylab = expression(Gamma[k]), type = "l")
+@
+\begin{figure}
+\begin{center}
+<<label=figgambat,fig=TRUE,echo=FALSE>>=
+<<figgambattoo>>
+@
+\end{center}
+\caption{Plot ``Big Gamma'' defined by \eqref{eq:little} and \eqref{eq:big}
+for the sequence of batch means (batch length \Sexpr{blen}).
+Only initial convex sequence estimator is shown.}
+\label{fig:gambat}
+\end{figure}
+...text the $\sigma^2$ for the original series.
+<<compvar>>=
+out$var.con
+bout$var.con * blen
+@
+Another way to look at this is that the MCMC estimator of $\mu$ is
+either \texttt{mean(x)} or \texttt{mean(x.batch)}.  And the variance
+must be divided by the sample size to give standard errors.  So either
+<<ci-con>>=
+mean(x) + c(-1, 1) * qnorm(0.975) * sqrt(out$var.con / length(x))
+mean(x.batch) + c(-1, 1) * qnorm(0.975) * sqrt(bout$var.con / length(x.batch))
+@
+is an asymptotic 95\% confidence interval for $\mu$.  Just divide by
+the relevant sample size.
+
+\begin{thebibliography}{}
+
+\bibitem[Gelman et al.(1996)Gelman, Roberts, and Gilks]{grg}
+Gelman, A., G.~O. Roberts, and W.~R. Gilks (1996).
+\newblock Efficient Metropolis jumping rules.
+\newblock In \emph{Bayesian Statistics, 5 (Alicante, 1994)}, pp.~599--607.
+  Oxford University Press.
+
+\bibitem[Geyer(1992)]{practical}
+Geyer, C.~J. (1992).
+\newblock Practical Markov chain Monte Carlo (with discussion).
+\newblock \emph{Statistical Science}, 7, 473--511.
+
+\bibitem[Geyer and Thompson(1995)]{geyer-temp}
+Geyer, C.~J. and E.~A. Thompson (1995).
+\newblock Annealing Markov chain Monte Carlo with applications to
+    ancestral inference.
+\newblock \emph{Journal of the American Statistical Association}, 90, 909--920.
+
+\end{thebibliography}
+
+\end{document}
