@@ -312,6 +312,23 @@ head(immigration)
 class(immigration)
 
 ##
+
+## silly dataset contains weird comma's that R doesn't detect as the thousands separator.
+## This magic fixes it...
+
+# convert to characters
+num_clients_char <- as.character(immigration$Number.of.Clients)
+# split up by the silly comma
+num_clients_split <- strsplit(num_clients_char, ",")
+# now combine back
+combine_thousands <- function(x)
+{
+  x <- as.numeric(x)
+  thousand_power <- ((length(x):1)-1)*3
+  sum(10^thousand_power*x)
+}
+immigration$Number.of.Clients <- sapply(num_clients_split, combine_thousands)
+
 class(immigration$Month.of.Arrival)
 test<-aggregate( cbind(  Number.of.Clients ) ~ Nationality , data = immigration , sum )
 dim(test)
