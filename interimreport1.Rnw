@@ -10,6 +10,7 @@
 \usepackage{amsmath}
 \usepackage{indentfirst}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 
 \DeclareMathOperator{\var}{var}
 \DeclareMathOperator{\cov}{cov}
@@ -233,16 +234,19 @@ In this section we provide an analysis of the costs involved with this current m
 
 ... [TEXT HERE] ...
 
+\section{Future cost-benefit analyses}
+Using the results above we aim to:
+\begin{itemize}
+\item Estimate the costs for targeted vaccination, based either on the univariate analyses presented to date and in the \emph {Progress Towards Measles Elimination in New Zealand - Final} report or adjusted if any additional risk groups are identified if the multivariate analyses can be performed once appropriate denominator data are obtained.
+\end{itemize}
+
 \section{Modeling measles epidemics}
 
-...The report also concludes that increased immunisation uptake during the 2011-2012 outbreak, especially in the Auckland region, likely contributed to minimise the number of cases. [COMMENT? Unsure, though don't want to be dismissive].
-....
-
 A previously-published model of the dynamics of measles infections
-in New Zealand is used to evaluate the present vaccination strategy of
+in New Zealand has been used to evaluate the vaccination strategy in New Zealand of
 MMR1 at 15 months and MMR2 before 5 years. The results show that
-achieving coverage of 90\% or better at both vaccination opportunities is
-necessary if future epidemics of measles are to be prevented.
+achieving coverage of >90\% at both vaccination opportunities is
+necessary if future epidemics of measles are to be prevented. [AND LIKELY MORE?!]
 
 The original mathematical model for the dynamics of measles in New Zealand
 was prepared in 1996 (Tobias & Roberts 1998). It successfully predicted the
@@ -259,19 +263,41 @@ Edmunds et al 2000; Gay et al 1998; Wallinga et al 2001). These have invariably
 been based on sets of nonlinear differential equations, and the conclusions
 reached have been similar. The differences in the models have been in the details
 of the representation of the infectious period, and in the ways in which
-the age and contact structures of the population have been specified. As the
-time-course of a measles epidemic is short compared to that of demographic
-changes, details of the epidemic process are not relevant when examining population
-level changes over many years. In fact, it has been shown (Diekmann
-& Heesterbeek 2000) that the number infected in an epidemic depends only
-on the basic reproduction number (see below), and the numbers that are initially
-susceptible in each sub-population. It is therefore important to have a
-realistic representation of the population contact structure. The Royal Society
-(UK) report on the 2001 epidemic of Foot and Mouth Disease advocated that
-contact structures for infectious diseases should be described before epidemics
-occur, so that models may be speedily prepared. The report presented the
-New Zealand measles model as an example of the successful use of modelling
-in epidemiology (Anon. 2002b).
+the age and contact structures of the population have been specified.
+
+The model developed by Roberts & Tobias (2000) supported the change in the
+immunisation schedule that took effect in January 2001, at which time MMR2
+was changed from delivery at 11 years to delivery before the age of five. These
+results were in line with those obtained by other authors, for example: Babad
+et al (1995) advocated a two-dose schedule for England and Wales, with the
+second vaccination given at age four; and Gay et al (1998) recommended a
+second vaccination at either 18 months or five years, to complement the first
+vaccination at 12 months in Canada. In addition, Agur et al (1993) found that
+vaccinating 85\% of susceptible children aged one to seven years at five-yearly
+intervals would prevent epidemics in Israel. These authors all agree that two
+vaccinations at no less than five years apart are necessary to prevent measles
+epidemics.
+A different approach was taken by Wallinga et al (2001). These authors took
+existing policies in eight European countries and estimated the coverage rates
+required to reduce Rv below one. They found that results depended on the
+age at delivery, but no strategy succeeded if coverage rates were below approximately
+87\%. Our results presented in Table 1 are similar where coverage is
+assumed to be the same at MMR1 and MMR2. The results also show the absolute
+necessity of maintaining high coverage rates in order to prevent future
+epidemics. It is difficult to estimate the proportion of the school-age population
+that have been effectively immunised, but this is continuously being
+diluted by children who are not immunised. Wallinga et al (2000) noted that
+in Italy only MMR1 was offered at 18 months with no second vaccination opportunity,
+and that under most plausible assumptions for contact rates even
+100\% coverage would be insufficient to prevent epidemics.
+Our final conclusion must depend on how much faith is placed in the model.
+The results are consistent with those of other authors, and from Table 1 it
+could be deduced that 85\% coverage at MMR1 and MMR2 could be sufficient
+to prevent future measles epidemics. However, a study by Glass et al (2004)
+in the Netherlands showed that high overall levels of measles vaccination can
+obscure pockets of poor coverage, resulting in localised regions with increased
+risk of infection. Our results indicate that overall targets or 90\% or more will
+need to be achieved to prevent future epidemics in New Zealand.
 
 The quantity that determines whether an epidemic will occur is the basic
 reproduction number of the infection, R0. This is defined as the expected
@@ -301,117 +327,29 @@ population increases, through children that miss their scheduled immunisations,
 then Rt increases. An epidemic occurs when Rt has increased above
 one. During the epidemic the number of susceptibles and hence Rt decreases.
 
-In order to assess the efficacy of the vaccination campaign in the absence of
-precise information on levels of vaccination coverage, we assumed a range of
-plausible coverages at MMR1 and MMR2 and determined the corresponding
-value of Rv for each. For selected combinations we also numerically solved
-the model over a period of 150 years, not as a prediction of what will happen
-over that time period but in order to determine what the expected frequency
-of epidemics would be if this level of vaccination were to be in maintained. In
-all cases, if Rv < 1 epidemics are prevented.
-
-Method
-For this exercise we modelled the New Zealand population in the same way
-as in Roberts & Tobias (2000). We approximated the population structure by
-assuming that the birth rate was constant, and that deaths before the age of
-25 could be neglected. Hence the four age groups active in the epidemic have
-constant size. The age groups were taken as 6 - 15 months, 15 months - 5 years,
-5 years - 11 years and 11 years - 25 years. Hence MMR1 is applied as children
-pass from the first to the second group, and MMR2 from the second to the
-third. The same contact matrix was used as in Roberts & Tobias (2000). For
-a range of vaccination coverages for MMR1 and MMR2 (see Table 1) the basic
-reproduction number of the infection under vaccination, Rv, was calculated.
-In addition, for each combination of coverages the differential equation model
-was solved numerically until the epidemics settled into a regular pattern, and
-the inter-epidemic period was determined.
 
 Calculated values of Rv for the various coverage levels of MMR1 and MMR2
 that were considered are presented in Table 1.
 
-Table 1: The basic reproduction number of the infection under vaccination,
-Rv, for various coverage levels of MMR1 and MMR2. Superscripts refer to
-the figure number where numerical solutions are presented. If Rv < 1 then
-epidemics will not occur.
 
-When no vaccination is applied, the system settles down to an epidemic every
-two years. This corresponds to an estimated R0 = 12.5, similar to that which
-was observed in New Zealand in the 1960s (see Fig.1). The minimum level of
-vaccination investigated (MMR1 = 80\%, MMR2 = 60\%) resulted in Rv = 1.72
-and a pattern of epidemics settling down to one every 12 years (see Fig.2).
-The other combinations of MMR1 and MMR2 coverage levels that resulted
-in Rv > 1 all resulted in epidemics recurring at intervals of between 10 and
-20 years (Figs. 3-7). All other combinations of MMR1 and MMR2 resulted
-in Rv > 1 and the system settling down to a steady uninfected state with no
-epidemics, see Table 1 and Fig.8 for an example.
+\begin{figure}[p]
+     \centering
+     \includegraphics[width=0.8\textwidth]{averageR0.pdf}
+     \caption{Test image}
+     \label{fig:test image}
+\end{figure}
 
-
-Figures 1 & 2. The epidemic pattern with no vaccination (top) and with
-MMR1 = 80\%, MMR2 = 60\% (bottom). The continuous curves show the
-cumulative numbers of susceptibles in the population in the age groups 6
-months-15 months, 15 months - 5 years, 5 years - 11 years and 11 years -25
-years, as determined by the model. The spikes show the numbers infectious
-during epidemics (×10).
-
-Figures 3 & 4. The epidemic pattern with with MMR1 = 80\%, MMR2 = 70\%
-(top) and with MMR1 = 80\%, MMR2 = 80\% (bottom). The continuous
-curves show the cumulative numbers of susceptibles in the population in the
-age groups 6 months-15 months, 15 months - 5 years, 5 years - 11 years and
-11 years -25 years, as determined by the model. The spikes show the numbers
-infectious during epidemics (×10).
-
-Figures 5 & 6. The epidemic pattern with MMR1 = 85\%, MMR2 = 60\%
-(top) and with MMR1 = 85\%, MMR2 = 70\% (bottom). The continuous
-curves show the cumulative numbers of susceptibles in the population in the
-age groups 6 months-15 months, 15 months - 5 years, 5 years - 11 years and
-11 years -25 years, as determined by the model. The spikes show the numbers
-infectious during epidemics (×10).
-
-Figures 7 & 8. The epidemic pattern with MMR1 = 90\%, MMR2 = 60\%
-(top) and with MMR1 = 80\%, MMR2 = 85\% (bottom). The continuous
-curves show the cumulative numbers of susceptibles in the population in the
-age groups 6 months-15 months, 15 months - 5 years, 5 years - 11 years and
-11 years -25 years, as determined by the model. The spikes show the numbers
-infectious during epidemics (×10).
-
-The model developed by Roberts & Tobias (2000) supported the change in the
-immunisation schedule that took effect in January 2001, at which time MMR2
-was changed from delivery at 11 years to delivery before the age of five. These
-results were in line with those obtained by other authors, for example: Babad
-et al (1995) advocated a two-dose schedule for England and Wales, with the
-second vaccination given at age four; and Gay et al (1998) recommended a
-second vaccination at either 18 months or five years, to complement the first
-vaccination at 12 months in Canada. In addition, Agur et al (1993) found that
-vaccinating 85\% of susceptible children aged one to seven years at five-yearly
-intervals would prevent epidemics in Israel. These authors all agree that two
-vaccinations at no less than five years apart are necessary to prevent measles
-epidemics.
-A different approach was taken by Wallinga et al (2001). These authors took
-existing policies in eight European countries and estimated the coverage rates
-required to reduce Rv below one. They found that results depended on the
-age at delivery, but no strategy succeeded if coverage rates were below approximately
-87\%. Our results presented in Table 1 are similar where coverage is
-assumed to be the same at MMR1 and MMR2. The results also show the absolute
-necessity of maintaining high coverage rates in order to prevent future
-epidemics. It is difficult to estimate the proportion of the school-age population
-that have been effectively immunised, but this is continuously being
-diluted by children who are not immunised. Wallinga et al (2000) noted that
-in Italy only MMR1 was offered at 18 months with no second vaccination opportunity,
-and that under most plausible assumptions for contact rates even
-100\% coverage would be insufficient to prevent epidemics.
-A mathematical model for measles vaccination 11
-Our final conclusion must depend on how much faith is placed in the model.
-The results are consistent with those of other authors, and from Table 1 it
-could be deduced that 85\% coverage at MMR1 and MMR2 could be sufficient
-to prevent future measles epidemics. However, a study by Glass et al (2004)
-in the Netherlands showed that high overall levels of measles vaccination can
-obscure pockets of poor coverage, resulting in localised regions with increased
-risk of infection. Our results indicate that overall targets or 90% or more will
-need to be achieved to prevent future epidemics in New Zealand.
-
-
-
+...The report also concludes that increased immunisation uptake during the 2011-2012 outbreak, especially in the Auckland region, likely contributed to minimise the number of cases. [COMMENT? Unsure, though don't want to be dismissive].
+....
 
 \section{Future analyses}
+
+\section{Future cost-benefit analyses}
+Using the results above we aim to:
+\begin{itemize}
+\item Update previous ODE models of measles outbreak risk in the overall population according the differing vaccine coverage scenarios.
+\item Model measles outbreaks with differing scenarios of measles importation into various population groups based on current introduction rates.
+\end{itemize}
 
 \section{Acknowledgments}
 The authors wish to thank Tomasz Kiedrzynski, Lisa Oakley and Nic Aagaard from the Ministry of Health, Ruth Pirie and colleagues from ESR for help in obtaining the appropriate materials for analyses.
