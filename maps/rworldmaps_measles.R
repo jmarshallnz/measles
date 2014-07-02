@@ -30,9 +30,9 @@ library(rgdal)
 getwd()
 setwd("~/data")
 #unzip("TM_WORLD_BORDERS_SIMPL-0.3.zip")
-world.map <- readOGR(dsn="C:/Users/dtshayma/Documents/data", layer="TM_WORLD_BORDERS_SIMPL-0.3")
+world.map <- readOGR(dsn="C:/Users/David Hayman/Documents/data", layer="TM_WORLD_BORDERS_SIMPL-0.3")
 
-setwd("C:/Users/dtshayma/Dropbox/measles/data")
+setwd("C:/Users/David Hayman/Dropbox/measles/data")
 
 incidence<-read.csv("incidence_series.csv",header=T)
 head(incidence)

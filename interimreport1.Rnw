@@ -237,6 +237,19 @@ print(np4)
 \caption{Risk map from measles incidence and immigration rates}
 \end{figure}
 
+Though [SOMETHING ON MEASLES], immigration rates to New Zealand are increasing. [INSERT FIGURE]
+
+<<fig=TRUE,echo=FALSE>>=
+ttimes<-read.csv("times.csv",header=T)
+lmres<-lm(res~time,data=ttimes)
+summary(lmres)
+plot(ttimes$res,xaxt="n",type="l",xlab="Date",ylab="")
+axis(1, at=1:71, labels=ttimes$mydate) 
+abline(lmres,col="red",
+       lty=2)
+acf(ttimes$res,lag.max = length(ttimes$res),plot=T,main="")
+@
+
 \section{Future risk analyses}
 We received ESR EpiSurv measles case data on the 27 June 2014. The following are analyses are still in progress and aim to include them in later reports:
 \begin{itemize}
