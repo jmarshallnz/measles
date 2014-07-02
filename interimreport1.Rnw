@@ -17,7 +17,7 @@
 \begin{document}
 \SweaveOpts{concordance=TRUE}
 
-\title{Measles risk assessment and cost interim report\\ \vspace{2 mm} {\large David T S Hayman, Tim Carpenter,\\ Jonathan C Marshall, Nigel P French}}
+\title{Measles risk assessment and cost interim report\\ \vspace{2 mm} {\large David T S Hayman, Tim Carpenter,\\ Jonathan C Marshall, Mick Roberts, Nigel P French}}
 \author{mEpiLab and EpiCentre,\\ Infectious Diseases Research Centre,\\
 Massey University,\\
 Palmerston North 4442,\\
@@ -34,7 +34,7 @@ Summary of findings
 
 As a member of the World Health Organization (WHO) Western Pacific Region, New Zealand is committted to work towards measles elimination, defined as the interruption of endemic (domestic) measles virus transmission, as achieved in the Americas in 2002. The Western Pacific Region is expected to be the second WHO region to  achieve measles elimination and it was announced that in March 2014 that Australia, Macao, Mongolia and the Republic of Korea have achieved this.
 
-The last widespread measles outbreaks in New Zealand occurred in 1991 and in 1997. Since then, smaller but significant outbreaks have occurred in 2009 (mainly in Canterbury) and in 2011/2012 (mainly in Auckland region) and another significant outbreak is currently going on in Auckland region. The outbreak in 2011-2012 lasted for more than 12 months and the current 2013/2014 outbreak started at the end of December 2013 (as on \date{\today}). In 2013, prior to the 2013/2014 outbreak, New Zealand was advised by the Western Pacific Regional Verification Commission for Measles Elimination (RVC) it can request verification of non-endemic status three years after the last case of the 2011-12 outbreak in June 2012.
+The last widespread measles outbreaks in New Zealand occurred in 1991 and in 1997. Since then, smaller but significant outbreaks have occurred in 2009 (mainly in Canterbury) and in 2011/2012 (mainly in Auckland region) and another significant outbreak is currently going on in the Auckland and Waikato regions. The outbreak in 2011-2012 lasted for more than 12 months and the current 2013/2014 outbreak started at the end of December 2013 (as on \date{\today}). In 2013, prior to the 2013/2014 outbreak, New Zealand was advised by the Western Pacific Regional Verification Commission for Measles Elimination (RVC) it can request verification of non-endemic status three years after the last case of the 2011-12 outbreak in June 2012.
 
 Previous analyses, including two of measles in New Zealand by Prof. Roberts (INSERT REFS), have estimated that the interruption of measles virus transmission can be achieved by herd immunity when approximately 95 percent of the population is homogeneously immune to measles. Thus, while New Zealand immunisation activities have led to measles outbreaks becoming less frequent, with decreasing numbers of cases, as described above, outbreaks still occur. Current overall population immunity estimates suggest that approximately 85 to 90 percent of the population is immune to measles, thus the reasons for the ongoing outbreaks are perhaps likely due to overall population immunity being less than 95 percent and there being pockets of susceptible, non-immune population remaining. Since 2009, all the outbreaks in New Zealand were linked to infections acquired (imported) from overseas, though previous work suggests these outbreaks still largely affect school-aged children and children under two years of age. Under two year olds are thought be be consistently among the most affected age groups because the first of two doses of measles, mumps and rubella vaccine (MMR) is not due until fifteen months.
 
@@ -49,23 +49,86 @@ Overall, we thought the review was very thorough. The report included substantia
 
 Within the report there are many tables and figures which given substantial detail on the measles situation in New Zealand. Overall these were of high quality, reporting both absolute measles case numbers and rates per 100,000 population in New Zealand.
 
-Specific epidemiological details were provided for the 2011/2012 outbreak including \emph{Figure 4}, the number and classification of measles notifications in New Zealand by month, 2011 and 2012, with additional breakdown by age group, 2011 and 2012 (\emph{Figure 5}) and per 100,000 population (e.g. \emph{Figures 6-8}). Similar presentation of the case data are provided for ethnicity (e.g. \emph{Figures 9-10}) and New Zealand Index of Deprivation (NZDep) (e.g. \emph{Figures 11-13}). Three figures,\emph{Figures 12, 13, and 28}, show that there is spatial clustering of cases.
+Specific epidemiological details were provided for the 2011/2012 outbreak including \emph{Figure 4}, the number and classification of measles notifications in New Zealand by month, 2011 and 2012, with additional breakdown by age group, 2011 and 2012 (\emph{Figure 5}) and per 100,000 population (e.g. \emph{Figures 6-8}). Similar presentation of the case data are provided for ethnicity (e.g. \emph{Figures 9-10}) and New Zealand Index of Deprivation (NZDep) (e.g. \emph{Figures 11-13}). Three figures,\emph{Figures 12, 13,} and \emph{28}, show that there is spatial clustering of cases.
 
-[INSERT NEED FOR MULTIVARIATE ANALYSES HERE?]
+The report concludes that New Zealand's surveillance system has been performing well and that the Ministry is confident that measles has not been circulating since June 2012 and has not become endemic in NZ. We agree with the statement that measles is not endemic and provide some preliminary analyses on the outbreaks since endemic measles 'elimination' (see section X) that gives information regarding the likelihood of this occuring.
 
-The report concludes that New Zealand's surveillance system has been performing well and that the Ministry is confident that measles has not been circulating since June 2012 and has not become endemic in NZ. We agree with this statement, but have included additional analyses on the current outbreak that [DEMONSTRATE/SUGGEST ...INSERT THE CONCLUSIONS RE R0]
+We agree with the report's conclusions that testing for measles is performed appropriately within the required timeframe, but clearly improving inter-laboratory communication and collaboration and timeliness of the testing and reporting is necessary for rapid responses to measles introductions.
 
-Vaccination coverage presented in the report and to ourselves confirms that immunisation levels are approaching 94\% for MMR dose one (birth cohorts 2009 and 2010) and 89\% for MMR dose two (birth cohorts 2006 and 2007) and only Asian and Pacific ethnicities have consistently had MMR dose one coverage approching or over 95\% levels for cohorts from 2007 onwards. [COMMENT ON AGREEMENT HERE?] Furthermore, ... [COMMENT ON REFUSAL RATE?]
+Vaccination coverage presented in the report and to ourselves confirms that immunisation levels are approaching 94\% for MMR dose one (birth cohorts 2009 and 2010) and 89\% for MMR dose two (birth cohorts 2006 and 2007). However, only Asian and Pacific ethnicities have consistently had MMR dose one coverage approching or over 95\% levels for cohorts from 2007 onwards, and thus we agree with the report's conclusions that timeliness and coverage of vaccination need improving. This is particularly in light of our modeling results (section X).
 
-The report also concludes that increased immunisation uptake during the 2011-2012 outbreak, especially in the Auckland region, likely contributed to minimise the number of cases. [COMMENT? Unsure, though don't want to be dismissive].
-
-The development of a National Immunisation Register (NIR) that allows tracking of the vaccination status of children is very useful. [COMMENT ON NEED FOR FINER IMMUNISATION LEVEL DATA HERE?]. The report conludes that the surveillance performance indicators demonstrate a reasonable measles surveillance capability in New Zealand. We [COMMENT ON THIS, GIVEN JONATHAN'S FINDINGS]?.
-
-We agree with the report's conclusions that testing for measles is performed appropriately within the required timeframe, but clearly improving inter-laboratory communication and collaboration and timeliness of the testing and reporting is necessary.
+The analyses we thought could further inform the understanding of risk from measles infection were:
+\begin{itemize}
+\item Multivariate modelling to account for confounding within the univariate analyses.
+\item Inclusion of multivariate model results with local level immunity data to develop a risk map for NZ. 
+\item Analyses of changing risk factors through time during outbreaks.
+\item Modelling transmission chains in the population to understand effective reproduction number.
+\item Development of risk maps to understand measles importation.
+\end{itemize}
 
 \section{Additional risk analyses}
 
-In this section we provide ... [].
+In this section we provide a brief description of the work we are performing that we believe will help inform the Ministry of Health regarding the understanding of risk from measles. These analyses are intended to build on the excellent analyses already included in the \emph {Progress Towards Measles Elimination in New Zealand - Final} report reviewed above.
+
+We received the raw case data from The Institute of Environmental Science and Research Ltd (ESR) EpiSurv on 27 June 2014. Initial analyses of those data suggest that we require denominator data to perform multivariate analyses. Specifically for the multivariate analyses we wish to perform we require \emph{Age * Prioritized Ethnicity * NZDep} data for New Zealand to see if the interactions among case covariates give us any additional information on risk from the univariate analyses already performed in the report reviewed above.
+
+These data are currently unavailable in the form we require and after contacting ESR and NZ Statistics we and NZ statistics have contacted the University of Otago to see if we can obtain these denominator data. Additional data we believe would enable us and the Ministry to understand measles risk better is fine scale (lower than DHB) immunization coverage data.
+
+We have reviewed the information on measles importation and the origins of the introductions of measles into New Zealand. To help better understand the risk of measles importation, with a particular goal of enabling the Ministry to better inform travellers, we sought to understand better the risk of measles importation. For our initial analyses, we used the arrivals data from \href{http://www.immigration.govt.nz/}{www.immigration.govt.nz} as an estimate of human movement to and from New Zealand. We collated country population size, measles incidence and measles vaccination cover from the WHO \href{http://www.who.int/research/en/}{www.who.int/research/en/}.
+
+<<echo=FALSE>>=
+library(xtable)
+dpdf<-read.csv("mapdata.csv",header=T)
+# output top countries
+topimmigration <- dpdf[order(-dpdf$immigration),] 
+immigration<-topimmigration[1:10,c(1,4)]
+topincidence <- dpdf[order(-dpdf$incidence),] 
+incidence<-topincidence[1:10,c(1,2)]
+incidence[,2]<-round(incidence[,2],0)
+topvaccine <- dpdf[order(dpdf$cover),] 
+vaccinecover<-topvaccine[1:10,c(1,3)]
+toprisk <- dpdf[order(-dpdf$risk),] 
+risk<-(toprisk[1:10,c(1,5)])
+risk[,2]<-round(risk[,2],0)
+@
+
+\begin{table}
+\caption{Immigration to New Zealand (2012)}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(immigration, file="", table.env=FALSE,rowname=NULL)
+@
+\end{table}
+
+\begin{table}
+\caption{Lowest national measles vaccine cover (2012)}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(vaccinecover, file="", table.env=FALSE,rowname=NULL)
+@
+\end{table}
+
+\begin{table}
+\caption{Measles Incidence per million (2012)}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(incidence, file="", table.env=FALSE,rowname=NULL)
+@
+\end{table}
+
+\begin{table}
+\caption{Risk of measles importation to New Zealand in 2012}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(risk, file="", table.env=FALSE,rowname=NULL)
+@
+\end{table}
+
+The preliminary analyses of 2012 data suggest immigration (whether for work, pleasure, etc.) is dominated by Australia, United Kingdom, China, and the United States, as shown in Table 1. However, vaccination coverage is lowest and measles incidence highest in less developed nations (Tables 2 and 3). Though the interactions between these different risk factors are unknown, simple products of measles incidence in 2012 and immigration numbers in 2012 suggest that though immigration is lower from some Asian countries, travel from (and thus we presume to) some countries also poses a risk. These data are shown in Table 4. The data for all the variables for each nation state and territories for 2012 are plotted in Figure 1 and the risk map for measles incidence and immigration in Figure 2.
 
 <<echo=FALSE>>=
 # haven't had time to sort out which packages I need
@@ -101,69 +164,79 @@ id<-as.data.frame(id)
 dpdf<-read.csv("mapdata.csv",header=T)
 # output top countries
 
-topimmigration <- dpdf[order(-dpdf$immigration),] 
-topimmigration[1:10,c(1,4)]
-
-topincidence <- dpdf[order(-dpdf$incidence),] 
-topincidence[1:10,c(1,2)]
-
-topvaccine <- dpdf[order(dpdf$cover),] 
-topvaccine[1:10,c(1,3)]
-
-toprisk <- dpdf[order(-dpdf$risk),] 
-toprisk[1:10,c(1,5)]
-
 np1<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Immigration") +
   geom_map(aes(fill = immigration), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+   xlab("longitude") +
+  ylab("latitude") +
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
 
 np2<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Incidence (per million)") +
   geom_map(aes(fill = incidence), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  xlab("longitude") +
+  ylab("latitude") +
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
 
 np3<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Vaccination cover (%)") +
   geom_map(aes(fill = cover), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  xlab("longitude") +
+  ylab("latitude") +
   scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
 
-#grid.arrange(np1, np2, np3, ncol=3, main="Measles")
+#grid.arrange(np1, np2, np3, ncol=3, main="")
 
-np4<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Risk 2012") +
+np4<-ggplot(dpdf, aes(map_id = id)) +
   geom_map(aes(fill = risk), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+   xlab("longitude") +
+  ylab("latitude") +
+  theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
 #np4
-
-#grid.arrange(np4, np1, np2, np3, ncol=2, main="Measles (2012)")
-
 @
 
 \begin{figure}[h!]
+\caption{Global risk data 2012: Immigration numbers to New Zealand (top); Measles incidence (per million) (middle); Vaccination coverage (bottom)}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 4>>=
-print(grid.arrange(np1, np2, np3, ncol=1, main="Measles (2012)"))
+<<fig=TRUE,echo=FALSE,width = 5>>=
+print(grid.arrange(np1, np2, np3, ncol=1, main="2012"))
 @
 \end{center}
-\caption{Global risk data: Immigration numbers (top); Measles incidence (per million) (middle); Vaccination coverage (bottom)}
 \end{figure}
 
 \begin{figure}[h!]
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 10>>=
+<<fig=TRUE,echo=FALSE,width = 11>>=
 print(np4)
 @
 \end{center}
 \caption{Risk map from measles incidence and immigration rates}
 \end{figure}
 
+\section{Future risk analyses}
+We received ESR EpiSurv measles case data on the 27 June 2014. The following are analyses are still in progress and aim to include them in later reports:
+\begin{itemize}
+\item Multivariate regression analyses to look for interactions between risk factors that may confound the univariate analyses.
+\item Update of the importation risk analyses using more than the 2012 data.
+\end{itemize}
+The data gaps that we have that will hinder us in completing all the analyses are:
+\begin{itemize}
+\item A lack of meshblock level immunisation coverage data to allow targeted immunisation and understanding of risk at a fine scale level. We understand the National Immunisation Register (NIR) allows tracking of the vaccination status of children and this is very useful, but inclusion of these data at lower (e.g. \emph{meshblock}) level would allow better understanding of risk and resource allocation.
+\item A lack of data at any level that combines NZDep with age, prioritized ethnicity, and other variables, that allow better use of data collected by the Ministry, ESR, and NZ statistics for multivariate analyses.
+\end{itemize}
 
 \section{Cost analyses}
 
-In this section we provide ... [].
+In this section we provide an analysis of the costs involved with this current measles outbreak.
+
+... [TEXT HERE] ...
 
 \section{Modeling measles epidemics}
+
+...The report also concludes that increased immunisation uptake during the 2011-2012 outbreak, especially in the Auckland region, likely contributed to minimise the number of cases. [COMMENT? Unsure, though don't want to be dismissive].
+....
 
 A previously-published model of the dynamics of measles infections
 in New Zealand is used to evaluate the present vaccination strategy of
@@ -339,18 +412,6 @@ need to be achieved to prevent future epidemics in New Zealand.
 
 
 \section{Future analyses}
-
-We received The Institute of Environmental Science and Research Ltd (ESR) EpiSurv measles case data on the 27 June 2014. Additional analyses we wish to do are:
-\begin{itemize}
-\item ...[]
-\end{itemize}
-
-\section{Future analyses}
-
-We received The Institute of Environmental Science and Research Ltd (ESR) EpiSurv measles case data on the 27 June 2014. Additional analyses we wish to do are:
-\begin{itemize}
-\item ...[]
-\end{itemize}
 
 \section{Acknowledgments}
 The authors wish to thank Tomasz Kiedrzynski, Lisa Oakley and Nic Aagaard from the Ministry of Health, Ruth Pirie and colleagues from ESR for help in obtaining the appropriate materials for analyses.
