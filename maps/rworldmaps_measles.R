@@ -30,9 +30,9 @@ library(rgdal)
 getwd()
 setwd("~/data")
 #unzip("TM_WORLD_BORDERS_SIMPL-0.3.zip")
-world.map <- readOGR(dsn="C:/Users/David Hayman/Documents/data", layer="TM_WORLD_BORDERS_SIMPL-0.3")
+world.map <- readOGR(dsn="C:/Users/dtshayma/Documents/data", layer="TM_WORLD_BORDERS_SIMPL-0.3")
 
-setwd("C:/Users/David Hayman/Dropbox/measles/data")
+setwd("C:/Users/dtshayma/Dropbox/measles/data")
 
 incidence<-read.csv("incidence_series.csv",header=T)
 head(incidence)
@@ -49,7 +49,8 @@ head(population)
 #######
 
 world.ggmap <- fortify(world.map, region = "NAME")
-
+save(world.ggmap,file="world.ggmap.Rda")
+load("world.ggmap.Rda")
 n <- length(unique(world.ggmap$id))
 
 id = unique(world.ggmap$id)
@@ -324,6 +325,8 @@ grid.arrange(np1, np2, np3, ncol=3, main="Measles")
 
 dpdf$risk <- with(dpdf, mp$X2012.x/mp$Numeric.Value*1000* mp$Immigration)
 head(dpdf)
+write.csv(dpdf, "mapdata.csv", row.names=FALSE,col.names=T)
+dpdf<-read.csv("mapdata.csv",header=T)
 
 np4<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Risk 2012") +
   geom_map(aes(fill = risk), map =world.ggmap) +

@@ -67,38 +67,276 @@ We agree with the report's conclusions that testing for measles is performed app
 
 In this section we provide ... [].
 
+<<echo=FALSE>>=
+# haven't had time to sort out which packages I need
+library(maps)       # Provides functions that let us plot the maps
+library(mapdata)    # Contains the hi-resolution points that mark out the countries.
+library(rworldmap)
+library(adehabitat)
+library(rgdal)
+library(raster)
+library(maps)
+library(maptools)
+library(sp)
+#library(SDMTools)
+library(ggplot2)
+require(rgeos)
+library(ggmap)
+library(mapdata)
+#gpclibPermit()
+library(mapproj)
+library(plyr)
+library(grid)
+library(gridExtra)
+#gpclibPermit()
+library(utils)
+library(rgdal)
+#getwd()
+#setwd("~/data")
+#unzip("TM_WORLD_BORDERS_SIMPL-0.3.zip")
+load("world.ggmap.Rda")
+n <- length(unique(world.ggmap$id))
+id = unique(world.ggmap$id)
+id<-as.data.frame(id)
+dpdf<-read.csv("mapdata.csv",header=T)
+# output top countries
+
+topimmigration <- dpdf[order(-dpdf$immigration),] 
+topimmigration[1:10,c(1,4)]
+
+topincidence <- dpdf[order(-dpdf$incidence),] 
+topincidence[1:10,c(1,2)]
+
+topvaccine <- dpdf[order(dpdf$cover),] 
+topvaccine[1:10,c(1,3)]
+
+toprisk <- dpdf[order(-dpdf$risk),] 
+toprisk[1:10,c(1,5)]
+
+np1<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Immigration") +
+  geom_map(aes(fill = immigration), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+
+np2<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Incidence (per million)") +
+  geom_map(aes(fill = incidence), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+
+np3<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Vaccination cover (%)") +
+  geom_map(aes(fill = cover), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
+
+#grid.arrange(np1, np2, np3, ncol=3, main="Measles")
+
+np4<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Risk 2012") +
+  geom_map(aes(fill = risk), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
+#np4
+
+#grid.arrange(np4, np1, np2, np3, ncol=2, main="Measles (2012)")
+
+@
+
+\begin{figure}[h!]
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 4>>=
+print(grid.arrange(np1, np2, np3, ncol=1, main="Measles (2012)"))
+@
+\end{center}
+\caption{Global risk data: Immigration numbers (top); Measles incidence (per million) (middle); Vaccination coverage (bottom)}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 10>>=
+print(np4)
+@
+\end{center}
+\caption{Risk map from measles incidence and immigration rates}
+\end{figure}
+
+
 \section{Cost analyses}
 
 In this section we provide ... [].
 
+\section{Modeling measles epidemics}
 
-<<frequentist>>=
-library(mcmc)
-data(logit)
-out <- glm(y ~ x1 + x2 + x3 + x4, data = logit,
-    family = binomial())
-summary(out)
-@
+A previously-published model of the dynamics of measles infections
+in New Zealand is used to evaluate the present vaccination strategy of
+MMR1 at 15 months and MMR2 before 5 years. The results show that
+achieving coverage of 90\% or better at both vaccination opportunities is
+necessary if future epidemics of measles are to be prevented.
 
-...text
+The original mathematical model for the dynamics of measles in New Zealand
+was prepared in 1996 (Tobias & Roberts 1998). It successfully predicted the
+1997 epidemic, which was curtailed by a mass vaccination campaign (Mansoor
+et al 1998; Roberts & Tobias 2000). A subsequent extension of this work in
+1998 showed that the then current schedule of MMR1 at 15 months and MMR2
+at 11 years was insufficient to prevent further epidemics. The schedule was
+changed in 2000 with MMR2 now being administered before 5 years (Anon.
+2002a).
+
+A variety of similar models for measles vaccination strategies have been developed
+by other authors for various regions (Agur et al 1993; Babad et al 1995;
+Edmunds et al 2000; Gay et al 1998; Wallinga et al 2001). These have invariably
+been based on sets of nonlinear differential equations, and the conclusions
+reached have been similar. The differences in the models have been in the details
+of the representation of the infectious period, and in the ways in which
+the age and contact structures of the population have been specified. As the
+time-course of a measles epidemic is short compared to that of demographic
+changes, details of the epidemic process are not relevant when examining population
+level changes over many years. In fact, it has been shown (Diekmann
+& Heesterbeek 2000) that the number infected in an epidemic depends only
+on the basic reproduction number (see below), and the numbers that are initially
+susceptible in each sub-population. It is therefore important to have a
+realistic representation of the population contact structure. The Royal Society
+(UK) report on the 2001 epidemic of Foot and Mouth Disease advocated that
+contact structures for infectious diseases should be described before epidemics
+occur, so that models may be speedily prepared. The report presented the
+New Zealand measles model as an example of the successful use of modelling
+in epidemiology (Anon. 2002b).
+
+The quantity that determines whether an epidemic will occur is the basic
+reproduction number of the infection, R0. This is defined as the expected
+number of secondary infections that would arise from a single primary infection
+introduced into a fully susceptible population (Anderson & May 1991;
+Diekmann & Heesterbeek 2000). Clearly if R0 > 1 an epidemic will occur following
+an introduction of infection. The best estimate we had for measles in
+New Zealand was R0 = 12.8, the change in the birth rate (56780 p.a. in 2004,
+www.stats.govt.nz) could have reduced this slightly to R0 = 12.5 (see results
+section). Recall that R0 is calculated in the absence of control measures. We
+are interested in two related quantities:
+
+The basic reproduction number of the infection under vaccination, Rv,
+is the expected number of secondary infections that would arise from a
+single primary infection introduced into a vaccinated population at equilibrium.
+This is a robust indicator of the performance of a vaccination
+schedule. If Rv < 1 epidemics are prevented.
+
+The case reproduction number of the infection at time t, Rt, is the
+expected number of secondary infections that arise from a single infection
+at a particular time. This depends on the number in the population who
+are susceptible, either through prior infection or vaccination.
+
+The dynamics of the process may be summarised as follows. Assume that
+the population has Rt < 1 for measles. As the number of susceptibles in the
+population increases, through children that miss their scheduled immunisations,
+then Rt increases. An epidemic occurs when Rt has increased above
+one. During the epidemic the number of susceptibles and hence Rt decreases.
+
+In order to assess the efficacy of the vaccination campaign in the absence of
+precise information on levels of vaccination coverage, we assumed a range of
+plausible coverages at MMR1 and MMR2 and determined the corresponding
+value of Rv for each. For selected combinations we also numerically solved
+the model over a period of 150 years, not as a prediction of what will happen
+over that time period but in order to determine what the expected frequency
+of epidemics would be if this level of vaccination were to be in maintained. In
+all cases, if Rv < 1 epidemics are prevented.
+
+Method
+For this exercise we modelled the New Zealand population in the same way
+as in Roberts & Tobias (2000). We approximated the population structure by
+assuming that the birth rate was constant, and that deaths before the age of
+25 could be neglected. Hence the four age groups active in the epidemic have
+constant size. The age groups were taken as 6 - 15 months, 15 months - 5 years,
+5 years - 11 years and 11 years - 25 years. Hence MMR1 is applied as children
+pass from the first to the second group, and MMR2 from the second to the
+third. The same contact matrix was used as in Roberts & Tobias (2000). For
+a range of vaccination coverages for MMR1 and MMR2 (see Table 1) the basic
+reproduction number of the infection under vaccination, Rv, was calculated.
+In addition, for each combination of coverages the differential equation model
+was solved numerically until the epidemics settled into a regular pattern, and
+the inter-epidemic period was determined.
+
+Calculated values of Rv for the various coverage levels of MMR1 and MMR2
+that were considered are presented in Table 1.
+
+Table 1: The basic reproduction number of the infection under vaccination,
+Rv, for various coverage levels of MMR1 and MMR2. Superscripts refer to
+the figure number where numerical solutions are presented. If Rv < 1 then
+epidemics will not occur.
+
+When no vaccination is applied, the system settles down to an epidemic every
+two years. This corresponds to an estimated R0 = 12.5, similar to that which
+was observed in New Zealand in the 1960s (see Fig.1). The minimum level of
+vaccination investigated (MMR1 = 80\%, MMR2 = 60\%) resulted in Rv = 1.72
+and a pattern of epidemics settling down to one every 12 years (see Fig.2).
+The other combinations of MMR1 and MMR2 coverage levels that resulted
+in Rv > 1 all resulted in epidemics recurring at intervals of between 10 and
+20 years (Figs. 3-7). All other combinations of MMR1 and MMR2 resulted
+in Rv > 1 and the system settling down to a steady uninfected state with no
+epidemics, see Table 1 and Fig.8 for an example.
 
 
-<<log.unnormalized.posterior>>=
-x <- logit
-x$y <- NULL
-x <- as.matrix(x)
-x <- cbind(1, x)
-dimnames(x) <- NULL
+Figures 1 & 2. The epidemic pattern with no vaccination (top) and with
+MMR1 = 80\%, MMR2 = 60\% (bottom). The continuous curves show the
+cumulative numbers of susceptibles in the population in the age groups 6
+months-15 months, 15 months - 5 years, 5 years - 11 years and 11 years -25
+years, as determined by the model. The spikes show the numbers infectious
+during epidemics (×10).
 
-y <- logit$y
+Figures 3 & 4. The epidemic pattern with with MMR1 = 80\%, MMR2 = 70\%
+(top) and with MMR1 = 80\%, MMR2 = 80\% (bottom). The continuous
+curves show the cumulative numbers of susceptibles in the population in the
+age groups 6 months-15 months, 15 months - 5 years, 5 years - 11 years and
+11 years -25 years, as determined by the model. The spikes show the numbers
+infectious during epidemics (×10).
 
-lupost <- function(beta, x, y) {
-    eta <- x %*% beta
-    p <- 1 / (1 + exp(- eta))   # note: works even when eta is Inf or -Inf
-    logl <- sum(log(p[y == 1])) + sum(log(1 - p[y == 0]))
-    return(logl + sum(dnorm(beta, 0, 2, log = TRUE)))
-}
-@
+Figures 5 & 6. The epidemic pattern with MMR1 = 85\%, MMR2 = 60\%
+(top) and with MMR1 = 85\%, MMR2 = 70\% (bottom). The continuous
+curves show the cumulative numbers of susceptibles in the population in the
+age groups 6 months-15 months, 15 months - 5 years, 5 years - 11 years and
+11 years -25 years, as determined by the model. The spikes show the numbers
+infectious during epidemics (×10).
+
+Figures 7 & 8. The epidemic pattern with MMR1 = 90\%, MMR2 = 60\%
+(top) and with MMR1 = 80\%, MMR2 = 85\% (bottom). The continuous
+curves show the cumulative numbers of susceptibles in the population in the
+age groups 6 months-15 months, 15 months - 5 years, 5 years - 11 years and
+11 years -25 years, as determined by the model. The spikes show the numbers
+infectious during epidemics (×10).
+
+The model developed by Roberts & Tobias (2000) supported the change in the
+immunisation schedule that took effect in January 2001, at which time MMR2
+was changed from delivery at 11 years to delivery before the age of five. These
+results were in line with those obtained by other authors, for example: Babad
+et al (1995) advocated a two-dose schedule for England and Wales, with the
+second vaccination given at age four; and Gay et al (1998) recommended a
+second vaccination at either 18 months or five years, to complement the first
+vaccination at 12 months in Canada. In addition, Agur et al (1993) found that
+vaccinating 85\% of susceptible children aged one to seven years at five-yearly
+intervals would prevent epidemics in Israel. These authors all agree that two
+vaccinations at no less than five years apart are necessary to prevent measles
+epidemics.
+A different approach was taken by Wallinga et al (2001). These authors took
+existing policies in eight European countries and estimated the coverage rates
+required to reduce Rv below one. They found that results depended on the
+age at delivery, but no strategy succeeded if coverage rates were below approximately
+87\%. Our results presented in Table 1 are similar where coverage is
+assumed to be the same at MMR1 and MMR2. The results also show the absolute
+necessity of maintaining high coverage rates in order to prevent future
+epidemics. It is difficult to estimate the proportion of the school-age population
+that have been effectively immunised, but this is continuously being
+diluted by children who are not immunised. Wallinga et al (2000) noted that
+in Italy only MMR1 was offered at 18 months with no second vaccination opportunity,
+and that under most plausible assumptions for contact rates even
+100\% coverage would be insufficient to prevent epidemics.
+A mathematical model for measles vaccination 11
+Our final conclusion must depend on how much faith is placed in the model.
+The results are consistent with those of other authors, and from Table 1 it
+could be deduced that 85\% coverage at MMR1 and MMR2 could be sufficient
+to prevent future measles epidemics. However, a study by Glass et al (2004)
+in the Netherlands showed that high overall levels of measles vaccination can
+obscure pockets of poor coverage, resulting in localised regions with increased
+risk of infection. Our results indicate that overall targets or 90% or more will
+need to be achieved to prevent future epidemics in New Zealand.
+
+
+
 
 \section{Future analyses}
 
@@ -114,391 +352,8 @@ We received The Institute of Environmental Science and Research Ltd (ESR) EpiSur
 \item ...[]
 \end{itemize}
 
-<<metropolis-try-1>>=
-set.seed(42)    # to get reproducible results
-beta.init <- as.numeric(coefficients(out))
-out <- metrop(lupost, beta.init, 1e3, x = x, y = y)
-names(out)
-out$accept
-@
-
-...text
-
-\begin{itemize}
-\item ...text.
-\end{itemize}
-
-...text
-
-\citet{geyer-temp} ...text
-
-<<metropolis-try-2>>=
-out <- metrop(out, scale = 0.1, x = x, y = y)
-out$accept
-out <- metrop(out, scale = 0.3, x = x, y = y)
-out$accept
-out <- metrop(out, scale = 0.5, x = x, y = y)
-out$accept
-out <- metrop(out, scale = 0.4, x = x, y = y)
-out$accept
-@
-
-...text
-
-<<label=metropolis-try-3>>=
-out <- metrop(out, nbatch = 1e4, x = x, y = y)
-out$accept
-out$time
-@
-
-Figure~\ref{fig:fig1} (page~\pageref{fig:fig1})
-shows the time series plot made by the R statement
-<<label=fig1too,include=FALSE>>=
-plot(ts(out$batch))
-@
-\begin{figure}
-\begin{center}
-<<label=fig1,fig=TRUE,echo=FALSE>>=
-<<fig1too>>
-@
-\end{center}
-\caption{Time series plot of MCMC output.}
-\label{fig:fig1}
-\end{figure}
-
-Another way to look at the output is an autocorrelation plot.
-Figure~\ref{fig:fig2} (page~\pageref{fig:fig2})
-shows the time series plot made by the R statement
-<<label=fig2too,include=FALSE>>=
-acf(out$batch)
-@
-\begin{figure}
-\begin{center}
-<<label=fig2,fig=TRUE,echo=FALSE>>=
-<<fig2too>>
-@
-\end{center}
-\caption{Autocorrelation plot of MCMC output.}
-\label{fig:fig2}
-\end{figure}
-
-...text
-\begin{verbatim}
-http://www.stat.umn.edu/~charlie/mcmc/diag.html
-\end{verbatim}
-says
-\begin{quotation}
-...text
-\end{quotation}
-...text
-...text
-\section{Monte Carlo Estimates and Standard Errors}
-
-<<label=metropolis-try-4>>=
-out <- metrop(out, nbatch = 1e2, blen = 100,
-    outfun = function(z, ...) c(z, z^2), x = x, y = y)
-out$accept
-out$time
-@
-
-We have added an argument \verb@outfun@ ...text
-We need to
-use the identity
-$$
-   \var(X) = E(X^2) - E(X)^2
-$$
-...text
-Hence our \verb@outfun@ returns
-\verb@c(z, z^2)@ for an argument (the state vector) \verb@z@.
-
-The \verb@...@ argument to \verb@outfun@ is required, since the
-function is also passed the other arguments (here \verb@x@ and \verb@y@)
-to \verb@metrop@.
-
-\subsection{Simple Means}
-
-The grand means (means of batch means) are
-<<label=metropolis-batch>>=
-apply(out$batch, 2, mean)
-@
-...text
-<<label=metropolis-batch-too>>=
-foo <- apply(out$batch, 2, mean)
-mu <- foo[1:5]
-sigmasq <- foo[6:10] - mu^2
-mu
-sigmasq
-@
-
-...text
-<<label=metropolis-mcse-mu>>=
-mu.mcse <- apply(out$batch[ , 1:5], 2, sd) / sqrt(out$nbatch)
-mu.mcse
-@
-The extra factor \verb@sqrt(out$nbatch)@ arises because the batch means
-have variance $\sigma^2 / b$ where $b$ is the batch length, which is
-\verb@out$blen@,
-whereas the overall means \verb@mu@ have variance $\sigma^2 / n$ where
-$n$ is the total number of iterations, which is \verb@out$blen * out$nbatch@.
-
-\subsection{Functions of Means}
-
-To get the MCSE for the posterior variances we apply the delta method.
-Let $u_i$ denote the sequence of batch means of the first kind for one
-parameter and $\bar{u}$ the grand mean (the estimate of the posterior mean
-of that parameter),
-let $v_i$ denote the sequence of batch means of the second kind for the
-same parameter and $\bar{v}$ the grand mean (the estimate of the posterior
-second absolute moment of that parameter), and let $\mu = E(\bar{u})$ and
-$\nu = E(\bar{v})$.  Then the delta method linearizes the nonlinear function
-$$
-   g(\mu, \nu) = \nu - \mu^2
-$$
-as
-$$
-   \Delta g(\mu, \nu) = \Delta \nu - 2 \mu \Delta \mu
-$$
-saying that
-$$
-   g(\bar{u}, \bar{v}) - g(\mu, \nu)
-$$
-has the same asymptotic normal distribution as
-$$
-   (\bar{v} - \nu) - 2 \mu (\bar{u} - \mu)
-$$
-which, of course, has variance \verb@1 / nbatch@ times that of
-$$
-   (v_i - \nu) - 2 \mu (u_i - \mu)
-$$
-and this variance is estimated by
-$$
-   \frac{1}{n_{\text{batch}}} \sum_{i = 1}^{n_{\text{batch}}}
-   \bigl[ (v_i - \bar{v}) - 2 \bar{u} (u_i - \bar{u}) \bigr]^2
-$$
-So
-<<label=metropolis-mcse-sigmasq>>=
-u <- out$batch[ , 1:5]
-v <- out$batch[ , 6:10]
-ubar <- apply(u, 2, mean)
-vbar <- apply(v, 2, mean)
-deltau <- sweep(u, 2, ubar)
-deltav <- sweep(v, 2, vbar)
-foo <- sweep(deltau, 2, ubar, "*")
-sigmasq.mcse <- sqrt(apply((deltav - 2 * foo)^2, 2, mean) / out$nbatch)
-sigmasq.mcse
-@
-does the MCSE for the posterior variance.
-
-Let's just check that this complicated \verb@sweep@ and \verb@apply@ stuff
-does do the right thing.
-<<label=metropolis-mcse-sigmasq-too>>=
-sqrt(mean(((v[ , 2] - vbar[2]) - 2 * ubar[2] * (u[ , 2] - ubar[2]))^2) /
-    out$nbatch)
-@
-
-\paragraph{Comment} Through version 0.5 of this vignette it contained
-an incorrect procedure for calculating this MCSE, justified by a handwave.
-Essentially, it said to use the standard deviation of the batch means called
-\verb@v@ here, which appears to be very conservative.
-
-\subsection{Functions of Functions of Means}
-
-If we are also interested in the posterior standard deviation
-(a natural question, although not asked on the exam problem),
-the delta method gives its standard error in terms of that
-for the variance
-<<label=metropolis-mcse-sigma>>=
-sigma <- sqrt(sigmasq)
-sigma.mcse <- sigmasq.mcse / (2 * sigma)
-sigma
-sigma.mcse
-@
-
-\section{A Final Run}
-
-...text...
-(the exam problem directed ``use a long enough run of your Markov chain
-sampler so that the MCSE are less than 0.01'')
-<<label=metropolis-try-5>>=
-out <- metrop(out, nbatch = 5e2, blen = 400, x = x, y = y)
-out$accept
-out$time
-<<metropolis-batch-too>>
-<<metropolis-mcse-mu>>
-<<metropolis-mcse-sigmasq>>
-<<metropolis-mcse-sigma>>
-@
-...text... \verb@xtable@ command in the \verb@xtable@ library.
-
-First the posterior means,
-\begin{table}[ht]
-\caption{Posterior Means}
-\label{tab:mu}
-\begin{center}
-<<label=tab1,echo=FALSE,results=tex>>=
-foo <- rbind(mu, mu.mcse)
-dimnames(foo) <- list(c("estimate", "MCSE"),
-    c("constant", paste("$x_", 1:4, "$", sep = "")))
-library(xtable)
-print(xtable(foo, digits = rep(4, 6),
-    align = c("l", rep("c", 5))), floating = FALSE,
-    caption.placement = "top",
-    sanitize.colnames.function = function(x) return(x))
-@
-\end{center}
-\end{table}
-then the posterior variances (table on page~\pageref{tab:sigmasq}),
-\begin{table}[ht]
-\caption{Posterior Variances}
-\label{tab:sigmasq}
-\begin{center}
-<<label=tab1,echo=FALSE,results=tex>>=
-foo <- rbind(sigmasq, sigmasq.mcse)
-dimnames(foo) <- list(c("estimate", "MCSE"),
-    c("constant", paste("$x_", 1:4, "$", sep = "")))
-library(xtable)
-print(xtable(foo, digits = rep(4, 6),
-    align = c("l", rep("c", 5))), floating = FALSE,
-    caption.placement = "top",
-    sanitize.colnames.function = function(x) return(x))
-@
-\end{center}
-\end{table}
-and finally the posterior standard deviations
-(table on page~\pageref{tab:sigma}).
-\begin{table}[ht]
-\caption{Posterior Standard Deviations}
-\label{tab:sigma}
-\begin{center}
-<<label=tab1,echo=FALSE,results=tex>>=
-foo <- rbind(sigma, sigma.mcse)
-dimnames(foo) <- list(c("estimate", "MCSE"),
-    c("constant", paste("$x_", 1:4, "$", sep = "")))
-library(xtable)
-print(xtable(foo, digits = rep(4, 6),
-    align = c("l", rep("c", 5))), floating = FALSE,
-    caption.placement = "top",
-    sanitize.colnames.function = function(x) return(x))
-@
-\end{center}
-\end{table}
-
-Note for ...
-<<label=time,echo=FALSE,results=tex>>=
-cat(out$time[1], "\n")
-@
-...text...
-
-\section{New Variance Estimation Functions}
-
-A new function \texttt{initseq} estimates variances in the Markov chain
-central limit theorem (CLT) following the methodology introduced by
-\citet[Section~3.3]{practical}.  These methods only apply to scalar-valued
-functionals of
-reversible Markov chains, but the Markov chains produced by the \texttt{metrop}
-function satisfy this condition, even, as we shall see below, when batching
-is used.
-
-...text.. AR(1) ...text... \texttt{initseq}.
-<<x>>=
-n <- 2e4
-rho <- 0.99
-x <- arima.sim(model = list(ar = rho), n = n)
-@
-...text...
-
-Define
-\begin{equation} \label{eq:little}
-   \gamma_k = \cov(X_i, X_{i + k})
-\end{equation}
-where the covariances refer to the stationary Markov chain having the
-same transition probabilities as \texttt{x}.  Then the variance in the CLT
-is
-$$
-   \sigma^2 = \gamma_0 + 2 \sum_{k = 1}^\infty \gamma_k
-$$
-\citep[Theorem~2.1]{practical}, that is,
-$$
-   \bar{x}_n \approx \text{Normal}\left(\mu, \frac{\sigma^2}{n}\right),
-$$
-where $\mu = E(X_i)$ is the quantity being estimated by MCMC (in this
-toy problem we know $\mu = 0$).
-
-Naive estimates of $\sigma^2$ obtained by plugging in empirical
-estimates of the gammas do not provide consistent estimation
-\citep[Section~3.1]{practical}.  Thus the scheme implemented
-by the R function \texttt{initseq}.  Define
-\begin{equation} \label{eq:big}
-   \Gamma_k = \gamma_{2 k} + \gamma_{2 k + 1}
-\end{equation}
-\citet[Theorem~3.1]{practical} says that $\Gamma_k$ ...text..
-\citet[Section~3.3]{practical} ...text.. Theorem~3.2.
-
-Figure~\ref{fig:gamma} (page~\pageref{fig:gamma})
-shows the time series plot made by the R statement
-<<label=figgamtoo,include=FALSE>>=
-out <- initseq(x)
-plot(seq(along = out$Gamma.pos) - 1, out$Gamma.pos,
-        xlab = "k", ylab = expression(Gamma[k]), type = "l")
-lines(seq(along = out$Gamma.dec) - 1, out$Gamma.dec, lty = "dotted")
-lines(seq(along = out$Gamma.con) - 1, out$Gamma.con, lty = "dashed")
-@
-\begin{figure}
-\begin{center}
-<<label=figgam,fig=TRUE,echo=FALSE>>=
-<<figgamtoo>>
-@
-\end{center}
-\caption{Plot ``Big Gamma'' defined by \eqref{eq:little} and \eqref{eq:big}.
-Solid line, initial positive sequence estimator.
-Dotted line, initial monotone sequence estimator.
-Dashed line, initial convex sequence estimator.}
-\label{fig:gamma}
-\end{figure}
-...text... Figure~\ref{fig:gamma}, ...text... $\sigma^2$, .... 
-<<assvar>>=
-out$var.con
-(1 + rho) / (1 - rho) * 1 / (1 - rho^2)
-@
-where for comparison we have given the exact theoretical value of $\sigma^2$,
-...text...
-<<batx>>=
-blen <- 5
-x.batch <- apply(matrix(x, nrow = blen), 2, mean)
-bout <- initseq(x.batch)
-@
-Because the batch length is too short, the variance of the batch means
-does not estimate $\sigma^2$.  We must account for the autocorrelation
-of the batches, shown in Figure~\ref{fig:gambat}.
-<<label=figgambattoo,include=FALSE>>=
-plot(seq(along = bout$Gamma.con) - 1, bout$Gamma.con,
-        xlab = "k", ylab = expression(Gamma[k]), type = "l")
-@
-\begin{figure}
-\begin{center}
-<<label=figgambat,fig=TRUE,echo=FALSE>>=
-<<figgambattoo>>
-@
-\end{center}
-\caption{Plot ``Big Gamma'' defined by \eqref{eq:little} and \eqref{eq:big}
-for the sequence of batch means (batch length \Sexpr{blen}).
-Only initial convex sequence estimator is shown.}
-\label{fig:gambat}
-\end{figure}
-...text the $\sigma^2$ for the original series.
-<<compvar>>=
-out$var.con
-bout$var.con * blen
-@
-Another way to look at this is that the MCMC estimator of $\mu$ is
-either \texttt{mean(x)} or \texttt{mean(x.batch)}.  And the variance
-must be divided by the sample size to give standard errors.  So either
-<<ci-con>>=
-mean(x) + c(-1, 1) * qnorm(0.975) * sqrt(out$var.con / length(x))
-mean(x.batch) + c(-1, 1) * qnorm(0.975) * sqrt(bout$var.con / length(x.batch))
-@
-is an asymptotic 95\% confidence interval for $\mu$.  Just divide by
-the relevant sample size.
+\section{Acknowledgments}
+The authors wish to thank Tomasz Kiedrzynski, Lisa Oakley and Nic Aagaard from the Ministry of Health, Ruth Pirie and colleagues from ESR for help in obtaining the appropriate materials for analyses.
 
 \begin{thebibliography}{}
 
