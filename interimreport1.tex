@@ -15,8 +15,9 @@
 \DeclareMathOperator{\var}{var}
 \DeclareMathOperator{\cov}{cov}
 
+\usepackage{Sweave}
 \begin{document}
-\SweaveOpts{concordance=TRUE}
+\input{interimreport1-concordance}
 
 \title{Measles risk assessment and cost interim report\\ \vspace{2 mm} {\large David T S Hayman, Tim Carpenter,\\ Jonathan C Marshall, Mick Roberts, Nigel P French}}
 \author{mEpiLab and EpiCentre,\\ Infectious Diseases Research Centre,\\
@@ -77,162 +78,118 @@ These data are currently unavailable in the form we require and after contacting
 
 We have reviewed the information on measles importation and the origins of the introductions of measles into New Zealand. To help better understand the risk of measles importation, with a particular goal of enabling the Ministry to better inform travellers, we sought to understand better the risk of measles importation. For our initial analyses, we used the arrivals data from \href{http://www.immigration.govt.nz/}{www.immigration.govt.nz} as an estimate of human movement to and from New Zealand. We collated country population size, measles incidence and measles vaccination cover from the WHO \href{http://www.who.int/research/en/}{www.who.int/research/en/}.
 
-<<echo=FALSE>>=
-library(xtable)
-dpdf<-read.csv("mapdata.csv",header=T)
-# output top countries
-topimmigration <- dpdf[order(-dpdf$immigration),] 
-immigration<-topimmigration[1:10,c(1,4)]
-topincidence <- dpdf[order(-dpdf$incidence),] 
-incidence<-topincidence[1:10,c(1,2)]
-incidence[,2]<-round(incidence[,2],0)
-topvaccine <- dpdf[order(dpdf$cover),] 
-vaccinecover<-topvaccine[1:10,c(1,3)]
-toprisk <- dpdf[order(-dpdf$risk),] 
-risk<-(toprisk[1:10,c(1,5)])
-risk[,2]<-round(risk[,2],0)
-@
 
 \begin{table}
 \caption{Immigration to New Zealand (2012)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(immigration, file="", table.env=FALSE,rowname=NULL)
-@
-\end{table}
+%latex.default(immigration, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{id}&\multicolumn{1}{c}{immigration}\tabularnewline
+\hline
+Australia&$809775$\tabularnewline
+United Kingdom&$306177$\tabularnewline
+China&$256036$\tabularnewline
+United States&$194438$\tabularnewline
+Japan&$ 86676$\tabularnewline
+Germany&$ 83608$\tabularnewline
+Korea, Republic of&$ 73459$\tabularnewline
+France&$ 71448$\tabularnewline
+India&$ 69038$\tabularnewline
+Canada&$ 54981$\tabularnewline
+\hline
+\end{tabular}\end{center}\end{table}
 
 \begin{table}
 \caption{Lowest national measles vaccine cover (2012)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(vaccinecover, file="", table.env=FALSE,rowname=NULL)
-@
-\end{table}
+%latex.default(vaccinecover, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{id}&\multicolumn{1}{c}{cover}\tabularnewline
+\hline
+Equatorial Guinea&$34$\tabularnewline
+Somalia&$49$\tabularnewline
+Lesotho&$60$\tabularnewline
+Central African Republic&$65$\tabularnewline
+Papua New Guinea&$67$\tabularnewline
+Chad&$69$\tabularnewline
+Haiti&$69$\tabularnewline
+South Sudan&$70$\tabularnewline
+Gabon&$71$\tabularnewline
+Yemen&$71$\tabularnewline
+\hline
+\end{tabular}\end{center}\end{table}
 
 \begin{table}
 \caption{Measles Incidence per million (2012)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(incidence, file="", table.env=FALSE,rowname=NULL)
-@
-\end{table}
+%latex.default(incidence, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{id}&\multicolumn{1}{c}{incidence}\tabularnewline
+\hline
+Equatorial Guinea&$1617$\tabularnewline
+Nauru&$1100$\tabularnewline
+Democratic Republic of the Congo&$1096$\tabularnewline
+Somalia&$ 979$\tabularnewline
+Djibouti&$ 824$\tabularnewline
+Sudan&$ 786$\tabularnewline
+Burkina Faso&$ 447$\tabularnewline
+Romania&$ 342$\tabularnewline
+Ukraine&$ 280$\tabularnewline
+Sudan&$ 229$\tabularnewline
+\hline
+\end{tabular}\end{center}\end{table}
 
 \begin{table}
 \caption{Risk of measles importation to New Zealand in 2012}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(risk, file="", table.env=FALSE,rowname=NULL)
-@
-\end{table}
+%latex.default(risk, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{id}&\multicolumn{1}{c}{risk}\tabularnewline
+\hline
+United Kingdom&$10202161$\tabularnewline
+Australia&$ 6991116$\tabularnewline
+Malaysia&$ 3226580$\tabularnewline
+Thailand&$ 1576414$\tabularnewline
+China&$ 1138900$\tabularnewline
+India&$ 1039356$\tabularnewline
+Indonesia&$  984022$\tabularnewline
+Ukraine&$  664315$\tabularnewline
+Ireland&$  585413$\tabularnewline
+Romania&$  490731$\tabularnewline
+\hline
+\end{tabular}\end{center}\end{table}
 
 The preliminary analyses of 2012 data suggest immigration (whether for work, pleasure, etc.) is dominated by Australia, United Kingdom, China, and the United States, as shown in Table 1. However, vaccination coverage is lowest and measles incidence highest in less developed nations (Tables 2 and 3). Though the interactions between these different risk factors are unknown, simple products of measles incidence in 2012 and immigration numbers in 2012 suggest that though immigration is lower from some Asian countries, travel from (and thus we presume to) some countries also poses a risk. These data are shown in Table 4. The data for all the variables for each nation state and territories for 2012 are plotted in Figure 1 and the risk map for measles incidence and immigration in Figure 2.
 
-<<echo=FALSE>>=
-# haven't had time to sort out which packages I need
-library(maps)       # Provides functions that let us plot the maps
-library(mapdata)    # Contains the hi-resolution points that mark out the countries.
-library(rworldmap)
-library(adehabitat)
-library(rgdal)
-library(raster)
-library(maps)
-library(maptools)
-library(sp)
-#library(SDMTools)
-library(ggplot2)
-require(rgeos)
-library(ggmap)
-library(mapdata)
-#gpclibPermit()
-library(mapproj)
-library(plyr)
-library(grid)
-library(gridExtra)
-#gpclibPermit()
-library(utils)
-library(rgdal)
-#getwd()
-#setwd("~/data")
-#unzip("TM_WORLD_BORDERS_SIMPL-0.3.zip")
-load("world.ggmap.Rda")
-n <- length(unique(world.ggmap$id))
-id = unique(world.ggmap$id)
-id<-as.data.frame(id)
-dpdf<-read.csv("mapdata.csv",header=T)
-# output top countries
-
-np1<-ggplot(dpdf, aes(map_id = id))  +
-  geom_map(aes(fill = immigration), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-   xlab("longitude") +
-  ylab("latitude") +
-   theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
-
-np2<-ggplot(dpdf, aes(map_id = id))  +
-  geom_map(aes(fill = incidence), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-  xlab("longitude") +
-  ylab("latitude") +
-   theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
-
-np3<-ggplot(dpdf, aes(map_id = id))  +
-  geom_map(aes(fill = cover), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-  xlab("longitude") +
-  ylab("latitude") +
-  theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
-
-#grid.arrange(np1, np2, np3, ncol=3, main="")
-
-np4<-ggplot(dpdf, aes(map_id = id)) +
-  geom_map(aes(fill = risk), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-   xlab("longitude") +
-  ylab("latitude") +
-  theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
-#np4
-@
 
 \begin{figure}[h!]
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np1)
-@
+\includegraphics{interimreport1-007}
 \end{center}
 \caption{Immigration to New Zealand 2012}
 \end{figure}
 
 \begin{figure}[h!]
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np2)
-@
+\includegraphics{interimreport1-008}
 \end{center}
 \caption{Measles incidence per million 2012}
 \end{figure}
 
 \begin{figure}[h!]
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np3)
-@
+\includegraphics{interimreport1-009}
 \end{center}
 \caption{Measles vaccination cover (\%) 2012 }
 \end{figure}
 
 \begin{figure}[h!]
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np4)
-@
+\includegraphics{interimreport1-010}
 \end{center}
 \caption{Risk map from measles incidence and immigration rates}
 \end{figure}
