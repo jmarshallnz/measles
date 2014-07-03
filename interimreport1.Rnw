@@ -44,7 +44,7 @@ As a member of the World Health Organization (WHO) Western Pacific Region, New Z
 
 The last widespread measles outbreaks in New Zealand occurred in 1991 and in 1997. Since then, smaller but significant outbreaks have occurred in 2009 (mainly in Canterbury) and in 2011--2012 (mainly in the Auckland region) and another significant outbreak is currently ongoing in the Auckland and Waikato regions. The outbreak in 2011--2012 lasted for more than 12 months and the current 2013--2014 outbreak started at the end of December 2013 and is ongoing (as of \date{\today}). In 2013, prior to the 2013--2014 outbreak, New Zealand was advised by the Western Pacific Regional Verification Commission for Measles Elimination (RVC) that it can request verification of non-endemic status three years after the last case of the 2011--12 outbreak in June 2012.
 
-Previous analyses of measles, including two in New Zealand by Prof. Roberts (INSERT REFS), have estimated that the interruption of measles virus transmission can be achieved by herd immunity when approximately 95 percent of the population is homogeneously immune to measles. Thus, while New Zealand immunisation activities have led to measles outbreaks becoming less frequent, with decreasing numbers of cases, outbreaks still occur (as described above). Current overall population immunity estimates suggest that approximately 85 to 90 percent of the population is immune to measles, thus the reasons for the ongoing outbreaks are likely due to overall population immunity being less than 95 percent and there being pockets of susceptible, non-immune population remaining. Since 2009, all the outbreaks in New Zealand were linked to infections acquired (imported) from overseas, though previous work suggests these outbreaks still largely affect school-aged children and children under two years of age. Under two year olds are thought be be consistently among the most affected age groups because the first of two doses of measles, mumps and rubella vaccine (MMR) is not due until fifteen months.
+Previous analyses of measles, including two in New Zealand by Prof. Roberts \cite{roberts0,roberts4}, have estimated that the interruption of measles virus transmission can be achieved by herd immunity when approximately 95 percent of the population is homogeneously immune to measles. Thus, while New Zealand immunisation activities have led to measles outbreaks becoming less frequent, with decreasing numbers of cases, outbreaks still occur (as described above). Current overall population immunity estimates suggest that approximately 85 to 90 percent of the population is immune to measles, thus the reasons for the ongoing outbreaks are likely due to overall population immunity being less than 95 percent and there being pockets of susceptible, non-immune population remaining. Since 2009, all the outbreaks in New Zealand were linked to infections acquired (imported) from overseas, though previous work suggests these outbreaks still largely affect school-aged children and children under two years of age. Under two year olds are thought be be consistently among the most affected age groups because the first of two doses of measles, mumps and rubella vaccine (MMR) is not due until fifteen months.
 
 \section{Risk analysis review}
 
@@ -317,29 +317,29 @@ We understand the National Immunisation Register (NIR) allows tracking of the va
 
 In this section we provide a review of the costs of measles from other locations and an analysis of the costs involved with the current measles outbreak.
 
-Approximately 50 years ago, approximately 135 million cases and 7--8 million deaths were believed to occur in the world due to measles (Clements and Hussey, 2004). Thirty years later, it was estimated there were still approximately 45 million cases of measles occurring annually, including 6 million measles-related fatalities. Wolfson et al. (2007) estimated that in 1999 measles was responsible for more than 30 million disability adjusted life years (DALYs) lost and 12 million in 2005. Similarly, the number of cases was reduced by more than 50\% from 43 million in 1999 to approximately 20 million in 2005. They estimated approximately 7.5 million deaths from measles were avoided from 2000--05 due vaccination. The World Health Organization (WHO) estimated 158,000 deaths from approximately 355,000 measles cases in 2011 (WHO, 2013).  In addition to the substantial losses occurring in measles-endemic countries, a significant impact is felt in heavily measles-vaccinated countries, which may be considered measles-free, due to contact with cases either in the country of origin or in the previously measles-free country.
+Approximately 50 years ago, approximately 135 million cases and 7--8 million deaths were believed to occur in the world due to measles \cite{clements4}. Thirty years later, it was estimated there were still approximately 45 million cases of measles occurring annually, including 6 million measles-related fatalities. \cite{wolfson7} estimated that in 1999 measles was responsible for more than 30 million disability adjusted life years (DALYs) lost and 12 million in 2005. Similarly, the number of cases was reduced by more than 50\% from 43 million in 1999 to approximately 20 million in 2005. They estimated approximately 7.5 million deaths from measles were avoided from 2000--05 due vaccination. The World Health Organization (WHO) estimated 158,000 deaths from approximately 355,000 measles cases in 2011 \cite{who13}.  In addition to the substantial losses occurring in measles-endemic countries, a significant impact is felt in heavily measles-vaccinated countries, which may be considered measles-free, due to contact with cases either in the country of origin or in the previously measles-free country.
 
-The annual cost of treating and controlling measles in 11 industrialised countries was estimated to cost more than US\$ 150 million (Carabin et al., 2003). The estimated cost for a case ranged from US\$ 189--344 (Carabin et al., 2003); however, the average estimated cost of a typical hospital case ranges from US\$ 967--1,755 (Carabin et al., 2002). Stack et al (2011) estimated the economic benefits from cases averted due to measles vaccination. They estimated that the expanded vaccination from 2005 to 2015 in 72 of the world's poorest countries could result in nearly US\$ 10 billion of costs averted between 2011 and 2020. Ninety-nine percent of these averted costs were the result of lost productivity due to an estimated 360,000 measles-specific premature mortalities, with the remaining \<1\% associated with averted treatment costs and reduced caretaker productivity for the nearly 12 million measles cases avoided.
+The annual cost of treating and controlling measles in 11 industrialised countries was estimated to cost more than US\$ 150 million \cite{carabin3]. The estimated cost for a case ranged from US\$ 189--344 \cite{carabin3}; however, the average estimated cost of a typical hospital case ranges from US\$ 967--1,755 \cite{carabin2}. \cite{stack11} estimated the economic benefits from cases averted due to measles vaccination. They estimated that the expanded vaccination from 2005 to 2015 in 72 of the world's poorest countries could result in nearly US\$ 10 billion of costs averted between 2011 and 2020. Ninety-nine percent of these averted costs were the result of lost productivity due to an estimated 360,000 measles-specific premature mortalities, with the remaining \<1\% associated with averted treatment costs and reduced caretaker productivity for the nearly 12 million measles cases avoided.
 
-Italy has the highest reported annual cost of measles among industrialised countries (Carabin et al., 2003). In 2001, it reported losses related to measles of approximately US\$ 50 million. The economic impact of a large measles outbreak in Italy, 2002--03 examined the costs associated with 5,154 hospitalisations where measles was the main discharge diagnosis. The mean length of hospital stay was 5.2 days (median = 4 days and range = 1 to 303 days). The total cost of these hospitalisations amounted to \euro 8.83 million (\euro 1 ~ NZ\$ 2.0 in 2002-03), or approximately \euro 1,700 per case. The average cost per non-complicated measles case was  \euro 1,429, while the mean cost of a case with complicated measles was  \euro 2,721. The average daily cost of a hospital stay was  \euro 327.
+Italy has the highest reported annual cost of measles among industrialised countries \cite{carabin3}. In 2001, it reported losses related to measles of approximately US\$ 50 million. The economic impact of a large measles outbreak in Italy, 2002--03 examined the costs associated with 5,154 hospitalisations where measles was the main discharge diagnosis. The mean length of hospital stay was 5.2 days (median = 4 days and range = 1 to 303 days). The total cost of these hospitalisations amounted to \euro 8.83 million (\euro 1 ~ NZ\$ 2.0 in 2002-03), or approximately \euro 1,700 per case. The average cost per non-complicated measles case was  \euro 1,429, while the mean cost of a case with complicated measles was  \euro 2,721. The average daily cost of a hospital stay was  \euro 327.
 
-An outbreak of measles occurred in Sydney, Australia, lasting nearly 2 months in 2011 and resulted in 26 confirmed cases (Flego et al., 2013). Seven (27\%) of the cases required hospitalisation for more than 1 day and 10 (38\%) resulted in management within a hospital emergency department. During this outbreak, a total of 1,395 contacts were identified and managed by a public health unit in western Sydney. The mean number of contacts per case was 54 (median = 28, maximum = 206). The estimated cost to the public health unit for contact management for the epidemic was in excess of A\$ 48,000, with 90\% of this being associated with staff time. 
+An outbreak of measles occurred in Sydney, Australia, lasting nearly 2 months in 2011 and resulted in 26 confirmed cases \cite{flego13}. Seven (27\%) of the cases required hospitalisation for more than 1 day and 10 (38\%) resulted in management within a hospital emergency department. During this outbreak, a total of 1,395 contacts were identified and managed by a public health unit in western Sydney. The mean number of contacts per case was 54 (median = 28, maximum = 206). The estimated cost to the public health unit for contact management for the epidemic was in excess of A\$ 48,000, with 90\% of this being associated with staff time. 
 
-Germany implemented a two-dose measles vaccination program in 1991 and has seen the benefits in recent years. In 2001 more than 6,000 cases were reported in Germany but by 2004 this number fell to 122 (Wichmann et al., 2009). However, in 2005 more than 500 cases were reported by the middle of the year in two German states, with the vast majority (>95\%) in non-vaccinated children (Siedler et al, 2006). An economic analysis was performed of the 614 measles cases reported in an 8-month period in Duisburg in the state of North Rhine-Wesphalia (NRW). In that study, they estimated the health-care provider costs to be approximately \euro 229,000, or \euro 373 per case. Approximately 78\% of these costs were associated with the 95 (15.5\%) of the cases that were hospitalised. The mean costs of the hospitalised patients was  \euro 1,877, including one patient with encephalitis at a cost of \euro 35,623. In addition to the health-care provider costs, additional costs of \euro 89,400 were incurred by the district public health office, the majority (\euro 85,000, 95.1\%) for personnel, \euro 2,300 (2.6\%) for vaccination, and \euro 2,100 (2.3\%) for serologic testing. Therefore the combined direct costs of these 612 cases amounted to \euro 318,400, or \euro 520 per case. In addition, to determine the total impact, it would be necessary to include the indirect losses associated with lost production of cases and care givers.
+Germany implemented a two-dose measles vaccination program in 1991 and has seen the benefits in recent years. In 2001 more than 6,000 cases were reported in Germany but by 2004 this number fell to 122 \cite{wichmann9}. However, in 2005 more than 500 cases were reported by the middle of the year in two German states, with the vast majority (>95\%) in non-vaccinated children (Siedler et al, 2006). An economic analysis was performed of the 614 measles cases reported in an 8-month period in Duisburg in the state of North Rhine-Wesphalia (NRW). In that study, they estimated the health-care provider costs to be approximately \euro 229,000, or \euro 373 per case. Approximately 78\% of these costs were associated with the 95 (15.5\%) of the cases that were hospitalised. The mean costs of the hospitalised patients was  \euro 1,877, including one patient with encephalitis at a cost of \euro 35,623. In addition to the health-care provider costs, additional costs of \euro 89,400 were incurred by the district public health office, the majority (\euro 85,000, 95.1\%) for personnel, \euro 2,300 (2.6\%) for vaccination, and \euro 2,100 (2.3\%) for serologic testing. Therefore the combined direct costs of these 612 cases amounted to \euro 318,400, or \euro 520 per case. In addition, to determine the total impact, it would be necessary to include the indirect losses associated with lost production of cases and care givers.
 
-Although measles was declared eliminated from the United States in 2000, it remains a concern due to the endemic nature of it around the world (Parker et al., 2006). Several studies have been conducted in the United States to assess the economic impact of recent measles outbreaks due to imported measles.  Ortega-Sanchez et al. (2014) estimated the economic impact to public health departments in the US as the result of 16 outbreaks in 2011. The outbreaks lasted an average of 22 days and resulted in 107 confirmed cases; however, from these 107 cases, they estimated between approximately 8,900 and 17,500 contacts with confirmed cases, requiring between 42,600 and 83,100 personnel hours at a cost of between US\$ 2.7 and 5.3 million. Overall, it was estimated that each contact required 4.7 personnel hours at a cost of US\$ 298 per contact.
-Dayan et al. (2005) calculated the cost of containing a single case of measles that occurred in Iowa in 2004. They estimated that for the one week that the Iowa Department of Public Health (DPH) investigated the case, 2,525 hours were used to identify contacts, set up vaccination clinics, and institute and enforce quarantine orders for those who refused vaccination. In total, it was estimated the direct costs associated with three cases of measles was US\$ 142,452, or nearly US\$ 50,000 per case.
+Although measles was declared eliminated from the United States in 2000, it remains a concern due to the endemic nature of it around the world \cite{parker6}. Several studies have been conducted in the United States to assess the economic impact of recent measles outbreaks due to imported measles.  \cite{ortegasanchez14} estimated the economic impact to public health departments in the US as the result of 16 outbreaks in 2011. The outbreaks lasted an average of 22 days and resulted in 107 confirmed cases; however, from these 107 cases, they estimated between approximately 8,900 and 17,500 contacts with confirmed cases, requiring between 42,600 and 83,100 personnel hours at a cost of between US\$ 2.7 and 5.3 million. Overall, it was estimated that each contact required 4.7 personnel hours at a cost of US\$ 298 per contact.
+\cite{dayan5} calculated the cost of containing a single case of measles that occurred in Iowa in 2004. They estimated that for the one week that the Iowa Department of Public Health (DPH) investigated the case, 2,525 hours were used to identify contacts, set up vaccination clinics, and institute and enforce quarantine orders for those who refused vaccination. In total, it was estimated the direct costs associated with three cases of measles was US\$ 142,452, or nearly US\$ 50,000 per case.
 
-Parker et al. (2006) reported the impact of a large measles outbreak due to a non-autochthonous case in Indiana. A total of 34 cases, 94\% of which were not vaccinated against measles were reported in the outbreak. Direct cost information was obtained from approximately 100 public health officers and infection-control officials needed to control the outbreak. Direct cost for those completing a survey showed the outbreak cost at least \$167,685, 83\% of which (\$139,023) was for wages, salaries and overhead. This amounted to a direct cost of \$4,932 per measles case. These costs did not include either patient care or indirect costs, which would have made the total and per case cost higher.
+\cite{parker6} reported the impact of a large measles outbreak due to a non-autochthonous case in Indiana. A total of 34 cases, 94\% of which were not vaccinated against measles were reported in the outbreak. Direct cost information was obtained from approximately 100 public health officers and infection-control officials needed to control the outbreak. Direct cost for those completing a survey showed the outbreak cost at least \$167,685, 83\% of which (\$139,023) was for wages, salaries and overhead. This amounted to a direct cost of \$4,932 per measles case. These costs did not include either patient care or indirect costs, which would have made the total and per case cost higher.
 
-Coleman et al. (2012) estimated the direct medical and public health costs in response to a single case of refugee-imported measles.  Costs included labor, translation and benefits for public health workers. In addition, medical costs were incurred due to vaccination, immunoglobulin, testing for measles immunity, hospitalisation, transportation and diagnosis. In total, 387 hours were associated with this single case, resulting in a cost of US\$ 11,881. In addition, per-contact costs amounted to US\$ 264. The cost of hospitalisation for the 3-day stay by the index case was US\$ 931. Additional costs were associated with physician visits (US\$ 294), vaccine and immunoglobulin (US\$ 1,765), mileage (US\$ 205) and immunologic screening tests for the parents' exposed to measles (US\$ 240) for a total of US\$ 23,816.
+\cite{coleman12} estimated the direct medical and public health costs in response to a single case of refugee-imported measles.  Costs included labor, translation and benefits for public health workers. In addition, medical costs were incurred due to vaccination, immunoglobulin, testing for measles immunity, hospitalisation, transportation and diagnosis. In total, 387 hours were associated with this single case, resulting in a cost of US\$ 11,881. In addition, per-contact costs amounted to US\$ 264. The cost of hospitalisation for the 3-day stay by the index case was US\$ 931. Additional costs were associated with physician visits (US\$ 294), vaccine and immunoglobulin (US\$ 1,765), mileage (US\$ 205) and immunologic screening tests for the parents' exposed to measles (US\$ 240) for a total of US\$ 23,816.
 
 Economic analyses of measles control programs have shown them to be financially effective. In the Republic of Korea, the economics of alternative measles vaccination programs were compared. All of the alternatives were found to be economically efficient (benefit/cost ratio (B/C) > 1.0), with the alternative using two doses of the MMR program, with a catch-up campaign for measles and rubella being the most favourable (B/C = 1.27).
 
 The purpose of the current study is to estimate the cost of the current measles outbreak in New Zealand. Using this information, we will then evaluate the economics of alternative measles control strategies in order to provide additional information to public health officials and decision makers.
 
 \subsection{Methods}
-Costs were evaluated as either direct or indirect. Direct costs included physician consultations, hospitalisations, drugs, vaccination, long-term care for chronic sequelae, special education costs. Direct costs can be divided into medical and non-medical (Saha and Gerdtham, 2013). Direct medical costs include costs for diagnosis, treatment, continuing care, rehabilitation and terminal care. Personnel time (investigation and emergency response), materials (phone calls, vaccine), personnel (cost, wages and fringe benefits), overhead costs, public information, and mileage are estimated when calculating direct medical costs. Direct non-medical costs include transportation to and from health care providers.
+Costs were evaluated as either direct or indirect. Direct costs included physician consultations, hospitalisations, drugs, vaccination, long-term care for chronic sequelae, special education costs. Direct costs can be divided into medical and non-medical \cite{saha13}. Direct medical costs include costs for diagnosis, treatment, continuing care, rehabilitation and terminal care. Personnel time (investigation and emergency response), materials (phone calls, vaccine), personnel (cost, wages and fringe benefits), overhead costs, public information, and mileage are estimated when calculating direct medical costs. Direct non-medical costs include transportation to and from health care providers.
 
 Indirect costs are productivity losses for the case and/or health care provider, e.g. parent of a school child. Indirect costs included work loss for cases and caregivers. This could also include the economic value of premature life lost, costs associated with permanent disability, e.g. deafness and mental retardation. Commonly the human value approach (HVA) has been used to estimate economic impact of life. The HVA measures the potential future earnings of an individual and discounts it into a present value. Typically this is 3\% but 5\% has also been used in a sensitivity analysis, which is more compared to non-human life calculations and will tend to reduce the present value of the future earnings (saved by avoiding a case).
 
@@ -444,7 +444,7 @@ Detailed measles outbreak management costs were provided for the period of Janua
 
 In other outbreaks, the average cost per measles case was estimated to be US\$ 254, US\$ 276, and US\$ 307 for Canada, the Netherlands, and the UK, respectively (Carabin, et al., 2002). This and other findings will be compared and contrasted with New Zealand costs, once more complete New Zealand data are made available.
 The containment of a single case (also 2 secondary cases) of measles in 2004 in Iowa, USA was estimated to cost US\$ 142,542. In this outbreak, more than 2500 hours of personnel time were needed to investigate and respond to the outbreak (Dayan et al., 2005). They estimated direct costs per case to be less than US\$ 500. 
-The annual cost for long-term care of people with moderate of severe mental retardation over a period of 50 years is estimated at US\$ 31,059 and US\$ 78,448, respectively (Prouty and Lakin, 2000). In 2000 expenditures for care in large state mental retardation/developmental disabilities (MR/DD) facilities continued to increase and reached a national annual average of US\$ 113,864 per person. In 2000 the average annual expenditures for care in large state MR/DD facilities were \$ 113,864. The cost of a case of measles was estimated to range from \$ 71 (no complications and no hospitalisation) to \$ 29,556 (encephalitis and hospitalisation for 8.7 days). They estimated the annual cost of measles in the US with its vaccination program to be \$1,234,083 (52.5\% direct cost and 47.5\% indirect cost) (Zhou et al., 2004).
+The annual cost for long-term care of people with moderate of severe mental retardation over a period of 50 years is estimated at US\$ 31,059 and US\$ 78,448, respectively \cite{prouty0}. In 2000 expenditures for care in large state mental retardation/developmental disabilities (MR/DD) facilities continued to increase and reached a national annual average of US\$ 113,864 per person. In 2000 the average annual expenditures for care in large state MR/DD facilities were \$ 113,864. The cost of a case of measles was estimated to range from \$ 71 (no complications and no hospitalisation) to \$ 29,556 (encephalitis and hospitalisation for 8.7 days). They estimated the annual cost of measles in the US with its vaccination program to be \$1,234,083 (52.5\% direct cost and 47.5\% indirect cost) \cite{zhou4}.
 
 \subsection{Cost analysis summary}
 \begin{itemize}
@@ -461,26 +461,21 @@ We also require additional clarifications of the data, regarding what hospital c
 
 \section{Modeling measles epidemics}\label{sec:epidemic_modeling}
 
-A previously-published model of the dynamics of measles infections in New Zealand has been used to evaluate the vaccination strategy in New Zealand of MMR1 at 15 months and MMR2 before 5 years. The results show that achieving coverage of greater than 90\% at both vaccination opportunities is necessary if future epidemics of measles are to be prevented.
+A previously-published model of the dynamics of measles infections in New Zealand has been used to evaluate the vaccination strategy in New Zealand of MMR1 at 15 months and MMR2 before 5 years \cite{roberts0,roberts4,tobias98}. The results show that achieving coverage of greater than 90\% at both vaccination opportunities is necessary if future epidemics of measles are to be prevented.
 
-The original mathematical model for the dynamics of measles in New Zealand prepared in 1996 (Tobias & Roberts 1998) successfully predicted the 1997 epidemic, which was curtailed by a mass vaccination campaign (Mansoor
-et al 1998; Roberts & Tobias 2000). Subsequent extension of this work in 1998 showed that the then current schedule of MMR1 at 15 months and MMR2 at 11 years was insufficient to prevent further epidemics. The model developed by Roberts & Tobias (2000) supported the change in the immunisation schedule that took effect in January 2001, at which time MMR2 was changed from delivery at 11 years to delivery before the age of five. The schedule was changed in 2000 with MMR2 now being administered before 5 years (Anon. 2002a) and later analyses suggested high levels of vaccination coverage (but less than 95\%) could eliminate measles, but emphasised that it is necessary to maintaining high coverage rates in order to prevent future epidemics.
+The original mathematical model for the dynamics of measles in New Zealand prepared in 1996 \cite{tobias98} successfully predicted the 1997 epidemic, which was curtailed by a mass vaccination campaign \cite{mansoor98,roberts0}. Subsequent extension of this work in 1998 showed that the then current schedule of MMR1 at 15 months and MMR2 at 11 years was insufficient to prevent further epidemics. The model developed by \cite{roberts0} supported the change in the immunisation schedule that took effect in January 2001, at which time MMR2 was changed from delivery at 11 years to delivery before the age of five. The schedule was changed in 2000 with MMR2 now being administered before 5 years \cite{anon2a} and later analyses suggested high levels of vaccination coverage (but less than 95\%) could eliminate measles, but emphasised that it is necessary to maintaining high coverage rates in order to prevent future epidemics.
 
-These results were in line with those obtained by other authors, for example: Babad et al (1995) advocated a two-dose schedule for England and Wales, with the second vaccination given at age four; and Gay et al (1998) recommended a second vaccination at either 18 months or five years, to complement the first vaccination at 12 months in Canada. In addition, Agur et al (1993) found that vaccinating 85\% of susceptible children aged one to seven years at five-yearly intervals would prevent epidemics in Israel. These authors all agree that two
-vaccinations at no less than five years apart are necessary to prevent measles epidemics.
-A different approach was taken by Wallinga et al (2001). These authors took existing policies in eight European countries and estimated the coverage rates required to reduce Rv below one. They found that results depended on the age at delivery, but no strategy succeeded if coverage rates were below approximately
-87\%.
+These results were in line with those obtained by other authors, for example: \cite{babad95} advocated a two-dose schedule for England and Wales, with the second vaccination given at age four; and \cite{gay98} recommended a second vaccination at either 18 months or five years, to complement the first vaccination at 12 months in Canada. In addition, \cite{agur93} found that vaccinating 85\% of susceptible children aged one to seven years at five-yearly intervals would prevent epidemics in Israel. These authors all agree that two vaccinations at no less than five years apart are necessary to prevent measles epidemics. A different approach was taken by \cite{wallinga1} who took existing policies in eight European countries and estimated the coverage rates required to reduce Rv below one. They found that results depended on the age at delivery, but no strategy succeeded if coverage rates were below approximately 87\%.
 
-A variety of similar models for measles vaccination strategies have been developed by other authors for various regions (Agur et al 1993; Babad et al 1995; Edmunds et al 2000; Gay et al 1998; Wallinga et al 2001) based on sets of nonlinear differential equations (ODE), and the conclusions reached have been similar. The differences in the models have been in the details of the representation of the infectious period, and in the ways in which the age and contact structures of the population have been specified.
+A variety of similar models for measles vaccination strategies have been developed by other authors for various regions \cite{agur93, babad95, edmunds0, gay98, wallinga1} based on sets of nonlinear differential equations (ODE), and the conclusions reached have been similar. The differences in the models have been in the details of the representation of the infectious period, and in the ways in which the age and contact structures of the population have been specified.
 
-It is difficult to estimate the proportion of the school-age population that have been effectively immunised, but this is continuously being diluted by children who are not immunised. While analyses suggest that 85\% coverage at MMR1 and MMR2 could be sufficient to prevent future measles epidemics, Glass et al (2004) in the Netherlands showed that high overall levels of measles vaccination can obscure pockets of poor coverage, resulting in localised regions with increased risk of infection.
+It is difficult to estimate the proportion of the school-age population that have been effectively immunised, but this is continuously being diluted by children who are not immunised. While analyses suggest that 85\% coverage at MMR1 and MMR2 could be sufficient to prevent future measles epidemics, \cite{glass4} in the Netherlands showed that high overall levels of measles vaccination can obscure pockets of poor coverage, resulting in localised regions with increased risk of infection.
 
-The quantity that determines whether an epidemic will occur is the basic reproduction number of the infection, $R_0$\todo{not sure if you want it like this throughout?}. This is defined as the expected number of secondary infections that would arise from a single primary infection introduced into a fully susceptible population (Anderson & May 1991; Diekmann & Heesterbeek 2000). If $R_0 > 1$ an epidemic will occur following an introduction of infection. The best estimate we had for measles in New Zealand was R0 = 12.8 -- 12.5\todo{this seems an odd range?} (Roberts, see results section). The basic reproduction number of the infection under vaccination, Rv\todo{or $R_v$ ?}, is the expected number of secondary infections that would arise from a single primary infection introduced into a vaccinated population at equilibrium and is a robust indicator of the performance of a vaccination schedule. If $R_v < 1$ epidemics are prevented. The case reproduction number of the infection at time $t$, $R_t$, is the expected number of secondary infections that arise from a single infection at a particular time and depends on the number in the population who are susceptible.
+The quantity that determines whether an epidemic will occur is the basic reproduction number of the infection, $R_0$\todo{not sure if you want it like this throughout?}. This is defined as the expected number of secondary infections that would arise from a single primary infection introduced into a fully susceptible population \cite{anderson91, diekmann0}. If $R_0 > 1$ an epidemic will occur following an introduction of infection. The best estimate we had for measles in New Zealand was R0 = 12.8 \cite{roberts4}. The basic reproduction number of the infection under vaccination, Rv\todo{or $R_v$ ?}, is the expected number of secondary infections that would arise from a single primary infection introduced into a vaccinated population at equilibrium and is a robust indicator of the performance of a vaccination schedule. If $R_v < 1$ epidemics are prevented. The case reproduction number of the infection at time $t$, $R_t$, is the expected number of secondary infections that arise from a single infection at a particular time and depends on the number in the population who are susceptible.
 
-To understand the level of immunity in the population and how likely an outbreak was of becoming endemic, we estimated Rv from all the outbreaks since 2009. To do this we estimated Rt, following an adaptation of the methods in [REF]\todo{there's 2 references in \texttt{?est.R0.TD}}, and used these to estimate the Rv of measles in the recent outbreaks, which helps understand the transmission dynamics of measles in the partially immune population.
+To understand the level of immunity in the population and how likely an outbreak was of becoming endemic, we estimated Rv from all the outbreaks since 2009. To do this we estimated Rt, following an adaptation of the methods in \cite{obidia12}\todo{there's 2 references in \texttt{?est.R0.TD}}, and used these to estimate the Rv of measles in the recent outbreaks, which helps understand the transmission dynamics of measles in the partially immune population.
 
-To estimate Rt we were required to compute the generation time\todo{what is this? define?} for measles. We used a lognormal distribution with mean 12.0 and standard deviation (s.d.) 3.5 from %# http://www.sciencedirect.com/science/article/pii/S0022519311003146 
-We then estimated Rt using the methods adapted from [REF] from the incidence data for each outbreak. We defined outbreaks in the dataset given their temporal and geographic correlations (Figure~\ref{fig:dhbcases}). The outbreaks we used in out analyses are shown in Figure~\ref{fig:outbreaks}.\todo{this repeats a bit of the previous paragraph - could do with rewrite}
+To estimate Rt we were required to compute the generation time\todo{what is this? define?} for measles. We used a lognormal distribution with mean 12.0 and standard deviation (s.d.) 3.5 from \cite{klinkenberg11}. We then estimated Rt using the methods adapted from \cite{obidia12} from the incidence data for each outbreak. We defined outbreaks in the dataset given their temporal and geographic correlations (Figure~\ref{fig:dhbcases}). The outbreaks we used in out analyses are shown in Figure~\ref{fig:outbreaks}.\todo{this repeats a bit of the previous paragraph - could do with rewrite}
 
 \begin{figure}
      \centering
@@ -532,25 +527,191 @@ Future modeling we aim to perform are:
 \section{Acknowledgments}
 The authors wish to thank Tomasz Kiedrzynski, Lisa Oakley and Nic Aagaard from the Ministry of Health, Ruth Pirie and colleagues from ESR, and June Atkinson from University of Otago for help in obtaining the appropriate materials for analyses.
 
-
 \begin{thebibliography}{}
 
-\bibitem[Gelman et al.(1996)Gelman, Roberts, and Gilks]{grg}
-Gelman, A., G.~O. Roberts, and W.~R. Gilks (1996).
-\newblock Efficient Metropolis jumping rules.
-\newblock In \emph{Bayesian Statistics, 5 (Alicante, 1994)}, pp.~599--607.
-  Oxford University Press.
+\bibitem[Agur et al.(1993)]{agur93}
+Agur, Z., L. Cojocaru, G. Mazor, R.~M. Anderson and Y.~L. Danon (1993).
+\newblock Pulse mass measles vaccination across age cohorts.
+\newblock \emph{Proceedings of the National Academy of Sciences USA}, 90, 11698--11702.
 
-\bibitem[Geyer(1992)]{practical}
-Geyer, C.~J. (1992).
-\newblock Practical Markov chain Monte Carlo (with discussion).
-\newblock \emph{Statistical Science}, 7, 473--511.
+\bibitem[Anderson and May(1991)]{anderson91}
+Anderson, R.~M. and R.~M. May (1991).
+\newblock \emph{Infectious diseases of humans: dynamics and control}. Oxford: Oxford University Press.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Geyer, C.~J. and E.~A. Thompson (1995).
-\newblock Annealing Markov chain Monte Carlo with applications to
-    ancestral inference.
-\newblock \emph{Journal of the American Statistical Association}, 90, 909--920.
+\bibitem[Anon. (2002a)]{anon2a}
+Anon. (2002a).
+\newblock \emph{Immunisation handbook}
+\newblock Wellington: Ministry of Health. pp.~131--146.
+
+\bibitem[Anon. (2002b)]{anon2b}
+Anon. (2002b).
+\newblock \emph{Infectious diseases in livestock}
+\newblock The Royal Society. pp.~68.
+
+\bibitem[Babad et al.(1995)]{babad95}
+Babad, H.~R., D.~J. Nokes, N.~J. Gay, E. Miller, P. Morgan-Capner, and R.~M. Anderson (1995).
+\newblock Predicting the impact of measles vaccination in England and Wales: model validation and analysis of policy options.
+\newblock \emph{Epidemiology and Infection}, 114, 319--344.
+
+\bibitem[Bae et al. (2013)]{bae13}
+Bae, G.~R, Y.~J. Choe, U.~Y. Go, Y.~I. Kim, and J.~K. Lee (2013). 
+\newblock Economic analysis of measles elimination program in the Republic of Korea, 2001: A cost benefit analysis study.
+\newblock \emph {Vaccine}, 31, 2661--2666.
+
+\bibitem[Carabin et al. (2002)]{carabin2}
+Carabin, H., W.~J. Edmunds, U. Kou, S. van den Hof, and V.~H. Nguyen (2002). 
+\newblock Measles in industrialized countries: a review of the average costs of adverse events and measles cases.
+\newblock \emph{BMC Public Health}, 2, 22.
+
+\bibitem[Carabin et al. (2003)]{carabin3}
+Carabin, H., W.~J. Edmunds, M. Gyldmark, P. Beutels, D. Lévy-Bruhl, H. Salo, U.~K. and Griffiths (2003).
+\newblock The cost of measles in industrialised countries.
+\newblock \emph{Vaccine}, 21,4167--4177.
+
+\bibitem[Clements and Hussey (2004]{clements4}
+Clements, C.~J. and G.~D. Hussey (2004).
+\newblock Chapter 4: Measles.
+\newblock In \emph{The Global Epidemiology of Infectious Diseases},  Murray, C., A.~D. Lopez, and C.~D. Mathers, (eds.), Geneva.
+  World Health Organization, pp.~391.
+
+\bibitem[Coleman et al.(2012)]{coleman12}
+Coleman, M.~S., L. Garbat-Welch, H. Burke, M. Weinberg, K. Humbaugh, A. Tindall, and J. Cambron (2012).
+\newblock Direct costs of a single case of refugee-imported measles in Kentucky.
+\newblock \emph{Vaccine}, 30,317--321.
+
+\bibitem[Dayan et al.(2005)]{dayan5}
+Dayan, G.~H, I.~R. Ortega-Sánchez, C.~W. LeBaron, M.~P. Quinlisk, and the Iowa Measles Response Team (2005).
+\newblock The cost of containing one case of measles: the economic impact on the public health infrastructure - Iowa, 2004.
+\newblock \emph{Pediatrics), 116:e1; DOI:10/1542/peds.2004-2512.
+
+\bibitem[Diekmann et al.(2000)]{diekmann0}
+Diekmann, O. &  J.~A.~P. Heesterbeek (2000).
+\newblock \emph{Mathematical epidemiology of infectious diseases: model building, analysis and interpretation}.
+Chichester: Wiley.
+
+\bibitem[Edmunds et al.(2000)]{edmunds0}
+Edmunds, W.~J., N.~J. Gay, M. Kretzschmar, R.~G. Pebody and H. Wachman (2000).
+\newblock \The pre-vaccination epidemiology of measles, mumps and rubella in Europe: implications for modelling studies.
+\newblock \emph{Epidemiology and Infection}, 125, 635--650.
+
+\bibitem[Filia et al.(2007)]{filia7}
+Filia, A., A. Brenna, A. Paná, G.~M. Cavallaro, M. Massari, and M. Atti, (2007).
+\newblock Health burden and economic impact of measles-related hospitalization in Italy, 2002-2003.
+\newblock \emph{BMC Public Health}, 7,169
+
+\bibitem[Flego et al.(2013)]{flego13}
+Flego, K.~L., D.~A. Belshaw, V. Sheppeard, and K.~M. Weston (2013).
+\newblock Impacts of a measles outbreak in western Sydney on public health resources.
+\newblock \emph{Communicable Diseases Intelligence Quarterly Report}, 37, E240--245.
+
+\bibitem[Geyer and Thompson(1995)]{gay98}
+Gay, N.~J., L. Pelletier, and P. Duclos (1998).
+\newblock Modelling the incidence of measles in Canada: an assessment of the options for vaccination policy.
+\newblock \emph{Vaccine}, 16, 794--801.
+
+\bibitem[Glass et al.(2004)]{glass4}
+Glass, K., J. Kappey, and B.~T. Grenfell (2004).
+\newblock The effect of heterogeneity in measles vaccination population immunity.
+\newblock \emph{Epidemiology and Infection}, 132, 675--683.
+
+\bibitem[Klinkenberg et al.(2011)]{klinkenberg11}
+Klinkenberg, D. and H. Nishiuraa (2011).
+\newblock The correlation between infectivity and incubation period of measles, estimated from households with two cases.
+\newblock \emph{Journal of Theoretical Biology},284, 52--60
+
+\bibitem[Koopmanschap(1998)][koopmanschap98}
+Koopmanschap, M.~A. (1998).
+\newblock Cost-of-illness studies: useful for health policy?
+\newblock \emph{Pharmacoeonomics}, 14, 143--148.
+
+\bibitem[Larg and Moss(2011)]{larg11}
+Larg, A. and J.~R. Moss (2011).
+\newblock Cost-of-illness studies: a guide to critical evaluation.
+\newblock \emph{Pharmacoeconomics}, 29,653--671.
+
+\bibitem[Mansoor et al.(1998)]{mansoor98}
+Mansoor, O., A. Blakely, M. Baker, M. Tobias, and A. Bloomfield (1998).
+\newblock A measles epidemic controlled by immunisation. 
+\newblock \emph{New Zealand Medical Journal}, 111, 467--471.
+
+\bibitem[Ortega-Sanchez et al.(2014)]{ortegasanchez14}
+Ortega-Sanchez, I.~R., M. Vijayaraghavan, A.~E. Barskey, and G.~S. Wallace (2014).
+\newblock The economic burden of sixteen measles outbreaks on United States public health departments in 2011.
+\newblock \emph{Vaccine}, 32,1311--1317.
+
+\bibitem[Obidia et al.(2012)]{obidia12}
+Obadia, T., R. Haneef and P.~Y., Boëlle (2012).
+\newblock The R0 package: a toolbox to estimate reproduction numbers for epidemic outbreaks.
+\newblock \emph{BMC Medical Informatics and Decision Making}, 2012, 12--147.
+
+\bibitem[Parker et al.(2006)]{parker6}
+Parker, A.~A., W. Staggs, G.~H. Dayan, T.~R. Ortega-Sánchez, P.~A. Rota, L. Lowe, P. Boardman, R. Teclaw, C. Graves, and C.~W. LeBaron (2006).
+\newblock Implications of a 2005 measles outbreak in Indiana for sustained elimination of measles in the United States.
+\newblock \emph{The New England Journal of Medicine}, 355, 447--455.
+
+\bibitem[Prouty et al. (2001)]{prouty1}
+Prouty, R.W., G. Smith and K.~C. Lakin (2001).
+\newblock Residential services for persons with developmental disabilities: status and trends through 2000.
+\newblock \emph{Minneapolis: Institute on Community Integration}, University of Minnesota, pp.~179, rtc.umn.edu/risp00.
+
+\bibitem[Roberts(2004)]{roberts4}
+Roberts, M. (2004).
+\newblock A mathematical model for measles vaccination.
+\newblock Wellington: Ministry of Health.
+
+\bibitem[Roberts and Tobias(2000)]{roberts0}
+Roberts, M.~G. and M.~I. Tobias (2000).
+\newblock Predicting and preventing measles epidemics in New Zealand: Application of a mathematical model. 
+\newblock \emph{Epidemiology and Infection}, 124, 279--287.
+
+\bibitem[Saha and Gerdtham(2013)]{saha13}
+Saha, S. and U.~G. Gerdtham (2013).
+\newblock Cost of illness studies on reproductive, maternal, newborn, and child health: a systematic literature review.
+\newblock \emph{Health Economics Review}, doi:10.1186/2191-1991-3-24.
+
+\bibitem[Siedler et al.(2006)]{siedler6}
+Siedler, A., A. Tischer, A. Mankertz, and S. Santibanez (2006).
+\newblock Two outbreaks of measles in Germany 2005.
+\newblock \emph{Eurosurveillance} 2006:11(4) article 5, http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=615, accessed 14 June 2014.
+
+\bibitem[Stack et al.(2011)]{stack11}
+Stack, M.~L., S. Ozawa, D.~M. Bishai, A. Mirelman, Y. Tam, L. Niessen, D.~G. Walker, and O.S. Levine (2011).
+\newblock Estimated economic benefits during the 'decade of vaccine' include treatment savings, gains in labor productivity.
+\newblock \emph{Health Affairs}, 30,1021--1028.
+
+\bibitem[Statistics New Zealand)]{stats14}
+\newblock \emph{Statistics New Zealand} (2014).
+http://nzdotstat.stats.govt.nz/, accessed 17 June 2014.
+
+\bibitem[Tobias and Roberts(1998)]{tobias98}
+Tobias, M.~I. and M.~G. Roberts (1998).
+\newblock Predicting and preventing measles epidemics in New Zealand: Application of a mathematical model.
+\newblock Wellington: Ministry of Health.
+
+\bibitem[Wallinga et al.(2001)]{wallinga1}
+Wallinga, J., D. Levy-Bruhl, N.~J. Gay, and C.~H. Wachman (2001).
+\newblock Estimation of measles reproduction ratios and prospects for elimination of measles by vaccination in some Western European countries.
+\newblock \emph{Epidemiology and Infection}, 127, 281--295.
+
+\bibitem[Wichmann et al.(2009)]{wichmann9}
+Wichmann, O., A. Siedler, D. Sagebiel, W. Hellenbrand, S. Santibanez, A. Mankertz, G. Vogt, U. van Treeck, and G. Krause (2009).
+\newblock Further efforts needed to achieve measles elimination in Germany: results of an outbreak investigation.
+\newblock \emph{Bulletin of the World Health Organization}, 87, 108--115.
+
+\bibitem[Wolfson et al(2007)]{wolfson7}
+Wolfson, L.~J., P.~M. Strebel, M. Gacic-Dobo, E.~J. Hoekstra, J.~W. McFarland, and B.~S. Hersh (2007).
+\newblock Has the 2005 measles mortality reduction goal been achieved? A natural history modelling study.
+\newblock \emph{Lancet}, 369, 191--200.
+
+\bibitem[WHO (2013)]{who13}
+World Health Organisation measles media centre, January (2013)
+\newblock Geneva: World Health Organization.
+http://www.who.int/mediacentre/news/notes/2013/measles_20130117/en/, accessed July 1, 2014.
+
+\bibitem[Zhou et al.(2004)]{zhou4}
+Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zimmerman, and M.~M. McCauley (2004).
+\newblock An economic analysis of the current universal 2-dose measles-mumps-rubella vaccination program in the United States.
+\newblock \emph{Journal of Infectious Diseases}, 189, S131--45.
 
 \end{thebibliography}
 
