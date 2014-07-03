@@ -15,8 +15,9 @@
 \DeclareMathOperator{\var}{var}
 \DeclareMathOperator{\cov}{cov}
 
+\usepackage{Sweave}
 \begin{document}
-\SweaveOpts{concordance=TRUE}
+\input{interimreport1-concordance}
 
 \title{Interim report\\ Measles risk assessment, modeling and cost analysis\\ \vspace{2 mm} {\large David T S Hayman, Tim Carpenter,\\ Jonathan C Marshall, Mick Roberts, Nigel P French}}
 \author{mEpiLab and EpiCentre,\\ Infectious Diseases Research Centre,\\
@@ -86,139 +87,101 @@ In light of the apparent increasing trend in measles incidence in the last few y
 
 For our initial analyses, we use arrivals data from New Zealand immigration (\href{http://www.immigration.govt.nz/}{www.immigration.govt.nz}) as a proxy for human movement to and from New Zealand. We collated country population size, measles incidence and measles vaccination cover from the WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}.
 
-<<echo=FALSE>>=
-library(xtable)
-dpdf<-read.csv("mapdata.csv",header=T)
-# output top countries
-topimmigration <- dpdf[order(-dpdf$immigration),] 
-immigration<-topimmigration[1:10,c(1,4)]
-topincidence <- dpdf[order(-dpdf$incidence),] 
-incidence<-topincidence[1:10,c(1,2)]
-incidence[,2]<-round(incidence[,2],0)
-topvaccine <- dpdf[order(dpdf$cover),] 
-vaccinecover<-topvaccine[1:10,c(1,3)]
-toprisk <- dpdf[order(-dpdf$risk),] 
-risk<-(toprisk[1:10,c(1,5)])
-risk[,2]<-round(risk[,2],0)
-@
 
 \begin{table}
 \caption{Immigration numbers to New Zealand (2012)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(immigration, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:immigration12}
+%latex.default(immigration, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{id}&\multicolumn{1}{c}{immigration}\tabularnewline
+\hline
+Australia&$809775$\tabularnewline
+United Kingdom&$306177$\tabularnewline
+China&$256036$\tabularnewline
+United States&$194438$\tabularnewline
+Japan&$ 86676$\tabularnewline
+Germany&$ 83608$\tabularnewline
+Korea, Republic of&$ 73459$\tabularnewline
+France&$ 71448$\tabularnewline
+India&$ 69038$\tabularnewline
+Canada&$ 54981$\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:immigration12}
 \end{table}
 
 \begin{table}
 \caption{Lowest national measles vaccine cover (2012)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(vaccinecover, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:cover12}
+%latex.default(vaccinecover, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{id}&\multicolumn{1}{c}{cover}\tabularnewline
+\hline
+Equatorial Guinea&$34$\tabularnewline
+Somalia&$49$\tabularnewline
+Lesotho&$60$\tabularnewline
+Central African Republic&$65$\tabularnewline
+Papua New Guinea&$67$\tabularnewline
+Chad&$69$\tabularnewline
+Haiti&$69$\tabularnewline
+South Sudan&$70$\tabularnewline
+Gabon&$71$\tabularnewline
+Yemen&$71$\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:cover12}
 \end{table}
 
 \begin{table}
 \caption{Measles incidence per million (2012)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(incidence, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:incidence12}
+%latex.default(incidence, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{id}&\multicolumn{1}{c}{incidence}\tabularnewline
+\hline
+Equatorial Guinea&$1617$\tabularnewline
+Nauru&$1100$\tabularnewline
+Democratic Republic of the Congo&$1096$\tabularnewline
+Somalia&$ 979$\tabularnewline
+Djibouti&$ 824$\tabularnewline
+Sudan&$ 786$\tabularnewline
+Burkina Faso&$ 447$\tabularnewline
+Romania&$ 342$\tabularnewline
+Ukraine&$ 280$\tabularnewline
+Sudan&$ 229$\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:incidence12}
 \end{table}
 
 \begin{table}
 \caption{Risk of measles importation to New Zealand in 2012}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(risk, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:risk12}
+%latex.default(risk, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lr}
+\hline\hline
+\multicolumn{1}{c}{id}&\multicolumn{1}{c}{risk}\tabularnewline
+\hline
+United Kingdom&$10202161$\tabularnewline
+Australia&$ 6991116$\tabularnewline
+Malaysia&$ 3226580$\tabularnewline
+Thailand&$ 1576414$\tabularnewline
+China&$ 1138900$\tabularnewline
+India&$ 1039356$\tabularnewline
+Indonesia&$  984022$\tabularnewline
+Ukraine&$  664315$\tabularnewline
+Ireland&$  585413$\tabularnewline
+Romania&$  490731$\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:risk12}
 \end{table}
 
 The preliminary analyses of 2012 data, the most complete and current year of data, suggest immigration (whether for work, pleasure, etc.) is dominated by Australia, United Kingdom, China, and the United States, as shown in Table \ref{table:immigration12}. However, vaccination coverage is lowest and measles incidence highest in less developed nations (Table \ref{table:incidence12} and Table \ref{table:cover12}). Though the precise interactions between these different risk factors are unknown, the most simple, a product of measles incidence in 2012 and immigration numbers in 2012, suggest that though immigration is lower from some Asian countries, travel from (and thus we presume to) some Asian countries also poses a high risk of measles importantion to New Zealand. These data are shown in Table \ref{table:risk12}. The data for all the variables for each nation state and territories for 2012 are plotted in Figure~\ref{fig:immigration12}, Figure~\ref{fig:incidence12}, and Figure~\ref{fig:cover12} and the risk map for measles incidence and immigration in Figure~\ref{fig:risk12}.
 
-<<echo=FALSE>>=
-# haven't had time to sort out which packages I need
-library(maps)       # Provides functions that let us plot the maps
-library(mapdata)    # Contains the hi-resolution points that mark out the countries.
-library(rworldmap)
-library(adehabitat)
-library(rgdal)
-library(raster)
-library(maps)
-library(maptools)
-library(sp)
-#library(SDMTools)
-library(ggplot2)
-require(rgeos)
-library(ggmap)
-library(mapdata)
-#gpclibPermit()
-library(mapproj)
-library(plyr)
-library(grid)
-library(gridExtra)
-#gpclibPermit()
-library(utils)
-library(rgdal)
-#getwd()
-#setwd("~/data")
-#unzip("TM_WORLD_BORDERS_SIMPL-0.3.zip")
-load("world.ggmap.Rda")
-n <- length(unique(world.ggmap$id))
-id = unique(world.ggmap$id)
-id<-as.data.frame(id)
-dpdf<-read.csv("mapdata.csv",header=T)
-# output top countries
-
-np1<-ggplot(dpdf, aes(map_id = id))  +
-  geom_map(aes(fill = immigration), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-   xlab("longitude") +
-  ylab("latitude") +
-   theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
-
-np2<-ggplot(dpdf, aes(map_id = id))  +
-  geom_map(aes(fill = incidence), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-  xlab("longitude") +
-  ylab("latitude") +
-   theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
-
-np3<-ggplot(dpdf, aes(map_id = id))  +
-  geom_map(aes(fill = cover), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-  xlab("longitude") +
-  ylab("latitude") +
-  theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
-
-#grid.arrange(np1, np2, np3, ncol=3, main="")
-
-np4<-ggplot(dpdf, aes(map_id = id)) +
-  geom_map(aes(fill = risk), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-   xlab("longitude") +
-  ylab("latitude") +
-  theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
-#np4
-@
 
 \begin{figure}[h!]
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np1)
-@
+\includegraphics{interimreport1-007}
 \end{center}
 \caption{Immigration to New Zealand 2012}
 \label{fig:immigration12}
@@ -226,9 +189,7 @@ print(np1)
 
 \begin{figure}[h!]
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np2)
-@
+\includegraphics{interimreport1-008}
 \end{center}
 \caption{Measles incidence per million 2012}
 \label{fig:incidence12}
@@ -236,9 +197,7 @@ print(np2)
 
 \begin{figure}[h!]
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np3)
-@
+\includegraphics{interimreport1-009}
 \end{center}
 \caption{Measles vaccination cover (\%) 2012 }
 \label{fig:cover12}
@@ -246,9 +205,7 @@ print(np3)
 
 \begin{figure}[h!]
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np4)
-@
+\includegraphics{interimreport1-010}
 \end{center}
 \caption{Risk map from measles incidence and immigration rates}
 \label{fig:risk12}
@@ -256,16 +213,7 @@ print(np4)
 
 \begin{figure}[h!]
 \begin{center}
-<<fig=TRUE,echo=FALSE>>=
-change<-read.csv("change.csv",header=T)
-plot(change[18:25,1],change[18:25,4],type="l",xlab="Year",ylab="",ylim=c(0,max(change[,4])),
-     bty="n")
-ylim <- range(c(0,max(change[,4])))
-xlim <- range(change[,1])
-par(fig = c(.6, 1, 0.6, 1), mar=c(0,0,0,0), new=TRUE)
-plot(change[,1],change[,4],type="l",xlab="Year",ylab="",
-     ylim=c(0,max(change[,4])),bg="grey",add=T,bty="n")
-@
+\includegraphics{interimreport1-011}
 \end{center}
 \caption{Trend in global per capita measles incidence}
 \label{fig:trendincidence}
@@ -275,16 +223,7 @@ Though global incidence of measles in declining, in recent years that decline ha
 
 \begin{figure}[h!]
 \begin{center}
-<<fig=TRUE,echo=FALSE>>=
-ttimes<-read.csv("times.csv",header=T)
-lmres<-lm(res~time,data=ttimes)
-#summary(lmres)
-plot(ttimes$res,xaxt="n",type="l",xlab="Date",ylab="")
-axis(1, at=1:71, labels=ttimes$mydate) 
-abline(lmres,col="red",
-       lty=2)
-acf(ttimes$res,lag.max = length(ttimes$res),plot=T,main="")
-@
+\includegraphics{interimreport1-012}
 \end{center}
 \caption{Trend in total immigrations into New Zealand}
 \label{fig:trendimmigration}
@@ -349,83 +288,124 @@ A regression analysis was performed to test for significant associations between
 \subsection{Results}
 Direct costs for measles management in New Zealand for the 10-week period, January 1 - March 9, 2014 are shown in  Table \ref{table:direct}. The reported direct medical costs do not appear to include hospital medical costs, which are reported separately in Table \ref{table:hosp}. 
 
-<<echo=FALSE>>=
-costtable1<-read.csv("costtable1.csv",header=T)
-@
 
 \begin{table}
 \caption{Estimated costs (NZ\$) for measles management in New Zealand, January 1 - March 9, 2014 (see text for abbreviations)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(costtable1, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:direct}
+%latex.default(costtable1, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lllll}
+\hline\hline
+\multicolumn{1}{c}{Category}&\multicolumn{1}{c}{January}&\multicolumn{1}{c}{February}&\multicolumn{1}{c}{March}&\multicolumn{1}{c}{Total}\tabularnewline
+\hline
+PHN&55,296&71,175&24,087&150,558\tabularnewline
+PHA&0&0&2,656&2,656\tabularnewline
+Data support&0&7,752&4,552&12,304\tabularnewline
+Supervisors&10,656&10,464&3,232&24,352\tabularnewline
+IMT&32,918&28,624&7,156&68,698\tabularnewline
+SSO&0&2,746&1,186&3,932\tabularnewline
+Measles operations&1,800&10,326&6,678&18,804\tabularnewline
+Operations partner&2,187&14,580&7,290&24,057\tabularnewline
+IMT controller partner&2,916&14,580&7,290&24,786\tabularnewline
+Total&105,773&160,247&64,127&330,147\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:direct}
 \end{table}
 
 The total cost for the 192 publicly funded hospital discharges with a measles primary diagnosis was \$289,694 (Table \ref{table:hosp}). The mean cost per case was \$1,509. The mean cost per day of stay in the hospital was \$1,154.
 
-<<echo=FALSE>>=
-costtable2<-read.csv("costtable2.csv",header=T)
-@
 
 \begin{table}
 \caption{Number of cases, length of hospital day, cost, cost per case and cost per day for patients with measles as the primary diagnosis, 2008-2013}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(costtable2, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:hosp}
+%latex.default(costtable2, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrrlll}
+\hline\hline
+\multicolumn{1}{c}{Year}&\multicolumn{1}{c}{Cases}&\multicolumn{1}{c}{Days}&\multicolumn{1}{c}{Cost}&\multicolumn{1}{c}{Per.case}&\multicolumn{1}{c}{Per.day}\tabularnewline
+\hline
+2008&$  3$&$  1$&3,038&1,013&3,038\tabularnewline
+2009&$ 29$&$ 38$&40,782&1,406&1,073\tabularnewline
+2010&$  5$&$  5$&6,701&1,340&1,340\tabularnewline
+2011&$132$&$189$&205,303&1,555&1,086\tabularnewline
+2012&$ 19$&$ 12$&28,540&1,502&2,378\tabularnewline
+2013&$  4$&$  6$&5,330&1,333&888\tabularnewline
+Total&$192$&$251$&289,694&1,509&1,154\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:hosp}
 \end{table}
 
 From 16 December, 2013 through 19 June, 2014 there were 201 confirmed measles cases in New Zealand (note 14 of these occurred before Jan 2014, so 187 occurred from Jan 2013 - 19 June 2014). The number of cases by age group is shown in Table \ref{table:freq}. Of these 201 cases, 34 (17\%) were admitted to hospital with the highest proportion occurring in the youngest (< 15 months) and oldest (> 19 years) age groups, 0.47 and 0.33, respectively.
 
-<<echo=FALSE>>=
-costtable3<-read.csv("costtable3.csv",header=T)
-@
 
 \begin{table}
 \caption{Frequency of measles cases and number and proportion admitted to hospital by age group, 16 December, 2013 - 19 June, 2014}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(costtable3, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:freq}
+%latex.default(costtable3, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrrr}
+\hline\hline
+\multicolumn{1}{c}{Age}&\multicolumn{1}{c}{Cases}&\multicolumn{1}{c}{Admitted}&\multicolumn{1}{c}{Proportion}\tabularnewline
+\hline
+\textless  15 months&$ 21$&$10$&$0.47$\tabularnewline
+15 months – 3 years&$  7$&$ 1$&$0.14$\tabularnewline
+4 – 9 years&$  8$&$ 0$&$0.00$\tabularnewline
+10 -1 19 years&$132$&$12$&$0.09$\tabularnewline
+\textgreater  19 years&$ 33$&$11$&$0.33$\tabularnewline
+Total&$201$&$34$&$0.17$\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:freq}
 \end{table}
 
 The majority (191/192) of the measles cases stayed in the hospital from 0 to 7 days, with the exception of a male patient, who was discharged in 2011 at age 57, after a stay of 19 days and a cost of \$8,213. Eighty-three of the cases stayed for 0 days and the remaining cases stayed a mean of 2.30 (median 2) days.
 The number of cases, length of hospital stay, cost, cost per case and cost per day for patients with measles as the primary diagnosis, by year and gender for 2008-2013 appear in Table \ref{table:cases}. The cost for these 192 hospitalizations was \$289,964. Of the 292 cases, 87 were female and 105 were male. The number of days spent in the hospital was 251, making the mean daily cost of \$1,509. Of the 251 days, 114 were spent by females and 137 by males. The mean hospital stay per case was 1.31 and 1.30 days for females and males, respectively. The mean cost per case was \$1,573 and \$1,456 for females and males, respectively.
 
-<<echo=FALSE>>=
-costtable4<-read.csv("costtable4.csv",header=T)
-@
 
 \begin{table}
 \caption{Number of cases, length of hospital stay, cost, cost per case and cost per day for patients with measles as the primary diagnosis, by year and gender, 2008-2013}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(costtable4, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:cases}
+%latex.default(costtable4, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lllrrl}
+\hline\hline
+\multicolumn{1}{c}{Year}&\multicolumn{1}{c}{Gender}&\multicolumn{1}{c}{Cost}&\multicolumn{1}{c}{Cases}&\multicolumn{1}{c}{Days}&\multicolumn{1}{c}{Per.case}\tabularnewline
+\hline
+2008&F&714&$  1$&$  0$&714\tabularnewline
+&M&2,324&$  2$&$  1$&1,162\tabularnewline
+                    &Total&3,038&$  3$&$  1$&1,013\tabularnewline
+2009&F&11,953&$  7$&$ 15$&1,708\tabularnewline
+&M&28,830&$ 22$&$ 23$&1,310\tabularnewline
+                    &Total&40,782&$ 29$&$ 38$&1,406\tabularnewline
+2010&F&5,884&$  4$&$  5$&1,471\tabularnewline
+&M&817&$  1$&$  0$&817\tabularnewline
+                    &Total&6,701&$  5$&$  5$&1,340\tabularnewline
+2011&F&103,460&$ 66$&$ 86$&1,568\tabularnewline
+&M&101,842&$ 66$&$103$&1,543\tabularnewline
+                    &Total&205,303&$132$&$189$&1,555\tabularnewline
+2012&F&13,054&$  8$&$  6$&1,632\tabularnewline
+&M&15,486&$ 11$&$  6$&1,408\tabularnewline
+                    &Total&28,540&$ 19$&$ 12$&1,502\tabularnewline
+2013&F&1,800&$  1$&$  2$&1,800\tabularnewline
+&M&3,530&$  3$&$  4$&1,177\tabularnewline
+                    &Total&5,330&$  4$&$  6$&1,333\tabularnewline
+Total&&289,694&$192$&$251$&1,509\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:cases}
 \end{table}
 
 Regression analyses showed statistically significant associations between cost of hospitalization and three variables, length of hospitalization, case age and year of case, and a less strong association with case gender (Table \ref{table:regression}). Results showed an increase of approximately \$358 per day of hospitalization, \$139 for a female case, and \$1 per year of case diagnosis. The cost was found to decrease by approximately \$5 per year of case age.
 
-<<echo=FALSE>>=
-costtable5<-read.csv("costtable5.csv",header=T)
-@
 
 \begin{table}
 \caption{Regression results (R$^{2}$ adj = 0.9, p-value <0.001) for measles hospitalization cost based on length of stay (days), gender, case age and year of case (n=192) in New Zealand, 2008 - 2013}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(costtable5, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:regression}
+%latex.default(costtable5, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrl}
+\hline\hline
+\multicolumn{1}{c}{Variable}&\multicolumn{1}{c}{Coefficient}&\multicolumn{1}{c}{P.value}\tabularnewline
+\hline
+Length of stay (days)&$ 357.71$&\textless  0.001\tabularnewline
+Gender (0 = F, 1 = M)&$-138.55$&0.084\tabularnewline
+Case age (years)&$  -5.23$&0.032\tabularnewline
+Year of case&$   0.60$&\textless  0.001\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:regression}
 \end{table}
 
 Wages lost due to measles were calculated based on the assumptions that 5 days of work were lost for each case; however, individuals between 0-15 years of age were not assumed to be employed and therefore did not suffer an income loss. If the case were < 20 years of age, it was assumed there was an income loss of 5 days for the care giver, in addition to the wage loss of the case if 15-19 years of age. Total wage lost for the 192 cases and care givers was estimated to be \$166,638. This consisted of \$90,620 for the cases and \$76,018 for the care giver, but did not include wage losses for cases <15 years of age.
