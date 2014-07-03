@@ -1,0 +1,5 @@
+Variable,Coefficient,P value
+Length of stay (days),357.71,< 0.001
+"Gender (0 = F, 1 = M)",-138.55,0.084
+Case age (years),-5.23,0.032
+Year of case,0.6,< 0.001
