@@ -1,147 +1,173 @@
-\bibitem[Gelman et al.(1996)Gelman, Roberts, and Gilks]{grg}
-Gelman, A., G.~O. Roberts, and W.~R. Gilks (1996).
-\newblock Efficient Metropolis jumping rules.
-\newblock In \emph{Bayesian Statistics, 5 (Alicante, 1994)}, pp.~599--607.
-  Oxford University Press.
+﻿\bibitem[Bae et al. (2013)]{bae-13}
+Bae, G.~R, Y.~J. Choe, U.~Y. Go, Y.~I. Kim, and J.~K. Lee (2013). 
+\newblock Economic analysis of measles elimination program in the Republic of Korea, 2001: A cost benefit analysis study.
+\newblock \emph {Vaccine}, 31, 2661--2666.
 
-\bibitem[Geyer(1992)]{practical}
-Geyer, C.~J. (1992).
-\newblock Practical Markov chain Monte Carlo (with discussion).
-\newblock \emph{Statistical Science}, 7, 473--511.
+\bibitem[Carabin et al. (2002)]{carabin-02}
+Carabin, H., W.~J. Edmunds, U. Kou, S. van den Hof, and V.~H. Nguyen (2002). 
+\newblock Measles in industrialized countries: a review of the average costs of adverse events and measles cases.
+\newblock \emph{BMC Public Health}, 2, 22.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Geyer, C.~J. and E.~A. Thompson (1995).
-\newblock Annealing Markov chain Monte Carlo with applications to
-    ancestral inference.
-\newblock \emph{Journal of the American Statistical Association}, 90, 909--920.
+\bibitem[Carabin et al. (2003)]{carabin-03}
+Carabin, H., W.~J. Edmunds, M. Gyldmark, P. Beutels, D. Lévy-Bruhl, H. Salo, U.~K. and Griffiths (2003).
+\newblock The cost of measles in industrialised countries.
+\newblock \emph{Vaccine}, 21,4167--4177.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Bae, G.~R, Choe, YJ, Go, UY, Kim, Y-I and Lee, J-K, 2013. Economic analysis of measles elimination program in the Republic of Korea, 2001: A cost benefit analysis study, Vaccine, 31:2661-2666.
+\bibitem[Tobias and Roberts(1998)]{tobias-roberts98}
+Tobias, M.~I. and M.~G. Roberts (1998).
+\newblock Predicting and preventing measles epidemics in New Zealand: Application of a mathematical model.
+\newblock Wellington: Ministry of Health.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Carabin, H, Edmunds, WJ, Kou, U, van den Hof, S and Nguyen, VH, 2002. Measles in industrialized countries: a review of the average costs of adverse events and measles cases, BMC Public Health, 2:22.
+\bibitem[Roberts(2004)]{roberts4}
+Roberts, M. (2004).
+\newblock A mathematical model for measles vaccination.
+\newblock Wellington: Ministry of Health.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Carabin, H, Edmunds, WJ, Gyldmark, M, Beutels, P, Lévy-Bruhl, D, Salo, H and Griffiths, UK, 2003. The cost of measles in industrialised countries, Vaccine, 21:4167-4177.
+\bibitem[Clements and Hussey (2004]{clements-hussey4}
+Clements, C.~J. and G.~D. Hussey (2004).
+\newblock Chapter 4: Measles.
+\newblock In \emph{The Global Epidemiology of Infectious Diseases},  Murray, C., A.~D. Lopez, and C.~D. Mathers, (eds.), Geneva.
+  World Health Organization, pp.~391.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Clements, CJ and Hussey, GD, 2004. Chapter 4: Measles, IN: The Global Epidemiology of Infectious Diseases, Murray, CJL, Lopez, AD and Mathers, CD (eds.), World Health Organization, Geneva, 391 p.
+\bibitem[Coleman et al.(2012)]{coleman12}
+Coleman, M.~S., L. Garbat-Welch, H. Burke, M. Weinberg, K. Humbaugh, A. Tindall, and J. Cambron (2012).
+\newblock Direct costs of a single case of refugee-imported measles in Kentucky.
+\newblock \emph{Vaccine}, 30,317--321.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Coleman, MS, Garbat-Welch, L, Burke, H, Weinberg, M, Humbaugh, K, Tindall, A and Cambron, J, 2012. Direct costs of a single case of refugee-imported measles in Kentucky, Vaccine, 30:317-321.
+\bibitem[Dayan et al.(2005)]{dayan5}
+Dayan, G.~H, I.~R. Ortega-Sánchez, C.~W. LeBaron, M.~P. Quinlisk, and the Iowa Measles Response Team (2005).
+\newblock The cost of containing one case of measles: the economic impact on the public health infrastructure – Iowa, 2004.
+\newblock \emph{Pediatrics), 116:e1; DOI:10/1542/peds.2004-2512.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Dayan, GH, Ortega-Sánchez, IR, LeBaron, CW, Quinlisk, MP and the Iowa Measles Response Team, 2005. The cost of containing one case of measles: the economic impact on the public health infrastructure – Iowa, 2004, Pediatrics, 116:e1; DOI:10/1542/peds.2004-2512.
+\bibitem[Filia et al.(2007)]{filia7}
+Filia, A., A. Brenna, A. Paná, G.~M. Cavallaro, M. Massari, and M. Atti, (2007).
+\newblock Health burden and economic impact of measles-related hospitalization in Italy, 2002-2003.
+\newblock \emph{BMC Public Health}, 7,169
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Filia, A, Brenna, A, Paná, A, Cavallaro, GM, Massari, M and Atti, MLCd, 2007. Health burden and economic impact of measles-related hospitalization in Italy, 2002-2003. 
+\bibitem[Flego et al.(2013)]{flego13}
+Flego, K.~L., D.~A. Belshaw, V. Sheppeard, and K.~M. Weston (2013).
+\newblock Impacts of a measles outbreak in western Sydney on public health resources.
+\newblock \emph{Communicable Diseases Intelligence Quarterly Report}, 37, E240--245.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Flego, KL, Belshaw, DA, Sheppeard, V and Weston, KM, 2013. Impacts of a measles outbreak in western Sydney on public health resources, Communicable Diseases Intelligence Quarterly Report, 37:E240-245.
+\bibitem[Koopmanschap(1998)][koopmanschap98}
+Koopmanschap, M.~A. (1998).
+\newblock Cost-of-illness studies: useful for health policy?
+\newblock \emph{Pharmacoeonomics}, 14, 143--148.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Koopmanschap, MA, 1998. Cost-of-illness studies: useful for health policy?, Pharmacoeonomics, 14:143-148.
+\bibitem[Larg and Moss(2011)]{larg11}
+Larg, A. and J.~R. Moss (2011).
+\newblock Cost-of-illness studies: a guide to critical evaluation.
+\newblock \emph{Pharmacoeconomics}, 29,653--671.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Larg, A and Moss, JR, 2011. Cost-of-illness studies: a guide to critical evaluation, Pharmacoeconomics, 29:653-671.
+\bibitem[Ortega-Sanchez et al.(2014)]{ortegasanchez14}
+Ortega-Sanchez, I.~R., M. Vijayaraghavan, A.~E. Barskey, and G.~S. Wallace (2014).
+\newblock The economic burden of sixteen measles outbreaks on United States public health departments in 2011.
+\newblock \emph{Vaccine}, 32,1311--1317.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Ortega-Sanchez, IR, Vijayaraghavan, M, Barskey, AE and Wallace, GS, 2014. The economic burden of sixteen measles outbreaks on United States public health departments in 2011, Vaccine, 32:1311-1317.
+\bibitem[Parker et al.(2006)]{parker6}
+Parker, A.~A., W. Staggs, G.~H. Dayan, T.~R. Ortega-Sánchez, P.~A. Rota, L. Lowe, P. Boardman, R. Teclaw, C. Graves, and C.~W. LeBaron (2006).
+\newblock Implications of a 2005 measles outbreak in Indiana for sustained elimination of measles in the United States.
+\newblock \emph{The New England Journal of Medicine}, 355, 447--455.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Parker, AA, Staggs, W, Dayan, GH, Ortega-Sánchez, IR, Rota, PA, Lowe, L, Boardman, P, Teclaw, R. Graves, C and LeBaron, CW. 2006. Implications of a 2005 measles outbreak in Indiana for sustained elimination of measles in the United States, The New England Journal of Medicine, 355:447-455.
+\bibitem[Prouty et al. (2001)]{prouty1}
+Prouty, R.W., G. Smith and K.~C. Lakin (2001).
+\newblock Residential services for persons with developmental disabilities: status and trends through 2000.
+\newblock \emph{Minneapolis: Institute on Community Integration}, University of Minnesota, pp.~179, rtc.umn.edu/risp00.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Prouty, RW, Smith, G and Lakin, KC, 2001. Residential services for persons with developmental disabilities: status and trends through 2000. Minneapolis: Institute on Community Integration, University of Minnesota, 179 pages, rtc.umn.edu/risp00.
+\bibitem[Saha and Gerdtham(2013)]{saha13}
+Saha, S. and U.~G. Gerdtham (2013).
+\newblock Cost of illness studies on reproductive, maternal, newborn, and child health: a systematic literature review.
+\newblock \emph{Health Economics Review}, doi:10.1186/2191-1991-3-24.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Saha, S and Gerdtham, UG, 2013. Cost of illness studies on reproductive, maternal, newborn, and child health: a systematic literature review, Health Economics Review, doi:10.1186/2191-1991-3-24.
+\bibitem[Siedler et al.(2006)]{siedler6}
+Siedler, A., A. Tischer, A. Mankertz, and S. Santibanez (2006).
+\newblock Two outbreaks of measles in Germany 2005.
+\newblock \emph{Eurosurveillance} 2006:11(4) article 5, http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=615, accessed 14 June 2014.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Siedler, A. Tischer, A, Mankertz, A and Santibanez, S, 2006. Two outbreaks of measles in Germany 2005, Eurosurveillance 2006:11(4) article 5, http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=615, accessed 14 June 2014.
+\bibitem[Stack et al.(2011)]{stack11}
+Stack, M.~L., S. Ozawa, D.~M. Bishai, A. Mirelman, Y. Tam, L. Niessen, D.~G. Walker, and O.S. Levine (2011).
+\newblock Estimated economic benefits during the ‘decade of vaccine’ include treatment savings, gains in labor productivity.
+\newblock \emph{Health Affairs}, 30,1021--1028.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Stack, ML, Ozawa, S, Bishai, DM, Mirelman, A, Tam, Y, Niessen, L, Walker, DG and Levine, OS, 2011. Estimated economic benefits during the ‘decade of vaccine’ include treatment savings, gains in labor productivity, Health Affairs, 30:1021-1028.
+\bibitem[Statistics New Zealand)]{stats14}
+\newblock \emph{Statistics New Zealand} (2014).
+http://nzdotstat.stats.govt.nz/, accessed 17 June 2014.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Statistics New Zealand, 2014. http://nzdotstat.stats.govt.nz/, accessed 17 June 2014, 
+\bibitem[Wichmann et al.(2009)]{wichmann9}
+Wichmann, O., A. Siedler, D. Sagebiel, W. Hellenbrand, S. Santibanez, A. Mankertz, G. Vogt, U. van Treeck, and G. Krause (2009).
+\newblock Further efforts needed to achieve measles elimination in Germany: results of an outbreak investigation.
+\newblock \emph{Bulletin of the World Health Organization}, 87, 108--115.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Wichmann, O, Siedler, A, Sagebiel, D, Hellenbrand, W, Santibanez, S, Mankertz, A, Vogt, G, van Treeck, U and Krause, G, 2009. Further efforts needed to achieve measles elimination in Germany: results of an outbreak investigation, Bulletin of the World Health Organization, 87:108-115.
+\bibitem[Wolfson et al(2007)]{wolfson7}
+Wolfson, L.~J., P.~M. Strebel, M. Gacic-Dobo, E.~J. Hoekstra, J.~W. McFarland, and B.~S. Hersh (2007).
+\newblock Has the 2005 measles mortality reduction goal been achieved? A natural history modelling study.
+\newblock \emph{Lancet}, 369, 191--200.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Wolfson, LJ, Strebel, PM, Gacic-Dobo, M, Hoekstra, EJ, McFarland, JW and Hersh, BS, 2007. Has the 2005 measles mortality reduction goal been achieved? A natural history modelling study, Lancet, 369:191-200.
+\bibitem[WHO (2013)]{who13}
+World Health Organisation measles media centre, January (2013)
+\newblock Geneva: World Health Organization.
+http://www.who.int/mediacentre/news/notes/2013/measles_20130117/en/, accessed July 1, 2014.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-WHO measles media centre. Geneva: World Health Organization, January 2013. http://www.who.int/mediacentre/news/notes/2013/measles_20130117/en/, accessed July 1, 2014.
+\bibitem[Zhou et al.(2004)]{zhou4}
+Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zimmerman, and M.~M. McCauley (2004).
+\newblock An economic analysis of the current universal 2-dose measles-mumps-rubella vaccination program in the United States.
+\newblock \emph{Journal of Infectious Diseases}, 189, S131--45.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Zhou, F, Reef, S, Massoudi, M, Papania, MJ, Yusuf, HR, Bardenheier, B, Zimmerman, L and McCauley, MM, 2004. An economic analysis of the current universal 2-dose measles-mumps-rubella vaccination program in the United States, Journal of Infectious Diseases, 189:S131-45.
+\bibitem[Agur et al.(1993)]{agur93}
+Agur, Z., L. Cojocaru, G. Mazor, R.~M. Anderson and Y.~L. Danon (1993).
+\newblock Pulse mass measles vaccination across age cohorts.
+\newblock \emph{Proceedings of the National Academy of Sciences USA}, 90, 11698--11702.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-Agur, Z., Cojocaru, L., Mazor, G., Anderson, R. M. & Danon, Y. L.
-1993 Pulse mass measles vaccination across age cohorts. Proceedings of
-the National Academy of Sciences USA 90, 11698-11702.
+\bibitem[Anderson and May(1991)]{anderson91}
+Anderson, R.~M. and R.~M. May (1991).
+\newblock \emph{Infectious diseases of humans: dynamics and control}. Oxford: Oxford University Press.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-2. Anderson, R. M. & May, R. M. 1991 Infectious diseases of humans:
-dynamics and control. Oxford: Oxford University Press.
+\bibitem[Anon. (2002a)]{anon2a}
+Anon. (2002a).
+\newblock \emph{Immunisation handbook}
+\newblock Wellington: Ministry of Health. pp.~131--146.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-3. Anon. 2002a Immunisation handbook, pp.xv+314. Wellington: Ministry
-of Health. See pp.131-146.
+\bibitem[Anon. (2002b)]{anon2b}
+Anon. (2002b).
+\newblock \emph{Infectious diseases in livestock}
+\newblock The Royal Society. pp.~68.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-4. Anon. 2002b Infectious diseases in livestock, pp.160. London: The Royal
-Society. See p.68.
+\bibitem[Babad et al.(1995)]{babad95}
+Babad, H.~R., D.~J. Nokes, N.~J. Gay, E. Miller, P. Morgan-Capner, and R.~M. Anderson (1995).
+\newblock Predicting the impact of measles vaccination in England and Wales: model validation and analysis of policy options.
+\newblock \emph{Epidemiology and Infection}, 114, 319--344.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-5. Babad, H. R., Nokes, D. J., Gay, N. J., Miller, E., Morgan-Capner, P.
-& Anderson, R. M. 1995 Predicting the impact of measles vaccination
-in England and Wales: model validation and analysis of policy options.
-Epidemiology and Infection 114, 319-344.
-
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-6. Diekmann, O. & Heesterbeek, J. A. P. 2000 Mathematical epidemiology
-of infectious diseases: model building, analysis and interpretation.
+\bibitem[Diekmann et al.(2000)]{diekmann0}
+Diekmann, O. &  J.~A.~P. Heesterbeek (2000).
+\newblock \emph{Mathematical epidemiology of infectious diseases: model building, analysis and interpretation}.
 Chichester: Wiley.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-7. Edmunds, W. J., Gay, N. J., Kretzschmar, M., Pebody, R. G. & Wachman,
-H. 2000 The pre-vaccination epidemiology of measles, mumps and
-rubella in Europe: implications for modelling studies. Epidemiology and
-Infection 125, 635-650.
+\bibitem[Edmunds et al.(2000)]{edmunds0}
+Edmunds, W.~J., N.~J. Gay, M. Kretzschmar, R.~G. Pebody and H. Wachman (2000).
+\newblock \The pre-vaccination epidemiology of measles, mumps and rubella in Europe: implications for modelling studies.
+\newblock \emph{Epidemiology and Infection}, 125, 635--650.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-8. Gay, N. J., Pelletier, L. & Duclos, P. 1998 Modelling the incidence of
-measles in Canada: an assessment of the options for vaccination policy.
-Vaccine 16, 794-801.
+\bibitem[Geyer and Thompson(1995)]{gay98}
+Gay, N.~J., L. Pelletier, and P. Duclos (1998).
+\newblock Modelling the incidence of measles in Canada: an assessment of the options for vaccination policy.
+\newblock \emph{Vaccine}, 16, 794--801.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-9. Glass, K., Kappey, J. & Grenfell, B. T. 2004 The effect of heterogeneity
-in measles vaccination population immunity. Epidemiology and Infection
-132, 675-683.
+\bibitem[Glass et al.(2004)]{glass4}
+Glass, K., J. Kappey, and B.~T. Grenfell, (2004).
+\newblock The effect of heterogeneity in measles vaccination population immunity.
+\newblock \emph{Epidemiology and Infection}, 132, 675--683.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-10. Mansoor, O., Blakely, A., Baker, M., Tobias, M. & Bloomfield, A. 1998
-A measles epidemic controlled by immunisation. New Zealand Medical
-Journal 111, 467-471.
+\bibitem[Mansoor et al.(1998)]{mansoor98}
+Mansoor, O., A. Blakely, M. Baker, M. Tobias, and A. Bloomfield (1998).
+\newblock A measles epidemic controlled by immunisation. 
+\newblock \emph{New Zealand Medical Journal}, 111, 467--471.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-11. Roberts, M. G. & Tobias, M. I. 2000 Predicting and preventing measles
-epidemics in New Zealand: Application of a mathematical model. Epidemiology
-and Infection 124, 279-287.
+\bibitem[Roberts and Tobias(2000)]{roberts0}
+Roberts, M.~G. and M.~I. Tobias (2000).
+\newblock Predicting and preventing measles epidemics in New Zealand: Application of a mathematical model. 
+\newblock \emph{Epidemiology and Infection}, 124, 279--287.
 
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-12. Tobias, M. I. & Roberts, M. G. 1998 Modelling measles. Predicting
-and preventing measles epidemics in New Zealand: Application of a
-mathematical model, pp.33. Wellington: Ministry of Health.
-A mathematical model for measles vaccination 13
-
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
-13. Wallinga, J., Levy-Bruhl, D., Gay, N. J. & Wachman, C. H. 2001 Estimation
-of measles reproduction ratios and prospects for elimination of
-measles by vaccination in some Western European countries. Epidemiology
-and Infection 127, 281-295.
-
-\bibitem[Geyer and Thompson(1995)]{geyer-temp}
+\bibitem[Wallinga et al.(2001)]{wallinga1}
+Wallinga, J., D. Levy-Bruhl, N.~J. Gay, and C.~H. Wachman (2001).
+\newblock Estimation of measles reproduction ratios and prospects for elimination of measles by vaccination in some Western European countries.
+\newblock \emph{Epidemiology and Infection}, 127, 281--295.
