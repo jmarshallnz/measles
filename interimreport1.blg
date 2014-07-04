@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: interimreport1.aux
 The style file: plain.bst
-Database file #1: sample.bib
+I found no \bibdata command---while reading file interimreport1.aux
 Warning--I didn't find a database entry for "roberts0"
 Warning--I didn't find a database entry for "roberts4"
 Warning--I didn't find a database entry for "clements4"
@@ -31,4 +31,4 @@ Warning--I didn't find a database entry for "diekmann0"
 Warning--I didn't find a database entry for "obidia12"
 Warning--I didn't find a database entry for "wallinga4"
 Warning--I didn't find a database entry for "klinkenberg11"
-(There were 30 warnings)
+(There was 1 error message)

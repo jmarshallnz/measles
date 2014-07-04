@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  4 JUL 2014 14:34
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  4 JUL 2014 15:11
 entering extended mode
 **interimreport1.tex
 (C:\Users\dtshayma\Documents\GitHub\measles\interimreport1.tex
@@ -1019,7 +1019,7 @@ LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10> not available
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
-<incidence_1997_2014.pdf, id=104, 722.7pt x 361.35pt>
+<incidence_1997_2014.pdf, id=120, 722.7pt x 361.35pt>
 File: incidence_1997_2014.pdf Graphic file (type pdf)
 
 <use incidence_1997_2014.pdf>
@@ -1027,159 +1027,146 @@ Package pdftex.def Info: incidence_1997_2014.pdf used on input line 84.
 (pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
  [4 <C:/Users/dtshayma/Documents/GitHub/measles/incidence_1997_2014.pdf>] [5] [
 6]
-<interimreport1-007.pdf, id=138, 794.97pt x 433.62pt>
+<interimreport1-007.pdf, id=154, 794.97pt x 433.62pt>
 File: interimreport1-007.pdf Graphic file (type pdf)
 
 <use interimreport1-007.pdf>
-Package pdftex.def Info: interimreport1-007.pdf used on input line 187.
+Package pdftex.def Info: interimreport1-007.pdf used on input line 191.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<interimreport1-008.pdf, id=139, 794.97pt x 433.62pt>
+<interimreport1-008.pdf, id=155, 794.97pt x 433.62pt>
 File: interimreport1-008.pdf Graphic file (type pdf)
 
 <use interimreport1-008.pdf>
-Package pdftex.def Info: interimreport1-008.pdf used on input line 195.
+Package pdftex.def Info: interimreport1-008.pdf used on input line 199.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<interimreport1-009.pdf, id=140, 794.97pt x 433.62pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<interimreport1-009.pdf, id=156, 794.97pt x 433.62pt>
 File: interimreport1-009.pdf Graphic file (type pdf)
 
 <use interimreport1-009.pdf>
-Package pdftex.def Info: interimreport1-009.pdf used on input line 203.
+Package pdftex.def Info: interimreport1-009.pdf used on input line 207.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<interimreport1-010.pdf, id=141, 794.97pt x 433.62pt>
+<interimreport1-010.pdf, id=157, 794.97pt x 433.62pt>
 File: interimreport1-010.pdf Graphic file (type pdf)
 
 <use interimreport1-010.pdf>
-Package pdftex.def Info: interimreport1-010.pdf used on input line 211.
+Package pdftex.def Info: interimreport1-010.pdf used on input line 215.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<interimreport1-011.pdf, id=142, 433.62pt x 433.62pt>
+<interimreport1-011.pdf, id=158, 433.62pt x 433.62pt>
 File: interimreport1-011.pdf Graphic file (type pdf)
 
 <use interimreport1-011.pdf>
-Package pdftex.def Info: interimreport1-011.pdf used on input line 219.
+Package pdftex.def Info: interimreport1-011.pdf used on input line 223.
 (pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport1-007.pdf> <C:/User
-s/dtshayma/Documents/GitHub/measles/interimreport1-008.pdf>]
-<interimreport1-012.pdf, id=168, 433.62pt x 433.62pt>
+<interimreport1-012.pdf, id=162, 433.62pt x 433.62pt>
 File: interimreport1-012.pdf Graphic file (type pdf)
 
 <use interimreport1-012.pdf>
-Package pdftex.def Info: interimreport1-012.pdf used on input line 229.
+Package pdftex.def Info: interimreport1-012.pdf used on input line 233.
 (pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport1-009.pdf> <C:/User
-s/dtshayma/Documents/GitHub/measles/interimreport1-010.pdf>]
-LaTeX Font Info:    Try loading font information for T1+aess on input line 242.
+[7 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport1-007.pdf>]
+LaTeX Font Info:    Try loading font information for T1+aess on input line 246.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aess.fd"
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
-) [9 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport1-011.pdf>] [10 <
-C:/Users/dtshayma/Documents/GitHub/measles/interimreport1-012.pdf>]
+) [8 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport1-008.pdf> <C:/Us
+ers/dtshayma/Documents/GitHub/measles/interimreport1-009.pdf>] [9 <C:/Users/dts
+hayma/Documents/GitHub/measles/interimreport1-010.pdf> <C:/Users/dtshayma/Docum
+ents/GitHub/measles/interimreport1-011.pdf>] [10 <C:/Users/dtshayma/Documents/G
+itHub/measles/interimreport1-012.pdf>]
 Runaway argument?
 {carabin3]. The estimated cost for a case ranged from US\$189--344 \citep \ETC.
 ! Paragraph ended before \@citex was complete.
 <to be read again> 
                    \par 
-l.264 
+l.269 
       
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 [11]
-Overfull \hbox (11.06566pt too wide) in paragraph at lines 274--275
+Overfull \hbox (11.06566pt too wide) in paragraph at lines 279--280
 []\T1/aer/m/n/10 [[]] re-ported the im-pact of a large measles out-break due to
  a non-autochthonous
  []
 
 
-Overfull \hbox (5.99551pt too wide) in paragraph at lines 274--275
+Overfull \hbox (5.99551pt too wide) in paragraph at lines 279--280
 \T1/aer/m/n/10 from ap-prox-i-mately 100 pub-lic health of-fi-cers and infectio
 n-control of-fi-cials needed
  []
 
 [12] [13] [14] [15] [16] [17] [18] [19]
-<cases_by_dhb_2009_2014.pdf, id=325, 722.7pt x 361.35pt>
+<cases_by_dhb_2009_2014.pdf, id=343, 722.7pt x 361.35pt>
 File: cases_by_dhb_2009_2014.pdf Graphic file (type pdf)
 
 <use cases_by_dhb_2009_2014.pdf>
-Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 465.
+Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 472.
 (pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
 
-<outbreaks_for_R0.pdf, id=326, 722.7pt x 361.35pt>
+<outbreaks_for_R0.pdf, id=344, 722.7pt x 361.35pt>
 File: outbreaks_for_R0.pdf Graphic file (type pdf)
  <use outbreaks_for_R0.pdf>
-Package pdftex.def Info: outbreaks_for_R0.pdf used on input line 472.
+Package pdftex.def Info: outbreaks_for_R0.pdf used on input line 479.
 (pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
 
-<averageR0.pdf, id=327, 578.16pt x 433.62pt>
+<averageR0.pdf, id=345, 578.16pt x 433.62pt>
 File: averageR0.pdf Graphic file (type pdf)
  <use averageR0.pdf>
-Package pdftex.def Info: averageR0.pdf used on input line 479.
+Package pdftex.def Info: averageR0.pdf used on input line 486.
 (pdftex.def)             Requested size: 276.00105pt x 206.9972pt.
- [20 <C:/Users/dtshayma/Documents/GitHub/measles/cases_by_dhb_2009_2014.pdf> <C
-:/Users/dtshayma/Documents/GitHub/measles/outbreaks_for_R0.pdf>] [21 <C:/Users/
-dtshayma/Documents/GitHub/measles/averageR0.pdf>]
-(C:\Users\dtshayma\Documents\GitHub\measles\interimreport1.bbl
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \begin{thebibliography}{}
-                             
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
-
-) [22] [23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 667--669
+ [20 <C:/Users/dtshayma/Documents/GitHub/measles/cases_by_dhb_2009_2014.pdf>] [
+21 <C:/Users/dtshayma/Documents/GitHub/measles/outbreaks_for_R0.pdf> <C:/Users/
+dtshayma/Documents/GitHub/measles/averageR0.pdf>] [22] [23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 675--677
 [] \T1/aer/m/it/10 Statis-tics New Zealand \T1/aer/m/n/10 (2014).
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 707.
 [25]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 707.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 715.
+ [26]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 715.
  (C:\Users\dtshayma\Documents\GitHub\measles\interimreport1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 707.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 707.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 715.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 715.
 Package rerunfilecheck Info: File `interimreport1.out' has not changed.
-(rerunfilecheck)             Checksum: A223A794EEB57CCF1AB7B4E9F1862763;1050.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 707.
+(rerunfilecheck)             Checksum: B9FAAEEB1E64A896F9F528257D89748F;1409.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 715.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 263 (\begingroup)
+### semi simple group (level 1) entered at line 268 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 16382 strings out of 493921
- 283641 string characters out of 3147273
- 351882 words of memory out of 3000000
- 19221 multiletter control sequences out of 15000+200000
+ 16387 strings out of 493921
+ 283642 string characters out of 3147273
+ 352882 words of memory out of 3000000
+ 19225 multiletter control sequences out of 15000+200000
  35305 words of font info for 70 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,9n,55p,1465b,543s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,9n,55p,1465b,555s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-
 ts1.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Prog
@@ -1193,9 +1180,9 @@ ss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on interimreport1.pdf (25 pages, 835999 bytes).
+Output written on interimreport1.pdf (26 pages, 839010 bytes).
 PDF statistics:
- 458 PDF objects out of 1000 (max. 8388607)
- 102 named destinations out of 1000 (max. 500000)
- 203 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 480 PDF objects out of 1000 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
+ 235 words of extra memory for PDF output out of 10000 (max. 10000000)
 
