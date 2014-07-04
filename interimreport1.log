@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  4 JUL 2014 12:15
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  4 JUL 2014 14:34
 entering extended mode
 **interimreport1.tex
 (C:\Users\dtshayma\Documents\GitHub\measles\interimreport1.tex
@@ -436,14 +436,16 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 librarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
-("C:\Program Files\MiKTeX 2.9\tex\latex\bibunits\bibunits.sty"
-Package: bibunits 2004/05/12 v2.4 Multiple bibliographies in one document.
-\@bibunitaux=\write4
-\@bibunitauxcnt=\count117
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip44
+\bibsep=\skip45
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count117
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip44
+\@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
@@ -493,8 +495,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \totwidth@=\dimen159
 \lineht@=\dimen160
 \@envbody=\toks27
-\multlinegap=\skip45
-\multlinetaggap=\skip46
+\multlinegap=\skip47
+\multlinetaggap=\skip48
 \mathdisplay@stack=\toks28
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
@@ -751,12 +753,12 @@ Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count132
 \calc@Adimen=\dimen161
 \calc@Bdimen=\dimen162
-\calc@Askip=\skip47
-\calc@Bskip=\skip48
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count133
-\calc@Cskip=\skip49
+\calc@Cskip=\skip51
 )
 \c@@todonotes@numberoftodonotes=\count134
 )
@@ -773,7 +775,7 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 \FV@TabBox=\box38
 \c@FancyVerbLine=\count136
 \FV@StepNumber=\count137
-\FV@OutFile=\write5
+\FV@OutFile=\write4
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
@@ -951,11 +953,7 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aer.fd"
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 ))))
-(C:\Users\dtshayma\Documents\GitHub\measles\interimreport1.aux
-
-LaTeX Warning: Label `sec:risk_analyses' multiply defined.
-
-)
+(C:\Users\dtshayma\Documents\GitHub\measles\interimreport1.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
@@ -972,7 +970,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 21.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 21.
@@ -993,7 +992,7 @@ LaTeX Info: Redefining \nameref on input line 21.
 
 (C:\Users\dtshayma\Documents\GitHub\measles\interimreport1.out)
 (C:\Users\dtshayma\Documents\GitHub\measles\interimreport1.out)
-\@outlinefile=\write6
+\@outlinefile=\write5
 
 ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
@@ -1019,60 +1018,54 @@ LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10> not available
 (Font)              Font shape `TS1/cmr/m/n' tried instead on input line 37.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-
-LaTeX Warning: Citation `roberts0' on page 2 undefined on input line 49.
-
-
-LaTeX Warning: Citation `roberts4' on page 2 undefined on input line 49.
-
-[2] [3] <incidence_1997_2014.pdf, id=101, 722.7pt x 361.35pt>
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
+<incidence_1997_2014.pdf, id=104, 722.7pt x 361.35pt>
 File: incidence_1997_2014.pdf Graphic file (type pdf)
 
 <use incidence_1997_2014.pdf>
-Package pdftex.def Info: incidence_1997_2014.pdf used on input line 83.
+Package pdftex.def Info: incidence_1997_2014.pdf used on input line 84.
 (pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
  [4 <C:/Users/dtshayma/Documents/GitHub/measles/incidence_1997_2014.pdf>] [5] [
 6]
-<interimreport1-007.pdf, id=135, 794.97pt x 433.62pt>
+<interimreport1-007.pdf, id=138, 794.97pt x 433.62pt>
 File: interimreport1-007.pdf Graphic file (type pdf)
 
 <use interimreport1-007.pdf>
-Package pdftex.def Info: interimreport1-007.pdf used on input line 186.
+Package pdftex.def Info: interimreport1-007.pdf used on input line 187.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<interimreport1-008.pdf, id=136, 794.97pt x 433.62pt>
+<interimreport1-008.pdf, id=139, 794.97pt x 433.62pt>
 File: interimreport1-008.pdf Graphic file (type pdf)
 
 <use interimreport1-008.pdf>
-Package pdftex.def Info: interimreport1-008.pdf used on input line 194.
+Package pdftex.def Info: interimreport1-008.pdf used on input line 195.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<interimreport1-009.pdf, id=137, 794.97pt x 433.62pt>
+<interimreport1-009.pdf, id=140, 794.97pt x 433.62pt>
 File: interimreport1-009.pdf Graphic file (type pdf)
 
 <use interimreport1-009.pdf>
-Package pdftex.def Info: interimreport1-009.pdf used on input line 202.
+Package pdftex.def Info: interimreport1-009.pdf used on input line 203.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<interimreport1-010.pdf, id=138, 794.97pt x 433.62pt>
+<interimreport1-010.pdf, id=141, 794.97pt x 433.62pt>
 File: interimreport1-010.pdf Graphic file (type pdf)
 
 <use interimreport1-010.pdf>
-Package pdftex.def Info: interimreport1-010.pdf used on input line 210.
+Package pdftex.def Info: interimreport1-010.pdf used on input line 211.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<interimreport1-011.pdf, id=139, 433.62pt x 433.62pt>
+<interimreport1-011.pdf, id=142, 433.62pt x 433.62pt>
 File: interimreport1-011.pdf Graphic file (type pdf)
 
 <use interimreport1-011.pdf>
-Package pdftex.def Info: interimreport1-011.pdf used on input line 218.
+Package pdftex.def Info: interimreport1-011.pdf used on input line 219.
 (pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
 
 
@@ -1080,11 +1073,11 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport1-007.pdf> <C:/User
 s/dtshayma/Documents/GitHub/measles/interimreport1-008.pdf>]
-<interimreport1-012.pdf, id=165, 433.62pt x 433.62pt>
+<interimreport1-012.pdf, id=168, 433.62pt x 433.62pt>
 File: interimreport1-012.pdf Graphic file (type pdf)
 
 <use interimreport1-012.pdf>
-Package pdftex.def Info: interimreport1-012.pdf used on input line 228.
+Package pdftex.def Info: interimreport1-012.pdf used on input line 229.
 (pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
 
 
@@ -1092,294 +1085,117 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport1-009.pdf> <C:/User
 s/dtshayma/Documents/GitHub/measles/interimreport1-010.pdf>]
-LaTeX Font Info:    Try loading font information for T1+aess on input line 241.
+LaTeX Font Info:    Try loading font information for T1+aess on input line 242.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aess.fd"
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 ) [9 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport1-011.pdf>] [10 <
 C:/Users/dtshayma/Documents/GitHub/measles/interimreport1-012.pdf>]
-
-LaTeX Warning: Citation `clements4' on page 11 undefined on input line 260.
-
-
-LaTeX Warning: Citation `wolfson7' on page 11 undefined on input line 260.
-
-
-LaTeX Warning: Citation `who13' on page 11 undefined on input line 260.
-
 Runaway argument?
-{carabin3]. The estimated cost for a case ranged from US\$ 189--344 \cite \ETC.
+{carabin3]. The estimated cost for a case ranged from US\$189--344 \citep \ETC.
 ! Paragraph ended before \@citex was complete.
 <to be read again> 
                    \par 
-l.263 
+l.264 
       
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-
-LaTeX Warning: Citation `carabin3' on page 11 undefined on input line 264.
-
-
-LaTeX Warning: Citation `flego13' on page 11 undefined on input line 266.
-
-
-LaTeX Warning: Citation `wichmann9' on page 11 undefined on input line 268.
-
 [11]
-
-LaTeX Warning: Citation `parker6' on page 12 undefined on input line 270.
-
-
-LaTeX Warning: Citation `ortegasanchez14' on page 12 undefined on input line 27
-0.
-
-
-LaTeX Warning: Citation `dayan5' on page 12 undefined on input line 271.
-
-
-LaTeX Warning: Citation `parker6' on page 12 undefined on input line 273.
-
-
-Overfull \hbox (6.49557pt too wide) in paragraph at lines 273--274
+Overfull \hbox (11.06566pt too wide) in paragraph at lines 274--275
 []\T1/aer/m/n/10 [[]] re-ported the im-pact of a large measles out-break due to
  a non-autochthonous
  []
 
 
-Overfull \hbox (5.99551pt too wide) in paragraph at lines 273--274
+Overfull \hbox (5.99551pt too wide) in paragraph at lines 274--275
 \T1/aer/m/n/10 from ap-prox-i-mately 100 pub-lic health of-fi-cers and infectio
 n-control of-fi-cials needed
  []
 
-
-LaTeX Warning: Citation `coleman12' on page 12 undefined on input line 275.
-
-[12]
-
-LaTeX Warning: Citation `saha13' on page 13 undefined on input line 282.
-
-[13] [14] [15] [16]
-
-LaTeX Warning: Citation `prouty1' on page 17 undefined on input line 428.
-
-
-LaTeX Warning: Citation `zhou4' on page 17 undefined on input line 428.
-
-[17]
-
-LaTeX Warning: Citation `roberts0' on page 18 undefined on input line 445.
-
-
-LaTeX Warning: Citation `roberts4' on page 18 undefined on input line 445.
-
-
-LaTeX Warning: Citation `tobias98' on page 18 undefined on input line 445.
-
-
-LaTeX Warning: Citation `tobias98' on page 18 undefined on input line 447.
-
-
-LaTeX Warning: Citation `mansoor98' on page 18 undefined on input line 447.
-
-
-LaTeX Warning: Citation `roberts0' on page 18 undefined on input line 447.
-
-
-LaTeX Warning: Citation `roberts0' on page 18 undefined on input line 447.
-
-
-LaTeX Warning: Citation `anon2a' on page 18 undefined on input line 447.
-
-[18]
-
-LaTeX Warning: Citation `babad95' on page 19 undefined on input line 449.
-
-
-LaTeX Warning: Citation `gay98' on page 19 undefined on input line 449.
-
-
-LaTeX Warning: Citation `agur93' on page 19 undefined on input line 449.
-
-
-LaTeX Warning: Citation `wallinga1' on page 19 undefined on input line 449.
-
-
-LaTeX Warning: Citation `agur93' on page 19 undefined on input line 451.
-
-
-LaTeX Warning: Citation `babad95' on page 19 undefined on input line 451.
-
-
-LaTeX Warning: Citation `edmunds0' on page 19 undefined on input line 451.
-
-
-LaTeX Warning: Citation `gay98' on page 19 undefined on input line 451.
-
-
-LaTeX Warning: Citation `wallinga1' on page 19 undefined on input line 451.
-
-
-LaTeX Warning: Citation `glass4' on page 19 undefined on input line 453.
-
-
-LaTeX Warning: Citation `anderson91' on page 19 undefined on input line 455.
-
-
-LaTeX Warning: Citation `diekmann0' on page 19 undefined on input line 455.
-
-
-LaTeX Warning: Citation `roberts4' on page 19 undefined on input line 455.
-
-
-LaTeX Warning: Citation `obidia12' on page 19 undefined on input line 457.
-
-
-LaTeX Warning: Citation `wallinga4' on page 19 undefined on input line 457.
-
-
-LaTeX Warning: Citation `klinkenberg11' on page 19 undefined on input line 457.
-
-
-[19] <cases_by_dhb_2009_2014.pdf, id=257, 722.7pt x 361.35pt>
+[12] [13] [14] [15] [16] [17] [18] [19]
+<cases_by_dhb_2009_2014.pdf, id=325, 722.7pt x 361.35pt>
 File: cases_by_dhb_2009_2014.pdf Graphic file (type pdf)
 
 <use cases_by_dhb_2009_2014.pdf>
-Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 461.
+Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 465.
 (pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
 
-<outbreaks_for_R0.pdf, id=258, 722.7pt x 361.35pt>
+<outbreaks_for_R0.pdf, id=326, 722.7pt x 361.35pt>
 File: outbreaks_for_R0.pdf Graphic file (type pdf)
  <use outbreaks_for_R0.pdf>
-Package pdftex.def Info: outbreaks_for_R0.pdf used on input line 468.
+Package pdftex.def Info: outbreaks_for_R0.pdf used on input line 472.
 (pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
 
-<averageR0.pdf, id=259, 578.16pt x 433.62pt>
+<averageR0.pdf, id=327, 578.16pt x 433.62pt>
 File: averageR0.pdf Graphic file (type pdf)
  <use averageR0.pdf>
-Package pdftex.def Info: averageR0.pdf used on input line 475.
+Package pdftex.def Info: averageR0.pdf used on input line 479.
 (pdftex.def)             Requested size: 276.00105pt x 206.9972pt.
  [20 <C:/Users/dtshayma/Documents/GitHub/measles/cases_by_dhb_2009_2014.pdf> <C
 :/Users/dtshayma/Documents/GitHub/measles/outbreaks_for_R0.pdf>] [21 <C:/Users/
 dtshayma/Documents/GitHub/measles/averageR0.pdf>]
-\bibcite{agur93}{Agur et al.(1993)}
-\bibcite{anderson91}{Anderson and May(1991)}
-\bibcite{anon2a}{Anon. (2002a)}
-\bibcite{anon2b}{Anon. (2002b)}
-\bibcite{babad95}{Babad et al.(1995)}
-[22]
-\bibcite{bae13}{Bae et al. (2013)}
-\bibcite{carabin2}{Carabin et al. (2002)}
-\bibcite{carabin3}{Carabin et al. (2003)}
-\bibcite{clements4}{Clements and Hussey (2004}
-\bibcite{coleman12}{Coleman et al.(2012)}
-\bibcite{dayan5}{Dayan et al.(2005)}
-\bibcite{diekmann0}{Diekmann et al.(2000)}
-\bibcite{edmunds0}{Edmunds et al.(2000)}
-\bibcite{filia7}{Filia et al.(2007)}
-\bibcite{flego13}{Flego et al.(2013)}
-\bibcite{gay98}{Gay et al.(1998)}
-\bibcite{glass4}{Glass et al.(2004)}
-[23]
-\bibcite{klinkenberg11}{Klinkenberg et al.(2011)}
-\bibcite{koopmanschap98}{Koopmanschap(1998)}
-\bibcite{larg11}{Larg and Moss(2011)}
-\bibcite{mansoor98}{Mansoor et al.(1998)}
-\bibcite{ortegasanchez14}{Ortega-Sanchez et al.(2014)}
-\bibcite{obidia12}{Obidia et al.(2012)}
-\bibcite{parker6}{Parker et al.(2006)}
-\bibcite{prouty1}{Prouty et al. (2001)}
-\bibcite{roberts4}{Roberts(2004)}
-\bibcite{roberts0}{Roberts and Tobias(2000)}
-\bibcite{saha13}{Saha and Gerdtham(2013)}
-\bibcite{siedler6}{Siedler et al.(2006)}
+(C:\Users\dtshayma\Documents\GitHub\measles\interimreport1.bbl
 
-Underfull \hbox (badness 10000) in paragraph at lines 653--656
-[]\T1/aer/m/n/10 Siedler, A., A. Tis-cher, A. Mankertz,
- []
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{thebibliography}{}
+                             
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 653--656
-\T1/aer/m/n/10 and S. San-tibanez (2006).  Two out-breaks of measles
- []
+Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 653--656
-\T1/aer/m/n/10 in Ger-many 2005.  \T1/aer/m/it/10 Eu-ro-surveil-lance \T1/aer/m
-/n/10 2006:11(4) ar-ti-cle 5,
- []
-
-
-Underfull \hbox (badness 1365) in paragraph at lines 653--656
-\T1/aer/m/n/10 http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=615, 
-ac-cessed
- []
-
-\bibcite{stack11}{Stack et al.(2011)}
-[24]
-\bibcite{stats14}{Statistics New Zealand)}
-
-Underfull \hbox (badness 10000) in paragraph at lines 663--665
+) [22] [23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 667--669
 [] \T1/aer/m/it/10 Statis-tics New Zealand \T1/aer/m/n/10 (2014).
  []
 
-\bibcite{tobias98}{Tobias and Roberts(1998)}
-\bibcite{wallinga1}{Wallinga et al.(2001)}
-\bibcite{wallinga4}{Wallinga and Teunis(2004)}
-\bibcite{wichmann9}{Wichmann et al.(2009)}
-\bibcite{wolfson7}{Wolfson et al(2007)}
-\bibcite{who13}{WHO (2013)}
-
-Underfull \hbox (badness 1038) in paragraph at lines 692--695
-[]\T1/aer/m/n/10 World Health Or-gan-i-sa-tion measles me-dia cen-tre, Jan-uary
-
- []
-
-\bibcite{zhou4}{Zhou et al.(2004)}
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 703.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 707.
 [25]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 703.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 707.
  (C:\Users\dtshayma\Documents\GitHub\measles\interimreport1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 703.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 703.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 707.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 707.
 Package rerunfilecheck Info: File `interimreport1.out' has not changed.
 (rerunfilecheck)             Checksum: A223A794EEB57CCF1AB7B4E9F1862763;1050.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 707.
+ )
+(\end occurred inside a group at level 1)
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 703.
- ) 
+### semi simple group (level 1) entered at line 263 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 16064 strings out of 493921
- 279532 string characters out of 3147273
- 346418 words of memory out of 3000000
- 18901 multiletter control sequences out of 15000+200000
- 38449 words of font info for 76 fonts, out of 3000000 for 9000
+ 16382 strings out of 493921
+ 283641 string characters out of 3147273
+ 351882 words of memory out of 3000000
+ 19221 multiletter control sequences out of 15000+200000
+ 35305 words of font info for 70 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,9n,55p,1466b,434s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/eurosym/feymr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/cm-super/sfrm1000.pfb>
-Output written on interimreport1.pdf (25 pages, 838070 bytes).
+ 56i,9n,55p,1465b,543s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-
+ts1.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on interimreport1.pdf (25 pages, 835999 bytes).
 PDF statistics:
- 418 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
+ 458 PDF objects out of 1000 (max. 8388607)
+ 102 named destinations out of 1000 (max. 500000)
  203 words of extra memory for PDF output out of 10000 (max. 10000000)
 
