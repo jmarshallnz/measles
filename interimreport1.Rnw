@@ -5,12 +5,13 @@
 \usepackage{hyperref}
 \usepackage{tikz}
 \usepackage{bibunits}
-\usepackage{natbib}
+%\usepackage{natbib}
 \usepackage{graphics}
 \usepackage{amsmath}
 \usepackage{indentfirst}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{eurosym}
 \usepackage{todonotes}
 
 \DeclareMathOperator{\var}{var}
@@ -19,7 +20,7 @@
 \begin{document}
 \SweaveOpts{concordance=TRUE}
 
-\title{Interim report\\ Measles risk assessment, modeling and cost analysis\\ \vspace{2 mm} {\large David T S Hayman, Tim Carpenter,\\ Jonathan C Marshall, Mick Roberts, Nigel P French}}
+\title{Interim report\\ Measles risk assessment, modelling and cost analysis\\ \vspace{2 mm} {\large David T S Hayman, Tim Carpenter,\\ Jonathan C Marshall, Mick Roberts, Nigel P French}}
 \author{mEpiLab and EpiCentre,\\ Infectious Diseases Research Centre,\\
 Massey University,\\
 Palmerston North 4442,\\
@@ -30,12 +31,12 @@ New Zealand\\
 
 \section{Abstract}
 
-New Zealand has been working towards elimination of endemic (domestic) measles virus transmission, but has suffered from small, but significant outbreaks of measles after measles introductions from abroad. In this interim report we reviewed the draft \emph {Progress Towards Measles Elimination in New Zealand - Final} report from the New Zealand Ministry of Health to the World Health Organization (WHO) Western Pacific Region. We identified additional analyses that may help understand risk of infection in New Zealand, began analyses of the cost of the current 2013--2014 outbreak and began modeling measles outbreaks to understand how they may be controlled, and to evaluate the likelihood that measles may become endemic once more. Our key findings were:
+New Zealand has been working towards elimination of endemic (domestic) measles virus transmission, but has suffered from small, but significant outbreaks of measles after measles introductions from abroad. In this interim report we reviewed the draft \emph {Progress Towards Measles Elimination in New Zealand - Final} report from the New Zealand Ministry of Health to the World Health Organization (WHO) Western Pacific Region. We identified additional analyses that may help understand risk of infection in New Zealand, began analyses of the cost of the current 2013--2014 outbreak and began modelling measles outbreaks to understand how they may be controlled, and to evaluate the likelihood that measles may become endemic once more. Our key findings were:
 \begin{itemize}
 \item The \emph {Progress Towards Measles Elimination in New Zealand - Final} report was of high quality and contained substantial information and useful analyses.
 \item New Zealand is at risk of frequent measles importation due to travel and endemic measles elsewhere in the globe.
 \item The cost of the current 2013--2014 measles outbreak is estimated to be at least \$750,000.
-\item Analyses of outbreak data suggest that measles basic reproductive number (Rv, the number of secondary infections) values often include 1 and this year, 2014, is well above one. This analyses suggest improved vaccination is a requisite to prevent measles becoming endemic again.
+\item Analyses of outbreak data suggest that measles basic reproductive number ($R_v$, the number of secondary infections) values often include 1 and this year, 2014, is well above one. This analyses suggest improved vaccination is a requisite to prevent measles becoming endemic again.
 \end{itemize}
 
 \section{Background}
@@ -59,13 +60,13 @@ Within the report there are many tables and figures which give considerable deta
 
 Specific epidemiological details were provided for the 2011--2012 outbreak including \emph{Figure 4}, the number and classification of measles notifications in New Zealand by month and year (2011 and 2012), with additional breakdown by age group in both years (\emph{Figure 5}) and per 100,000 population (\emph{Figures 6--8}). Similar presentation of the case data are provided for ethnicity (\emph{Figures 9--10}) and New Zealand Index of Deprivation (NZDep) (\emph{Figures 11--13}). Three figures, \emph{Figures 12, 13,} and \emph{28}, show that there is spatial clustering of cases.
 
-The report concludes that New Zealand's surveillance system has been performing well and that the Ministry is confident that measles has not been circulating since June 2012 and has not become endemic in NZ. We agree with the statement that measles did not become endemic and provide some preliminary analyses on the outbreaks since endemic measles elimination (see section \ref{sec:epidemic_modeling}) that gives information regarding the likelihood of measles persisting within the population and becoming endemic, including important analysis of the current outbreak.
+The report concludes that New Zealand's surveillance system has been performing well and that the Ministry is confident that measles has not been circulating since June 2012 and has not become endemic in NZ. We agree with the statement that measles did not become endemic and provide some preliminary analyses on the outbreaks since endemic measles elimination (see section \ref{sec:epidemic_modelling}) that gives information regarding the likelihood of measles persisting within the population and becoming endemic, including important analysis of the current outbreak.
 
-We agree with the report conclusions that testing for measles is performed appropriately within the required timeframe. Clearly improving inter-laboratory communication and collaboration and timeliness of the testing and reporting is necessary for rapid responses to measles introductions following measles control. Vaccination coverage presented in the report and to ourselves confirms that immunisation levels are approaching 94\% for MMR dose one (birth cohorts 2009 and 2010) and 89\% for MMR dose two (birth cohorts 2006 and 2007). However, only Asian and Pacific ethnicities have consistently had MMR dose one coverage approaching or exceeding 95\% for cohorts from 2007 onwards, and thus we agree with the report's conclusions that timeliness and coverage of vaccination need improving. This is particularly in light of our preliminary modeling and risk analyses results (sections \ref{sec:risk_analyses} and \ref{sec:epidemic_modeling}).
+We agree with the report conclusions that testing for measles is performed appropriately within the required timeframe. Clearly improving inter-laboratory communication and collaboration and timeliness of the testing and reporting is necessary for rapid responses to measles introductions following measles control. Vaccination coverage presented in the report and to ourselves confirms that immunisation levels are approaching 94\% for MMR dose one (birth cohorts 2009 and 2010) and 89\% for MMR dose two (birth cohorts 2006 and 2007). However, only Asian and Pacific ethnicities have consistently had MMR dose one coverage approaching or exceeding 95\% for cohorts from 2007 onwards, and thus we agree with the report's conclusions that timeliness and coverage of vaccination need improving. This is particularly in light of our preliminary modelling and risk analyses results (sections \ref{sec:risk_analyses} and \ref{sec:epidemic_modelling}).
 
 The analyses we believe could further inform the understanding of risk from measles infection are:
 \begin{itemize}
-\item Multivariate modelling to account for confounding within the univariate analyses.\todo{one L or two in modelling?}
+\item Multivariate modelling to account for confounding within the univariate analyses.
 \item Inclusion of multivariate model results with local level immunity data to develop a risk map for New Zealand.
 \item Analyses of changing risk factors through time during outbreaks.
 \item Modelling transmission chains in the population to understand effective reproduction number.
@@ -85,12 +86,13 @@ In this section we provide a brief description of the work that we believe will 
 
 In light of the apparent increasing trend in measles incidence in the last few years (Figure~\ref{fig:incidence1997}), we reviewed the information on measles importation and the origins of the introductions of measles into New Zealand. To help understand the risk of measles importation, with a particular goal of enabling the Ministry to better inform travellers and understand high risk periods, we sought to use quantitative methods to evaluate the risk of measles importation. 
 
-For our initial analyses, we use arrivals data from New Zealand immigration (\href{http://www.immigration.govt.nz/}{www.immigration.govt.nz}) as a proxy for human movement to and from New Zealand. We collated country population size, measles incidence and measles vaccination cover from the WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}).\todo{this sentence seems to need a bit more after it? Something like "to produce pretty maps"}
+For our initial analyses, we use arrivals data from New Zealand immigration (\href{http://www.immigration.govt.nz/}{www.immigration.govt.nz}) as a proxy for human movement to and from New Zealand. We collated country population size, measles incidence and measles vaccination cover from the WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Note this uses all immigration of foreign nationals, coming for whatever purpose. We used the WHO data to determine per capita measles cases for each year and used this and the number of immigrants to New Zealand to begin to understand where measles was likely to be imported from.
 
 <<echo=FALSE>>=
 library(xtable)
 dpdf<-read.csv("mapdata.csv",header=T)
 # output top countries
+colnames(dpdf)[1]<-c("country")
 topimmigration <- dpdf[order(-dpdf$immigration),] 
 immigration<-topimmigration[1:10,c(1,4)]
 topincidence <- dpdf[order(-dpdf$incidence),] 
@@ -141,7 +143,7 @@ library(Hmisc)
 latex(risk, file="", table.env=FALSE,rowname=NULL)
 @
 \label{table:risk12}
-\end{table}\todo{these tables need country rather than id as the first column name}
+\end{table}
 
 Preliminary analyses of 2012 data, the most complete and current year of data, suggest immigration (whether for work, pleasure, etc.) is dominated by Australia, United Kingdom, China, and the United States, as shown in Table \ref{table:immigration12}. However, vaccination coverage is lowest and measles incidence highest in less developed nations (Table \ref{table:incidence12} and Table \ref{table:cover12}). Though the precise interactions between these different risk factors are unknown, the most simple, a product of measles incidence in 2012 and immigration numbers in 2012, suggest that though immigration is lower from some Asian countries, travel from (and thus we presume to) some Asian countries also poses a high risk of measles importation to New Zealand. These data are shown in Table \ref{table:risk12}. The data for all the variables for each nation state and territories for 2012 are plotted in Figure~\ref{fig:immigration12}, Figure~\ref{fig:incidence12}, and Figure~\ref{fig:cover12} and the risk map for measles incidence and immigration in Figure~\ref{fig:risk12}.
 
@@ -297,18 +299,18 @@ acf(ttimes$res,lag.max = length(ttimes$res),plot=T,main="")
 \item There may be seasonal changes in risk of measles importation, though further analyses are needed.
 \end{itemize}
 
-\subsection{Future risk analyses}\sec{risk_analyses}
+\subsection{Future risk analyses}\label{sec:risk_analyses}
 We received the raw EpiSurv measles case data from The Institute of Environmental Science and Research Ltd (ESR) on 27 June 2014. Initial analyses of those data (not shown) suggest that we require denominator data to perform multivariate analyses to avoid confounding results due to a lack of independence among risk factors. Specifically for the multivariate analyses we wish to perform that detect interactions we require $\textsf{Age} \times \textsf{Prioritised Ethnicity} \times \textsf{NZDep}$ data for New Zealand to test whether interactions among case covariates provide additional information on risk over the univariate analyses performed in the report reviewed above. These data only became available to us on 3 July 2014, provided by the University of Otago.
 
 The following analyses are in progress, for inclusion in later reports:
 \begin{itemize}
 \item Multivariate regression analyses to assess interactions between risk factors that may confound the univariate analyses.
-\item Update of the importation risk analyses using a broader range of years, including modeling the trend in importations.
+\item Update of the importation risk analyses using a broader range of years, including modelling the trend in importations.
 \end{itemize}
 Additional data we believe would enable us and the Ministry to better understand measles risk is fine scale (lower than District Health Board (DHB)) immunisation coverage data. Thus the data gap that we have that will hinder us providing fine scale risk maps are:
 \begin{itemize}
 \item Meshblock (or census area unit) level immunisation coverage data to allow targeted immunisation and understanding of risk at a fine scale level.
-\item The number of New Zealanders arriving from abroad each year, the countries to which they travelled, and length of travel. \todo{added a bit here you may want to check}
+\item The number of New Zealanders arriving from abroad each year, the countries to which they travelled, and length of travel.
 \end{itemize}
 
 We understand the National Immunisation Register (NIR) allows tracking of the vaccination status of children and this is very useful, but inclusion of these data at lower (e.g. meshblock, census area unit) level would allow better understanding of risk of measles infection and resource allocation because they may allow targeted immunisation programmes.
@@ -384,7 +386,7 @@ latex(costtable2, file="", table.env=FALSE,rowname=NULL)
 \label{table:hosp}
 \end{table}
 
-From 16 December, 2013 through 19 June, 2014 there were 201 confirmed measles cases in New Zealand (note 14 of these occurred before Jan 2014, so 187 occurred from Jan 2013 -- 19 June 2014). The number of cases by age group is shown in Table~\ref{table:freq}. Of these 201 cases, 34 (17\%) were admitted to hospital with the highest proportion occurring in the youngest (< 15 months) and oldest (> 19 years) age groups, 0.47 and 0.33, respectively.\todo{make these percentages?}
+From 16 December, 2013 through 19 June, 2014 there were 201 confirmed measles cases in New Zealand (note 14 of these occurred before Jan 2014, so 187 occurred from Jan 2013 -- 19 June 2014). The number of cases by age group is shown in Table~\ref{table:freq}. Of these 201 cases, 34 (17\%) were admitted to hospital with the highest proportion occurring in the youngest (< 15 months) and oldest (> 19 years) age groups, 47\% and 33\%, respectively.
 
 <<echo=FALSE>>=
 costtable3<-read.csv("costtable3.csv",header=T)
@@ -417,7 +419,7 @@ latex(costtable4, file="", table.env=FALSE,rowname=NULL)
 \label{table:cases}
 \end{table}
 
-Regression analyses showed statistically significant associations between cost of hospitalisation and three variables, length of hospitalisation, case age and year of case, and a less strong association with case gender (Table~\ref{table:regression}). Results showed an increase of approximately \$358 per day of hospitalisation, \$139 for a female case, and \$1 per year of case diagnosis. The cost was found to decrease by approximately \$5 per year of case age.\todo{later on we could assess whether or not a linear term for case age is appropriate, or what if any interaction there is between age and length of stay?}
+Regression analyses showed statistically significant associations between cost of hospitalisation and three variables, length of hospitalisation, case age and year of case, and a less strong association with case gender (Table~\ref{table:regression}). Results showed an increase of approximately \$358 per day of hospitalisation, \$139 for a female case, and \$1 per year of case diagnosis. The cost was found to decrease by approximately \$5 per year of case age.
 
 <<echo=FALSE>>=
 costtable5<-read.csv("costtable5.csv",header=T)
@@ -438,13 +440,13 @@ Wages lost due to measles were calculated based on the assumption that 5 days of
 This final figure brings an approximate estimate of \$786,479 for the current 2014 outbreak, which is comprised of earnings lost, case management and hospitalisation costs.
 
 \subsection{Cost analysis discussion}
-The results presented here are based on available data. While some of the data are complete and detailed, this is not true of all the data. In order to perform an accurate analysis of the current measles outbreak in New Zealand, more complete data are needed. For instance, age, gender, ethnicity, year of discharge, length of stay and estimated cost data are available for cases reported by publicly funded hospitals. In addition to this information, similar data would be needed for cases occurring outside the period 2011--2013 at publicly funded hospitals. In addition, similar data would be needed for non-publicly funded hospitals, e.g. private clinics.
+The results presented here are based on available data. While some of the data are complete and detailed, this is not true of all the data. In order to perform an accurate analysis of the current measles outbreak in New Zealand, more complete data are needed. For instance, age, gender, ethnicity, year of discharge, length of stay and estimated cost data are available for cases reported by publicly funded hospitals. In addition to this information, similar data would be needed for cases occurring outside the period 2011--2013 at publicly funded hospitals. In addition, similar data would be needed for non-publicly funded hospitals, e.g. private clinics. Other factors that we aim to investigate are whether or not a linear term for case age is appropriate, or what if any interaction there might be between age and length of stay in hospital.
 
 Detailed measles outbreak management costs were provided for the period of January 1 -- March 9, 2014. Similar data are needed for the period preceding 2014. If detailed data, such as that provided for early 2014, are not available, aggregated data would be acceptable. However, it is unrealistic to assume that these costs would be linearly related with the number of measles cases, making it difficult to extrapolate these costs outside the reported period for 2014. As other studies have demonstrated, direct costs required to manage measles are not linear.
 
 In other outbreaks, the average cost per measles case was estimated to be US\$ 254, US\$ 276, and US\$ 307 for Canada, the Netherlands, and the UK, respectively (Carabin, et al., 2002). This and other findings will be compared and contrasted with New Zealand costs, once more complete New Zealand data are made available.
 The containment of a single case (also 2 secondary cases) of measles in 2004 in Iowa, USA was estimated to cost US\$ 142,542. In this outbreak, more than 2500 hours of personnel time were needed to investigate and respond to the outbreak (Dayan et al., 2005). They estimated direct costs per case to be less than US\$ 500. 
-The annual cost for long-term care of people with moderate of severe mental retardation over a period of 50 years is estimated at US\$ 31,059 and US\$ 78,448, respectively \cite{prouty0}. In 2000 expenditures for care in large state mental retardation/developmental disabilities (MR/DD) facilities continued to increase and reached a national annual average of US\$ 113,864 per person. In 2000 the average annual expenditures for care in large state MR/DD facilities were \$ 113,864. The cost of a case of measles was estimated to range from \$ 71 (no complications and no hospitalisation) to \$ 29,556 (encephalitis and hospitalisation for 8.7 days). They estimated the annual cost of measles in the US with its vaccination program to be \$1,234,083 (52.5\% direct cost and 47.5\% indirect cost) \cite{zhou4}.
+The annual cost for long-term care of people with moderate of severe mental retardation over a period of 50 years is estimated at US\$ 31,059 and US\$ 78,448, respectively \cite{prouty1}. In 2000 expenditures for care in large state mental retardation/developmental disabilities (MR/DD) facilities continued to increase and reached a national annual average of US\$ 113,864 per person. In 2000 the average annual expenditures for care in large state MR/DD facilities were \$ 113,864. The cost of a case of measles was estimated to range from \$ 71 (no complications and no hospitalisation) to \$ 29,556 (encephalitis and hospitalisation for 8.7 days). They estimated the annual cost of measles in the US with its vaccination program to be \$1,234,083 (52.5\% direct cost and 47.5\% indirect cost) \cite{zhou4}.
 
 \subsection{Cost analysis summary}
 \begin{itemize}
@@ -454,12 +456,12 @@ The annual cost for long-term care of people with moderate of severe mental reta
 \subsection{Future cost-benefit analyses}
 Using the results above we aim to:
 \begin{itemize}
-\item Estimate the costs for targeted vaccination, based either on the univariate analyses presented to date in the \emph {Progress Towards Measles Elimination in New Zealand - Final} report or adjusted if any additional risk groups are identified in the multivariate analyses or modeling.
+\item Estimate the costs for targeted vaccination, based either on the univariate analyses presented to date in the \emph {Progress Towards Measles Elimination in New Zealand - Final} report or adjusted if any additional risk groups are identified in the multivariate analyses or modelling.
 \end{itemize}
 
 We also require additional clarifications of the data, regarding what hospital costs refer to, such as if a hospital day were 0 does that mean the case stayed in the hospital but not overnight? Or, does it mean the case stayed for less than 24 hours? Once more complete data are available, comparisons of these results will be made to other published studies, discussed above.
 
-\section{Modeling measles epidemics}\label{sec:epidemic_modeling}
+\section{Modelling measles epidemics}\label{sec:epidemic_modelling}
 
 A previously-published model of the dynamics of measles infections in New Zealand has been used to evaluate the vaccination strategy in New Zealand of MMR1 at 15 months and MMR2 before 5 years \cite{roberts0,roberts4,tobias98}. The results show that achieving coverage of greater than 90\% at both vaccination opportunities is necessary if future epidemics of measles are to be prevented.
 
@@ -471,11 +473,9 @@ A variety of similar models for measles vaccination strategies have been develop
 
 It is difficult to estimate the proportion of the school-age population that have been effectively immunised, but this is continuously being diluted by children who are not immunised. While analyses suggest that 85\% coverage at MMR1 and MMR2 could be sufficient to prevent future measles epidemics, \cite{glass4} in the Netherlands showed that high overall levels of measles vaccination can obscure pockets of poor coverage, resulting in localised regions with increased risk of infection.
 
-The quantity that determines whether an epidemic will occur is the basic reproduction number of the infection, $R_0$\todo{not sure if you want it like this throughout?}. This is defined as the expected number of secondary infections that would arise from a single primary infection introduced into a fully susceptible population \cite{anderson91, diekmann0}. If $R_0 > 1$ an epidemic will occur following an introduction of infection. The best estimate we had for measles in New Zealand was R0 = 12.8 \cite{roberts4}. The basic reproduction number of the infection under vaccination, Rv\todo{or $R_v$ ?}, is the expected number of secondary infections that would arise from a single primary infection introduced into a vaccinated population at equilibrium and is a robust indicator of the performance of a vaccination schedule. If $R_v < 1$ epidemics are prevented. The case reproduction number of the infection at time $t$, $R_t$, is the expected number of secondary infections that arise from a single infection at a particular time and depends on the number in the population who are susceptible.
+The quantity that determines whether an epidemic will occur is the basic reproduction number of the infection, $R_0$. This is defined as the expected number of secondary infections that would arise from a single primary infection introduced into a fully susceptible population \cite{anderson91, diekmann0}. If $R_0 > 1$ an epidemic will occur following an introduction of infection. The best estimate we had for measles in New Zealand was $R_0$ = 12.8 \cite{roberts4}. The basic reproduction number of the infection under vaccination, $R_v$, is the expected number of secondary infections that would arise from a single primary infection introduced into a vaccinated population at equilibrium and is a robust indicator of the performance of a vaccination schedule. If $R_v < 1$ epidemics are prevented. The case reproduction number of the infection at time $t$, $R_t$, is the expected number of secondary infections that arise from a single infection at a particular time and depends on the number in the population who are susceptible.
 
-To understand the level of immunity in the population and how likely an outbreak was of becoming endemic, we estimated Rv from all the outbreaks since 2009. To do this we estimated Rt, following an adaptation of the methods in \cite{obidia12}\todo{there's 2 references in \texttt{?est.R0.TD}}, and used these to estimate the Rv of measles in the recent outbreaks, which helps understand the transmission dynamics of measles in the partially immune population.
-
-To estimate Rt we were required to compute the generation time\todo{what is this? define?} for measles. We used a lognormal distribution with mean 12.0 and standard deviation (s.d.) 3.5 from \cite{klinkenberg11}. We then estimated Rt using the methods adapted from \cite{obidia12} from the incidence data for each outbreak. We defined outbreaks in the dataset given their temporal and geographic correlations (Figure~\ref{fig:dhbcases}). The outbreaks we used in out analyses are shown in Figure~\ref{fig:outbreaks}.\todo{this repeats a bit of the previous paragraph - could do with rewrite}
+To understand the level of immunity in the population, the transmission dynamics of measles in the partially immune population and how likely an outbreak was of becoming endemic, we estimated $R_v$ from all the outbreaks since 2009. To do this we estimated $R_t$, following an adaptation of the methods in \cite{obidia12,wallinga4}. We were required to compute the generation time for measles to do so. The generation time is the average time an index case infects others after becoming infected. We used a lognormal distribution with mean 12.0 and standard deviation (s.d.) 3.5 from \cite{klinkenberg11}. We then estimated $R_t$ from the incidence data for each outbreak, defining outbreaks in the dataset given their temporal and geographic correlations (Figure~\ref{fig:dhbcases}).The outbreaks we used in out analyses are shown in Figure~\ref{fig:outbreaks}.
 
 \begin{figure}
      \centering
@@ -487,31 +487,31 @@ To estimate Rt we were required to compute the generation time\todo{what is this
 \begin{figure}
      \centering
      \includegraphics[width=0.8\textwidth]{outbreaks_for_R0.pdf}
-     \caption{Measles data classified as outbreaks for reproductive number of the infection (Rv) estimation}
+     \caption{Measles data classified as outbreaks for reproductive number of the infection ($R_v$) estimation}
      \label{fig:outbreaks}
 \end{figure}
 
 \begin{figure}
      \centering
      \includegraphics[width=0.8\textwidth]{averageR0.pdf}
-     \caption{Estimates of Rv (R0) for the outbreaks each year, as classified in Figure~\ref{fig:outbreaks} (page~\pageref{fig:outbreaks})}
+     \caption{Estimates of $R_v$ ($R_0$) for the outbreaks each year, as classified in Figure~\ref{fig:outbreaks} (page~\pageref{fig:outbreaks})}
      \label{fig:r0}
 \end{figure}
 
-The estimated Rv for each outbreak is shown in Figure~\ref{fig:r0}. The probability density of the Rv estimates for each outbreak all include one. Of particular note is the ongoing outbreak, which has an Rv well above one and thus we may expect this outbreak to persist if conditions remain the same.\todo{to be fair, this is because it's ongoing - as we haven't seen a decline yet, $R_0$ is necessarily over one.}
+The estimated $R_v$ for each outbreak is shown in Figure~\ref{fig:r0}. The probability density of the $R_v$ estimates for each outbreak all include one. Of particular note is the ongoing outbreak, which has an $R_v$ well above one and thus we may expect this outbreak to persist if conditions remain the same.An important caveat to this analysis is that because this is an ongoing outbreak, and not in decline, $R_0$ is necessarily over one.
 
-These analyses also imply that the regular (approximately yearly) importation of measles is an ongoing process. Given the risk of importation of measles as highlighted in section~\ref{sec:risk_analyses} is likely to continue, these analyses suggest substantial efforts are required to maintain the level of immunisation to high enough levels that measles does not become endemic. The measles outbreak in 2011--2012 had an Rv of just greater than one, and yet it persisted for over 12 months. This implies that the current outbreak may persist within the population for a substantial period, given it's Rv is approximately twice that of the 2011-2012 outbreak. A caveat to this and other Rv estimates is that the 2013--2014 outbreak may include some sporadic cases and thus the true basic reproductive numbers may be lower than estimated. However, sub-clinical and underreporting may lower the estimate. The relative contributions of both to our estimates are currently unknown.
+These analyses also imply that the regular (approximately yearly) importation of measles is an ongoing process. Given the risk of importation of measles as highlighted in section~\ref{sec:risk_analyses} is likely to continue, these analyses suggest substantial efforts are required to maintain the level of immunisation to high enough levels that measles does not become endemic. The measles outbreak in 2011--2012 had an $R_v$ of just greater than one, and yet it persisted for over 12 months. This implies that the current outbreak may persist within the population for a substantial period, given it's $R_v$ is approximately twice that of the 2011-2012 outbreak. A caveat to this and other $R_v$ estimates is that the 2013--2014 outbreak may include some sporadic cases and thus the true basic reproductive numbers may be lower than estimated. However, sub-clinical and underreporting may lower the estimate. The relative contributions of both to our estimates are currently unknown.
 
-\subsection{Summary of modeling}
+\subsection{Summary of modelling}
 
 \begin{itemize}
 \item Regular introductions of measles pose an ongoing threat to New Zealand's efforts to eliminate measles (also see section~\ref{sec:risk_analyses}).
 \item The reproduction number for measles in a partially immune population is often close to one, suggesting increased population level immunity is required to prevent this measles persisting.
- \item The reproduction number for measles in the current outbreak is well over one, suggesting that this outbreak has the potential to become endemic.\todo{this seems a bit extreme -- caveat?}
+ \item The reproduction number, $R_v$, for measles in the current outbreak is well over one, suggesting that this outbreak has the potential to persist for prolonged periods, with the caveat that this estimate was made during the ongoing outbreak.
 \end{itemize}
 
-\section{Future modeling}
-Future modeling we aim to perform are:
+\section{Future modelling}
+Future modelling we aim to perform are:
 \begin{itemize}
 \item An update of previous ODE models of measles outbreak risk in the overall population according the differing vaccine coverage scenarios.
 \item Model measles outbreaks with differing scenarios of measles importation into various population groups based on current introduction rates.
@@ -521,11 +521,12 @@ Future modeling we aim to perform are:
 \begin{itemize}
 \item New Zealand is at risk of frequent measles importation due to travel and endemic measles elsewhere in the world.
 \item The cost of the current measles outbreak is estimated to be at least \$750,000.
-\item Analyses of outbreak data suggest that measles Rv values often include 1 and in this year, 2014, are well above one. This analysis suggests improved vaccination is a requisite to prevent measles becoming endemic again.
+\item Analyses of outbreak data suggest that measles $R_v$ values often include 1 and in this year, 2014, are well above one. This analysis suggests improved vaccination is a requisite to prevent measles becoming endemic again.
 \end{itemize}
 
 \section{Acknowledgments}
 The authors wish to thank Tomasz Kiedrzynski, Lisa Oakley and Nic Aagaard from the Ministry of Health, Ruth Pirie and colleagues from ESR, and June Atkinson from University of Otago for help in obtaining the appropriate materials for analyses.
+
 
 \begin{thebibliography}{}
 
@@ -564,7 +565,7 @@ Carabin, H., W.~J. Edmunds, U. Kou, S. van den Hof, and V.~H. Nguyen (2002).
 \newblock \emph{BMC Public Health}, 2, 22.
 
 \bibitem[Carabin et al. (2003)]{carabin3}
-Carabin, H., W.~J. Edmunds, M. Gyldmark, P. Beutels, D. Lévy-Bruhl, H. Salo, U.~K. and Griffiths (2003).
+NA
 \newblock The cost of measles in industrialised countries.
 \newblock \emph{Vaccine}, 21,4167--4177.
 
@@ -580,22 +581,22 @@ Coleman, M.~S., L. Garbat-Welch, H. Burke, M. Weinberg, K. Humbaugh, A. Tindall,
 \newblock \emph{Vaccine}, 30,317--321.
 
 \bibitem[Dayan et al.(2005)]{dayan5}
-Dayan, G.~H, I.~R. Ortega-Sánchez, C.~W. LeBaron, M.~P. Quinlisk, and the Iowa Measles Response Team (2005).
+NA
 \newblock The cost of containing one case of measles: the economic impact on the public health infrastructure - Iowa, 2004.
-\newblock \emph{Pediatrics), 116:e1; DOI:10/1542/peds.2004-2512.
+\newblock \emph{Pediatrics}, 116:e1; DOI:10/1542/peds.2004-2512.
 
 \bibitem[Diekmann et al.(2000)]{diekmann0}
-Diekmann, O. &  J.~A.~P. Heesterbeek (2000).
+Diekmann, O. and  J.~A.~P. Heesterbeek (2000).
 \newblock \emph{Mathematical epidemiology of infectious diseases: model building, analysis and interpretation}.
 Chichester: Wiley.
 
 \bibitem[Edmunds et al.(2000)]{edmunds0}
 Edmunds, W.~J., N.~J. Gay, M. Kretzschmar, R.~G. Pebody and H. Wachman (2000).
-\newblock \The pre-vaccination epidemiology of measles, mumps and rubella in Europe: implications for modelling studies.
+\newblock The pre-vaccination epidemiology of measles, mumps and rubella in Europe: implications for modelling studies.
 \newblock \emph{Epidemiology and Infection}, 125, 635--650.
 
 \bibitem[Filia et al.(2007)]{filia7}
-Filia, A., A. Brenna, A. Paná, G.~M. Cavallaro, M. Massari, and M. Atti, (2007).
+NA
 \newblock Health burden and economic impact of measles-related hospitalization in Italy, 2002-2003.
 \newblock \emph{BMC Public Health}, 7,169
 
@@ -604,7 +605,7 @@ Flego, K.~L., D.~A. Belshaw, V. Sheppeard, and K.~M. Weston (2013).
 \newblock Impacts of a measles outbreak in western Sydney on public health resources.
 \newblock \emph{Communicable Diseases Intelligence Quarterly Report}, 37, E240--245.
 
-\bibitem[Geyer and Thompson(1995)]{gay98}
+\bibitem[Gay et al.(1998)]{gay98}
 Gay, N.~J., L. Pelletier, and P. Duclos (1998).
 \newblock Modelling the incidence of measles in Canada: an assessment of the options for vaccination policy.
 \newblock \emph{Vaccine}, 16, 794--801.
@@ -619,7 +620,7 @@ Klinkenberg, D. and H. Nishiuraa (2011).
 \newblock The correlation between infectivity and incubation period of measles, estimated from households with two cases.
 \newblock \emph{Journal of Theoretical Biology},284, 52--60
 
-\bibitem[Koopmanschap(1998)][koopmanschap98}
+\bibitem[Koopmanschap(1998)]{koopmanschap98}
 Koopmanschap, M.~A. (1998).
 \newblock Cost-of-illness studies: useful for health policy?
 \newblock \emph{Pharmacoeonomics}, 14, 143--148.
@@ -640,12 +641,12 @@ Ortega-Sanchez, I.~R., M. Vijayaraghavan, A.~E. Barskey, and G.~S. Wallace (2014
 \newblock \emph{Vaccine}, 32,1311--1317.
 
 \bibitem[Obidia et al.(2012)]{obidia12}
-Obadia, T., R. Haneef and P.~Y., Boëlle (2012).
+NA
 \newblock The R0 package: a toolbox to estimate reproduction numbers for epidemic outbreaks.
 \newblock \emph{BMC Medical Informatics and Decision Making}, 2012, 12--147.
 
 \bibitem[Parker et al.(2006)]{parker6}
-Parker, A.~A., W. Staggs, G.~H. Dayan, T.~R. Ortega-Sánchez, P.~A. Rota, L. Lowe, P. Boardman, R. Teclaw, C. Graves, and C.~W. LeBaron (2006).
+NA
 \newblock Implications of a 2005 measles outbreak in Indiana for sustained elimination of measles in the United States.
 \newblock \emph{The New England Journal of Medicine}, 355, 447--455.
 
@@ -693,6 +694,11 @@ Wallinga, J., D. Levy-Bruhl, N.~J. Gay, and C.~H. Wachman (2001).
 \newblock Estimation of measles reproduction ratios and prospects for elimination of measles by vaccination in some Western European countries.
 \newblock \emph{Epidemiology and Infection}, 127, 281--295.
 
+\bibitem[Wallinga and Teunis(2004)]{wallinga4}
+Wallinga, J., and P. Teunis (2004).
+\newblock Different Epidemic Curves for Severe Acute Respiratory Syndrome Reveal Similar Impacts of Control Measures.
+\newblock \emph{American Journal of Epidemiology}, 160, 509.
+
 \bibitem[Wichmann et al.(2009)]{wichmann9}
 Wichmann, O., A. Siedler, D. Sagebiel, W. Hellenbrand, S. Santibanez, A. Mankertz, G. Vogt, U. van Treeck, and G. Krause (2009).
 \newblock Further efforts needed to achieve measles elimination in Germany: results of an outbreak investigation.
@@ -706,7 +712,7 @@ Wolfson, L.~J., P.~M. Strebel, M. Gacic-Dobo, E.~J. Hoekstra, J.~W. McFarland, a
 \bibitem[WHO (2013)]{who13}
 World Health Organisation measles media centre, January (2013)
 \newblock Geneva: World Health Organization.
-http://www.who.int/mediacentre/news/notes/2013/measles_20130117/en/, accessed July 1, 2014.
+\href{http://www.who.int/mediacentre/news/notes/2013/measles_20130117/en/}{www.who.int}, accessed July 1, 2014.
 
 \bibitem[Zhou et al.(2004)]{zhou4}
 Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zimmerman, and M.~M. McCauley (2004).
