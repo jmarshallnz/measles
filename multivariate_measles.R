@@ -2,7 +2,7 @@ rm(list=ls())
 ## regression analyses - measles
 ## get data
 # set wd
-setwd("~/Massey 2014/DHayman_20140627")
+# setwd("~/Massey 2014/DHayman_20140627")
 # read data
 data<-read.csv("DHayman_20140627.csv",header=T)
 names(data)
@@ -20,6 +20,7 @@ time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+Ethn
 library(reshape)
 library(reshape2)
 library(plyr)
+library(pscl)
 
 test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
 head(test)
@@ -29,7 +30,7 @@ test$AgeInYears<-findInterval(test$AgeInYears,c(6,18,25,65))
 test$AgeInYears<-as.factor(test$AgeInYears)
 tage<-revalue(test$AgeInYears, c("0"="<6", "1"="6-17","2"="18-24","3"="25-64","4"="65+"));
 test$AgeInYears<-tage
-summary(test$EthnicityPrioritised)
+#summary(test$EthnicityPrioritised)
 teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MLA",
                                      "Pacific Peoples"="Pacific","Response cannot be classified"="None","Unknown"="None"));
 
@@ -56,36 +57,16 @@ testtable<-aggregate( cbind( DiseaseName + as.numeric(SurvWeek)) ~ NZDep+AgeInYe
                  data = testt , FUN=sum)
 dim(testtable)
 colnames(testtable)<-c("NZDep","Age","Ethnicity","Year","Cases")
-pairs(testtable,panel=panel.smooth)
-## appears very little correlation/relationships between them
-#
-# don't think the next pair of models are valid - 
-# because no year (proxy for outbreak) effect accounted for
-#
-# model1<-aov(Cases~NZDep*Age*Ethnicity,data=testtable)
-# summary(model1)
-# summary.lm(model1)
-#
-# model2<-aov(Cases~NZDep+Age+Ethnicity,data=testtable)
-# summary(model2)
-# summary.lm(model2)
-#
-# also suggests too many age categories
-# str(testtable)
-# levels(testtable$Age)
-# levels(testtable$Age)[c(5:10)]<-"Old"
-## hooray - denominators
 head(testtable)
 # need to reshape "testtable"
-library(reshape)
-mdata<-melt(testtable,id=c("NZDep",'Age','Ethnicity','Year','Cases'))
-numerator<-cast(mdata,Age+Ethnicity+Year~NZDep)
-
-numerator[is.na(numerator)] <- 0
-head(numerator)
-colnames(numerator)<-c('Age','Ethnicity','Year',"Dep0","Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10")
-
-
+# mdata<-melt(testtable,id=c("NZDep",'Age','Ethnicity','Year','Cases'))
+# numerator<-cast(mdata,Age+Ethnicity+Year~NZDep)
+#
+#numerator[is.na(numerator)] <- 0
+#head(numerator)
+#colnames(numerator)<-c('Age','Ethnicity','Year',"Dep0","Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10")
+#
+#
 #
 #model3<-aov(Cases~NZDep*Age*Ethnicity,data=testtable)
 #summary(model3)
@@ -121,7 +102,7 @@ colnames(numerator)<-c('Age','Ethnicity','Year',"Dep0","Dep1","Dep2","Dep3","Dep
 # why difference?
 
 ### denominator data
-setwd("~/Massey_2014/measles/data")
+# setwd("~/Massey_2014/measles/data")
 denom<-read.csv("NZDep2006Denominators.csv",header=T)
 head(denom)
 denom<-denom[,-c(9)]
@@ -148,41 +129,41 @@ deth<-revalue(dm$Ethnicity, c("Asian (Prioritised)"="Asian","European (NZ Europe
 dm$Ethnicity<-deth
 head(dm)
 
-head(numerator)
-numerator<-numerator[numerator$Ethnicity!="None",]
-num2008<-numerator[numerator$Year=="2008",-c(3:4)]
-num2009<-numerator[numerator$Year=="2009",-c(3:4)]
-num2010<-numerator[numerator$Year=="2010",-c(3:4)]
-num2011<-numerator[numerator$Year=="2011",-c(3:4)]
-num2012<-numerator[numerator$Year=="2012",-c(3:4)]
-num2013<-numerator[numerator$Year=="2013",-c(3:4)]
-num2014<-numerator[numerator$Year=="2014",-c(3:4)]
+#head(numerator)
+#numerator<-numerator[numerator$Ethnicity!="None",]
+#num2008<-numerator[numerator$Year=="2008",-c(3:4)]
+#num2009<-numerator[numerator$Year=="2009",-c(3:4)]
+#num2010<-numerator[numerator$Year=="2010",-c(3:4)]
+#num2011<-numerator[numerator$Year=="2011",-c(3:4)]
+#num2012<-numerator[numerator$Year=="2012",-c(3:4)]
+#num2013<-numerator[numerator$Year=="2013",-c(3:4)]
+#num2014<-numerator[numerator$Year=="2014",-c(3:4)]
 
 ## but fill gaps
-nm<-dm[,1:2]
-nm
-
-all2008=merge(nm,num2008, all=T)
-all2008[is.na(all2008)]<-0
-
-all2009=merge(nm,num2009, all=T)
-all2009[is.na(all2009)]<-0
-
-all2010=merge(nm,num2010, all=T)
-all2010[is.na(all2010)]<-0
-
-all2011=merge(nm,num2011, all=T)
-all2011[is.na(all2011)]<-0
-
-all2012=merge(nm,num2012, all=T)
-all2012[is.na(all2012)]<-0
-
-all2013=merge(nm,num2013, all=T)
-all2013[is.na(all2013)]<-0
-
-all2014=merge(nm,num2014, all=T)
-all2014[is.na(all2014)]<-0
-
+#nm<-dm[,1:2]
+#nm
+#
+#all2008=merge(nm,num2008, all=T)
+#all2008[is.na(all2008)]<-0
+#
+#all2009=merge(nm,num2009, all=T)
+#all2009[is.na(all2009)]<-0
+#
+#all2010=merge(nm,num2010, all=T)
+#all2010[is.na(all2010)]<-0
+#
+#all2011=merge(nm,num2011, all=T)
+#all2011[is.na(all2011)]<-0
+#
+#all2012=merge(nm,num2012, all=T)
+#all2012[is.na(all2012)]<-0
+#
+#all2013=merge(nm,num2013, all=T)
+#all2013[is.na(all2013)]<-0
+#
+#all2014=merge(nm,num2014, all=T)
+#all2014[is.na(all2014)]<-0
+#
 ##
 #risk2014<-all2014[,3:12]/dm[,3:12]
 #risk2014<-cbind(all2014[,1:2],risk2014)
@@ -191,16 +172,16 @@ all2014[is.na(all2014)]<-0
 #colnames(risktest14)<-c("Age","Ethnicity","NZDep","Cases")
 #
 #hist(risktest14$Cases)
-
-counts14<-melt(all2014,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
-colnames(counts14)<-c("Age","Ethnicity","NZDep","Cases")
-counts14
-hist(counts14$Cases)
+#
+#counts14<-melt(all2014,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
+#colnames(counts14)<-c("Age","Ethnicity","NZDep","Cases")
+#counts14
+#hist(counts14$Cases)
 
 popn<-melt(dm,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
 colnames(popn)<-c("Age","Ethnicity","NZDep","Popn")
 popn
-popn$NZDep <- as.numeric(popn$NZDep))
+popn$NZDep <- as.numeric(popn$NZDep)
 popn$merge <- paste(popn$NZDep, popn$Age, popn$Ethnicity)
 testtable$merge <- paste(testtable$NZDep, testtable$Age, testtable$Ethnicity)
 testtable <- testtable[testtable$Ethnicity!="None",]
@@ -211,17 +192,18 @@ rownames(cases) <- popn$merge
 cases[testtable$merge,] <- testtable$Cases
 popn$cases <- cases
 
-popn$cases[popn$merge == ]
-
-dat<-cbind(counts14,popn$Popn)
-colnames(dat)<-c("Age","Ethnicity","NZDep","Cases","Popn")
-
-model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=popn,family=poisson)
-summary(model)
-
+#popn$cases[popn$merge == ]
+#
+#dat<-cbind(counts14,popn$Popn)
+#colnames(dat)<-c("Age","Ethnicity","NZDep","Cases","Popn")
+#
+#model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=popn,family=poisson)
+#summary(model)
+#
 ##
-library(pscl)
+
 modelz<-zeroinfl(cases~Age+Ethnicity+as.factor(NZDep)+offset(log(Popn))|1,data=popn)
+summary(modelz)
 
 modelz<-zeroinfl(cases~Age+Ethnicity+as.factor(NZDep)+offset(log(Popn))|Ethnicity+as.factor(NZDep)+offset(log(Popn)),data=popn)
 
@@ -231,4 +213,5 @@ cor(res,popn$cases)
 cor.test(res,popn$cases)
 
 ## reduce NZDep #s
-modelz<-zeroinfl(cases~Age*Ethnicity*as.factor(NZDep)+offset(log(Popn))|Ethnicity+as.factor(NZDep)+offset(log(Popn)),data=popn)
+modelz<-zeroinfl(cases~Age*Ethnicity+as.factor(NZDep)+offset(log(Popn))|Ethnicity+as.factor(NZDep)+offset(log(Popn)),data=popn)
+
