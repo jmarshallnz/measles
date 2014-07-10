@@ -58,6 +58,16 @@ testtable<-aggregate( cbind( DiseaseName + as.numeric(SurvWeek)) ~ NZDep+AgeInYe
 dim(testtable)
 colnames(testtable)<-c("NZDep","Age","Ethnicity","Year","Cases")
 head(testtable)
+
+tnzd<-revalue(testtable$NZDep, c("1"="1-2","2"="1-2","3"="3-4","4"="3-4",
+                                 "5"="5-6","6"="5-6","7"="7-8","8"="7-8",
+                                 "9"="9-10","10"="9-10"));
+
+testtable$NZDep<-tnzd
+head(testtable)
+tt<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity + Year, 
+                 data = testtable , FUN=sum)
+
 # need to reshape "testtable"
 # mdata<-melt(testtable,id=c("NZDep",'Age','Ethnicity','Year','Cases'))
 # numerator<-cast(mdata,Age+Ethnicity+Year~NZDep)
@@ -181,21 +191,39 @@ head(dm)
 popn<-melt(dm,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
 colnames(popn)<-c("Age","Ethnicity","NZDep","Popn")
 popn
-popn$NZDep <- as.numeric(popn$NZDep)
-popn$merge <- paste(popn$NZDep, popn$Age, popn$Ethnicity)
+pnzd<-revalue(popn$NZDep, c("Dep1"="1-2","Dep2"="1-2","Dep3"="3-4","Dep4"="3-4",
+                                 "Dep5"="5-6","Dep6"="5-6","Dep7"="7-8","Dep8"="7-8",
+                                 "Dep9"="9-10","Dep10"="9-10"));
+
+popn$NZDep<-pnzd
+head(popn)
+tp<-aggregate( cbind(Popn) ~ NZDep+Age+Ethnicity, 
+               data = popn , FUN=sum)
+
+# JM's working code
+#popn$NZDep <- as.numeric(popn$NZDep)
+#popn$merge <- paste(popn$NZDep, popn$Age, popn$Ethnicity)
+#testtable$merge <- paste(testtable$NZDep, testtable$Age, testtable$Ethnicity)
+#testtable <- testtable[testtable$Ethnicity!="None",]
+
+#popn$cases <- 0
+#cases <- matrix(0, length(popn$merge),1)
+#rownames(cases) <- popn$merge
+#cases[testtable$merge,] <- testtable$Cases
+#popn$cases <- cases
+
+## end JM working code
+
+tp$merge <- paste(tp$NZDep, tp$Age, tp$Ethnicity)
 testtable$merge <- paste(testtable$NZDep, testtable$Age, testtable$Ethnicity)
 testtable <- testtable[testtable$Ethnicity!="None",]
 
-popn$cases <- 0
-cases <- matrix(0, length(popn$merge),1)
-rownames(cases) <- popn$merge
+tp$cases <- 0
+cases <- matrix(0, length(tp$merge),1)
+rownames(cases) <- tp$merge
 cases[testtable$merge,] <- testtable$Cases
-popn$cases <- cases
+tp$cases <- cases
 
-#popn$cases[popn$merge == ]
-#
-#dat<-cbind(counts14,popn$Popn)
-#colnames(dat)<-c("Age","Ethnicity","NZDep","Cases","Popn")
 #
 #model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=popn,family=poisson)
 #summary(model)
@@ -213,5 +241,14 @@ cor(res,popn$cases)
 cor.test(res,popn$cases)
 
 ## reduce NZDep #s
-modelz<-zeroinfl(cases~Age*Ethnicity+as.factor(NZDep)+offset(log(Popn))|Ethnicity+as.factor(NZDep)+offset(log(Popn)),data=popn)
+
+modelz<-zeroinfl(cases~Age+Ethnicity+NZDep+offset(log(Popn))|1,data=tp)
+summary(modelz)
+
+modelz<-zeroinfl(cases~Age+Ethnicity+NZDep+offset(log(Popn))|Ethnicity+as.factor(NZDep)+offset(log(Popn)),data=tp)
+
+res<-predict(modelz)
+plot(res,tp$cases)
+cor(res,tp$cases)
+cor.test(res,tp$cases)
 
