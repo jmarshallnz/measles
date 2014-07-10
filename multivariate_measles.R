@@ -1,3 +1,4 @@
+rm(list=ls())
 ## regression analyses - measles
 ## get data
 # set wd
@@ -24,9 +25,9 @@ test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","20
 head(test)
 dim(test)
 
-test$AgeInYears<-findInterval(test$AgeInYears,c(1,4,9,14,19,29,39,49,59,69,79))
+test$AgeInYears<-findInterval(test$AgeInYears,c(6,18,25,65))
 test$AgeInYears<-as.factor(test$AgeInYears)
-tage<-revalue(test$AgeInYears, c("0"="<1", "1"="1-3","2"="4-8","3"="9-13","4"="14-18","5"="19-28","6"="29-38","7"="39-48","8"="49-58","9"="59-68"));
+tage<-revalue(test$AgeInYears, c("0"="<6", "1"="6-17","2"="18-24","3"="25-64","4"="65+"));
 test$AgeInYears<-tage
 summary(test$EthnicityPrioritised)
 teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MLA",
@@ -34,6 +35,8 @@ teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Midd
 
 test$EthnicityPrioritised<-teth
 head(test)
+test <- within(test, NZDep06[NZDep06 == "0"]<-NA)
+test <- within(test, NZDep13[NZDep13 == "0"]<-NA)
 
 # want to set NZ Deprivation to the appropriate year
 ## why does the following add 1 to all the values?
@@ -68,39 +71,164 @@ pairs(testtable,panel=panel.smooth)
 # summary.lm(model2)
 #
 # also suggests too many age categories
-str(testtable)
-levels(testtable$Age)
-levels(testtable$Age)[c(5:10)]<-"Old"
+# str(testtable)
+# levels(testtable$Age)
+# levels(testtable$Age)[c(5:10)]<-"Old"
+## hooray - denominators
+head(testtable)
+# need to reshape "testtable"
+library(reshape)
+mdata<-melt(testtable,id=c("NZDep",'Age','Ethnicity','Year','Cases'))
+numerator<-cast(mdata,Age+Ethnicity+Year~NZDep)
 
-model3<-aov(Cases~NZDep*Age*Ethnicity,data=testtable)
-summary(model3)
-summary.aov(model3)
+numerator[is.na(numerator)] <- 0
+head(numerator)
+colnames(numerator)<-c('Age','Ethnicity','Year',"Dep0","Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10")
+
+
+#
+#model3<-aov(Cases~NZDep*Age*Ethnicity,data=testtable)
+#summary(model3)
+#summary.aov(model3)
 # looks like no need to keep interaction terms
 
 ## account for random year effect (proxy for outbreak)
-model4<-aov(Cases~NZDep*Age*Ethnicity+Error(Year),data=testtable)
-summary(model4)
+#model4<-aov(Cases~NZDep*Age*Ethnicity+Error(Year),data=testtable)
+#summary(model4)
 # still looks like no need for interaction terms
 
-model5<-aov(Cases~NZDep+Age+Ethnicity+Error(Year),data=testtable)
-summary(model5)
-
-model6<-aov(Cases~NZDep+Age+Ethnicity,data=testtable)
-summary(model6)
-summary.aov(model6)
+#model5<-aov(Cases~NZDep+Age+Ethnicity+Error(Year),data=testtable)
+#summary(model5)
+#
+#model6<-aov(Cases~NZDep+Age+Ethnicity,data=testtable)
+#summary(model6)
+#summary.aov(model6)
 
 ## results - though many age categries, richer more likely, 1-3 & 9-13 Yrs, Europeans 
 ## caveats - temporal and spatial autocorrelation, though year random effect
 ## caveats - no "per capita" analyses - just raw data
 
 ## glm
-hist(testtable$Cases,breaks=seq(0,max(testtable$Cases),by=5))
+#hist(testtable$Cases,breaks=seq(0,max(testtable$Cases),by=5))
 ## doesn't appear zero inflated, poisson should be okay - can check
 
 ## glm with Poisson errors
 # start with full model
-model7<-glm(Cases~NZDep*Age*Ethnicity,data=testtable,family=poisson)
-
-summary(model7)
-anova(model7,test="Chi")
+#model7<-glm(Cases~NZDep*Age*Ethnicity,data=testtable,family=poisson)
+#
+#summary(model7)
+#anova(model7,test="Chi")
 # why difference?
+
+### denominator data
+setwd("~/Massey_2014/measles/data")
+denom<-read.csv("NZDep2006Denominators.csv",header=T)
+head(denom)
+denom<-denom[,-c(9)]
+summary(denom)
+dim(denom)
+denom<-denom[,1:18]
+row.has.na <- apply(denom, 1, function(x){any(is.na(x))})
+sum(row.has.na)
+denomt <- denom[!row.has.na,]
+head(denomt)
+denomt<-denomt[denomt$Sex_code==99,]
+denomt$Eth_Level<-as.factor(denomt$Eth_Level)
+denomt<-denomt[denomt$Eth_Level %in% c("24","21","66",'22','77'),]
+dm<-cbind(denomt[,c(3,6,9:18)])
+head(dm)
+dm<-dm[dm$Age_Label %in% c("A: 0- 5 yrs", "A: 6-17 yrs","A:18-24 yrs","A:25-64 yrs","A:65+ yrs"),]
+dage<-revalue(dm$Age_Label, c("A: 0- 5 yrs"="<6", "A: 6-17 yrs"="6-17","A:18-24 yrs"="18-24","A:25-64 yrs"="25-64","A:65+ yrs"="65+"));
+dm$Age_Label<-dage
+colnames(dm)<-c('Age','Ethnicity',"Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10")
+head(dm)
+dm$Ethnicity <- factor(dm$Ethnicity)
+deth<-revalue(dm$Ethnicity, c("Asian (Prioritised)"="Asian","European (NZ European and Other European)"="European",
+                              "Maori (Prioritised)"="Maori","MELAA"="MLA","Pacific People (Prioritised)"="Pacific"));
+dm$Ethnicity<-deth
+head(dm)
+
+head(numerator)
+numerator<-numerator[numerator$Ethnicity!="None",]
+num2008<-numerator[numerator$Year=="2008",-c(3:4)]
+num2009<-numerator[numerator$Year=="2009",-c(3:4)]
+num2010<-numerator[numerator$Year=="2010",-c(3:4)]
+num2011<-numerator[numerator$Year=="2011",-c(3:4)]
+num2012<-numerator[numerator$Year=="2012",-c(3:4)]
+num2013<-numerator[numerator$Year=="2013",-c(3:4)]
+num2014<-numerator[numerator$Year=="2014",-c(3:4)]
+
+## but fill gaps
+nm<-dm[,1:2]
+nm
+
+all2008=merge(nm,num2008, all=T)
+all2008[is.na(all2008)]<-0
+
+all2009=merge(nm,num2009, all=T)
+all2009[is.na(all2009)]<-0
+
+all2010=merge(nm,num2010, all=T)
+all2010[is.na(all2010)]<-0
+
+all2011=merge(nm,num2011, all=T)
+all2011[is.na(all2011)]<-0
+
+all2012=merge(nm,num2012, all=T)
+all2012[is.na(all2012)]<-0
+
+all2013=merge(nm,num2013, all=T)
+all2013[is.na(all2013)]<-0
+
+all2014=merge(nm,num2014, all=T)
+all2014[is.na(all2014)]<-0
+
+##
+#risk2014<-all2014[,3:12]/dm[,3:12]
+#risk2014<-cbind(all2014[,1:2],risk2014)
+#
+#risktest14<-melt(risk2014,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
+#colnames(risktest14)<-c("Age","Ethnicity","NZDep","Cases")
+#
+#hist(risktest14$Cases)
+
+counts14<-melt(all2014,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
+colnames(counts14)<-c("Age","Ethnicity","NZDep","Cases")
+counts14
+hist(counts14$Cases)
+
+popn<-melt(dm,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
+colnames(popn)<-c("Age","Ethnicity","NZDep","Popn")
+popn
+popn$NZDep <- as.numeric(popn$NZDep))
+popn$merge <- paste(popn$NZDep, popn$Age, popn$Ethnicity)
+testtable$merge <- paste(testtable$NZDep, testtable$Age, testtable$Ethnicity)
+testtable <- testtable[testtable$Ethnicity!="None",]
+
+popn$cases <- 0
+cases <- matrix(0, length(popn$merge),1)
+rownames(cases) <- popn$merge
+cases[testtable$merge,] <- testtable$Cases
+popn$cases <- cases
+
+popn$cases[popn$merge == ]
+
+dat<-cbind(counts14,popn$Popn)
+colnames(dat)<-c("Age","Ethnicity","NZDep","Cases","Popn")
+
+model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=popn,family=poisson)
+summary(model)
+
+##
+library(pscl)
+modelz<-zeroinfl(cases~Age+Ethnicity+as.factor(NZDep)+offset(log(Popn))|1,data=popn)
+
+modelz<-zeroinfl(cases~Age+Ethnicity+as.factor(NZDep)+offset(log(Popn))|Ethnicity+as.factor(NZDep)+offset(log(Popn)),data=popn)
+
+res<-predict(modelz)
+plot(res,popn$cases)
+cor(res,popn$cases)
+cor.test(res,popn$cases)
+
+## reduce NZDep #s
+modelz<-zeroinfl(cases~Age*Ethnicity*as.factor(NZDep)+offset(log(Popn))|Ethnicity+as.factor(NZDep)+offset(log(Popn)),data=popn)
