@@ -2,7 +2,7 @@ rm(list=ls())
 ## regression analyses - measles
 ## get data
 # set wd
-# setwd("~/Massey 2014/DHayman_20140627")
+ setwd("~/Massey 2014/DHayman_20140627")
 # read data
 data<-read.csv("DHayman_20140627.csv",header=T)
 names(data)
@@ -112,7 +112,7 @@ tt<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity + Year,
 # why difference?
 
 ### denominator data
-# setwd("~/Massey_2014/measles/data")
+ setwd("~/Massey_2014/measles/data")
 denom<-read.csv("NZDep2006Denominators.csv",header=T)
 head(denom)
 denom<-denom[,-c(9)]
@@ -229,26 +229,48 @@ tp$cases <- cases
 #summary(model)
 #
 ##
-
-modelz<-zeroinfl(cases~Age+Ethnicity+as.factor(NZDep)+offset(log(Popn))|1,data=popn)
-summary(modelz)
-
-modelz<-zeroinfl(cases~Age+Ethnicity+as.factor(NZDep)+offset(log(Popn))|Ethnicity+as.factor(NZDep)+offset(log(Popn)),data=popn)
-
-res<-predict(modelz)
-plot(res,popn$cases)
-cor(res,popn$cases)
-cor.test(res,popn$cases)
-
+#
+#modelz<-zeroinfl(cases~Age+Ethnicity+as.factor(NZDep)+offset(log(Popn))|1,data=popn)
+#summary(modelz)
+#
+#modelz<-zeroinfl(cases~Age+Ethnicity+as.factor(NZDep)+offset(log(Popn))|Ethnicity+as.factor(NZDep)+offset(log(Popn)),data=popn)
+#
+#res<-predict(modelz)
+#plot(res,popn$cases)
+#cor(res,popn$cases)
+#cor.test(res,popn$cases)
+#
 ## reduce NZDep #s
+## ZERO INFLATION
+hist(tp$cases,xlab="Cases",main='Histogram of cases per category',col='grey')
 
 modelz<-zeroinfl(cases~Age+Ethnicity+NZDep+offset(log(Popn))|1,data=tp)
 summary(modelz)
 
-modelz<-zeroinfl(cases~Age+Ethnicity+NZDep+offset(log(Popn))|Ethnicity+as.factor(NZDep)+offset(log(Popn)),data=tp)
+modelz<-zeroinfl(cases~Age+Ethnicity+NZDep+offset(log(Popn))|Ethnicity+NZDep+offset(log(Popn)),data=tp)
+summary(modelz)
 
 res<-predict(modelz)
 plot(res,tp$cases)
 cor(res,tp$cases)
 cor.test(res,tp$cases)
 
+modelz<-zeroinfl(cases~Age+Ethnicity+NZDep+offset(log(Popn))|Ethnicity+NZDep+offset(log(Popn)),data=tp,dist="negbin")
+summary(modelz)
+
+res<-predict(modelz)
+plot(res,tp$cases)
+cor(res,tp$cases)
+cor.test(res,tp$cases)
+
+str(tp)
+head(tp)
+pairs(tp[,-c(5)],panel=panel.smooth)
+
+modelz<-zeroinfl(cases~Age*Ethnicity+NZDep+offset(log(Popn))|Ethnicity + NZDep +offset(log(Popn)),data=tp)
+summary(modelz)
+
+res<-predict(modelz)
+plot(res,tp$cases)
+cor(res,tp$cases)
+cor.test(res,tp$cases)
