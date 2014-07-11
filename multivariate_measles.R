@@ -40,7 +40,7 @@ test <- within(test, NZDep06[NZDep06 == "0"]<-NA)
 test <- within(test, NZDep13[NZDep13 == "0"]<-NA)
 
 # want to set NZ Deprivation to the appropriate year
-## why does the following add 1 to all the values?
+
 testt <- within(test, NZDep<- ifelse (test$RptYear == "2007",test$NZDep06,
                               ifelse (test$RptYear == "2008",test$NZDep06,
                               ifelse (test$RptYear == "2009",test$NZDep06,
@@ -59,57 +59,14 @@ dim(testtable)
 colnames(testtable)<-c("NZDep","Age","Ethnicity","Year","Cases")
 head(testtable)
 
-tnzd<-revalue(testtable$NZDep, c("1"="1-2","2"="1-2","3"="3-4","4"="3-4",
-                                 "5"="5-6","6"="5-6","7"="7-8","8"="7-8",
-                                 "9"="9-10","10"="9-10"));
+tnzd<-revalue(testtable$NZDep, c("1"="1-5","2"="1-5","3"="1-5","4"="1-5",
+                                 "5"="1-5","6"="6-10","7"="6-10","8"="6-10",
+                                 "9"="6-10","10"="6-10"));
 
 testtable$NZDep<-tnzd
 head(testtable)
 tt<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity + Year, 
                  data = testtable , FUN=sum)
-
-# need to reshape "testtable"
-# mdata<-melt(testtable,id=c("NZDep",'Age','Ethnicity','Year','Cases'))
-# numerator<-cast(mdata,Age+Ethnicity+Year~NZDep)
-#
-#numerator[is.na(numerator)] <- 0
-#head(numerator)
-#colnames(numerator)<-c('Age','Ethnicity','Year',"Dep0","Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10")
-#
-#
-#
-#model3<-aov(Cases~NZDep*Age*Ethnicity,data=testtable)
-#summary(model3)
-#summary.aov(model3)
-# looks like no need to keep interaction terms
-
-## account for random year effect (proxy for outbreak)
-#model4<-aov(Cases~NZDep*Age*Ethnicity+Error(Year),data=testtable)
-#summary(model4)
-# still looks like no need for interaction terms
-
-#model5<-aov(Cases~NZDep+Age+Ethnicity+Error(Year),data=testtable)
-#summary(model5)
-#
-#model6<-aov(Cases~NZDep+Age+Ethnicity,data=testtable)
-#summary(model6)
-#summary.aov(model6)
-
-## results - though many age categries, richer more likely, 1-3 & 9-13 Yrs, Europeans 
-## caveats - temporal and spatial autocorrelation, though year random effect
-## caveats - no "per capita" analyses - just raw data
-
-## glm
-#hist(testtable$Cases,breaks=seq(0,max(testtable$Cases),by=5))
-## doesn't appear zero inflated, poisson should be okay - can check
-
-## glm with Poisson errors
-# start with full model
-#model7<-glm(Cases~NZDep*Age*Ethnicity,data=testtable,family=poisson)
-#
-#summary(model7)
-#anova(model7,test="Chi")
-# why difference?
 
 ### denominator data
  setwd("~/Massey_2014/measles/data")
@@ -139,61 +96,12 @@ deth<-revalue(dm$Ethnicity, c("Asian (Prioritised)"="Asian","European (NZ Europe
 dm$Ethnicity<-deth
 head(dm)
 
-#head(numerator)
-#numerator<-numerator[numerator$Ethnicity!="None",]
-#num2008<-numerator[numerator$Year=="2008",-c(3:4)]
-#num2009<-numerator[numerator$Year=="2009",-c(3:4)]
-#num2010<-numerator[numerator$Year=="2010",-c(3:4)]
-#num2011<-numerator[numerator$Year=="2011",-c(3:4)]
-#num2012<-numerator[numerator$Year=="2012",-c(3:4)]
-#num2013<-numerator[numerator$Year=="2013",-c(3:4)]
-#num2014<-numerator[numerator$Year=="2014",-c(3:4)]
-
-## but fill gaps
-#nm<-dm[,1:2]
-#nm
-#
-#all2008=merge(nm,num2008, all=T)
-#all2008[is.na(all2008)]<-0
-#
-#all2009=merge(nm,num2009, all=T)
-#all2009[is.na(all2009)]<-0
-#
-#all2010=merge(nm,num2010, all=T)
-#all2010[is.na(all2010)]<-0
-#
-#all2011=merge(nm,num2011, all=T)
-#all2011[is.na(all2011)]<-0
-#
-#all2012=merge(nm,num2012, all=T)
-#all2012[is.na(all2012)]<-0
-#
-#all2013=merge(nm,num2013, all=T)
-#all2013[is.na(all2013)]<-0
-#
-#all2014=merge(nm,num2014, all=T)
-#all2014[is.na(all2014)]<-0
-#
-##
-#risk2014<-all2014[,3:12]/dm[,3:12]
-#risk2014<-cbind(all2014[,1:2],risk2014)
-#
-#risktest14<-melt(risk2014,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
-#colnames(risktest14)<-c("Age","Ethnicity","NZDep","Cases")
-#
-#hist(risktest14$Cases)
-#
-#counts14<-melt(all2014,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
-#colnames(counts14)<-c("Age","Ethnicity","NZDep","Cases")
-#counts14
-#hist(counts14$Cases)
-
 popn<-melt(dm,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
 colnames(popn)<-c("Age","Ethnicity","NZDep","Popn")
 popn
-pnzd<-revalue(popn$NZDep, c("Dep1"="1-2","Dep2"="1-2","Dep3"="3-4","Dep4"="3-4",
-                                 "Dep5"="5-6","Dep6"="5-6","Dep7"="7-8","Dep8"="7-8",
-                                 "Dep9"="9-10","Dep10"="9-10"));
+pnzd<-revalue(popn$NZDep, c("Dep1"="1-5","Dep2"="1-5","Dep3"="1-5","Dep4"="1-5",
+                                 "Dep5"="1-5","Dep6"="6-10","Dep7"="6-10","Dep8"="6-10",
+                                 "Dep9"="6-10","Dep10"="6-10"));
 
 popn$NZDep<-pnzd
 head(popn)
@@ -267,10 +175,55 @@ str(tp)
 head(tp)
 pairs(tp[,-c(5)],panel=panel.smooth)
 
-modelz<-zeroinfl(cases~Age*Ethnicity+NZDep+offset(log(Popn))|Ethnicity + NZDep +offset(log(Popn)),data=tp)
-summary(modelz)
+## try dropping the old people
 
-res<-predict(modelz)
-plot(res,tp$cases)
-cor(res,tp$cases)
-cor.test(res,tp$cases)
+tpminus<-tp[!(tp$Age=="65+"),]
+hist(tpminus$cases,xlab="Cases",main='Histogram of cases per category',col='grey')
+
+modelzminus<-zeroinfl(cases~Age*Ethnicity*NZDep+offset(log(Popn))|1+offset(log(Popn)),data=tpminus)
+summary(modelzminus)
+
+# perfect fit ;-)
+
+par(mfrow=c(2,2))
+hist(tpminus$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
+plot(tpminus$cases,main="Cases per category",ylab="Count",pch=16,col="darkgrey")
+res<-predict(modelzminus)
+plot(res,tpminus$cases,xlab="results",ylab='predictions',main="Fit",pch=16,col="darkgrey")
+cor(res,tpminus$cases)
+cor.test(res,tpminus$cases)
+
+hist(modelzminus$residuals,main="Histogram of residuals",xlab="residuals",col="grey")
+
+## 
+modzm<-zeroinfl(cases~Age*Ethnicity+Age*NZDep+Ethnicity*NZDep+offset(log(Popn))|1+offset(log(Popn)),data=tpminus)
+summary(modzm)
+res<-predict(modzm)
+plot(res,tpminus$cases)
+cor(res,tpminus$cases)
+cor.test(res,tpminus$cases)
+
+AIC(modzm,modelzminus)
+
+## 
+modzm2<-zeroinfl(cases~Age+Ethnicity+NZDep+offset(log(Popn))|1+offset(log(Popn)),data=tpminus)
+summary(modzm2)
+res<-predict(modzm2)
+plot(res,tpminus$cases)
+cor(res,tpminus$cases)
+cor.test(res,tpminus$cases)
+
+AIC(modzm2,modelzminus)
+
+## to drop MLA due to small #s, but then no zeros!!!!
+
+tpsub<-tpminus[!(tpminus$Ethnicity=="MLA"),]
+hist(tpsub$cases,xlab="Cases",main='Histogram of cases per category',col='grey')
+plot(tpsub$cases)
+modelzsub<-zeroinfl(cases~Age*Ethnicity*NZDep+offset(log(Popn))|1+offset(log(Popn)),data=tpsub)
+summary(modelzsub)
+
+res<-predict(modelzsub)
+plot(res,tpsub$cases)
+cor(res,tpsub$cases)
+cor.test(res,tpsub$cases)
