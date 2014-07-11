@@ -26,9 +26,9 @@ test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","20
 head(test)
 dim(test)
 
-test$AgeInYears<-findInterval(test$AgeInYears,c(6,18,25,65))
+test$AgeInYears<-findInterval(test$AgeInYears,c(3,6,18,25))
 test$AgeInYears<-as.factor(test$AgeInYears)
-tage<-revalue(test$AgeInYears, c("0"="<6", "1"="6-17","2"="18-24","3"="25-64","4"="65+"));
+tage<-revalue(test$AgeInYears, c("0"="0-2", "1"="3-5","2"="6-17","3"="18-24","4"="25+"));
 test$AgeInYears<-tage
 #summary(test$EthnicityPrioritised)
 teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MLA",
@@ -86,10 +86,17 @@ denomt<-denomt[denomt$Eth_Level %in% c("24","21","66",'22','77'),]
 dm<-cbind(denomt[,c(3,6,9:18)])
 head(dm)
 dm<-dm[dm$Age_Label %in% c("A: 0- 5 yrs", "A: 6-17 yrs","A:18-24 yrs","A:25-64 yrs","A:65+ yrs"),]
-dage<-revalue(dm$Age_Label, c("A: 0- 5 yrs"="<6", "A: 6-17 yrs"="6-17","A:18-24 yrs"="18-24","A:25-64 yrs"="25-64","A:65+ yrs"="65+"));
+dage<-revalue(dm$Age_Label, c("A: 0- 5 yrs"="<6", "A: 6-17 yrs"="6-17","A:18-24 yrs"="18-24","A:25-64 yrs"="25+","A:65+ yrs"="25+"));
 dm$Age_Label<-dage
 colnames(dm)<-c('Age','Ethnicity',"Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10")
 head(dm)
+datadm<-dm[dm$Age=="<6",]
+dataA<-(rbind(datadm,datadm)/2)
+dataA<-round(dataA[,3:12])
+dataA<-cbind(c(rep("0-2",5),rep("3-5",5)),rep(datadm$Ethnicity[1:5],2),dataA)
+colnames(dataA)<-c('Age','Ethnicity',"Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10")
+ddm<-dm[!dm$Age=="<6",]
+dm<-rbind(dataA,ddm)
 dm$Ethnicity <- factor(dm$Ethnicity)
 deth<-revalue(dm$Ethnicity, c("Asian (Prioritised)"="Asian","European (NZ European and Other European)"="European",
                               "Maori (Prioritised)"="Maori","MELAA"="MLA","Pacific People (Prioritised)"="Pacific"));
@@ -149,8 +156,83 @@ tp$cases <- cases
 #cor.test(res,popn$cases)
 #
 ## reduce NZDep #s
-## ZERO INFLATION
-hist(tp$cases,xlab="Cases",main='Histogram of cases per category',col='grey')
+
+hist(tp$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
+
+model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=tp,family="quasipoisson")
+summary(model)
+
+model1<-update(model,~.-Age:Ethnicity:NZDep)
+summary(model1)
+anova(model1,test="Chisq")
+
+model2<-update(model1,~.-Age:NZDep)
+summary(model2)
+anova(model2,test="Chisq")
+
+par(mfrow=c(2,2))
+hist(tp$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
+plot(tp$cases,main="Cases per category",ylab="Count",pch=16,col="darkgrey")
+res<-predict(model2)
+plot(exp(res),tp$cases,xlab="results",ylab='predictions',main="Fit",pch=16,col="darkgrey")
+cor(exp(res),tp$cases)
+cor.test(exp(res),tp$cases)
+hist(model2$residuals,main="Histogram of residuals",xlab="residuals",col="grey")
+
+## drop MLA
+tpsub<-tp[!(tp$Ethnicity=="MLA"),]
+
+hist(tpsub$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
+
+model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=tpsub,family="quasipoisson")
+summary(model)
+
+model1<-update(model,~.-Age:Ethnicity:NZDep)
+summary(model1)
+anova(model1,test="Chisq")
+
+model2<-update(model1,~.-Ethnicity:NZDep)
+summary(model2)
+anova(model2,test="Chisq")
+
+model3<-update(model2,~.-Age:NZDep)
+summary(model3)
+anova(model3,test="Chisq")
+
+model4<-update(model3,~.-NZDep)
+summary(model4)
+anova(model4,test="Chisq")
+
+model5<-update(model4,~.-Age:Ethnicity)
+summary(model5)
+anova(model5,test="Chisq")
+
+par(mfrow=c(2,2))
+hist(tpsub$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
+plot(tpsub$cases,main="Cases per category",ylab="Count",pch=16,col="darkgrey")
+res<-predict(model5)
+plot(exp(res),tpsub$cases,xlab="results",ylab='predictions',main="Fit",pch=16,col="darkgrey")
+cor(exp(res),tpsub$cases)
+cor.test(exp(res),tpsub$cases)
+abline(lm(exp(res)~tpsub$cases))
+hist(model2$residuals,main="Histogram of residuals",xlab="residuals",col="grey")
+
+## just age
+model6<-update(model5,~.-Ethnicity)
+summary(model6)
+anova(model6,test="Chisq")
+
+par(mfrow=c(2,2))
+hist(tpsub$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
+plot(tpsub$cases,main="Cases per category",ylab="Count",pch=16,col="darkgrey")
+res<-predict(model6)
+plot(exp(res),tpsub$cases,xlab="results",ylab='predictions',main="Fit",pch=16,col="darkgrey")
+cor(exp(res),tpsub$cases)
+cor.test(exp(res),tpsub$cases)
+#abline(lm(exp(res)~tpsub$cases))
+hist(model2$residuals,main="Histogram of residuals",xlab="residuals",col="grey")
+
+## ZERO INFLATION BELOW
 
 modelz<-zeroinfl(cases~Age+Ethnicity+NZDep+offset(log(Popn))|1,data=tp)
 summary(modelz)
@@ -176,12 +258,12 @@ head(tp)
 pairs(tp[,-c(5)],panel=panel.smooth)
 
 ## try dropping the old people
-
-tpminus<-tp[!(tp$Age=="65+"),]
-hist(tpminus$cases,xlab="Cases",main='Histogram of cases per category',col='grey')
-
-modelzminus<-zeroinfl(cases~Age*Ethnicity*NZDep+offset(log(Popn))|1+offset(log(Popn)),data=tpminus)
-summary(modelzminus)
+#
+#tpminus<-tp[!(tp$Age=="65+"),]
+#hist(tpminus$cases,xlab="Cases",main='Histogram of cases per category',col='grey')
+#
+#modelzminus<-zeroinfl(cases~Age*Ethnicity*NZDep+offset(log(Popn))|1+offset(log(Popn)),data=tpminus)
+#summary(modelzminus)
 
 # perfect fit ;-)
 
