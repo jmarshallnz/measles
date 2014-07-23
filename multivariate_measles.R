@@ -17,7 +17,6 @@ data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
 
 time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear, 
                  data = data , FUN=sum)
-
 library(reshape)
 library(reshape2)
 library(plyr)
@@ -26,6 +25,20 @@ library(pscl)
 test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
 head(test)
 dim(test)
+
+## plot cases / age class
+
+par(mfrow=c(2,1))
+hist(time$AgeInYears,col="grey",xlab="Age in years",main="Cases per age in years (1997-2014)",breaks=90,include.lowest=TRUE,right=F)
+hist(test$AgeInYears,col="grey",xlab="Age in years",main="Cases per age in years (2007-2014)",breaks=90,include.lowest=TRUE,right=F)
+
+caseyr<-aggregate( DiseaseName ~ AgeInYears, 
+                              data = test , FUN=sum)
+
+caseyr
+
+
+## continue 
 
 test$AgeInYears<-findInterval(test$AgeInYears,c(3,6,18,25))
 test$AgeInYears<-as.factor(test$AgeInYears)
@@ -179,12 +192,16 @@ plot(exp(res),tp$cases,xlab="results",ylab='predictions',main="Fit",pch=16,col="
 cor(exp(res),tp$cases)
 cor.test(exp(res),tp$cases)
 hist(model2$residuals,main="Histogram of residuals",xlab="residuals",col="grey")
-plot(tp$cases/tp$popn,main="Cases per category",ylab="Count",pch=16,col="darkgrey")
+par(mfrow=c(1,1))
+plot(tp$cases/tp$Popn,main="Cases per capita",ylab="Rate",pch=16,col=c(rep(1,10),rep(2,10),rep(3,10),rep(4,10),rep(6,10)),
+     xlab="Category")
+legend("topleft",c("Asian","European","Maori","MELAA","Pacific"),
+       col=c(1:4,6),pch=16,bty="n")
 
 ## drop MLA
 tpsub<-tp[!(tp$Ethnicity=="MLA"),]
 
-hist(tpsub$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
+hist(tpsub$cases,xlab="Cases",main='Histogram of cases per category',col="darkgrey",breaks=20)
 
 model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=tpsub,family="quasipoisson")
 summary(model)
