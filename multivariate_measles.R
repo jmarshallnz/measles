@@ -5,6 +5,7 @@ rm(list=ls())
  setwd("~/Massey 2014/DHayman_20140627")
 # read data
 data<-read.csv("DHayman_20140627.csv",header=T)
+vac<-read.csv("DHayman_20140715_Vacc.csv",header=T)
 names(data)
 data$RptYear<-as.factor(data$RptYear)
 data$SurvWeek<-as.factor(data$SurvWeek)
@@ -158,17 +159,17 @@ tp$cases <- cases
 ## reduce NZDep #s
 
 hist(tp$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
-
+tp$Ethnicity<- relevel(tp$Ethnicity, "European")
 model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=tp,family="quasipoisson")
 summary(model)
 
 model1<-update(model,~.-Age:Ethnicity:NZDep)
 summary(model1)
-anova(model1,test="Chisq")
+anova(model1,test="F") # F test, not Chisq, because dispersion estimated by moments
 
 model2<-update(model1,~.-Age:NZDep)
 summary(model2)
-anova(model2,test="Chisq")
+anova(model2,test="F")
 
 par(mfrow=c(2,2))
 hist(tp$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
@@ -178,6 +179,7 @@ plot(exp(res),tp$cases,xlab="results",ylab='predictions',main="Fit",pch=16,col="
 cor(exp(res),tp$cases)
 cor.test(exp(res),tp$cases)
 hist(model2$residuals,main="Histogram of residuals",xlab="residuals",col="grey")
+plot(tp$cases/tp$popn,main="Cases per category",ylab="Count",pch=16,col="darkgrey")
 
 ## drop MLA
 tpsub<-tp[!(tp$Ethnicity=="MLA"),]
@@ -189,123 +191,28 @@ summary(model)
 
 model1<-update(model,~.-Age:Ethnicity:NZDep)
 summary(model1)
-anova(model1,test="Chisq")
+anova(model1,test="F")
 
 model2<-update(model1,~.-Ethnicity:NZDep)
 summary(model2)
-anova(model2,test="Chisq")
+anova(model2,test="F")
 
 model3<-update(model2,~.-Age:NZDep)
 summary(model3)
-anova(model3,test="Chisq")
+anova(model3,test="F")
 
-model4<-update(model3,~.-NZDep)
-summary(model4)
-anova(model4,test="Chisq")
-
-model5<-update(model4,~.-Age:Ethnicity)
-summary(model5)
-anova(model5,test="Chisq")
+##
 
 par(mfrow=c(2,2))
 hist(tpsub$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
 plot(tpsub$cases,main="Cases per category",ylab="Count",pch=16,col="darkgrey")
-res<-predict(model5)
+res<-predict(model3)
 plot(exp(res),tpsub$cases,xlab="predictions",ylab='cases',main="Fit",pch=16,col="darkgrey")
 cor(exp(res),tpsub$cases)
 cor.test(exp(res),tpsub$cases)
 #abline(lm(exp(res)~tpsub$cases))
-hist(model2$residuals,main="Histogram of residuals",xlab="residuals",col="grey")
+hist(model3$residuals,main="Histogram of residuals",xlab="residuals",col="grey")
 
-## just age
-model6<-update(model5,~.-Ethnicity)
-summary(model6)
-anova(model6,test="Chisq")
+##
 
-par(mfrow=c(2,2))
-hist(tpsub$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
-plot(tpsub$cases,main="Cases per category",ylab="Count",pch=16,col="darkgrey")
-res<-predict(model6)
-plot(exp(res),tpsub$cases,xlab="preictions",ylab='cases',main="Fit",pch=16,col="darkgrey")
-cor(exp(res),tpsub$cases)
-cor.test(exp(res),tpsub$cases)
-#abline(lm(exp(res)~tpsub$cases))
-hist(model2$residuals,main="Histogram of residuals",xlab="residuals",col="grey")
-
-## ZERO INFLATION BELOW
-
-modelz<-zeroinfl(cases~Age+Ethnicity+NZDep+offset(log(Popn))|1,data=tp)
-summary(modelz)
-
-modelz<-zeroinfl(cases~Age+Ethnicity+NZDep+offset(log(Popn))|Ethnicity+NZDep+offset(log(Popn)),data=tp)
-summary(modelz)
-
-res<-predict(modelz)
-plot(res,tp$cases)
-cor(res,tp$cases)
-cor.test(res,tp$cases)
-
-modelz<-zeroinfl(cases~Age+Ethnicity+NZDep+offset(log(Popn))|Ethnicity+NZDep+offset(log(Popn)),data=tp,dist="negbin")
-summary(modelz)
-
-res<-predict(modelz)
-plot(res,tp$cases)
-cor(res,tp$cases)
-cor.test(res,tp$cases)
-
-str(tp)
-head(tp)
-pairs(tp[,-c(5)],panel=panel.smooth)
-
-## try dropping the old people
-#
-#tpminus<-tp[!(tp$Age=="65+"),]
-#hist(tpminus$cases,xlab="Cases",main='Histogram of cases per category',col='grey')
-#
-#modelzminus<-zeroinfl(cases~Age*Ethnicity*NZDep+offset(log(Popn))|1+offset(log(Popn)),data=tpminus)
-#summary(modelzminus)
-
-# perfect fit ;-)
-
-par(mfrow=c(2,2))
-hist(tpminus$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
-plot(tpminus$cases,main="Cases per category",ylab="Count",pch=16,col="darkgrey")
-res<-predict(modelzminus)
-plot(res,tpminus$cases,xlab="results",ylab='predictions',main="Fit",pch=16,col="darkgrey")
-cor(res,tpminus$cases)
-cor.test(res,tpminus$cases)
-
-hist(modelzminus$residuals,main="Histogram of residuals",xlab="residuals",col="grey")
-
-## 
-modzm<-zeroinfl(cases~Age*Ethnicity+Age*NZDep+Ethnicity*NZDep+offset(log(Popn))|1+offset(log(Popn)),data=tpminus)
-summary(modzm)
-res<-predict(modzm)
-plot(res,tpminus$cases)
-cor(res,tpminus$cases)
-cor.test(res,tpminus$cases)
-
-AIC(modzm,modelzminus)
-
-## 
-modzm2<-zeroinfl(cases~Age+Ethnicity+NZDep+offset(log(Popn))|1+offset(log(Popn)),data=tpminus)
-summary(modzm2)
-res<-predict(modzm2)
-plot(res,tpminus$cases)
-cor(res,tpminus$cases)
-cor.test(res,tpminus$cases)
-
-AIC(modzm2,modelzminus)
-
-## to drop MLA due to small #s, but then no zeros!!!!
-
-tpsub<-tpminus[!(tpminus$Ethnicity=="MLA"),]
-hist(tpsub$cases,xlab="Cases",main='Histogram of cases per category',col='grey')
-plot(tpsub$cases)
-modelzsub<-zeroinfl(cases~Age*Ethnicity*NZDep+offset(log(Popn))|1+offset(log(Popn)),data=tpsub)
-summary(modelzsub)
-
-res<-predict(modelzsub)
-plot(res,tpsub$cases)
-cor(res,tpsub$cases)
-cor.test(res,tpsub$cases)
+# NB use 1-(1/R0) to estimate % additional vaccination from R0 values
