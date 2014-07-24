@@ -15,7 +15,8 @@ data$NZDep13<-as.factor(data$NZDep13)
 #data$AgeInYears<-as.factor(data$AgeInYears)
 data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
 
-time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear, 
+
+time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear,# + Dose1Mths + Dose2Mths, 
                  data = data , FUN=sum)
 library(reshape)
 library(reshape2)
@@ -28,17 +29,127 @@ dim(test)
 
 ## plot cases / age class
 
-par(mfrow=c(2,1))
-hist(time$AgeInYears,col="grey",xlab="Age in years",main="Cases per age in years (1997-2014)",breaks=90,include.lowest=TRUE,right=F)
-hist(test$AgeInYears,col="grey",xlab="Age in years",main="Cases per age in years (2007-2014)",breaks=90,include.lowest=TRUE,right=F)
+par(mfrow=c(1,1))
+hist(time$AgeInYears,col="grey",xlab="Age in years",main="Age of cases",breaks=90,include.lowest=TRUE,right=F)
+hist(test$AgeInYears,col="black",breaks=90,include.lowest=TRUE,right=F,add=T)
+legend("topright",c("1997-2014","2007-2014"),col=c("grey","black"),pch=15,bty="n")
 
 caseyr<-aggregate( DiseaseName ~ AgeInYears, 
-                              data = test , FUN=sum)
+                   data = test , FUN=sum)
 
 caseyr
+head(vac)
+hist(vac$Dose1Mths,breaks=100,col=rgb(0,0,1,1/4),xlab="Age in months",main="Age of vaccination of vaccinated cases")
+abline(v=12,col="blue")
+hist(vac$Dose2Mths,breaks=50,add=T,col=rgb(1,0,0,1/4))
+abline(v=60,col="red")
+legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=15,bty="n")
+legend(x=400,y=200,c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n")
+
+hist(time$AgeInYears,col=rgb(1,1,1,1/4),xlab="Age in Years",main="Proportions of cases vaccinated",breaks=90,include.lowest=TRUE,right=F)
+#hist(test$AgeInYears,col=rgb(0,1,1,1/4),breaks=90,include.lowest=TRUE,right=F,add=T)
+hist(vac$Dose1Mths/12,breaks=50,col=rgb(0,1,1,1/4),add=T)
+hist(vac$Dose2Mths/12,breaks=10,add=T,col=rgb(0,0,1,1/4))
+legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,1,1,1/4),rgb(0,0,1,1/4)),pch=15,bty="n")
+
+require(reshape2)  # this is the library that lets one flatten out data
+require(ggplot2)   # plotting library
+bucket<-list(dose1=vac$Dose1Mths/12,dose2=vac$Dose2Mths/12) # this puts all values in one list
+# the melt command flattens the 'bucket' list into value/vectorname pairs
+# the 2 columns are called 'value' and 'L1' by default
+# 'fill' will color bars differently depending on L1 group
+ggplot(melt(bucket), aes(value, fill = L1)) + 
+  #call geom_histogram with position="dodge" to offset the bars and manual binwidth of 2
+  geom_histogram(position = "stack", binwidth=1)
+  
+##
+setwd("~/Massey_2014/measles/data")
+popimmune<-read.csv("PopnImmunityAll.csv",header=T)
+popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
+#plot(y=popimmune$Naïve.Population, x=popimmune$Age,data=popimmune,ylim=c(0,max(popimmune$Naïve.Population)))
+require(ggplot2)
+qplot(Age, Naïve.Population,data=popimmune,size=I(2))
+popimmune$Immunity
+pop<-read.csv("popnsize.csv",header=T)
+colnames(pop)<-0:100
+pop<-t(pop)
+impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
+         rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
+length(pop)
+naive<-round(pop-(pop*impop))
+plot(pop,xlab="Age",ylab="Population")
+points(naive,pch=16)
+legend("topright",c("Population","Naïve"),pch=c(1,16),bty="n")
+## match cases per age
+AgeInYears<-0:100
+naive<-cbind(AgeInYears,naive)
+colnames(naive)<-c("AgeInYears","Naive")
+naive<-merge(naive,caseyr,by="AgeInYears",all=T)
+#naive[is.na(naive)] <- 0
+colnames(naive)<-c("AgeInYears","Naive","Cases")
+#points(naive$Cases,pch=16,col="red")
+
+par(mar=c(5,4,4,5)+.1)
+hist(test$AgeInYears,col="black",breaks=90,include.lowest=TRUE,right=F,ylim=c(0,500),
+     main="Cases and Naïve Population",xlab="Age")
+#points(naive[1:64,2],pch=16,col="blue")
+# remove 0 and 1 year old old
+cor(naive$Naive[3:64],naive$Cases[3:64])
+plot(naive$Naive[3:64],naive$Cases[3:64])
+
+dose1=as.factor(round(vac$Dose1Mths/12,0));
+dose1<-summary(dose1)
+dose1<-as.data.frame(dose1)
+dose1$AgeInYears<-rownames(dose1)
+dose2=as.factor(round(na.omit(vac$Dose2Mths/12,0)));
+dose2<-summary(dose2)
+dose2<-as.data.frame(dose2)
+dose2$AgeInYears<-rownames(dose2)
+
+## need to merge vaccination data with data
+## to get years the cases were from
+datav<-merge(vac,data,by="CaseCode",all=T)
+##
+datav$Dose1Mths[which(is.na(datav$Dose1Mths))] <- 9999
+datav$Dose2Mths[which(is.na(datav$Dose2Mths))] <- 9999
+#########################
+datav$RptYear<-as.factor(datav$RptYear)
+datav$SurvWeek<-as.factor(datav$SurvWeek)
+datav$NZDep01<-as.factor(datav$NZDep01)
+datav$NZDep06<-as.factor(datav$NZDep06)
+datav$NZDep13<-as.factor(datav$NZDep13)
+datav$Dose1Mths<-as.factor(datav$Dose1Mths)
+datav$Dose2Mths<-as.factor(datav$Dose2Mths)
+
+#data$AgeInYears<-as.factor(data$AgeInYears)
+datav$EthnicityPrioritised<-as.factor(datav$EthnicityPrioritised)
+
+timev<-aggregate( cbind( DiseaseName) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear+ Dose1Mths +Dose2Mths, 
+                 data = datav , FUN=sum,na.rm=F,na.action=na.pass)
+
+testv<-subset(timev, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
+head(testv)
+
+par(mfrow=c(1,1))
+hist(timev$AgeInYears,col="grey",xlab="Age in years",main="Age of cases",breaks=90,include.lowest=TRUE,right=F)
+hist(testv$AgeInYears,col="black",breaks=50,include.lowest=TRUE,right=F,add=T)
+legend("topright",c("1997-2014","2007-2014"),col=c("grey","black"),pch=15,bty="n")
+
+library(plyr)
+testv$Dose1Mths<-revalue(testv$Dose1Mths, c("9999"="NA"));
+testv$Dose2Mths<-revalue(testv$Dose2Mths, c("9999"="NA"));
+plot(na.omit(testv$Dose2Mths))
+
+#########################
 
 
-## continue 
+
+naive<-merge(naive,dose1,by="AgeInYears",all=T)
+naive<-merge(naive,dose2,by="AgeInYears",all=T)
+head(naive)
+naive$naiveCases<-(naive$Cases-(naive$dose1+naive$dose2))
+
+## continue with stats...
 
 test$AgeInYears<-findInterval(test$AgeInYears,c(3,6,18,25))
 test$AgeInYears<-as.factor(test$AgeInYears)
