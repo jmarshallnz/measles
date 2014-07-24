@@ -136,18 +136,26 @@ hist(testv$AgeInYears,col="black",breaks=50,include.lowest=TRUE,right=F,add=T)
 legend("topright",c("1997-2014","2007-2014"),col=c("grey","black"),pch=15,bty="n")
 
 library(plyr)
-testv$Dose1Mths<-revalue(testv$Dose1Mths, c("9999"="NA"));
-testv$Dose2Mths<-revalue(testv$Dose2Mths, c("9999"="NA"));
+testv$Dose1Mths<-revalue(testv$Dose1Mths, c("9999"=NA));
+testv$Dose2Mths<-revalue(testv$Dose2Mths, c("9999"=NA));
+plot(na.omit(testv$Dose1Mths))
 plot(na.omit(testv$Dose2Mths))
+testv$Dose1Mths<-as.numeric(testv$Dose1Mths)
+testv$Dose2Mths<-as.numeric(testv$Dose2Mths)
+testv$D2vac<-ifelse(testv$Dose1Mths > -1 & testv$Dose2Mths >= testv$Dose1Mths,testv$Dose2Mths,NA)
+testv$D1vac<-ifelse(testv$Dose1Mths > -1 & is.na(testv$D2vac) == T,testv$Dose1Mths,NA)
+testv$Unvac<-ifelse(is.na(testv$Dose1Mths) == T & is.na(testv$Dose2Mths) == T,testv$AgeInYears,NA)
+
+bucket<-list(dose1=testv$D1vac/12,dose2=testv$D2vac/12,unvaccinated=testv$Unvac) # this puts all values in one list
+# the melt command flattens the 'bucket' list into value/vectorname pairs
+# the 2 columns are called 'value' and 'L1' by default
+# 'fill' will color bars differently depending on L1 group
+ggplot(melt(bucket), aes(value, fill = L1)) + xlab("Age in Years") +
+  #call geom_histogram with position="dodge" to offset the bars and manual binwidth of 2
+  geom_histogram(position = "stack", binwidth=1)+ guides(fill=guide_legend(title=NULL))+ theme(legend.position=c(.75, .75))
+
 
 #########################
-
-
-
-naive<-merge(naive,dose1,by="AgeInYears",all=T)
-naive<-merge(naive,dose2,by="AgeInYears",all=T)
-head(naive)
-naive$naiveCases<-(naive$Cases-(naive$dose1+naive$dose2))
 
 ## continue with stats...
 
