@@ -54,13 +54,13 @@ legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,1,1,1/4),rgb(0,0,1,1/4)),pch=
 
 require(reshape2)  # this is the library that lets one flatten out data
 require(ggplot2)   # plotting library
-bucket<-list(dose1=vac$Dose1Mths/12,dose2=vac$Dose2Mths/12) # this puts all values in one list
+# bucket<-list(dose1=vac$Dose1Mths/12,dose2=vac$Dose2Mths/12) # this puts all values in one list
 # the melt command flattens the 'bucket' list into value/vectorname pairs
 # the 2 columns are called 'value' and 'L1' by default
 # 'fill' will color bars differently depending on L1 group
-ggplot(melt(bucket), aes(value, fill = L1)) + 
-  #call geom_histogram with position="dodge" to offset the bars and manual binwidth of 2
-  geom_histogram(position = "stack", binwidth=1)
+# ggplot(melt(bucket), aes(value, fill = L1)) + 
+#  #call geom_histogram with position="dodge" to offset the bars and manual binwidth of 2
+#  geom_histogram(position = "stack", binwidth=1) ## not really what I want
   
 ##
 setwd("~/Massey_2014/measles/data")
@@ -154,7 +154,11 @@ ggplot(melt(bucket), aes(value, fill = L1)) + xlab("Age in Years") +
   #call geom_histogram with position="dodge" to offset the bars and manual binwidth of 2
   geom_histogram(position = "stack", binwidth=1)+ guides(fill=guide_legend(title=NULL))+ theme(legend.position=c(.75, .75))
 
-
+testv$VC<-ifelse(is.na(testv$Dose1Mths) == T & is.na(testv$Dose2Mths) == T,0,
+                 ifelse(testv$Dose1Mths >= 0 & is.na(testv$Dose2Mths) == T,1,2))
+AgeVac<-table(testv$VC,testv$AgeInYears)
+barplot(AgeVac,xlab="Age",col=c("darkgrey","red","orange"),main="Age and vaccination status of cases")
+legend("topright",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"))
 #########################
 
 ## continue with stats...
