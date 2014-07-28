@@ -159,6 +159,18 @@ testv$VC<-ifelse(is.na(testv$Dose1Mths) == T & is.na(testv$Dose2Mths) == T,0,
 AgeVac<-table(testv$VC,testv$AgeInYears)
 barplot(AgeVac,xlab="Age",col=c("darkgrey","red","orange"),main="Age and vaccination status of cases")
 legend("topright",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"))
+row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
+AgeVac<-t(AgeVac)
+AgeInYears<-(as.numeric(rownames(AgeVac)))
+AgeVac<-cbind(AgeVac,AgeInYears)       
+AgeInYears<-(as.numeric(rownames(pop)))
+pop<-cbind(pop,AgeInYears)
+colnames(pop)<-c("Population","AgeInYears")
+AgeV<-merge(pop,AgeVac,by="AgeInYears",all=T)
+head(AgeV)
+#AgeVac<-t(AgeVac)
+## setwd -
+write.table(AgeV,"AgeVaccinationCases.csv",row.names=F,sep=",")
 #########################
 
 ## continue with stats...
@@ -356,3 +368,57 @@ hist(model3$residuals,main="Histogram of residuals",xlab="residuals",col="grey")
 ##
 
 # NB use 1-(1/R0) to estimate % additional vaccination from R0 values
+setwd("~/GitHub/measles/estimatingR0")
+aveR0<-read.csv("averageR0.csv",header=T)
+head(aveR0)
+# read out outbreak folder
+outbreak_folder <- "outbreaks"
+
+# read in and reorder by date
+outbreak_files <- list.files(path=outbreak_folder, pattern="*.csv")
+
+max_week <- rep("", length(outbreak_files))
+for (i in 1:length(outbreak_files))
+{
+  incidence <- read.csv(file.path(outbreak_folder, outbreak_files[i]), stringsAsFactors=F)
+  max_week[i] <- max(incidence$week)
+}
+max_week<-as.numeric(max_week)
+weight<-max_week/sum(max_week)
+
+library(plyr)
+df<-summarise(aveR0,#c("outbreak13.csv","outbreak33.csv","outbreak37.csv","outbreak38.csv","outbreak99.csv"),
+              #summarise,
+              #avg.ob13<-
+                mean(aveR0$outbreak13.csv),
+              #avg.ob33<-
+                mean(aveR0$outbreak33.csv),
+              #avg.ob37<-
+                mean(aveR0$outbreak37.csv),
+              #avg.ob38<-
+                mean(aveR0$outbreak38.csv),
+              #avg.ob99<-
+                mean(aveR0$outbreak99.csv),
+              #sd.ob13<-
+                sd(aveR0$outbreak13.csv),
+              #sd.ob33<-
+                sd(aveR0$outbreak33.csv),
+              #sd.ob37<-
+                sd(aveR0$outbreak37.csv),
+              #sd.ob38<-
+                sd(aveR0$outbreak38.csv),
+              #sd.ob99<-
+                sd(aveR0$outbreak99.csv))
+## weighted estimates
+r0estAve<-sum(df[,1:5]*max_week)/(sum(max_week))
+r0estSd<-sum(df[,6:10]*max_week)/(sum(max_week))
+## 95% CI
+r095<-c(r0estAve-1.96*r0estSd,r0estAve+1.96*r0estSd)
+## for 2014 only
+r09514<-c(df[,5]-1.96*df[,10],df[,5]+1.96*df[,10])
+
+## Pvac<-1-(1/R0)
+head(pop)
+head(naive)
+sum(naive)/sum(pop)
+# proportion naive
