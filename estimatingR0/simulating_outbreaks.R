@@ -98,7 +98,7 @@ hist(sizes,breaks=1000)
 summary(sizes)
 ## or simulate from R0 without scaling using the same naive population size
 
-res<-jm.epid(epid.nb=100,GT=genTime,R0=1,epid.length=365*5,popn=4.2*1e6 * 0.11
+res<-jm.epid(epid.nb=1000,GT=genTime,R0=1,epid.length=365*5,popn=4.2*1e6 * 0.11
              ,family="poisson",peak.value=4.2*1e6 * 0.11)
 #matplot(res,pch=16,col="grey")
 #head(res)
@@ -107,5 +107,58 @@ res<-jm.epid(epid.nb=100,GT=genTime,R0=1,epid.length=365*5,popn=4.2*1e6 * 0.11
 sizes<-colSums(res)
 sizes
 
-hist(sizes,breaks=1000)
+hist(sizes,breaks=1000,xlab="Outbreak size",main=expression("1000 outbreak simulations in 11%, homogeneously mixed naive population and R"[0]*"=1"))
 summary(sizes)
+abline(v=median(sizes),col="orange",lty=3)
+abline(v=mean(sizes),col="red",lty=3)
+legend('topright',c("median = 2","mean = 175"),lty=rep(3,2),col=c("orange","red"),bty="n")
+par(new = T)
+par(fig=c(0.5,1,0.5,1))
+hist(sizes,xlim=c(0,1000),breaks=1000,xlab="Outbreak size",main="")
+abline(v=median(sizes),col="orange",lty=3)
+abline(v=mean(sizes),col="red",lty=3)
+
+
+## but if remove an additional 16%...
+par(fig=c(0,1,0,1), new=F)
+res<-jm.epid(epid.nb=1000,GT=genTime,R0=1,epid.length=365*5,popn=(4.2*1e6 * 0.11)*(1-0.16)
+             ,family="poisson",peak.value=(4.2*1e6 * 0.11)*(1-0.16))
+#matplot(res,pch=16,col="grey")
+#head(res)
+#colSums(res)
+
+sizes<-colSums(res)
+sizes
+
+hist(sizes,breaks=1000,xlab="Outbreak size",main=expression("1000 outbreak simulations in 9.2%, homogeneously mixed naive population and R"[0]*"=1"))
+summary(sizes)
+abline(v=median(sizes),col="orange",lty=3)
+abline(v=mean(sizes),col="red",lty=3)
+legend('topright',c("median = 3","mean = 116"),lty=rep(3,2),col=c("orange","red"),bty="n")
+par(new = T)
+par(fig=c(0.5,1,0.5,1))
+hist(sizes,xlim=c(0,1000),breaks=1000,xlab="Outbreak size",main="")
+abline(v=median(sizes),col="orange",lty=3)
+abline(v=mean(sizes),col="red",lty=3)
+
+## but if remove an additional 53%
+par(fig=c(0,1,0,1), new=F)
+res<-jm.epid(epid.nb=1000,GT=genTime,R0=1,epid.length=365*5,popn=(4.2*1e6 * 0.11)*(1-0.53)
+             ,family="poisson",peak.value=(4.2*1e6 * 0.11)*(1-0.53))
+#matplot(res,pch=16,col="grey")
+#head(res)
+#colSums(res)
+
+sizes<-colSums(res)
+sizes
+
+hist(sizes,breaks=1000,xlab="Outbreak size",main=expression("1000 outbreak simulations in 5.2%, homogeneously mixed naive population and R"[0]*"=1"))
+summary(sizes)
+abline(v=median(sizes),col="orange",lty=3)
+abline(v=mean(sizes),col="red",lty=3)
+legend('topright',c("median = 2.5","mean = 116"),lty=rep(3,2),col=c("orange","red"),bty="n")
+par(new = T)
+par(fig=c(0.5,1,0.5,1))
+hist(sizes,xlim=c(0,1000),breaks=1000,xlab="Outbreak size",main="")
+abline(v=median(sizes),col="orange",lty=3)
+abline(v=mean(sizes),col="red",lty=3)

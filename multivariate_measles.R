@@ -418,7 +418,30 @@ r095<-c(r0estAve-1.96*r0estSd,r0estAve+1.96*r0estSd)
 r09514<-c(df[,5]-1.96*df[,10],df[,5]+1.96*df[,10])
 
 ## Pvac<-1-(1/R0)
+## R'0' estimates == 0.92 - 1.19 (all, weighted)
+## R'0' estimates == 1.82 - 2.13 (2013/2014)
 head(pop)
 head(naive)
-sum(naive)/sum(pop)
 # proportion naive
+colSums(naive)
+
+numberhigh<-round(sum(0.53*naive$Naive)) # 
+sum(naive$Naive[0:21]) # 
+sum(naive$Naive[3:30]) #
+sum(naive$Naive[1:5]) # impossible
+
+numberlow<-round(sum(0.16*naive$Naive)) # 
+sum(naive$Naive[5:13]) # 
+sum(naive$Naive[1:5]) # 
+
+plot(round(0.53*naive$Naive) ,col="grey",bg="red",pch=21,ylab="Number to vaccinate",xlab="Age in Years",
+     main=expression('Numbers to vaccinate'))
+mtext(expression("Based on upper estimates of R"[0]*" from 2014 (53%) or 2007-14 (16%) outbreaks"))
+points(naive$Naive[0:21],col="grey",bg="orange",pch=22) # 
+points(naive$Naive[3:30],col="grey",bg="yellow",pch=23) 
+points(jitter(round(0.16*naive$Naive)),col="grey",bg="lightblue",pch=21) 
+points(jitter(naive$Naive[5:13]),col="grey",pch=22,bg="skyblue") # 
+points(naive$Naive[1:5],col="grey",pch=23,bg="navyblue") #
+legend("topright",c("53% naive, all ages","53% naive, all 0-21 yr olds","53% naive, all 3-30 yr olds",
+                    "16% naive, all ages","16% naive, all 5-13 yr olds","16% naive, all 1-5 yr olds"),
+       bty="n",pch=c(rep(21:23,2)),col=rep("grey",6),pt.bg=c("red","orange","yellow","lightblue","skyblue","navyblue"),cex=1)
