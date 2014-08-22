@@ -1,0 +1,6 @@
+Variable,Coefficient,P value
+Intercept,581.39,< 0.001
+Length of stay (nights),406.07,< 0.001
+"Gender (0 = F, 1 = M)",-255.98,0.006
+Case age (years),-8.23,0.007
+Year of case (vs. 2000),64.35,< 0.001

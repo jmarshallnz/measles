@@ -27,8 +27,9 @@
 \DeclareMathOperator{\var}{var}
 \DeclareMathOperator{\cov}{cov}
 
+\usepackage{Sweave}
 \begin{document}
-\SweaveOpts{concordance=TRUE}
+\input{interimreport2-concordance}
 
 \title{Interim report 2\\ Measles risk assessment, modelling and cost analysis\\ \vspace{2 mm} {\large David T S Hayman, Tim Carpenter,\\ Jonathan C Marshall, Mick Roberts, Nigel P French}}
 \author{mEpiLab and EpiCentre,\\ Infectious Diseases Research Centre,\\
@@ -62,191 +63,80 @@ A measles risk assessment has been undertaken by the Ministry of Health to bette
 \item Analyses of changing risk factors through time during outbreaks.
 \end{itemize}
 
-<<echo=FALSE,include=FALSE,results=hide>>=
-## regression analyses - measles
-## get data
-# set wd
-# setwd("~/Massey 2014/DHayman_20140627")
-# read data
-data<-read.csv("DHayman_20140627.csv",header=T)
-vac<-read.csv("DHayman_20140715_Vacc.csv",header=T)
-names(data)
-data$RptYear<-as.factor(data$RptYear)
-data$SurvWeek<-as.factor(data$SurvWeek)
-data$NZDep01<-as.factor(data$NZDep01)
-data$NZDep06<-as.factor(data$NZDep06)
-data$NZDep13<-as.factor(data$NZDep13)
-#data$AgeInYears<-as.factor(data$AgeInYears)
-data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
 
-time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear,# + Dose1Mths + Dose2Mths, 
-                 data = data , FUN=sum)
-library(reshape)
-library(reshape2)
-library(plyr)
-library(pscl)
+\begin{Schunk}
+\begin{Sinput}
+> summary(model3)
+\end{Sinput}
+\begin{Soutput}
+Call:
+glm(formula = cases ~ Age + Ethnicity + NZDep + Age:Ethnicity + 
+    offset(log(Popn)), family = "quasipoisson", data = tpsub)
 
-test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
-head(test)
-dim(test)
-caseyr<-aggregate( DiseaseName ~ AgeInYears, 
-                   data = test , FUN=sum)
-caseyr
-test$AgeInYears<-findInterval(test$AgeInYears,c(3,6,18,25))
-test$AgeInYears<-as.factor(test$AgeInYears)
-tage<-revalue(test$AgeInYears, c("0"="0-2", "1"="3-5","2"="6-17","3"="18-24","4"="25+"));
-test$AgeInYears<-tage
-#summary(test$EthnicityPrioritised)
-teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MLA",
-                                     "Pacific Peoples"="Pacific","Response cannot be classified"="None","Unknown"="None"));
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-6.1174  -1.1562   0.0000   0.8599   6.7625  
 
-test$EthnicityPrioritised<-teth
-head(test)
-test <- within(test, NZDep06[NZDep06 == "0"]<-NA)
-test <- within(test, NZDep13[NZDep13 == "0"]<-NA)
+Coefficients:
+                            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)               -8.268e+00  8.641e-01  -9.569 1.06e-08 ***
+Age3-5                     6.931e-01  1.053e+00   0.658 0.518322    
+Age6-17                    7.176e-01  9.064e-01   0.792 0.438300    
+Age18-24                  -5.001e-01  1.149e+00  -0.435 0.668367    
+Age25+                    -2.620e+00  1.158e+00  -2.262 0.035602 *  
+EthnicityAsian             2.167e+00  1.203e+00   1.801 0.087576 .  
+EthnicityMaori             1.772e+00  1.061e+00   1.671 0.111064    
+EthnicityPacific           3.871e+00  9.405e-01   4.117 0.000587 ***
+NZDep6-10                 -4.878e-01  2.608e-01  -1.870 0.076939 .  
+Age3-5:EthnicityAsian     -2.431e-15  1.473e+00   0.000 1.000000    
+Age6-17:EthnicityAsian    -2.473e+00  1.530e+00  -1.616 0.122649    
+Age18-24:EthnicityAsian   -7.910e-01  1.622e+00  -0.488 0.631293    
+Age25+:EthnicityAsian     -6.025e-01  1.792e+00  -0.336 0.740386    
+Age3-5:EthnicityMaori     -2.845e+00  2.177e+00  -1.307 0.206941    
+Age6-17:EthnicityMaori    -2.102e-01  1.121e+00  -0.187 0.853294    
+Age18-24:EthnicityMaori   -8.881e-01  1.630e+00  -0.545 0.592102    
+Age25+:EthnicityMaori     -1.090e+00  2.011e+00  -0.542 0.594088    
+Age3-5:EthnicityPacific   -4.423e+00  2.581e+00  -1.714 0.102866    
+Age6-17:EthnicityPacific  -2.253e+00  1.051e+00  -2.143 0.045264 *  
+Age18-24:EthnicityPacific -8.321e-01  1.318e+00  -0.631 0.535272    
+Age25+:EthnicityPacific   -2.718e-01  1.338e+00  -0.203 0.841210    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-# want to set NZ Deprivation to the appropriate year
+(Dispersion parameter for quasipoisson family taken to be 16.26672)
 
-testt <- within(test, NZDep<- ifelse (test$RptYear == "2007",test$NZDep06,
-                              ifelse (test$RptYear == "2008",test$NZDep06,
-                              ifelse (test$RptYear == "2009",test$NZDep06,
-                              ifelse (test$RptYear == "2010",test$NZDep06,
-                              ifelse (test$RptYear == "2011",test$NZDep06,
-                              ifelse (test$RptYear == "2012",test$NZDep06,
-                              ifelse (test$RptYear == "2013",test$NZDep13,NZDep13))))))))
-head(testt)
-tail(testt)
-str(testt)
-testt$NZDep<-as.factor(testt$NZDep-1)
+    Null deviance: 3097.24  on 39  degrees of freedom
+Residual deviance:  291.05  on 19  degrees of freedom
+AIC: NA
 
-testtable<-aggregate( cbind( DiseaseName + as.numeric(SurvWeek)) ~ NZDep+AgeInYears+EthnicityPrioritised + RptYear, 
-                 data = testt , FUN=sum)
-dim(testtable)
-colnames(testtable)<-c("NZDep","Age","Ethnicity","Year","Cases")
-head(testtable)
+Number of Fisher Scoring iterations: 6
+\end{Soutput}
+\end{Schunk}
 
-tnzd<-revalue(testtable$NZDep, c("1"="1-5","2"="1-5","3"="1-5","4"="1-5",
-                                 "5"="1-5","6"="6-10","7"="6-10","8"="6-10",
-                                 "9"="6-10","10"="6-10"));
+\begin{Schunk}
+\begin{Sinput}
+> anova(model3,test="F")
+\end{Sinput}
+\begin{Soutput}
+Analysis of Deviance Table
 
-testtable$NZDep<-tnzd
-head(testtable)
-tt<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity + Year, 
-                 data = testtable , FUN=sum)
+Model: quasipoisson, link: log
 
-### denominator data
-# setwd("~/Massey_2014/measles/data")
-denom<-read.csv("NZDep2006Denominators.csv",header=T)
-head(denom)
-denom<-denom[,-c(9)]
-summary(denom)
-dim(denom)
-denom<-denom[,1:18]
-row.has.na <- apply(denom, 1, function(x){any(is.na(x))})
-sum(row.has.na)
-denomt <- denom[!row.has.na,]
-head(denomt)
-denomt<-denomt[denomt$Sex_code==99,]
-denomt$Eth_Level<-as.factor(denomt$Eth_Level)
-denomt<-denomt[denomt$Eth_Level %in% c("24","21","66",'22','77'),]
-dm<-cbind(denomt[,c(3,6,9:18)])
-head(dm)
-dm<-dm[dm$Age_Label %in% c("A: 0- 5 yrs", "A: 6-17 yrs","A:18-24 yrs","A:25-64 yrs","A:65+ yrs"),]
-dage<-revalue(dm$Age_Label, c("A: 0- 5 yrs"="<6", "A: 6-17 yrs"="6-17","A:18-24 yrs"="18-24","A:25-64 yrs"="25+","A:65+ yrs"="25+"));
-dm$Age_Label<-dage
-colnames(dm)<-c('Age','Ethnicity',"Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10")
-head(dm)
-datadm<-dm[dm$Age=="<6",]
-dataA<-(rbind(datadm,datadm)/2)
-dataA<-round(dataA[,3:12])
-dataA<-cbind(c(rep("0-2",5),rep("3-5",5)),rep(datadm$Ethnicity[1:5],2),dataA)
-colnames(dataA)<-c('Age','Ethnicity',"Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10")
-ddm<-dm[!dm$Age=="<6",]
-dm<-rbind(dataA,ddm)
-dm$Ethnicity <- factor(dm$Ethnicity)
-deth<-revalue(dm$Ethnicity, c("Asian (Prioritised)"="Asian","European (NZ European and Other European)"="European",
-                              "Maori (Prioritised)"="Maori","MELAA"="MLA","Pacific People (Prioritised)"="Pacific"));
-dm$Ethnicity<-deth
-head(dm)
+Response: cases
 
-popn<-melt(dm,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
-colnames(popn)<-c("Age","Ethnicity","NZDep","Popn")
-popn
-pnzd<-revalue(popn$NZDep, c("Dep1"="1-5","Dep2"="1-5","Dep3"="1-5","Dep4"="1-5",
-                                 "Dep5"="1-5","Dep6"="6-10","Dep7"="6-10","Dep8"="6-10",
-                                 "Dep9"="6-10","Dep10"="6-10"));
+Terms added sequentially (first to last)
 
-popn$NZDep<-pnzd
-head(popn)
-tp<-aggregate( cbind(Popn) ~ NZDep+Age+Ethnicity, 
-               data = popn , FUN=sum)
 
-tp$merge <- paste(tp$NZDep, tp$Age, tp$Ethnicity)
-testtable$merge <- paste(testtable$NZDep, testtable$Age, testtable$Ethnicity)
-testtable <- testtable[testtable$Ethnicity!="None",]
-
-tp$cases <- 0
-cases <- matrix(0, length(tp$merge),1)
-rownames(cases) <- tp$merge
-cases[testtable$merge,] <- testtable$Cases
-tp$cases <- cases
-
-## plot this figure?
-hist(tp$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
-tp$Ethnicity<- relevel(tp$Ethnicity, "European")
-model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=tp,family="quasipoisson")
-summary(model)
-
-model1<-update(model,~.-Age:Ethnicity:NZDep)
-summary(model1)
-anova(model1,test="F") # F test, not Chisq, because dispersion estimated by moments
-
-model2<-update(model1,~.-Age:NZDep)
-summary(model2)
-anova(model2,test="F")
-
-par(mfrow=c(2,2))
-hist(tp$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
-plot(tp$cases,main="Cases per category",ylab="Count",pch=16,col="darkgrey")
-res<-predict(model2)
-plot(exp(res),tp$cases,xlab="results",ylab='predictions',main="Fit",pch=16,col="darkgrey")
-cor(exp(res),tp$cases)
-cor.test(exp(res),tp$cases)
-hist(model2$residuals,main="Histogram of residuals",xlab="residuals",col="grey")
-par(mfrow=c(1,1))
-plot(tp$cases/tp$Popn,main="Cases per capita",ylab="Rate",pch=16,col=c(rep(1,10),rep(2,10),rep(3,10),rep(4,10),rep(6,10)),
-     xlab="Category")
-legend("topleft",c("Asian","European","Maori","MELAA","Pacific"),
-       col=c(1:4,6),pch=16,bty="n")
-
-## drop MLA
-tpsub<-tp[!(tp$Ethnicity=="MLA"),]
-
-hist(tpsub$cases,xlab="Cases",main='Histogram of cases per category',col="darkgrey",breaks=20)
-
-model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=tpsub,family="quasipoisson")
-summary(model)
-
-model1<-update(model,~.-Age:Ethnicity:NZDep)
-summary(model1)
-anova(model1,test="F")
-
-model2<-update(model1,~.-Ethnicity:NZDep)
-summary(model2)
-anova(model2,test="F")
-
-model3<-update(model2,~.-Age:NZDep)
-summary(model3)
-anova(model3,test="F")
-@
-
-<<label=regmodel,include=FALSE>>=
-summary(model3)
-@
-
-<<label=regmodelanova,include=FALSE>>=
-anova(model3,test="F")
-@
+              Df Deviance Resid. Df Resid. Dev       F    Pr(>F)    
+NULL                             39    3097.24                      
+Age            4  1573.25        35    1523.98 24.1790 3.142e-07 ***
+Ethnicity      3   738.20        32     785.78 15.1271 2.853e-05 ***
+NZDep          1    55.39        31     730.39  3.4051   0.08064 .  
+Age:Ethnicity 12   439.34        19     291.05  2.2507   0.05519 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{Soutput}
+\end{Schunk}
 \begin{figure}
      \centering
      \includegraphics[width=0.9\textwidth]{Rplot_quasipoisson_noMLA.pdf}
@@ -445,34 +335,58 @@ A regression analysis was performed to test for significant associations between
 \subsection{Cost analyses results}
 Direct costs for measles management in New Zealand for the 10-week period, January 1 -- March 9, 2014 are shown in  Table~\ref{table:direct}. The reported direct medical costs do not appear to include hospital medical costs, which are reported separately in Table~\ref{table:hosp}. 
 
-<<echo=FALSE>>=
-costtable1<-read.csv("costtable1.csv",header=T)
-@
 
 \begin{table}
 \caption{Estimated costs (NZ\$) for measles management in New Zealand, January 1 -- March 9, 2014 (see text for abbreviations)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(costtable1, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:direct}
+%latex.default(costtable1, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lllll}
+\hline\hline
+\multicolumn{1}{c}{Category}&\multicolumn{1}{c}{January}&\multicolumn{1}{c}{February}&\multicolumn{1}{c}{March}&\multicolumn{1}{c}{Total}\tabularnewline
+\hline
+PHN&55,296&71,175&24,087&150,558\tabularnewline
+PHA&0&0&2,656&2,656\tabularnewline
+Data support&0&7,752&4,552&12,304\tabularnewline
+Supervisors&10,656&10,464&3,232&24,352\tabularnewline
+IMT&32,918&28,624&7,156&68,698\tabularnewline
+SSO&0&2,746&1,186&3,932\tabularnewline
+Measles operations&1,800&10,326&6,678&18,804\tabularnewline
+Operations partner&2,187&14,580&7,290&24,057\tabularnewline
+IMT controller partner&2,916&14,580&7,290&24,786\tabularnewline
+Total&105,773&160,247&64,127&330,147\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:direct}
 \end{table}
 
 The total cost for the 293 publicly funded hospital discharges with a measles primary diagnosis that spent 470 nights in hosptial was \$550,024 (Table~\ref{table:hosp}). The mean cost per case was \$1,877. The mean cost per day of stay in the hospital was \$1,170.
 
-<<echo=FALSE>>=
-costtable2<-read.csv("costtable2v2.csv",header=T)
-@
 
 \begin{table}
 \caption{Number of cases, length of hospital day, cost, cost per case and cost per day for patients with measles as the primary diagnosis, 2000--2014}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(costtable2, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:hosp}
+%latex.default(costtable2, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrrlll}
+\hline\hline
+\multicolumn{1}{c}{Year}&\multicolumn{1}{c}{Cases}&\multicolumn{1}{c}{Days}&\multicolumn{1}{c}{Cost}&\multicolumn{1}{c}{Per.case}&\multicolumn{1}{c}{Per.day}\tabularnewline
+\hline
+2000&$  6$&$ 13$&8,850&1,475&681\tabularnewline
+2001&$ 13$&$ 18$&11,267&867&626\tabularnewline
+2002&$  5$&$  2$&3,869&774&1,934\tabularnewline
+2003&$  9$&$ 12$&10,241&1,138&853\tabularnewline
+2004&$  4$&$  5$&4,765&1,191&953\tabularnewline
+2005&$  3$&$ 11$&5,111&1,704&465\tabularnewline
+2006&$  1$&$  0$&602&602&NC\tabularnewline
+2007&$  5$&$ 25$&82,977&16,595&3,319\tabularnewline
+2008&$  3$&$  1$&3,038&1,013&3,038\tabularnewline
+2009&$ 29$&$ 38$&40,782&1,406&1,073\tabularnewline
+2010&$  5$&$  5$&6,701&1,340&1,340\tabularnewline
+2011&$132$&$189$&205,303&1,555&1,086\tabularnewline
+2012&$ 19$&$ 12$&28,540&1,502&2,378\tabularnewline
+2013&$  4$&$  6$&5,330&1,333&888\tabularnewline
+2014&$ 55$&$133$&132,648&2,412&997\tabularnewline
+TOTAL&$293$&$470$&550,024&1,877&1,170\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:hosp}
  \centering
  \begin{tablenotes}
       \small
@@ -482,34 +396,86 @@ latex(costtable2, file="", table.env=FALSE,rowname=NULL)
 
 From 16 December, 2013 through 19 June, 2014 there were 201 confirmed measles cases in New Zealand (note 14 of these occurred before 1 January 2014, so 187 occurred from Jan 2013 -- 19 June 2014). The number of cases by age group is shown in Table~\ref{table:freq}. Of these 201 cases, 34 (17\%) were admitted to hospital with the highest proportion occurring in the youngest (< 15 months) and oldest (> 19 years) age groups, 47\% and 33\%, respectively.
 
-<<echo=FALSE>>=
-costtable3<-read.csv("costtable3.csv",header=T)
-@
 
 \begin{table}
 \caption{Frequency of measles cases and number and proportion admitted to hospital by age group, 16 December, 2013 -- 19 June, 2014}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(costtable3, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:freq}
+%latex.default(costtable3, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrrr}
+\hline\hline
+\multicolumn{1}{c}{Age}&\multicolumn{1}{c}{Cases}&\multicolumn{1}{c}{Admitted}&\multicolumn{1}{c}{Proportion}\tabularnewline
+\hline
+\textless  15 months&$ 21$&$10$&$0.47$\tabularnewline
+15 months – 3 years&$  7$&$ 1$&$0.14$\tabularnewline
+4 – 9 years&$  8$&$ 0$&$0.00$\tabularnewline
+10 -1 19 years&$132$&$12$&$0.09$\tabularnewline
+\textgreater  19 years&$ 33$&$11$&$0.33$\tabularnewline
+Total&$201$&$34$&$0.17$\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:freq}
 \end{table}
 
 The length of hospital stay for the 293 cases reported between 2000 and 2014 ranged from 0 to 7 19 days, with the exception of a male patient, who was discharged in 2011 at age 57, after a stay of 19 days and a cost of \$8,213. Nearly 40\% (114/293) of the cases did not spend a night in the hospital, while approximately one-quarter (69/293) spent 1 night and more than three-quarters (222/293) spent less than three nights in the hospital. Only eight cases spent a week or more in the hospital. Due to the small number of cases spending a week or more in the hospital, the regression analysis to determine the association between cost of hospitalisation was limited to the 285 cases hospitalised for seven or fewer days. The number of cases, length of hospital stay, cost, cost per case and cost per day for patients with measles as the primary diagnosis, by year and gender for 2000--2014 appear in Table~\ref{table:cases}.
 
-<<echo=FALSE>>=
-costtable4<-read.csv("costtable4v2.csv",header=T)
-@
 
 \begin{table}
 \caption{Number of cases, length of hospital stay, cost, cost per case and cost per day for patients with measles as the primary diagnosis, by year and gender, 2000--2014}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(costtable4, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:cases}
+%latex.default(costtable4, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lllrrl}
+\hline\hline
+\multicolumn{1}{c}{Year}&\multicolumn{1}{c}{Gender}&\multicolumn{1}{c}{Cost}&\multicolumn{1}{c}{Cases}&\multicolumn{1}{c}{Length.of.stay}&\multicolumn{1}{c}{Cost.per.case}\tabularnewline
+\hline
+2000&F&4,296&$  2$&$  4$&2,148\tabularnewline
+&M&4,554&$  4$&$  9$&1,139\tabularnewline
+&Total&8,850&$  6$&$ 13$&1,475\tabularnewline
+2001&F&3,740&$  5$&$  5$&748\tabularnewline
+&M&7,527&$  8$&$ 13$&941\tabularnewline
+&Total&11,267&$ 13$&$ 18$&867\tabularnewline
+2002&F&924&$  2$&$  0$&462\tabularnewline
+&M&2,945&$  3$&$  2$&982\tabularnewline
+&Total&3,869&$  5$&$  2$&774\tabularnewline
+2003&F&9,766&$  8$&$ 12$&1,221\tabularnewline
+&M&475&$  1$&$  0$&475\tabularnewline
+&Total&10,241&$  9$&$ 12$&1,138\tabularnewline
+2004&F&1,437&$  1$&$  2$&1,437\tabularnewline
+&M&3,328&$  3$&$  3$&1,109\tabularnewline
+&Total&4,765&$  4$&$  5$&1,191\tabularnewline
+2005&F&0&$  0$&$  0$&0\tabularnewline
+&M&5,111&$  3$&$ 11$&1,704\tabularnewline
+&Total&5,111&$  3$&$ 11$&1,704\tabularnewline
+2006&F&0&$  0$&$  0$&0\tabularnewline
+&M&602&$  1$&$  0$&602\tabularnewline
+&Total&602&$  1$&$  0$&602\tabularnewline
+2007&F&1,930&$  1$&$  3$&1,930\tabularnewline
+&M&81,046&$  4$&$ 22$&20,262\tabularnewline
+&Total&82,977&$  5$&$ 25$&16,595\tabularnewline
+2008&F&714&$  1$&$  0$&714\tabularnewline
+&M&2,324&$  2$&$  1$&1,162\tabularnewline
+                    &Total&3,038&$  3$&$  1$&1,013\tabularnewline
+2009&F&11,953&$  7$&$ 15$&1,708\tabularnewline
+&M&28,830&$ 22$&$ 23$&1,310\tabularnewline
+                    &Total&40,782&$ 29$&$ 38$&1,406\tabularnewline
+2010&F&5,884&$  4$&$  5$&1,471\tabularnewline
+&M&817&$  1$&$  0$&817\tabularnewline
+                    &Total&6,701&$  5$&$  5$&1,340\tabularnewline
+2011&F&103,460&$ 66$&$ 86$&1,568\tabularnewline
+&M&101,842&$ 66$&$103$&1,543\tabularnewline
+                    &Total&205,303&$132$&$189$&1,555\tabularnewline
+2012&F&13,054&$  8$&$  6$&1,632\tabularnewline
+&M&15,486&$ 11$&$  6$&1,408\tabularnewline
+                    &Total&28,540&$ 19$&$ 12$&1,502\tabularnewline
+2013&F&1,800&$  1$&$  2$&1,800\tabularnewline
+&M&3,530&$  3$&$  4$&1,177\tabularnewline
+                    &Total&5,330&$  4$&$  6$&1,333\tabularnewline
+2014&F&55,633&$ 21$&$ 46$&2,649\tabularnewline
+&M&77,014&$ 34$&$ 87$&2,265\tabularnewline
+&Total&132,647&$ 55$&$133$&2,412\tabularnewline
+2000-2014&      F&335,431&$166$&$284$&2,021\tabularnewline
+&     M&214,591&$127$&$186$&1,690\tabularnewline
+&   TOTAL&550,022&$293$&$470$&1,877\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:cases}
  \centering
  \begin{tablenotes}
       \small
@@ -519,18 +485,22 @@ latex(costtable4, file="", table.env=FALSE,rowname=NULL)
 
 Regression analyses showed statistically significant associations between cost of hospitalisation and three variables, length of hospitalisation, case age and year of case, and a less strong association with case gender (Table~\ref{table:regression}). Results showed the expected hospitalisation costs in 2000 of a female measles patient who did not stay overnight in the hospital was \$582.  The cost was \$256 less if the case were a male. It increased of approximately \$406 per night of hospitalisationand \$64 per year over the time period of 2000 - 2014. The cost of a case decreased with the age of the patient by approximately \$8 per year of case age.
 
-<<echo=FALSE>>=
-costtable5<-read.csv("costtable5v2.csv",header=T)
-@
 
 \begin{table}
 \caption{Regression results ($R^{2}_\textsf{adj} = 0.43$, p-value $<0.001$) for measles hospitalisation cost based on length of stay (days), gender, case age and year of case ($n=288$) in New Zealand, 2000 -- 2014}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(costtable5, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:regression}
+%latex.default(costtable5, file = "", table.env = FALSE, rowname = NULL)%
+\begin{center}
+\begin{tabular}{lrl}
+\hline\hline
+\multicolumn{1}{c}{Variable}&\multicolumn{1}{c}{Coefficient}&\multicolumn{1}{c}{P.value}\tabularnewline
+\hline
+Intercept&$ 581.39$&\textless  0.001\tabularnewline
+Length of stay (nights)&$ 406.07$&\textless  0.001\tabularnewline
+Gender (0 = F, 1 = M)&$-255.98$&0.006\tabularnewline
+Case age (years)&$  -8.23$&0.007\tabularnewline
+Year of case (vs. 2000)&$  64.35$&\textless  0.001\tabularnewline
+\hline
+\end{tabular}\end{center}\label{table:regression}
 \end{table}
 
 Wages lost due to measles were calculated for the period January 2008 - August 2014. Calculations were based on the assumption that 5 days of work were lost for each case; however, individuals under 15 years of age were not assumed to be employed and therefore did not suffer an income loss. If the case were less than 20 years of age, it was assumed there was an income loss of 5 days for the care giver, in addition to the wage loss of the case if 15--19 years of age. Total wage lost for the 247 cases and care givers was estimated to be \$210,436. This consisted of \$107,820 for the cases and \$102,616 for the care giver, but did not include wage losses for cases under 15 years of age. Overall, the cost per case from 2008 - 2014 was estimated to be \$2,562 (\$852 in forgone wages and \$1,710 in hospital costs).

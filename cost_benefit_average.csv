@@ -1,0 +1,8 @@
+Years R0 estimated from,R0 range,R0 for simulations,Vaccines required to reduce R0 to 1,Costs per vaccine,Total vaccine costs,Wages lost per case,Expected number of cases expected over 10 years based on average since 1997,Proportion of cases hospitalised,Total hospitalised cases,Cost per hospital case,Total costs for cases,R0  for simulations after response,Mean number of cases in the population after action (1000 simulations),Number of introductions over 10 years,Total cases over 10 years after action,Total hospitalised cases after action,Total costs for cases after action,Cases reduced due to action,Savings,Benefit Cost Ratio
+2009-2014,0.92-1.19,0.92,0,,0,852,2200,0.17,374,1710,2513940,0.92,13,10,130,22,148551,,,
+2009-2014,0.92-1.19,1.19,80000,20,1600000,852,2200,0.17,374,1710,2513940,1.00,175,10,1750,298,1999725,450,514215,0.14
+2009-2014,0.92-1.19,1.19,80000,50,4000000,852,2200,0.17,374,1710,2513940,1.00,175,10,1750,298,1999725,450,514215,0.09
+2013-2014,1.82-2.13,1.82,208153,20,4163060,852,2200,0.17,374,1710,2513940,1.00,116,10,1160,197,1325532,1040,1188408,0.22
+2013-2014,1.82-2.13,1.82,208153,50,10407650,852,2200,0.17,374,1710,2513940,1.00,116,10,1160,197,1325532,1040,1188408,0.10
+2013-2014,1.82-2.13,2.13,252561,20,5051220,852,2200,0.17,374,1710,2513940,1.00,116,10,1160,197,1325532,1040,1188408,0.19
+2013-2014,1.82-2.13,2.13,252561,50,12628050,852,2200,0.17,374,1710,2513940,1.00,116,10,1160,197,1325532,1040,1188408,0.09
