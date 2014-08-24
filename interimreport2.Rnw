@@ -49,7 +49,7 @@ New Zealand has been working towards elimination of endemic (domestic) measles v
 
 \section{Background}
 
-As a member of the World Health Organization (WHO) Western Pacific Region, New Zealand is committed to work towards measles elimination, defined as the interruption of endemic (domestic) measles virus transmission, as achieved in the Americas in 2002. A brief review of the history of measles in New Zealand was provided in our previous interim report. However, the current 2013--2014 outbreak started at the end of December 2013 and is ongoing (as of \today). In 2013, prior to the 2013--2014 outbreak, New Zealand was advised by the Western Pacific Regional Verification Commission for Measles Elimination (RVC) that it can request verification of non-endemic status three years after the last case of the 2011--12 outbreak in June 2012.
+As a member of the World Health Organization (WHO) Western Pacific Region, New Zealand is committed to work towards measles elimination, defined as the interruption of endemic (domestic) measles virus transmission, as achieved in the Americas in 2002. A brief review of the history of measles in New Zealand was provided in our previous interim report. The current 2013--2014 outbreak started at the end of December 2013 and is ongoing (as of \today). In 2013, prior to the 2013--2014 outbreak, New Zealand was advised by the Western Pacific Regional Verification Commission for Measles Elimination (RVC) that it can request verification of non-endemic status three years after the last case of the 2011--12 outbreak in June 2012.
 
 Previous measles analyses, including two in New Zealand by Prof. Roberts, estimated the interruption of measles virus transmission can be achieved by herd immunity when approximately 95 percent of the population is homogeneously immune to measles \citep{roberts0,roberts4}. Thus, while New Zealand immunisation activities have led to measles outbreaks becoming less frequent, with decreasing numbers of cases, outbreaks still occur and the current overall population immunity estimates suggest that approximately 85 to 90 percent of the population is immune to measles, thus the reasons for the ongoing outbreaks are likely due to overall population immunity being less than 95 percent and there being pockets of susceptible, non-immune population remaining. In this report were report some regression analyses to determine which populations are most at risk, and the likely outcomes of measles infections based on a number of assumptions, and the cost benefit analyses for vaccination dependent on differing scenarios. 
 
@@ -61,6 +61,44 @@ A measles risk assessment has been undertaken by the Ministry of Health to bette
 \item Multivariate modelling to account for confounding within the univariate analyses.
 \item Analyses of changing risk factors through time during outbreaks.
 \end{itemize}
+
+\subsection{Risk analyses methods}
+We received the raw EpiSurv measles case data from The Institute of Environmental Science and Research Ltd (ESR) on 27 June 2014. Initial analyses of those data (not shown) suggested that denominator data were required to perform multivariate analyses to avoid confounding results due to a lack of independence among risk factors. Specifically we required $\textsf{Age} \times \textsf{Prioritised Ethnicity} \times \textsf{NZDep}$ data for New Zealand to test whether interactions among case covariates provide additional information on risk over the univariate analyses performed in the \emph{Progress Towards Measles Elimination in New Zealand - Final} report. These $\textsf{Age} \times \textsf{Prioritised Ethnicity} \times \textsf{NZDep}$ data were provided to us on 3 July 2014 by the University of Otago. We used these denominator data to determine if there were interactions among specific age categories, prioritized ethnicities, and socioeconomic deprivation indices (NZDep) that might exist.
+
+The Otago denominator data provided were not to the same detail as the ESR case data. Notably, the denominator age data was categorised into several classes: 0--5, 6--17, 18--24, 25--64, and 65+ year categories. The denominator ethnicity was not prioritized ethnicity at the Level 1 Ethnic Group Codes, but at the Level 2 Ethnic Group Codes, though with some alternative codes provided. After discussions with Otago we have provided results based on the best available data, though for smaller groups, some results may be unreliable as these are discussed below.
+
+The prioritized ethnicities, therefore, are:  European; Maori; Pacific Peoples; Asian; Middle Eastern/Latin American/African; Other Ethnicity; Residual Categories, though for this report only the first five are used, as these categories covered all the cases. Denominator data were classified according to the recommendations of Otago. Thus, with the 10 NZDep classes and the age classes above, this led us to have 250 categories. Because for measles cases the very young appear to be disproportionately affected (Figure~\ref{fig:agecases}), we split the 0--5 age category into two classes, 0--2 and 3--5 years old, assuming equal numbers of young were born into each age group over the last five years (which is supported by data from NZ statistics (REF)).
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.9\textwidth]{AgeCases.pdf}
+     \caption{test}
+     \label{fig:agecases}
+\end{figure}
+
+This large number of categories lead to both zeroinflation and over-dispersion as there were many categories with zero cases in, particularly in the adult age classes. Furthermore, initial preliminary analyses, including multi and univariate analyses (not shown) suggested little effect of NZDep and several higher order interactions, and therefore we reduced the number of NZDep categories from 1 to 10 to two, 1--5 and 6--10. We also incorporated the 65+ age classes into the 25--64 age category, to make a 25+ age category. By doing so, we reduce the zeroinflation present in the data. Subsequent analyses also suggested that the Middle Eastern/Latin American/African category was over-represented (Figure~\ref{fig:percap}).
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.9\textwidth]{PerCapitaCases.pdf}
+     \caption{Cases per capita for Prioritized Ethnicities. Note categories are not given, but include Age (0-2, 3-5, 6-17, 18-24, and 25+ in years), NZ deprivation index (1-5, 6-10), and Ethnicity. Points are coloured by Ethnicity.}
+     \label{fig:percap}
+\end{figure}
+
+However, there are several issues with the data for Middle Eastern, Latin American and African (MELAA) ethnicities, which have small population sizes, and which there were numberous issues with estimating the denominator data for. This category was also an outlier (Figure~\ref{fig:percap}), and thus reducing our ability to make inferences regarding the other classifications and risk factors. Thus, we removed the MELAA category for the below analyses. In the below analyses we used a quasipoission regression model to account for overdispersion in the data. We also account for differences in population sizes by using an offset term, the log(population size). Thus, the model structure we used is:
+\begin{equation} \label{eq:quasi}
+   y ~ quasipossion [\lambda]
+ \end{equation}
+
+\begin{equation} \label{eq:reg}
+\lambda = exp[Y(x) + log(P) + \pi(x)]
+  \pi(x) ~ N[0,\sigma ^2]
+  \end{equation}
+
+Where:
+\begin{equation} \label{eq:reg}
+ Y(x) = \beta _1 (x_1)+ \beta _2 (x_2) ...
+  \end{equation}
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 ## regression analyses - measles
@@ -240,6 +278,10 @@ summary(model3)
 anova(model3,test="F")
 @
 
+\section{Regression analyses results}
+\label{sub:regression_results}
+The results are:
+
 <<label=regmodel,include=FALSE>>=
 summary(model3)
 @
@@ -247,28 +289,19 @@ summary(model3)
 <<label=regmodelanova,include=FALSE>>=
 anova(model3,test="F")
 @
+
+And plotted in (Figure~\ref{fig:regn}).
 \begin{figure}
      \centering
      \includegraphics[width=0.9\textwidth]{Rplot_quasipoisson_noMLA.pdf}
-     \caption{test}
+     \caption{Top left: distribution of the cases per category; Top right: Cases per Category; Bottom left: Model predictions (x) versus case data (y); and Bottom right: the residuals of the model}
      \label{fig:regn}
 \end{figure}
 
+The results of the model suggest that, apart from over representation of MELAA, older people over 25 years of age are significantly less likely to be infected with measles than the very young (0--2 years old), but Pacific peoples are at greater risk than Europeans and others (as can also be seen in Figure 1), but not the 6--17 years among them.
 
-\subsection{Risk analysis summary}
-\begin{itemize}
-\item There is a continued, and perhaps increasing, risk of measles importation due to travel and endemic measles elsewhere in the world.
-\item There may be seasonal changes in risk of measles importation, though further analyses are needed.
-\end{itemize}
+...
 
-\subsection{Future risk analyses}
-We received the raw EpiSurv measles case data from The Institute of Environmental Science and Research Ltd (ESR) on 27 June 2014. Initial analyses of those data (not shown) suggest that we require denominator data to perform multivariate analyses to avoid confounding results due to a lack of independence among risk factors. Specifically for the multivariate analyses we wish to perform that detect interactions we require $\textsf{Age} \times \textsf{Prioritised Ethnicity} \times \textsf{NZDep}$ data for New Zealand to test whether interactions among case covariates provide additional information on risk over the univariate analyses performed in the report reviewed above. These $\textsf{Age} \times \textsf{Prioritised Ethnicity} \times \textsf{NZDep}$ data only became available to us on 3 July 2014, provided by the University of Otago.
-
-The following analyses are in progress, for inclusion in later reports:
-\begin{itemize}
-\item Multivariate regression analyses to assess interactions between risk factors that may confound the univariate analyses.
-\item Update of the importation risk analyses using a broader range of years, including modelling the trend in importations.
-\end{itemize}
 Additional data we believe would enable us and the Ministry to better understand measles risk is fine scale (lower than District Health Board (DHB)) immunisation coverage data. We understand the National Immunisation Register (NIR) allows tracking of the vaccination status of children and this is very useful, but inclusion of these data at lower (e.g. meshblock, census area unit) level would allow better understanding of risk of measles infection and resource allocation because they may allow targeted immunisation programmes. Thus the data gap that we have that will hinder us providing fine scale risk maps is:
 \begin{itemize}
 \item Meshblock (or census area unit) level immunisation coverage data to allow targeted immunisation and understanding of risk at a fine scale level.
@@ -276,6 +309,19 @@ Additional data we believe would enable us and the Ministry to better understand
 An additional data set that would enable us to develop the understanding of measles importation risk is:
 \begin {itemize}
 \item The number of New Zealanders arriving from abroad each year, the countries to which they travelled, and length of travel.
+\end{itemize}
+
+.
+.
+.
+.
+.
+
+
+\subsection{Risk analysis summary}
+\begin{itemize}
+\item There is a continued, and perhaps increasing, risk of measles importation due to travel and endemic measles elsewhere in the world.
+\item There may be seasonal changes in risk of measles importation, though further analyses are needed.
 \end{itemize}
 
 
@@ -315,20 +361,6 @@ To understand the level of immunity in the population, the transmission dynamics
      \includegraphics[width=0.9\textwidth]{averageR0.pdf}
      \caption{Estimates of $R_v$ ($R_0$) for the outbreaks each year, as classified in Figure~\ref{fig:outbreaks} (page~\pageref{fig:outbreaks})}
      \label{fig:r0}
-\end{figure}
-
-\begin{figure}
-     \centering
-     \includegraphics[width=0.9\textwidth]{PerCapitaCases.pdf}
-     \caption{test}
-     \label{fig:percap}
-\end{figure}
-
-\begin{figure}
-     \centering
-     \includegraphics[width=0.9\textwidth]{AgeCases.pdf}
-     \caption{test}
-     \label{fig:agecases}
 \end{figure}
 
 \begin{figure}
@@ -482,7 +514,25 @@ latex(costtable3, file="", table.env=FALSE,rowname=NULL)
 \label{table:freq}
 \end{table}
 
-The length of hospital stay for the 293 cases reported between 2000 and 2014 ranged from 0 to 7 19 days, with the exception of a male patient, who was discharged in 2011 at age 57, after a stay of 19 days and a cost of \$8,213. Nearly 40\% (114/293) of the cases did not spend a night in the hospital, while approximately one-quarter (69/293) spent 1 night and more than three-quarters (222/293) spent less than three nights in the hospital. Only eight cases spent a week or more in the hospital. Due to the small number of cases spending a week or more in the hospital, the regression analysis to determine the association between cost of hospitalisation was limited to the 285 cases hospitalised for seven or fewer days. The number of cases, length of hospital stay, cost, cost per case and cost per day for patients with measles as the primary diagnosis, by year and gender for 2000--2014 appear in Table~\ref{table:cases}.
+The length of hospital stay for the 293 cases reported between 2000 and 2014 ranged from 0 to 19 days, with a male patient, who was discharged in 2011 at age 57, after a stay of 19 days and a cost of \$8,213 (Figure~\ref{fig:hosp}).
+
+<<echo=FALSE>>=
+hosp<-read.csv("hospital.csv",header=T)
+library(ggplot2)
+p<-ggplot(data=hosp, aes(x=Days, y=Number)) + geom_bar(stat="identity")
+@
+
+\begin{figure}[h!]
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 11>>=
+print(p)
+@
+\end{center}
+\caption{Number of cases attending hospital and stay duration}
+\label{fig:hosp}
+\end{figure}
+
+Nearly 40\% (114/293) of the cases did not spend a night in the hospital, while approximately one-quarter (69/293) spent 1 night and more than three-quarters (222/293) spent less than three nights in the hospital. Only eight cases spent a week or more in the hospital. Due to the small number of cases spending a week or more in the hospital, the regression analysis to determine the association between cost of hospitalisation was limited to the 285 cases hospitalised for seven or fewer days. The number of cases, length of hospital stay, cost, cost per case and cost per day for patients with measles as the primary diagnosis, by year and gender for 2000--2014 appear in Table~\ref{table:cases}.
 
 <<echo=FALSE>>=
 costtable4<-read.csv("costtable4v2.csv",header=T)
