@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  1 SEP 2014 17:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  1 SEP 2014 22:05
 entering extended mode
 **interimreport2.tex
 (C:\Users\dtshayma\Documents\GitHub\measles\interimreport2.tex
@@ -1039,17 +1039,7 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aer.fd"
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 ))))
-(C:\Users\dtshayma\Documents\GitHub\measles\interimreport2.aux
-
-LaTeX Warning: Label `eq:reg' multiply defined.
-
-
-LaTeX Warning: Label `fig:sim' multiply defined.
-
-
-LaTeX Warning: Label `fig:sim' multiply defined.
-
-)
+(C:\Users\dtshayma\Documents\GitHub\measles\interimreport2.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
@@ -1066,7 +1056,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 29.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 29.
@@ -1142,97 +1133,94 @@ l.223 ...\beta _e(x_e)+ \beta _n (x_n) + \beta _a_
                                                   e(x_a * x_e)+ log(populati...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-! Undefined control sequence.
-l.289 ...ases per category used are in Figure~\fig
-                                                  {fig:histcasecat}.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-<interimreport2-014.pdf, id=141, 794.97pt x 433.62pt>
+<interimreport2-014.pdf, id=142, 794.97pt x 433.62pt>
 File: interimreport2-014.pdf Graphic file (type pdf)
 
 <use interimreport2-014.pdf>
-Package pdftex.def Info: interimreport2-014.pdf used on input line 292.
+Package pdftex.def Info: interimreport2-014.pdf used on input line 235.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
  [6 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport2-010.pdf>] <inter
-imreport2-015.pdf, id=156, 794.97pt x 794.97pt>
+imreport2-015.pdf, id=157, 794.97pt x 794.97pt>
 File: interimreport2-015.pdf Graphic file (type pdf)
 
 <use interimreport2-015.pdf>
-Package pdftex.def Info: interimreport2-015.pdf used on input line 301.
+Package pdftex.def Info: interimreport2-015.pdf used on input line 244.
 (pdftex.def)             Requested size: 276.00105pt x 275.99957pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<interimreport2-017.pdf, id=158, 794.97pt x 433.62pt>
+<interimreport2-017.pdf, id=159, 794.97pt x 433.62pt>
 File: interimreport2-017.pdf Graphic file (type pdf)
 
 <use interimreport2-017.pdf>
-Package pdftex.def Info: interimreport2-017.pdf used on input line 310.
+Package pdftex.def Info: interimreport2-017.pdf used on input line 253.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    Try loading font information for T1+aett on input line 318.
+
+Overfull \hbox (1.06569pt too wide) in paragraph at lines 258--259
+[]\T1/aer/m/n/10 The sig-nif-i-cance of the dif-fer-ent pre-dic-tor vari-ables 
+can be seen in the ANOVA
+ []
+
+LaTeX Font Info:    Try loading font information for T1+aett on input line 261.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-LaTeX Font Info:    Try loading font information for TS1+aett on input line 338
+LaTeX Font Info:    Try loading font information for TS1+aett on input line 281
 .
 
 (C:/PROGRA~1/R/R-30~1.2/share/texmf/tex/latex\ts1aett.fd
 File: ts1aett.fd 
 )
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 338
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 281
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
 File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `TS1/aett/m/n' in size <10> not available
-(Font)              Font shape `TS1/cmtt/m/n' tried instead on input line 338.
+(Font)              Font shape `TS1/cmtt/m/n' tried instead on input line 281.
  [7 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport2-014.pdf>] [8 <C:
 /Users/dtshayma/Documents/GitHub/measles/interimreport2-015.pdf> <C:/Users/dtsh
 ayma/Documents/GitHub/measles/interimreport2-017.pdf>] [9] [10]
-<interimreport2-020.pdf, id=210, 794.97pt x 433.62pt>
+<interimreport2-020.pdf, id=211, 794.97pt x 433.62pt>
 File: interimreport2-020.pdf Graphic file (type pdf)
 
 <use interimreport2-020.pdf>
-Package pdftex.def Info: interimreport2-020.pdf used on input line 420.
+Package pdftex.def Info: interimreport2-020.pdf used on input line 365.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
  [11 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport2-020.pdf>]
-<cases_by_dhb_2009_2014.pdf, id=235, 722.7pt x 361.35pt>
+<cases_by_dhb_2009_2014.pdf, id=236, 722.7pt x 361.35pt>
 File: cases_by_dhb_2009_2014.pdf Graphic file (type pdf)
 
 <use cases_by_dhb_2009_2014.pdf>
-Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 434.
+Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 379.
 (pdftex.def)             Requested size: 310.4979pt x 155.25066pt.
 
-<outbreaks_for_R0.pdf, id=236, 722.7pt x 361.35pt>
+<outbreaks_for_R0.pdf, id=237, 722.7pt x 361.35pt>
 File: outbreaks_for_R0.pdf Graphic file (type pdf)
  <use outbreaks_for_R0.pdf>
-Package pdftex.def Info: outbreaks_for_R0.pdf used on input line 441.
+Package pdftex.def Info: outbreaks_for_R0.pdf used on input line 386.
 (pdftex.def)             Requested size: 310.4979pt x 155.25066pt.
 
-<averageR0.pdf, id=237, 578.16pt x 433.62pt>
+<averageR0.pdf, id=238, 578.16pt x 433.62pt>
 File: averageR0.pdf Graphic file (type pdf)
  <use averageR0.pdf>
-Package pdftex.def Info: averageR0.pdf used on input line 448.
+Package pdftex.def Info: averageR0.pdf used on input line 393.
 (pdftex.def)             Requested size: 310.4979pt x 232.87433pt.
  [12 <C:/Users/dtshayma/Documents/GitHub/measles/cases_by_dhb_2009_2014.pdf>] [
 13 <C:/Users/dtshayma/Documents/GitHub/measles/outbreaks_for_R0.pdf> <C:/Users/
 dtshayma/Documents/GitHub/measles/averageR0.pdf>] [14] [15] [16] [17] [18]
-<interimreport2-028.pdf, id=355, 794.97pt x 433.62pt>
+<interimreport2-028.pdf, id=359, 794.97pt x 433.62pt>
 File: interimreport2-028.pdf Graphic file (type pdf)
 
 <use interimreport2-028.pdf>
-Package pdftex.def Info: interimreport2-028.pdf used on input line 609.
+Package pdftex.def Info: interimreport2-028.pdf used on input line 556.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
 
@@ -1246,872 +1234,397 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.673 & 
+l.620 & 
            TOTAL&550,022&$293$&$470$&1,877\tabularnewline
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-LaTeX Warning: Float too large for page by 116.28587pt on input line 681.
+LaTeX Warning: Float too large for page by 116.28587pt on input line 628.
 
 [21 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport2-028.pdf>]
-[22] [23]
+[22]
+! Double subscript.
+l.656 ...nt value} = \sum \textit{future value}_y_
+                                                  r * (1/(1+\textit{discount...
+I treat `x_1_2' essentially like `x_1{}_2'.
 
-pdfTeX warning: pdflatex.exe (file C:/Users/dtshayma/Documents/GitHub/measles/N
-umbersToVaccinate.pdf): PDF inclusion: found PDF version <1.6>, but at most ver
-sion <1.5> allowed
-<NumbersToVaccinate.pdf, id=396, 907.39pt x 662.475pt>
-File: NumbersToVaccinate.pdf Graphic file (type pdf)
+[23]
+! Double subscript.
+l.658 Where $_y_
+                r$ is the year 0 (current) through to 9 (ten years into the ...
+I treat `x_1_2' essentially like `x_1{}_2'.
 
-<use NumbersToVaccinate.pdf>
-Package pdftex.def Info: NumbersToVaccinate.pdf used on input line 717.
-(pdftex.def)             Requested size: 310.4979pt x 226.68404pt.
+
+LaTeX Warning: Reference `fig:numvacc' on page 24 undefined on input line 662.
 
 <interimreport2-034.pdf, id=401, 794.97pt x 433.62pt>
 File: interimreport2-034.pdf Graphic file (type pdf)
 
 <use interimreport2-034.pdf>
-Package pdftex.def Info: interimreport2-034.pdf used on input line 726.
+Package pdftex.def Info: interimreport2-034.pdf used on input line 667.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<interimreport2-036.pdf, id=403, 794.97pt x 433.62pt>
+<interimreport2-036.pdf, id=406, 794.97pt x 433.62pt>
 File: interimreport2-036.pdf Graphic file (type pdf)
 
 <use interimreport2-036.pdf>
-Package pdftex.def Info: interimreport2-036.pdf used on input line 736.
+Package pdftex.def Info: interimreport2-036.pdf used on input line 677.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<interimreport2-037.pdf, id=404, 794.97pt x 433.62pt>
+<interimreport2-037.pdf, id=411, 794.97pt x 433.62pt>
 File: interimreport2-037.pdf Graphic file (type pdf)
 
 <use interimreport2-037.pdf>
-Package pdftex.def Info: interimreport2-037.pdf used on input line 743.
+Package pdftex.def Info: interimreport2-037.pdf used on input line 684.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+ [24 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport2-034.pdf>] [25 <
+C:/Users/dtshayma/Documents/GitHub/measles/interimreport2-036.pdf> <C:/Users/dt
+shayma/Documents/GitHub/measles/interimreport2-037.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 []|\T1/aer/m/n/5 Years
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 R0
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+$\OML/cmm/m/it/5 R[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 es-ti-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 mated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-[]|\T1/aer/m/n/5 R0
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+[]|$\OML/cmm/m/it/5 R[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 range
+Underfull \hbox (badness 1694) in paragraph at lines 703--703
+[]|$\OML/cmm/m/it/5 R[]$ \T1/aer/m/n/5 for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 es-ti-
- []
-
-
-Underfull \hbox (badness 5133) in paragraph at lines 759--759
-[]|\T1/aer/m/n/5 R0 for
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 sim-u-la-
  []
 
-! You can't use `macro parameter character #' in horizontal mode.
-l.759 ... estimated	& R0  for simulations	& Mean #
-                                                   of cases in the populatio...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.759 ...Mean # of cases in the population \dagger
-                                                  	& Vaccines required to re...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.759 ...an # of cases in the population \dagger	&
-                                                   Vaccines required to redu...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.759 ...an # of cases in the population \dagger	&
-                                                   Vaccines required to redu...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.759 ...an # of cases in the population \dagger	&
-                                                   Vaccines required to redu...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-[]|\T1/aer/m/n/5 Mean
+Overfull \hbox (6.077pt too wide) in paragraph at lines 703--703
+[]|\T1/aer/m/n/5 Additional
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 759--759
-\T1/aer/m/n/5 of cases
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 vac-cines
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 in the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 pop-u-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 la-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-[]|\T1/aer/m/n/5 Vaccines
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 re-quired
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 to re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 []|\T1/aer/m/n/5 Costs
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 per
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-[]|\T1/aer/m/n/5 Total
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 vac-cine
  []
 
-! Undefined control sequence.
-l.759 ... (\$)	& Total hospitalised cases	(\$)\sym
-                                                  {*}& Total costs for cases...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-[]|\T1/aer/m/n/5 Total
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+[]|\T1/aer/m/n/5 Present
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 hos-pi-
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 value
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 talised
+Underfull \hbox (badness 5504) in paragraph at lines 703--703
+\T1/aer/m/n/5 of dis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 cases
- []
-
-! Undefined control sequence.
-l.759 ...$)\sym{*}& Total costs for cases (\$)\sym
-                                                  {**}	& R0  for simulations...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-[]|\T1/aer/m/n/5 Total
+Overfull \hbox (0.53247pt too wide) in paragraph at lines 703--703
+\T1/aer/m/n/5 counted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 cases
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 vac-ci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-[]|\T1/aer/m/n/5 R0 for
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 na-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 sim-u-
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 costs
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 la-tions
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 af-ter
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.759 ... in the population after catch up \dagger
-                                                  	& Total cases over 10 yea...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.759 ...n the population after catch up \dagger	&
-                                                   Total cases over 10 years...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.759 ...n the population after catch up \dagger	&
-                                                   Total cases over 10 years...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.759 ...n the population after catch up \dagger	&
-                                                   Total cases over 10 years...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 []|\T1/aer/m/n/5 Mean
  []
 
 
-Underfull \hbox (badness 1383) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 to-tal
+ []
+
+
+Underfull \hbox (badness 1383) in paragraph at lines 703--703
 \T1/aer/m/n/5 cases in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 u-la-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 af-ter
- []
-
-! Undefined control sequence.
-l.759 ...tal cases over 10 years after action \sym
-                                                  {***}	& Total hospitalised...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-[]|\T1/aer/m/n/5 Total
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 cases
- []
-
-
-Underfull \hbox (badness 5908) in paragraph at lines 759--759
+Underfull \hbox (badness 5908) in paragraph at lines 703--703
 \T1/aer/m/n/5 over 10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 years
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 af-ter
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 with-out
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 ac-tion
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 ad-di-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 vac-ci-na-
+ []
+
+! Undefined control sequence.
+l.703 ...accination &	Total hospitalised cases\sym
+                                                  {*}	& Total undiscounted c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 []|\T1/aer/m/n/5 Total
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 hos-pi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 talised
  []
 
+! Undefined control sequence.
+l.703 ...s without additional vaccination (\$)\sym
+                                                  {**} &	Present value of di...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 cases
- []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 af-ter
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 []|\T1/aer/m/n/5 Total
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 cases
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 undis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 af-ter
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 counted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 ac-tion
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 case
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-[]|\T1/aer/m/n/5 Cases
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 re-duced
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-\T1/aer/m/n/5 due to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--759
-[]|\T1/aer/m/n/5 Savings
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--760
-[]|\T1/aer/m/n/5 Benefit--
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--760
-\T1/aer/m/n/5 cost
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 761--761
-[]|\T1/aer/m/n/5 2009-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 761--761
-[]|\T1/aer/m/n/5 0.92-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 762--762
-[]|\T1/aer/m/n/5 2009-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 762--762
-[]|\T1/aer/m/n/5 0.92-
- []
-
-
-Overfull \hbox (4.99168pt too wide) in paragraph at lines 762--762
-[]|\T1/aer/m/n/5 147295173| 
- []
-
-
-Overfull \hbox (4.99168pt too wide) in paragraph at lines 762--762
-[]|\T1/aer/m/n/5 105293982| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 763--763
-[]|\T1/aer/m/n/5 2009-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 763--763
-[]|\T1/aer/m/n/5 0.92-
- []
-
-
-Overfull \hbox (4.99168pt too wide) in paragraph at lines 763--763
-[]|\T1/aer/m/n/5 147295173| 
- []
-
-
-Overfull \hbox (4.99168pt too wide) in paragraph at lines 763--763
-[]|\T1/aer/m/n/5 105293982| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 764--764
-[]|\T1/aer/m/n/5 2013-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 764--764
-[]|\T1/aer/m/n/5 1.82-
- []
-
-
-Overfull \hbox (4.99168pt too wide) in paragraph at lines 764--764
-[]|\T1/aer/m/n/5 388554566| 
- []
-
-
-Overfull \hbox (4.99168pt too wide) in paragraph at lines 764--764
-[]|\T1/aer/m/n/5 280620541| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 765--765
-[]|\T1/aer/m/n/5 2013-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 765--765
-[]|\T1/aer/m/n/5 1.82-
- []
-
-
-Overfull \hbox (4.99168pt too wide) in paragraph at lines 765--765
-[]|\T1/aer/m/n/5 388554566| 
- []
-
-
-Overfull \hbox (4.99168pt too wide) in paragraph at lines 765--765
-[]|\T1/aer/m/n/5 280620541| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 766--766
-[]|\T1/aer/m/n/5 2013-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 766--766
-[]|\T1/aer/m/n/5 1.82-
- []
-
-
-Overfull \hbox (4.99168pt too wide) in paragraph at lines 766--766
-[]|\T1/aer/m/n/5 436595960| 
- []
-
-
-Overfull \hbox (4.99168pt too wide) in paragraph at lines 766--766
-[]|\T1/aer/m/n/5 315435600| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 767--767
-[]|\T1/aer/m/n/5 2013-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 767--767
-[]|\T1/aer/m/n/5 1.82-
- []
-
-
-Overfull \hbox (4.99168pt too wide) in paragraph at lines 767--767
-[]|\T1/aer/m/n/5 436595960| 
- []
-
-
-Overfull \hbox (4.99168pt too wide) in paragraph at lines 767--767
-[]|\T1/aer/m/n/5 315435600| 
- []
-
-! Undefined control sequence.
-<recently read> \sym 
-                     
-l.772         \item \sym
-                        {*} Proportion of cases hospitalised 0.17
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \sym 
-                     
-l.773         \item \sym
-                        {**} Wage losses per case \$852 and cost per hospita...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \sym 
-                     
-l.774         \item \sym
-                        {***} Based on 10 introductions of measles, one per ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (77.94403pt too wide) in paragraph at lines 756--778
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-[]|\T1/aer/m/n/5 Years
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 R0
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 es-ti-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 mated
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-[]|\T1/aer/m/n/5 R0
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 range
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 es-ti-
- []
-
-
-Underfull \hbox (badness 5133) in paragraph at lines 790--790
-[]|\T1/aer/m/n/5 R0 for
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 sim-u-la-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-[]|\T1/aer/m/n/5 Vaccines
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 re-quired
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 to re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-[]|\T1/aer/m/n/5 Costs
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 per
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 vac-cine
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-[]|\T1/aer/m/n/5 Total
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 vac-cine
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 costs
  []
 
-! Undefined control sequence.
-l.790 ...expected based on average since 1997 \sym
-                                                  {***}	&Total hospitalised ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-
-Overfull \hbox (2.00723pt too wide) in paragraph at lines 790--790
-[]|\T1/aer/m/n/5 Expected
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 with-out
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 num-ber
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 ad-di-
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 790--790
-\T1/aer/m/n/5 of cases
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 ex-
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 vac-ci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 pected
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 na-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 based
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+[]|\T1/aer/m/n/5 Present
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 on av-
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 value
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 er-age
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 of dis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 since
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 counted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 1997
- []
-
-! Undefined control sequence.
-l.790 ... \sym{***}	&Total hospitalised cases	\sym
-                                                  {*}&Total costs for cases ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-[]|\T1/aer/m/n/5 Total
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 case
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 hos-pi-
+Underfull \hbox (badness 2452) in paragraph at lines 703--703
+\T1/aer/m/n/5 costs of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 talised
- []
-
-! Undefined control sequence.
-l.790 ...es	\sym{*}&Total costs for cases (\$)\sym
-                                                  {**}	&R0  for simulations ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-[]|\T1/aer/m/n/5 Total
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 base-line
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 cases
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 pro-gram
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-[]|\T1/aer/m/n/5 R0 for
+Overfull \hbox (3.49225pt too wide) in paragraph at lines 703--703
+\T1/aer/m/n/5 ($)(Equa-
  []
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.703 ... pop over 10 years with $R_v$ = 1 \dagger
+                                                   &	Total cases over 10 yea...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 sim-u-
- []
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.703 ...op over 10 years with $R_v$ = 1 \dagger &
+                                                  	Total cases over 10 years...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.703 ...op over 10 years with $R_v$ = 1 \dagger &
+                                                  	Total cases over 10 years...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.703 ...op over 10 years with $R_v$ = 1 \dagger &
+                                                  	Total cases over 10 years...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 la-tions
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 af-ter
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 []|\T1/aer/m/n/5 Mean
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 num-ber
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 epi-
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 790--790
-\T1/aer/m/n/5 of cases
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 demic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 in the
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 size in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 pop-u-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 la-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 af-ter
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 ac-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 (1000
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 sim-u-la-
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 im-mune
  []
 
 ! Undefined control sequence.
-l.790 ...tal cases over 10 years after action \sym
-                                                  {***}	&Total hospitalised ...
+l.703 ...ears following additional vaccination\sym
+                                                  {***} &	Total hospitalised...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2119,219 +1632,494 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 []|\T1/aer/m/n/5 Total
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 cases
  []
 
 
-Underfull \hbox (badness 5908) in paragraph at lines 790--790
+Underfull \hbox (badness 5908) in paragraph at lines 703--703
 \T1/aer/m/n/5 over 10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 years
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 af-ter
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 fol-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 ac-tion
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 low-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 ad-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 vac-ci-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 []|\T1/aer/m/n/5 Total
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 hos-pi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 talised
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 cases
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 af-ter
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 fol-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 low-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 ad-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 dtional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 vac-ci-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 []|\T1/aer/m/n/5 Total
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 sum-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 sup-ple-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 men-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
 \T1/aer/m/n/5 cases
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 af-ter
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 re-duce
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 ac-tion
+Underfull \hbox (badness 5878) in paragraph at lines 703--703
+\T1/aer/m/n/5 by vac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-[]|\T1/aer/m/n/5 Cases
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 ci-na-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 re-duced
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 al-ter-na-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-\T1/aer/m/n/5 due to
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 tive vs
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--790
-[]|\T1/aer/m/n/5 Savings
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+[]|\T1/aer/m/n/5 Present
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--791
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 value
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 of dis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 counted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 ben-e-fits
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 from
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 re-duc-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 cases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 sup-ple-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 men-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Overfull \hbox (7.45723pt too wide) in paragraph at lines 703--703
+[]|\T1/aer/m/n/5 Discounted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 e-fit of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 sup-ple-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 men-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--704
 []|\T1/aer/m/n/5 Benefit--
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--791
+Underfull \hbox (badness 10000) in paragraph at lines 703--704
 \T1/aer/m/n/5 cost
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 792--792
+Underfull \hbox (badness 10000) in paragraph at lines 705--705
 []|\T1/aer/m/n/5 2009-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 792--792
+Underfull \hbox (badness 10000) in paragraph at lines 705--705
 []|\T1/aer/m/n/5 0.92-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 793--793
+Underfull \hbox (badness 10000) in paragraph at lines 706--706
 []|\T1/aer/m/n/5 2009-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 793--793
+Underfull \hbox (badness 10000) in paragraph at lines 706--706
 []|\T1/aer/m/n/5 0.92-
  []
 
 
-Overfull \hbox (1.03693pt too wide) in paragraph at lines 793--793
-[]|\T1/aer/m/n/5 1159502| 
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 706--706
+[]|\T1/aer/m/n/5 1600000| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 794--794
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 706--706
+[]|\T1/aer/m/n/5 147295173| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 706--706
+[]|\T1/aer/m/n/5 129415143| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 706--706
+[]|\T1/aer/m/n/5 127959360| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 706--706
+[]|\T1/aer/m/n/5 126359360| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 707--707
 []|\T1/aer/m/n/5 2009-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 794--794
+Underfull \hbox (badness 10000) in paragraph at lines 707--707
 []|\T1/aer/m/n/5 0.92-
  []
 
 
-Overfull \hbox (1.03693pt too wide) in paragraph at lines 794--794
-[]|\T1/aer/m/n/5 2898755| 
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 707--707
+[]|\T1/aer/m/n/5 4000000| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 795--795
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 707--707
+[]|\T1/aer/m/n/5 147295173| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 707--707
+[]|\T1/aer/m/n/5 129415143| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 707--707
+[]|\T1/aer/m/n/5 127959360| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 707--707
+[]|\T1/aer/m/n/5 123959360| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--708
 []|\T1/aer/m/n/5 2013-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 795--795
+Underfull \hbox (badness 10000) in paragraph at lines 708--708
 []|\T1/aer/m/n/5 1.82-
  []
 
 
-Overfull \hbox (1.03693pt too wide) in paragraph at lines 795--795
-[]|\T1/aer/m/n/5 3016923| 
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 708--708
+[]|\T1/aer/m/n/5 4163060| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 708--708
+[]|\T1/aer/m/n/5 388554566| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 708--708
+[]|\T1/aer/m/n/5 341388274| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 708--708
+[]|\T1/aer/m/n/5 340223647| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 708--708
+[]|\T1/aer/m/n/5 336060587| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 709--709
 []|\T1/aer/m/n/5 2013-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
+Underfull \hbox (badness 10000) in paragraph at lines 709--709
 []|\T1/aer/m/n/5 1.82-
  []
 
 
-Overfull \hbox (1.03693pt too wide) in paragraph at lines 796--796
-[]|\T1/aer/m/n/5 7542307| 
+Overfull \hbox (4.43681pt too wide) in paragraph at lines 709--709
+[]|\T1/aer/m/n/5 10407650| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 797--797
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 709--709
+[]|\T1/aer/m/n/5 388554566| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 709--709
+[]|\T1/aer/m/n/5 341388274| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 709--709
+[]|\T1/aer/m/n/5 340223647| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 709--709
+[]|\T1/aer/m/n/5 329815997| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 710--710
 []|\T1/aer/m/n/5 2013-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 797--797
+Underfull \hbox (badness 10000) in paragraph at lines 710--710
 []|\T1/aer/m/n/5 1.82-
  []
 
 
-Overfull \hbox (1.03693pt too wide) in paragraph at lines 797--797
-[]|\T1/aer/m/n/5 3660563| 
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 710--710
+[]|\T1/aer/m/n/5 5051220| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 798--798
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 710--710
+[]|\T1/aer/m/n/5 436595960| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 710--710
+[]|\T1/aer/m/n/5 383597966| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 710--710
+[]|\T1/aer/m/n/5 382433339| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 710--710
+[]|\T1/aer/m/n/5 377382119| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--711
 []|\T1/aer/m/n/5 2013-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 798--798
+Underfull \hbox (badness 10000) in paragraph at lines 711--711
 []|\T1/aer/m/n/5 1.82-
  []
 
 
-Overfull \hbox (1.03693pt too wide) in paragraph at lines 798--798
-[]|\T1/aer/m/n/5 9151406| 
+Overfull \hbox (4.43681pt too wide) in paragraph at lines 711--711
+[]|\T1/aer/m/n/5 12628050| 
  []
 
 
-! LaTeX Error: \begin{tabular} on input line 788 ended by \end{raggedright}.
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 711--711
+[]|\T1/aer/m/n/5 436595960| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 711--711
+[]|\T1/aer/m/n/5 383597966| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 711--711
+[]|\T1/aer/m/n/5 382433339| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 711--711
+[]|\T1/aer/m/n/5 369805289| 
+ []
+
+
+! LaTeX Error: \begin{tabular} on input line 700 ended by \end{raggedleft}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.799 \end{raggedright}
-                       
+l.713 \end{raggedleft}
+                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -2339,8 +2127,8 @@ or  <return>  to continue without it.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.799 \end{raggedright}
-                       
+l.713 \end{raggedleft}
+                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -2350,8 +2138,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.799 \end{raggedright}
-                       
+l.713 \end{raggedleft}
+                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -2361,15 +2149,15 @@ my insertion and my current dilemma will both disappear.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.799 \end{raggedright}
-                       
+l.713 \end{raggedleft}
+                      
 I'm guessing that you meant to end an alignment here.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.799 \end{raggedright}
-                       
+l.713 \end{raggedleft}
+                      
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
@@ -2377,8 +2165,8 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.799 \end{raggedright}
-                       
+l.713 \end{raggedleft}
+                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -2388,8 +2176,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.799 \end{raggedright}
-                       
+l.713 \end{raggedleft}
+                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -2399,8 +2187,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.799 \end{raggedright}
-                       
+l.713 \end{raggedleft}
+                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -2410,8 +2198,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.799 \end{raggedright}
-                       
+l.713 \end{raggedleft}
+                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -2421,7 +2209,7 @@ my insertion and my current dilemma will both disappear.
 ! Misplaced \noalign.
 \bottomrule ->\noalign 
                        {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
-l.800 \bottomrule
+l.714 \bottomrule
                  
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2429,7 +2217,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \crcr.
 \endarray ->\crcr 
                   \egroup \egroup \@arrayright \gdef \@preamble {}
-l.801     \end{tabular}
+l.715     \end{tabular}
                        %
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -2440,7 +2228,7 @@ might try typing `S' now just to see what is salvageable.
 ! Extra }, or forgotten \endgroup.
 \endarray ->\crcr \egroup 
                           \egroup \@arrayright \gdef \@preamble {}
-l.801     \end{tabular}
+l.715     \end{tabular}
                        %
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2451,7 +2239,7 @@ deleted material, e.g., by typing `I$}'.
 ! Extra }, or forgotten \endgroup.
 \endarray ->\crcr \egroup \egroup 
                                   \@arrayright \gdef \@preamble {}
-l.801     \end{tabular}
+l.715     \end{tabular}
                        %
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2462,7 +2250,7 @@ deleted material, e.g., by typing `I$}'.
 ! Extra }, or forgotten $.
 <recently read> \egroup 
                         
-l.801     \end{tabular}
+l.715     \end{tabular}
                        %
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2473,7 +2261,7 @@ deleted material, e.g., by typing `I$}'.
 ! Extra }, or forgotten $.
 \endtabular ->\TPTsav@endtabular \TPT@endtabhook 
                                                  
-l.801     \end{tabular}
+l.715     \end{tabular}
                        %
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2482,14 +2270,14 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-! LaTeX Error: \begin{threeparttable} on input line 787 ended by \end{tabular}.
+! LaTeX Error: \begin{threeparttable} on input line 699 ended by \end{tabular}.
 
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.801     \end{tabular}
+l.715     \end{tabular}
                        %
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2498,7 +2286,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.801     \end{tabular}
+l.715     \end{tabular}
                        %
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2509,7 +2297,7 @@ my insertion and my current dilemma will both disappear.
 ! Undefined control sequence.
 <recently read> \sym 
                      
-l.804         \item \sym
+l.718         \item \sym
                         {*} Proportion of cases hospitalised 0.17
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2520,7 +2308,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \sym 
                      
-l.805         \item \sym
+l.719         \item \sym
                         {**} Wage losses per case \$852 and cost per hospita...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2531,7 +2319,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \sym 
                      
-l.806         \item \sym
+l.720         \item \sym
                         {***} Based on 10 introductions of measles, one per ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2542,7 +2330,7 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.808     \end{threeparttable}
+l.722     \end{threeparttable}
                               
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2553,7 +2341,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \TPT@close ...\unskip \fi \color@endgroup \egroup 
                                                   
-l.808     \end{threeparttable}
+l.722     \end{threeparttable}
                               
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2562,97 +2350,1091 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-! LaTeX Error: \begin{raggedright} on input line 784 ended by \end{threeparttab
-le}.
+! LaTeX Error: \begin{raggedleft} on input line 696 ended by \end{threeparttabl
+e}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.808     \end{threeparttable}
+l.722     \end{threeparttable}
                               
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (77.94403pt too wide) in paragraph at lines 787--809
+Overfull \hbox (115.55133pt too wide) in paragraph at lines 699--723
  [] 
  []
 
-[24 <C:/Users/dtshayma/Documents/GitHub/measles/NumbersToVaccinate.pdf>]
-[25 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport2-034.pdf> <C:/Use
-rs/dtshayma/Documents/GitHub/measles/interimreport2-036.pdf> <C:/Users/dtshayma
-/Documents/GitHub/measles/interimreport2-037.pdf>] [26] [27]
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Years
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+$\OML/cmm/m/it/5 R[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 es-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 mated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|$\OML/cmm/m/it/5 R[]$
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 735--735
+[]|$\OML/cmm/m/it/5 R[]$ \T1/aer/m/n/5 for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 sim-u-la-
+ []
+
+
+Overfull \hbox (6.077pt too wide) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Additional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 vac-cines
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 re-quired
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 to re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Costs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 per
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 vac-cine
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Present
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 value
+ []
+
+
+Underfull \hbox (badness 5504) in paragraph at lines 735--735
+\T1/aer/m/n/5 of dis-
+ []
+
+
+Overfull \hbox (0.53247pt too wide) in paragraph at lines 735--735
+\T1/aer/m/n/5 counted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 costs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Mean
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 to-tal
+ []
+
+
+Underfull \hbox (badness 1383) in paragraph at lines 735--735
+\T1/aer/m/n/5 cases in
+ []
+
+
+Underfull \hbox (badness 5908) in paragraph at lines 735--735
+\T1/aer/m/n/5 over 10
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 years
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 with-out
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 ad-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 vac-ci-na-
+ []
+
+! Undefined control sequence.
+l.735 ...accination &	Total hospitalised cases\sym
+                                                  {*}	& Total undiscounted c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 hos-pi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 talised
+ []
+
+! Undefined control sequence.
+l.735 ...s without additional vaccination (\$)\sym
+                                                  {**} &	Present value of di...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 undis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 counted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 case
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 costs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 with-out
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 ad-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Present
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 value
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 of dis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 counted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 case
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 735--735
+\T1/aer/m/n/5 costs of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 base-line
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 pro-gram
+ []
+
+
+Overfull \hbox (3.49225pt too wide) in paragraph at lines 735--735
+\T1/aer/m/n/5 ($)(Equa-
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.735 ... pop over 10 years with $R_v$ = 1 \dagger
+                                                   &	Total cases over 10 yea...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.735 ...op over 10 years with $R_v$ = 1 \dagger &
+                                                  	Total cases over 10 years...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.735 ...op over 10 years with $R_v$ = 1 \dagger &
+                                                  	Total cases over 10 years...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.735 ...op over 10 years with $R_v$ = 1 \dagger &
+                                                  	Total cases over 10 years...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Mean
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 epi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 demic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 size in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 im-mune
+ []
+
+! Undefined control sequence.
+l.735 ...ears following additional vaccination\sym
+                                                  {***} &	Total hospitalised...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 cases
+ []
+
+
+Underfull \hbox (badness 5908) in paragraph at lines 735--735
+\T1/aer/m/n/5 over 10
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 years
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 fol-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 low-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 ad-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 vac-ci-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 hos-pi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 talised
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 cases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 fol-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 low-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 ad-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 dtional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 vac-ci-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 sum-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 sup-ple-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 men-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 cases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 re-duce
+ []
+
+
+Underfull \hbox (badness 5878) in paragraph at lines 735--735
+\T1/aer/m/n/5 by vac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 ci-na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 al-ter-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 tive vs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Present
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 value
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 of dis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 counted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 ben-e-fits
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 from
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 re-duc-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 cases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 sup-ple-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 men-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Overfull \hbox (7.45723pt too wide) in paragraph at lines 735--735
+[]|\T1/aer/m/n/5 Discounted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 e-fit of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 sup-ple-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 men-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--735
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--736
+[]|\T1/aer/m/n/5 Benefit--
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--736
+\T1/aer/m/n/5 cost
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 738--738
+[]|\T1/aer/m/n/5 2009-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 738--738
+[]|\T1/aer/m/n/5 0.92-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 739--739
+[]|\T1/aer/m/n/5 2009-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 739--739
+[]|\T1/aer/m/n/5 0.92-
+ []
+
+
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 739--739
+[]|\T1/aer/m/n/5 1600000| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 740--740
+[]|\T1/aer/m/n/5 2009-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 740--740
+[]|\T1/aer/m/n/5 0.92-
+ []
+
+
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 740--740
+[]|\T1/aer/m/n/5 4000000| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 740--740
+[]|\T1/aer/m/n/5 -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--741
+[]|\T1/aer/m/n/5 2013-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--741
+[]|\T1/aer/m/n/5 1.82-
+ []
+
+
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 741--741
+[]|\T1/aer/m/n/5 4163060| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--741
+[]|\T1/aer/m/n/5 -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 742--742
+[]|\T1/aer/m/n/5 2013-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 742--742
+[]|\T1/aer/m/n/5 1.82-
+ []
+
+
+Overfull \hbox (4.43681pt too wide) in paragraph at lines 742--742
+[]|\T1/aer/m/n/5 10407650| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 742--742
+[]|\T1/aer/m/n/5 -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
+[]|\T1/aer/m/n/5 2013-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
+[]|\T1/aer/m/n/5 1.82-
+ []
+
+
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 743--743
+[]|\T1/aer/m/n/5 5051220| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
+[]|\T1/aer/m/n/5 -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 744--744
+[]|\T1/aer/m/n/5 2013-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 744--744
+[]|\T1/aer/m/n/5 1.82-
+ []
+
+
+Overfull \hbox (4.43681pt too wide) in paragraph at lines 744--744
+[]|\T1/aer/m/n/5 12628050| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 744--744
+[]|\T1/aer/m/n/5 -
+ []
+
+
+Overfull \hbox (1.5918pt too wide) in paragraph at lines 744--744
+\T1/aer/m/n/5 11583902| 
+ []
+
+
+! LaTeX Error: \begin{tabular} on input line 733 ended by \end{raggedright}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.745 \end{raggedright}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.745 \end{raggedright}
+                       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.745 \end{raggedright}
+                       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.745 \end{raggedright}
+                       
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.745 \end{raggedright}
+                       
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.745 \end{raggedright}
+                       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.745 \end{raggedright}
+                       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.745 \end{raggedright}
+                       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.745 \end{raggedright}
+                       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Misplaced \noalign.
+\bottomrule ->\noalign 
+                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
+l.746 \bottomrule
+                 
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \crcr.
+\endarray ->\crcr 
+                  \egroup \egroup \@arrayright \gdef \@preamble {}
+l.747     \end{tabular}
+                       %
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten \endgroup.
+\endarray ->\crcr \egroup 
+                          \egroup \@arrayright \gdef \@preamble {}
+l.747     \end{tabular}
+                       %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+\endarray ->\crcr \egroup \egroup 
+                                  \@arrayright \gdef \@preamble {}
+l.747     \end{tabular}
+                       %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.747     \end{tabular}
+                       %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\endtabular ->\TPTsav@endtabular \TPT@endtabhook 
+                                                 
+l.747     \end{tabular}
+                       %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \begin{threeparttable} on input line 732 ended by \end{tabular}.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.747     \end{tabular}
+                       %
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.747     \end{tabular}
+                       %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Undefined control sequence.
+<recently read> \sym 
+                     
+l.750         \item \sym
+                        {*} Proportion of cases hospitalised 0.17
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \sym 
+                     
+l.751         \item \sym
+                        {**} Wage losses per case \$852 and cost per hospita...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \sym 
+                     
+l.752         \item \sym
+                        {***} Based on 10 introductions of measles, one per ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.754     \end{threeparttable}
+                              
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\TPT@close ...\unskip \fi \color@endgroup \egroup 
+                                                  
+l.754     \end{threeparttable}
+                              
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \begin{raggedright} on input line 729 ended by \end{threeparttab
+le}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.754     \end{threeparttable}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (115.55133pt too wide) in paragraph at lines 732--755
+ [] 
+ []
+
 <interimreport2-038.pdf, id=459, 794.97pt x 433.62pt>
 File: interimreport2-038.pdf Graphic file (type pdf)
 
 <use interimreport2-038.pdf>
-Package pdftex.def Info: interimreport2-038.pdf used on input line 819.
+Package pdftex.def Info: interimreport2-038.pdf used on input line 765.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
 <interimreport2-039.pdf, id=460, 794.97pt x 433.62pt>
 File: interimreport2-039.pdf Graphic file (type pdf)
 
 <use interimreport2-039.pdf>
-Package pdftex.def Info: interimreport2-039.pdf used on input line 827.
+Package pdftex.def Info: interimreport2-039.pdf used on input line 773.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[28 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport2-038.pdf>]
-[29 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport2-039.pdf>]
-[30] [31] [32] [33]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1065.
+[26 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport2-038.pdf>]
+[27] [28] [29 <C:/Users/dtshayma/Documents/GitHub/measles/interimreport2-039.pd
+f>] [30] [31] [32] [33]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1016.
  [34]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1065.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1016.
 
 (C:\Users\dtshayma\Documents\GitHub\measles\interimreport2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1065.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1065.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1016.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1016.
 
 Package rerunfilecheck Info: File `interimreport2.out' has not changed.
-(rerunfilecheck)             Checksum: 96474DBCCC4C6F833BEB291744526916;1349.
+(rerunfilecheck)             Checksum: 938721B3AA98ED4067E26B5F569F045A;1364.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1065.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1016.
  ) 
 Here is how much of TeX's memory you used:
- 17009 strings out of 493921
- 293273 string characters out of 3147273
- 387561 words of memory out of 3000000
- 19766 multiletter control sequences out of 15000+200000
- 44302 words of font info for 88 fonts, out of 3000000 for 9000
+ 17018 strings out of 493921
+ 293311 string characters out of 3147273
+ 393236 words of memory out of 3000000
+ 19771 multiletter control sequences out of 15000+200000
+ 49159 words of font info for 94 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,15n,55p,1567b,501s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,15n,55p,1634b,495s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsltt10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/eurosym/feymr10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/cm-super/sfrm1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/cm-super/sftt1000.pfb>
-Output written on interimreport2.pdf (34 pages, 612154 bytes).
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsltt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/eurosym/feymr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/cm-super/sfrm1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm
+-super/sftt1000.pfb>
+Output written on interimreport2.pdf (34 pages, 580325 bytes).
 PDF statistics:
- 627 PDF objects out of 1000 (max. 8388607)
+ 646 PDF objects out of 1000 (max. 8388607)
  122 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 252 words of extra memory for PDF output out of 10000 (max. 10000000)
 
