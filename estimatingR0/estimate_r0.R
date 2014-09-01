@@ -29,7 +29,7 @@ for (i in 1:length(outbreak_files))
 }
 
 outbreak_files <- outbreak_files[order(max_dates)]
-
+cols <- c("#FF0000FF","#CCFF00","#66FF33","#0066FF","#9900CC")
 # function for modifying colours to make them transparent
 alpha <- function(col, a)
 {
@@ -38,7 +38,6 @@ alpha <- function(col, a)
   else
     rgb(t(col2rgb(col)/255), alpha=a)
 }
-cols <- rainbow(length(average_R0))
 
 # do the separate analyses
 average_R0 <- list()
@@ -97,7 +96,6 @@ for (i in 1:length(outbreak_files))
 
   average_R0[[length(average_R0)+1]] <- estR0$R0
 }
-
 
 # plot R0 averages
 
