@@ -1,0 +1,141 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amssymb,amsmath, graphicx, caption2}
+\usepackage{fancyhdr}
+\setlength{\textheight}{20cm}
+\setlength{\topmargin}{1.5cm}
+\setlength{\textwidth}{13cm}
+\addtolength{\hoffset}{-1cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+% The next 3 commands force floats to the pagetop
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+%\pagestyle {fancyplain}
+\pagestyle {myheadings}
+\markright{Measles vaccination by DHB}
+\newcommand{\vecA}{\mathbf{A}}
+\newcommand{\vecB}{\mathbf{B}}
+\newcommand{\vecC}{\mathbf{C}}
+\newcommand{\vecD}{\mathbf{D}}
+\newcommand{\vecE}{\mathbf{E}}
+\newcommand{\vecF}{\mathbf{F}}
+\newcommand{\vecH}{\mathbf{H}}
+\newcommand{\vecI}{\mathbf{I}}
+\newcommand{\vecJ}{\mathbf{J}}
+\newcommand{\vecK}{\mathbf{K}}
+\newcommand{\vecM}{\mathbf{M}}
+\newcommand{\vecN}{\mathbf{N}}
+\newcommand{\vecP}{\mathbf{P}}
+\newcommand{\vecQ}{\mathbf{Q}}
+\newcommand{\vecS}{\mathbf{S}}
+\newcommand{\vecT}{\mathbf{T}}
+\newcommand{\vecW}{\mathbf{W}}
+\newcommand{\vecZ}{\mathbf{Z}}
+\newcommand{\vecb}{\mathbf{b}}
+\newcommand{\vecc}{\mathbf{c}}
+\newcommand{\vece}{\mathbf{e}}
+\newcommand{\vecf}{\mathbf{f}}
+\newcommand{\vecg}{\mathbf{g}}
+\newcommand{\vech}{\mathbf{h}}
+\newcommand{\veci}{\mathbf{i}}
+\newcommand{\vecr}{\mathbf{r}}
+\newcommand{\vecu}{\mathbf{u}}
+\newcommand{\vecv}{\mathbf{v}}
+\newcommand{\vecw}{\mathbf{w}}
+\newcommand{\vecx}{\mathbf{x}}
+\newcommand{\vecy}{\mathbf{y}}
+\newcommand{\vecz}{\mathbf{z}}
+\newcommand{\Ach}{\mathcal{H}}
+\newcommand{\Ell}{\mathcal{L}}
+\newcommand{\En}{\mathcal{N}}
+\newcommand{\Pe}{\mathcal{P}}
+\newcommand{\Ro}{\mathcal{R}_0}
+\newcommand{\Rc}{\mathcal{R}_c}
+\newcommand{\Rr}{\mathcal{R}}
+\newcommand{\Qu}{\mathcal{Q}}
+\newcommand{\Te}{\mathcal{T}}
+\newcommand{\Ve}{\mathcal{V}}
+\newcommand{\Dub}{\mathcal{W}}
+\newcommand{\Zed}{\mathcal{Z}}
+\newcommand{\Exp}{\mathbb{E}}
+\newcommand{\de}{\mbox{d}}
+\newcommand{\wrt}{\,\mbox{d}}
+\newcommand{\veczero}{\mathbf{0}}
+\newcommand{\vecone}{\mathbf{1}}
+\newcommand{\vecalpha}{\mbox{\boldmath$\alpha$}}
+\newcommand{\vectheta}{\mbox{\boldmath$\theta$}}
+\newcommand{\vecphi}{\mbox{\boldmath$\phi$}}
+\newcommand{\vecPhi}{\mbox{\boldmath$\Phi$}}
+\newcommand{\vecSigma}{\mbox{\boldmath$\Sigma$}}
+\newcommand{\vecimath}{\mbox{\boldmath$\imath$}}
+\newcommand{\cosech}{\mbox{cosech}\,}
+\newcommand{\sign}{\mbox{sign}\,}
+\newcommand{\trace}{\mbox{trace}\,}
+\newcommand{\Inf}{\mbox{Inf}\,}
+\rhead{\thepage}
+\cfoot{}
+\renewcommand{\baselinestretch}{1.5}
+\begin{document}
+
+\title{A review of measles vaccination status in New Zealand District Health Boards\footnote{FinalSize.tex \today}}
+\author{M.G. Roberts \\\\
+{\small Institute of Natural \& Mathematical Sciences,}\\
+{\small   New Zealand Institute for Advanced Study and the Infectious Disease Research Centre,}\\
+{\small   Massey University, Private Bag 102 904, North Shore Mail Centre, Auckland, New Zealand. } \\ 
+Email: \texttt{m.g.roberts@massey.ac.nz}}
+\date{}
+\maketitle
+
+\thispagestyle{empty}
+ 
+\begin{abstract}
+
+No abstract yet. 
+
+\end{abstract}
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+The well-known equation for the final size of an epidemic in a homogeneously mixing susceptible population is \cite{DHB}
+$$\log\left(1-\Pe\right)+\Ro\Pe=0$$
+where $\Ro$ is the basic reproduction number and $\Pe$ is the proportion of the population infected over the course of the outbreak.
+If a proportion $x_0$ of the population is susceptible following vaccination, then the  reproduction number under vaccination is $\Rr_V=x_0\Ro$, and the final size equation becomes
+$$\log\left(1-\frac{\Pe}{x_0}\right)+\Ro\Pe=0$$
+Hence the relationship between the proportion initially susceptible and the proportion infected in an epidemic is
+$$x_0=\frac{\Pe}{1-e^{-\Ro\Pe}}$$
+In order to prevent future epidemics, it is necessary that $\Rr_V<1$. Hence, the proportion of the population that must be vaccinated to prevent future outbreaks is $x_0-1/\Ro$.
+
+These formulae were applied at a District Health Board (DHB) level, assuming no mixing between DHBs.
+
+\begin{table}[htdp]
+
+\begin{center}
+
+\begin{tabular}{lrrrr}
+\hline
+DHB	& Size	& Na\"{\i}ve    & 	Attack	& Vacc		\\
+\hline
+Auckland	&	436350	&	52010	&	31159	&	17920	\\Bay of Plenty	&	206000	&	20679	&	8437	&	4585	\\Canterbury	&	482180	&	51357	&	24695	&	13687	\\Capital and Coast	&	283700	&	32625	&	18403	&	10461	\\Counties Manukau	&	469300	&	55544	&	32903	&	18880	\\Hawke's Bay	&	151700	&	15602	&	6846	&	3751	\\Hutt Valley	&	138380	&	15198	&	7836	&	4388	\\Lakes	&	98196	&	10558	&	5192	&	2886	\\MidCentral	&	162560	&	17328	&	8348	&	4628	\\Nelson Marlborough	&	137000	&	13059	&	4411	&	2356	\\Northland	&	151690	&	14921	&	5688	&	3071	\\South Canterbury	&	55620	&	5238	&	1678	&	893	\\Southern	&	297420	&	31607	&	15115	&	8371	\\Tairawhiti &	43650	&	4769	&	2431	&	1359	\\Taranaki	&	109750	&	11473	&	5262	&	2899	\\Waikato	&	359310	&	39402	&	20248	&	11331	\\Wairarapa	&	41112	&	3932	&	1346	&	720	\\Waitemata	&	525550	&	58350	&	30774	&	17291	\\West Coast	&	32151	&	3197	&	1265	&	685	\\Whanganui	&	60120	&	6075	&	2530	&	1378	\\\hline			TOTAL   & 		4241739   & 		462924   & 		234567   & 		131539 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Size: DHB Population, Statistics NZ 2013;		Na\"{\i}ve:		DHB na\"{\i}ve population $\left(x_0\times\text{Size}\right)$;		Attack:		Number infected in DHB in an outbreak of measles $\left(\Pe\right)$;	Vacc:		Number to be vaccinated in DHB to reduce $\Rr_V$ below one  $\left(\left(x_0-1/\Ro\right)\times\text{Size}\right)$.			}
+\label{Table1}
+\end{table}%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{11}
+\bibitem{DHB} Diekmann, O., Heesterbeek, J.A.P. \& T. Britton (2013) Mathematical tools for understanding infectious disease dynamics. Princeton University Press, Princeton.
+\end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
