@@ -26,7 +26,7 @@ library(utils)
 getwd()
 setwd("~/data")
 #unzip("TM_WORLD_BORDERS_SIMPL-0.3.zip")
-world.map <- readOGR(dsn="C:/Users/David Hayman/Documents/data", layer="TM_WORLD_BORDERS_SIMPL-0.3")
+# world.map <- readOGR(dsn="C:/Users/David Hayman/Documents/data", layer="TM_WORLD_BORDERS_SIMPL-0.3")
 
 setwd("C:/Users/David Hayman/Documents/GitHub/measles/maps")
 
@@ -50,8 +50,8 @@ head(monthtravel)
 
 #######
 
-world.ggmap <- fortify(world.map, region = "NAME")
-save(world.ggmap,file="world.ggmap.Rda")
+# world.ggmap <- fortify(world.map, region = "NAME")
+# save(world.ggmap,file="world.ggmap.Rda")
 load("world.ggmap.Rda")
 n <- length(unique(world.ggmap$id))
 
@@ -215,211 +215,133 @@ levels(population$id)[match(c(
     "Venezuela")
 
 ####
+colnames(annualtravel)[1]<-"id"
+levels(annualtravel$id)[match(c(
+  'Samoa, American',
+  'Virgin Islands, British',
+  "Burma (Myanmar)",
+  "China, People's Republic of",
+  "Congo, the Democratic Republic of the",
+  'Falkland Islands',
+  'Faeroe Islands',
+  'French Southern Territories',
+  'Vatican City State',
+  'Hong Kong (Special Administrative Region)',
+  'Iran',
+  'Laos',
+  'Libya',
+  'Macau (Special Administrative Region)',
+  'Gaza Strip/Palestine/West Bank',
+  'Moldova',
+  'St Helena',
+  'St Kitts and Nevis',
+  'St Lucia',
+  'St Maarten (Dutch Part)',
+  'St Pierre and Miquelon',
+  'St Vincent and the Grenadines',
+  'South Georgia and the South Sandwich Islands',
+  'Syria',
+  'Former Yugoslav Republic of Macedonia (FYROM)',
+  'Tanzania',
+  'United States of America',
+  'Virgin Islands, United States',
+  'Wallis and Futuna'),levels(annualtravel$id))] <-
+  c(
+    "American Samoa",
+    "British Virgin Islands",
+    "Burma",
+    "China",
+      "Democratic Republic of the Congo",
+    "Falkland Islands (Malvinas)",
+    "Faroe Islands",
+    "French Southern and Antarctic Lands",
+    "Holy See (Vatican City)",
+    "Hong Kong",
+    "Iran (Islamic Republic of)",
+    "Lao People's Democratic Republic",
+    "Libyan Arab Jamahiriya",
+    "Macau",
+    "Palestine",
+      "Republic of Moldova",
+    "Saint Helena",
+    "Saint Kitts and Nevis",
+    'Saint Lucia',
+    'Saint Martin',
+    'Saint Pierre and Miquelon',
+    'Saint Vincent and the Grenadines',
+    'South Georgia South Sandwich Islands',
+    'Syrian Arab Republic',
+    'The former Yugoslav Republic of Macedonia',
+    "United Republic of Tanzania",
+    "United States",
+    "United States Virgin Islands",
+    "Wallis and Futuna Islands")
 
-id
-5                              American Samoa
-30                              Bouvet Island
-33                     British Virgin Islands
-37                                      Burma
-42                                 Cape Verde
-47                                      China
-48                           Christmas Island
-49                    Cocos (Keeling) Islands
-57                                       Cuba
-59                             Czech Republic
-60           Democratic Republic of the Congo
-72                Falkland Islands (Malvinas)
-73                              Faroe Islands
-79        French Southern and Antarctic Lands
-83                                    Germany
-92                                   Guernsey
-97          Heard Island and McDonald Islands
-98                    Holy See (Vatican City)
-100                                 Hong Kong
-105                Iran (Islamic Republic of)
-108                               Isle of Man
-113                                    Jersey
-117                                  Kiribati
-122          Lao People's Democratic Republic
-127                    Libyan Arab Jamahiriya
-131                                     Macau
+##
+####
+colnames(monthtravel)[1]<-"id"
+levels(monthtravel$id)[match(c(
+  'Samoa, American',
+  'Virgin Islands, British',
+  "Burma (Myanmar)",
+  "China, People's Republic of",
+  "Congo, the Democratic Republic of the",
+  'Falkland Islands',
+  'Faeroe Islands',
+  'French Southern Territories',
+  'Vatican City State',
+  'Hong Kong (Special Administrative Region)',
+  'Iran',
+  'Laos',
+  'Libya',
+  'Macau (Special Administrative Region)',
+  'Gaza Strip/Palestine/West Bank',
+  'Moldova',
+  'St Helena',
+  'St Kitts and Nevis',
+  'St Lucia',
+  'St Maarten (Dutch Part)',
+  'St Pierre and Miquelon',
+  'St Vincent and the Grenadines',
+  'South Georgia and the South Sandwich Islands',
+  'Syria',
+  'Former Yugoslav Republic of Macedonia (FYROM)',
+  'Tanzania',
+  'United States of America',
+  'Virgin Islands, United States',
+  'Wallis and Futuna'),levels(monthtravel$id))] <-
+  c(
+    "American Samoa",
+    "British Virgin Islands",
+    "Burma",
+    "China",
+    "Democratic Republic of the Congo",
+    "Falkland Islands (Malvinas)",
+    "Faroe Islands",
+    "French Southern and Antarctic Lands",
+    "Holy See (Vatican City)",
+    "Hong Kong",
+    "Iran (Islamic Republic of)",
+    "Lao People's Democratic Republic",
+    "Libyan Arab Jamahiriya",
+    "Macau",
+    "Palestine",
+    "Republic of Moldova",
+    "Saint Helena",
+    "Saint Kitts and Nevis",
+    'Saint Lucia',
+    'Saint Martin',
+    'Saint Pierre and Miquelon',
+    'Saint Vincent and the Grenadines',
+    'South Georgia South Sandwich Islands',
+    'Syrian Arab Republic',
+    'The former Yugoslav Republic of Macedonia',
+    "United Republic of Tanzania",
+    "United States",
+    "United States Virgin Islands",
+    "Wallis and Futuna Islands")
 
-145                                    Monaco
-146                                  Mongolia
-147                                Montenegro
-148                                Montserrat
-149                                   Morocco
-150                                Mozambique
-151                                   Namibia
-152                                     Nauru
-153                                     Nepal
-154                               Netherlands
-155                      Netherlands Antilles
-156                             New Caledonia
-157                               New Zealand
-158                                 Nicaragua
-159                                     Niger
-160                                   Nigeria
-161                                      Niue
-162                            Norfolk Island
-163                  Northern Mariana Islands
-164                                    Norway
-165                                      Oman
-166                                  Pakistan
-167                                     Palau
-168                                 Palestine
-169                                    Panama
-170                          Papua New Guinea
-171                                  Paraguay
-172                                      Peru
-173                               Philippines
-174                          Pitcairn Islands
-175                                    Poland
-176                                  Portugal
-177                               Puerto Rico
-178                                     Qatar
-179                       Republic of Moldova
-180                                   Reunion
-181                                   Romania
-182                                    Russia
-183                                    Rwanda
-184                          Saint Barthelemy
-185                              Saint Helena
-186                     Saint Kitts and Nevis
-187                               Saint Lucia
-188                              Saint Martin
-189                 Saint Pierre and Miquelon
-190          Saint Vincent and the Grenadines
-191                                     Samoa
-192                                San Marino
-193                     Sao Tome and Principe
-194                              Saudi Arabia
-195                                   Senegal
-196                                    Serbia
-197                                Seychelles
-198                              Sierra Leone
-199                                 Singapore
-200                                  Slovakia
-201                                  Slovenia
-202                           Solomon Islands
-203                                   Somalia
-204                              South Africa
-205      South Georgia South Sandwich Islands
-206                                     Spain
-207                                 Sri Lanka
-208                                     Sudan
-209                                  Suriname
-210                                  Svalbard
-211                                 Swaziland
-212                                    Sweden
-213                               Switzerland
-214                      Syrian Arab Republic
-215                                    Taiwan
-216                                Tajikistan
-217                                  Thailand
-218 The former Yugoslav Republic of Macedonia
-219                               Timor-Leste
-220                                      Togo
-221                                   Tokelau
-222                                     Tonga
-223                       Trinidad and Tobago
-224                                   Tunisia
-225                                    Turkey
-226                              Turkmenistan
-227                  Turks and Caicos Islands
-228                                    Tuvalu
-229                                    Uganda
-230                                   Ukraine
-231                      United Arab Emirates
-232                            United Kingdom
-233               United Republic of Tanzania
-234                             United States
-235      United States Minor Outlying Islands
-236              United States Virgin Islands
-237                                   Uruguay
-238                                Uzbekistan
-239                                   Vanuatu
-240                                 Venezuela
-241                                  Viet Nam
-242                 Wallis and Futuna Islands
-243                            Western Sahara
-244                                     Yemen
-245                                    Zambia
-246                                  Zimbabwe
-Countries
 
-[33] Burma (Myanmar)
-[35] Cabo Verde
-[43] China, People's Republic of                   
-[45] Cocos (Keeling) Islands                    
-[55] Curacao                                       Cyprus                                       
-[57] Czech Republic                                Czechoslovakia                               
-Faeroe Islands                               
-[71] Falkland Islands                              Former Yugoslav Republic of Macedonia (FYROM)
-French Southern Territories                  
-[81] Gaza Strip/Palestine/West Bank                
-[83] Germany                                       Germany, Democratic Republic of              
-Hong Kong (Special Administrative Region)    
-[103] Iran                                          Israel                                       
-Kosovo                                       
-[119] Laos                                          
-Libya                                        Macau (Special Administrative Region)        
-Mexico                                       
-Moldova                                      
-
-[143] Monaco                                        Mongolia                                     
-[145] Montenegro                                    Montserrat                                   
-[147] Morocco                                       Mozambique                                   
-[149] Namibia                                       Nauru                                        
-[151] Nepal                                         Netherlands                                  
-[153] Netherlands Antilles                          New Caledonia                                
-[155] New Zealand                                   Nicaragua                                    
-[157] Niger                                         Nigeria                                      
-[159] Niue                                          Norfolk Island                               
-[161] Northern Mariana Islands                      Norway                                       
-[163] Oman                                          Pakistan                                     
-[165] Palau                                         Panama                                       
-[167] Papua New Guinea                              Paraguay                                     
-[169] Peru                                          Philippines                                  
-[171] Pitcairn                                      Poland                                       
-[173] Portugal                                      Puerto Rico                                  
-[175] Qatar                                         Reunion                                      
-[177] Romania                                       Russia                                       
-[179] Rwanda                                        Samoa                                        
-[181] Samoa, American                               San Marino                                   
-[183] Sao Tome and Principe                         Saudi Arabia                                 
-[185] Senegal                                       Serbia                                       
-[187] Seychelles                                    Sierra Leone                                 
-[189] Singapore                                     Slovakia                                     
-[191] Slovenia                                      Solomon Islands                              
-[193] Somalia                                       South Africa                                 
-[195] South Georgia and the South Sandwich Islands  South Sudan                                  
-[197] Spain                                         Sri Lanka                                    
-[199] St Helena                                     St Kitts and Nevis                           
-[201] St Lucia                                      St Maarten (Dutch Part)                      
-[203] St Pierre and Miquelon                        St Vincent and the Grenadines                
-[205] Sudan                                         Suriname                                     
-[207] Swaziland                                     Sweden                                       
-[209] Switzerland                                   Syria                                        
-[211] Taiwan                                        Tajikistan                                   
-[213] Tanzania                                      Thailand                                     
-[215] Timor-Leste                                   Togo                                         
-[217] Tokelau                                       Tonga                                        
-[219] Trinidad and Tobago                           Tunisia                                      
-[221] Turkey                                        Turkmenistan                                 
-[223] Turks and Caicos Islands                      Tuvalu                                       
-[225] Uganda                                        Ukraine                                      
-[227] Union of Soviet Socialist Republics           United Arab Emirates                         
-[229] United Kingdom                                United States Minor Outlying Islands         
-[231] United States of America                      Uruguay                                      
-[233] Uzbekistan                                    Vanuatu                                      
-[235] Vatican City State                            Venezuela                                    
-[237] Viet Nam                                      Virgin Islands, British                      
-[239] Virgin Islands, United States                 Wallis and Futuna                            
-[241] Western Sahara                                Yemen                                        
-[243] Yemen, Democratic                             Yugoslavia/Serbia and Montenegro             
-[245] Zambia                                        Zimbabwe                                     
-[247] Total 
 
 m1 <- merge(incidence, cover, by.x = "id",by.y="id")
 m2 <- merge(cover, m1, by.x = "id",by.y="id")
