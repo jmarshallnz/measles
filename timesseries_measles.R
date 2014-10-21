@@ -174,3 +174,64 @@ xlim <- range(change[,1])
 par(fig = c(.6, 1, 0.6, 1), mar=c(0,0,0,0), new=TRUE)
 plot(change[,1],change[,4],type="l",xlab="Year",ylab="",
      ylim=c(0,max(change[,4])),bg="grey",add=T,bty="n")
+
+## set wd to get data
+nzers<-read.csv("monthtravel.csv",header=T)
+head(nzers)
+names(nzers)
+dim(nzers)
+
+plot(as.numeric(nzers[247,2:79]),type="l",ylim=c(min(as.numeric(nzers[247,2:79])),max(ttimes$res)),
+     )
+points(ttimes$res,add=T,type="l",col="red")
+
+par(mar = c(7, 4, 4, 2) + 0.1)
+plot(as.numeric(nzers[247,8:79]),type="l",xaxt="n",xlab="",ylab="Numbers",
+     ,ylim=c(min(as.numeric(nzers[247,2:79])),max(ttimes$res)))
+points(ttimes$res,type="l",col="red")
+# Set up x axis with tick marks alone
+# Create arbitrary text
+labels <- paste(ttimes$mydate, sep = " ")
+axis(side=1, at=1:71, labels=labels,las=2)
+legend("topleft",c("New Zealanders","Non-New Zealanders"),
+       bty="n",col=c("black","red"),lty=1)
+# check same length
+length(nzers[247,8:78])
+length(ttimes$res)
+
+nz<-nzers[247,8:78]
+im<-ttimes$res
+newd<-rbind(nz,im)
+rownames(newd)<-c("nz","im")
+colnames(newd)<-ttimes$mydate
+sum<-colSums(newd)
+newd<-rbind(sum,newd)
+rownames(newd)<-c("total","nz","im")
+
+pdf(paste("nzers.pdf"), width=7, height=5)
+plot(as.numeric(newd[1,]),type="l",xaxt="n",xlab="",ylab="Numbers",
+     ,ylim=c(min(newd),max(newd)))
+points(as.numeric(newd[2,]),type="l",col="red")
+points(as.numeric(newd[3,]),type="l",col="black",lty=2)
+# Set up x axis with tick marks alone
+# Create arbitrary text
+labels <- paste(colnames(newd), sep = " ")
+axis(side=1, at=seq(from=1,to=71,by=2), labels=labels[seq(from=1,to=71,by=2)],las=2)
+abline(v=seq(from=6,to=71,by=12),lty=3,col="grey")
+legend("topleft",bg="white",c("Total","New Zealanders","Non-New Zealanders"),
+       col=c("black","red","black"),lty=c(1,1,2),box.col=rgb(0,0,0,alpha=0.5) )
+dev.off()
+
+plot(as.numeric(newd[1,]),type="l",xaxt="n",xlab="",ylab="Numbers",
+     ,ylim=c(min(newd),max(newd)))
+points(as.numeric(newd[2,]),type="l",col="red")
+points(as.numeric(newd[3,]),type="l",col="black",lty=2)
+# Set up x axis with tick marks alone
+# Create arbitrary text
+labels <- paste(colnames(newd), sep = " ")
+axis(side=1, at=seq(from=1,to=71,by=2), labels=labels[seq(from=1,to=71,by=2)],las=2)
+abline(v=seq(from=6,to=71,by=12),lty=3,col="grey")
+legend("topleft",bg="white",c("Total","New Zealanders","Non-New Zealanders"),
+       col=c("black","red","black"),lty=c(1,1,2),box.col=rgb(0,0,0,alpha=0.5) )
+# check same length
+
