@@ -426,8 +426,6 @@ head(newpop2)
 
 mp <- merge(m4,newpop2, by.x = "id",by.y="id",all=T)
 
-dim(mp)
-head(mp)
 dpdf <- data.frame(id = mp$id,
                   incidence = mp$X2012.x/mp$Numeric.Value*1000, ## note 2012 best data
                   cover = mp$X2012.y,## 2012 best data
@@ -479,3 +477,106 @@ topvaccine[1:10,c(1,3)]
 toprisk <- dpdf[order(-dpdf$risk),] 
 toprisk[1:10,c(1,5)]
 
+##
+
+colnames(annualtravel)[2:7]<-c("nzX2008","nzX2009","nzX2010","nzX2011","nzX2012","nzX2013")
+
+mpNZ <- merge(mp,annualtravel, by.x = "id",by.y="id",all=T)
+
+dim(mpNZ)
+
+
+dpdfNZ <- data.frame(id = mpNZ$id,
+                   incidence = mpNZ$X2012.x/mpNZ$Numeric.Value*1000, ## note 2012 best data
+                   cover = mpNZ$X2012.y,## 2012 best data
+                   immigration = mpNZ$nzX2012) 
+
+dpdfNZ$risk <- with(dpdfNZ, mpNZ$X2012.x/mpNZ$Numeric.Value*1000* mpNZ$nzX2012)
+head(dpdfNZ)
+
+head(dpdfNZ)
+plot(dpdfNZ$id,dpdfNZ$immigration)
+
+dpdfNZ <- subset(dpdfNZ,id != "Total")
+dpdfNZ <- subset(dpdfNZ,id != "ASIA")
+
+nznp1<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Travel") +
+  geom_map(aes(fill = immigration), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+
+nznp2<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Incidence (per million)") +
+  geom_map(aes(fill = incidence), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+
+nznp3<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Vaccination cover (%)") +
+  geom_map(aes(fill = cover), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
+
+grid.arrange(nznp1, nznp2, nznp3, ncol=3, main="Measles")
+
+#write.csv(dpdf, "mapdata.csv", row.names=FALSE,col.names=T)
+#dpdf<-read.csv("mapdata.csv",header=T)
+
+nznp4<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("NZ Risk 2012") +
+  geom_map(aes(fill = risk), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
+nznp4
+
+grid.arrange(nznp4, nznp1, nznp2, nznp3, ncol=2, main="Measles (2012)")
+
+##
+
+dpdfNZTot <- data.frame(id = mpNZ$id,
+                     incidence = mpNZ$X2012.x/mpNZ$Numeric.Value*1000, ## note 2012 best data
+                     cover = mpNZ$X2012.y,## 2012 best data
+                     immigration = mpNZ$nzX2012+mpNZ$Immigration) 
+
+dpdfNZTot$risk <- with(dpdfNZTot, mpNZ$X2012.x/mpNZ$Numeric.Value*1000* (mpNZ$Immigration+mpNZ$nzX2012))
+head(dpdfNZTot)
+
+plot(dpdfNZTot$id,dpdfNZTot$immigration)
+
+dpdfNZTot <- subset(dpdfNZTot,id != "Total")
+dpdfNZTot <- subset(dpdfNZTot,id != "ASIA")
+
+totnp1<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Travel") +
+  geom_map(aes(fill = immigration), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+
+totnp2<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Incidence (per million)") +
+  geom_map(aes(fill = incidence), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+
+totnp3<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Vaccination cover (%)") +
+  geom_map(aes(fill = cover), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
+
+grid.arrange(totnp1, totnp2, totnp3, ncol=3, main="Measles")
+
+#write.csv(dpdf, "mapdata.csv", row.names=FALSE,col.names=T)
+#dpdf<-read.csv("mapdata.csv",header=T)
+
+totnp4<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("NZ Risk 2012") +
+  geom_map(aes(fill = risk), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
+totnp4
+
+grid.arrange(totnp4, totnp1, totnp2, totnp3, ncol=2, main="Measles (2012)")
+
+##
+
+grid.arrange(np2,np3, ncol=1, main="Measles incidence and vaccination cover (2012)")
+
+grid.arrange(np1, np4, ncol=1, main="Foreign travellers to New Zealand and risk (Travellers * Country incidence)")
+
+grid.arrange(nznp1, nznp4, ncol=1, main="New Zealand travellers and risk (Travellers * Country incidence)")
+
+grid.arrange(totnp1, totnp4, main="Total travellers and risk (Travellers * Country incidence)")
