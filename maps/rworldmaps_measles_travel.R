@@ -436,30 +436,55 @@ head(dpdf)
 np1<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Immigration") +
   geom_map(aes(fill = immigration), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  xlab("longitude") +
+  ylab("latitude") +
+ # theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+pdf(paste("np1.pdf"), width=10, height=5)
+np1
+dev.off()
 
 np2<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Incidence (per million)") +
   geom_map(aes(fill = incidence), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  xlab("longitude") +
+  ylab("latitude") +
+ # theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+pdf(paste("np2.pdf"), width=10, height=5)
+np2
+dev.off()
 
 np3<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Vaccination cover (%)") +
   geom_map(aes(fill = cover), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  xlab("longitude") +
+  ylab("latitude") +
+  # theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
+pdf(paste("np3.pdf"), width=10, height=5)
+np3
+dev.off()
 
 grid.arrange(np1, np2, np3, ncol=3, main="Measles")
 
 dpdf$risk <- with(dpdf, mp$X2012.x/mp$Numeric.Value*1000* mp$Immigration)
 head(dpdf)
 write.csv(dpdf, "mapdata.csv", row.names=FALSE,col.names=T)
+write.csv(dpdf, "mapdata_immigration.csv", row.names=FALSE,col.names=T)
 dpdf<-read.csv("mapdata.csv",header=T)
 
-np4<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Risk 2012") +
+np4<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Risk  (Immigrant travel)") +
   geom_map(aes(fill = risk), map =world.ggmap) +
+  xlab("longitude") +
+  ylab("latitude") +
+ # theme(text = element_text(size=30))+
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
+
+pdf(paste("np4.pdf"), width=10, height=5)
 np4
+dev.off()
 
 grid.arrange(np4, np1, np2, np3, ncol=2, main="Measles (2012)")
 
@@ -503,28 +528,56 @@ dpdfNZ <- subset(dpdfNZ,id != "ASIA")
 nznp1<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Travel") +
   geom_map(aes(fill = immigration), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  xlab("longitude") +
+  ylab("latitude") +
+#  theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+
+pdf(paste("nznp1.pdf"), width=10, height=5)
+nznp1
+dev.off()
 
 nznp2<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Incidence (per million)") +
   geom_map(aes(fill = incidence), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  xlab("longitude") +
+  ylab("latitude") +
+#  theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+
+pdf(paste("nznp2.pdf"), width=10, height=5)
+nznp2
+dev.off()
 
 nznp3<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Vaccination cover (%)") +
   geom_map(aes(fill = cover), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  xlab("longitude") +
+  ylab("latitude") +
+#  theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
+
+pdf(paste("nznp3.pdf"), width=10, height=5)
+nznp3
+dev.off()
 
 grid.arrange(nznp1, nznp2, nznp3, ncol=3, main="Measles")
 
-#write.csv(dpdf, "mapdata.csv", row.names=FALSE,col.names=T)
+write.csv(dpdfNZ, "mapdata_nzers.csv", row.names=FALSE,col.names=T)
 #dpdf<-read.csv("mapdata.csv",header=T)
 
-nznp4<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("NZ Risk 2012") +
+nznp4<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Risk (New Zealander travel)") +
   geom_map(aes(fill = risk), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  xlab("longitude") +
+  ylab("latitude") +
+#  theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
+
+pdf(paste("nznp4.pdf"), width=10, height=5)
 nznp4
+dev.off()
+
 
 grid.arrange(nznp4, nznp1, nznp2, nznp3, ncol=2, main="Measles (2012)")
 
@@ -546,28 +599,56 @@ dpdfNZTot <- subset(dpdfNZTot,id != "ASIA")
 totnp1<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Travel") +
   geom_map(aes(fill = immigration), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  xlab("longitude") +
+  ylab("latitude") +
+ # theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+
+pdf(paste("totnp1.pdf"), width=10, height=5)
+totnp1
+dev.off()
 
 totnp2<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Incidence (per million)") +
   geom_map(aes(fill = incidence), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  xlab("longitude") +
+  ylab("latitude") +
+#  theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+
+pdf(paste("totnp2.pdf"), width=10, height=5)
+totnp2
+dev.off()
 
 totnp3<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Vaccination cover (%)") +
   geom_map(aes(fill = cover), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  xlab("longitude") +
+  ylab("latitude") +
+  #theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
+
+pdf(paste("totnp3.pdf"), width=10, height=5)
+totnp3
+dev.off()
 
 grid.arrange(totnp1, totnp2, totnp3, ncol=3, main="Measles")
 
-#write.csv(dpdf, "mapdata.csv", row.names=FALSE,col.names=T)
+write.csv(dpdfNZTot, "mapdata_tot.csv", row.names=FALSE,col.names=T)
 #dpdf<-read.csv("mapdata.csv",header=T)
 
-totnp4<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("NZ Risk 2012") +
+totnp4<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Risk (All travel)") +
   geom_map(aes(fill = risk), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+  xlab("longitude") +
+  ylab("latitude") +
+#  theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
+
+pdf(paste("totnp4.pdf"), width=10, height=5)
 totnp4
+dev.off()
+
 
 grid.arrange(totnp4, totnp1, totnp2, totnp3, ncol=2, main="Measles (2012)")
 
