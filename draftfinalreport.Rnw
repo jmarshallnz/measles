@@ -193,11 +193,8 @@ latex(immigration, file="", table.env=FALSE,rowname=NULL)
 \label{table:immigration12}
 \end{table}
 
-%%%%%%%%%%%%%%%%%%%
-% INSERT NZ Travelers here
-%%%%%%%%%%%%%%%%%%
-
-
+%%%%%%%%%%%%%%%%%%%%%
+% INSERT NZ Travlers here
 %%%%%%%%%%%%%%%%%%%
 % INSERT Total Travelers here
 %%%%%%%%%%%%%%%%%%
@@ -673,24 +670,26 @@ np4<-ggplot(dpdf, aes(map_id = id)) +
 #np4
 @
 
-\begin{figure}[h!]
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np1)
-@
-\end{center}
-\caption{Immigration to New Zealand 2012}
-\label{fig:immigration12}
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{np1.pdf}
+     \caption{Non-New Zealander travel}
+     \label{fig:immigration12}
 \end{figure}
 
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{nznp1.pdf}
+     \caption{New Zealand travellers 2012}
+     \label{fig:nztravellers}
+\end{figure}
 
-%%%%%%%%%%%%%%%%%%%
-% INSERT NZ Travellers here
-%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%
-% INSERT Total Travelers here
-%%%%%%%%%%%%%%%%%%
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{totnp1.pdf}
+     \caption{Total travellers 2012}
+     \label{fig:tottravellers}
+\end{figure}
 
 
 \begin{figure}[h!]
@@ -714,23 +713,25 @@ print(np3)
 \end{figure}
 
 \begin{figure}[h!]
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np4)
-@
-\end{center}
+ \centering
+ \includegraphics[width=0.8\textwidth]{np4.pdf}
 \caption{Risk map from measles incidence and immigration rates}
 \label{fig:risk12}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%
-% INSERT NZ risk here
-%%%%%%%%%%%%%%%%%%
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{nznp4.pdf}
+     \caption{Risk map from measles incidence and New Zealander travel rates}
+     \label{fig:nzrisk12}
+\end{figure}
 
-%%%%%%%%%%%%%%%%%%%
-% INSERT Total risk here
-%%%%%%%%%%%%%%%%%%
-
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{totnp4.pdf}
+     \caption{Risk map from measles incidence and total travel rates}
+     \label{fig:totrisk12}
+\end{figure}
 
 %%%%%%%%%%% REVISE FIGURE %%%%%%%%%%%
 \begin{figure}[h!]
@@ -769,11 +770,154 @@ acf(ttimes$res,lag.max = length(ttimes$res),plot=T,main="")
 \label{fig:trendimmigration}
 \end{figure}
 
-%%%%%%%%% ADD NAIVE ## BY DHB HERE
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{naive_map.pdf}
+     \caption{Numbers of naive individuals per District Health Board}
+     \label{fig:naive_map}
+\end{figure}
 
-%%%%%%%%%%%%%%%%%%%
-% ADD REPORT # 2 RISK ANAYSIS HERE
-%%%%%%%%%%%%%%%%%%
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb1.pdf}
+     \caption{Numbers of naive individuals per age class, Northland District Health Board}
+     \label{fig:Northland}
+\end{figure}
+
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb2.pdf}
+     \caption{Numbers of naive individuals per age class, Waitemata District Health Board}
+     \label{fig:Waitemata}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb3.pdf}
+     \caption{Numbers of naive individuals per age class, Auckland District Health Board}
+     \label{fig:Auckland}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb4.pdf}
+     \caption{Numbers of naive individuals per age class, Counties Manukau District Health Board}
+     \label{fig:Counties_Manukau}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb5.pdf}
+     \caption{Numbers of naive individuals per age class, Waikato District Health Board}
+     \label{fig:Waikato}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb6.pdf}
+     \caption{Numbers of naive individuals per age class, Lakes District Health Board}
+     \label{fig:Lakes}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb7.pdf}
+     \caption{Numbers of naive individuals per age class, Bay of Plenty District Health Board}
+     \label{fig:BayofPlenty}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb8.pdf}
+     \caption{Numbers of naive individuals per age class, Tairawhiti District Health Board}
+     \label{fig:Tairawhiti}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb9.pdf}
+     \caption{Numbers of naive individuals per age class, Taranaki District Health Board}
+     \label{fig:Taranaki}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb10.pdf}
+     \caption{Numbers of naive individuals per age class, Hawke's Bay District Health Board}
+     \label{fig:HawkesBay}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb11.pdf}
+     \caption{Numbers of naive individuals per age class, Whanganui District Health Board}
+     \label{fig:Whanganui}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb12.pdf}
+     \caption{Numbers of naive individuals per age class, Midcentral District Health Board}
+     \label{fig:Midcentral}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb13.pdf}
+     \caption{Numbers of naive individuals per age class, Hutt District Health Board}
+     \label{fig:Hutt}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb14.pdf}
+     \caption{Numbers of naive individuals per age class, Capital and Coast District Health Board}
+     \label{fig:CapitalandCoast}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb15.pdf}
+     \caption{Numbers of naive individuals per age class, Wairarapa District Health Board}
+     \label{fig:Wairarapa}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb16.pdf}
+     \caption{Numbers of naive individuals per age class, Nelson Marlborough District Health Board}
+     \label{fig:NelsonMarlborough}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb16.pdf}
+     \caption{Numbers of naive individuals per age class, West Coast District Health Board}
+     \label{fig:WestCoast}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb17.pdf}
+     \caption{Numbers of naive individuals per age class, Canterbury District Health Board}
+     \label{fig:Canterbury}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb18.pdf}
+     \caption{Numbers of naive individuals per age class, South Canterbury District Health Board}
+     \label{fig:SouthCanterbury}
+\end{figure}
+
+\begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{dhb19.pdf}
+     \caption{Numbers of naive individuals per age class, Southern District Health Board}
+     \label{fig:Southern}
+\end{figure}
+
 \subsection{Regression analyses results}
 \label{sub:regression_results}
 
