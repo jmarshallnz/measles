@@ -1,0 +1,363 @@
+
+\documentclass{article}
+
+\usepackage{times}
+\usepackage{hyperref}
+\usepackage{tikz}
+%\usepackage{bibunits}
+\usepackage{natbib}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{todonotes}
+\usepackage{pdflscape}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{rotating}
+\usepackage{threeparttable}
+\usepackage{blindtext}
+\usepackage{dcolumn}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{caption2}
+\usepackage{fancyhdr}
+\newcommand{\vecA}{\mathbf{A}}
+\newcommand{\vecB}{\mathbf{B}}
+\newcommand{\vecC}{\mathbf{C}}
+\newcommand{\vecD}{\mathbf{D}}
+\newcommand{\vecE}{\mathbf{E}}
+\newcommand{\vecF}{\mathbf{F}}
+\newcommand{\vecH}{\mathbf{H}}
+\newcommand{\vecI}{\mathbf{I}}
+\newcommand{\vecJ}{\mathbf{J}}
+\newcommand{\vecK}{\mathbf{K}}
+\newcommand{\vecM}{\mathbf{M}}
+\newcommand{\vecN}{\mathbf{N}}
+\newcommand{\vecP}{\mathbf{P}}
+\newcommand{\vecQ}{\mathbf{Q}}
+\newcommand{\vecS}{\mathbf{S}}
+\newcommand{\vecT}{\mathbf{T}}
+\newcommand{\vecW}{\mathbf{W}}
+\newcommand{\vecZ}{\mathbf{Z}}
+\newcommand{\vecb}{\mathbf{b}}
+\newcommand{\vecc}{\mathbf{c}}
+\newcommand{\vece}{\mathbf{e}}
+\newcommand{\vecf}{\mathbf{f}}
+\newcommand{\vecg}{\mathbf{g}}
+\newcommand{\vech}{\mathbf{h}}
+\newcommand{\veci}{\mathbf{i}}
+\newcommand{\vecr}{\mathbf{r}}
+\newcommand{\vecu}{\mathbf{u}}
+\newcommand{\vecv}{\mathbf{v}}
+\newcommand{\vecw}{\mathbf{w}}
+\newcommand{\vecx}{\mathbf{x}}
+\newcommand{\vecy}{\mathbf{y}}
+\newcommand{\vecz}{\mathbf{z}}
+\newcommand{\Ach}{\mathcal{H}}
+\newcommand{\Ell}{\mathcal{L}}
+\newcommand{\En}{\mathcal{N}}
+\newcommand{\Pe}{\mathcal{P}}
+\newcommand{\Ro}{\mathcal{R}_0}
+\newcommand{\Rc}{\mathcal{R}_c}
+\newcommand{\Rr}{\mathcal{R}}
+\newcommand{\Qu}{\mathcal{Q}}
+\newcommand{\Te}{\mathcal{T}}
+\newcommand{\Ve}{\mathcal{V}}
+\newcommand{\Dub}{\mathcal{W}}
+\newcommand{\Zed}{\mathcal{Z}}
+\newcommand{\Exp}{\mathbb{E}}
+\newcommand{\de}{\mbox{d}}
+\newcommand{\wrt}{\,\mbox{d}}
+\newcommand{\veczero}{\mathbf{0}}
+\newcommand{\vecone}{\mathbf{1}}
+\newcommand{\vecalpha}{\mbox{\boldmath$\alpha$}}
+\newcommand{\vectheta}{\mbox{\boldmath$\theta$}}
+\newcommand{\vecphi}{\mbox{\boldmath$\phi$}}
+\newcommand{\vecPhi}{\mbox{\boldmath$\Phi$}}
+\newcommand{\vecSigma}{\mbox{\boldmath$\Sigma$}}
+\newcommand{\vecimath}{\mbox{\boldmath$\imath$}}
+\newcommand{\cosech}{\mbox{cosech}\,}
+\newcommand{\sign}{\mbox{sign}\,}
+\newcommand{\trace}{\mbox{trace}\,}
+\newcommand{\Inf}{\mbox{Inf}\,}
+
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\cov}{cov}
+
+\usepackage{Sweave}
+\begin{document}
+\input{draftfinalreport-concordance}
+
+\title{Interim report 2\\ Measles risk assessment, modelling and benefit--cost analysis\\ \vspace{2 mm} {\large David T S Hayman, Tim Carpenter,\\ Jonathan C Marshall, Mick Roberts, Nigel P French}}
+\author{mEpiLab and EpiCentre,\\ Infectious Diseases Research Centre,\\
+Massey University,\\
+Palmerston North 4442,\\
+New Zealand\\
+\href{mailto: D.T.S.Hayman@massey.ac.nz}{D.T.S.Hayman@massey.ac.nz}}  %\texttt formats the text to a typewriter style font
+\maketitle
+
+
+\section{Introduction}
+
+The well-known equation for the final size of an epidemic in a homogeneously mixing susceptible population is \citep{diekmann13}
+$$\log\left(1-\Pe\right)+\Ro\Pe=0$$
+where $\Ro$ is the basic reproduction number and $\Pe$ is the proportion of the population infected over the course of the outbreak.
+If a proportion $x_0$ of the population is susceptible following vaccination, then the  reproduction number under vaccination is $\Rr_V=x_0\Ro$, and the final size equation becomes
+$$\log\left(1-\frac{\Pe}{x_0}\right)+\Ro\Pe=0$$
+Hence the relationship between the proportion initially susceptible and the proportion infected in an epidemic is
+$$x_0=\frac{\Pe}{1-e^{-\Ro\Pe}}$$
+In order to prevent future epidemics, it is necessary that $\Rr_V<1$. Hence, the proportion of the population that must be vaccinated to prevent future outbreaks is $x_0-1/\Ro$.
+
+These formulae were applied at a District Health Board (DHB) level, assuming no mixing between DHBs.
+
+\begin{table}[htdp]
+
+\begin{center}
+
+\begin{tabular}{lrrrr}
+\hline
+DHB  & Size	& Na\"{\i}ve    & 	Attack	& Vacc		\\
+\hline
+Auckland	&	436350	&	52010	&	31159	&	17920	\\
+Bay of Plenty	&	206000	&	20679	&	8437	&	4585	\\
+Canterbury	&	482180	&	51357	&	24695	&	13687	\\
+Capital and Coast	&	283700	&	32625	&	18403	&	10461	\\
+Counties Manukau	&	469300	&	55544	&	32903	&	18880	\\
+Hawke's Bay	&	151700	&	15602	&	6846	&	3751	\\
+Hutt Valley	&	138380	&	15198	&	7836	&	4388	\\
+Lakes	&	98196	&	10558	&	5192	&	2886	\\
+MidCentral	&	162560	&	17328	&	8348	&	4628	\\
+Nelson Marlborough	&	137000	&	13059	&	4411	&	2356	\\
+Northland	&	151690	&	14921	&	5688	&	3071	\\
+South Canterbury	&	55620	&	5238	&	1678	&	893	\\
+Southern	&	297420	&	31607	&	15115	&	8371	\\
+Tairawhiti &	43650	&	4769	&	2431	&	1359	\\
+Taranaki	&	109750	&	11473	&	5262	&	2899	\\
+Waikato	&	359310	&	39402	&	20248	&	11331	\\
+Wairarapa	&	41112	&	3932	&	1346	&	720	\\
+Waitemata	&	525550	&	58350	&	30774	&	17291	\\
+West Coast	&	32151	&	3197	&	1265	&	685	\\
+Whanganui	&	60120	&	6075	&	2530	&	1378	\\
+\hline			
+TOTAL   & 		4241739   & 		462924   & 		234567   & 		131539 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Size: DHB Population, Statistics NZ 2013;		
+Na\"{\i}ve:		DHB na\"{\i}ve population $\left(x_0\times\text{Size}\right)$;		
+Attack:		Number infected in DHB in an outbreak of measles $\left(\Pe\right)$;	
+Vacc:		Number to be vaccinated in DHB to reduce $\Rr_V$ below one  $\left(\left(x_0-1/\Ro\right)\times\text{Size}\right)$.			}
+\label{Table1}
+\end{table}%
+
+
+\begin{thebibliography}{}
+\bibliographystyle{plain}
+
+\bibitem[Agur et al.(1993)]{agur93}
+Agur, Z., L. Cojocaru, G. Mazor, R.~M. Anderson and Y.~L. Danon (1993).
+\newblock Pulse mass measles vaccination across age cohorts.
+\newblock \emph{Proceedings of the National Academy of Sciences USA}, 90, 11698--11702.
+
+\bibitem[Anderson and May(1991)]{anderson91}
+Anderson, R.~M. and R.~M. May (1991).
+\newblock \emph{Infectious diseases of humans: dynamics and control}. Oxford: Oxford University Press.
+
+\bibitem[Anon.(2002a)]{anon2a}
+Anon. (2002a).
+\newblock \emph{Immunisation handbook}
+\newblock Wellington: Ministry of Health. pp.~131--146.
+
+\bibitem[Anon.(2002b)]{anon2b}
+Anon. (2002b).
+\newblock \emph{Infectious diseases in livestock}
+\newblock The Royal Society. pp.~68.
+
+\bibitem[Babad et al.(1995)]{babad95}
+Babad, H.~R., D.~J. Nokes, N.~J. Gay, E. Miller, P. Morgan-Capner, and R.~M. Anderson (1995).
+\newblock Predicting the impact of measles vaccination in England and Wales: model validation and analysis of policy options.
+\newblock \emph{Epidemiology and Infection}, 114, 319--344.
+
+\bibitem[Bae et al.(2013)]{bae13}
+Bae, G.~R, Y.~J. Choe, U.~Y. Go, Y.~I. Kim, and J.~K. Lee (2013). 
+\newblock Economic analysis of measles elimination program in the Republic of Korea, 2001: A cost benefit analysis study.
+\newblock \emph {Vaccine}, 31, 2661--2666.
+
+\bibitem[Carabin et al.(2002)]{carabin2}
+Carabin, H., W.~J. Edmunds, U. Kou, S. van den Hof, and V.~H. Nguyen (2002). 
+\newblock Measles in industrialized countries: a review of the average costs of adverse events and measles cases.
+\newblock \emph{BMC Public Health}, 2, 22.
+
+\bibitem[Carabin et al.(2003)]{carabin3}
+Carabin, H., W.~J. Edmunds, M. Gyldmark, P. Beutels, D. Levy-Bruhl, H. Salo, U.~K. and Griffiths (2003)
+\newblock The cost of measles in industrialised countries.
+\newblock \emph{Vaccine}, 21,4167--4177.
+
+\bibitem[Clements and Hussey(2004]{clements4}
+Clements, C.~J. and G.~D. Hussey (2004).
+\newblock Chapter 4: Measles.
+\newblock In \emph{The Global Epidemiology of Infectious Diseases},  Murray, C., A.~D. Lopez, and C.~D. Mathers, (eds.), Geneva.
+World Health Organization, pp.~391.
+
+\bibitem[Coleman et al.(2012)]{coleman12}
+Coleman, M.~S., L. Garbat-Welch, H. Burke, M. Weinberg, K. Humbaugh, A. Tindall, and J. Cambron (2012).
+\newblock Direct costs of a single case of refugee-imported measles in Kentucky.
+\newblock \emph{Vaccine}, 30,317--321.
+
+\bibitem[Dayan et al.(2005)]{dayan5}
+G.~H. Dayan, I.~R. Ortega-Sanchez, C.~W. LeBaron, M.~P. Quinlisk, and the Iowa Measles Response Team (2005).
+\newblock The cost of containing one case of measles: the economic impact on the public health infrastructure - Iowa, 2004.
+\newblock \emph{Pediatrics}, 116:e1; DOI:10/1542/peds.2004-2512.
+
+\bibitem[Diekmann et al.(2000)]{diekmann0}
+Diekmann, O. and  J.~A.~P. Heesterbeek (2000).
+\newblock \emph{Mathematical epidemiology of infectious diseases: model building, analysis and interpretation}.
+Chichester: Wiley.
+
+\bibitem[Diekmann et al.(2013)]{diekmann13}
+Diekmann, O.,  J.~A.~P. Heesterbeek, and T. Britton (2013).
+\newblock \emph{Mathematical tools for understanding infectious disease dynamics}.
+Princeton: Princeton University Press.
+
+\bibitem[Edmunds et al.(2000)]{edmunds0}
+Edmunds, W.~J., N.~J. Gay, M. Kretzschmar, R.~G. Pebody and H. Wachman (2000).
+\newblock The pre-vaccination epidemiology of measles, mumps and rubella in Europe: implications for modelling studies.
+\newblock \emph{Epidemiology and Infection}, 125, 635--650.
+
+\bibitem[Filia et al.(2007)]{filia7}
+Filia, A., A. Brenna, A. Pana, G.~M. Cavallaro, M. Massari and M.~L.C. degli Atti (2007).
+\newblock Health burden and economic impact of measles-related hospitalization in Italy, 2002-2003.
+\newblock \emph{BMC Public Health}, 7,169
+
+\bibitem[Flego et al.(2013)]{flego13}
+Flego, K.~L., D.~A. Belshaw, V. Sheppeard, and K.~M. Weston (2013).
+\newblock Impacts of a measles outbreak in western Sydney on public health resources.
+\newblock \emph{Communicable Diseases Intelligence Quarterly Report}, 37, E240--245.
+
+\bibitem[Gay et al.(1998)]{gay98}
+Gay, N.~J., L. Pelletier, and P. Duclos (1998).
+\newblock Modelling the incidence of measles in Canada: an assessment of the options for vaccination policy.
+\newblock \emph{Vaccine}, 16, 794--801.
+
+\bibitem[Glass et al.(2004)]{glass4}
+Glass, K., J. Kappey, and B.~T. Grenfell (2004).
+\newblock The effect of heterogeneity in measles vaccination population immunity.
+\newblock \emph{Epidemiology and Infection}, 132, 675--683.
+
+\bibitem[Honeycutt et al.(2006)]{honeycutt6}
+Honeycutt, A. A., L. Clayton, O. Khavjou, E.~A. Finkelstein, M. Prabhu, J.~L. Blitstein, W. Dougles Evans, and J.~M. Renaud (2006).
+\newblock Guide to Analyzing the Cost-Effectiveness of Community Public Health Prevention Approaches.
+http://aspe.hhs.gov/health/reports/06/cphpa/report.pdf
+
+\bibitem[Klinkenberg et al.(2011)]{klinkenberg11}
+Klinkenberg, D. and H. Nishiuraa (2011).
+\newblock The correlation between infectivity and incubation period of measles, estimated from households with two cases.
+\newblock \emph{Journal of Theoretical Biology},284, 52--60
+
+\bibitem[Koopmanschap(1998)]{koopmanschap98}
+Koopmanschap, M.~A. (1998).
+\newblock Cost-of-illness studies: useful for health policy?
+\newblock \emph{Pharmacoeonomics}, 14, 143--148.
+
+\bibitem[Larg and Moss(2011)]{larg11}
+Larg, A. and J.~R. Moss (2011).
+\newblock Cost-of-illness studies: a guide to critical evaluation.
+\newblock \emph{Pharmacoeconomics}, 29,653--671.
+
+\bibitem[Mansoor et al.(1998)]{mansoor98}
+Mansoor, O., A. Blakely, M. Baker, M. Tobias, and A. Bloomfield (1998).
+\newblock A measles epidemic controlled by immunisation. 
+\newblock \emph{New Zealand Medical Journal}, 111, 467--471.
+
+\bibitem[Ortega-Sanchez et al.(2014)]{ortegasanchez14}
+Ortega-Sanchez, I.~R., M. Vijayaraghavan, A.~E. Barskey, and G.~S. Wallace (2014).
+\newblock The economic burden of sixteen measles outbreaks on United States public health departments in 2011.
+\newblock \emph{Vaccine}, 32,1311--1317.
+
+\bibitem[Obidia et al.(2012)]{obidia12}
+Obadia, T., R. Haneef and P--Y. Boelle
+\newblock The R0 package: a toolbox to estimate reproduction numbers for epidemic outbreaks.
+\newblock \emph{BMC Medical Informatics and Decision Making}, 2012, 12--147.
+
+\bibitem[Parker et al.(2006)]{parker6}
+Parker, A.~A., W. Staggs, G.~H. Dayan, I.~R. Ortega-Sanchez, P.~A. Rota, L. Lowe, P. Boardman, R. Teclaw, C. Graves, and C.~W. LeBaron (2006).
+\newblock Implications of a 2005 measles outbreak in Indiana for sustained elimination of measles in the United States.
+\newblock \emph{The New England Journal of Medicine}, 355, 447--455.
+
+\bibitem[Prouty et al.(2001)]{prouty1}
+Prouty, R.W., G. Smith and K.~C. Lakin (2001).
+\newblock Residential services for persons with developmental disabilities: status and trends through 2000.
+\newblock \emph{Minneapolis: Institute on Community Integration}, University of Minnesota, pp.~179, rtc.umn.edu/risp00.
+
+\bibitem[Roberts(2004)]{roberts4}
+Roberts, M. (2004).
+\newblock A mathematical model for measles vaccination.
+\newblock Wellington: Ministry of Health.
+
+\bibitem[Roberts and Tobias(2000)]{roberts0}
+Roberts, M.~G. and M.~I. Tobias (2000).
+\newblock Predicting and preventing measles epidemics in New Zealand: Application of a mathematical model. 
+\newblock \emph{Epidemiology and Infection}, 124, 279--287.
+
+\bibitem[Saha and Gerdtham(2013)]{saha13}
+Saha, S. and U.~G. Gerdtham (2013).
+\newblock Cost of illness studies on reproductive, maternal, newborn, and child health: a systematic literature review.
+\newblock \emph{Health Economics Review}, doi:10.1186/2191-1991-3-24.
+
+\bibitem[Siedler et al.(2006)]{siedler6}
+Siedler, A., A. Tischer, A. Mankertz, and S. Santibanez (2006).
+\newblock Two outbreaks of measles in Germany 2005.
+\newblock \emph{Eurosurveillance} 2006:11(4) article 5, \href{http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=615}{www.eurosurveillance.org}, accessed 14 June 2014.
+
+\bibitem[Stack et al.(2011)]{stack11}
+Stack, M.~L., S. Ozawa, D.~M. Bishai, A. Mirelman, Y. Tam, L. Niessen, D.~G. Walker, and O.S. Levine (2011).
+\newblock Estimated economic benefits during the 'decade of vaccine' include treatment savings, gains in labor productivity.
+\newblock \emph{Health Affairs}, 30,1021--1028.
+
+\bibitem[Statistics New Zealand(2014))]{stats14}
+\newblock \emph{Statistics New Zealand} (2014).
+http://nzdotstat.stats.govt.nz/, accessed 17 June 2014.
+
+\bibitem[Tobias and Roberts(1998)]{tobias98}
+Tobias, M.~I. and M.~G. Roberts (1998).
+\newblock Predicting and preventing measles epidemics in New Zealand: Application of a mathematical model.
+\newblock Wellington: Ministry of Health.
+
+\bibitem[Wallinga et al.(2001)]{wallinga1}
+Wallinga, J., D. Levy-Bruhl, N.~J. Gay, and C.~H. Wachman (2001).
+\newblock Estimation of measles reproduction ratios and prospects for elimination of measles by vaccination in some Western European countries.
+\newblock \emph{Epidemiology and Infection}, 127, 281--295.
+
+\bibitem[Wallinga and Teunis(2004)]{wallinga4}
+Wallinga, J., and P. Teunis (2004).
+\newblock Different Epidemic Curves for Severe Acute Respiratory Syndrome Reveal Similar Impacts of Control Measures.
+\newblock \emph{American Journal of Epidemiology}, 160, 509.
+
+\bibitem[Wichmann et al.(2009)]{wichmann9}
+Wichmann, O., A. Siedler, D. Sagebiel, W. Hellenbrand, S. Santibanez, A. Mankertz, G. Vogt, U. van Treeck, and G. Krause (2009).
+\newblock Further efforts needed to achieve measles elimination in Germany: results of an outbreak investigation.
+\newblock \emph{Bulletin of the World Health Organization}, 87, 108--115.
+
+\bibitem[Wolfson et al.(2007)]{wolfson7}
+Wolfson, L.~J., P.~M. Strebel, M. Gacic-Dobo, E.~J. Hoekstra, J.~W. McFarland, and B.~S. Hersh (2007).
+\newblock Has the 2005 measles mortality reduction goal been achieved? A natural history modelling study.
+\newblock \emph{Lancet}, 369, 191--200.
+
+\bibitem[WHO(2013)]{who13}
+World Health Organisation measles media centre, January (2013)
+\newblock Geneva: World Health Organization.
+\href{http://www.who.int/mediacentre/news/notes/2013/measles_20130117/en/}{www.who.int}, accessed July 1, 2014.
+
+\bibitem[Zhou et al.(2004)]{zhou4}
+Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zimmerman, and M.~M. McCauley (2004).
+\newblock An economic analysis of the current universal 2-dose measles-mumps-rubella vaccination program in the United States.
+\newblock \emph{Journal of Infectious Diseases}, 189, S131--45.
+
+\end{thebibliography}
+
+\end{document}
