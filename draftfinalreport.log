@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  28 OCT 2014 16:55
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  29 OCT 2014 11:31
 entering extended mode
 **draftfinalreport.tex
 (C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport.tex
@@ -1089,7 +1089,29 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aer.fd"
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 ))))
-(C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport.aux)
+(C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport.aux
+
+LaTeX Warning: Label `table:immigration12' multiply defined.
+
+
+LaTeX Warning: Label `table:cover12' multiply defined.
+
+
+LaTeX Warning: Label `table:incidence12' multiply defined.
+
+
+LaTeX Warning: Label `table:risk12' multiply defined.
+
+
+LaTeX Warning: Label `fig:dhbcases' multiply defined.
+
+
+LaTeX Warning: Label `fig:outbreaks' multiply defined.
+
+
+LaTeX Warning: Label `fig:r0' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
 LaTeX Font Info:    ... okay on input line 93.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
@@ -1106,8 +1128,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
 LaTeX Font Info:    ... okay on input line 93.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 93.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 93.
@@ -1156,42 +1177,5244 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 103.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 109.
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 363.
- [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 363.
+
+(C:/PROGRA~1/R/R-30~1.2/share/texmf/tex/latex\ts1aer.fd
+File: ts1aer.fd 
+)
+LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10> not available
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 109.
+ [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
+<incidence_1997_2014.pdf, id=152, 722.7pt x 361.35pt>
+File: incidence_1997_2014.pdf Graphic file (type pdf)
+
+<use incidence_1997_2014.pdf>
+Package pdftex.def Info: incidence_1997_2014.pdf used on input line 159.
+(pdftex.def)             Requested size: 345.0pt x 172.49767pt.
+ [4]
+LaTeX Font Info:    Try loading font information for T1+aess on input line 406.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aess.fd"
+File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
+) [5 <C:/Users/dtshayma/Documents/GitHub/measles/incidence_1997_2014.pdf>] [6] 
+[7] [8]
+<draftfinalreport-015.pdf, id=196, 794.97pt x 433.62pt>
+File: draftfinalreport-015.pdf Graphic file (type pdf)
+
+<use draftfinalreport-015.pdf>
+Package pdftex.def Info: draftfinalreport-015.pdf used on input line 415.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9] <draftfinalreport-023.pdf, id=210, 794.97pt x 650.43pt>
+File: draftfinalreport-023.pdf Graphic file (type pdf)
+
+<use draftfinalreport-023.pdf>
+Package pdftex.def Info: draftfinalreport-023.pdf used on input line 497.
+(pdftex.def)             Requested size: 276.00105pt x 225.81783pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-015.pdf>]
+[11] [12] <np1.pdf, id=243, 722.7pt x 361.35pt>
+File: np1.pdf Graphic file (type pdf)
+ <use np1.pdf>
+Package pdftex.def Info: np1.pdf used on input line 582.
+(pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
+
+<nznp1.pdf, id=244, 722.7pt x 361.35pt>
+File: nznp1.pdf Graphic file (type pdf)
+ <use nznp1.pdf>
+Package pdftex.def Info: nznp1.pdf used on input line 589.
+(pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
+
+<totnp1.pdf, id=245, 722.7pt x 361.35pt>
+File: totnp1.pdf Graphic file (type pdf)
+ <use totnp1.pdf>
+Package pdftex.def Info: totnp1.pdf used on input line 596.
+(pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
+
+<draftfinalreport-028.pdf, id=246, 794.97pt x 433.62pt>
+File: draftfinalreport-028.pdf Graphic file (type pdf)
+
+<use draftfinalreport-028.pdf>
+Package pdftex.def Info: draftfinalreport-028.pdf used on input line 604.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<draftfinalreport-029.pdf, id=247, 794.97pt x 433.62pt>
+File: draftfinalreport-029.pdf Graphic file (type pdf)
+
+<use draftfinalreport-029.pdf>
+Package pdftex.def Info: draftfinalreport-029.pdf used on input line 612.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<np4.pdf, id=248, 722.7pt x 361.35pt>
+File: np4.pdf Graphic file (type pdf)
+ <use np4.pdf>
+Package pdftex.def Info: np4.pdf used on input line 620.
+(pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<nznp4.pdf, id=249, 722.7pt x 361.35pt>
+File: nznp4.pdf Graphic file (type pdf)
+ <use nznp4.pdf>
+Package pdftex.def Info: nznp4.pdf used on input line 627.
+(pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
+
+<totnp4.pdf, id=250, 722.7pt x 361.35pt>
+File: totnp4.pdf Graphic file (type pdf)
+ <use totnp4.pdf>
+Package pdftex.def Info: totnp4.pdf used on input line 634.
+(pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
+
+<draftfinalreport-030.pdf, id=251, 433.62pt x 433.62pt>
+File: draftfinalreport-030.pdf Graphic file (type pdf)
+
+<use draftfinalreport-030.pdf>
+Package pdftex.def Info: draftfinalreport-030.pdf used on input line 642.
+(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<nzers.pdf, id=252, 361.35pt x 361.35pt>
+File: nzers.pdf Graphic file (type pdf)
+ <use nzers.pdf>
+Package pdftex.def Info: nzers.pdf used on input line 650.
+(pdftex.def)             Requested size: 345.0pt x 345.00084pt.
+ [13 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-023.pdf>] [14
+ <C:/Users/dtshayma/Documents/GitHub/measles/np1.pdf> <C:/Users/dtshayma/Docume
+nts/GitHub/measles/nznp1.pdf> <C:/Users/dtshayma/Documents/GitHub/measles/totnp
+1.pdf>]
+<draftfinalreport-031.pdf, id=295, 433.62pt x 433.62pt>
+File: draftfinalreport-031.pdf Graphic file (type pdf)
+
+<use draftfinalreport-031.pdf>
+Package pdftex.def Info: draftfinalreport-031.pdf used on input line 660.
+(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<naive_map.pdf, id=296, 728.7225pt x 447.6725pt>
+File: naive_map.pdf Graphic file (type pdf)
+ <use naive_map.pdf>
+Package pdftex.def Info: naive_map.pdf used on input line 668.
+(pdftex.def)             Requested size: 207.0021pt x 127.16446pt.
+
+<dhb1.pdf, id=297, 505.89pt x 505.89pt>
+File: dhb1.pdf Graphic file (type pdf)
+ <use dhb1.pdf>
+Package pdftex.def Info: dhb1.pdf used on input line 676.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+<dhb2.pdf, id=298, 505.89pt x 505.89pt>
+File: dhb2.pdf Graphic file (type pdf)
+ <use dhb2.pdf>
+Package pdftex.def Info: dhb2.pdf used on input line 685.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+<dhb3.pdf, id=299, 505.89pt x 505.89pt>
+File: dhb3.pdf Graphic file (type pdf)
+ <use dhb3.pdf>
+Package pdftex.def Info: dhb3.pdf used on input line 693.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+<dhb4.pdf, id=300, 505.89pt x 505.89pt>
+File: dhb4.pdf Graphic file (type pdf)
+ <use dhb4.pdf>
+Package pdftex.def Info: dhb4.pdf used on input line 701.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+<dhb5.pdf, id=301, 505.89pt x 505.89pt>
+File: dhb5.pdf Graphic file (type pdf)
+ <use dhb5.pdf>
+Package pdftex.def Info: dhb5.pdf used on input line 709.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+<dhb6.pdf, id=302, 505.89pt x 505.89pt>
+File: dhb6.pdf Graphic file (type pdf)
+ <use dhb6.pdf>
+Package pdftex.def Info: dhb6.pdf used on input line 717.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+<dhb7.pdf, id=303, 505.89pt x 505.89pt>
+File: dhb7.pdf Graphic file (type pdf)
+ <use dhb7.pdf>
+Package pdftex.def Info: dhb7.pdf used on input line 725.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+<dhb8.pdf, id=304, 505.89pt x 505.89pt>
+File: dhb8.pdf Graphic file (type pdf)
+ <use dhb8.pdf>
+Package pdftex.def Info: dhb8.pdf used on input line 733.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+<dhb9.pdf, id=305, 505.89pt x 505.89pt>
+File: dhb9.pdf Graphic file (type pdf)
+ <use dhb9.pdf>
+Package pdftex.def Info: dhb9.pdf used on input line 741.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.748      \begin
+                 {center}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.748      \begin
+                 {center}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.748      \begin
+                 {center}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+<dhb10.pdf, id=306, 505.89pt x 505.89pt>
+File: dhb10.pdf Graphic file (type pdf)
+ <use dhb10.pdf>
+Package pdftex.def Info: dhb10.pdf used on input line 749.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.753 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.753 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.753 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.753 \end{figure}
+                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.753 \end{figure}
+                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.753 \end{figure}
+                  
+I'm ignoring this; it doesn't match any \if.
+
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.753 \end{figure}
+                  
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.753 \end{figure}
+                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.753 \end{figure}
+                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.756      \begin
+                 {center}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.756      \begin
+                 {center}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.756      \begin
+                 {center}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+<dhb11.pdf, id=307, 505.89pt x 505.89pt>
+File: dhb11.pdf Graphic file (type pdf)
+ <use dhb11.pdf>
+Package pdftex.def Info: dhb11.pdf used on input line 757.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.761 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.761 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.761 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.761 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.761 \end{figure}
+                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.761 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.761 \end{figure}
+                  
+Call for help
+
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.761 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Bad register code (-6946816).
+\@addmarginpar ...e \space moved}\else \@tempdima 
+                                                  \z@ \fi \global \@mparbott...
+l.761 \end{figure}
+                  
+A register number must be between 0 and 32767.
+I changed this one to zero.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.761 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.761 \end{figure}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.761 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.761 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.761 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.761 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.761 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.761 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.761 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.761 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.761 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.761 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.761 \end{figure}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.761 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.761 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.761 \end{figure}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.761 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.761 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.764      \begin
+                 {center}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.764      \begin
+                 {center}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.764      \begin
+                 {center}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+<dhb12.pdf, id=308, 505.89pt x 505.89pt>
+File: dhb12.pdf Graphic file (type pdf)
+ <use dhb12.pdf>
+Package pdftex.def Info: dhb12.pdf used on input line 765.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.769 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.769 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.769 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.769 \end{figure}
+                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.769 \end{figure}
+                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.769 \end{figure}
+                  
+I'm ignoring this; it doesn't match any \if.
+
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.769 \end{figure}
+                  
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.769 \end{figure}
+                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.769 \end{figure}
+                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.772      \begin
+                 {center}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.772      \begin
+                 {center}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.772      \begin
+                 {center}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+<dhb13.pdf, id=309, 505.89pt x 505.89pt>
+File: dhb13.pdf Graphic file (type pdf)
+ <use dhb13.pdf>
+Package pdftex.def Info: dhb13.pdf used on input line 773.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.777 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.777 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.777 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.777 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.777 \end{figure}
+                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.777 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.777 \end{figure}
+                  
+Call for help
+
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.777 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.777 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+LaTeX Warning: Marginpar on page 15 moved.
+
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.777 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.777 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.777 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.777 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.777 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.777 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.777 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.777 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.777 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.777 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.777 \end{figure}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.777 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.777 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.777 \end{figure}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.777 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.777 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.780      \begin
+                 {center}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.780      \begin
+                 {center}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.780      \begin
+                 {center}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+<dhb14.pdf, id=310, 505.89pt x 505.89pt>
+File: dhb14.pdf Graphic file (type pdf)
+ <use dhb14.pdf>
+Package pdftex.def Info: dhb14.pdf used on input line 781.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.785 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.785 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.785 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.785 \end{figure}
+                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.785 \end{figure}
+                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.785 \end{figure}
+                  
+I'm ignoring this; it doesn't match any \if.
+
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.785 \end{figure}
+                  
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.785 \end{figure}
+                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.785 \end{figure}
+                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.788      \begin
+                 {center}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.788      \begin
+                 {center}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.788      \begin
+                 {center}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+<dhb15.pdf, id=311, 505.89pt x 505.89pt>
+File: dhb15.pdf Graphic file (type pdf)
+ <use dhb15.pdf>
+Package pdftex.def Info: dhb15.pdf used on input line 789.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.793 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.793 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.793 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.793 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.793 \end{figure}
+                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.793 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.793 \end{figure}
+                  
+Call for help
+
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.793 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.793 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+LaTeX Warning: Marginpar on page 15 moved.
+
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.793 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.793 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.793 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.793 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.793 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.793 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.793 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.793 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.793 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.793 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.793 \end{figure}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.793 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.793 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.793 \end{figure}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.793 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.793 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.796      \begin
+                 {center}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.796      \begin
+                 {center}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.796      \begin
+                 {center}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+<dhb16.pdf, id=312, 505.89pt x 505.89pt>
+File: dhb16.pdf Graphic file (type pdf)
+ <use dhb16.pdf>
+Package pdftex.def Info: dhb16.pdf used on input line 797.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.801 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.801 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.801 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.801 \end{figure}
+                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.801 \end{figure}
+                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.801 \end{figure}
+                  
+I'm ignoring this; it doesn't match any \if.
+
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.801 \end{figure}
+                  
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.801 \end{figure}
+                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.801 \end{figure}
+                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.804      \begin
+                 {center}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.804      \begin
+                 {center}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.804      \begin
+                 {center}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+<dhb17.pdf, id=313, 505.89pt x 505.89pt>
+File: dhb17.pdf Graphic file (type pdf)
+ <use dhb17.pdf>
+Package pdftex.def Info: dhb17.pdf used on input line 805.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.809 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.809 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.809 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.809 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.809 \end{figure}
+                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.809 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.809 \end{figure}
+                  
+Call for help
+
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.809 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.809 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+LaTeX Warning: Marginpar on page 15 moved.
+
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.809 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.809 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.809 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.809 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.809 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.809 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.809 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.809 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.809 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.809 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.809 \end{figure}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.809 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.809 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.809 \end{figure}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.809 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.809 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.812      \begin
+                 {center}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.812      \begin
+                 {center}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.812      \begin
+                 {center}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+<dhb18.pdf, id=314, 505.89pt x 505.89pt>
+File: dhb18.pdf Graphic file (type pdf)
+ <use dhb18.pdf>
+Package pdftex.def Info: dhb18.pdf used on input line 813.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.817 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.817 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.817 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.817 \end{figure}
+                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.817 \end{figure}
+                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.817 \end{figure}
+                  
+I'm ignoring this; it doesn't match any \if.
+
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.817 \end{figure}
+                  
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.817 \end{figure}
+                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.817 \end{figure}
+                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.820      \begin
+                 {center}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.820      \begin
+                 {center}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.820      \begin
+                 {center}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+<dhb19.pdf, id=315, 505.89pt x 505.89pt>
+File: dhb19.pdf Graphic file (type pdf)
+ <use dhb19.pdf>
+Package pdftex.def Info: dhb19.pdf used on input line 821.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.825 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.825 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.825 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.825 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.825 \end{figure}
+                  
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.825 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.825 \end{figure}
+                  
+Call for help
+
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.825 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.825 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+LaTeX Warning: Marginpar on page 15 moved.
+
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.825 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.825 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.825 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.825 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.825 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.825 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.825 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.825 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.825 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.825 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.825 \end{figure}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.825 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.825 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.825 \end{figure}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.825 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.825 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.828      \begin
+                 {center}
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.828      \begin
+                 {center}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.828      \begin
+                 {center}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+<dhb20.pdf, id=316, 505.89pt x 505.89pt>
+File: dhb20.pdf Graphic file (type pdf)
+ <use dhb20.pdf>
+Package pdftex.def Info: dhb20.pdf used on input line 829.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.833 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.833 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.833 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.833 \end{figure}
+                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.833 \end{figure}
+                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra \else.
+\end@float ...pdima \penalty \@floatpenalty \else 
+                                                  \vadjust {\penalty -\@Miv ...
+l.833 \end{figure}
+                  
+I'm ignoring this; it doesn't match any \if.
+
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.833 \end{figure}
+                  
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Argument of \@xnext has an extra }.
+<inserted text> 
+                \par 
+l.833 \end{figure}
+                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@currbox \@currlist \ifnum \count \@currbox >\z@ \advance \@pageht \@pagedp \E
+TC.
+! Paragraph ended before \@xnext was complete.
+<to be read again> 
+                   \par 
+l.833 \end{figure}
+                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+! LaTeX Error: Too many unprocessed floats.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.839 \begin{figure}[h!]
+                        
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\@xfloat ...@fltovf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.839 \begin{figure}[h!]
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.839 \begin{figure}[h!]
+                        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+<draftfinalreport-032.pdf, id=318, 794.97pt x 433.62pt>
+File: draftfinalreport-032.pdf Graphic file (type pdf)
+
+<use draftfinalreport-032.pdf>
+Package pdftex.def Info: draftfinalreport-032.pdf used on input line 841.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+! Undefined control sequence.
+\@largefloatcheck ->\ifdim \ht \@currbox 
+                                         >\textheight \@tempdima -\textheigh...
+l.845 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   >
+l.845 \end{figure}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> \@currbox 
+                     
+l.845 \end{figure}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.846 
+      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \@elt 
+l.846 
+      
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \@elt 
+l.846 
+      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: This may be a LaTeX bug.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.846 
+      
+Call for help
+
+! Undefined control sequence.
+\@addmarginpar ...advance \@tempdima \ht \@marbox 
+                                                  \ifdim \@tempdima >\z@ \@l...
+l.846 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.846 
+      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+LaTeX Warning: Marginpar on page 15 moved.
+
+! Undefined control sequence.
+\@addmarginpar ...vance \@mparbottom \dp \@marbox 
+                                                  \global \advance \@mparbot...
+l.846 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.846 
+      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...dvance \@tempdima -\ht \@marbox 
+                                                  \global \setbox \@marbox \...
+l.846 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.846 
+      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \global \setbox \@marbox 
+                                                  \vbox {\vskip \@tempdima \...
+l.846 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.846 
+      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...\vskip \@tempdima \box \@marbox 
+                                                  }\global \ht \@marbox \z@ ...
+l.846 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.846 
+      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ... \@marbox }\global \ht \@marbox 
+                                                  \z@ \global \dp \@marbox \...
+l.846 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \global 
+l.846 
+      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \global 
+l.846 
+      
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...marbox \z@ \global \dp \@marbox 
+                                                  \z@ \kern -\@pagedp \noint...
+l.846 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \kern 
+l.846 
+      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \kern 
+l.846 
+      
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+\@addmarginpar ...arginparwidth \fi \box \@marbox 
+                                                  \hss }\nointerlineskip \hb...
+l.846 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \hss 
+l.846 
+      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+[15 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-028.pdf> <C:/U
+sers/dtshayma/Documents/GitHub/measles/draftfinalreport-029.pdf> <C:/Users/dtsh
+ayma/Documents/GitHub/measles/dhb11.pdf> <C:/Users/dtshayma/Documents/GitHub/me
+asles/dhb13.pdf> <C:/Users/dtshayma/Documents/GitHub/measles/dhb15.pdf> <C:/Use
+rs/dtshayma/Documents/GitHub/measles/dhb17.pdf> <C:/Users/dtshayma/Documents/Gi
+tHub/measles/dhb19.pdf>]
+<draftfinalreport-033.pdf, id=379, 794.97pt x 794.97pt>
+File: draftfinalreport-033.pdf Graphic file (type pdf)
+
+<use draftfinalreport-033.pdf>
+Package pdftex.def Info: draftfinalreport-033.pdf used on input line 850.
+(pdftex.def)             Requested size: 276.00105pt x 275.99957pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<draftfinalreport-035.pdf, id=384, 794.97pt x 433.62pt>
+File: draftfinalreport-035.pdf Graphic file (type pdf)
+
+<use draftfinalreport-035.pdf>
+Package pdftex.def Info: draftfinalreport-035.pdf used on input line 859.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (1.06569pt too wide) in paragraph at lines 864--865
+[]\T1/aer/m/n/10 The sig-nif-i-cance of the dif-fer-ent pre-dic-tor vari-ables 
+can be seen in the ANOVA
+ []
+
+LaTeX Font Info:    Try loading font information for T1+aett on input line 867.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+) [16 <C:/Users/dtshayma/Documents/GitHub/measles/np4.pdf> <C:/Users/dtshayma/D
+ocuments/GitHub/measles/nznp4.pdf> <C:/Users/dtshayma/Documents/GitHub/measles/
+draftfinalreport-032.pdf>] [17 <C:/Users/dtshayma/Documents/GitHub/measles/totn
+p4.pdf> <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-030.pdf>] 
+[18 <C:/Users/dtshayma/Documents/GitHub/measles/nzers.pdf>]
+LaTeX Font Info:    Try loading font information for TS1+aett on input line 887
+.
+
+(C:/PROGRA~1/R/R-30~1.2/share/texmf/tex/latex\ts1aett.fd
+File: ts1aett.fd 
+)
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 887
+.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
+File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `TS1/aett/m/n' in size <10> not available
+(Font)              Font shape `TS1/cmtt/m/n' tried instead on input line 887.
+ [19 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-031.pdf>] [20
+ <C:/Users/dtshayma/Documents/GitHub/measles/naive_map.pdf> <C:/Users/dtshayma/
+Documents/GitHub/measles/dhb1.pdf>] [21 <C:/Users/dtshayma/Documents/GitHub/mea
+sles/dhb2.pdf> <C:/Users/dtshayma/Documents/GitHub/measles/dhb3.pdf>] [22 <C:/U
+sers/dtshayma/Documents/GitHub/measles/dhb4.pdf> <C:/Users/dtshayma/Documents/G
+itHub/measles/dhb5.pdf>] [23 <C:/Users/dtshayma/Documents/GitHub/measles/dhb6.p
+df> <C:/Users/dtshayma/Documents/GitHub/measles/dhb7.pdf>] [24 <C:/Users/dtshay
+ma/Documents/GitHub/measles/dhb8.pdf> <C:/Users/dtshayma/Documents/GitHub/measl
+es/dhb9.pdf>]
+
+LaTeX Warning: Text page 25 contains only floats.
+
+[25 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-033.pdf> <C:/U
+sers/dtshayma/Documents/GitHub/measles/draftfinalreport-035.pdf>] [26] [27]
+[28] [29] <cases_by_dhb_2009_2014.pdf, id=625, 722.7pt x 361.35pt>
+File: cases_by_dhb_2009_2014.pdf Graphic file (type pdf)
+
+<use cases_by_dhb_2009_2014.pdf>
+Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 999.
+(pdftex.def)             Requested size: 310.4979pt x 155.25066pt.
+
+<outbreaks_for_R0.pdf, id=626, 722.7pt x 361.35pt>
+File: outbreaks_for_R0.pdf Graphic file (type pdf)
+ <use outbreaks_for_R0.pdf>
+Package pdftex.def Info: outbreaks_for_R0.pdf used on input line 1006.
+(pdftex.def)             Requested size: 310.4979pt x 155.25066pt.
+
+<averageR0.pdf, id=627, 578.16pt x 433.62pt>
+File: averageR0.pdf Graphic file (type pdf)
+ <use averageR0.pdf>
+Package pdftex.def Info: averageR0.pdf used on input line 1013.
+(pdftex.def)             Requested size: 310.4979pt x 232.87433pt.
+
+<draftfinalreport-039.pdf, id=631, 794.97pt x 433.62pt>
+File: draftfinalreport-039.pdf Graphic file (type pdf)
+
+<use draftfinalreport-039.pdf>
+Package pdftex.def Info: draftfinalreport-039.pdf used on input line 1030.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+ [30 <C:/Users/dtshayma/Documents/GitHub/measles/cases_by_dhb_2009_2014.pdf>] [
+31 <C:/Users/dtshayma/Documents/GitHub/measles/outbreaks_for_R0.pdf> <C:/Users/
+dtshayma/Documents/GitHub/measles/averageR0.pdf>] [32 <C:/Users/dtshayma/Docume
+nts/GitHub/measles/draftfinalreport-039.pdf>]
+File: cases_by_dhb_2009_2014.pdf Graphic file (type pdf)
+
+<use cases_by_dhb_2009_2014.pdf>
+Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 1056.
+(pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
+File: outbreaks_for_R0.pdf Graphic file (type pdf)
+ <use outbreaks_for_R0.pdf>
+Package pdftex.def Info: outbreaks_for_R0.pdf used on input line 1063.
+(pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
+File: averageR0.pdf Graphic file (type pdf)
+
+<use averageR0.pdf>
+Package pdftex.def Info: averageR0.pdf used on input line 1070.
+(pdftex.def)             Requested size: 276.00105pt x 206.9972pt.
+ [33] [34] [35] [36] [37] [38] [39] [40] [41] [42]
+<draftfinalreport-047.pdf, id=793, 794.97pt x 433.62pt>
+File: draftfinalreport-047.pdf Graphic file (type pdf)
+
+<use draftfinalreport-047.pdf>
+Package pdftex.def Info: draftfinalreport-047.pdf used on input line 1281.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+
+! Package inputenc Error: Unicode char \u8:  not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1345 & 
+            TOTAL&550,022&$293$&$470$&1,877\tabularnewline
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Float too large for page by 68.7459pt on input line 1353.
+
+[43 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-047.pdf>]
+[44]
+! Double subscript.
+l.1386 ...t value} = \sum \textit{future value}_y_
+                                                  r * (1/(1+\textit{discount...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+l.1388 Where $_y_
+                 r$ is the year 0 (current) through to 9 (ten years into the...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+[45] <draftfinalreport-053.pdf, id=826, 794.97pt x 433.62pt>
+File: draftfinalreport-053.pdf Graphic file (type pdf)
+
+<use draftfinalreport-053.pdf>
+Package pdftex.def Info: draftfinalreport-053.pdf used on input line 1397.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+<draftfinalreport-055.pdf, id=835, 794.97pt x 433.62pt>
+File: draftfinalreport-055.pdf Graphic file (type pdf)
+
+<use draftfinalreport-055.pdf>
+Package pdftex.def Info: draftfinalreport-055.pdf used on input line 1407.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+<draftfinalreport-056.pdf, id=840, 794.97pt x 433.62pt>
+File: draftfinalreport-056.pdf Graphic file (type pdf)
+
+<use draftfinalreport-056.pdf>
+Package pdftex.def Info: draftfinalreport-056.pdf used on input line 1414.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+ [46 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-053.pdf>] [47
+ <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-055.pdf> <C:/User
+s/dtshayma/Documents/GitHub/measles/draftfinalreport-056.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Years
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+$\OML/cmm/m/it/5 R[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 es-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 mated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|$\OML/cmm/m/it/5 R[]$
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 1443--1443
+[]|$\OML/cmm/m/it/5 R[]$ \T1/aer/m/n/5 for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 sim-u-la-
+ []
+
+
+Overfull \hbox (6.077pt too wide) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Additional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 vac-cines
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 re-quired
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 to re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Costs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 per
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 vac-cine
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Present
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 value
+ []
+
+
+Underfull \hbox (badness 5504) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 of dis-
+ []
+
+
+Overfull \hbox (0.53247pt too wide) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 counted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 costs
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1443 ...s without additional vaccination \dagger
+                                                  &	Total hospitalised cases...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.1443 ... without additional vaccination \dagger&
+                                                  	Total hospitalised cases\...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1443 ... without additional vaccination \dagger&
+                                                  	Total hospitalised cases\...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1443 ... without additional vaccination \dagger&
+                                                  	Total hospitalised cases\...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Mean
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 to-tal
+ []
+
+
+Underfull \hbox (badness 1383) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 cases in
+ []
+
+
+Underfull \hbox (badness 5908) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 over 10
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 years
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 with-out
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 ad-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 na-tion
+ []
+
+! Undefined control sequence.
+l.1443 ...on \dagger&	Total hospitalised cases\sym
+                                                  {*}	& Total undiscounted c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 hos-pi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 talised
+ []
+
+! Undefined control sequence.
+l.1443 ... without additional vaccination (\$)\sym
+                                                  {**} &	Present value of di...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 undis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 counted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 case
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 costs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 with-out
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 ad-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Present
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 value
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 of dis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 counted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 case
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 costs of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 base-line
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 pro-gram
+ []
+
+
+Overfull \hbox (3.49225pt too wide) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 ($)(Equa-
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1443 ...pop over 10 years with $R_v$ = 1 \dagger
+                                                   &	Total cases over 10 yea...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.1443 ...p over 10 years with $R_v$ = 1 \dagger &
+                                                  	Total cases over 10 years...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1443 ...p over 10 years with $R_v$ = 1 \dagger &
+                                                  	Total cases over 10 years...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1443 ...p over 10 years with $R_v$ = 1 \dagger &
+                                                  	Total cases over 10 years...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Mean
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 epi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 demic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 size in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 im-mune
+ []
+
+! Undefined control sequence.
+l.1443 ...ars following additional vaccination\sym
+                                                  {***} &	Total hospitalised...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 cases
+ []
+
+
+Underfull \hbox (badness 5908) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 over 10
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 years
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 fol-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 low-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 ad-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 vac-ci-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 hos-pi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 talised
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 cases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 fol-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 low-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 ad-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 vac-ci-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 sum-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 sup-ple-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 men-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 cases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 re-duce
+ []
+
+
+Underfull \hbox (badness 5878) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 by vac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 ci-na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 al-ter-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 tive vs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Present
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 value
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 of dis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 counted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 ben-e-fits
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 from
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 re-duc-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 cases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 sup-ple-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 men-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Overfull \hbox (7.45723pt too wide) in paragraph at lines 1443--1443
+[]|\T1/aer/m/n/5 Discounted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 e-fit of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 sup-ple-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 men-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1443
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1444
+[]|\T1/aer/m/n/5 Benefit--
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1444
+\T1/aer/m/n/5 cost
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1445--1445
+[]|\T1/aer/m/n/5 2009-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1445--1445
+[]|\T1/aer/m/n/5 0.92-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1446--1446
+[]|\T1/aer/m/n/5 2009-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1446--1446
+[]|\T1/aer/m/n/5 0.92-
+ []
+
+
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 1446--1446
+[]|\T1/aer/m/n/5 1600000| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1446--1446
+[]|\T1/aer/m/n/5 147295173| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1446--1446
+[]|\T1/aer/m/n/5 129415143| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1446--1446
+[]|\T1/aer/m/n/5 127959360| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1446--1446
+[]|\T1/aer/m/n/5 126359360| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1447--1447
+[]|\T1/aer/m/n/5 2009-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1447--1447
+[]|\T1/aer/m/n/5 0.92-
+ []
+
+
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 1447--1447
+[]|\T1/aer/m/n/5 4000000| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1447--1447
+[]|\T1/aer/m/n/5 147295173| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1447--1447
+[]|\T1/aer/m/n/5 129415143| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1447--1447
+[]|\T1/aer/m/n/5 127959360| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1447--1447
+[]|\T1/aer/m/n/5 123959360| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1448--1448
+[]|\T1/aer/m/n/5 2013-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1448--1448
+[]|\T1/aer/m/n/5 1.82-
+ []
+
+
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 1448--1448
+[]|\T1/aer/m/n/5 4163060| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1448--1448
+[]|\T1/aer/m/n/5 388554566| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1448--1448
+[]|\T1/aer/m/n/5 341388274| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1448--1448
+[]|\T1/aer/m/n/5 340223647| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1448--1448
+[]|\T1/aer/m/n/5 336060587| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1449--1449
+[]|\T1/aer/m/n/5 2013-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1449--1449
+[]|\T1/aer/m/n/5 1.82-
+ []
+
+
+Overfull \hbox (4.43681pt too wide) in paragraph at lines 1449--1449
+[]|\T1/aer/m/n/5 10407650| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1449--1449
+[]|\T1/aer/m/n/5 388554566| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1449--1449
+[]|\T1/aer/m/n/5 341388274| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1449--1449
+[]|\T1/aer/m/n/5 340223647| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1449--1449
+[]|\T1/aer/m/n/5 329815997| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1450--1450
+[]|\T1/aer/m/n/5 2013-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1450--1450
+[]|\T1/aer/m/n/5 1.82-
+ []
+
+
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 1450--1450
+[]|\T1/aer/m/n/5 5051220| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1450--1450
+[]|\T1/aer/m/n/5 436595960| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1450--1450
+[]|\T1/aer/m/n/5 383597966| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1450--1450
+[]|\T1/aer/m/n/5 382433339| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1450--1450
+[]|\T1/aer/m/n/5 377382119| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1451--1451
+[]|\T1/aer/m/n/5 2013-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1451--1451
+[]|\T1/aer/m/n/5 1.82-
+ []
+
+
+Overfull \hbox (4.43681pt too wide) in paragraph at lines 1451--1451
+[]|\T1/aer/m/n/5 12628050| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1451--1451
+[]|\T1/aer/m/n/5 436595960| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1451--1451
+[]|\T1/aer/m/n/5 383597966| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1451--1451
+[]|\T1/aer/m/n/5 382433339| 
+ []
+
+
+Overfull \hbox (4.99168pt too wide) in paragraph at lines 1451--1451
+[]|\T1/aer/m/n/5 369805289| 
+ []
+
+
+! LaTeX Error: \begin{tabular} on input line 1440 ended by \end{raggedright}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1453 \end{raggedright}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1453 \end{raggedright}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1453 \end{raggedright}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1453 \end{raggedright}
+                        
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.1453 \end{raggedright}
+                        
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1453 \end{raggedright}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1453 \end{raggedright}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1453 \end{raggedright}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1453 \end{raggedright}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Misplaced \noalign.
+\bottomrule ->\noalign 
+                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
+l.1454 \bottomrule
+                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \crcr.
+\endarray ->\crcr 
+                  \egroup \egroup \@arrayright \gdef \@preamble {}
+l.1455     \end{tabular}
+                        %
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten \endgroup.
+\endarray ->\crcr \egroup 
+                          \egroup \@arrayright \gdef \@preamble {}
+l.1455     \end{tabular}
+                        %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+\endarray ->\crcr \egroup \egroup 
+                                  \@arrayright \gdef \@preamble {}
+l.1455     \end{tabular}
+                        %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.1455     \end{tabular}
+                        %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\endtabular ->\TPTsav@endtabular \TPT@endtabhook 
+                                                 
+l.1455     \end{tabular}
+                        %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \begin{threeparttable} on input line 1439 ended by \end{tabular}
+.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1455     \end{tabular}
+                        %
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1455     \end{tabular}
+                        %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Undefined control sequence.
+<recently read> \sym 
+                     
+l.1458         \item \sym
+                         {*} Proportion of cases hospitalised 0.17
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \sym 
+                     
+l.1459         \item \sym
+                         {**} Wage losses per case = \$852 and cost per hosp...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \sym 
+                     
+l.1460         \item \sym
+                         {***} Based on 10 introductions of measles, one per...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1462     \end{threeparttable}
+                               
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\TPT@close ...\unskip \fi \color@endgroup \egroup 
+                                                  
+l.1462     \end{threeparttable}
+                               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \begin{raggedright} on input line 1436 ended by \end{threepartta
+ble}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1462     \end{threeparttable}
+                               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (115.55133pt too wide) in paragraph at lines 1439--1463
+ [] 
+ []
+
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Years
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+$\OML/cmm/m/it/5 R[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 es-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 mated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|$\OML/cmm/m/it/5 R[]$
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 1475--1475
+[]|$\OML/cmm/m/it/5 R[]$ \T1/aer/m/n/5 for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 sim-u-la-
+ []
+
+
+Overfull \hbox (6.077pt too wide) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Additional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 vac-cines
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 re-quired
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 to re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Costs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 per
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 vac-cine
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Present
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 value
+ []
+
+
+Underfull \hbox (badness 5504) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 of dis-
+ []
+
+
+Overfull \hbox (0.53247pt too wide) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 counted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 costs
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1475 ... without additional vaccination \ddagger
+                                                   &	Total hospitalised case...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.1475 ...ithout additional vaccination \ddagger &
+                                                  	Total hospitalised cases\...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1475 ...ithout additional vaccination \ddagger &
+                                                  	Total hospitalised cases\...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1475 ...ithout additional vaccination \ddagger &
+                                                  	Total hospitalised cases\...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Mean
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 to-tal
+ []
+
+
+Underfull \hbox (badness 1383) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 cases in
+ []
+
+
+Underfull \hbox (badness 5908) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 over 10
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 years
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 with-out
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 ad-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 na-tion
+ []
+
+! Undefined control sequence.
+l.1475 ... \ddagger &	Total hospitalised cases\sym
+                                                  {*}	& Total undiscounted c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 hos-pi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 talised
+ []
+
+! Undefined control sequence.
+l.1475 ... without additional vaccination (\$)\sym
+                                                  {**} &	Present value of di...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 undis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 counted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 case
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 costs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 with-out
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 ad-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Present
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 value
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 of dis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 counted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 case
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 costs of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 base-line
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 pro-gram
+ []
+
+
+Overfull \hbox (3.49225pt too wide) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 ($)(Equa-
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1475 ...pop over 10 years with $R_v$ = 1 \dagger
+                                                   &	Total cases over 10 yea...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.1475 ...p over 10 years with $R_v$ = 1 \dagger &
+                                                  	Total cases over 10 years...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1475 ...p over 10 years with $R_v$ = 1 \dagger &
+                                                  	Total cases over 10 years...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1475 ...p over 10 years with $R_v$ = 1 \dagger &
+                                                  	Total cases over 10 years...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Mean
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 epi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 demic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 size in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 im-mune
+ []
+
+! Undefined control sequence.
+l.1475 ...ars following additional vaccination\sym
+                                                  {***} &	Total hospitalised...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 cases
+ []
+
+
+Underfull \hbox (badness 5908) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 over 10
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 years
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 fol-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 low-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 ad-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 vac-ci-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 hos-pi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 talised
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 cases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 fol-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 low-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 ad-di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 vac-ci-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 sum-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 sup-ple-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 men-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Total
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 cases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 re-duce
+ []
+
+
+Underfull \hbox (badness 5878) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 by vac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 ci-na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 al-ter-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 tive vs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Present
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 value
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 of dis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 counted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 ben-e-fits
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 from
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 re-duc-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 cases
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 sup-ple-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 men-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Overfull \hbox (7.45723pt too wide) in paragraph at lines 1475--1475
+[]|\T1/aer/m/n/5 Discounted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 e-fit of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 sup-ple-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 men-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 vac-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1475
+\T1/aer/m/n/5 na-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1476
+[]|\T1/aer/m/n/5 Benefit--
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1475--1476
+\T1/aer/m/n/5 cost
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1478--1478
+[]|\T1/aer/m/n/5 2009-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1478--1478
+[]|\T1/aer/m/n/5 0.92-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1479--1479
+[]|\T1/aer/m/n/5 2009-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1479--1479
+[]|\T1/aer/m/n/5 0.92-
+ []
+
+
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 1479--1479
+[]|\T1/aer/m/n/5 1600000| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1480--1480
+[]|\T1/aer/m/n/5 2009-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1480--1480
+[]|\T1/aer/m/n/5 0.92-
+ []
+
+
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 1480--1480
+[]|\T1/aer/m/n/5 4000000| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1480--1480
+[]|\T1/aer/m/n/5 -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1481
+[]|\T1/aer/m/n/5 2013-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1481
+[]|\T1/aer/m/n/5 1.82-
+ []
+
+
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 1481--1481
+[]|\T1/aer/m/n/5 4163060| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1481--1481
+[]|\T1/aer/m/n/5 -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1482
+[]|\T1/aer/m/n/5 2013-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1482
+[]|\T1/aer/m/n/5 1.82-
+ []
+
+
+Overfull \hbox (4.43681pt too wide) in paragraph at lines 1482--1482
+[]|\T1/aer/m/n/5 10407650| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1482
+[]|\T1/aer/m/n/5 -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1483--1483
+[]|\T1/aer/m/n/5 2013-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1483--1483
+[]|\T1/aer/m/n/5 1.82-
+ []
+
+
+Overfull \hbox (1.03693pt too wide) in paragraph at lines 1483--1483
+[]|\T1/aer/m/n/5 5051220| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1483--1483
+[]|\T1/aer/m/n/5 -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1484--1484
+[]|\T1/aer/m/n/5 2013-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1484--1484
+[]|\T1/aer/m/n/5 1.82-
+ []
+
+
+Overfull \hbox (4.43681pt too wide) in paragraph at lines 1484--1484
+[]|\T1/aer/m/n/5 12628050| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1484--1484
+[]|\T1/aer/m/n/5 -
+ []
+
+
+Overfull \hbox (1.5918pt too wide) in paragraph at lines 1484--1484
+\T1/aer/m/n/5 11583902| 
+ []
+
+
+! LaTeX Error: \begin{tabular} on input line 1473 ended by \end{raggedright}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1485 \end{raggedright}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1485 \end{raggedright}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1485 \end{raggedright}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.1485 \end{raggedright}
+                        
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.1485 \end{raggedright}
+                        
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1485 \end{raggedright}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1485 \end{raggedright}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1485 \end{raggedright}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1485 \end{raggedright}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Misplaced \noalign.
+\bottomrule ->\noalign 
+                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
+l.1486 \bottomrule
+                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \crcr.
+\endarray ->\crcr 
+                  \egroup \egroup \@arrayright \gdef \@preamble {}
+l.1487     \end{tabular}
+                        %
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten \endgroup.
+\endarray ->\crcr \egroup 
+                          \egroup \@arrayright \gdef \@preamble {}
+l.1487     \end{tabular}
+                        %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+\endarray ->\crcr \egroup \egroup 
+                                  \@arrayright \gdef \@preamble {}
+l.1487     \end{tabular}
+                        %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.1487     \end{tabular}
+                        %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\endtabular ->\TPTsav@endtabular \TPT@endtabhook 
+                                                 
+l.1487     \end{tabular}
+                        %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \begin{threeparttable} on input line 1472 ended by \end{tabular}
+.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1487     \end{tabular}
+                        %
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1487     \end{tabular}
+                        %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Undefined control sequence.
+<recently read> \sym 
+                     
+l.1491         \item \sym
+                         {*} Proportion of cases hospitalised 0.17
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \sym 
+                     
+l.1492         \item \sym
+                         {**} Wage losses per case \$852 and cost per hospit...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \sym 
+                     
+l.1493         \item \sym
+                         {***} Based on 10 introductions of measles, one per...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1495     \end{threeparttable}
+                               
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\TPT@close ...\unskip \fi \color@endgroup \egroup 
+                                                  
+l.1495     \end{threeparttable}
+                               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \begin{raggedright} on input line 1469 ended by \end{threepartta
+ble}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1495     \end{threeparttable}
+                               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (115.55133pt too wide) in paragraph at lines 1472--1496
+ [] 
+ []
+
+
+Overfull \hbox (94.73053pt too wide) in paragraph at lines 1505--1530
+ [] 
+ []
+
+
+Overfull \hbox (94.73053pt too wide) in paragraph at lines 1538--1563
+ [] 
+ []
+
+<draftfinalreport-061.pdf, id=892, 794.97pt x 433.62pt>
+File: draftfinalreport-061.pdf Graphic file (type pdf)
+
+<use draftfinalreport-061.pdf>
+Package pdftex.def Info: draftfinalreport-061.pdf used on input line 1572.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+<draftfinalreport-062.pdf, id=893, 794.97pt x 433.62pt>
+File: draftfinalreport-062.pdf Graphic file (type pdf)
+
+<use draftfinalreport-062.pdf>
+Package pdftex.def Info: draftfinalreport-062.pdf used on input line 1580.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[49 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-061.pdf>]
+[50] [51] [52] [53] [54 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalr
+eport-062.pdf>] [55] [56] [57] [58] [59]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1855.
+ [60]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1855.
 
 (C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 363.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 363.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1855.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1855.
+
 Package rerunfilecheck Info: File `draftfinalreport.out' has not changed.
-(rerunfilecheck)             Checksum: 1DB6ACF0CA858A323D5862A2C7FCFE6D;48.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 363.
- ) 
+(rerunfilecheck)             Checksum: C4BCCDF9E029B439CD19CE4D638FF8D1;2023.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1855.
+ )
+(\end occurred when \ifnum on line 833 was incomplete)
+(\end occurred when \ifnum on line 833 was incomplete)
+(\end occurred when \ifx on line 833 was incomplete)
+(\end occurred when \ifnum on line 833 was incomplete)
+(\end occurred when \ifnum on line 833 was incomplete)
+(\end occurred when \ifnum on line 833 was incomplete)
+(\end occurred when \ifnum on line 833 was incomplete)
+(\end occurred when \ifnum on line 833 was incomplete)
+(\end occurred when \ifnum on line 817 was incomplete)
+(\end occurred when \ifnum on line 817 was incomplete)
+(\end occurred when \ifx on line 817 was incomplete)
+(\end occurred when \ifnum on line 817 was incomplete)
+(\end occurred when \ifnum on line 817 was incomplete)
+(\end occurred when \ifnum on line 817 was incomplete)
+(\end occurred when \ifnum on line 817 was incomplete)
+(\end occurred when \ifnum on line 817 was incomplete)
+(\end occurred when \ifnum on line 801 was incomplete)
+(\end occurred when \ifnum on line 801 was incomplete)
+(\end occurred when \ifx on line 801 was incomplete)
+(\end occurred when \ifnum on line 801 was incomplete)
+(\end occurred when \ifnum on line 801 was incomplete)
+(\end occurred when \ifnum on line 801 was incomplete)
+(\end occurred when \ifnum on line 801 was incomplete)
+(\end occurred when \ifnum on line 801 was incomplete)
+(\end occurred when \ifnum on line 785 was incomplete)
+(\end occurred when \ifnum on line 785 was incomplete)
+(\end occurred when \ifx on line 785 was incomplete)
+(\end occurred when \ifnum on line 785 was incomplete)
+(\end occurred when \ifnum on line 785 was incomplete)
+(\end occurred when \ifnum on line 785 was incomplete)
+(\end occurred when \ifnum on line 785 was incomplete)
+(\end occurred when \ifnum on line 785 was incomplete)
+(\end occurred when \ifnum on line 769 was incomplete)
+(\end occurred when \ifnum on line 769 was incomplete)
+(\end occurred when \ifx on line 769 was incomplete)
+(\end occurred when \ifnum on line 769 was incomplete)
+(\end occurred when \ifnum on line 769 was incomplete)
+(\end occurred when \ifnum on line 769 was incomplete)
+(\end occurred when \ifnum on line 769 was incomplete)
+(\end occurred when \ifnum on line 769 was incomplete)
+(\end occurred when \ifnum on line 753 was incomplete)
+(\end occurred when \ifnum on line 753 was incomplete)
+(\end occurred when \ifx on line 753 was incomplete)
+(\end occurred when \ifnum on line 753 was incomplete)
+(\end occurred when \ifnum on line 753 was incomplete)
+(\end occurred when \ifnum on line 753 was incomplete)
+(\end occurred when \ifnum on line 753 was incomplete)
+(\end occurred when \ifnum on line 753 was incomplete) 
 Here is how much of TeX's memory you used:
- 17868 strings out of 493921
- 305508 string characters out of 3147273
- 370127 words of memory out of 3000000
- 20731 multiletter control sequences out of 15000+200000
- 28533 words of font info for 66 fonts, out of 3000000 for 9000
+ 18506 strings out of 493921
+ 315097 string characters out of 3147273
+ 434911 words of memory out of 3000000
+ 21121 multiletter control sequences out of 15000+200000
+ 49486 words of font info for 104 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,9n,92p,492b,515s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on draftfinalreport.pdf (6 pages, 164698 bytes).
+ 56i,15n,92p,1650b,513s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 
+2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsltt10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on draftfinalreport.pdf (60 pages, 3043350 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 50 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1113 PDF objects out of 1200 (max. 8388607)
+ 201 named destinations out of 1000 (max. 500000)
+ 489 words of extra memory for PDF output out of 10000 (max. 10000000)
 

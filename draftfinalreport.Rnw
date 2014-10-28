@@ -155,7 +155,7 @@ In this section we provide a brief description of the work that we believe will 
 
 \begin{figure}
      \centering
-     \includegraphics[width=0.8\textwidth]{incidence_1997_2014.pdf}
+     \includegraphics[width=1\textwidth]{incidence_1997_2014.pdf}
      \caption{Measles incidence from 1997 to 2014}
      \label{fig:incidence1997}
 \end{figure}
@@ -166,25 +166,26 @@ In light of the apparent increasing trend in measles incidence in the last few y
 
 For our initial analyses, we use arrivals data from New Zealand immigration (\href{http://www.immigration.govt.nz/}{www.immigration.govt.nz}) as a proxy for human movement to and from New Zealand. We collated country population size, measles incidence and measles vaccination cover from the WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Note this uses all immigration of foreign nationals, coming for whatever purpose. We used the WHO data to determine per capita measles cases for each year and used these data and the number of immigrants to New Zealand to begin to understand where measles was likely to be imported from.
 
+%%%%%%%%%%%%%%%%%%
 <<echo=FALSE>>=
 library(xtable)
-dpdf<-read.csv("mapdata.csv",header=T)
+totdpdf<-read.csv("mapdata_tot.csv",header=T)
 # output top countries
-colnames(dpdf)[1]<-c("country")
-topimmigration <- dpdf[order(-dpdf$immigration),] 
-immigration<-topimmigration[1:10,c(1,4)]
-topincidence <- dpdf[order(-dpdf$incidence),] 
+colnames(totdpdf)[1]<-c("country")
+toptot <- totdpdf[order(-totdpdf$immigration),] 
+immigration<-toptot[1:10,c(1,4)]
+topincidence <- totdpdf[order(-totdpdf$incidence),] 
 incidence<-topincidence[1:10,c(1,2)]
 incidence[,2]<-round(incidence[,2],0)
-topvaccine <- dpdf[order(dpdf$cover),] 
+topvaccine <- totdpdf[order(totdpdf$cover),] 
 vaccinecover<-topvaccine[1:10,c(1,3)]
-toprisk <- dpdf[order(-dpdf$risk),] 
+toprisk <- totdpdf[order(-totdpdf$risk),] 
 risk<-(toprisk[1:10,c(1,5)])
 risk[,2]<-round(risk[,2],0)
 @
 
 \begin{table}
-\caption{Immigration numbers to New Zealand (2012)}
+\caption{Total travel numbers (2012)}
 <<results=tex,echo=FALSE>>=
 # This chunk uses "results=tex"
 library(Hmisc)
@@ -194,10 +195,6 @@ latex(immigration, file="", table.env=FALSE,rowname=NULL)
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%
-% INSERT NZ Travlers here
-%%%%%%%%%%%%%%%%%%%
-% INSERT Total Travelers here
-%%%%%%%%%%%%%%%%%%
 
 \begin{table}
 \caption{Lowest national measles vaccine cover (\%, 2012)}
@@ -230,12 +227,102 @@ latex(risk, file="", table.env=FALSE,rowname=NULL)
 \end{table}
 
 
+<<echo=FALSE>>=
+library(xtable)
+dpdf<-read.csv("mapdata.csv",header=T)
+# output top countries
+colnames(dpdf)[1]<-c("country")
+topimmigration <- dpdf[order(-dpdf$immigration),] 
+immigration<-topimmigration[1:10,c(1,4)]
+topincidence <- dpdf[order(-dpdf$incidence),] 
+incidence<-topincidence[1:10,c(1,2)]
+incidence[,2]<-round(incidence[,2],0)
+topvaccine <- dpdf[order(dpdf$cover),] 
+vaccinecover<-topvaccine[1:10,c(1,3)]
+toprisk <- dpdf[order(-dpdf$risk),] 
+risk<-(toprisk[1:10,c(1,5)])
+risk[,2]<-round(risk[,2],0)
+@
+
+\begin{table}
+\caption{Immigration numbers to New Zealand (2012)}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(immigration, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:immigration12}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+\caption{Lowest national measles vaccine cover (\%, 2012)}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(vaccinecover, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:cover12}
+\end{table}
+
+\begin{table}
+\caption{Measles incidence per million (2012)}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(incidence, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:incidence12}
+\end{table}
+
+\begin{table}
+\caption{Risk of measles importation to New Zealand in 2012}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(risk, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:risk12}
+\end{table}
 %%%%%%%%%%%%%%%%%%%
-% INSERT NZ risk here
+<<echo=FALSE>>=
+library(xtable)
+nzdpdf<-read.csv("mapdata_nzers.csv",header=T)
+# output top countries
+colnames(nzdpdf)[1]<-c("country")
+topnz <- nzdpdf[order(-nzdpdf$immigration),] 
+nz<-topnz[1:10,c(1,4)]
+topnzrisk <- nzdpdf[order(-nzdpdf$risk),] 
+nzrisk<-(topnzrisk[1:10,c(1,5)])
+nzrisk[,2]<-round(nzrisk[,2],0)
+@
+
+\begin{table}
+\caption{New Zealander travel numbers (2012)}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(nz, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:nztravel12}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+\caption{Risk of measles importation to New Zealand due to New Zealand travellers in 2012}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(nzrisk, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:nzrisk12}
+\end{table}
+
 %%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%
-% INSERT Total risk here
+
 %%%%%%%%%%%%%%%%%%
 \subsection{Risk analyses methods}
 We received the raw EpiSurv measles case data from The Institute of Environmental Science and Research Ltd (ESR) on 27 June 2014. Initial analyses of those ESR data (not shown) suggested that denominator data were required to perform multivariate analyses to avoid confounding results due to a lack of independence among risk factors. Specifically we required $\textsf{Age} \times \textsf{Prioritised Ethnicity} \times \textsf{NZDep}$ data for New Zealand to test whether interactions among case covariates provide additional information on risk over the univariate analyses performed in the \emph{Progress Towards Measles Elimination in New Zealand - Final} report. These $\textsf{Age} \times \textsf{Prioritised Ethnicity} \times \textsf{NZDep}$ data were provided to us on 3 July 2014 by the University of Otago. We used these denominator data to determine if there were interactions among specific age categories, Prioritized Ethnicities, and NZDep that might exist among cases allowing better understanding of risk of measles infection.
@@ -751,6 +838,14 @@ plot(change[,1],change[,4],type="l",xlab="Year",ylab="",
 \label{fig:trendincidence}
 \end{figure}
 
+\begin{figure}
+     \begin{center}
+     \includegraphics[width=1\textwidth]{nzers.pdf}
+     \end{center}
+     \caption{Trends in travel}
+     \label{fig:travel}
+\end{figure}
+
 Though global incidence of measles in declining, in recent years that decline has slowed (Figure~\ref{fig:trendincidence}) and immigration rates to New Zealand have risen (Figure~\ref{fig:trendimmigration}). This suggests that the risk of measles importation could increase, though further analyses are require to understand the interaction between these variables.  Of note, however, is the clear seasonality in immigration (Figure~\ref{fig:trendimmigration}).  This seasonality suggests that there may be period of increased risk of measles importation, though again the interactions with seasonal measles transmission from the nations of origin will be an important factor in determining the risk of measles importation.
 
 \begin{figure}[h!]
@@ -771,149 +866,170 @@ acf(ttimes$res,lag.max = length(ttimes$res),plot=T,main="")
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{naive_map.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{naive_map.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per District Health Board}
      \label{fig:naive_map}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb1.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb1.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Northland District Health Board}
      \label{fig:Northland}
 \end{figure}
 
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb2.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb2.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Waitemata District Health Board}
      \label{fig:Waitemata}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb3.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb3.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Auckland District Health Board}
      \label{fig:Auckland}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb4.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb4.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Counties Manukau District Health Board}
      \label{fig:Counties_Manukau}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb5.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb5.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Waikato District Health Board}
      \label{fig:Waikato}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb6.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb6.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Lakes District Health Board}
      \label{fig:Lakes}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb7.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb7.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Bay of Plenty District Health Board}
      \label{fig:BayofPlenty}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb8.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb8.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Tairawhiti District Health Board}
      \label{fig:Tairawhiti}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb9.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb9.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Taranaki District Health Board}
      \label{fig:Taranaki}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb10.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb10.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Hawke's Bay District Health Board}
      \label{fig:HawkesBay}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb11.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb11.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Whanganui District Health Board}
      \label{fig:Whanganui}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb12.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb12.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Midcentral District Health Board}
      \label{fig:Midcentral}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb13.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb13.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Hutt District Health Board}
      \label{fig:Hutt}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb14.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb14.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Capital and Coast District Health Board}
      \label{fig:CapitalandCoast}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb15.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb15.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Wairarapa District Health Board}
      \label{fig:Wairarapa}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb16.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb16.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Nelson Marlborough District Health Board}
      \label{fig:NelsonMarlborough}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb16.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb17.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, West Coast District Health Board}
      \label{fig:WestCoast}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb17.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb18.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Canterbury District Health Board}
      \label{fig:Canterbury}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb18.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb19.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, South Canterbury District Health Board}
      \label{fig:SouthCanterbury}
 \end{figure}
 
 \begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{dhb19.pdf}
+     \begin{center}
+     \includegraphics[width=0.6\textwidth]{dhb20.pdf}
+     \end{center}
      \caption{Numbers of naive individuals per age class, Southern District Health Board}
      \label{fig:Southern}
 \end{figure}
@@ -1612,6 +1728,34 @@ Years $R_v$ estimated from & $R_v$ range &  $R_v$  for simulations &	Additional 
 \end{sidewaystable}
 
 \normalsize
+
+<<echo=FALSE>>=
+costtable20<-read.csv("cost_benefit_20.csv",header=T)
+@
+
+\begin{sidewaystable}\small
+\caption{Cost benefit analyses with 20 dollars per vaccine}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(costtable20, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:cost20}
+\end{sidewaystable}
+
+<<echo=FALSE>>=
+costtable50<-read.csv("cost_benefit_50.csv",header=T)
+@
+
+\begin{sidewaystable}\small
+\caption{Cost benefit analyses with 50 dollars per vaccine}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(costtable50, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:cost50}
+\end{sidewaystable}
 
 The benefit--cost results are in Table~\ref{tab:cost_sim} and Table~\ref{tab:cost_ave}. The results in the two tables show two alternative trends. In scenarios where we simulate the expected outbreaks in a homogeneously mixed population and $R_v$ is above 1 the benefits of vaccination are always substantially greater than the costs of the increased supplementary vaccination (Table~\ref{tab:cost_sim}). However, if the previous recent history of cases since 1997 is the \emph{status quo} and what we may expect in the future then the \emph{additional} effort to vaccinate the currently naive population of New Zealand based on $R_v$ estimates that were greater than one is not a cost effective exercise (Table~\ref{tab:cost_ave}).
 
