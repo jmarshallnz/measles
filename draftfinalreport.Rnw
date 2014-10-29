@@ -7,6 +7,7 @@
 %\usepackage{bibunits}
 \usepackage{natbib}
 \usepackage{graphics}
+\usepackage{subfig}
 \usepackage{amsmath}
 \usepackage{indentfirst}
 \usepackage[utf8]{inputenc}
@@ -25,7 +26,10 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{caption2}
+\usepackage{caption}
 \usepackage{fancyhdr}
+\usepackage{placeins}
+\usepackage{framed}
 \newcommand{\vecA}{\mathbf{A}}
 \newcommand{\vecB}{\mathbf{B}}
 \newcommand{\vecC}{\mathbf{C}}
@@ -102,16 +106,17 @@ New Zealand\\
 
 \section{Abstract}
 
-New Zealand has been working towards elimination of endemic (domestic) measles virus transmission, but has suffered from small, but significant outbreaks of measles after measles introductions from abroad. In this draft final report we reviewed the draft \emph {Progress Towards Measles Elimination in New Zealand - Final} report from the New Zealand Ministry of Health to the World Health Organization (WHO) Western Pacific Region. We identified additional analyses that may help understand risk of infection in New Zealand, and present the results of statistical analyses of risk factors for measles cases in New Zealand during outbreaks since 2007, provide updated cost analyses for the measles outbreaks in New Zealand, and include modelling of measles outbreaks, including pre- and post-vaccination scenarios, based on several alternative situations. We provide benefit--cost analyses using the results from those model simulations, along with a number of alternative vaccination strategies to achieve different vaccination coverage levels. Our key findings were:
+New Zealand has been working towards elimination of endemic (domestic) measles virus transmission, but has suffered from small, yet significant outbreaks of measles after measles introductions from abroad. In this draft final report we review the draft \emph {Progress Towards Measles Elimination in New Zealand - Final} report from the New Zealand Ministry of Health to the World Health Organization (WHO) Western Pacific Region. We identified additional analyses that may help understand risk of infection in New Zealand, and present the results of statistical analyses of risk factors for measles cases in New Zealand during outbreaks since 2007. We provide cost analyses for the measles outbreaks in New Zealand, and include modelling of measles outbreaks, including pre- and post-vaccination scenarios, based on the numbers of naive people at the District Health Board (DHB) and national level. We provide benefit--cost analyses using the results from those model simulations, along with a number of alternative vaccination strategies to achieve different vaccination coverage levels. Our key findings were:
 
 \begin{itemize}
 \item The \emph {Progress Towards Measles Elimination in New Zealand - Final} report was of high quality and contained substantial information and useful analyses.
-\item New Zealand is at risk of frequent measles importation due to travel and endemic measles elsewhere in the globe.
-\item The cost of the current 2013--2014 measles outbreak is estimated to be at least \$750,000.
-\item Analyses of outbreak data suggest that measles basic reproductive number ($R_v$, the number of secondary infections) values often include 1 and this year, 2014, is well above one. This analysis suggests improved vaccination is a requisite to prevent measles becoming endemic again.
 \item Age is the best predictor of risk of measles infection in multivariate regression analyses, though some groups, such as people of Pacific ethnicity, the less socially deprived, and European and Maori school age children have been more likely to be measles cases in outbreaks since 2007.
-\item Estimates of the proportion of the currently naive New Zealand population requiring additional vaccination to ensure measles does not persist range from 0-53\%, leading to an additional 0--250,000 additional vaccinations.
-\item The benefit--cost ratio is dependent on expectations regarding measles transmission: if each measles case in New Zealand continues to infect the same number of secondary cases as we estimate from the current 2013--2014 outbreak, additional vaccination is extremely beneficial, but if outbreak dynamics remain the same as those of the average outbreaks since 1997 and future measles cases are few, there is no benefit to additional vaccination campaigns.
+\item New Zealand is at risk of frequent measles importation due to travel and endemic measles elsewhere in the globe.
+\item Peak overall travel rates, and thus presumably risk from measles importation, is in December. However, New Zealander and immigrant or non--New Zealander travelling is otherwise out of phase, with peak travel for New Zealanders during the winter, and non--New Zealanders summer.
+\item Analyses of outbreak data suggest that measles basic reproductive number ($R_v$, the number of secondary infections) values often include 1 and this year, 2014, as analysed from data from April, is well above one. This analysis suggests improved vaccination is a requisite to prevent measles becoming endemic again.
+\item Estimates of the proportion of the currently naive New Zealand population requiring additional vaccination to ensure measles does not persist is approximately 28\%, leading to an additional 131,500 vaccinations.
+\item The cost of the current 2013--2014 measles outbreak is estimated to be at least \$809,000.
+\item The benefit--cost ratio analyses suggest additional vaccination is extremely beneficial financially.
 \end{itemize}
 
 \section{Background}
@@ -139,19 +144,12 @@ The report concludes that New Zealand's surveillance system has been performing 
 
 We agree with the report conclusions that testing for measles is performed appropriately within the required timeframe. Clearly improving inter-laboratory communication and collaboration and timeliness of the testing and reporting is necessary for rapid responses to measles introductions following measles control. Vaccination coverage presented in the report and to ourselves confirms that immunisation levels are approaching 94\% for MMR dose one (birth cohorts 2009 and 2010) and 89\% for MMR dose two (birth cohorts 2006 and 2007). However, only Asian and Pacific ethnicities have consistently had MMR dose one coverage approaching or exceeding 95\% for cohorts from 2007 onwards, and thus we agree with the report's conclusions that timeliness and coverage of vaccination need improving. This is particularly in light of our preliminary modelling and risk analyses results (section~\ref{sub:risk_analyses} and section~\ref{sec:epidemic_modelling}).
 
-The analyses we believe could further inform the understanding of risk from measles infection are:
-\begin{itemize}
-\item Multivariate modelling to account for confounding within the univariate analyses.
-\item Inclusion of multivariate model results with local level immunity data to develop a risk map for New Zealand.
-\item Analyses of changing risk factors through time during outbreaks.
-\item Modelling transmission chains in the population to understand effective reproduction number.
-\item Development of risk maps to understand measles importation.
-\end{itemize}
-
-\subsection{Additional risk analyses}
+\section{Additional risk analyses}
 \label{sub:risk_analyses}
 
-In this section we provide a brief description of the work that we believe will help inform the Ministry of Health regarding the understanding of risk from measles. These analyses are intended to build on the analyses already included in the \emph {Progress Towards Measles Elimination in New Zealand - Final} report reviewed above.
+In this section we provide work that we believe will help inform the Ministry of Health regarding the understanding of risk from measles. These analyses are intended to build on the analyses already included in the \emph {Progress Towards Measles Elimination in New Zealand - Final} report reviewed above.
+
+We include multivariate modelling to account for confounding within the univariate analyses for measles cases in New Zealand, and descriptive analyses of risk of infection due to previous vaccination history, current rates of immunity within the population. In light of the apparent increasing trend in measles incidence in the last few years (Figure~\ref{fig:incidence1997}), we reviewed the information on measles importation and the origins of the introductions of measles into New Zealand. To help understand the risk of measles importation, with a particular goal of enabling the Ministry to better inform travellers and understand high risk periods, we sought to quantitatively evaluate the risk of measles importation from travel.
 
 \begin{figure}
      \centering
@@ -160,171 +158,8 @@ In this section we provide a brief description of the work that we believe will 
      \label{fig:incidence1997}
 \end{figure}
 
-In light of the apparent increasing trend in measles incidence in the last few years (Figure~\ref{fig:incidence1997}), we reviewed the information on measles importation and the origins of the introductions of measles into New Zealand. To help understand the risk of measles importation, with a particular goal of enabling the Ministry to better inform travellers and understand high risk periods, we sought to use quantitative methods to evaluate the risk of measles importation. 
-
-\subsection{Additional risk analyses methods}
-
-For our initial analyses, we use arrivals data from New Zealand immigration (\href{http://www.immigration.govt.nz/}{www.immigration.govt.nz}) as a proxy for human movement to and from New Zealand. We collated country population size, measles incidence and measles vaccination cover from the WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Note this uses all immigration of foreign nationals, coming for whatever purpose. We used the WHO data to determine per capita measles cases for each year and used these data and the number of immigrants to New Zealand to begin to understand where measles was likely to be imported from.
-
 %%%%%%%%%%%%%%%%%%
-<<echo=FALSE>>=
-library(xtable)
-totdpdf<-read.csv("mapdata_tot.csv",header=T)
-# output top countries
-colnames(totdpdf)[1]<-c("country")
-toptot <- totdpdf[order(-totdpdf$immigration),] 
-immigration<-toptot[1:10,c(1,4)]
-topincidence <- totdpdf[order(-totdpdf$incidence),] 
-incidence<-topincidence[1:10,c(1,2)]
-incidence[,2]<-round(incidence[,2],0)
-topvaccine <- totdpdf[order(totdpdf$cover),] 
-vaccinecover<-topvaccine[1:10,c(1,3)]
-toprisk <- totdpdf[order(-totdpdf$risk),] 
-risk<-(toprisk[1:10,c(1,5)])
-risk[,2]<-round(risk[,2],0)
-@
-
-\begin{table}
-\caption{Total travel numbers (2012)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(immigration, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:immigration12}
-\end{table}
-
-%%%%%%%%%%%%%%%%%%%%%
-
-\begin{table}
-\caption{Lowest national measles vaccine cover (\%, 2012)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(vaccinecover, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:cover12}
-\end{table}
-
-\begin{table}
-\caption{Measles incidence per million (2012)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(incidence, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:incidence12}
-\end{table}
-
-\begin{table}
-\caption{Risk of measles importation to New Zealand in 2012}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(risk, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:risk12}
-\end{table}
-
-
-<<echo=FALSE>>=
-library(xtable)
-dpdf<-read.csv("mapdata.csv",header=T)
-# output top countries
-colnames(dpdf)[1]<-c("country")
-topimmigration <- dpdf[order(-dpdf$immigration),] 
-immigration<-topimmigration[1:10,c(1,4)]
-topincidence <- dpdf[order(-dpdf$incidence),] 
-incidence<-topincidence[1:10,c(1,2)]
-incidence[,2]<-round(incidence[,2],0)
-topvaccine <- dpdf[order(dpdf$cover),] 
-vaccinecover<-topvaccine[1:10,c(1,3)]
-toprisk <- dpdf[order(-dpdf$risk),] 
-risk<-(toprisk[1:10,c(1,5)])
-risk[,2]<-round(risk[,2],0)
-@
-
-\begin{table}
-\caption{Immigration numbers to New Zealand (2012)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(immigration, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:immigration12}
-\end{table}
-
-%%%%%%%%%%%%%%%%%%%%%
-
-\begin{table}
-\caption{Lowest national measles vaccine cover (\%, 2012)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(vaccinecover, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:cover12}
-\end{table}
-
-\begin{table}
-\caption{Measles incidence per million (2012)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(incidence, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:incidence12}
-\end{table}
-
-\begin{table}
-\caption{Risk of measles importation to New Zealand in 2012}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(risk, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:risk12}
-\end{table}
-%%%%%%%%%%%%%%%%%%%
-<<echo=FALSE>>=
-library(xtable)
-nzdpdf<-read.csv("mapdata_nzers.csv",header=T)
-# output top countries
-colnames(nzdpdf)[1]<-c("country")
-topnz <- nzdpdf[order(-nzdpdf$immigration),] 
-nz<-topnz[1:10,c(1,4)]
-topnzrisk <- nzdpdf[order(-nzdpdf$risk),] 
-nzrisk<-(topnzrisk[1:10,c(1,5)])
-nzrisk[,2]<-round(nzrisk[,2],0)
-@
-
-\begin{table}
-\caption{New Zealander travel numbers (2012)}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(nz, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:nztravel12}
-\end{table}
-
-%%%%%%%%%%%%%%%%%%%%%
-
-\begin{table}
-\caption{Risk of measles importation to New Zealand due to New Zealand travellers in 2012}
-<<results=tex,echo=FALSE>>=
-# This chunk uses "results=tex"
-library(Hmisc)
-latex(nzrisk, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:nzrisk12}
-\end{table}
-
-%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%
-\subsection{Risk analyses methods}
+\subsection{Risk of measles infection in New Zealand analyses methods}
 We received the raw EpiSurv measles case data from The Institute of Environmental Science and Research Ltd (ESR) on 27 June 2014. Initial analyses of those ESR data (not shown) suggested that denominator data were required to perform multivariate analyses to avoid confounding results due to a lack of independence among risk factors. Specifically we required $\textsf{Age} \times \textsf{Prioritised Ethnicity} \times \textsf{NZDep}$ data for New Zealand to test whether interactions among case covariates provide additional information on risk over the univariate analyses performed in the \emph{Progress Towards Measles Elimination in New Zealand - Final} report. These $\textsf{Age} \times \textsf{Prioritised Ethnicity} \times \textsf{NZDep}$ data were provided to us on 3 July 2014 by the University of Otago. We used these denominator data to determine if there were interactions among specific age categories, Prioritized Ethnicities, and NZDep that might exist among cases allowing better understanding of risk of measles infection.
 
 The University of Otago denominator data provided were not to the same detail as the ESR case data. Notably, the denominator age data were categorised into several classes: 0--5, 6--17, 18--24, 25--64, and 65+ year categories. The ethnicity denominator data were not Prioritized Ethnicity at the Level 1 Ethnic Group Codes, but at the Level 2 Ethnic Group Codes, though with some alternative codes provided that did not match the Level 2 Ethnic codes. After discussions with the University of Otago we have provided results based on the best available data, though for smaller ethnic group categories, some results may be unreliable and these are discussed below.
@@ -359,9 +194,9 @@ head(test)
 dim(test)
 @
 
-\begin{figure}[h!]
+\begin{figure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
+<<fig=TRUE,echo=FALSE,width = 15>>=
 par(mfrow=c(1,1))
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=2)
@@ -539,15 +374,17 @@ ttyr<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity,
                  data = testtable , FUN=sum)
 @
 
-\begin{table}\tiny
-\caption{Absolute number of measles cases in specific age, ethnicity and socio-economic deprivation categories from 2007-2014}
+\begin{table}[hbtp]
+\footnotesize
 <<results=tex,echo=FALSE>>=
 # This chunk uses "results=tex"
 library(Hmisc)
-latex(ttyr, file="", table.env=FALSE,rowname=NULL)
+latex(ttyr, file="",table.env=FALSE,rowname=NULL)
 @
+\caption{Absolute number of measles cases in specific age, ethnicity and socio-economic deprivation categories from 2007-2014}
 \label{table:case}
 \end{table}
+
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 ### denominator data
@@ -628,7 +465,8 @@ legend("topleft",c("Asian","European","Maori","MLA","Pacific"),
 \label{fig:percap}
 \end{figure}
 
-\begin{table}\tiny
+\begin{table}[hbtp]
+\footnotesize
 \caption{Numbers of measles cases, population sizes and per capita rates of measles in specific age, ethnicity and socio-economic deprivation categories from 2007-2014}
 <<results=tex,echo=FALSE>>=
 # This chunk uses "results=tex"
@@ -682,6 +520,139 @@ summary(model3)
 anova(model3,test="F")
 @
 
+\subsection{Measles importation risk}
+
+For our measles importation risk analyses, we use arrivals data from New Zealand immigration and New Zealander travel data by country and year (\href{http://www.immigration.govt.nz/}{www.immigration.govt.nz}) to measure human movement to and from New Zealand. We collated country population size, measles incidence and measles vaccination cover from the WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Note the immigration figures use all immigration of foreign nationals, coming for whatever purpose and includes non-New Zealanders resident in New Zealand, but not yet holders of New Zealand passports. We used the WHO data to determine per capita measles cases for each year and used these data and the number of immigrants to New Zealand to begin to understand where measles was likely to be imported from. We used simple per capita rates for measles and the number of travellers to each country to score and map the risk of mealses importation. We use the data from 2012 because this year had the most complete WHO measles data and yet was most recent, thus accounts for improved measles vaccination coverage following the United Nations Millenium Development Goals' improvements in measles vaccination coverage. 
+
+%%%%%%%%%%%%%%%%%%
+<<echo=FALSE>>=
+library(xtable)
+totdpdf<-read.csv("mapdata_tot.csv",header=T)
+# output top countries
+colnames(totdpdf)[1]<-c("country")
+toptot <- totdpdf[order(-totdpdf$immigration),] 
+immigration<-toptot[1:30,c(1,4)]
+topincidence <- totdpdf[order(-totdpdf$incidence),] 
+incidence<-topincidence[1:30,c(1,2)]
+incidence[,2]<-round(incidence[,2],0)
+topvaccine <- totdpdf[order(totdpdf$cover),] 
+vaccinecover<-topvaccine[1:30,c(1,3)]
+toprisk <- totdpdf[order(-totdpdf$risk),] 
+risk<-(toprisk[1:30,c(1,5)])
+risk[,2]<-round(risk[,2],0)
+@
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+\caption{Lowest national measles vaccine cover (\%, 2012)}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(vaccinecover, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:cover12}
+\end{table}
+
+\begin{table}
+\caption{Measles incidence per million (2012)}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(incidence, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:incidence12}
+\end{table}
+
+\begin{table}
+\caption{Total New Zealand traveller numbers by country (New Zealand nationals and immigrants, 2012)}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(immigration, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:immigration12}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%
+<<echo=FALSE>>=
+library(xtable)
+nzdpdf<-read.csv("mapdata_nzers.csv",header=T)
+# output top countries
+colnames(nzdpdf)[1]<-c("country")
+topnz <- nzdpdf[order(-nzdpdf$immigration),] 
+nz<-topnz[1:30,c(1,4)]
+topnzrisk <- nzdpdf[order(-nzdpdf$risk),] 
+nzrisk<-(topnzrisk[1:30,c(1,5)])
+nzrisk[,2]<-round(nzrisk[,2],0)
+@
+
+\begin{table}
+\caption{New Zealander travel numbers (2012)}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(nz, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:nztravel12}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%
+<<echo=FALSE>>=
+library(xtable)
+imdpdf<-read.csv("mapdata_immigration.csv",header=T)
+# output top countries
+colnames(imdpdf)[1]<-c("country")
+topim <- imdpdf[order(-imdpdf$immigration),] 
+im<-topim[1:30,c(1,4)]
+topimrisk <- imdpdf[order(-imdpdf$risk),] 
+imrisk<-(topimrisk[1:30,c(1,5)])
+imrisk[,2]<-round(imrisk[,2],0)
+@
+
+\begin{table}
+\caption{Non-New Zealander travel and immigration numbers (2012)}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(im, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:imtravel12}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+\caption{Risk of measles importation to New Zealand due to New Zealand travellers in 2012}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(nzrisk, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:nzrisk12}
+\end{table}
+
+\begin{table}
+\caption{Risk of measles importation to New Zealand due to non-New Zealander travel and immigration in 2012}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(imrisk, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:imrisk12}
+\end{table}
+
+\begin{table}
+\caption{Risk of measles importation to New Zealand in 2012, all travellers}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(risk, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:risk12}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%
 
 \subsection{Additional risk analyses results}
 
@@ -718,7 +689,7 @@ load("world.ggmap.Rda")
 n <- length(unique(world.ggmap$id))
 id = unique(world.ggmap$id)
 id<-as.data.frame(id)
-dpdf<-read.csv("mapdata.csv",header=T)
+dpdf<-read.csv("mapdata_tot.csv",header=T)
 # output top countries
 
 np1<-ggplot(dpdf, aes(map_id = id))  +
@@ -755,29 +726,43 @@ np4<-ggplot(dpdf, aes(map_id = id)) +
   theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
 #np4
+# output top countries
+dpdf<-read.csv("mapdata_immigration.csv",header=T)
+imnp1<-ggplot(dpdf, aes(map_id = id))  +
+  geom_map(aes(fill = immigration), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+   xlab("longitude") +
+  ylab("latitude") +
+   theme(text = element_text(size=30))+
+  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+
+imnp4<-ggplot(dpdf, aes(map_id = id)) +
+  geom_map(aes(fill = risk), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+   xlab("longitude") +
+  ylab("latitude") +
+  theme(text = element_text(size=30))+
+  scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
+#np4
+dpdf<-read.csv("mapdata_nzers.csv",header=T)
+nznp1<-ggplot(dpdf, aes(map_id = id))  +
+  geom_map(aes(fill = immigration), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+   xlab("longitude") +
+  ylab("latitude") +
+   theme(text = element_text(size=30))+
+  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
+
+nznp4<-ggplot(dpdf, aes(map_id = id)) +
+  geom_map(aes(fill = risk), map =world.ggmap) +
+  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
+   xlab("longitude") +
+  ylab("latitude") +
+  theme(text = element_text(size=30))+
+  scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
+#np4
+
 @
-
-\begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{np1.pdf}
-     \caption{Non-New Zealander travel}
-     \label{fig:immigration12}
-\end{figure}
-
-\begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{nznp1.pdf}
-     \caption{New Zealand travellers 2012}
-     \label{fig:nztravellers}
-\end{figure}
-
-\begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{totnp1.pdf}
-     \caption{Total travellers 2012}
-     \label{fig:tottravellers}
-\end{figure}
-
 
 \begin{figure}[h!]
 \begin{center}
@@ -799,27 +784,66 @@ print(np3)
 \label{fig:cover12}
 \end{figure}
 
+
 \begin{figure}[h!]
- \centering
- \includegraphics[width=0.8\textwidth]{np4.pdf}
-\caption{Risk map from measles incidence and immigration rates}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 11>>=
+print(np1)
+@
+\end{center}
+\caption{Total international travel, 2012 }
+\label{fig:travel12}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 11>>=
+print(nznp1)
+@
+\end{center}
+\caption{New Zealander international travel, 2012 }
+\label{fig:nztravel12}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 11>>=
+print(imnp1)
+@
+\end{center}
+\caption{Non-New Zealander international travel and immigration, 2012 }
+\label{fig:immigration12}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 11>>=
+print(np4)
+@
+\end{center}
+\caption{Risk map for measles importation, 2012 }
 \label{fig:risk12}
 \end{figure}
 
-\begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{nznp4.pdf}
-     \caption{Risk map from measles incidence and New Zealander travel rates}
-     \label{fig:nzrisk12}
+\begin{figure}[h!]
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 11>>=
+print(nznp4)
+@
+\end{center}
+\caption{Risk map for measles importation from New Zealander international travel, 2012 }
+\label{fig:nzrisk12}
 \end{figure}
 
-\begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{totnp4.pdf}
-     \caption{Risk map from measles incidence and total travel rates}
-     \label{fig:totrisk12}
+\begin{figure}[h!]
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 11>>=
+print(imnp4)
+@
+\end{center}
+\caption{Risk map for measles importation from non-New Zealander international travel and immigration, 2012 }
+\label{fig:imrisk12}
 \end{figure}
-
 %%%%%%%%%%% REVISE FIGURE %%%%%%%%%%%
 \begin{figure}[h!]
 \begin{center}
@@ -842,173 +866,186 @@ plot(change[,1],change[,4],type="l",xlab="Year",ylab="",
      \begin{center}
      \includegraphics[width=1\textwidth]{nzers.pdf}
      \end{center}
-     \caption{Trends in travel}
+     \caption{Trends in international travel}
      \label{fig:travel}
 \end{figure}
 
 Though global incidence of measles in declining, in recent years that decline has slowed (Figure~\ref{fig:trendincidence}) and immigration rates to New Zealand have risen (Figure~\ref{fig:trendimmigration}). This suggests that the risk of measles importation could increase, though further analyses are require to understand the interaction between these variables.  Of note, however, is the clear seasonality in immigration (Figure~\ref{fig:trendimmigration}).  This seasonality suggests that there may be period of increased risk of measles importation, though again the interactions with seasonal measles transmission from the nations of origin will be an important factor in determining the risk of measles importation.
 
-\begin{figure}[h!]
-\begin{center}
-<<fig=TRUE,echo=FALSE>>=
-ttimes<-read.csv("times.csv",header=T)
-lmres<-lm(res~time,data=ttimes)
-#summary(lmres)
-plot(ttimes$res,xaxt="n",type="l",xlab="Date",ylab="")
-axis(1, at=1:71, labels=ttimes$mydate) 
-abline(lmres,col="red",
-       lty=2)
-acf(ttimes$res,lag.max = length(ttimes$res),plot=T,main="")
-@
-\end{center}
-\caption{Trend in total immigrations into New Zealand}
-\label{fig:trendimmigration}
-\end{figure}
-
 \begin{figure}
      \begin{center}
-     \includegraphics[width=0.6\textwidth]{naive_map.pdf}
+     \includegraphics[width=1.2\textwidth]{naive_map.pdf}
      \end{center}
      \caption{Numbers of naive individuals per District Health Board}
      \label{fig:naive_map}
 \end{figure}
 
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb1.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Northland District Health Board}
-     \label{fig:Northland}
+
+<<echo=FALSE,include=FALSE,results=hide>>=
+require(reshape2)  # this is the library that lets one flatten out data
+require(ggplot2)   # plotting library
+popimmune<-read.csv("PopnImmunityAll.csv",header=T)
+popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
+pop<-read.csv("popnsize.csv",header=T)
+colnames(pop)<-0:100
+pop<-t(pop)
+impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
+         rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
+length(pop)
+naive<-round(pop-(pop*impop))
+@
+
+\begin{figure}[ht!]
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 11>>=
+par(cex.axis=2)
+par(mar=c(5,6,4,2)+0.1)
+plot(pop,xlab="Age",ylab="Population",cex.lab=2)
+points(naive,pch=16)
+legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
+@
+\end{center}
+\caption{New Zealand population by age and estimated numbers of naive people in each age class}
+\label{fig:naive}
 \end{figure}
 
 
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb2.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Waitemata District Health Board}
-     \label{fig:Waitemata}
-\end{figure}
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb1.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Northland District Health Board}
+%     \label{fig:Northland}
+%\end{figure}
+%
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb2.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Waitemata District Health Board}
+%     \label{fig:Waitemata}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb3.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Auckland District Health Board}
+%     \label{fig:Auckland}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb4.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Counties Manukau District Health Board}
+%     \label{fig:Counties_Manukau}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb5.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Waikato District Health Board}
+%     \label{fig:Waikato}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb6.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Lakes District Health Board}
+%     \label{fig:Lakes}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb7.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Bay of Plenty District Health Board}
+%     \label{fig:BayofPlenty}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb8.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Tairawhiti District Health Board}
+%     \label{fig:Tairawhiti}
+%\end{figure}
 
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb3.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Auckland District Health Board}
-     \label{fig:Auckland}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb4.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Counties Manukau District Health Board}
-     \label{fig:Counties_Manukau}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb5.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Waikato District Health Board}
-     \label{fig:Waikato}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb6.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Lakes District Health Board}
-     \label{fig:Lakes}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb7.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Bay of Plenty District Health Board}
-     \label{fig:BayofPlenty}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb8.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Tairawhiti District Health Board}
-     \label{fig:Tairawhiti}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb9.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Taranaki District Health Board}
-     \label{fig:Taranaki}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb10.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Hawke's Bay District Health Board}
-     \label{fig:HawkesBay}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb11.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Whanganui District Health Board}
-     \label{fig:Whanganui}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb12.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Midcentral District Health Board}
-     \label{fig:Midcentral}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb13.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Hutt District Health Board}
-     \label{fig:Hutt}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb14.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Capital and Coast District Health Board}
-     \label{fig:CapitalandCoast}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb15.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Wairarapa District Health Board}
-     \label{fig:Wairarapa}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb16.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, Nelson Marlborough District Health Board}
-     \label{fig:NelsonMarlborough}
-\end{figure}
-
-\begin{figure}
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb17.pdf}
-     \end{center}
-     \caption{Numbers of naive individuals per age class, West Coast District Health Board}
-     \label{fig:WestCoast}
-\end{figure}
+%\begin{figure}
+%    \begin{center}
+%    \includegraphics[width=0.6\textwidth]{dhb9.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Taranaki District Health Board}
+%     \label{fig:Taranaki}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb10.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Hawke's Bay District Health Board}
+%     \label{fig:HawkesBay}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb11.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Whanganui District Health Board}
+%     \label{fig:Whanganui}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb12.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Midcentral District Health Board}
+%     \label{fig:Midcentral}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb13.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Hutt District Health Board}
+%     \label{fig:Hutt}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb14.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Capital and Coast District Health Board}
+%     \label{fig:CapitalandCoast}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb15.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Wairarapa District Health Board}
+%     \label{fig:Wairarapa}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb16.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, Nelson Marlborough District Health Board}
+%     \label{fig:NelsonMarlborough}
+%\end{figure}
+%
+%\begin{figure}
+%     \begin{center}
+%     \includegraphics[width=0.6\textwidth]{dhb17.pdf}
+%     \end{center}
+%     \caption{Numbers of naive individuals per age class, West Coast District Health Board}
+%     \label{fig:WestCoast}
+%\end{figure}
 
 \begin{figure}
      \begin{center}
@@ -1080,36 +1117,66 @@ hist(model3$residuals,main="",xlab="residuals",col="grey",cex.lab=2,ylab="")
 \caption{Histogram of residuals from the regression model (Equation~\ref{eq:reg})}
 \label{fig:resid}
 \end{figure}
+
 The significance of the different predictor variables can be seen in the ANOVA results:
-
-<<label=regmodelanova,include=FALSE>>=
-anova(model3,test="F")
+\par
+\vspace{5mm} %5mm vertical space
+<<label=regmodelanova,include=FALSE,echo=FALSE,results=tex>>=
+library(xtable)
+resan<-xtable(anova(model3,test="F"))
+print(resan,floating = FALSE)
 @
-
+\vspace{5mm} %5mm vertical space
 A summary of the regression model (Equation~\ref{eq:reg}) with the individual effects and the statistical support for the estimated coefficients can be seen here:
-
-<<label=regmodel,include=FALSE>>=
-summary(model3)
+\vspace{5mm} %5mm vertical space
+<<label=regmodel,include=FALSE,results=tex,echo=FALSE>>=
+library(xtable)
+xtb<-xtable(summary(model3))
+print(xtb,floating = FALSE)
 @
-
-Apart from over-representation of some MLA categories discussed above and not included here, the results of the regression model suggest that age is a strong predictor of being a measles case. Indeed, all age categories are significantly less likely to be measles cases compared to 0-2 year olds, and the likelihood decreases with age (Figure~\ref{fig:ageinyears}).
+\vspace{5mm} %5mm vertical space
+\par Apart from over-representation of some MLA categories discussed above and not included here, the results of the regression model suggest that age is a strong predictor of being a measles case. Indeed, all age categories are significantly less likely to be measles cases compared to 0-2 year olds, and the likelihood decreases with age (Figure~\ref{fig:ageinyears}).
 
 People of Pacific origin are also over-represented ($\beta$ = 1.16, standard error (SE) = 0.2, p--value < 0.0001), NZDep levels 6-10 under-represented ($\beta$ = -0.21, SE = 0.085, p--value = 0.02), and there are some other age:ethnicity classes that are significantly less represented in the data compared to Europeans in those ages classes, particularly in the 6--17 age classes. In later outbreaks (since 2007) there has been a shift in the distribution of ages infected. The very young are still most likely to be infected, but of school aged children older teenagers are more likely to be represented then the under tens (Figure~\ref{fig:ageinyears}). This pattern suggests that improving vaccination coverage in the young is reducing the burden of measles in those age categories. Interestingly the regression results suggest risk of measles cases in the 6--17 year age category was greater for Europeans and Maori.
+
+
+\begin{figure}[h!]
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 11>>=
+AgeVac<-table(testv$VC,testv$AgeInYears)
+row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
+AgeVac<-t(AgeVac)
+par(mar=c(5,6,4,2)+0.1)
+par(cex.axis=2)
+barplot(t(AgeVac),xlab="Age",col=c("darkgrey","red","orange"),main="",cex.lab=2)
+legend("topright",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"),cex=1.8,bty="n")
+@
+\end{center}
+\caption{Age and vaccination status of cases}
+\label{fig:ageandvac}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 11>>=
+par(mar=c(5,6,4,2)+0.1)
+par(cex.axis=2)
+hist(vac$Dose1Mths,breaks=100,col=rgb(0,0,1,1/4),xlab="Age in months",main="",cex.lab=2,ylab="")
+abline(v=12,col="blue")
+hist(vac$Dose2Mths,breaks=50,add=T,col=rgb(1,0,0,1/4))
+abline(v=60,col="red")
+legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=15,bty="n",cex=1.8)
+legend("top",c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n",cex=1.8)
+@
+\end{center}
+\caption{Age of vaccination of vaccinated measles cases}
+\label{fig:vaccstat}
+\end{figure}
 
 
 \subsection{Risk analysis discussion}
 
 The regression analyses suggest that age is a particularly strong risk factor for measles. This comes as no surpise to epidemiologists or health care providers. However, our analyses also highlight other groups that are at greater risk of measles. In particular, Pacific people are at greater risk, as are the more wealthy (NZDep 1--5), and European and Maori 6--17 year old children compared to Asian and Pacific ethnicity children of the same age. Interpretation of these results must still be viewed with some caution, however, as there is very likely a spatial effect that might not be accounted for in these analyses. Additional data we have been provided by the Ministry of Health but are yet to incorporate in our risk analyses are finer scale (domicile level) immunisation coverage data from the National Immunisation Register (NIR). A key issue with incorporating spatial immunisation data has been the denominator data, and how to deal with people of greater age than those recorded in the NIR. These analyses are possible future directions for this work. The results of these regression analyses are also discussed in the benefit--cost section below (Section~\ref{sub:cost_benefit})
-
-\subsection{Risk analysis summary}
-\begin{itemize}
-\item There is a continued, and perhaps increasing, risk of measles importation due to travel and endemic measles elsewhere in the world.
-\item There may be seasonal changes in risk of measles importation, though further analyses are needed.
-\item Risk of measles infection decreases significantly with age
-\item Pacific people are statistically more at risk of measles infection
-\item There is some statistical support for those living in better socio-economic situations being at greater risk of measles
-\item There is some statistical support for Pacific and Asian children in the 6--17 year age categories being at lower risk than European or Maori children
-\end{itemize}
 
 \subsection{Future risk analyses}
 We received the raw EpiSurv measles case data from The Institute of Environmental Science and Research Ltd (ESR) on 27 June 2014. Initial analyses of those data (not shown) suggest that we require denominator data to perform multivariate analyses to avoid confounding results due to a lack of independence among risk factors. Specifically for the multivariate analyses we wish to perform that detect interactions we require $\textsf{Age} \times \textsf{Prioritised Ethnicity} \times \textsf{NZDep}$ data for New Zealand to test whether interactions among case covariates provide additional information on risk over the univariate analyses performed in the report reviewed above. These $\textsf{Age} \times \textsf{Prioritised Ethnicity} \times \textsf{NZDep}$ data only became available to us on 3 July 2014, provided by the University of Otago.
@@ -1128,6 +1195,16 @@ An additional data set that would enable us to develop the understanding of meas
 \item The number of New Zealanders arriving from abroad each year, the countries to which they travelled, and length of travel.
 \end{itemize}
 
+
+\subsection{Risk analysis summary}
+\begin{itemize}
+\item There is a continued, and perhaps increasing, risk of measles importation due to travel and endemic measles elsewhere in the world.
+\item There may be seasonal changes in risk of measles importation, though further analyses are needed.
+\item Risk of measles infection decreases significantly with age
+\item Pacific people are statistically more at risk of measles infection
+\item There is some statistical support for those living in better socio-economic situations being at greater risk of measles
+\item There is some statistical support for Pacific and Asian children in the 6--17 year age categories being at lower risk than European or Maori children
+\end{itemize}
 
 \section{Modelling measles epidemics}
 \label{sec:epidemic_modelling}
@@ -1177,34 +1254,6 @@ To account for the different outbreak sizes we weighted our $R_v$ estimates by o
 
 We then assume that the measles epidemics are occurring in a naive population that is the size of the naive and currently susceptible population remaining in New Zealand and thus $R_0$ is equivalent to $R_v$. We estimated the susceptible population in New Zealand from the national level vaccination coverage data provided by the Ministry of Health for this work (approximately 11\%, Figure~\ref{fig:naive}). Thus, the $p_c$ applies to the naive population in New Zealand and these are the additional vaccinations required to reduce $R_v$ to one in the overall New Zealand population.
 
-<<echo=FALSE,include=FALSE,results=hide>>=
-require(reshape2)  # this is the library that lets one flatten out data
-require(ggplot2)   # plotting library
-popimmune<-read.csv("PopnImmunityAll.csv",header=T)
-popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
-         rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-length(pop)
-naive<-round(pop-(pop*impop))
-@
-
-\begin{figure}[ht!]
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-par(cex.axis=2)
-par(mar=c(5,6,4,2)+0.1)
-plot(pop,xlab="Age",ylab="Population",cex.lab=2)
-points(naive,pch=16)
-legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
-@
-\end{center}
-\caption{New Zealand population by age and estimated numbers of naive people in each age class}
-\label{fig:naive}
-\end{figure}
-
 We then used the proportions of the population that were estimated to require vaccination ($p_c$, Equation~\ref{eq:pc}), and the proportions of the naive population per age case from Figure~\ref{fig:naive} to provide different scenarios to achieve those goals. These are explored and discussed in relation to the risk analyses (Section~\ref{sub:regression_results}) in the benefit--cost analyses section below (Section~\ref{sub:cost_benefit}).
 
 Finally, we used the same model structure and generation times to estimate the epidemic sizes once vaccination catch up protocols had been implemented assuming $R_v$ < 1 and the population of susceptible people in New Zealand was now reduced by the numbers vaccinated. Because the model is stochastic, we ran 1000 simulations and report the mean values, though the distribution of these is shown in the benefit--cost section (Section~\ref{sub:cost_benefit}).
@@ -1221,28 +1270,6 @@ $$x_0=\frac{\Pe}{1-e^{-\Ro\Pe}}$$
 In order to prevent future epidemics, it is necessary that $\Rr_V<1$. Hence, the proportion of the population that must be vaccinated to prevent future outbreaks is $x_0-1/\Ro$.
 
 These formulae were applied at a District Health Board (DHB) level, assuming no mixing between DHBs.
-
-
-\begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{cases_by_dhb_2009_2014.pdf}
-     \caption{Measles cases by district health board (DHB) from 2009 to 2014}
-     \label{fig:dhbcases}
-\end{figure}
-
-\begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{outbreaks_for_R0.pdf}
-     \caption{Measles data classified as outbreaks for reproductive number of the infection ($R_v$) estimation}
-     \label{fig:outbreaks}
-\end{figure}
-
-\begin{figure}
-     \centering
-     \includegraphics[width=0.8\textwidth]{averageR0.pdf}
-     \caption{Estimates of $R_v$ ($R_0$) for the outbreaks each year, as classified in Figure~\ref{fig:outbreaks} (page~\pageref{fig:outbreaks})}
-     \label{fig:r0}
-\end{figure}
 
 \subsection{Modelling results and discussion}
 
@@ -1472,11 +1499,9 @@ latex(costtable5, file="", table.env=FALSE,rowname=NULL)
 \label{table:regression}
 \end{table}
 
-Wages lost due to measles were calculated for the period January 2008 -- August 2014. Calculations were based on the assumption that 5 days of work were lost for each case; however, individuals under 15 years of age were not assumed to be employed and therefore did not suffer an income loss. If the case were less than 20 years of age, it was assumed there was an income loss of 5 days for the care giver, in addition to the wage loss of the case if 15--19 years of age. Total wage lost for the 247 cases and care givers was estimated to be \$210,436. This consisted of \$107,820 for the cases and \$102,616 for the care giver, but did not include wage losses for cases under 15 years of age. Overall, the cost per case from 2008--2014 was estimated to be \$2,562 (\$852 in forgone wages and \$1,710 in hospital costs).
+Wages lost due to measles were calculated for the period January 2008 -- August 2014. Calculations were based on the assumption that 5 days of work were lost for each case; however, individuals under 15 years of age were not assumed to be employed and therefore did not suffer an income loss. If the case were less than 20 years of age, it was assumed there was an income loss of 5 days for the care giver, in addition to the wage loss of the case if 15--19 years of age. Total wage lost for the 247 cases and care givers was estimated to be \$210,436. This consisted of \$107,820 for the cases and \$102,616 for the care giver, but did not include wage losses for cases under 15 years of age. Overall, the cost per case from 2008--2014 was estimated to be \4,327 (\$852 in forgone wages, \$1,765 in management costs, and \$1,710 in hospital costs).
 
-%%%%%%%% REVISE
-
-This final figure brings an approximate estimate of \$786,479 for the current 2014 outbreak, which is comprised of earnings lost, case management and hospitalisation costs.
+This final figure brings an approximate estimate of \$809,149 for 187 cases for the current 2014 outbreak, which is comprised of earnings lost, case management and hospitalisation costs.
 
 
 \subsection{Benefit--cost analyses methods}
@@ -1510,24 +1535,20 @@ naive<-merge(naive,caseyr,by="AgeInYears",all=T)
 colnames(naive)<-c("AgeInYears","Naive","Cases")
 @
 
-\begin{figure}
+\begin{figure}[width=1\textwidth]
      \centering
 <<fig=TRUE,echo=FALSE,width = 11>>=
 ##
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=2)
-plot(round(0.53*naive$Naive) ,col="grey",bg="red",pch=21,ylab="Number to vaccinate",xlab="Age in Years",
-     main="",cex.lab=2)
-points(naive$Naive[0:21],col="grey",bg="orange",pch=22) # 
-points(naive$Naive[3:30],col="grey",bg="yellow",pch=23) 
-points(jitter(round(0.16*naive$Naive)),col="grey",bg="lightblue",pch=21) 
-points(jitter(naive$Naive[5:13]),col="grey",pch=22,bg="skyblue") # 
-points(naive$Naive[1:5],col="grey",pch=23,bg="navyblue") #
-legend("topright",c("53% naive, all ages","53% naive, all 0-21 yr olds","53% naive, all 3-30 yr olds",
-                    "16% naive, all ages","16% naive, all 5-13 yr olds","16% naive, all 1-5 yr olds"),
-       bty="n",pch=c(rep(21:23,2)),col=rep("grey",6),pt.bg=c("red","orange","yellow","lightblue","skyblue","navyblue"),cex=2)
+plot(naive$Naive ,col="black",bg="black",pch=1,ylab="Number to vaccinate",xlab="Age in Years",
+     main="",cex.lab=2,cex=3)
+points(round(0.28*naive$Naive),col="grey",bg="red",pch=21,cex=2)
+points(x=3:18,y=naive$Naive[3:18],col="grey",bg="orange",pch=23,cex=2) # 
+legend("topright",c("Naive","28% naive, all ages","28% naive, all 2-17 yr olds"),
+       bty="n",pch=c(1,21,23),col=rep("grey",3),pt.bg=c("black","red","orange"),cex=2)
 @
-     \caption{The estimated proportion of the currently naive New Zealand population requiring additional vaccination given alternative $R_v$ values to reduce the $R_v$ to one (Section~\ref{sec:epidemic_modelling}, Tables~\ref{tab:cost_sim} and ~\ref{tab:cost_ave}}
+     \caption{The estimated proportion of the currently naive New Zealand population requiring additional vaccination given alternative $R_v$ values to reduce the $R_v$ to one (Section~\ref{sec:epidemic_modelling}, Tables~\ref{tab:cost_sim} and ~\ref{tab:cost_ave})}
      \label{fig:numvac}
 \end{figure}
 
@@ -1610,8 +1631,8 @@ if (is.na(sum(new)))
 
 ## if R 0 == 2
 set.seed(1) # all infected
-res<-jm.epid(epid.nb=1000,GT=genTime,R0=1,epid.length=365*5,popn=4.2*1e6 * 0.11
-             ,family="poisson",peak.value=4.2*1e6 * 0.11)
+res<-jm.epid(epid.nb=1000,GT=genTime,R0=0.99,epid.length=365*5,popn=331385
+             ,family="poisson",peak.value=331385)
 sizes<-colSums(res)
 sizes
 legMd<-as.factor(paste("median =",c(median(sizes))))
@@ -1623,7 +1644,7 @@ legMn<-as.factor(paste("mean =",c(round(mean(sizes)))))
 <<fig=TRUE,echo=FALSE,width = 11>>=
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=2)
-hist(sizes,xlim=c(0,200),col="grey",breaks=3000,xlab="Outbreak size",main="",cex.lab=2)
+hist(sizes,xlim=c(0,200),col="grey",breaks=1000,xlab="Outbreak size",main="",cex.lab=2)
 #summary(sizes)
 abline(v=median(sizes),col="orange",lty=3,lwd=10)
 abline(v=mean(sizes),col="red",lty=3,lwd=10)
@@ -1663,72 +1684,6 @@ The annual cost for long-term care of people with moderate of severe mental reta
 
 \subsection{Benefit--cost analyses results}
 
-\begin{sidewaystable}[htbp]  
-  \centering  
-  \begin{raggedright}
-  \caption{Cost benefit analyses using simulated epidemic sizes}  
-  \label{tab:cost_sim}
-   \begin{threeparttable}[b] \tiny
-    \begin{tabular}{p{0.8cm}p{0.8cm}p{0.8cm}p{0.9cm}p{0.9cm}p{0.8cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}}  
-    \toprule  
-   
-Years $R_v$ estimated from & $R_v$ range &  $R_v$  for simulations &	Additional vaccines required to reduce $R_v$ to 1 &	Costs per vaccine (\$) &	Present value of discounted vaccination costs (\$) &	Mean total cases in over 10 years without additional vaccination \dagger&	Total hospitalised cases\sym{*}	& Total undiscounted case costs without additional vaccination (\$)\sym{**} &	Present value of discounted case costs of baseline program (\$)(Equation~\ref{eq:pc}) &	Mean epidemic size in immune pop over 10 years with $R_v$ = 1 \dagger &	Total cases over 10 years following additional vaccination\sym{***} &	Total hospitalised cases following additional vaccination &	Total costs for cases assuming supplemental vaccination (\$) &	Total cases reduce by vaccination alternative vs baseline &	Present value of discounted benefits from reducing cases with supplemental vaccination program	& Discounted net benefit of supplemental vaccination program &	Benefit--cost ratio\\
-\midrule
-2009-2014 &	0.92-1.19	& 0.92	& 0	    & na	  & 0	      & 130	    & 22  	& 148551	  & 130519	  & 13	& 130	  & 22	& 148551	& 0	      & 0	        & 0	        & na \\
-2009-2014	& 0.92-1.19	& 1.19	& 80000	& 20	  & 1600000	& 128901	& 21913	& 147295173	& 129415143	& 145	& 1450	& 247	& 1656915	& 127451	& 127959360	& 126359360	& 79.97 \\
-2009-2014	& 0.92-1.19	& 1.19	& 80000	& 50	  & 4000000	& 128901	& 21913	& 147295173	& 129415143	& 145	& 1450	& 247	& 1656915	& 127451	& 127959360	& 123959360	& 31.99 \\
-2013-2014	& 1.82-2.13	& 1.82	& 208153	& 20	& 4163060	& 340032	& 57805	& 388554566	& 341388274	& 116	& 1160	& 197	& 1325532	& 338872	& 340223647	& 336060587	& 81.72 \\
-2013-2014	& 1.82-2.13	& 1.82	& 208153	& 50	& 10407650& 340032	& 57805	& 388554566	& 341388274	& 116	& 1160	& 197	& 1325532	& 338872	& 340223647	& 329815997	& 32.69 \\
-2013-2014	& 1.82-2.13	& 2.13	& 252561	& 20	& 5051220	& 382074	& 64953	& 436595960	& 383597966	& 116	& 1160	& 197	& 1325532	& 380914	& 382433339	& 377382119	& 75.71 \\
-2013-2014	& 1.82-2.13	& 2.13	& 252561	& 50	& 12628050& 382074	& 64953	& 436595960	& 383597966	& 116	& 1160	& 197	& 1325532	& 380914	& 382433339	& 369805289	& 30.28 \\
-
-\end{raggedright}
-\bottomrule  
-    \end{tabular}%  
-    \begin{tablenotes}\footnotesize  
-        \item $\dagger$ {1000 simulations}
-        \item \sym{*} Proportion of cases hospitalised 0.17
-        \item \sym{**} Wage losses per case = \$852 and cost per hospitalised case = \$1710
-        \item \sym{***} Based on 10 introductions of measles, one per year
-      \end{tablenotes}  
-    \end{threeparttable}  
-\end{sidewaystable}
-
-\normalsize
-
-\begin{sidewaystable}[htbp]  
-  \centering  
-  \begin{raggedright}
-  \caption{Cost benefit analyses using historic epidemic sizes since 1997}  
-  \label{tab:cost_ave}
-   \begin{threeparttable}[b] \tiny
-    \begin{tabular}{p{0.8cm}p{0.8cm}p{0.8cm}p{0.9cm}p{0.9cm}p{0.8cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}}  
-    \toprule  
-Years $R_v$ estimated from & $R_v$ range &  $R_v$  for simulations &	Additional vaccines required to reduce $R_v$ to 1 &	Costs per vaccine (\$) &	Present value of discounted vaccination costs (\$) &	Mean total cases in over 10 years without additional vaccination \ddagger &	Total hospitalised cases\sym{*}	& Total undiscounted case costs without additional vaccination (\$)\sym{**} &	Present value of discounted case costs of baseline program (\$)(Equation~\ref{eq:pc}) &	Mean epidemic size in immune pop over 10 years with $R_v$ = 1 \dagger &	Total cases over 10 years following additional vaccination\sym{***} &	Total hospitalised cases following additional vaccination &	Total costs for cases assuming supplemental vaccination (\$) &	Total cases reduce by vaccination alternative vs baseline &	Present value of discounted benefits from reducing cases with supplemental vaccination program	& Discounted net benefit of supplemental vaccination program &	Benefit--cost ratio\\
-\midrule
-
-2009-2014	& 0.92-1.19	& 0.92	& 0	      & na	& 0	      & 130	  & 22	& 148551	  & 130519	& 13	& 130	  & 22	& 148551	& 0	  & 0	      & 0	        & na \\
-2009-2014	& 0.92-1.19	& 1.19	& 80000	  & 20	& 1600000	& 2200	& 374	& 2513940	  & 2208775	& 145	& 1450	& 247	& 1656915	& 750	& 752991	& -847009	  & 0.47 \\
-2009-2014	& 0.92-1.19	& 1.19	& 80000	  & 50	& 4000000	& 2200	& 374	& 2513940	  & 2208775	& 145	& 1450	& 247	& 1656915	& 750	& 752991	& -3247009	& 0.19 \\ 
-2013-2014	& 1.82-2.13	& 1.82	& 208153	& 20	& 4163060	& 2200	& 374	& 2513940	  & 2208775	& 116	& 1160	& 197	& 1325532	& 1040& 1044148	& -3118912	& 0.25 \\
-2013-2014	& 1.82-2.13	& 1.82	& 208153	& 50	& 10407650& 2200	& 374	& 2513940	  & 2208775	& 116	& 1160	& 197	& 1325532	& 1040& 1044148	& -9363502	& 0.10 \\
-2013-2014	& 1.82-2.13	& 2.13	& 252561	& 20	& 5051220	& 2200	& 374	& 2513940	  & 2208775	& 116	& 1160	& 197	& 1325532	& 1040& 1044148	& -4007072	& 0.21 \\
-2013-2014	& 1.82-2.13	& 2.13	& 252561	& 50	& 12628050& 2200	& 374	& 2513940	  & 2208775	& 116	& 1160	& 197	& 1325532	& 1040& 1044148	& -11583902	& 0.08 \\
-\end{raggedright}
-\bottomrule  
-    \end{tabular}%  
-    \begin{tablenotes}\footnotesize  
-        \item $\ddagger$ Based on average number of cases per year in New Zealand from 1997 onward
-        \item $\dagger$ {1000 simulations}
-        \item \sym{*} Proportion of cases hospitalised 0.17
-        \item \sym{**} Wage losses per case \$852 and cost per hospitalised case \$1710
-        \item \sym{***} Based on 10 introductions of measles, one per year
-      \end{tablenotes}  
-    \end{threeparttable}  
-\end{sidewaystable}
-
-\normalsize
-
 <<echo=FALSE>>=
 costtable20<-read.csv("cost_benefit_20.csv",header=T)
 @
@@ -1760,41 +1715,6 @@ latex(costtable50, file="", table.env=FALSE,rowname=NULL)
 The benefit--cost results are in Table~\ref{tab:cost_sim} and Table~\ref{tab:cost_ave}. The results in the two tables show two alternative trends. In scenarios where we simulate the expected outbreaks in a homogeneously mixed population and $R_v$ is above 1 the benefits of vaccination are always substantially greater than the costs of the increased supplementary vaccination (Table~\ref{tab:cost_sim}). However, if the previous recent history of cases since 1997 is the \emph{status quo} and what we may expect in the future then the \emph{additional} effort to vaccinate the currently naive population of New Zealand based on $R_v$ estimates that were greater than one is not a cost effective exercise (Table~\ref{tab:cost_ave}).
 
 It is worth noting that vaccination strategies that target the very young (<1 year old) may be less effective, as our analyses of the vaccinated cases suggests a substantial proportion of vaccinated cases that were vaccinated (Figure~\ref{fig:ageandvac}) were vaccinated with a single vaccine at a very young age (Figure~\ref{fig:vaccstat}).
-
-\begin{figure}[h!]
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-AgeVac<-table(testv$VC,testv$AgeInYears)
-row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
-AgeVac<-t(AgeVac)
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-barplot(t(AgeVac),xlab="Age",col=c("darkgrey","red","orange"),main="",cex.lab=2)
-legend("topright",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"),cex=1.8,bty="n")
-@
-\end{center}
-\caption{Age and vaccination status of cases}
-\label{fig:ageandvac}
-\end{figure}
-
-\begin{figure}[h!]
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-hist(vac$Dose1Mths,breaks=100,col=rgb(0,0,1,1/4),xlab="Age in months",main="",cex.lab=2,ylab="")
-abline(v=12,col="blue")
-hist(vac$Dose2Mths,breaks=50,add=T,col=rgb(1,0,0,1/4))
-abline(v=60,col="red")
-legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=15,bty="n",cex=1.8)
-legend("top",c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n",cex=1.8)
-@
-\end{center}
-\caption{Age of vaccination of vaccinated measles cases}
-\label{fig:vaccstat}
-\end{figure}
-
-
 
 \subsection{Benefit--cost analysis discussion}
 The results presented here are based on available data, and only a 10 week period for the 2013--2014 outbreak. The majority of the cost analyses were discussed in our previous interim report and though some details have changed, we will focus here on the benefit--cost analyses. However, for all analyses more detailed costs of all aspects of hospitalisation would be beneficial. So too would information of the cost of measles vaccination in New Zealand.
