@@ -11,6 +11,7 @@
 \usepackage{amsmath}
 \usepackage{indentfirst}
 \usepackage[utf8]{inputenc}
+\usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{eurosym}
 \usepackage{todonotes}
@@ -97,27 +98,32 @@
 \begin{document}
 \SweaveOpts{concordance=TRUE}
 
-\title{Draft final report\\ Measles risk assessment, modelling and benefit--cost analysis\\ \vspace{2 mm} {\large David T S Hayman, Tim Carpenter,\\ Jonathan C Marshall, Mick Roberts, Nigel P French}}
-\author{mEpiLab and EpiCentre,\\ Infectious Diseases Research Centre,\\
-Massey University,\\
-Palmerston North 4442,\\
-New Zealand\\
-\href{mailto: D.T.S.Hayman@massey.ac.nz}{D.T.S.Hayman@massey.ac.nz}}  %\texttt formats the text to a typewriter style font
+\title{Draft Final Report: Measles risk assessment, modelling, and benefit--cost analyses for New Zealand}
+\author{{David T S Hayman, Tim Carpenter,\\ Jonathan C Marshall, Mick Roberts, Nigel P French.} \\\\
+{\small mEpiLab and EpiCentre,}\\
+{\small   Infectious Diseases Research Centre,}\\
+{\small   Massey University, Palmerston North 4442,New Zealand}\\
+{\small and}\\
+{\small Institute of Natural \& Mathematical Sciences,}\\
+{\small   New Zealand Institute for Advanced Study and the Infectious Disease Research Centre,}\\
+{\small   Massey University, Private Bag 102 904, North Shore Mail Centre, Auckland, New Zealand. } \\ 
+Email: \texttt{D.T.S.Hayman@massey.ac.nz}}
+\date{}
 \maketitle
 
 \section{Abstract}
 
-New Zealand has been working towards elimination of endemic (domestic) measles virus transmission, but has suffered from small, yet significant outbreaks of measles after measles introductions from abroad. In this draft final report we review the draft \emph {Progress Towards Measles Elimination in New Zealand - Final} report from the New Zealand Ministry of Health to the World Health Organization (WHO) Western Pacific Region. We identified additional analyses that may help understand risk of infection in New Zealand. Here we present the results of statistical analyses of risk factors for measles cases in New Zealand during outbreaks since 2007. We provide cost analyses for the measles outbreaks in New Zealand, and include modelling of measles outbreaks, including pre- and post-vaccination scenarios, based on the numbers of naive people at the District Health Board (DHB) and national level. We provide benefit--cost analyses using the results from those model simulations, along with a number of alternative vaccination strategies to achieve different vaccination coverage levels. Our key findings were:
+New Zealand has been working towards elimination of endemic (domestic) measles virus transmission, but has suffered from small, yet significant outbreaks of measles after measles introductions from abroad. In this draft final report we review the draft \emph {Progress Towards Measles Elimination in New Zealand - Final} report from the New Zealand Ministry of Health to the World Health Organization (WHO) Western Pacific Region. We identified additional analyses that may help understand risk of infection in New Zealand. Here we present the results of statistical analyses of risk factors for measles cases in New Zealand during outbreaks since 2007. We provide cost analyses for the measles outbreaks in New Zealand, and include modelling of measles outbreaks, including pre- and post-vaccination scenarios, based on the numbers of na\"{\i}ve people at the District Health Board (DHB) and national level. We provide benefit--cost analyses using the results from those model simulations, along with a number of alternative vaccination strategies to achieve different vaccination coverage levels. Our key findings were:
 
 \begin{itemize}
 \item The \emph {Progress Towards Measles Elimination in New Zealand - Final} report was of high quality and contained substantial information and useful analyses.
 \item Age is the best predictor of risk of measles infection in multivariate regression analyses, though some groups, such as people of Pacific ethnicity, the less socially deprived, and European and Maori school age children have been more likely to be measles cases in outbreaks since 2007.
-\item Estimates of the proportion of the currently naive New Zealand population (11\%) requiring additional vaccination to ensure measles does not persist is approximately 28\%, leading to an additional 131,500 vaccinations.
+\item Estimates of the proportion of the currently na\"{\i}ve New Zealand population (11\%) requiring additional vaccination to ensure measles does not persist is approximately 28\%, leading to an additional 131,500 vaccinations.
 \item New Zealand is at risk of frequent measles importation due to travel and endemic measles elsewhere in the globe.
 \item Peak overall travel rates, and thus presumably risk from measles importation, is in December. However, New Zealander and immigrant or non--New Zealander travel is otherwise out of phase, with peak travel for New Zealanders during the winter, and non--New Zealanders summer.
 \item Analyses of outbreak data suggest that measles basic reproductive number ($R_v$, the number of secondary infections) values often include 1 and this 2013--2014 outbreak, as analysed from data until June, is well above one. This analysis suggests improved vaccination is a requisite to prevent measles persisting in the population.
-\item The cost of the current 2013--2014 measles outbreak is estimated to be at least \$809,000.
-\item The mean wage losses per measles case is estimated to be \$852
+\item The cost of the current 2013--2014 measles outbreak is estimated to be at least \$805,000.
+\item The mean wage losses per measles case is estimated to be \$839
 \item The mean cost per measles case attending hospital is estimated to be \$1710, and approximately 17\% of measles cases attend hospital
 \item The mean management cost per case was \$1,765
 \item The benefit--cost (B/C) ratio analyses suggest additional vaccination is extremely beneficial financially (B/C $>>$1).
@@ -677,8 +683,29 @@ legend("top",c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n",cex=1.
 
 \subsection{Population immunity results}
 
-The majority of the naive among the general New Zealand population are in their first years of life (Figure~\ref{fig:naive}). However, the distribution of naive at a national level shows that the recent MMR vaccination schemes are reducing the proportions of naive in the very young to greater levels than in older young people  (Figure~\ref{fig:naive}). Plotting the breakdown of these figures by DHB clearly shows that the greatest numbers of naive people are in DHBs with larger urban areas (Figure~\ref{fig:naive_map}). The distribution of the numbers of naive and the total naive populations per DHB, assuming national immunisation and immunity rates are representative, are given in Figures~\ref{fig:Northland},\ref{fig:Waitemata},\ref{fig:Auckland},\ref{fig:Counties_Manukau},\ref{fig:Waikato},\ref{fig:Lakes},\ref{fig:BayofPlenty},\ref{fig:Tairawhiti},\ref{fig:Taranaki},\ref{fig:HawkesBay},\ref{fig:Whanganui},\ref{fig:Midcentral},\ref{fig:Hutt},\ref{fig:CapitalandCoast},\ref{fig:Wairarapa},\ref{fig:NelsonMarlborough},\ref{fig:WestCoast},\ref{fig:Canterbury},\ref{fig:SouthCanterbury}, and \ref{fig:Southern}.
-
+The majority of the na\"{\i}ve among the general New Zealand population are in their first years of life (Figure~\ref{fig:naive}). However, the distribution of na\"{\i}ve at a national level shows that the recent MMR vaccination schemes are reducing the proportions of na\"{\i}ve in the very young to greater levels than in older young people  (Figure~\ref{fig:naive}). Plotting the breakdown of these figures by DHB clearly shows that the greatest numbers of na\"{\i}ve people are in DHBs with larger urban areas (Figure~\ref{fig:naive_map}). The distribution of the numbers of na\"{\i}ve and the total na\"{\i}ve populations per DHB, assuming national immunisation and immunity rates are representative, are given in:
+\begin{itemize}[noitemsep,nolistsep]
+\item Northland: Figure~\ref{fig:Northland}
+\item Waitemata: Figure~\ref{fig:Waitemata}
+\item Auckland: Figure~\ref{fig:Auckland}
+\item Counties Manukau: Figure~\ref{fig:Counties_Manukau}
+\item Waikato: Figure~\ref{fig:Waikato}
+\item Lakes: Figure~\ref{fig:Lakes}
+\item Bay of Plenty: Figure~\ref{fig:BayofPlenty}
+\item Tairawhiti: Figure~\ref{fig:Tairawhiti}
+\item Taranaki: Figure~\ref{fig:Taranaki}
+\item Hawke's Bay: Figure~\ref{fig:HawkesBay}
+\item Whanganui: Figure~\ref{fig:Whanganui}
+\item Mid-Central: Figure~\ref{fig:Midcentral}
+\item Hutt: Figure~\ref{fig:Hutt}
+\item Capital and Coast: Figure~\ref{fig:CapitalandCoast}
+\item Wairarapa: Figure~\ref{fig:Wairarapa}
+\item Nelson Marlborough: Figure~\ref{fig:NelsonMarlborough}
+\item West Coast: Figure~\ref{fig:WestCoast}
+\item Canterbury: Figure~\ref{fig:Canterbury}
+\item South Canterbury: Figure~\ref{fig:SouthCanterbury}
+\item Southern: Figure~\ref{fig:Southern}
+\end{itemize}
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 require(reshape2)  # this is the library that lets one flatten out data
@@ -704,7 +731,7 @@ points(naive,pch=16)
 legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
 @
 \end{center}
-\caption{New Zealand population by age and estimated numbers of naive people in each age class using national immunity data (Table~\ref{table:sero})}
+\caption{New Zealand population by age and estimated numbers of na\"{\i}ve people in each age class using national immunity data (Table~\ref{table:sero})}
 \label{fig:naive}
 \end{figure}
 
@@ -712,7 +739,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=1.2\textwidth]{naive_map.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:naive_map}
 \end{figure}
 
@@ -720,7 +747,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb1.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Northland District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Northland District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Northland}
 \end{figure}
 
@@ -729,7 +756,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb2.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Waitemata District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Waitemata District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Waitemata}
 \end{figure}
 
@@ -737,7 +764,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb3.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Auckland District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Auckland District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Auckland}
 \end{figure}
 
@@ -745,7 +772,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb4.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Counties Manukau District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Counties Manukau District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Counties_Manukau}
 \end{figure}
 
@@ -753,7 +780,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb5.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Waikato District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Waikato District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Waikato}
 \end{figure}
 
@@ -761,7 +788,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb6.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Lakes District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Lakes District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Lakes}
 \end{figure}
 
@@ -769,7 +796,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb7.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Bay of Plenty District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Bay of Plenty District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:BayofPlenty}
 \end{figure}
 
@@ -777,7 +804,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb8.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Tairawhiti District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Tairawhiti District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Tairawhiti}
 \end{figure}
 
@@ -785,7 +812,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
   \begin{center}
     \includegraphics[width=0.6\textwidth]{dhb9.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Taranaki District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Taranaki District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Taranaki}
 \end{figure}
 
@@ -793,7 +820,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb10.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Hawke's Bay District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Hawke's Bay District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:HawkesBay}
 \end{figure}
 
@@ -801,7 +828,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb11.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Whanganui District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Whanganui District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Whanganui}
 \end{figure}
 
@@ -809,7 +836,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb12.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Midcentral District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Midcentral District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Midcentral}
 \end{figure}
 
@@ -817,7 +844,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb13.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Hutt District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Hutt District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Hutt}
 \end{figure}
 
@@ -825,7 +852,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb14.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Capital and Coast District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Capital and Coast District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:CapitalandCoast}
 \end{figure}
 
@@ -833,7 +860,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb15.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Wairarapa District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Wairarapa District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Wairarapa}
 \end{figure}
 
@@ -841,7 +868,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb16.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Nelson Marlborough District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Nelson Marlborough District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:NelsonMarlborough}
 \end{figure}
 
@@ -849,7 +876,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb17.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, West Coast District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, West Coast District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:WestCoast}
 \end{figure}
 
@@ -857,7 +884,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
    \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb18.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Canterbury District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Canterbury District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Canterbury}
 \end{figure}
 
@@ -865,7 +892,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb19.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, South Canterbury District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, South Canterbury District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:SouthCanterbury}
 \end{figure}
 
@@ -873,7 +900,7 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
      \begin{center}
      \includegraphics[width=0.6\textwidth]{dhb20.pdf}
      \end{center}
-     \caption{Numbers of naive individuals per age class, Southern District Health Board, using national immunity data (Table~\ref{table:sero})}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Southern District Health Board, using national immunity data (Table~\ref{table:sero})}
      \label{fig:Southern}
 \end{figure}
 
@@ -1009,7 +1036,7 @@ latex(risk, file="", table.env=FALSE,rowname=NULL)
 
 %%%%%%%%%%%%%%%%%%
 
-Analyses of 2012 data, the most complete and current year of data, suggest immigration (whether for work, pleasure, etc.) is dominated by people from Australia, United Kingdom, China, and the United States, as shown in Table \ref{table:imtravel12} and Figure~\ref{fig:imtravel12}. However, travel by New Zealanders is dominated by that to Australia \ref{table:nztravel12} and \ref{fig:nztravel12}. Together, these mean that the greatest travel location for New Zealanders and immigration travel is from Australia (\ref{table:immigration12} and \ref{fig:immigration12}.Vaccination coverage is lowest and measles incidence highest in less developed nations (Table \ref{table:cover12} and Table \ref{table:incidence12}, and Figures~\ref{fig:cover12}\ref{fig:incidence12}. Though the precise interactions between these different risk factors are unknown, the most simple, a product of measles incidence in 2012 and immigration numbers in 2012, suggest that though immigration is lower from some Asian countries, travel from (and thus we presume to) some Asian countries also poses a high risk of measles importation to New Zealand. These data are shown in Table \ref{table:risk12}. The data for all the variables for each nation state and territories for 2012 are plotted in Figure~\ref{fig:immigration12}, Figure~\ref{fig:incidence12}, and Figure~\ref{fig:cover12} and the risk map for measles incidence and immigration in Figure~\ref{fig:risk12}. The breakdown by New Zealander and non-New Zealander travellers is in Tables~\ref{table:nzrisk12}\ref{table:imrisk12} and Figures~\ref{fig:nzrisk12}\ref{fig:imrisk12}
+Globally, vaccination coverage is lowest and measles incidence highest in less developed nations (Table \ref{table:cover12} and Table \ref{table:incidence12}, and Figures~\ref{fig:cover12} and \ref{fig:incidence12}. Analyses of 2012 data, the most complete and recent year of data, suggest immigration (whether for work, pleasure, etc.) is dominated by people from Australia, United Kingdom, China, and the United States, as shown in Table \ref{table:imtravel12} and Figure~\ref{fig:imtravel12}. However, travel by New Zealanders is dominated by that to Australia (Table~\ref{table:nztravel12} and Figure~\ref{fig:nztravel12}). Together, these mean that the greatest travel location for New Zealanders and immigration travel is from Australia (\ref{table:immigration12} and \ref{fig:immigration12}. Though the precise interactions between these different risk factors are unknown, the most simple, a product of measles incidence in 2012 and immigration numbers in 2012, suggest that though immigration is lower from some Asian countries, travel from (and thus we presume to) some Asian countries also poses a high risk of measles importation to New Zealand. These data are shown in Table \ref{table:risk12}. The data for all the variables for each nation state and territories for 2012 are plotted in Figure~\ref{fig:immigration12}, Figure~\ref{fig:incidence12}, and Figure~\ref{fig:cover12} and the risk map for measles incidence and immigration in Figure~\ref{fig:risk12}. The breakdown by New Zealander and non-New Zealander travellers is in Tables~\ref{table:nzrisk12} and \ref{table:imrisk12} and Figures~\ref{fig:nzrisk12} and \ref{fig:imrisk12}
 
 <<echo=FALSE>>=
 # haven't had time to sort out which packages I need
@@ -1223,17 +1250,19 @@ plot(change[,1],change[,4],type="l",xlab="Year",ylab="",
      \label{fig:travel}
 \end{figure}
 
-Though global incidence of measles in declining, in recent years that decline has slowed (Figure~\ref{fig:trendincidence}) and immigration rates to New Zealand have risen (Figure~\ref{fig:trendimmigration}). This suggests that the risk of measles importation could increase, though further analyses are require to understand the interaction between these variables.  Of note, however, is the clear seasonality in immigration (Figure~\ref{fig:trendimmigration}).  This seasonality suggests that there may be period of increased risk of measles importation, though again the interactions with seasonal measles transmission from the nations of origin will be an important factor in determining the risk of measles importation. Of interest is the asynchrony, or lack of phase, between peak non-New Zealander immigration and New Zealanders travelling. The Christmas summer period being an exception to this, when there is substantial New Zealander travel and combined these lead to a very sharp peak in travel rates in December (Figure~\ref{fig:trendimmigration}).
+Though global incidence of measles in declining, in recent years that decline has slowed (Figure~\ref{fig:trendincidence}) and immigration rates to New Zealand have risen (Figure~\ref{fig:travel}). This suggests that the risk of measles importation could increase, though further analyses are require to understand the interaction between these variables.  Of note, however, is the clear seasonality in immigration and travel (Figure~\ref{fig:travel}).  This seasonality suggests that there may be period of increased risk of measles importation, though again the interactions with seasonal measles transmission from the nations of origin will be an important factor in determining the risk of measles importation. Of interest is the asynchrony, or lack of phase, between peak non-New Zealander immigration and New Zealanders travelling. The Christmas summer period being an exception to this, when there is substantial New Zealander travel and combined these lead to a very sharp peak in travel rates in December (Figure~\ref{fig:travel}).
 
 \subsection{Risk analysis discussion}
 
-The regression analyses suggest that age is a particularly strong risk factor for measles. This comes as no surpise to epidemiologists or health care providers. However, our analyses also highlight other groups that are at greater risk of measles. In particular, Pacific people are at greater risk, as are the more wealthy (NZDep 1--5), and European and Maori 6--17 year old children compared to Asian and Pacific ethnicity children of the same age. Interpretation of these results must still be viewed with some caution, however, as there is very likely a spatial effect that might not be accounted for in these analyses. Additional data we have been provided by the Ministry of Health but are yet to incorporate in our risk analyses are finer scale (domicile level) immunisation coverage data from the National Immunisation Register (NIR). A key issue with incorporating spatial immunisation data has been the denominator data, and how to deal with people of greater age than those recorded in the NIR. These analyses are possible future directions for this work. The results of these regression analyses are also discussed in the benefit--cost section below (Section~\ref{sub:cost_benefit})
+The regression analyses suggest that age is a particularly strong risk factor for measles. This comes as no surpise to epidemiologists or health care providers. However, our analyses also highlight other groups that are at greater risk of measles. In particular, Pacific people are at greater risk, as are the more wealthy (NZDep 1--5), and European and Maori 6--17 year old children compared to Asian and Pacific ethnicity children of the same age. Interpretation of these results must still be viewed with some caution, however, as there is very likely a spatial effect that might not be accounted for in these analyses. Additional data we have been provided by the Ministry of Health but are yet to incorporate in our risk analyses are finer scale (domicile level) immunisation coverage data from the National Immunisation Register (NIR). A key issue with incorporating the spatial immunisation data has been the denominator data and the NIR data. The data suggest that census data and NIR data re recording children living in different DHB to that which they are vaccinated in, or subsequent to the census or NIR data moving. The leads to some area census units having more than 100\% children vaccinated, with some many times more, and some with very low levels reportedly vaccinated. Another issue was how to deal with people of greater age than those recorded in the NIR. Thus, these analyses are possible future directions for this work and a focus of future data collection could be to better understand the link between denominator data and NIR data. 
 
-The distribution of the measles cases (\ref{fig:ageandvac}) appears to reflect the distribution of naive in the population (\ref{fig:naive}). The vaccination history of the cases suggests that lack of vaccination cover is the main contributor to the outbreak, though it is noticable that a number ($>16\%$) of cases had been vaccinated at least once. However, the majority of these received only one vaccination, and when they were young (\ref{fig:vaccstat}). The majority of naive among the New Zealand population is clearly focused in the urban areas. Unfortunately, additional data we received from the Ministry that we hoped would allow us to provide finer scale results (lower than District Health Board (DHB)) immunisation coverage data ew not able to provide reliable results. We obtained the National Immunisation Register (NIR) data, but frequently the numbers of vaccinated children in a census area provided in the NIR was greater than the number reported in the census area unit population census. Thus the data gap that we have hinder us providing fine scale risk maps.
+The distribution of the measles cases (Figure~\ref{fig:ageandvac}) appears to reflect the distribution of na\"{\i}ve in the population (Figure~\ref{fig:naive}). The vaccination history of the cases suggests that lack of vaccination cover is the main contributor to the outbreak, though it is noticable that a number of cases ($>16\%$) had been vaccinated at least once (Figure~\ref{fig:ageandvac}). However, the majority of these vaccinated cases received only one vaccination, and were vaccinated when they were young (Figure~\ref{fig:vaccstat}). 
 
-The distribution of naive among the DHB also varies (Figures~\ref{fig:Northland}~\ref{fig:Waitemata}~\ref{fig:Auckland}~\ref{fig:Counties_Manukau}~\ref{fig:Waikato}~\ref{fig:Lakes}~\ref{fig:BayofPlenty}~\ref{fig:Tairawhiti}~\ref{fig:Taranaki}~\ref{fig:HawkesBay}~\ref{fig:Whanganui}~\ref{fig:Midcentral}~\ref{fig:Hutt}~\ref{fig:CapitalandCoast}~\ref{fig:Wairarapa}~\ref{fig:NelsonMarlborough}~\ref{fig:WestCoast}~\ref{fig:Canterbury}~\ref{fig:SouthCanterbury}~\ref{fig:Southern}). We hope that the Ministry will find these informative, as they indicate which age classes may be the focus of vaccination efforts for each DHB.
+The majority of na\"{\i}ve among the New Zealand population is clearly focused in the DHB with large urban areas (Figure~\ref{fig:naive_map}). Unfortunately, additional data we received from the Ministry that we hoped would allow us to provide finer scale results (lower than District Health Board (DHB)) immunisation coverage data were not able to provide reliable results, as discussed above. The National Immunisation Register (NIR) data, but frequently the numbers of vaccinated children in a census area provided in the NIR was greater than the number reported in the census area unit population census. Thus the data gap that we have hinder us providing fine scale risk maps.
 
-Further analyses are required to see if the seasonal patterns in travel match seasonality in measles incidence in the countries most travel to New Zealand is coming from. However, the strong seasonality in travel around Christmas suggests this may be a time where extra effort and vigilence is required for measles vaccination and control efforts.
+The distribution of na\"{\i}ve among the DHB also varies. We hope that the Ministry will find these informative, as they indicate which age classes may be the focus of vaccination efforts for each DHB. However, it is worth bearing in mind that the data here assume that the national NIR vaccination coverage and serosurvey results are appropriate for all DHB.
+
+Further analyses are required to see if the seasonal patterns in travel match seasonality in measles incidence in the countries most travel to New Zealand is coming from. However, the strong seasonality in travel around Christmas suggests this may be a time where extra effort and vigilence is required for measles vaccination and control efforts. The area identified as greatest risk for measles importation, Australia, simply reflects the enormous amount of travel between Australia and New Zealand (Table~\ref{table:immigration12} and Figure~\ref{fig:immigration12}). However, recently Australia was declare free of endemic measles and so the 2012 data must reflect imported measles there. However, other areas of high risk include the United Kingdom, where measles persists, South, Southeast and East Asia, where measles is endemic (Table~\ref{table:risk12} and Figure~\ref{fig:risk12}).
 
 \subsection{Risk analysis summary}
 \begin{itemize}
@@ -1243,7 +1272,7 @@ Further analyses are required to see if the seasonal patterns in travel match se
 \item There is some statistical support for Pacific and Asian children in the 6--17 year age categories being at lower risk than European or Maori children.
 \item The majority of cases are unvaccinated.
 \item The majority of vaccines failures occur in those people which revieved single vaccinations around 1 year old.
-\item Distribution of numbers of naive among New Zealand is uneven, with the majority predictably in urban areas.
+\item Distribution of numbers of na\"{\i}ve among New Zealand is uneven, with the majority predictably in DHB with larger urban areas.
 \item There is a continued, and perhaps increasing, risk of measles importation due to travel and endemic measles elsewhere in the world.
 \item There may be seasonal changes in risk of measles importation, with travel numbers peaking in December.
 \end{itemize}
@@ -1255,7 +1284,7 @@ A previously-published model of the dynamics of measles infections in New Zealan
 
 The original mathematical model for the dynamics of measles in New Zealand prepared in 1996 \citep{tobias98} successfully predicted the 1997 epidemic, which was curtailed by a mass vaccination campaign \citep{mansoor98,roberts0}. Subsequent extension of this work in 1998 showed that the then current schedule of MMR1 at 15 months and MMR2 at 11 years was insufficient to prevent further epidemics. The model developed by \citep{roberts0} supported the change in the immunisation schedule that took effect in January 2001, at which time MMR2 was changed from delivery at 11 years to delivery before the age of five. The schedule was changed in 2000 with MMR2 now being administered before 5 years \citep{anon2a} and later analyses suggested high levels of vaccination coverage (but less than 95\%) could eliminate measles, but emphasised that it is necessary to maintaining high coverage rates in order to prevent future epidemics \citep{roberts4}.
 
-These results were comparable to others, for example: \citep{babad95} suggested two-dose schedule for England and Wales, with the second vaccination given at age four; and \citep{gay98} recommended a second vaccination at either 18 months or five years, to complement the first vaccination at 12 months in Canada. In addition, \citep{agur93} found that vaccinating 85\% of susceptible children aged one to seven years at five-yearly intervals would prevent epidemics in Israel. All modelling studies agree that two vaccinations at no less than five years apart are necessary to prevent measles epidemics. \citep{wallinga1} took existing policies in eight European countries and estimated the coverage rates required to reduce $R_v$ below one. They found that results depended on the age at delivery, but no strategy succeeded if coverage rates were below approximately 87\%.
+These results were comparable to others, for example: \citep{babad95} suggested two-dose schedule for England and Wales, with the second vaccination given at age four; and \citep{gay98} recommended a second vaccination at either 18 months or five years, to complement the first vaccination at 12 months in Canada. In addition, \citep{agur93} found that vaccinating 85\% of susceptible children aged one to seven years at five-yearly intervals would prevent epidemics in Israel. All modelling studies agree that two vaccinations at no less than five years apart are necessary to prevent measles epidemics. \citep{wallinga1} took existing policies in eight European countries and estimated the coverage rates required to reduce $R_v$ below one and eliminate endemic measles. They found that results depended on the age at delivery, but no strategy succeeded if coverage rates were below approximately 87\%.
 
 Numerous models for measles vaccination strategies for various regions \citep{agur93, babad95, edmunds0, gay98, wallinga1} based on sets of nonlinear differential equation (ODE) models have reached similar conclusions. The differences in the models have been in the details of the representation of the infectious period, and in the ways in which the age and contact structures of the population have been specified. While analyses suggest that 85\% coverage at MMR1 and MMR2 could be sufficient to prevent future measles epidemics, \citep{glass4} in the Netherlands showed that high overall levels of measles vaccination can obscure pockets of poor coverage, resulting in localised regions with increased risk of infection and effective immunisation is difficult to evaluate. 
 
@@ -1305,25 +1334,25 @@ Hence the relationship between the proportion initially susceptible and the prop
 x_0=\frac{\Pe}{1-e^{-\Ro\Pe}}
 \end{equation}
 
-In order to prevent future epidemics, it is necessary that $\Rr_V<1$. Hence, the proportion of the population that must be vaccinated to prevent future outbreaks is $x_0-1/\Ro$.
+In order to prevent future epidemics, it is necessary that $\Rr_V<1$. Hence, the proportion of the population that must be vaccinated to prevent future outbreaks is
+
+\begin{equation} \label{eq:prop}
+$x_0-1/\Ro$.
+\end{equation}
 
 These formulae were applied at a District Health Board (DHB) level, assuming no mixing between DHBs.
 
 \subsection{Modelling results and discussion}
 
-The estimated $R_v$ for each outbreak is shown in Figure~\ref{fig:r0}. The probability density of the $R_v$ estimates for each outbreak all include one. Of particular note is the ongoing outbreak (as of 12 June 2014), which has an $R_v$ well above one and thus we may expect this outbreak to persist if conditions remain the same. An important caveat to this outbreak analysis is that because this 2013--2014 outbreak is an ongoing outbreak, and not in decline, $R_0$ is necessarily over one, and so the comparison with others must be cautious.
+The estimated $R_v$ for each outbreak is shown in Figure~\ref{fig:r0}. The 95\% confidence intervals for our analyses suggest the $R_v$ for the 2009--2014 outbreaks is 0.92--1.19, and for the current outbreak 1.82--2.13. The probability density of the $R_v$ estimates for each outbreak all include one. Of particular note is the ongoing outbreak (as of 12 June 2014), which has an $R_v$ well above one and thus we may expect this outbreak to persist if conditions remain the same. An important caveat to this outbreak analysis is that because this 2013--2014 outbreak is an ongoing outbreak, and not in decline, $R_0$ is necessarily over one, and so the comparison with others must be cautious.
 
-These analyses also imply that the regular (approximately yearly) importation of measles is an ongoing process. Given the risk of importation of measles as highlighted in section~\ref{sub:risk_analyses} is likely to continue, these analyses suggest substantial efforts are required to maintain the level of immunisation to high enough levels that measles does not become endemic. The measles outbreak in 2011--2012 had an $R_v$ of just greater than one, and yet it persisted for over 12 months. This implies that the current outbreak may persist within the population for a substantial period, given it's $R_v$ is approximately twice that of the 2011-2012 outbreak. A caveat to this and other $R_v$ estimates is that the 2013--2014 outbreak may include some sporadic cases and thus the true basic reproductive numbers may be lower than estimated. However, sub-clinical and underreporting may lower the estimate. The relative contributions of both to our estimates are currently unknown.
+These analyses also imply that the regular (approximately yearly) importation of measles is an ongoing process. Given the risk of importation of measles as highlighted in section~\ref{sub:risk_analyses} is likely to continue, these analyses suggest substantial efforts are required to maintain the level of immunisation to high enough levels that measles does not become endemic. The measles outbreak in 2011--2012 had an $R_v$ of just greater than one, and yet it persisted for over 12 months. This implies that the current outbreak may persist within the population for a substantial period, given it's $R_v$ is approximately twice that of the 2011-2012 outbreak. A caveat to this and other $R_v$ estimates is that the 2013--2014 outbreak may include some sporadic cases and thus the true basic reproductive numbers may be lower than estimated. However, sub-clinical and underreporting may lower the estimate. The relative contributions of both to our estimates are currently unknown. 
 
-The estimated $R_v$ for each outbreak is shown in Figure~\ref{fig:r0} and in the previous interim reports. The probability density of the $R_v$ estimates for each outbreak all include one, except for the ongoing 2013--2014 outbreak, which has an $R_v$ well above one. As discussed in the previous interim report, the important caveat to this outbreak analysis is that because this 2013--2014 outbreak is an ongoing outbreak, and not in decline, $R_v$ is necessarily over one, and so the comparison with others must be cautious. However, the results of these differences are presented and discussed in the benefit--cost analysis section (Section~\ref{sub:cost_benefit}). The 95\% confidence intervals for our analyses suggest the $R_v$ for the 2009--2014 outbreaks is 0.92--1.19, and for the current outbreak 1.82--2.13.
+If fewer cases occur during each outbreak, then this suggests that $R_v$ is lower, but that measles is introduced to New Zealand more frequently. The regularity of these outbreaks, however, imply that the regular (approximately yearly) importation of measles is an ongoing process. Given the risk of importation of measles as highlighted in section~\ref{sub:risk_analyses} and our previous report is likely to continue, we include the effects of this in the benefit--cost section (Section~\ref{sub:cost_benefit}).
 
-The regularity of these outbreaks also imply that the regular (approximately yearly) importation of measles is an ongoing process. Given the risk of importation of measles as highlighted in section~\ref{sub:risk_analyses} and our previous report is likely to continue, we explore the effects of this in the benefit--cost section (Section~\ref{sub:cost_benefit}).
+To use the results from our modelling exercise to help inform the appropriate measles vaccination coverage, we use Equation~\ref{eq:prop}. The proportion of the population requiring additional vaccination to make $R_v$ < 1 ranged from 17\% to 34\% at the DHB level, with a national average of approximately 28\% (Table~\ref{table:attack}). These additional vaccination numbers can be made up in a number of different ways, and these are discussed in the benefit--cost section (Section~\ref{sub:cost_benefit}). However, they require differing numbers of vaccinations per DHB. Estimates for West Coast, Wairarapa, and South Canterbury, for example, are fewer than 1000 (Table~\ref{table:attack}). The estimated numbers to vaccinate in the Auckland area, however, are higher for each DHB, with those estimated for Waitemata, Auckland, and Counties Manukau DHBs all over 17,000  (Table~\ref{table:attack}).
 
-The measles outbreak in 2011--2012 had an $R_v$ of just greater than one, and yet it persisted for over 12 months. This implies that the current outbreak may persist within the population for a substantial period, given it's $R_v$ is approximately twice that of the 2011-2012 outbreak. A caveat to this and other $R_v$ estimates is that the 2013--2014 outbreak may include some sporadic cases and thus the true basic reproductive numbers may be lower than estimated. However, sub-clinical and underreporting may lower the estimate. The relative contributions of both to our estimates are currently unknown.
-
-To use the results from our modelling exercise to help inform the appropriate measles vaccination coverage, we use Equation~\ref{eq:eqn3}. The proportion of the population requiring additional vaccination to make $R_v$ < 1 ranged from 17\% to 34\%, with a national average of approximately 28\%, Table~\ref{table:attack}). These additional vaccination numbers can be made up in a number of different ways, and these are discussed in the benefit--cost section (Section~\ref{sub:cost_benefit}).
-
-The results of these modelling exercises suggest vaccination levels are close to eliminating the possibility of endemic measles transmission, as estimates of $R_v$ typically include 1 (Figure~\ref{fig:r0}). However, the naive population (Figures~\ref{fig:naive}\ref{fig:naive_map}) and the higher $R_v$ for the 2013--2014 outbreak (Figure~\ref{fig:r0}) suggests that catch up vaccination may be necessary (and see Table~\ref{table:attack}. The results of these analyses support other studies. Vaccinating 85\% of susceptible children aged one to seven years at five-yearly intervals was suggested to be sufficient to prevent epidemics in Israel \citep{agur93}, but nearly all other studies in Europe suggest no strategies succeeded if coverage rates were below approximately 87\%, which the population level immunity in New Zealand has only just reached, with approximately 11\% naive. Measles vaccination in various regions \citep{agur93, babad95, edmunds0, gay98, wallinga1} based on sets of nonlinear differential equation (ODE) models suggest that 85\% coverage at MMR1 and MMR2 could be sufficient to prevent future measles epidemics, but \citep{glass4} showed that in the Netherlands high overall levels of measles vaccination can obscure pockets of poor coverage, resulting in localised regions with increased risk of infection and effective immunisation is difficult to evaluate. Future analyses at a smaller, more local level would be useful, but the lack of appropriate data matching between the NIR data and the census unit area data prevented these.
+The results of these modelling exercises suggest vaccination levels are close to eliminating the possibility of endemic measles transmission, as estimates of $R_v$ typically include 1 (Figure~\ref{fig:r0}). However, the na\"{\i}ve population (Figures~\ref{fig:naive} and \ref{fig:naive_map}) and the higher $R_v$ for the 2013--2014 outbreak (Figure~\ref{fig:r0}) suggests that catch up vaccination may be necessary (Table~\ref{table:attack}). The results of these analyses support other studies that suggest very high rates of vaccination are required to eliminate measles and prevent epidemics. Vaccinating 85\% of susceptible children aged one to seven years at five-yearly intervals was suggested to be sufficient to prevent epidemics in Israel \citep{agur93}, but nearly all other studies in Europe suggest no strategies succeeded if coverage rates were below approximately 87\%, which the population level immunity in New Zealand has only just reached, with approximately 11\% na\"{\i}ve. Analysis of measles vaccination in various regions suggest that 85\% coverage at MMR1 and MMR2 could be sufficient to prevent future measles epidemics \citep{agur93, babad95, edmunds0, gay98, wallinga1}, but \citep{glass4} showed that in the Netherlands high overall levels of measles vaccination can obscure pockets of poor coverage, resulting in localised regions with increased risk of infection and effective immunisation is difficult to evaluate. Future analyses at a smaller, more local level would be useful, but the lack of appropriate data matching between the NIR data and the census unit area data prevented these.
 
 \begin{table}[htdp]
 
@@ -1368,19 +1397,18 @@ Vacc:		Number to be vaccinated in DHB to reduce $\Rr_V$ below one  $\left(\left(
 \subsection{Summary of modelling}
 \begin{itemize}
 \item Regular introductions of measles pose an ongoing threat to New Zealand's efforts to eliminate measles (also see section~\ref{sub:risk_analyses}).
-\item The reproduction number for measles in a partially immune population is often close to one, suggesting increased population level immunity is required to prevent this measles persisting.
+\item The reproduction number for measles in the partially immune New Zealand population is often close to one, suggesting increased population level immunity is required to ensure prevention of measles persistence following importation.
  \item The reproduction number, $R_v$, for measles in the current outbreak is over one, suggesting that this outbreak has the potential to persist for prolonged periods, with the caveat that this estimate was made during the ongoing outbreak.
- \item Additional vaccination levels to push $R_v$ below one among the currently naive population in New Zealand range from 17\% to 34\% among DHBs, and 28\% at the national level (approximately 131,500 vaccinations).
+ \item Additional vaccination levels to push $R_v$ below one among the currently na\"{\i}ve population in New Zealand range from 17\% to 34\% among DHBs, and 28\% at the national level (approximately 131,500 vaccinations).
 \end{itemize}
 
 \section{Cost analyses}
 
-In this section we provide a review of the costs of measles from other locations and an analysis of the costs involved with the current measles outbreak.
+In this section we provide a review of the costs of measles from other locations and an analysis of the costs involved with the current 2013--2014 measles outbreak.
 
 Approximately 50 years ago, approximately 135 million cases and 7--8 million deaths were believed to occur in the world due to measles \citep{clements4}. Thirty years later, it was estimated there were still approximately 45 million cases of measles occurring annually, including 6 million measles-related fatalities. \citep{wolfson7} estimated that in 1999 measles was responsible for more than 30 million disability adjusted life years (DALYs) lost and 12 million in 2005. Similarly, the number of cases was reduced by more than 50\% from 43 million in 1999 to approximately 20 million in 2005. They estimated approximately 7.5 million deaths from measles were avoided from 2000--05 due vaccination. The World Health Organization (WHO) estimated 158,000 deaths from approximately 355,000 measles cases in 2011 \citep{who13}.  In addition to the substantial losses occurring in measles-endemic countries, a significant impact is felt in heavily measles-vaccinated countries, which may be considered measles-free, due to contact with cases either in the country of origin or in the previously measles-free country.
 
 The annual cost of treating and controlling measles in 11 industrialised countries was estimated to cost more than US\$150 million \citep{carabin3}. The estimated cost for a case ranged from US\$189--344 \citep{carabin3}; however, the average estimated cost of a typical hospital case ranges from US\$967--1,755 \citep{carabin2}. \citep{stack11} estimated the economic benefits from cases averted due to measles vaccination. They estimated that the expanded vaccination from 2005 to 2015 in 72 of the world's poorest countries could result in nearly US\$10 billion of costs averted between 2011 and 2020. Ninety-nine percent of these averted costs were the result of lost productivity due to an estimated 360,000 measles-specific premature mortalities, with the remaining <1\% associated with averted treatment costs and reduced caretaker productivity for the nearly 12 million measles cases avoided.
-
 
 Italy has the highest reported annual cost of measles among industrialised countries \citep{carabin3}. In 2001, it reported losses related to measles of approximately US\$50 million. The economic impact of a large measles outbreak in Italy, 2002--03 examined the costs associated with 5,154 hospitalisations where measles was the main discharge diagnosis. The mean length of hospital stay was 5.2 days (median = 4 days and range = 1 to 303 days). The total cost of these hospitalisations amounted to \euro 8.83 million (\euro 1 $\approx$ NZ\$2.0 in 2002-03), or approximately \euro 1,700 per case. The average cost per non-complicated measles case was  \euro 1,429, while the mean cost of a case with complicated measles was  \euro 2,721. The average daily cost of a hospital stay was  \euro 327.
 
@@ -1389,6 +1417,7 @@ An outbreak of measles occurred in Sydney, Australia, lasting nearly 2 months in
 Germany implemented a two-dose measles vaccination program in 1991 and has seen the benefits in recent years. In 2001 more than 6,000 cases were reported in Germany but by 2004 this number fell to 122 \citep{wichmann9}. However, in 2005 more than 500 cases were reported by the middle of the year in two German states, with the vast majority (>95\%) in non-vaccinated children \citep{siedler6}. An economic analysis was performed of the 614 measles cases reported in an 8-month period in Duisburg in the state of North Rhine-Wesphalia (NRW). In that study, they estimated the health-care provider costs to be approximately \euro 229,000, or \euro 373 per case. Approximately 78\% of these costs were associated with the 95 (15.5\%) of the cases that were hospitalised. The mean costs of the hospitalised patients was  \euro 1,877, including one patient with encephalitis at a cost of \euro 35,623. In addition to the health-care provider costs, additional costs of \euro 89,400 were incurred by the district public health office, the majority (\euro 85,000, 95.1\%) for personnel, \euro 2,300 (2.6\%) for vaccination, and \euro 2,100 (2.3\%) for serologic testing. Therefore the combined direct costs of these 612 cases amounted to \euro 318,400, or \euro 520 per case. In addition, to determine the total impact, it would be necessary to include the indirect losses associated with lost production of cases and care givers.
 
 Although measles was declared eliminated from the United States in 2000, it remains a concern due to the endemic nature of it around the world \citep{parker6}. Several studies have been conducted in the United States to assess the economic impact of recent measles outbreaks due to imported measles.  \citep{ortegasanchez14} estimated the economic impact to public health departments in the US as the result of 16 outbreaks in 2011. The outbreaks lasted an average of 22 days and resulted in 107 confirmed cases; however, from these 107 cases, they estimated between approximately 8,900 and 17,500 contacts with confirmed cases, requiring between 42,600 and 83,100 personnel hours at a cost of between US\$2.7 and 5.3 million. Overall, it was estimated that each contact required 4.7 personnel hours at a cost of US\$298 per contact.
+
 It was estimated that for the one week that the Iowa Department of Public Health (DPH) investigated a case in 2004, 2,525 hours were used to identify contacts, set up vaccination clinics, and institute and enforce quarantine orders for those who refused vaccination \citep{dayan5}. In total, it was estimated the direct costs associated with three cases of measles was US\$142,452, or nearly US\$50,000 per case.
 
 The impact of a measles outbreak due to a non-autochthonous case in Indiana was also reported \citep{parker6}, and a total of 34 cases, 94\% of which were not vaccinated against measles, were reported in the outbreak. Direct cost information was obtained from approximately 100 public health officers and infection-control officials needed to control the outbreak. Direct cost for those completing a survey showed the outbreak cost at least \$167,685, 83\% of which (\$139,023) was for wages, salaries and overhead. This amounted to a direct cost of \$4,932 per measles case. These costs did not include either patient care or indirect costs, which would have made the total and per case cost higher.
@@ -1408,7 +1437,7 @@ Data for the current measles outbreak were obtained from the New Zealand Ministr
 
 Cost of the Auckland Regional Public Health Service (ARPHS) for measles response were obtained from the Ministry of Health. Data, for the period January 1 - March 9, 2014, reported salaries for people involved with the measles outbreak management medical team. The costs were reported as direct, additional (above normal budgeting) costs required to enable the management of measles. It includes a breakdown by individual performing the work and whether it was during the normal work schedule (Monday to Friday, M-F) or weekends. Normal work was calculated as $1.2 \times \textsf{full time equivalent (FTE)} \times \textsf{number of days worked}$. Overtime was calculated as $1.6\times\textsf{FTE}$ (M-F) and $2.0 \times \textsf{FTE}$ (weekend). A full day was considered as 8 hours worked. Salary (hourly) rates were calculated for the following: public health nurse (PHN, \$36), public health assistant (PHA, \$22), data support (\$26), data support (temporary) (\$33), management and programme supervisors (\$40), incident management team (IMT), which had the following work titles: incident controller (\$96), administrator (\$24), planning and intel (\$40), logistics (\$36), communications (\$45), informatics (\$40), operations (\$40), and safety/security officer (SSO) (\$26). In addition, measles operations personnel were calculated at a daily rate of \$600 and operations partners and IMT controller partners at \$729.
 
-Mean wages for New Zealand workers, by age and gender were obtained for the period, 2008--2013 from the New Zealand Income Survey (Statistics New Zealand, 2013). Measles cases were assumed to not work for a period of 5 days. Similarly, a care taker was assumed to not work for 5 days if the case were less than 20 years of age. In order to calculate the wage loss associated with the care taker, it was assumed that the person was a female between the ages of 35-39. Age and gender information for the 192 publicly funded hospital discharges with a measles primary diagnosis from 2008--2013 were matched to the New Zealand wage file to calculate lost wages due to measles.
+Wages lost due to measles were calculated for the period January 2008 - August 2014. Calculations were based on the assumptions that 5 days of work were lost for each case; however, individuals between 0-14 years of age were not assumed to be employed and therefore did not suffer an income loss and the employment rate of teenagers 15-19 years of age was 41.9\%  (Statistics New Zealand, 2013). If the case were < 20 years of age, it was assumed there was an income loss of 5 days for the care giver, in addition to the wage loss of the case if 15-19 years of age. Total wage lost for the 247 cases and care givers was estimated to be \$207,155. This consisted of \$104,539 for the cases and \$102,616 for the care giver, but did not include wage losses for cases <15 years of age. Overall, the cost per case from 2008 - 2014 was estimated to be \$2,513 (\$839 in forgone wages and \$1,710 in hospital costs).
 
 A regression analysis was performed to test for significant associations between hospital cost and the following explanatory variables: case age at discharge, gender, length of stay (days) and year of case.
 
@@ -1525,17 +1554,17 @@ latex(costtable5, file="", table.env=FALSE,rowname=NULL)
 \label{table:regression}
 \end{table}
 
-Wages lost due to measles were calculated for the period January 2008 -- August 2014. Calculations were based on the assumption that 5 days of work were lost for each case; however, individuals under 15 years of age were not assumed to be employed and therefore did not suffer an income loss. If the case were less than 20 years of age, it was assumed there was an income loss of 5 days for the care giver, in addition to the wage loss of the case if 15--19 years of age. Total wage lost for the 247 cases and care givers was estimated to be \$210,436. This consisted of \$107,820 for the cases and \$102,616 for the care giver, but did not include wage losses for cases under 15 years of age. Overall, the cost per case from 2008--2014 was estimated to be \$4,327 (\$852 in forgone wages, \$1,765 in management costs, and \$1,710 in hospital costs).
+Wages lost due to measles were calculated for the period January 2008 -- August 2014. Calculations were based on the assumption that 5 days of work were lost for each case; however, individuals under 15 years of age were not assumed to be employed and therefore did not suffer an income loss. If the case were less than 20 years of age, it was assumed there was an income loss of 5 days for the care giver, in addition to the wage loss of the case if 15--19 years of age. Total wage lost for the 247 cases and care givers was estimated to be \$210,436. This consisted of \$107,820 for the cases and \$102,616 for the care giver, but did not include wage losses for cases under 15 years of age. Overall, the cost per case from 2008--2014 was estimated to be \$4,327 (\$839 in forgone wages, \$1,765 in management costs, and \$1,710 in hospital costs).
 
 This final figure brings an approximate estimate of \$809,149 for 187 cases for the current outbreak in 2014 alone, which is comprised of earnings lost, case management and hospitalisation costs.
 
 \subsection{Benefit--cost analyses methods}
-To estimate the benefits from additional vaccinations, as estimated from the above modelling section (Section~\ref{sec:epidemic_modelling}), we did several things. Primarily, we used Equation~\ref{equation:eqn3} to estimate the proportion of the naive populations in each DHB (Figure~\ref{fig:naive_map}) and the national level requiring vaccination to reduce the $R_v$ to <1 (Section~\ref{sec:epidemic_modelling}). We assumed that the cases prevented by this was proportional to the outbreak size. However, there is a continued risk of introduction and despite $R_v$ being <1, outbreaks may occur. Thus, we simulated expected outbreak sizes with $R_v$ < 1. We used these values of numbers of predicted cases prevented and numbers expected despite additional vaccination to calculate the savings. The cost figures above were used to estimate what the savings for vaccinating additional populations was, using estimated per case costs. The costs of the catch up vaccination schemes were estimated to be two differnt values, to determine how sensitive the benefit--cost ratio ((B/C) was to differing vaccination costs. Values of \$20 and \$50 were used. Thus the costs of the expected measles-related costs due to constant introduction of measles despite increased population immunity and the vaccination schemes were used to estimate the costs of additional vaccine programs, and the savings from reduced measles cases to work out the benefit, and the B/C ratio estimated. A B/C ratio > 1 means that the program benefits exceed their costs. A B/C value less than one suggests the costs are higher than the economic benefits. Lastly, benefits were assessed over a 10--year time period, using a discounting rate of 3\% discount per year for the costs, as is common for healthcare discounting \citep{honeycutt6}. Thus:
+To estimate the benefits from additional vaccinations, as estimated from the above modelling section (Section~\ref{sec:epidemic_modelling}), we did several things. Primarily, we used Equation~\ref{equation:prop} to estimate the proportion of the na\"{\i}ve populations in each DHB (Figure~\ref{fig:naive_map} and Table~\ref{table:attack}) and the national level requiring vaccination to reduce the $R_v$ to <1 (Section~\ref{sec:epidemic_modelling}). We assumed that the cases prevented by this was proportional to the outbreak size. However, there is a continued risk of introduction and despite $R_v$ being <1, smaller outbreaks may occur. Thus, we simulated expected outbreak sizes with $R_v$ < 1. We used these values of numbers of predicted cases prevented and numbers expected despite additional vaccination to calculate the savings. The cost figures above were used to estimate what the savings for vaccinating additional populations was, using estimated per case costs saved. The costs of the catch up vaccination schemes were estimated to be two differnt values, to determine how sensitive the benefit--cost ratio ((B/C) was to differing vaccination costs. Values of \$20 and \$50 per vaccine were used. Thus the costs of the expected measles-related costs due to constant introduction of measles despite increased population immunity and the vaccination schemes were used to estimate the costs of additional vaccine programs and costs from continued measles introductions. The financial savings from reduced measles cases and these costs were used to work out the estimated B/C ratio. A B/C ratio > 1 means that the program benefits exceed their costs. A B/C value less than one suggests the costs are higher than the economic benefits. Lastly, benefits were assessed over a 10--year time period, using a discounting rate of 3\% discount per year for the costs, as is common for healthcare discounting \citep{honeycutt6}. Thus:
 
 \begin{equation} \label{eq:bc}
- \textit{B/C} = \frac{\sum\limits_{n=0}^{10} \frac{B_n}{(1+r)^n}}{\sum\limits_{n=0}^{10} \frac{C_n}{(1+r)^n}}
+ \textit{B/C} = \frac{\sum\limits_{n=0}^{9} \frac{B_n}{(1+r)^n}}{\sum\limits_{n=0}^{9} \frac{C_n}{(1+r)^n}}
  \end{equation}
-Where B is the benefit in saved funds from cases prevented and C is the cost of vaccination, discounted over time, where $n$ is the year and $r$ the discount rate of 0.03.
+Where B is the benefit in saved funds from cases prevented and C is the cost of vaccination, discounted over time, where $n$ is the year and $r$ the annual discount rate of 0.03 (3\%).
 
 \subsection{Benefit--cost analyses results}
 
@@ -1545,7 +1574,11 @@ vacp<-read.csv("vacc_predictions.csv",header=T)
 @
 
 \begin{sidewaystable}\small
-\caption{DHB and National level catch up vaccination rates and estimated outbreak sizes post vaccination}
+\caption{DHB and National level catch up vaccination rates and estimated outbreak sizes post vaccination. Size: DHB Population, Statistics NZ 2013;  	
+Na\"{\i}ve:		DHB na\"{\i}ve population $\left(x_0\times\text{Size}\right)$;		
+Attack:		Number infected in DHB in an outbreak of measles $\left(\Pe\right)$;	
+Vacc:		Number to be vaccinated in DHB to reduce $\Rr_V$ below one  $\left(\left(x_0-1/\Ro\right)\times\text{Size}\right)$; Proportion: the proportion of the currently na\"{i}ve population requiring vaccination; Na\"{i}ve.post.vaccination: the na\"{i}ve population following catch up vaccination; with Median.outbreak and Mean.outbreak: the expected median and mean outbreak size post--vaccination catch up from 1000 simulations of a stochastic model}
+
 <<results=tex,echo=FALSE>>=
 # This chunk uses "results=tex"
 library(Hmisc)
@@ -1554,7 +1587,7 @@ latex(vacp, file="", table.env=FALSE,rowname=NULL)
 \label{table:vacp}
 \end{sidewaystable}
 
-The numbers of susceptible people to vaccinate in New Zealand, assuming a homogeneously mixed population and using the upper 95\% confidence limits of our $R_v$ estimates (Section~\ref{sec:epidemic_modelling}) are shown in Figure~\ref{fig:numvac}.
+The numbers of susceptible people to vaccinate in New Zealand, assuming a homogeneously mixed population to achieve the 28\% currently na\"{i}ve catch up in vaccination numbers and using the equation~\ref{eq:prop} are shown in Figure~\ref{fig:numvac}.
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 popimmune<-read.csv("PopnImmunityAll.csv",header=T)
@@ -1586,13 +1619,13 @@ plot(naive$Naive ,col="black",bg="black",pch=1,ylab="Number to vaccinate",xlab="
 points(round(0.28*naive$Naive),col="grey",bg="red",pch=21,cex=2)
 points(x=3:18,y=naive$Naive[3:18],col="grey",bg="orange",pch=23,cex=2) # 
 legend("topright",c("Naive","28% naive, all ages","28% naive, all 2-17 yr olds"),
-       bty="n",pch=c(1,21,23),col=rep("grey",3),pt.bg=c("black","red","orange"),cex=2)
+       bty="n",pch=c(1,21,23),col=c("black","grey","grey"),pt.bg=c("black","red","orange"),cex=2)
 @
-     \caption{The estimated proportion of the currently naive New Zealand population requiring additional vaccination given alternative $R_v$ values to reduce the $R_v$ to one (Section~\ref{sec:epidemic_modelling}, Tables~\ref{tab:cost_sim} and ~\ref{tab:cost_ave})}
+     \caption{The estimated proportion of the currently na\"{\i}ve New Zealand population requiring additional vaccination given alternative $R_v$ values to reduce the $R_v$ to one (Section~\ref{sec:epidemic_modelling}, Tables~\ref{tab:cost20} and ~\ref{tab:cost50})}
      \label{fig:numvac}
 \end{figure}
 
-The expected number of cases in New Zealand, assuming homogenous mixing in a naive population of 11\% of the population (the current status) and assuming measles $R_v$ were 1 is shown in Figure~\ref{fig:sim} and Figure~\ref{fig:sim1}. These simulations show that even in scenarios when $R_v$ is one, and thus stochastically should fail to persist (i.e. become endemic), large outbreaks can occur due to stochastic processes. Though the median value from 1000 simulations is low (2 cases), and thus most measles introductions will be single cases or lead to minor outbreaks, in this modelling exercise the mean value was 151 cases and the maximum nearly 25,000 cases.
+The expected number of cases in New Zealand, assuming homogenous mixing, in a na\"{\i}ve population of subsequently lower (~8\%) numbers of na\"{\i}ve of the population and assuming measles $R_v$ were <1 is shown in Figure~\ref{fig:sim} and Figure~\ref{fig:sim1}. These simulations show that even in scenarios when $R_v$ is lower than one, and thus stochastically should fail to persist (i.e. become endemic), outbreaks can occur due to stochastic processes following measles importation. The most likely scenario is that very few cases occur, with the median value from 1000 simulations low (2 cases). Thus most measles introductions will be single cases or lead to minor outbreaks. In this modelling exercise the mean value was 61 cases, suggesting this is likely to be an outbreak size to be expected. The maximum predicted number of cases was nearly 8,000 cases. Note, however, that larger values were very rarely predicted and this does not take into account spatial variation or heterogeneous contact rates.
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 ## simulate measles outbreaks/epidemics using GT and R0 from data.
@@ -1689,9 +1722,9 @@ hist(sizes,xlim=c(0,200),col="grey",breaks=1000,xlab="Outbreak size",main="",cex
 abline(v=median(sizes),col="orange",lty=3,lwd=10)
 abline(v=mean(sizes),col="red",lty=3,lwd=10)
 #length(which(sizes>5))/1000
-legend('top',c(levels(legMd),levels(legMn)),lty=rep(3,2),col=c("orange","red"),bty="n",lwd=10,cex=2)
+legend('topright',c(levels(legMd),levels(legMn)),lty=rep(3,2),col=c("orange","red"),bty="n",lwd=10,cex=2)
 @
-     \caption{A subset of the expected number of measles cases from 1000 simulations of a model (Section~\ref{sec:epidemic_modelling}) in a homogeneously mixed population in New Zealand with 11\% susceptible to measles infection using an $R_v$ =1. The full distribution of results can be seen in Figure~\ref{fig:sim1}}
+     \caption{A subset of the expected number of measles cases from 1000 simulations of a model (Section~\ref{sec:epidemic_modelling}) in a homogeneously mixed population in New Zealand with 28\% of the currently 11\% susceptible to measles infection vaccinated, using an $R_v$ <1. The full distribution of results can be seen in Figure~\ref{fig:sim1}}
      \label{fig:sim}
 \end{figure}
 
@@ -1705,7 +1738,7 @@ abline(v=median(sizes),col="orange",lty=3,lwd=10)
 abline(v=mean(sizes),col="red",lty=3,lwd=10)
 legend('topright',c(levels(legMd),levels(legMn)),lty=rep(3,2),col=c("orange","red"),bty="n",lwd=10,cex=2)
 @
-     \caption{The distribution of the expected number of measles cases from 1000 simulations of a model (Section~\ref{sec:epidemic_modelling}) in a homogeneously mixed population in New Zealand with 11\% susceptible to measles infection using an $R_v$ =1, showing the rare but possible large epidemic sizes possible. A subset of the distribution of results can be seen in Figure~\ref{fig:sim}}
+     \caption{The distribution of the expected number of measles cases from 1000 simulations of a model (Section~\ref{sec:epidemic_modelling}) in a homogeneously mixed population in New Zealand with 28\% of the currently 11\% susceptible to measles infection vaccinated, using an $R_v$ <1, showing the rare but possible large epidemic sizes possible. A subset of the distribution of results can be seen in Figure~\ref{fig:sim}}
      \label{fig:sim1}
 \end{figure}
 
@@ -1715,65 +1748,133 @@ costtable20<-read.csv("cost_benefit_20.csv",header=T)
 @
 
 \begin{sidewaystable}\small
-\caption{Cost benefit analyses with 20 dollars per vaccine}
+\caption{Benefit--cost analyses with 20 dollars per vaccine. \textit{Vacc} is numbers to vaccinate; \textit{Vacc.costs} is cost for the catch up vaccination programme; \textit{Wages.saved} is wages of care givers and cases saved; \textit{Manage.saved} is management costs saved; \textit{Hospitalised} is number of hospitalisations saved; \textit{Hosp.saved} is the hospitalisation costs saved; \textit{Costs.save}	is the discounted costs saved; \textit{Outbreak}	is the predicted outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations; \textit{OB.costs}	is costs expected due to continued measles importations, based on the same discounted costs as before; \textit{Benefit/cost} is the benefit--cost ratio.}
 <<results=tex,echo=FALSE>>=
 # This chunk uses "results=tex"
 library(Hmisc)
 latex(costtable20, file="", table.env=FALSE,rowname=NULL)
 @
 \label{table:cost20}
+\begin{tablenotes}\footnotesize  
+        \item For numbers to vaccinate see Table~\ref{table:attack}
+        \item Proportion of cases hospitalised 0.17
+        \item Wage losses per case \$839 and cost per hospitalised case \$1710
+        \item Based on 10 introductions of measles, one per year
+      \end{tablenotes}  
 \end{sidewaystable}
+
+Vacc  Vacc.costs	Wages.saved	Manage.saved	Hospitalised	Hosp.saved	Costs.save	Outbreak	OB.costs	Benefit/cost
 
 <<echo=FALSE>>=
 costtable50<-read.csv("cost_benefit_50.csv",header=T)
 @
 
 \begin{sidewaystable}\small
-\caption{Cost benefit analyses with 50 dollars per vaccine}
+\caption{Benefit--costs analyses with 50 dollars per vaccine. \textit{Vacc} is numbers to vaccinate; \textit{Vacc.costs} is cost for the catch up vaccination programme; \textit{Wages.saved} is wages of care givers and cases saved; \textit{Manage.saved} is management costs saved; \textit{Hospitalised} is number of hospitalisations saved; \textit{Hosp.saved} is the hospitalisation costs saved; \textit{Costs.save}  is the discounted costs saved; \textit{Outbreak}	is the predicted outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations; \textit{OB.costs}	is costs expected due to continued measles importations, based on the same discounted costs as before; \textit{Benefit/cost} is the benefit--cost ratio.}
 <<results=tex,echo=FALSE>>=
 # This chunk uses "results=tex"
 library(Hmisc)
 latex(costtable50, file="", table.env=FALSE,rowname=NULL)
 @
 \label{table:cost50}
+\begin{tablenotes}\footnotesize  
+        \item For numbers to vaccinate see Table~\ref{table:attack}
+        \item Proportion of cases hospitalised 0.17
+        \item Wage losses per case \$839 and cost per hospitalised case \$1710
+        \item Based on 10 introductions of measles, one per year
+      \end{tablenotes}  
 \end{sidewaystable}
 
-The model estimates for each DHB, with the vaccination percentages and the expected outbreak size following additional vaccination is shown in Table~\ref{table:vacp}. The benefit--cost results are in Table~\ref{tab:cost20} and Table~\ref{tab:cost50}, for two different vaccine prices. The results in the two tables show two alternative trends. In scenarios where we simulate the expected outbreaks in a homogeneously mixed population and $R_v$ is above 1 the benefits of vaccination are always substantially greater than the costs of the increased supplementary vaccination (Table~\ref{tab:cost_sim}). However, if the previous recent history of cases since 1997 is the \emph{status quo} and what we may expect in the future then the \emph{additional} effort to vaccinate the currently naive population of New Zealand based on $R_v$ estimates that were greater than one is not a cost effective exercise (Table~\ref{tab:cost_ave}).
 
-It is worth noting that vaccination strategies that target the very young (<1 year old) may be less effective, as our analyses of the vaccinated cases suggests a substantial proportion of vaccinated cases that were vaccinated (Figure~\ref{fig:ageandvac}) were vaccinated with a single vaccine at a very young age (Figure~\ref{fig:vaccstat}).
+For the cost analyses we used the values from the above cost section (Section~\ref{sub:cost_benefit}). Specifically, we used the average cost of a case for the analyses to be \$839 lost in wages and \$1710 in hospitalisation costs for those attending hospital, with 17\% of cases predicted to be hospitalised (Table~\ref{table:hosp}). We estimated there would be approximately one introduction of measles per year (Section~\ref{sub:risk_analyses}). We provide two costs for measles vaccinations for our cost analyses, \$20 and \$50, based on US literature.
 
-For the cost analyses we used the values from the above cost section (Section~\ref{sub:cost_benefit}). Specifically, we used the average cost of a case for the analyses to be \$852 lost in wages and \$1710 in hospitalisation costs for those attending hospital, with 17\% of cases predicted to be hospitalised (Table~\ref{table:hosp}). We estimated there would be approximately one introduction of measles per year (Section~\ref{sub:risk_analyses}). We provide two costs for measles vaccinations for our cost analyses, \$20 and \$50, based on US literature.
+The model estimates for each DHB, with the vaccination percentages and the expected outbreak size following additional vaccination is shown in Table~\ref{table:vacp}. The benefit--cost results are in Table~\ref{table:cost20} and Table~\ref{table:cost50}, for two different vaccine prices. The results in the two tables show the benefits of vaccination are always substantially greater than the costs of the increased supplementary vaccination (Tables~\ref{table:cost20} and \ref{table:cost50}).
 
-\subsection{Benefit--cost analysis discussion}
+It is worth noting that vaccination strategies that target the very young (<1 year old) may be less effective, as our analyses of the vaccinated cases suggests a substantial proportion of vaccinated cases that were vaccinated (Figure~\ref{fig:ageandvac}) were vaccinated with a single vaccine at a very young age (Figure~\ref{fig:vaccstat}). Furthermore, it may be unnecessary to vaccinate very young, as it appears possible to reach the appropriate figure (28\% of currently na\"{\i}ve) by vaccinating all the currently na\"{\i}ve 2--17 year olds, so pre-school and school age children.
 
-Our estimates for the numbers of measles cases are highly variable: if $R_v$ were greater than one, either the measles outbreak would take off and all the susceptible New Zealand population would become infected during the outbreak, or the epidemic it would stutter after a few infects and fail to cause a large epidemic due to stochasticity. We used the average of 1000 simulations to estimate the mean of these stochastic simulations for our benefit--cost analysis. However, these simulations assume a homogeneously mixed population and thus give large epidemic sizes once the epidemic gets beyond the initial stuttering infection chains and this assumption is discussed below. However, to address this, we not only use $R_v$ values of 1 in simulation models to estimate predicted outbreak sizes, but we also compared our results to those using the mean number of measles cases seen in New Zealand per year since 1997. This was 220 cases per year.
+\subsection{Benefit--cost analyses discussion}
 
-The results presented here are based on available data. While some of the data are complete and detailed, this is not true of all the data. In order to perform an accurate analysis of the current measles outbreak in New Zealand, more complete data are needed. For instance, age, gender, ethnicity, year of discharge, length of stay and estimated cost data are available for cases reported by publicly funded hospitals. In addition to this information, similar data would be needed for cases occurring outside the period 2011--2013 at publicly funded hospitals. In addition, similar data would be needed for non-publicly funded hospitals, e.g. private clinics. Other factors that we aim to investigate are whether or not a linear term for case age is appropriate, or what if any interaction there might be between age and length of stay in hospital.
+Our estimates of the costs of the measles outbreaks in New Zealand suggest that measles management per case in New Zealand is high. We used the mean values per case in the absence of alternative data and used as much data as possible. The exact costs will vary, however, our benefit--cost analyses suggest that in all cases catch up vaccination schemes will be financially beneficial for New Zealand (see Tables~\ref{table:cost20} and \ref{table:cost50}).
 
-Detailed measles outbreak management costs were provided for the period of January 1 -- March 9, 2014. Similar data are needed for the period preceding 2014. If detailed data, such as that provided for early 2014, are not available, aggregated data would be acceptable. However, it is unrealistic to assume that these costs would be linearly related with the number of measles cases, making it difficult to extrapolate these costs outside the reported period for 2014. As other studies have demonstrated, direct costs required to manage measles are not linear.
+The results presented here are based on available data. While some of the data are complete and detailed, this is not true of all the data. In order to perform an accurate analysis of the current measles outbreak in New Zealand, more complete data would be better. For instance, age, gender, ethnicity, year of discharge, length of stay and estimated cost data are available for cases reported by publicly funded hospitals. In addition to this information, similar data would be needed for cases occurring outside the period 2011--2013 at publicly funded hospitals. In addition, similar data would be needed for non-publicly funded hospitals, e.g. private clinics. Other factors that would be useful to investigate in the future include the relationship between the costs over time. For these analyses we use the mean cost per case. However, as stated previously, it is uncertain as to whether that is a valid measure or not and whether there may be other relationships. Furthermore, a linear term for case age may not be appropriate, and we have not accounted for alternative interactions there might be between age and length of stay in hospital.
 
-In other outbreaks, the average cost per measles case was estimated to be US\$254, US\$276, and US\$307 for Canada, the Netherlands, and the UK, respectively (Carabin, et al., 2002). This and other findings will be compared and contrasted with New Zealand costs, once more complete New Zealand data are made available.
-The containment of a single case (also 2 secondary cases) of measles in 2004 in Iowa, USA was estimated to cost US\$142,542. In this outbreak, more than 2500 hours of personnel time were needed to investigate and respond to the outbreak (Dayan et al., 2005). They estimated direct costs per case to be less than US\$500. 
-The annual cost for long-term care of people with moderate of severe mental retardation over a period of 50 years is estimated at US\$31,059 and US\$78,448, respectively \citep{prouty1}. In 2000 expenditures for care in large state mental retardation/developmental disabilities (MR/DD) facilities continued to increase and reached a national annual average of US\$113,864 per person. In 2000 the average annual expenditures for care in large state MR/DD facilities were \$113,864. The cost of a case of measles was estimated to range from \$71 (no complications and no hospitalisation) to \$29,556 (encephalitis and hospitalisation for 8.7 days). They estimated the annual cost of measles in the US with its vaccination program to be \$1,234,083 (52.5\% direct cost and 47.5\% indirect cost) \citep{zhou4}.
+Detailed measles outbreak management costs were provided for the period of January 1 -- March 9, 2014. Similar data are needed for the period preceding 2014. In the abscence of these data we have used mean case data from aggregated data available. It may be unrealistic to assume that these costs would be linearly related with the number of measles cases, making it difficult to extrapolate these costs outside the reported period for 2014, but we have done so for these purposes. However, other studies have demonstrated direct costs required to manage measles are not linear.
 
-The results presented here are based on available data, and only a 10 week period for the 2013--2014 outbreak. The majority of the cost analyses were discussed in our previous interim report and though some details have changed, we will focus here on the benefit--cost analyses. However, for all analyses more detailed costs of all aspects of hospitalisation would be beneficial. So too would information of the cost of measles vaccination in New Zealand.
+In other outbreaks, the average cost per measles case was estimated to be US\$254, US\$276, and US\$307 for Canada, the Netherlands, and the UK, respectively  \citep{carabin2}. These values are substantially lower than our estimates, however, it is noticable that these estimates are also from more than a decade ago. The containment of a single case (also 2 secondary cases) of measles in 2004 in Iowa, USA was estimated to cost US\$142,542. In this outbreak, more than 2500 hours of personnel time were needed to investigate and respond to the outbreak (Dayan et al., 2005). They estimated direct costs per case to be less than US\$500. Thus, our estimates of the additional costs, including indirect costs and wages lost may be appropriate.
 
-We have used standard discounting from healthcare of 3\% per annum \citep{honeycutt6}, but again there may be official New Zealand discounting rates that we are unaware of.
-For our benefit--cost analyses we have not included measles outbreak management costs, though these were provided for the period of January 1 -- March 9, 2014 (Table ~\ref{table:direct}). Including these could be done, but we would like some further data of these before including them in our benefit--cost analyses. It is likely to be unrealistic to assume that these costs would be linearly related with the number of measles cases, making it difficult to extrapolate these costs outside the reported period for 2014.
+The annual cost for long-term care of people with moderate of severe mental retardation over a period of 50 years is estimated at US\$31,059 and US\$78,448, respectively \citep{prouty1}. In 2000 expenditures for care in large state mental retardation/developmental disabilities (MR/DD) facilities continued to increase and reached a national annual average of US\$113,864 per person. In 2000 the average annual expenditures for care in large state MR/DD facilities were \$113,864. The cost of a case of measles was estimated to range from \$71 (no complications and no hospitalisation) to \$29,556 (encephalitis and hospitalisation for 8.7 days). They estimated the annual cost of measles vaccination in the US with its vaccination program to be \$1,234,083 (52.5\% direct cost and 47.5\% indirect cost) \citep{zhou4}. The work by \citep{zhou4} also finds that measles vaccination is extremely cost effective, however, in their analyses they also include the costs of mumps and rubella (see Table~\ref{table:zhou}). However, the cost of measles in their analyses was substantially higher than mumps and rubella (Table~\ref{table:zhou}).
 
-In other nations' outbreaks, the average cost per measles case was estimated to be US\$254, US\$276, and US\$307 for Canada, the Netherlands, and the UK, respectively \citep{carabin2}. In our analyses if we include loss of earnings and hospitalisation costs, our estimates are higher, around US\$959 per case. This figure is from NZ\$ 852 for loss of wages and 0.17 * NZ \$ 1710 for costs related to attending hospital. However, costs can vary widely, with the containment of a single case and two secondary cases of measles in 2004 in Iowa, USA, estimated to cost US\$142,542 alone \citep{dayan5}.
+\begin{table}[htdp]\small
+\begin{center}
+\begin{tabular}{lrrrr}
+\hline
+Parameter, disease & Direct costs & Indirect costs & Total costs\\
+\hline
+Cost of disease without vaccination program \\
+\hline
+Measles & \$2,645,779,861 & \$3,228,846,601 & \$5,874,626,462 \\
+Mumps & \$936,032,273 & \$522,974,252 & \$1,459,006,525 \\
+Rubella & \$88,352,366 & \$292,537,083 & \$380,889,449 \\
+Congenital rubella syndrome & \$114,726,378 & \$57,975,659 & \$172,702,037 \\
+Subtotal & \$3,784,890,878 & \$4,102,333,595 & \$7,887,224,473 \\
+\hline
+Cost of disease with vaccination program \\
+\hline
+Measles & \$647,488 & \$586,595 & \$1,234,083 \\
+Mumps & \$1,960,182  & \$1,124,249  & \$3,084,431 \\
+Rubella  & \$260,982  & \$258,240  & \$519,222 \\
+Congenital rubella syndrome  & \$2,662,760  & \$1,345,595  & \$4,008,355 \\
+Subtotal  & \$5,531,412  & \$3,314,679  & \$8,846,091 \\
+Costs averted by MMR vaccination program & \$3,779,359,466 & \$4,099,018,916 & \$7,878,378,382 \\
+\hline
+MMR vaccination program costs \\
+\hline
+Vaccine & \$147,802,803 &  & \$147,802,803 \\
+Administration  & \$94,756,438 & & \$94,756,438 \\
+Transportation  & \$7,164,227 &  & \$7,164,227 \\
+Parental productivity &   & \$34,787,438 & \$34,787,438 \\
+Adverse events  & \$16,413,145  & \$2,154,826  & \$18,567,971 \\
+Subtotal  & \$266,136,613  & \$36,942,264  & \$303,078,877 \\
+Net present value (net saving)  & \$3,513,222,853  & \$4,062,076,652  & \$7,575,299,505 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Summary of all measles, mumps, and rubella diseases and measles-mumps-rubella vaccination costs, USA, from \citep{zhou4}}
+\label{table:zhou}
+\end{table}%
 
-Our estimates for the benefit--cost ratio of catch up vaccination are also much higher than those in some studies, if we presume the $R_v$ is greater than 1 and measles will continue to circulate among the presently naive and susceptible New Zealand population until everyone has been infected. Estimates in Korea suggest catch up vaccination schemes have a benefit--cost ratio of just over one \citep{bae13}. However, if we presume that in a totally naive population $R_0$ for measles is around 12, and sometimes estimated to be more than 18 (i.e. 1 case infects 18 others on average, \citep{anderson91}) then the majority of naive people becoming infected is not unrealistic given some of our $R_v$ estimates (Figure~\ref{fig:r0}). The benefits of catch up vaccination are clear once $R_v$ is greater than one (Table~\ref{tab:cost_sim}). If measles continues to cause smaller outbreaks, and/or $R_v$ is less than one (Figure~\ref{fig:r0}), then there is little financial benefit in additional vaccination (Table~\ref{tab:cost_sim} and Table~\ref{tab:cost_ave}), though there may be medical and other benefits relating to maintaining measles free status that we have not included in our report.
+Our estimates for the benefit--cost ratio of catch up vaccination are also much higher than those in some studies. If we presume the $R_0$ estimated for measles in New Zealand is representative and following 28\% vaccination of the na\"{\i}ve measles will be unable to persist ($R_v$ < 1), our B/C ratio is substantially greater than 1. Estimates in Korea suggest catch up vaccination schemes have a benefit--cost ratio of just over one \citep{bae13}. However,  \citep{zhou4} estimate the B/C ratio to be much greater than one for MMR vaccination (see Table~\ref{table:zhou2}). As stated above, these authors also consider the costs and benefits of mumps and rubella, so making direct comparison difficult without reanalysis.
 
-Finally, our model of measles introductions is a simple one, and more complex models may predict smaller outbreaks depending on contact structure and other scenarios, such as the size of the local naive population. The spatial effects of measles transmission may have affected both our multivariate regression analyses (Section~\ref{sub:risk_analyses}) and will affect the predictions from modelling exercises (Section~\ref{sec:epidemic_modelling}). Whatever happens, however, it is clear that there will be ongoing costs to maintain New Zealand free of endemic measles and introductions occurring on an annual basis (see previous report) may produce some large and costly outbreaks, even if vaccination cover is high and $R_v$ is less than one (Figure~\ref{fig:sim} and Figure ~\ref{fig:sim1}).
+Our results may be conservative. We presume that in a totally na\"{\i}ve population $R_0$ for measles was around 12. However, $R_0$ for measles has been estimated to be more than 18 (i.e. 1 case infects 18 others on average, \citep{anderson91}). The benefits of catch up vaccination are clear once $R_v$ is greater than one (Tables~\ref{tab:cost20} and ~\ref{tab:cost20}, and previous interim report). However, as noted in our previous report, if measles $R_v$ in the currently na\"{\i}ve population is less than one, the benefits will not be so clear, though there may be medical and other benefits relating to maintaining measles free status that we have not included in our report.
+
+\begin{table}[htdp]
+\tiny
+\begin{center}
+\begin{tabular}{lrrrr}
+\hline
+Parameter & B/C direct costs & B/C societal
+perspective & Costs per disc. yrs life saved\\
+\hline
+Base case & 14.2 & 26.0 & \$4195 \\
+Discount rate 0\% & 21.7 & 54.2 & \$1628 \\
+Discount rate 5\% & 12.3 & 19.6 & \$6569 \\
+Discount rate 8\% & 10.8 & 15.5 & \$10,615 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Benefit--cost ratios, USA, from \citep{zhou4}}
+\label{table:zhou2}
+\end{table}%
+
+Finally, our model of measles introductions remains a simple one, and more complex models may predict smaller outbreaks depending on contact structure and other scenarios, such as the size of the local na\"{\i}ve population. The spatial effects of measles transmission may have affected both our multivariate regression analyses (Section~\ref{sub:risk_analyses}) and will affect the predictions from modelling exercises (Section~\ref{sec:epidemic_modelling}). Whatever happens, however, it is clear that there will be ongoing costs to maintain New Zealand free of endemic measles and introductions occurring on an annual basis (see previous report) may produce some larger and costly outbreaks, even if vaccination cover is high and $R_v$ is less than one (Figure~\ref{fig:sim} and Figure ~\ref{fig:sim1}). Given that, the greater the vaccination coverage, the smaller the outbreaks will be.
 
 \subsection{Benefit--cost analysis summary}
 \begin{itemize}
-\item The mean wage losses per measles case is estimated to be \$852
+\item The mean wage losses per measles case is estimated to be \$839
 \item The mean cost per measles case attending hospital is estimated to be \$1,710
 \item Approximately 17\% of measles cases attend hospital
 \item The mean management cost per measles case for the current outbreak, estimated from three months of data is estimated to be \$1,765
-\item Using $R_0$ values estimated for measles in New Zealand prior to vaccination and the current naive population sizes, the benefits of catch up vaccination strategies are clear (>1 B/C ratio).
+\item Using $R_0$ values estimated for measles in New Zealand prior to vaccination and the current na\"{\i}ve population sizes, the benefits of catch up vaccination strategies are clear (>1 B/C ratio).
 \item Outbreaks with a mean size of approximately 61 cases per year, but median of 2 cases per year may occur regularly due to importation, despite $R_v$ being below one and the epidemic predicted to die out without additional interventions. There is, however, a small chance for some of these outbreaks to reach several thousand in number.
 \end{itemize}
 
