@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  8 NOV 2014 00:21
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  8 NOV 2014 01:34
 entering extended mode
 **draftfinalreport.tex
 (C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport.tex
@@ -1242,7 +1242,7 @@ File: incidence_1997_2014.pdf Graphic file (type pdf)
 
 <use incidence_1997_2014.pdf>
 Package pdftex.def Info: incidence_1997_2014.pdf used on input line 173.
-(pdftex.def)             Requested size: 345.0pt x 172.49767pt.
+(pdftex.def)             Requested size: 310.4979pt x 155.25066pt.
 LaTeX Font Info:    Try loading font information for T1+aess on input line 181.
 
 
@@ -1256,7 +1256,7 @@ File: draftfinalreport-002.pdf Graphic file (type pdf)
 Package pdftex.def Info: draftfinalreport-002.pdf used on input line 190.
 (pdftex.def)             Requested size: 276.00105pt x 220.7926pt.
  [6] [7 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-002.pdf>]
-<draftfinalreport-010.pdf, id=131, 1084.05pt x 794.97pt>
+<draftfinalreport-010.pdf, id=130, 1084.05pt x 794.97pt>
 File: draftfinalreport-010.pdf Graphic file (type pdf)
 
 <use draftfinalreport-010.pdf>
@@ -1301,29 +1301,28 @@ Overfull \hbox (0.66412pt too wide) in paragraph at lines 379--389
 [11 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-014.pdf>]
 [12 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-015.pdf> <C:/U
 sers/dtshayma/Documents/GitHub/measles/draftfinalreport-017.pdf>] [13]
-<draftfinalreport-020.pdf, id=220, 794.97pt x 433.62pt>
+<draftfinalreport-020.pdf, id=221, 794.97pt x 433.62pt>
 File: draftfinalreport-020.pdf Graphic file (type pdf)
 
 <use draftfinalreport-020.pdf>
 Package pdftex.def Info: draftfinalreport-020.pdf used on input line 441.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<draftfinalreport-021.pdf, id=221, 794.97pt x 433.62pt>
+<draftfinalreport-021.pdf, id=222, 794.97pt x 433.62pt>
 File: draftfinalreport-021.pdf Graphic file (type pdf)
 
 <use draftfinalreport-021.pdf>
 Package pdftex.def Info: draftfinalreport-021.pdf used on input line 449.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
- [14 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-020.pdf>] [15
- <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-021.pdf>] <draftf
-inalreport-023.pdf, id=288, 794.97pt x 433.62pt>
+ [14 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-020.pdf>]
+<draftfinalreport-023.pdf, id=263, 794.97pt x 433.62pt>
 File: draftfinalreport-023.pdf Graphic file (type pdf)
 
 <use draftfinalreport-023.pdf>
 Package pdftex.def Info: draftfinalreport-023.pdf used on input line 485.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<naive_map.pdf, id=291, 728.7225pt x 447.6725pt>
+<naive_map.pdf, id=266, 728.7225pt x 447.6725pt>
 File: naive_map.pdf Graphic file (type pdf)
  <use naive_map.pdf>
 Package pdftex.def Info: naive_map.pdf used on input line 493.
@@ -1333,7 +1332,8 @@ Overfull \hbox (68.99895pt too wide) in paragraph at lines 493--494
  [] 
  []
 
-<dhb1.pdf, id=294, 505.89pt x 505.89pt>
+[15 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-021.pdf>]
+<dhb1.pdf, id=296, 505.89pt x 505.89pt>
 File: dhb1.pdf Graphic file (type pdf)
  <use dhb1.pdf>
 Package pdftex.def Info: dhb1.pdf used on input line 501.
@@ -1697,20 +1697,20 @@ LaTeX Warning: Reference `fig:dhbcases' on page 27 undefined on input line 1161
 LaTeX Warning: Reference `fig:outbreaks' on page 27 undefined on input line 116
 1.
 
-<cases_by_dhb_2009_2014.pdf, id=615, 722.7pt x 361.35pt>
+<cases_by_dhb_2009_2014.pdf, id=616, 722.7pt x 361.35pt>
 File: cases_by_dhb_2009_2014.pdf Graphic file (type pdf)
 
 <use cases_by_dhb_2009_2014.pdf>
 Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 1165.
 (pdftex.def)             Requested size: 310.4979pt x 155.25066pt.
 
-<outbreaks_for_R0.pdf, id=616, 722.7pt x 361.35pt>
+<outbreaks_for_R0.pdf, id=617, 722.7pt x 361.35pt>
 File: outbreaks_for_R0.pdf Graphic file (type pdf)
  <use outbreaks_for_R0.pdf>
 Package pdftex.def Info: outbreaks_for_R0.pdf used on input line 1172.
 (pdftex.def)             Requested size: 310.4979pt x 155.25066pt.
 
-<averageR0.pdf, id=617, 578.16pt x 433.62pt>
+<averageR0.pdf, id=618, 578.16pt x 433.62pt>
 File: averageR0.pdf Graphic file (type pdf)
  <use averageR0.pdf>
 Package pdftex.def Info: averageR0.pdf used on input line 1179.
@@ -1851,7 +1851,7 @@ l.1402 \begin
 You've lost some text.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<draftfinalreport-053.pdf, id=650, 794.97pt x 433.62pt>
+<draftfinalreport-053.pdf, id=651, 794.97pt x 433.62pt>
 File: draftfinalreport-053.pdf Graphic file (type pdf)
 
 <use draftfinalreport-053.pdf>
@@ -1953,7 +1953,7 @@ l.1560 \begin{figure}[width=1\textwidth]
 You've lost some text.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<draftfinalreport-061.pdf, id=656, 794.97pt x 794.97pt>
+<draftfinalreport-061.pdf, id=657, 794.97pt x 794.97pt>
 File: draftfinalreport-061.pdf Graphic file (type pdf)
 
 <use draftfinalreport-061.pdf>
@@ -2002,7 +2002,7 @@ l.1571      \centering
 You've lost some text.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<draftfinalreport-063.pdf, id=657, 794.97pt x 433.62pt>
+<draftfinalreport-063.pdf, id=658, 794.97pt x 433.62pt>
 File: draftfinalreport-063.pdf Graphic file (type pdf)
 
 <use draftfinalreport-063.pdf>
@@ -2035,7 +2035,7 @@ l.1578      \centering
 You've lost some text.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<draftfinalreport-064.pdf, id=658, 794.97pt x 433.62pt>
+<draftfinalreport-064.pdf, id=659, 794.97pt x 433.62pt>
 File: draftfinalreport-064.pdf Graphic file (type pdf)
 
 <use draftfinalreport-064.pdf>
@@ -2262,9 +2262,9 @@ my insertion and my current dilemma will both disappear.
 Here is how much of TeX's memory you used:
  19216 strings out of 493921
  328204 string characters out of 3147273
- 584249 words of memory out of 3000000
+ 584183 words of memory out of 3000000
  21951 multiletter control sequences out of 15000+200000
  49926 words of font info for 97 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,12n,75p,1652b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,12n,75p,1652b,595s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!
