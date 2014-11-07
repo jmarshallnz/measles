@@ -1,15 +1,19 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  7 NOV 2014 16:14
+=======
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.22)  3 NOV 2014 20:48
+>>>>>>> origin/master
 entering extended mode
 **draftfinalreport.tex
-(C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport.tex
+("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
 croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
 ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
  lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
@@ -115,9 +119,9 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count90
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen104
@@ -757,9 +761,17 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
+("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip54
+\enit@outerparindent=\dimen169
+\enit@toks=\toks31
+\enit@inbox=\box37
+\enitdp@description=\count138
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\eurosym\eurosym.sty"
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box37
+\@eurobox=\box38
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\todonotes\todonotes.sty"
 Package: todonotes 2012/07/25 .dtx Todonotes source and documentation.
@@ -772,9 +784,9 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-\XKV@toks=\toks31
-\XKV@tempa@toks=\toks32
-\XKV@depth=\count138
+\XKV@toks=\toks32
+\XKV@tempa@toks=\toks33
+\XKV@depth=\count139
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
@@ -783,18 +795,18 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count139
-\calc@Bcount=\count140
-\calc@Adimen=\dimen169
-\calc@Bdimen=\dimen170
-\calc@Askip=\skip54
-\calc@Bskip=\skip55
+\calc@Acount=\count140
+\calc@Bcount=\count141
+\calc@Adimen=\dimen170
+\calc@Bdimen=\dimen171
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count141
-\calc@Cskip=\skip56
+\calc@Ccount=\count142
+\calc@Cskip=\skip57
 )
-\c@@todonotes@numberoftodonotes=\count142
+\c@@todonotes@numberoftodonotes=\count143
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
 Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
@@ -806,43 +818,43 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen171
-\lightrulewidth=\dimen172
-\cmidrulewidth=\dimen173
-\belowrulesep=\dimen174
-\belowbottomsep=\dimen175
-\aboverulesep=\dimen176
-\abovetopsep=\dimen177
-\cmidrulesep=\dimen178
-\cmidrulekern=\dimen179
-\defaultaddspace=\dimen180
-\@cmidla=\count143
-\@cmidlb=\count144
-\@aboverulesep=\dimen181
-\@belowrulesep=\dimen182
-\@thisruleclass=\count145
-\@lastruleclass=\count146
-\@thisrulewidth=\dimen183
+\heavyrulewidth=\dimen172
+\lightrulewidth=\dimen173
+\cmidrulewidth=\dimen174
+\belowrulesep=\dimen175
+\belowbottomsep=\dimen176
+\aboverulesep=\dimen177
+\abovetopsep=\dimen178
+\cmidrulesep=\dimen179
+\cmidrulekern=\dimen180
+\defaultaddspace=\dimen181
+\@cmidla=\count144
+\@cmidlb=\count145
+\@aboverulesep=\dimen182
+\@belowrulesep=\dimen183
+\@thisruleclass=\count146
+\@lastruleclass=\count147
+\@thisrulewidth=\dimen184
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen184
-\extrarowheight=\dimen185
-\NC@list=\toks33
-\extratabsurround=\skip57
-\backup@length=\skip58
+\col@sep=\dimen185
+\extrarowheight=\dimen186
+\NC@list=\toks34
+\extratabsurround=\skip58
+\backup@length=\skip59
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
-\c@r@tfl@t=\count147
-\rotFPtop=\skip59
-\rotFPbot=\skip60
-\rot@float@box=\box38
-\rot@mess@toks=\toks34
+\c@r@tfl@t=\count148
+\rotFPtop=\skip60
+\rotFPbot=\skip61
+\rot@float@box=\box39
+\rot@mess@toks=\toks35
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\threeparttable\threeparttable.sty"
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box39
+\@tempboxb=\box40
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\blindtext\blindtext.sty"
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
@@ -850,37 +862,37 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
 Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count148
-\c@Blindtext=\count149
-\c@blind@countparstart=\count150
-\blind@countxx=\count151
-\blindtext@numBlindtext=\count152
-\blind@countyy=\count153
-\c@blindlist=\count154
-\c@blindlistlevel=\count155
-\c@blindlist@level=\count156
-\blind@listitem=\count157
-\c@blind@listcount=\count158
-\c@blind@levelcount=\count159
-\blind@mathformula=\count160
-\blind@Mathformula=\count161
-\c@blind@randomcount=\count162
-\c@blind@randommax=\count163
-\c@blind@pangramcount=\count164
-\c@blind@pangrammax=\count165
+\c@blindtext=\count149
+\c@Blindtext=\count150
+\c@blind@countparstart=\count151
+\blind@countxx=\count152
+\blindtext@numBlindtext=\count153
+\blind@countyy=\count154
+\c@blindlist=\count155
+\c@blindlistlevel=\count156
+\c@blindlist@level=\count157
+\blind@listitem=\count158
+\c@blind@listcount=\count159
+\c@blind@levelcount=\count160
+\blind@mathformula=\count161
+\blind@Mathformula=\count162
+\c@blind@randomcount=\count163
+\c@blind@randommax=\count164
+\c@blind@pangramcount=\count165
+\c@blind@pangrammax=\count166
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\dcolumn.sty"
 Package: dcolumn 2001/05/28 v1.06 decimal alignment package (DPC)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
 Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
-\TX@col@width=\dimen186
-\TX@old@table=\dimen187
-\TX@old@col=\dimen188
-\TX@target=\dimen189
-\TX@delta=\dimen190
-\TX@cols=\count166
-\TX@ftn=\toks35
+\TX@col@width=\dimen187
+\TX@old@table=\dimen188
+\TX@old@col=\dimen189
+\TX@target=\dimen190
+\TX@delta=\dimen191
+\TX@cols=\count167
+\TX@ftn=\toks36
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -922,34 +934,34 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
-\fancy@headwidth=\skip61
-\f@ncyO@elh=\skip62
-\f@ncyO@erh=\skip63
-\f@ncyO@olh=\skip64
-\f@ncyO@orh=\skip65
-\f@ncyO@elf=\skip66
-\f@ncyO@erf=\skip67
-\f@ncyO@olf=\skip68
-\f@ncyO@orf=\skip69
+\fancy@headwidth=\skip62
+\f@ncyO@elh=\skip63
+\f@ncyO@erh=\skip64
+\f@ncyO@olh=\skip65
+\f@ncyO@orh=\skip66
+\f@ncyO@elf=\skip67
+\f@ncyO@erf=\skip68
+\f@ncyO@olf=\skip69
+\f@ncyO@orf=\skip70
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
 Package: placeins 2005/04/18  v 2.2
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\framed\framed.sty"
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip70
-\fb@frw=\dimen191
-\fb@frh=\dimen192
-\FrameRule=\dimen193
-\FrameSep=\dimen194
+\OuterFrameSep=\skip71
+\fb@frw=\dimen192
+\fb@frh=\dimen193
+\FrameRule=\dimen194
+\FrameSep=\dimen195
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count167
-\float@exts=\toks36
-\float@box=\box40
-\@float@everytoks=\toks37
-\@floatcapt=\box41
+\c@float@type=\count168
+\float@exts=\toks37
+\float@box=\box41
+\@float@everytoks=\toks38
+\@floatcapt=\box42
 )
 (C:/PROGRA~1/R/R-30~1.2/share/texmf/tex/latex\Sweave.sty
 Package: Sweave 
@@ -959,11 +971,11 @@ Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count168
+\FV@CodeLineNo=\count169
 \FV@InFile=\read2
-\FV@TabBox=\box42
-\c@FancyVerbLine=\count169
-\FV@StepNumber=\count170
+\FV@TabBox=\box43
+\c@FancyVerbLine=\count170
+\FV@StepNumber=\count171
 \FV@OutFile=\write4
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
@@ -1142,11 +1154,16 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aer.fd"
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 ))))
+<<<<<<< HEAD
 (C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport.aux
+=======
+("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport.aux"
+>>>>>>> origin/master
 
 LaTeX Warning: Label `table:regression' multiply defined.
 
 )
+<<<<<<< HEAD
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
@@ -1163,12 +1180,30 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 98.
+=======
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 99.
+>>>>>>> origin/master
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 98.
-\AtBeginShipoutBox=\box43
-Package hyperref Info: Link coloring OFF on input line 98.
+LaTeX Font Info:    ... okay on input line 99.
+\AtBeginShipoutBox=\box44
+Package hyperref Info: Link coloring OFF on input line 99.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1176,30 +1211,30 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count171
+\c@section@level=\count172
 )
-LaTeX Info: Redefining \ref on input line 98.
-LaTeX Info: Redefining \pageref on input line 98.
-LaTeX Info: Redefining \nameref on input line 98.
+LaTeX Info: Redefining \ref on input line 99.
+LaTeX Info: Redefining \pageref on input line 99.
+LaTeX Info: Redefining \nameref on input line 99.
 
-(C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport.out)
-(C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport.out)
+("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport.out")
+("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport.out")
 \@outlinefile=\write5
 
 ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count172
-\scratchdimen=\dimen195
-\scratchbox=\box44
-\nofMPsegments=\count173
-\nofMParguments=\count174
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count175
-\MPscratchDim=\dimen196
-\MPnumerator=\count176
-\makeMPintoPDFobject=\count177
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count173
+\scratchdimen=\dimen196
+\scratchbox=\box45
+\nofMPsegments=\count174
+\nofMParguments=\count175
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count176
+\MPscratchDim=\dimen197
+\MPnumerator=\count177
+\makeMPintoPDFobject=\count178
+\everyMPtoPDFconversion=\toks40
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
@@ -1207,26 +1242,57 @@ Package caption Info: float package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
- (C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport-concordance.tex)
-LaTeX Font Info:    Try loading font information for U+msa on input line 108.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+
+("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport-concordance.t
+ex")
+LaTeX Font Info:    Try loading font information for U+msa on input line 114.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 108.
+LaTeX Font Info:    Try loading font information for U+msb on input line 114.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for TS1+aer on input line 114.
+! Missing } inserted.
+<inserted text> 
+                }
+l.114 
+      
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
+! Extra }, or forgotten \endgroup.
+\@author ...rshall, Mick Roberts, Nigel P French.}
+                                                   \\\\ {\small mEpiLab and ...
+l.114 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+LaTeX Font Info:    Try loading font information for T1+aett on input line 114.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+)
+Overfull \hbox (42.98529pt too wide) in paragraph at lines 114--114
+ [][] 
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 120.
 
 (C:/PROGRA~1/R/R-30~1.2/share/texmf/tex/latex\ts1aer.fd
 File: ts1aer.fd 
 )
 LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10> not available
-(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 114.
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 120.
  [1
 
+<<<<<<< HEAD
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4]
 <incidence_1997_2014.pdf, id=151, 722.7pt x 361.35pt>
 File: incidence_1997_2014.pdf Graphic file (type pdf)
@@ -1235,10 +1301,24 @@ File: incidence_1997_2014.pdf Graphic file (type pdf)
 Package pdftex.def Info: incidence_1997_2014.pdf used on input line 164.
 (pdftex.def)             Requested size: 345.0pt x 172.49767pt.
 LaTeX Font Info:    Try loading font information for T1+aess on input line 172.
+=======
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+
+LaTeX Warning: Reference `sec:' on page 3 undefined on input line 140.
+
+[3] [4] <incidence_1997_2014.pdf, id=147, 722.7pt x 361.35pt>
+File: incidence_1997_2014.pdf Graphic file (type pdf)
+
+<use incidence_1997_2014.pdf>
+Package pdftex.def Info: incidence_1997_2014.pdf used on input line 168.
+(pdftex.def)             Requested size: 345.0pt x 172.49767pt.
+LaTeX Font Info:    Try loading font information for T1+aess on input line 177.
+>>>>>>> origin/master
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aess.fd"
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
+<<<<<<< HEAD
 ) [5 <C:/Users/dtshayma/Documents/GitHub/measles/incidence_1997_2014.pdf>]
 <draftfinalreport-002.pdf, id=166, 1084.05pt x 867.24pt>
 File: draftfinalreport-002.pdf Graphic file (type pdf)
@@ -1263,34 +1343,78 @@ File: draftfinalreport-014.pdf Graphic file (type pdf)
 
 <use draftfinalreport-014.pdf>
 Package pdftex.def Info: draftfinalreport-014.pdf used on input line 340.
+=======
+) [5 <C:/Users/David Hayman/Documents/GitHub/measles/incidence_1997_2014.pdf>]
+<draftfinalreport-002.pdf, id=162, 1084.05pt x 867.24pt>
+File: draftfinalreport-002.pdf Graphic file (type pdf)
+
+<use draftfinalreport-002.pdf>
+Package pdftex.def Info: draftfinalreport-002.pdf used on input line 186.
+(pdftex.def)             Requested size: 276.00105pt x 220.7926pt.
+ [6 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-002.pdf>]
+<draftfinalreport-010.pdf, id=180, 794.97pt x 650.43pt>
+File: draftfinalreport-010.pdf Graphic file (type pdf)
+
+<use draftfinalreport-010.pdf>
+Package pdftex.def Info: draftfinalreport-010.pdf used on input line 270.
+(pdftex.def)             Requested size: 276.00105pt x 225.81783pt.
+
+
+LaTeX Warning: Float too large for page by 4.0992pt on input line 337.
+
+[7 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-010.pdf>]
+[8] [9] [10] <draftfinalreport-014.pdf, id=216, 794.97pt x 433.62pt>
+File: draftfinalreport-014.pdf Graphic file (type pdf)
+
+<use draftfinalreport-014.pdf>
+Package pdftex.def Info: draftfinalreport-014.pdf used on input line 388.
+>>>>>>> origin/master
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
 <draftfinalreport-015.pdf, id=219, 794.97pt x 794.97pt>
 File: draftfinalreport-015.pdf Graphic file (type pdf)
 
 <use draftfinalreport-015.pdf>
+<<<<<<< HEAD
 Package pdftex.def Info: draftfinalreport-015.pdf used on input line 349.
+=======
+Package pdftex.def Info: draftfinalreport-015.pdf used on input line 397.
+>>>>>>> origin/master
 (pdftex.def)             Requested size: 276.00105pt x 275.99957pt.
 
 <draftfinalreport-017.pdf, id=224, 794.97pt x 433.62pt>
 File: draftfinalreport-017.pdf Graphic file (type pdf)
 
 <use draftfinalreport-017.pdf>
+<<<<<<< HEAD
 Package pdftex.def Info: draftfinalreport-017.pdf used on input line 358.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
 Overfull \hbox (1.06569pt too wide) in paragraph at lines 364--365
+=======
+Package pdftex.def Info: draftfinalreport-017.pdf used on input line 406.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+Overfull \hbox (1.06569pt too wide) in paragraph at lines 412--413
+>>>>>>> origin/master
 []\T1/aer/m/n/10 The sig-nif-i-cance of the dif-fer-ent pre-dic-tor vari-ables 
 can be seen in the ANOVA
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (0.66412pt too wide) in paragraph at lines 370--380
 [][] 
  []
 
 [10] [11 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-014.pdf> 
 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-015.pdf>]
+=======
+Overfull \hbox (0.66412pt too wide) in paragraph at lines 418--428
+[][] 
+ []
+
+>>>>>>> origin/master
 
 ! Package caption Error: \caption outside float.
 
@@ -1298,7 +1422,11 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
+<<<<<<< HEAD
 l.415 \end{tabular}\caption
+=======
+l.463 \end{tabular}\caption
+>>>>>>> origin/master
                            {Summary of the regression model results for meas...
 
 If you do not understand this error, please take a closer look
@@ -1310,23 +1438,41 @@ If that doesn't work, type  X <return>  to quit.
 ! Too many }'s.
 \sf@endfloatbox ...gefalse \outer@nobreak \egroup 
                                                   \color@endbox 
+<<<<<<< HEAD
 l.417 \end{table}
+=======
+l.465 \end{table}
+>>>>>>> origin/master
                  
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
+<<<<<<< HEAD
 [12 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-017.pdf>]
 ! Extra \endgroup.
 \color@endgroup ->\endgraf \endgroup 
                                      
 l.417 \end{table}
+=======
+[11 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-014.pdf>]
+[12 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-015.pdf> <
+C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-017.pdf>]
+! Extra \endgroup.
+\color@endgroup ->\endgraf \endgroup 
+                                     
+l.465 \end{table}
+>>>>>>> origin/master
                  
 Things are pretty mixed up, but I think the worst is over.
 
 ! Too many }'s.
 \color@endbox ->\color@endgroup \egroup 
                                         
+<<<<<<< HEAD
 l.417 \end{table}
+=======
+l.465 \end{table}
+>>>>>>> origin/master
                  
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1338,7 +1484,11 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
+<<<<<<< HEAD
 l.417 \end{table}
+=======
+l.465 \end{table}
+>>>>>>> origin/master
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1347,6 +1497,7 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
+<<<<<<< HEAD
 l.417 \end{table}
                  
 Things are pretty mixed up, but I think the worst is over.
@@ -1363,8 +1514,31 @@ File: draftfinalreport-021.pdf Graphic file (type pdf)
 
 <use draftfinalreport-021.pdf>
 Package pdftex.def Info: draftfinalreport-021.pdf used on input line 438.
+=======
+l.465 \end{table}
+                 
+Things are pretty mixed up, but I think the worst is over.
+
+
+LaTeX Warning: Reference `table:' on page 13 undefined on input line 470.
+
+[13] <draftfinalreport-020.pdf, id=268, 794.97pt x 433.62pt>
+File: draftfinalreport-020.pdf Graphic file (type pdf)
+
+<use draftfinalreport-020.pdf>
+Package pdftex.def Info: draftfinalreport-020.pdf used on input line 478.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
+<draftfinalreport-021.pdf, id=269, 794.97pt x 433.62pt>
+File: draftfinalreport-021.pdf Graphic file (type pdf)
+
+<use draftfinalreport-021.pdf>
+Package pdftex.def Info: draftfinalreport-021.pdf used on input line 486.
+>>>>>>> origin/master
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+ [14 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-020.pdf>]
+
+<<<<<<< HEAD
 <draftfinalreport-023.pdf, id=303, 794.97pt x 433.62pt>
 File: draftfinalreport-023.pdf Graphic file (type pdf)
 
@@ -2065,6 +2239,335 @@ File: draftfinalreport-053.pdf Graphic file (type pdf)
 Package pdftex.def Info: draftfinalreport-053.pdf used on input line 1371.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
  [53 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport-053.pdf>]
+=======
+<draftfinalreport-023.pdf, id=310, 794.97pt x 433.62pt>
+File: draftfinalreport-023.pdf Graphic file (type pdf)
+
+<use draftfinalreport-023.pdf>
+Package pdftex.def Info: draftfinalreport-023.pdf used on input line 521.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+<naive_map.pdf, id=313, 728.7225pt x 447.6725pt>
+File: naive_map.pdf Graphic file (type pdf)
+ <use naive_map.pdf>
+Package pdftex.def Info: naive_map.pdf used on input line 529.
+(pdftex.def)             Requested size: 413.99895pt x 254.32893pt.
+
+Overfull \hbox (68.99895pt too wide) in paragraph at lines 529--530
+ [] 
+ []
+
+[15 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-021.pdf>]
+<dhb1.pdf, id=344, 505.89pt x 505.89pt>
+File: dhb1.pdf Graphic file (type pdf)
+ <use dhb1.pdf>
+Package pdftex.def Info: dhb1.pdf used on input line 537.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ [16 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-023.pdf> 
+<C:/Users/David Hayman/Documents/GitHub/measles/naive_map.pdf>] <dhb2.pdf, id=3
+61, 505.89pt x 505.89pt>
+File: dhb2.pdf Graphic file (type pdf)
+
+<use dhb2.pdf>
+Package pdftex.def Info: dhb2.pdf used on input line 546.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ <dhb3.pdf, id=364, 505.89pt x 505.89pt>
+File: dhb3.pdf Graphic file (type pdf)
+ <use dhb3.pdf>
+Package pdftex.def Info: dhb3.pdf used on input line 554.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ [17 <C:/Users/David Hayman/Documents/GitHub/measles/dhb1.pdf> <C:/Users/David 
+Hayman/Documents/GitHub/measles/dhb2.pdf>] <dhb4.pdf, id=385, 505.89pt x 505.89
+pt>
+File: dhb4.pdf Graphic file (type pdf)
+
+<use dhb4.pdf>
+Package pdftex.def Info: dhb4.pdf used on input line 562.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ <dhb5.pdf, id=388, 505.89pt x 505.89pt>
+File: dhb5.pdf Graphic file (type pdf)
+ <use dhb5.pdf>
+Package pdftex.def Info: dhb5.pdf used on input line 570.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ [18 <C:/Users/David Hayman/Documents/GitHub/measles/dhb3.pdf> <C:/Users/David 
+Hayman/Documents/GitHub/measles/dhb4.pdf>] <dhb6.pdf, id=409, 505.89pt x 505.89
+pt>
+File: dhb6.pdf Graphic file (type pdf)
+
+<use dhb6.pdf>
+Package pdftex.def Info: dhb6.pdf used on input line 578.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ <dhb7.pdf, id=412, 505.89pt x 505.89pt>
+File: dhb7.pdf Graphic file (type pdf)
+ <use dhb7.pdf>
+Package pdftex.def Info: dhb7.pdf used on input line 586.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ [19 <C:/Users/David Hayman/Documents/GitHub/measles/dhb5.pdf> <C:/Users/David 
+Hayman/Documents/GitHub/measles/dhb6.pdf>] <dhb8.pdf, id=434, 505.89pt x 505.89
+pt>
+File: dhb8.pdf Graphic file (type pdf)
+
+<use dhb8.pdf>
+Package pdftex.def Info: dhb8.pdf used on input line 594.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ <dhb9.pdf, id=437, 505.89pt x 505.89pt>
+File: dhb9.pdf Graphic file (type pdf)
+ <use dhb9.pdf>
+Package pdftex.def Info: dhb9.pdf used on input line 602.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ [20 <C:/Users/David Hayman/Documents/GitHub/measles/dhb7.pdf> <C:/Users/David 
+Hayman/Documents/GitHub/measles/dhb8.pdf>] <dhb10.pdf, id=458, 505.89pt x 505.8
+9pt>
+File: dhb10.pdf Graphic file (type pdf)
+
+<use dhb10.pdf>
+Package pdftex.def Info: dhb10.pdf used on input line 610.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ <dhb11.pdf, id=461, 505.89pt x 505.89pt>
+File: dhb11.pdf Graphic file (type pdf)
+ <use dhb11.pdf>
+Package pdftex.def Info: dhb11.pdf used on input line 618.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+[21 <C:/Users/David Hayman/Documents/GitHub/measles/dhb9.pdf> <C:/Users/David H
+ayman/Documents/GitHub/measles/dhb10.pdf>]
+<dhb12.pdf, id=482, 505.89pt x 505.89pt>
+File: dhb12.pdf Graphic file (type pdf)
+ <use dhb12.pdf>
+Package pdftex.def Info: dhb12.pdf used on input line 626.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+<dhb13.pdf, id=485, 505.89pt x 505.89pt>
+File: dhb13.pdf Graphic file (type pdf)
+ <use dhb13.pdf>
+Package pdftex.def Info: dhb13.pdf used on input line 634.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ [22 <C:/Users/David Hayman/Documents/GitHub/measles/dhb11.pdf> <C:/Users/David
+ Hayman/Documents/GitHub/measles/dhb12.pdf>] <dhb14.pdf, id=506, 505.89pt x 505
+.89pt>
+File: dhb14.pdf Graphic file (type pdf)
+ <use dhb14.pdf>
+Package pdftex.def Info: dhb14.pdf used on input line 642.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+<dhb15.pdf, id=509, 505.89pt x 505.89pt>
+File: dhb15.pdf Graphic file (type pdf)
+ <use dhb15.pdf>
+Package pdftex.def Info: dhb15.pdf used on input line 650.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ [23 <C:/Users/David Hayman/Documents/GitHub/measles/dhb13.pdf> <C:/Users/David
+ Hayman/Documents/GitHub/measles/dhb14.pdf>] <dhb16.pdf, id=530, 505.89pt x 505
+.89pt>
+File: dhb16.pdf Graphic file (type pdf)
+ <use dhb16.pdf>
+Package pdftex.def Info: dhb16.pdf used on input line 658.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+<dhb17.pdf, id=533, 505.89pt x 505.89pt>
+File: dhb17.pdf Graphic file (type pdf)
+ <use dhb17.pdf>
+Package pdftex.def Info: dhb17.pdf used on input line 666.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ [24 <C:/Users/David Hayman/Documents/GitHub/measles/dhb15.pdf> <C:/Users/David
+ Hayman/Documents/GitHub/measles/dhb16.pdf>] <dhb18.pdf, id=554, 505.89pt x 505
+.89pt>
+File: dhb18.pdf Graphic file (type pdf)
+ <use dhb18.pdf>
+Package pdftex.def Info: dhb18.pdf used on input line 674.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+<dhb19.pdf, id=557, 505.89pt x 505.89pt>
+File: dhb19.pdf Graphic file (type pdf)
+ <use dhb19.pdf>
+Package pdftex.def Info: dhb19.pdf used on input line 682.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+ [25 <C:/Users/David Hayman/Documents/GitHub/measles/dhb17.pdf> <C:/Users/David
+ Hayman/Documents/GitHub/measles/dhb18.pdf>] <dhb20.pdf, id=579, 505.89pt x 505
+.89pt>
+File: dhb20.pdf Graphic file (type pdf)
+ <use dhb20.pdf>
+Package pdftex.def Info: dhb20.pdf used on input line 690.
+(pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
+
+[26 <C:/Users/David Hayman/Documents/GitHub/measles/dhb19.pdf> <C:/Users/David 
+Hayman/Documents/GitHub/measles/dhb20.pdf>]
+
+LaTeX Warning: Reference `fig:imtravel12' on page 27 undefined on input line 10
+46.
+
+<draftfinalreport-036.pdf, id=618, 794.97pt x 433.62pt>
+File: draftfinalreport-036.pdf Graphic file (type pdf)
+
+<use draftfinalreport-036.pdf>
+Package pdftex.def Info: draftfinalreport-036.pdf used on input line 1051.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+<draftfinalreport-037.pdf, id=619, 794.97pt x 433.62pt>
+File: draftfinalreport-037.pdf Graphic file (type pdf)
+
+<use draftfinalreport-037.pdf>
+Package pdftex.def Info: draftfinalreport-037.pdf used on input line 1059.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+<draftfinalreport-038.pdf, id=620, 794.97pt x 433.62pt>
+File: draftfinalreport-038.pdf Graphic file (type pdf)
+
+<use draftfinalreport-038.pdf>
+Package pdftex.def Info: draftfinalreport-038.pdf used on input line 1068.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+<draftfinalreport-039.pdf, id=621, 794.97pt x 433.62pt>
+File: draftfinalreport-039.pdf Graphic file (type pdf)
+
+<use draftfinalreport-039.pdf>
+Package pdftex.def Info: draftfinalreport-039.pdf used on input line 1076.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+<draftfinalreport-040.pdf, id=622, 794.97pt x 433.62pt>
+File: draftfinalreport-040.pdf Graphic file (type pdf)
+
+<use draftfinalreport-040.pdf>
+Package pdftex.def Info: draftfinalreport-040.pdf used on input line 1084.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+<draftfinalreport-041.pdf, id=623, 794.97pt x 433.62pt>
+File: draftfinalreport-041.pdf Graphic file (type pdf)
+
+<use draftfinalreport-041.pdf>
+Package pdftex.def Info: draftfinalreport-041.pdf used on input line 1092.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+<draftfinalreport-042.pdf, id=624, 794.97pt x 433.62pt>
+File: draftfinalreport-042.pdf Graphic file (type pdf)
+
+<use draftfinalreport-042.pdf>
+Package pdftex.def Info: draftfinalreport-042.pdf used on input line 1100.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+<draftfinalreport-043.pdf, id=625, 794.97pt x 433.62pt>
+File: draftfinalreport-043.pdf Graphic file (type pdf)
+
+<use draftfinalreport-043.pdf>
+Package pdftex.def Info: draftfinalreport-043.pdf used on input line 1108.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+<draftfinalreport-044.pdf, id=626, 433.62pt x 433.62pt>
+File: draftfinalreport-044.pdf Graphic file (type pdf)
+
+<use draftfinalreport-044.pdf>
+Package pdftex.def Info: draftfinalreport-044.pdf used on input line 1116.
+(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
+ <nzers.pdf, id=627, 361.35pt x 361.35pt>
+File: nzers.pdf Graphic file (type pdf)
+
+<use nzers.pdf>
+Package pdftex.def Info: nzers.pdf used on input line 1124.
+(pdftex.def)             Requested size: 345.0pt x 345.00084pt.
+ [27 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-036.pdf>]
+ [28] [29] [30] [31] [32] [33] [34] [35] [36 <C:/Users/David Hayman/Documents/G
+itHub/measles/draftfinalreport-037.pdf> <C:/Users/David Hayman/Documents/GitHub
+/measles/draftfinalreport-038.pdf>] [37 <C:/Users/David Hayman/Documents/GitHub
+/measles/draftfinalreport-039.pdf> <C:/Users/David Hayman/Documents/GitHub/meas
+les/draftfinalreport-040.pdf>] [38 <C:/Users/David Hayman/Documents/GitHub/meas
+les/draftfinalreport-041.pdf> <C:/Users/David Hayman/Documents/GitHub/measles/d
+raftfinalreport-042.pdf>] [39 <C:/Users/David Hayman/Documents/GitHub/measles/d
+raftfinalreport-043.pdf> <C:/Users/David Hayman/Documents/GitHub/measles/draftf
+inalreport-044.pdf>] [40 <C:/Users/David Hayman/Documents/GitHub/measles/nzers.
+pdf>] [41] [42] [43]
+<cases_by_dhb_2009_2014.pdf, id=830, 722.7pt x 361.35pt>
+File: cases_by_dhb_2009_2014.pdf Graphic file (type pdf)
+
+<use cases_by_dhb_2009_2014.pdf>
+Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 1176.
+(pdftex.def)             Requested size: 310.4979pt x 155.25066pt.
+
+<outbreaks_for_R0.pdf, id=831, 722.7pt x 361.35pt>
+File: outbreaks_for_R0.pdf Graphic file (type pdf)
+ <use outbreaks_for_R0.pdf>
+Package pdftex.def Info: outbreaks_for_R0.pdf used on input line 1183.
+(pdftex.def)             Requested size: 310.4979pt x 155.25066pt.
+
+<averageR0.pdf, id=832, 578.16pt x 433.62pt>
+File: averageR0.pdf Graphic file (type pdf)
+ <use averageR0.pdf>
+Package pdftex.def Info: averageR0.pdf used on input line 1190.
+(pdftex.def)             Requested size: 310.4979pt x 232.87433pt.
+ [44 <C:/Users/David Hayman/Documents/GitHub/measles/cases_by_dhb_2009_2014.pdf
+>] [45 <C:/Users/David Hayman/Documents/GitHub/measles/outbreaks_for_R0.pdf> <C
+:/Users/David Hayman/Documents/GitHub/measles/averageR0.pdf>]
+! Display math should end with $$.
+<to be read again> 
+                   x
+l.1217 $x
+         _0-1/\Ro$.
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1217 $x_
+          0-1/\Ro$.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1218 \end{equation}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `\eqno' in horizontal mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.1218 \end{equation}
+                     
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1218 \end{equation}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.1218 \end{equation}
+                     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[46]
+Overfull \hbox (0.49591pt too wide) in paragraph at lines 1277--1278
+[]\T1/aer/m/n/10 The re-pro-duc-tion num-ber for measles in the par-tially im-m
+une New Zealand
+ []
+
+[47] [48] [49] [50] [51] [52]
+<draftfinalreport-052.pdf, id=964, 794.97pt x 433.62pt>
+File: draftfinalreport-052.pdf Graphic file (type pdf)
+
+<use draftfinalreport-052.pdf>
+Package pdftex.def Info: draftfinalreport-052.pdf used on input line 1412.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+>>>>>>> origin/master
 
 ! Package inputenc Error: Unicode char \u8:  not set up for use with LaTeX.
 
@@ -2072,13 +2575,18 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
+<<<<<<< HEAD
 l.1435 & 
+=======
+l.1476 & 
+>>>>>>> origin/master
             TOTAL&550,022&$293$&$470$&1,877\tabularnewline
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
+<<<<<<< HEAD
 LaTeX Warning: Float too large for page by 71.34593pt on input line 1443.
 
 
@@ -2128,10 +2636,61 @@ Package pdftex.def Info: draftfinalreport-064.pdf used on input line 1538.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
 Overfull \hbox (94.73053pt too wide) in paragraph at lines 1549--1574
+=======
+LaTeX Warning: Float too large for page by 71.34593pt on input line 1484.
+
+[53] [54] [55] [56 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalre
+port-052.pdf>]
+
+LaTeX Warning: Reference `equation:prop' on page 57 undefined on input line 151
+1.
+
+[57]
+Overfull \hbox (19.61333pt too wide) in paragraph at lines 1530--1556
+ [] 
+ []
+
+<draftfinalreport-060.pdf, id=1008, 794.97pt x 794.97pt>
+File: draftfinalreport-060.pdf Graphic file (type pdf)
+
+<use draftfinalreport-060.pdf>
+Package pdftex.def Info: draftfinalreport-060.pdf used on input line 1564.
+(pdftex.def)             Requested size: 276.00105pt x 275.99957pt.
+
+
+LaTeX Warning: Reference `tab:cost20' on page 58 undefined on input line 1565.
+
+
+LaTeX Warning: Reference `tab:cost50' on page 58 undefined on input line 1565.
+
+
+LaTeX Warning: Reference `tab:cost20' on page 58 undefined on input line 1565.
+
+
+LaTeX Warning: Reference `tab:cost50' on page 58 undefined on input line 1565.
+
+[58 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-060.pdf>]
+[59] <draftfinalreport-062.pdf, id=1031, 794.97pt x 433.62pt>
+File: draftfinalreport-062.pdf Graphic file (type pdf)
+
+<use draftfinalreport-062.pdf>
+Package pdftex.def Info: draftfinalreport-062.pdf used on input line 1574.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+<draftfinalreport-063.pdf, id=1036, 794.97pt x 433.62pt>
+File: draftfinalreport-063.pdf Graphic file (type pdf)
+
+<use draftfinalreport-063.pdf>
+Package pdftex.def Info: draftfinalreport-063.pdf used on input line 1581.
+(pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
+
+Overfull \hbox (91.59267pt too wide) in paragraph at lines 1592--1617
+>>>>>>> origin/master
  [] 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (94.73053pt too wide) in paragraph at lines 1582--1607
  [] 
  []
@@ -2177,6 +2736,42 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1856.
 
 Package rerunfilecheck Info: File `draftfinalreport.out' has not changed.
 (rerunfilecheck)             Checksum: F5E36E446468CCB3E187922474CF5FC8;1868.
+=======
+Overfull \hbox (9.60683pt too wide) in paragraph at lines 1626--1627
+[]\T1/aer/m/n/10 Vacc Vacc.costs Wages.saved Man-age.saved Hos-pi-talised Hosp.
+saved Costs.save
+ []
+
+
+Overfull \hbox (91.59267pt too wide) in paragraph at lines 1633--1658
+ [] 
+ []
+
+[60 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-062.pdf>]
+[61] [62] [63 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-
+063.pdf>]
+Overfull \hbox (58.38573pt too wide) in paragraph at lines 1688--1720
+ [] 
+ []
+
+
+LaTeX Warning: Reference `tab:cost20' on page 64 undefined on input line 1727.
+
+
+LaTeX Warning: Reference `tab:cost20' on page 64 undefined on input line 1727.
+
+[64] [65] [66] [67] [68] [69]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1967.
+ [70]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1967.
+
+("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1967.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1967.
+
+Package rerunfilecheck Info: File `draftfinalreport.out' has not changed.
+(rerunfilecheck)             Checksum: DEF3E95B2FF84C34442F095163AD60CE;1879.
+>>>>>>> origin/master
 
 
 LaTeX Warning: There were undefined references.
@@ -2184,6 +2779,7 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
+<<<<<<< HEAD
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1856.
  )
 (\end occurred when \ifnum on line 1088 was incomplete)
@@ -2228,5 +2824,43 @@ Output written on draftfinalreport.pdf (68 pages, 3095864 bytes).
 PDF statistics:
  1254 PDF objects out of 1440 (max. 8388607)
  208 named destinations out of 1000 (max. 500000)
+=======
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1967.
+ ) 
+Here is how much of TeX's memory you used:
+ 19331 strings out of 493921
+ 329900 string characters out of 3147261
+ 436526 words of memory out of 3000000
+ 21918 multiletter control sequences out of 15000+200000
+ 51485 words of font info for 106 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 56i,11n,75p,1984b,513s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/eurosym/feymr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/cm-super/sfrm1000.pfb>
+Output written on draftfinalreport.pdf (70 pages, 3119846 bytes).
+PDF statistics:
+ 1262 PDF objects out of 1440 (max. 8388607)
+ 213 named destinations out of 1000 (max. 500000)
+>>>>>>> origin/master
  452 words of extra memory for PDF output out of 10000 (max. 10000000)
 
