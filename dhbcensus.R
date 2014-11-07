@@ -30,6 +30,7 @@ dhbpop<-read.csv("dhbcensus.csv",header=T)
 df.expanded <- dhbpop[rep(row.names(dhbpop),5), 1:21]
 df<-df.expanded[with(df.expanded, order(Age)), ]
 df<-df[,2:21]/5
+popdhb<-colSums(df)
 naivedhb<-df*(1-impop[1:90])
 head(naivedhb)
 matplot(naivedhb,type="l")
@@ -42,7 +43,7 @@ for (i in 1:20){
   pdf(paste("dhb", i, ".pdf", sep = ""))
   plot(naivedhb[,i],ylim=c(0,8000),main=colnames(naivedhb)[i],xlab="Age",ylab="Numbers",
        pch=16,cex=1.1)
-  legend("topright",legend=c("Total naive", round(sum(naivedhb[,i]))),bty="n")
+  legend("topright",legend=c(c("Total naive", round(sum(naivedhb[,i]))),c("Total population", signif(popdhb[i],5))),bty="n")
   dev.off()
 }  
 
