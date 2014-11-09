@@ -1647,7 +1647,7 @@ costtable5<-read.csv("costtable5v2.csv",header=T)
 library(Hmisc)
 latex(costtable5, file="", table.env=FALSE,rowname=NULL)
 @
-\label{table:regression}
+\label{table:regression_costs}
 \end{table}
 
 Wages lost due to measles are calculated for the period January 2008 -- August 2014. Calculations are based on the assumption that 5 days of work are lost for each case; however, individuals under 15 years of age are not assumed to be employed and therefore did not suffer an income loss. If the case are less than 20 years of age, it was assumed there was an income loss of 5 days for the care giver, in addition to the wage loss of the case if 15--19 years of age. Total wage lost for the 247 cases and care givers was estimated to be \$210,436. This consisted of \$107,820 for the cases and \$102,616 for the care giver, but did not include wage losses for cases under 15 years of age. Overall, the cost per case from 2008--2014 was estimated to be \$4,327 (\$839 in forgone wages, \$1,765 in management costs, and \$1,710 in hospital costs).
