@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.22)  8 NOV 2014 03:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.22)  10 NOV 2014 12:40
 entering extended mode
 **draftfinalreport.tex
 ("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport.tex"
@@ -1214,32 +1214,8 @@ LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10> not available
 (Font)              Font shape `TS1/cmr/m/n' tried instead on input line 120.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
-
-LaTeX Warning: Reference `section:epidemic_modelling' on page 4 undefined on in
-put line 155.
-
-
-LaTeX Warning: Reference `section:epidemic_modelling' on page 4 undefined on in
-put line 157.
-
-
-LaTeX Warning: Reference `section:epidemic_modelling' on page 4 undefined on in
-put line 159.
-
-
-LaTeX Warning: Reference `sub:cost' on page 4 undefined on input line 159.
-
-
-LaTeX Warning: Reference `sub:cost_benefit' on page 4 undefined on input line 1
-59.
-
-[4]
-
-LaTeX Warning: Reference `{sub:imp_risk}' on page 5 undefined on input line 166
-.
-
-<incidence_1997_2014.pdf, id=89, 722.7pt x 361.35pt>
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4]
+<incidence_1997_2014.pdf, id=150, 722.7pt x 361.35pt>
 File: incidence_1997_2014.pdf Graphic file (type pdf)
 
 <use incidence_1997_2014.pdf>
@@ -1251,7 +1227,7 @@ LaTeX Font Info:    Try loading font information for T1+aess on input line 178.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aess.fd"
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 ) [5 <C:/Users/David Hayman/Documents/GitHub/measles/incidence_1997_2014.pdf>]
-<draftfinalreport-002.pdf, id=102, 1084.05pt x 867.24pt>
+<draftfinalreport-002.pdf, id=164, 1084.05pt x 867.24pt>
 File: draftfinalreport-002.pdf Graphic file (type pdf)
 
 <use draftfinalreport-002.pdf>
@@ -1259,7 +1235,7 @@ Package pdftex.def Info: draftfinalreport-002.pdf used on input line 187.
 (pdftex.def)             Requested size: 276.00105pt x 220.7926pt.
  [6] [7 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-002.pd
 f>]
-<draftfinalreport-010.pdf, id=131, 1084.05pt x 794.97pt>
+<draftfinalreport-010.pdf, id=192, 1084.05pt x 794.97pt>
 File: draftfinalreport-010.pdf Graphic file (type pdf)
 
 <use draftfinalreport-010.pdf>
@@ -1270,21 +1246,21 @@ Package pdftex.def Info: draftfinalreport-010.pdf used on input line 227.
 LaTeX Warning: Float too large for page by 4.0992pt on input line 294.
 
 [8 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-010.pdf>]
-[9] [10] <draftfinalreport-014.pdf, id=157, 794.97pt x 433.62pt>
+[9] [10] <draftfinalreport-014.pdf, id=219, 794.97pt x 433.62pt>
 File: draftfinalreport-014.pdf Graphic file (type pdf)
 
 <use draftfinalreport-014.pdf>
 Package pdftex.def Info: draftfinalreport-014.pdf used on input line 346.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<draftfinalreport-015.pdf, id=164, 794.97pt x 794.97pt>
+<draftfinalreport-015.pdf, id=226, 794.97pt x 794.97pt>
 File: draftfinalreport-015.pdf Graphic file (type pdf)
 
 <use draftfinalreport-015.pdf>
 Package pdftex.def Info: draftfinalreport-015.pdf used on input line 355.
 (pdftex.def)             Requested size: 276.00105pt x 275.99957pt.
 
-<draftfinalreport-017.pdf, id=169, 794.97pt x 433.62pt>
+<draftfinalreport-017.pdf, id=231, 794.97pt x 433.62pt>
 File: draftfinalreport-017.pdf Graphic file (type pdf)
 
 <use draftfinalreport-017.pdf>
@@ -1304,14 +1280,14 @@ Overfull \hbox (0.66412pt too wide) in paragraph at lines 376--386
 [11 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-014.pdf>]
 [12 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-015.pdf> <
 C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-017.pdf>]
-[13] <draftfinalreport-020.pdf, id=223, 794.97pt x 433.62pt>
+[13] <draftfinalreport-020.pdf, id=284, 794.97pt x 433.62pt>
 File: draftfinalreport-020.pdf Graphic file (type pdf)
 
 <use draftfinalreport-020.pdf>
 Package pdftex.def Info: draftfinalreport-020.pdf used on input line 438.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<draftfinalreport-021.pdf, id=224, 794.97pt x 433.62pt>
+<draftfinalreport-021.pdf, id=285, 794.97pt x 433.62pt>
 File: draftfinalreport-021.pdf Graphic file (type pdf)
 
 <use draftfinalreport-021.pdf>
@@ -1319,14 +1295,14 @@ Package pdftex.def Info: draftfinalreport-021.pdf used on input line 446.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
  [14 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-020.pdf>]
 
-<draftfinalreport-023.pdf, id=264, 794.97pt x 433.62pt>
+<draftfinalreport-023.pdf, id=326, 794.97pt x 433.62pt>
 File: draftfinalreport-023.pdf Graphic file (type pdf)
 
 <use draftfinalreport-023.pdf>
 Package pdftex.def Info: draftfinalreport-023.pdf used on input line 482.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<naive_map.pdf, id=267, 728.7225pt x 447.6725pt>
+<naive_map.pdf, id=329, 728.7225pt x 447.6725pt>
 File: naive_map.pdf Graphic file (type pdf)
  <use naive_map.pdf>
 Package pdftex.def Info: naive_map.pdf used on input line 490.
@@ -1337,72 +1313,72 @@ Overfull \hbox (68.99895pt too wide) in paragraph at lines 490--491
  []
 
 [15 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-021.pdf>]
-<dhb1.pdf, id=298, 505.89pt x 505.89pt>
+<dhb1.pdf, id=359, 505.89pt x 505.89pt>
 File: dhb1.pdf Graphic file (type pdf)
  <use dhb1.pdf>
 Package pdftex.def Info: dhb1.pdf used on input line 498.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
  [16 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-023.pdf> 
 <C:/Users/David Hayman/Documents/GitHub/measles/naive_map.pdf>] <dhb2.pdf, id=3
-15, 505.89pt x 505.89pt>
+76, 505.89pt x 505.89pt>
 File: dhb2.pdf Graphic file (type pdf)
 
 <use dhb2.pdf>
 Package pdftex.def Info: dhb2.pdf used on input line 507.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
- <dhb3.pdf, id=318, 505.89pt x 505.89pt>
+ <dhb3.pdf, id=379, 505.89pt x 505.89pt>
 File: dhb3.pdf Graphic file (type pdf)
  <use dhb3.pdf>
 Package pdftex.def Info: dhb3.pdf used on input line 515.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
  [17 <C:/Users/David Hayman/Documents/GitHub/measles/dhb1.pdf> <C:/Users/David 
-Hayman/Documents/GitHub/measles/dhb2.pdf>] <dhb4.pdf, id=339, 505.89pt x 505.89
+Hayman/Documents/GitHub/measles/dhb2.pdf>] <dhb4.pdf, id=400, 505.89pt x 505.89
 pt>
 File: dhb4.pdf Graphic file (type pdf)
 
 <use dhb4.pdf>
 Package pdftex.def Info: dhb4.pdf used on input line 523.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
- <dhb5.pdf, id=342, 505.89pt x 505.89pt>
+ <dhb5.pdf, id=403, 505.89pt x 505.89pt>
 File: dhb5.pdf Graphic file (type pdf)
  <use dhb5.pdf>
 Package pdftex.def Info: dhb5.pdf used on input line 531.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
  [18 <C:/Users/David Hayman/Documents/GitHub/measles/dhb3.pdf> <C:/Users/David 
-Hayman/Documents/GitHub/measles/dhb4.pdf>] <dhb6.pdf, id=363, 505.89pt x 505.89
+Hayman/Documents/GitHub/measles/dhb4.pdf>] <dhb6.pdf, id=424, 505.89pt x 505.89
 pt>
 File: dhb6.pdf Graphic file (type pdf)
 
 <use dhb6.pdf>
 Package pdftex.def Info: dhb6.pdf used on input line 539.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
- <dhb7.pdf, id=366, 505.89pt x 505.89pt>
+ <dhb7.pdf, id=427, 505.89pt x 505.89pt>
 File: dhb7.pdf Graphic file (type pdf)
  <use dhb7.pdf>
 Package pdftex.def Info: dhb7.pdf used on input line 547.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
  [19 <C:/Users/David Hayman/Documents/GitHub/measles/dhb5.pdf> <C:/Users/David 
-Hayman/Documents/GitHub/measles/dhb6.pdf>] <dhb8.pdf, id=388, 505.89pt x 505.89
+Hayman/Documents/GitHub/measles/dhb6.pdf>] <dhb8.pdf, id=449, 505.89pt x 505.89
 pt>
 File: dhb8.pdf Graphic file (type pdf)
 
 <use dhb8.pdf>
 Package pdftex.def Info: dhb8.pdf used on input line 555.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
- <dhb9.pdf, id=391, 505.89pt x 505.89pt>
+ <dhb9.pdf, id=452, 505.89pt x 505.89pt>
 File: dhb9.pdf Graphic file (type pdf)
  <use dhb9.pdf>
 Package pdftex.def Info: dhb9.pdf used on input line 563.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
  [20 <C:/Users/David Hayman/Documents/GitHub/measles/dhb7.pdf> <C:/Users/David 
-Hayman/Documents/GitHub/measles/dhb8.pdf>] <dhb10.pdf, id=412, 505.89pt x 505.8
+Hayman/Documents/GitHub/measles/dhb8.pdf>] <dhb10.pdf, id=473, 505.89pt x 505.8
 9pt>
 File: dhb10.pdf Graphic file (type pdf)
 
 <use dhb10.pdf>
 Package pdftex.def Info: dhb10.pdf used on input line 571.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
- <dhb11.pdf, id=415, 505.89pt x 505.89pt>
+ <dhb11.pdf, id=476, 505.89pt x 505.89pt>
 File: dhb11.pdf Graphic file (type pdf)
  <use dhb11.pdf>
 Package pdftex.def Info: dhb11.pdf used on input line 579.
@@ -1410,58 +1386,58 @@ Package pdftex.def Info: dhb11.pdf used on input line 579.
 
 [21 <C:/Users/David Hayman/Documents/GitHub/measles/dhb9.pdf> <C:/Users/David H
 ayman/Documents/GitHub/measles/dhb10.pdf>]
-<dhb12.pdf, id=436, 505.89pt x 505.89pt>
+<dhb12.pdf, id=497, 505.89pt x 505.89pt>
 File: dhb12.pdf Graphic file (type pdf)
  <use dhb12.pdf>
 Package pdftex.def Info: dhb12.pdf used on input line 587.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
 
-<dhb13.pdf, id=439, 505.89pt x 505.89pt>
+<dhb13.pdf, id=500, 505.89pt x 505.89pt>
 File: dhb13.pdf Graphic file (type pdf)
  <use dhb13.pdf>
 Package pdftex.def Info: dhb13.pdf used on input line 595.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
  [22 <C:/Users/David Hayman/Documents/GitHub/measles/dhb11.pdf> <C:/Users/David
- Hayman/Documents/GitHub/measles/dhb12.pdf>] <dhb14.pdf, id=460, 505.89pt x 505
+ Hayman/Documents/GitHub/measles/dhb12.pdf>] <dhb14.pdf, id=521, 505.89pt x 505
 .89pt>
 File: dhb14.pdf Graphic file (type pdf)
  <use dhb14.pdf>
 Package pdftex.def Info: dhb14.pdf used on input line 603.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
 
-<dhb15.pdf, id=463, 505.89pt x 505.89pt>
+<dhb15.pdf, id=524, 505.89pt x 505.89pt>
 File: dhb15.pdf Graphic file (type pdf)
  <use dhb15.pdf>
 Package pdftex.def Info: dhb15.pdf used on input line 611.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
  [23 <C:/Users/David Hayman/Documents/GitHub/measles/dhb13.pdf> <C:/Users/David
- Hayman/Documents/GitHub/measles/dhb14.pdf>] <dhb16.pdf, id=484, 505.89pt x 505
+ Hayman/Documents/GitHub/measles/dhb14.pdf>] <dhb16.pdf, id=545, 505.89pt x 505
 .89pt>
 File: dhb16.pdf Graphic file (type pdf)
  <use dhb16.pdf>
 Package pdftex.def Info: dhb16.pdf used on input line 619.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
 
-<dhb17.pdf, id=487, 505.89pt x 505.89pt>
+<dhb17.pdf, id=548, 505.89pt x 505.89pt>
 File: dhb17.pdf Graphic file (type pdf)
  <use dhb17.pdf>
 Package pdftex.def Info: dhb17.pdf used on input line 627.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
  [24 <C:/Users/David Hayman/Documents/GitHub/measles/dhb15.pdf> <C:/Users/David
- Hayman/Documents/GitHub/measles/dhb16.pdf>] <dhb18.pdf, id=508, 505.89pt x 505
+ Hayman/Documents/GitHub/measles/dhb16.pdf>] <dhb18.pdf, id=569, 505.89pt x 505
 .89pt>
 File: dhb18.pdf Graphic file (type pdf)
  <use dhb18.pdf>
 Package pdftex.def Info: dhb18.pdf used on input line 635.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
 
-<dhb19.pdf, id=511, 505.89pt x 505.89pt>
+<dhb19.pdf, id=572, 505.89pt x 505.89pt>
 File: dhb19.pdf Graphic file (type pdf)
  <use dhb19.pdf>
 Package pdftex.def Info: dhb19.pdf used on input line 643.
 (pdftex.def)             Requested size: 207.0021pt x 207.00711pt.
  [25 <C:/Users/David Hayman/Documents/GitHub/measles/dhb17.pdf> <C:/Users/David
- Hayman/Documents/GitHub/measles/dhb18.pdf>] <dhb20.pdf, id=533, 505.89pt x 505
+ Hayman/Documents/GitHub/measles/dhb18.pdf>] <dhb20.pdf, id=594, 505.89pt x 505
 .89pt>
 File: dhb20.pdf Graphic file (type pdf)
  <use dhb20.pdf>
@@ -1470,119 +1446,7 @@ Package pdftex.def Info: dhb20.pdf used on input line 651.
 
 [26 <C:/Users/David Hayman/Documents/GitHub/measles/dhb19.pdf> <C:/Users/David 
 Hayman/Documents/GitHub/measles/dhb20.pdf>]
-
-LaTeX Warning: Reference `table:nzrisk12' on page 27 undefined on input line 88
-0.
-
-
-LaTeX Warning: Reference `table:imrisk12' on page 27 undefined on input line 88
-0.
-
-
-LaTeX Warning: Reference `table:nzrisk12' on page 27 undefined on input line 88
-0.
-
-
-LaTeX Warning: Reference `table:imrisk12' on page 27 undefined on input line 88
-0.
-
-
-LaTeX Warning: Reference `table:imrisk12' on page 27 undefined on input line 92
-2.
-
-
-LaTeX Warning: Reference `table:risk12' on page 27 undefined on input line 922.
-
-
-
-LaTeX Warning: Reference `table:imrisk12' on page 27 undefined on input line 92
-2.
-
-
-LaTeX Warning: Reference `table:risk12' on page 27 undefined on input line 922.
-
-
-
-LaTeX Warning: Reference `table:nzrisk12' on page 27 undefined on input line 96
-4.
-
-
-LaTeX Warning: Reference `table:risk12' on page 27 undefined on input line 964.
-
-
-
-LaTeX Warning: Reference `table:nzrisk12' on page 27 undefined on input line 96
-4.
-
-
-LaTeX Warning: Reference `table:risk12' on page 27 undefined on input line 964.
-
-
-
-LaTeX Warning: Reference `table:incidence12' on page 27 undefined on input line
- 1029.
-
-
-LaTeX Warning: Reference `table:cover12' on page 27 undefined on input line 102
-9.
-
-
-LaTeX Warning: Reference `fig:incidence12' on page 27 undefined on input line 1
-029.
-
-
-LaTeX Warning: Reference `fig:cover12' on page 27 undefined on input line 1029.
-
-
-
-LaTeX Warning: Reference `table:imtravel12' on page 27 undefined on input line 
-1029.
-
-
-LaTeX Warning: Reference `fig:immigration12' on page 27 undefined on input line
- 1029.
-
-
-LaTeX Warning: Reference `table:nztravel12' on page 27 undefined on input line 
-1029.
-
-
-LaTeX Warning: Reference `fig:nztravel12' on page 27 undefined on input line 10
-29.
-
-
-LaTeX Warning: Reference `table:immigration12' on page 27 undefined on input li
-ne 1029.
-
-
-LaTeX Warning: Reference `fig:immigration12' on page 27 undefined on input line
- 1029.
-
-
-LaTeX Warning: Reference `table:risk12' on page 27 undefined on input line 1029
-.
-
-
-LaTeX Warning: Reference `table:nzrisk12' on page 27 undefined on input line 10
-29.
-
-
-LaTeX Warning: Reference `table:imrisk12' on page 27 undefined on input line 10
-29.
-
-
-LaTeX Warning: Reference `fig:nzrisk12' on page 27 undefined on input line 1029
-.
-
-
-LaTeX Warning: Reference `fig:imrisk12' on page 27 undefined on input line 1029
-.
-
-
-LaTeX Warning: Reference `table:toprisk' on page 27 undefined on input line 103
-1.
-
-<draftfinalreport-037.pdf, id=554, 794.97pt x 433.62pt>
+<draftfinalreport-037.pdf, id=643, 794.97pt x 433.62pt>
 File: draftfinalreport-037.pdf Graphic file (type pdf)
 
 <use draftfinalreport-037.pdf>
@@ -1593,7 +1457,7 @@ Underfull \hbox (badness 6300) in paragraph at lines 1038--1038
 []\T1/aer/m/n/10 Figure 31: |Measles in-ci-dence per mil-lion, 2012. Data: WHO
  []
 
-<draftfinalreport-038.pdf, id=557, 794.97pt x 433.62pt>
+<draftfinalreport-038.pdf, id=646, 794.97pt x 433.62pt>
 File: draftfinalreport-038.pdf Graphic file (type pdf)
 
 <use draftfinalreport-038.pdf>
@@ -1604,676 +1468,198 @@ Underfull \hbox (badness 5475) in paragraph at lines 1046--1046
 []\T1/aer/m/n/10 Figure 32: |Measles vac-ci-na-tion cover (%), 2012. Data: WHO
  []
 
-<draftfinalreport-039.pdf, id=560, 794.97pt x 433.62pt>
+<draftfinalreport-039.pdf, id=649, 794.97pt x 433.62pt>
 File: draftfinalreport-039.pdf Graphic file (type pdf)
 
 <use draftfinalreport-039.pdf>
 Package pdftex.def Info: draftfinalreport-039.pdf used on input line 1053.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<draftfinalreport-040.pdf, id=561, 794.97pt x 433.62pt>
+<draftfinalreport-040.pdf, id=650, 794.97pt x 433.62pt>
 File: draftfinalreport-040.pdf Graphic file (type pdf)
 
 <use draftfinalreport-040.pdf>
 Package pdftex.def Info: draftfinalreport-040.pdf used on input line 1061.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<draftfinalreport-041.pdf, id=562, 794.97pt x 433.62pt>
+<draftfinalreport-041.pdf, id=651, 794.97pt x 433.62pt>
 File: draftfinalreport-041.pdf Graphic file (type pdf)
 
 <use draftfinalreport-041.pdf>
 Package pdftex.def Info: draftfinalreport-041.pdf used on input line 1070.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<draftfinalreport-042.pdf, id=563, 794.97pt x 433.62pt>
+<draftfinalreport-042.pdf, id=652, 794.97pt x 433.62pt>
 File: draftfinalreport-042.pdf Graphic file (type pdf)
 
 <use draftfinalreport-042.pdf>
 Package pdftex.def Info: draftfinalreport-042.pdf used on input line 1078.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<draftfinalreport-043.pdf, id=564, 794.97pt x 433.62pt>
+<draftfinalreport-043.pdf, id=653, 794.97pt x 433.62pt>
 File: draftfinalreport-043.pdf Graphic file (type pdf)
 
 <use draftfinalreport-043.pdf>
 Package pdftex.def Info: draftfinalreport-043.pdf used on input line 1086.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<draftfinalreport-044.pdf, id=565, 794.97pt x 433.62pt>
+<draftfinalreport-044.pdf, id=654, 794.97pt x 433.62pt>
 File: draftfinalreport-044.pdf Graphic file (type pdf)
 
 <use draftfinalreport-044.pdf>
 Package pdftex.def Info: draftfinalreport-044.pdf used on input line 1094.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-<draftfinalreport-045.pdf, id=566, 433.62pt x 433.62pt>
+<draftfinalreport-045.pdf, id=655, 433.62pt x 433.62pt>
 File: draftfinalreport-045.pdf Graphic file (type pdf)
 
 <use draftfinalreport-045.pdf>
 Package pdftex.def Info: draftfinalreport-045.pdf used on input line 1102.
 (pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
- <nzers.pdf, id=567, 361.35pt x 361.35pt>
+ <nzers.pdf, id=656, 361.35pt x 361.35pt>
 File: nzers.pdf Graphic file (type pdf)
 
 <use nzers.pdf>
 Package pdftex.def Info: nzers.pdf used on input line 1110.
 (pdftex.def)             Requested size: 310.4979pt x 310.50131pt.
-
-! Extra }, or forgotten \endgroup.
-\sf@endfloatbox ...gefalse \outer@nobreak \egroup 
-                                                  \color@endbox 
-l.1113 \end{figure}
-                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-LaTeX Warning: Reference `fig:trendincidence' on page 27 undefined on input lin
-e 1115.
-
-
-LaTeX Warning: Reference `fig:travel' on page 27 undefined on input line 1115.
-
-
-LaTeX Warning: Reference `fig:travel' on page 27 undefined on input line 1115.
-
-
-LaTeX Warning: Reference `fig:travel' on page 27 undefined on input line 1115.
-
-
-LaTeX Warning: Reference `table:immigration12' on page 27 undefined on input li
-ne 1127.
-
-
-LaTeX Warning: Reference `fig:immigration12' on page 27 undefined on input line
- 1127.
-
-
-LaTeX Warning: Reference `table:risk12' on page 27 undefined on input line 1127
-.
-
-
-LaTeX Warning: Reference `fig:risk12' on page 27 undefined on input line 1127.
-
-
-LaTeX Warning: Reference `fig:dhbcases' on page 27 undefined on input line 1158
-.
-
-
-LaTeX Warning: Reference `fig:outbreaks' on page 27 undefined on input line 115
-8.
-
-<cases_by_dhb_2009_2014.pdf, id=618, 722.7pt x 361.35pt>
+ [27 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-037.pdf>]
+ [28] [29] [30] [31] [32] [33] [34] [35] [36 <C:/Users/David Hayman/Documents/G
+itHub/measles/draftfinalreport-038.pdf>] [37 <C:/Users/David Hayman/Documents/G
+itHub/measles/draftfinalreport-039.pdf> <C:/Users/David Hayman/Documents/GitHub
+/measles/draftfinalreport-040.pdf>] [38 <C:/Users/David Hayman/Documents/GitHub
+/measles/draftfinalreport-041.pdf> <C:/Users/David Hayman/Documents/GitHub/meas
+les/draftfinalreport-042.pdf>] [39 <C:/Users/David Hayman/Documents/GitHub/meas
+les/draftfinalreport-043.pdf> <C:/Users/David Hayman/Documents/GitHub/measles/d
+raftfinalreport-044.pdf>] [40 <C:/Users/David Hayman/Documents/GitHub/measles/d
+raftfinalreport-045.pdf>] [41 <C:/Users/David Hayman/Documents/GitHub/measles/n
+zers.pdf>] [42] [43] [44]
+<cases_by_dhb_2009_2014.pdf, id=888, 722.7pt x 361.35pt>
 File: cases_by_dhb_2009_2014.pdf Graphic file (type pdf)
 
 <use cases_by_dhb_2009_2014.pdf>
-Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 1162.
+Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 1163.
 (pdftex.def)             Requested size: 310.4979pt x 155.25066pt.
 
-<outbreaks_for_R0.pdf, id=619, 722.7pt x 361.35pt>
+<outbreaks_for_R0.pdf, id=889, 722.7pt x 361.35pt>
 File: outbreaks_for_R0.pdf Graphic file (type pdf)
  <use outbreaks_for_R0.pdf>
-Package pdftex.def Info: outbreaks_for_R0.pdf used on input line 1169.
+Package pdftex.def Info: outbreaks_for_R0.pdf used on input line 1170.
 (pdftex.def)             Requested size: 310.4979pt x 155.25066pt.
 
-<averageR0.pdf, id=620, 578.16pt x 433.62pt>
+[45 <C:/Users/David Hayman/Documents/GitHub/measles/cases_by_dhb_2009_2014.pdf>
+] <averageR0.pdf, id=904, 578.16pt x 433.62pt>
 File: averageR0.pdf Graphic file (type pdf)
  <use averageR0.pdf>
-Package pdftex.def Info: averageR0.pdf used on input line 1176.
+Package pdftex.def Info: averageR0.pdf used on input line 1177.
 (pdftex.def)             Requested size: 310.4979pt x 232.87433pt.
-
-
-LaTeX Warning: Reference `fig:outbreaks' on page 27 undefined on input line 117
-7.
-
-
-LaTeX Warning: Reference `fig:outbreaks' on page 27 undefined on input line 117
-7.
-
-
-LaTeX Warning: Reference `fig:r0' on page 27 undefined on input line 1211.
-
-
-LaTeX Warning: Reference `sub:cost_benefit' on page 27 undefined on input line 
-1215.
-
-
-LaTeX Warning: Reference `eq:prop' on page 27 undefined on input line 1217.
-
-
-LaTeX Warning: Reference `table:attack' on page 27 undefined on input line 1217
-.
-
-
-LaTeX Warning: Reference `sub:cost_benefit' on page 27 undefined on input line 
-1217.
-
-
-LaTeX Warning: Reference `table:attack' on page 27 undefined on input line 1217
-.
-
-
-LaTeX Warning: Reference `table:attack' on page 27 undefined on input line 1217
-.
-
-
-LaTeX Warning: Reference `fig:r0' on page 27 undefined on input line 1219.
-
-
-LaTeX Warning: Reference `fig:r0' on page 27 undefined on input line 1219.
-
-
-LaTeX Warning: Reference `table:attack' on page 27 undefined on input line 1219
-.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1221 \begin{table}[htdp]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (0.49591pt too wide) in paragraph at lines 1264--1265
+ [46 <C:/Users/David Hayman/Documents/GitHub/measles/outbreaks_for_R0.pdf> <C:/
+Users/David Hayman/Documents/GitHub/measles/averageR0.pdf>] [47]
+Overfull \hbox (0.49591pt too wide) in paragraph at lines 1265--1266
 []\T1/aer/m/n/10 The re-pro-duc-tion num-ber for measles in the par-tially im-m
 une New Zealand
  []
 
-
-Overfull \hbox (3.48299pt too wide) in paragraph at lines 1298--1299
+[48] [49] [50] [51]
+Overfull \hbox (3.48299pt too wide) in paragraph at lines 1299--1300
 \T1/aer/m/n/10 cian con-sul-ta-tions, hos-pi-tal-i-sa-tions, drugs, vac-ci-na-t
 ion, long-term care for chronic
  []
 
-
-LaTeX Warning: Reference `table:direct' on page 27 undefined on input line 1312
-.
-
-
-LaTeX Warning: Reference `table:hosp' on page 27 undefined on input line 1312.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1316 \caption
-               {Estimated costs (NZ\$) for measles management in New Zealand...
-
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `table:hosp' on page 27 undefined on input line 1337.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1342 \caption
-               {Reported direct costs in NZ\$, with the number of cases, len...
-
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `table:freq' on page 27 undefined on input line 1374.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1378 \caption
-               {Frequency of measles cases and number and proportion admitte...
-
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `fig:hosp' on page 27 undefined on input line 1395.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1399 \begin
-             {center}
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<draftfinalreport-053.pdf, id=653, 794.97pt x 433.62pt>
+[52] [53] <draftfinalreport-053.pdf, id=1030, 794.97pt x 433.62pt>
 File: draftfinalreport-053.pdf Graphic file (type pdf)
 
 <use draftfinalreport-053.pdf>
-Package pdftex.def Info: draftfinalreport-053.pdf used on input line 1400.
+Package pdftex.def Info: draftfinalreport-053.pdf used on input line 1401.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
 
-LaTeX Warning: Reference `table:cases' on page 27 undefined on input line 1406.
+LaTeX Warning: Float too large for page by 9.84518pt on input line 1473.
 
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1409 \begin{table}\small
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package inputenc Error: Unicode char \u8:  not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1464 & 
-            TOTAL&550,022&$293$&$470$&1,877\tabularnewline
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1478 \caption
-               {Regression results ($R^{2}_\textsf{adj} = 0.43$, p-value $<0...
-
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `section:epidemic_modelling' on page 27 undefined on i
-nput line 1501.
-
-
-LaTeX Warning: Reference `eq:prop' on page 27 undefined on input line 1501.
-
-
-LaTeX Warning: Reference `table:attack' on page 27 undefined on input line 1501
-.
-
-
-LaTeX Warning: Reference `section:epidemic_modelling' on page 27 undefined on i
-nput line 1501.
-
-
-LaTeX Warning: Reference `table:vacp' on page 27 undefined on input line 1515.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1517 \begin{sidewaystable}\small
-                                  
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (19.61333pt too wide) in paragraph at lines 1525--1551
+[54] [55] [56 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-
+053.pdf>] [57] [58]
+Overfull \hbox (19.61333pt too wide) in paragraph at lines 1526--1552
  [] 
  []
 
-
-LaTeX Warning: Reference `eq:prop' on page 27 undefined on input line 1554.
-
-
-LaTeX Warning: Reference `fig:numvac' on page 27 undefined on input line 1554.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1557 \begin{figure}[width=1\textwidth]
-                                        
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<draftfinalreport-061.pdf, id=659, 794.97pt x 794.97pt>
+<draftfinalreport-061.pdf, id=1081, 794.97pt x 794.97pt>
 File: draftfinalreport-061.pdf Graphic file (type pdf)
 
 <use draftfinalreport-061.pdf>
-Package pdftex.def Info: draftfinalreport-061.pdf used on input line 1559.
+Package pdftex.def Info: draftfinalreport-061.pdf used on input line 1560.
 (pdftex.def)             Requested size: 276.00105pt x 275.99957pt.
-
-
-LaTeX Warning: Reference `section:epidemic_modelling' on page 27 undefined on i
-nput line 1560.
-
-
-LaTeX Warning: Reference `table:cost20' on page 27 undefined on input line 1560
-.
-
-
-LaTeX Warning: Reference `table:cost50' on page 27 undefined on input line 1560
-.
-
-
-LaTeX Warning: Reference `section:epidemic_modelling' on page 27 undefined on i
-nput line 1560.
-
-
-LaTeX Warning: Reference `table:cost20' on page 27 undefined on input line 1560
-.
-
-
-LaTeX Warning: Reference `table:cost50' on page 27 undefined on input line 1560
-.
-
-
-LaTeX Warning: Reference `fig:sim' on page 27 undefined on input line 1564.
-
-
-LaTeX Warning: Reference `fig:sim1' on page 27 undefined on input line 1564.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1568      \centering
-                      
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<draftfinalreport-063.pdf, id=660, 794.97pt x 433.62pt>
+ [59 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-061.pdf>]
+ [60]
+<draftfinalreport-063.pdf, id=1110, 794.97pt x 433.62pt>
 File: draftfinalreport-063.pdf Graphic file (type pdf)
 
 <use draftfinalreport-063.pdf>
-Package pdftex.def Info: draftfinalreport-063.pdf used on input line 1569.
+Package pdftex.def Info: draftfinalreport-063.pdf used on input line 1570.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-
-LaTeX Warning: Reference `section:epidemic_modelling' on page 27 undefined on i
-nput line 1570.
-
-
-LaTeX Warning: Reference `fig:sim1' on page 27 undefined on input line 1570.
-
-
-LaTeX Warning: Reference `section:epidemic_modelling' on page 27 undefined on i
-nput line 1570.
-
-
-LaTeX Warning: Reference `fig:sim1' on page 27 undefined on input line 1570.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1575      \centering
-                      
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<draftfinalreport-064.pdf, id=661, 794.97pt x 433.62pt>
+<draftfinalreport-064.pdf, id=1115, 794.97pt x 433.62pt>
 File: draftfinalreport-064.pdf Graphic file (type pdf)
 
 <use draftfinalreport-064.pdf>
-Package pdftex.def Info: draftfinalreport-064.pdf used on input line 1576.
+Package pdftex.def Info: draftfinalreport-064.pdf used on input line 1577.
 (pdftex.def)             Requested size: 276.00105pt x 150.54521pt.
 
-
-LaTeX Warning: Reference `section:epidemic_modelling' on page 27 undefined on i
-nput line 1577.
-
-
-LaTeX Warning: Reference `fig:sim' on page 27 undefined on input line 1577.
-
-
-LaTeX Warning: Reference `section:epidemic_modelling' on page 27 undefined on i
-nput line 1577.
-
-
-LaTeX Warning: Reference `fig:sim' on page 27 undefined on input line 1577.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1583 \begin{sidewaystable}\small
-                                  
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `table:attack' on page 27 undefined on input line 1584
-.
-
-
-LaTeX Warning: Reference `table:attack' on page 27 undefined on input line 1584
-.
-
-
-Overfull \hbox (152.99359pt too wide) in paragraph at lines 1587--1612
+Overfull \hbox (70.49702pt too wide) in paragraph at lines 1588--1613
  [] 
  []
 
 
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1615 \begin{sidewaystable}\small
-                                  
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `table:attack' on page 27 undefined on input line 1616
-.
-
-
-LaTeX Warning: Reference `table:attack' on page 27 undefined on input line 1616
-.
-
-
-Overfull \hbox (82.97842pt too wide) in paragraph at lines 1619--1644
+Overfull \hbox (73.72849pt too wide) in paragraph at lines 1621--1646
  [] 
  []
 
-
-LaTeX Warning: Reference `sub:cost_benefit' on page 27 undefined on input line 
-1648.
-
-
-LaTeX Warning: Reference `table:hosp' on page 27 undefined on input line 1648.
-
-
-LaTeX Warning: Reference `table:vacp' on page 27 undefined on input line 1650.
-
-
-LaTeX Warning: Reference `table:cost20' on page 27 undefined on input line 1650
-.
-
-
-LaTeX Warning: Reference `table:cost50' on page 27 undefined on input line 1650
-.
-
-
-LaTeX Warning: Reference `table:cost20' on page 27 undefined on input line 1650
-.
-
-
-LaTeX Warning: Reference `table:cost50' on page 27 undefined on input line 1650
-.
-
-
-LaTeX Warning: Reference `table:cost20' on page 27 undefined on input line 1656
-.
-
-
-LaTeX Warning: Reference `table:cost50' on page 27 undefined on input line 1656
-.
-
-
-LaTeX Warning: Reference `table:zhou' on page 27 undefined on input line 1664.
-
-
-LaTeX Warning: Reference `table:zhou' on page 27 undefined on input line 1664.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1666 \begin{sidewaystable}[htdp]
-                                  \small
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `table:zhou2' on page 27 undefined on input line 1705.
-
-
-
-LaTeX Warning: Reference `table:cost20' on page 27 undefined on input line 1707
-.
-
-
-LaTeX Warning: Reference `table:cost20' on page 27 undefined on input line 1707
-.
-
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1709 \begin{sidewaystable}[htdp]
-                                  
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `section:epidemic_modelling' on page 27 undefined on i
-nput line 1728.
-
-
-LaTeX Warning: Reference `fig:sim' on page 27 undefined on input line 1728.
-
-
-LaTeX Warning: Reference `fig:sim1' on page 27 undefined on input line 1728.
-
-
-! LaTeX Error: \begin{figure} on input line 1108 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1942 \end{document}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+[61 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-063.pdf>]
+[62] [63] [64 <C:/Users/David Hayman/Documents/GitHub/measles/draftfinalreport-
+064.pdf>] [65] [66] [67] [68] [69] [70] [71]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1942.
+ [72]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1942.
+
 ("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1942.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1942.
 
 Package rerunfilecheck Info: File `draftfinalreport.out' has not changed.
-(rerunfilecheck)             Checksum: 96BF77B5E3AAE7C07B011DEC7DFD4DAF;771.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: 5661832231315B6E814443CE3BDEB003;1793.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1942.
-! You can't use `\end' in internal vertical mode.
-\enddocument ...es \z@ \Call@AtVeryVeryEnd \@@end 
-                                                  
-l.1942 \end{document}
-                     
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-
-! LaTeX Error: \begin{figure} on input line 1108 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1942 \end{document}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.1942 \end{document}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-)
-! Emergency stop.
-<*> draftfinalreport.tex
-                        
-*** (job aborted, no legal \end found)
-
- 
+ ) 
 Here is how much of TeX's memory you used:
- 19223 strings out of 493921
- 328336 string characters out of 3147261
- 585552 words of memory out of 3000000
- 21958 multiletter control sequences out of 15000+200000
- 49926 words of font info for 97 fonts, out of 3000000 for 9000
+ 19380 strings out of 493921
+ 330242 string characters out of 3147261
+ 442446 words of memory out of 3000000
+ 21975 multiletter control sequences out of 15000+200000
+ 48705 words of font info for 97 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 61i,12n,96p,1678b,570s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 61i,11n,96p,1644b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/eurosym/feymr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/cm-super/sfrm1000.pfb>
+Output written on draftfinalreport.pdf (72 pages, 3157143 bytes).
+PDF statistics:
+ 1349 PDF objects out of 1440 (max. 8388607)
+ 216 named destinations out of 1000 (max. 500000)
+ 444 words of extra memory for PDF output out of 10000 (max. 10000000)
+
