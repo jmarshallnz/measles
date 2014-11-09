@@ -1856,7 +1856,7 @@ costtable20<-read.csv("cost_benefit_20.csv",header=T)
 <<results=tex,echo=FALSE>>=
 # This chunk uses "results=tex"
 library(Hmisc)
-colnames(costtable20)<-c("Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hospitalised", "Hosp saved", "Costs saved", "Outbreak", "OB costs", "B/C")
+colnames(costtable20)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hospitalised", "Hosp saved", "Costs saved", "Outbreak", "OB costs", "B/C")
 latex(costtable20, file="", table.env=FALSE,rowname=NULL)
 @
 \label{table:cost20}
@@ -1871,7 +1871,7 @@ costtable50<-read.csv("cost_benefit_50.csv",header=T)
 <<results=tex,echo=FALSE>>=
 # This chunk uses "results=tex"
 library(Hmisc)
-colnames(costtable50)<-c("Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hospitalised", "Hosp saved", "Costs saved", "Outbreak", "OB costs", "B/C")
+colnames(costtable50)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hospitalised", "Hosp saved", "Costs saved", "Outbreak", "OB costs", "B/C")
 latex(costtable50, file="", table.env=FALSE,rowname=NULL)
 @
 \label{table:cost50}
