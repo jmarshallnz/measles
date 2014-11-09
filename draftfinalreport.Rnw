@@ -1940,12 +1940,10 @@ Our estimates for the benefit--cost ratio of catch up vaccination are also highe
 Our results for the benefits of MMR vaccination may be conservative. We presume that in a totally na\"{\i}ve population $R_0$ for measles was around 12. However, $R_0$ for measles has been estimated to be more than 18 (i.e. 1 case infects 18 others on average, \citep{anderson91}) in other countries. It is unlikely $R_0$ was so high as 18 in New Zealand, as measles would still be endemic given current vaccination rates. However, the benefits of catch up vaccination are clear if $R_v$ is greater than one (\autoref{table:cost20} and ref{table:cost20}) and our analyses do not include the additional benefits of mumps and rubella immunity. As noted in our previous report, if measles $R_v$ in the currently na\"{\i}ve population is less than one, the benefits will not be so clear, though there may be medical and other benefits relating to maintaining measles free status that we have not included in our report.
 
 \begin{sidewaystable}[htdp]
-\tiny
 \begin{center}
 \begin{tabular}{lrrrr}
 \hline
-Parameter & B/C direct costs & B/C societal
-perspective & Costs per disc. yrs life saved\\
+Parameter & B/C direct costs & B/C societal perspective & Costs per disc. yrs life saved\\
 \hline
 Base case & 14.2 & 26.0 & \$4195 \\
 Discount rate 0\% & 21.7 & 54.2 & \$1628 \\
