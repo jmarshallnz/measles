@@ -1619,7 +1619,7 @@ Nearly 40\% (114/293) of the cases did not spend a night in the hospital, while 
 costtable4<-read.csv("costtable4v2.csv",header=T)
 @
 
-\begin{table}\small
+\begin{table}\footnotesize
 \caption{Number of cases, length of hospital stay, cost (NZ\$), cost per case (NZ\$) and cost per day (NZ\$) for patients with measles as the primary diagnosis, by year and gender, 2000--2014. Note "Length of stay" is number of complete days spent in hospital, thus 0 is no nights spent in hospital (see \autoref{table:regression_costs})}
 <<results=tex,echo=FALSE>>=
 # This chunk uses "results=tex"
