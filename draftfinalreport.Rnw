@@ -1337,6 +1337,7 @@ plot(change[,1],change[,4],type="l",xlab="Year",ylab="",
 \begin{figure}[H]
      \begin{center}
      \includegraphics[width=0.9\textwidth]{nzers.pdf}
+     \end{center}
      \caption{Trends in international travel, determined by immigration arrival data and New Zealander travel departure destinations}
      \label{fig:travel}
 \end{figure}
