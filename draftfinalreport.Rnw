@@ -1858,6 +1858,7 @@ library(Hmisc)
 colnames(costtable20)<-c("Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hospitalised", "Hosp saved", "Costs saved", "Outbreak", "OB costs", "B/C")
 latex(costtable20, file="", table.env=FALSE,rowname=NULL)
 @
+\label{table:cost20}
 \end{sidewaystable}
 
 <<echo=FALSE>>=
