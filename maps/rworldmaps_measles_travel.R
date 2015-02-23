@@ -24,11 +24,11 @@ library(utils)
 # Unpack and put the files in a dir 'data'
 
 getwd()
-setwd("~/data")
+#setwd("~/data")
 #unzip("TM_WORLD_BORDERS_SIMPL-0.3.zip")
 # world.map <- readOGR(dsn="C:/Users/David Hayman/Documents/data", layer="TM_WORLD_BORDERS_SIMPL-0.3")
-
-setwd("C:/Users/David Hayman/Documents/GitHub/measles/maps")
+#
+#setwd("C:/Users/David Hayman/Documents/GitHub/measles/maps")
 
 incidence<-read.csv("incidence_series.csv",header=T)
 head(incidence)
@@ -383,18 +383,18 @@ dim(m3)
 head(immigration)
 class(immigration$Month.of.Arrival)
 summary(immigration$Month.of.Arrival)
-newdata<-immigration[which(immigration$Month.of.Arrival%in%c("2012-01",
-                                                           "2012-02",
-                                                           "2012-03",
-                                                           "2012-04",
-                                                           "2012-05",
-                                                           "2012-06",
-                                                           "2012-07",
-                                                           "2012-08",
-                                                           "2012-09",
-                                                           "2012-10",
-                                                           "2012-11",
-                                                           "2012-12")),]
+newdata<-immigration[which(immigration$Month.of.Arrival%in%c("2013-01",
+                                                           "2013-02",
+                                                           "2013-03",
+                                                           "2013-04",
+                                                           "2013-05",
+                                                           "2013-06",
+                                                           "2013-07",
+                                                           "2013-08",
+                                                           "2013-09",
+                                                           "2013-10",
+                                                           "2013-11",
+                                                           "2013-12")),]
 
 testn<-aggregate( cbind(Number.of.Clients ) ~ Nationality , data = newdata , sum )
 dim(testn)
@@ -423,70 +423,70 @@ summary(population$Indicator=="Population (in thousands) total")
 newpop<-population[which(population$Indicator%in%c("Population (in thousands) total")),]
 newpop2<-newpop[which(newpop$Year==2012),]
 head(newpop2)
-
+### NOTE only 2012 population data used
 mp <- merge(m4,newpop2, by.x = "id",by.y="id",all=T)
 
 dpdf <- data.frame(id = mp$id,
-                  incidence = mp$X2012.x/mp$Numeric.Value*1000, ## note 2012 best data
-                  cover = mp$X2012.y,## 2012 best data
+                  incidence = mp$X2013.x/mp$Numeric.Value*1000, ## note 2013 best data
+                  cover = mp$X2013.y,## 2013 best data
                   immigration = mp$Immigration) 
 
 head(dpdf)
 
-np1<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Immigration") +
+np1<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Immigration  (2013)") +
   geom_map(aes(fill = immigration), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
   ylab("latitude") +
- # theme(text = element_text(size=30))+
+# theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
-pdf(paste("np1.pdf"), width=10, height=5)
+pdf(paste("2013np1.pdf"), width=10, height=5)
 np1
 dev.off()
 
-np2<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Incidence (per million)") +
+np2<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Incidence (per million) (2013)") +
   geom_map(aes(fill = incidence), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
   ylab("latitude") +
  # theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
-pdf(paste("np2.pdf"), width=10, height=5)
+pdf(paste("2013np2.pdf"), width=10, height=5)
 np2
 dev.off()
 
-np3<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Vaccination cover (%)") +
+np3<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Vaccination cover (%) (2013)") +
   geom_map(aes(fill = cover), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
   ylab("latitude") +
   # theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
-pdf(paste("np3.pdf"), width=10, height=5)
+pdf(paste("2013np3.pdf"), width=10, height=5)
 np3
 dev.off()
+#
+grid.arrange(np1, np2, np3, ncol=3, main="Measles (2013)")
 
-grid.arrange(np1, np2, np3, ncol=3, main="Measles")
-
-dpdf$risk <- with(dpdf, mp$X2012.x/mp$Numeric.Value*1000* mp$Immigration)
+dpdf$risk <- with(dpdf, mp$X2013.x/mp$Numeric.Value*1000* mp$Immigration)
 head(dpdf)
-write.csv(dpdf, "mapdata.csv", row.names=FALSE,col.names=T)
-write.csv(dpdf, "mapdata_immigration.csv", row.names=FALSE,col.names=T)
-dpdf<-read.csv("mapdata.csv",header=T)
+#####write.csv(dpdf, "mapdata.csv", row.names=FALSE,col.names=T)
+#####write.csv(dpdf, "mapdata_immigration.csv", row.names=FALSE,col.names=T)
+#####dpdf<-read.csv("mapdata.csv",header=T)
 
-np4<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Risk  (Immigrant travel)") +
+np4<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Risk  (Immigrant travel) (2013)") +
   geom_map(aes(fill = risk), map =world.ggmap) +
   xlab("longitude") +
   ylab("latitude") +
- # theme(text = element_text(size=30))+
+# theme(text = element_text(size=30))+
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
 
-pdf(paste("np4.pdf"), width=10, height=5)
+pdf(paste("2013np4.pdf"), width=10, height=5)
 np4
 dev.off()
-
-grid.arrange(np4, np1, np2, np3, ncol=2, main="Measles (2012)")
+#
+grid.arrange(np4, np1, np2, np3, ncol=2, main="Measles (2013)")
 
 # output top countries
 
@@ -512,11 +512,11 @@ dim(mpNZ)
 
 
 dpdfNZ <- data.frame(id = mpNZ$id,
-                   incidence = mpNZ$X2012.x/mpNZ$Numeric.Value*1000, ## note 2012 best data
-                   cover = mpNZ$X2012.y,## 2012 best data
-                   immigration = mpNZ$nzX2012) 
+                   incidence = mpNZ$X2013.x/mpNZ$Numeric.Value*1000, ## note 2013 best data
+                   cover = mpNZ$X2013.y,## 2013 best data
+                   immigration = mpNZ$nzX2013) 
 
-dpdfNZ$risk <- with(dpdfNZ, mpNZ$X2012.x/mpNZ$Numeric.Value*1000* mpNZ$nzX2012)
+dpdfNZ$risk <- with(dpdfNZ, mpNZ$X2013.x/mpNZ$Numeric.Value*1000* mpNZ$nzX2013)
 head(dpdfNZ)
 
 head(dpdfNZ)
@@ -525,7 +525,7 @@ plot(dpdfNZ$id,dpdfNZ$immigration)
 dpdfNZ <- subset(dpdfNZ,id != "Total")
 dpdfNZ <- subset(dpdfNZ,id != "ASIA")
 
-nznp1<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Travel") +
+nznp1<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Travel (2013)") +
   geom_map(aes(fill = immigration), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -533,11 +533,11 @@ nznp1<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Travel") +
 #  theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
 
-pdf(paste("nznp1.pdf"), width=10, height=5)
+pdf(paste("2013nznp1.pdf"), width=10, height=5)
 nznp1
 dev.off()
 
-nznp2<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Incidence (per million)") +
+nznp2<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Incidence (per million) (2013)") +
   geom_map(aes(fill = incidence), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -545,11 +545,11 @@ nznp2<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Incidence (per million)") +
 #  theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
 
-pdf(paste("nznp2.pdf"), width=10, height=5)
+pdf(paste("2013nznp2.pdf"), width=10, height=5)
 nznp2
 dev.off()
 
-nznp3<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Vaccination cover (%)") +
+nznp3<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Vaccination cover (%) (2013)") +
   geom_map(aes(fill = cover), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -557,16 +557,16 @@ nznp3<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Vaccination cover (%)") +
 #  theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
 
-pdf(paste("nznp3.pdf"), width=10, height=5)
+pdf(paste("2013nznp3.pdf"), width=10, height=5)
 nznp3
 dev.off()
 
 grid.arrange(nznp1, nznp2, nznp3, ncol=3, main="Measles")
 
-write.csv(dpdfNZ, "mapdata_nzers.csv", row.names=FALSE,col.names=T)
-#dpdf<-read.csv("mapdata.csv",header=T)
+write.csv(dpdfNZ, "2013mapdata_nzers.csv", row.names=FALSE,col.names=T)
+#dpdf<-read.csv("2013mapdata.csv",header=T)
 
-nznp4<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Risk (New Zealander travel)") +
+nznp4<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Risk (New Zealander travel) (2013)") +
   geom_map(aes(fill = risk), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -574,21 +574,21 @@ nznp4<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Risk (New Zealander travel)") 
 #  theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
 
-pdf(paste("nznp4.pdf"), width=10, height=5)
+pdf(paste("2013nznp4.pdf"), width=10, height=5)
 nznp4
 dev.off()
 
 
-grid.arrange(nznp4, nznp1, nznp2, nznp3, ncol=2, main="Measles (2012)")
+grid.arrange(nznp4, nznp1, nznp2, nznp3, ncol=2, main="Measles (2013)")
 
 ##
 
 dpdfNZTot <- data.frame(id = mpNZ$id,
-                     incidence = mpNZ$X2012.x/mpNZ$Numeric.Value*1000, ## note 2012 best data
-                     cover = mpNZ$X2012.y,## 2012 best data
-                     immigration = mpNZ$nzX2012+mpNZ$Immigration) 
+                     incidence = mpNZ$X2013.x/mpNZ$Numeric.Value*1000, ## note 2013 best data
+                     cover = mpNZ$X2013.y,## 2013 best data
+                     immigration = mpNZ$nzX2013+mpNZ$Immigration) 
 
-dpdfNZTot$risk <- with(dpdfNZTot, mpNZ$X2012.x/mpNZ$Numeric.Value*1000* (mpNZ$Immigration+mpNZ$nzX2012))
+dpdfNZTot$risk <- with(dpdfNZTot, mpNZ$X2013.x/mpNZ$Numeric.Value*1000* (mpNZ$Immigration+mpNZ$nzX2013))
 head(dpdfNZTot)
 
 plot(dpdfNZTot$id,dpdfNZTot$immigration)
@@ -596,7 +596,7 @@ plot(dpdfNZTot$id,dpdfNZTot$immigration)
 dpdfNZTot <- subset(dpdfNZTot,id != "Total")
 dpdfNZTot <- subset(dpdfNZTot,id != "ASIA")
 
-totnp1<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Travel") +
+totnp1<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Travel (2013)") +
   geom_map(aes(fill = immigration), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -604,11 +604,11 @@ totnp1<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Travel") +
  # theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
 
-pdf(paste("totnp1.pdf"), width=10, height=5)
+pdf(paste("2013totnp1.pdf"), width=10, height=5)
 totnp1
 dev.off()
 
-totnp2<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Incidence (per million)") +
+totnp2<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Incidence (per million) (2013)") +
   geom_map(aes(fill = incidence), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -616,11 +616,11 @@ totnp2<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Incidence (per million)") 
 #  theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
 
-pdf(paste("totnp2.pdf"), width=10, height=5)
+pdf(paste("2013totnp2.pdf"), width=10, height=5)
 totnp2
 dev.off()
 
-totnp3<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Vaccination cover (%)") +
+totnp3<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Vaccination cover (%) (2013)") +
   geom_map(aes(fill = cover), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -628,16 +628,16 @@ totnp3<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Vaccination cover (%)") +
   #theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
 
-pdf(paste("totnp3.pdf"), width=10, height=5)
+pdf(paste("2013totnp3.pdf"), width=10, height=5)
 totnp3
 dev.off()
 
 grid.arrange(totnp1, totnp2, totnp3, ncol=3, main="Measles")
 
-write.csv(dpdfNZTot, "mapdata_tot.csv", row.names=FALSE,col.names=T)
+write.csv(dpdfNZTot, "2013mapdata_tot.csv", row.names=FALSE,col.names=T)
 #dpdf<-read.csv("mapdata.csv",header=T)
 
-totnp4<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Risk (All travel)") +
+totnp4<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Risk (All travel) (2013)") +
   geom_map(aes(fill = risk), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -645,29 +645,29 @@ totnp4<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Risk (All travel)") +
 #  theme(text = element_text(size=30))+
   scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
 
-pdf(paste("totnp4.pdf"), width=10, height=5)
+pdf(paste("2013totnp4.pdf"), width=10, height=5)
 totnp4
 dev.off()
 
 
-grid.arrange(totnp4, totnp1, totnp2, totnp3, ncol=2, main="Measles (2012)")
+grid.arrange(totnp4, totnp1, totnp2, totnp3, ncol=2, main="Measles (2013)")
 
 ##
 
-pdf(paste("risk_measles_base.pdf"))
-grid.arrange(np2,np3, ncol=1, main="Measles incidence and vaccination cover (2012)")
+pdf(paste("2013risk_measles_base.pdf"))
+grid.arrange(np2,np3, ncol=1)
 dev.off()
 
-pdf(paste("risk_measles_foreign.pdf"))
-grid.arrange(np1, np4, ncol=1, main="Foreign travellers to New Zealand and risk (Travellers * Country incidence)")
+pdf(paste("2013risk_measles_foreign.pdf"))
+grid.arrange(np1, np4, ncol=1)
 dev.off()
 
-pdf(paste("risk_measles_nzers.pdf"))
-grid.arrange(nznp1, nznp4, ncol=1, main="New Zealand travellers and risk (Travellers * Country incidence)")
+pdf(paste("2013risk_measles_nzers.pdf"))
+grid.arrange(nznp1, nznp4, ncol=1)
 dev.off()
 
-pdf(paste("risk_measles_tot.pdf"))
-grid.arrange(totnp1, totnp4, main="Total travellers and risk (Travellers * Country incidence)")
+pdf(paste("2013risk_measles_tot.pdf"))
+grid.arrange(totnp1, totnp4)
 dev.off()
 
 
@@ -689,7 +689,8 @@ xlim <- range(change[,1])
 par(fig = c(.6, 1, 0.6, 1), mar=c(0,0,0,0), new=TRUE)
 plot(change[,1],change[,4],type="l",xlab="Year",ylab="",
      ylim=c(0,max(change[,4])),bg="grey",add=T,bty="n")
-
+dev.off()
+par(mfrow=c(1,1))
 ## set wd to get data
 nzers<-read.csv("monthtravel.csv",header=T)
 head(nzers)
@@ -749,3 +750,4 @@ abline(v=seq(from=6,to=71,by=12),lty=3,col="grey")
 legend("topleft",bg="white",c("Total","New Zealanders","Non-New Zealanders"),
        col=c("black","red","black"),lty=c(1,1,2),box.col=rgb(0,0,0,alpha=0.5) )
 # check same length
+
