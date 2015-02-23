@@ -66,18 +66,22 @@ fixedBreaks <- c(0,0.6,0.8,1, 1.2,1.4,Inf)
 au_new$prop[!is.finite(au_new$prop)] <- NA
 breaks <- classIntervals(au_new$prop, n=6, style="fixed", fixedBreaks=fixedBreaks)
 pal <- brewer.pal("RdGy", n=6)
-pal<-c("red","orange","yellow","grey","blue","violet")
+pal<-c("red","orange","grey","blue","green","yellow")
 cols <- findColours(breaks, pal)
 par(mfrow=c(1,1))
+pdf(paste("nir_census.pdf"), width=7, height=5)
 plot(au, col=cols)
 legend("topright",c("0-60%","61-80%","81-100%","101-120%","121-140%",">141%","NA")
-       ,fill=c("red","orange","yellow","grey","blue","violet","white"),
-bty="n",inset=0.1)
+       ,fill=c("red","orange","grey","blue","green","yellow","white"),
+       bty="n",inset=0.1,title="Percent vaccinated")
 ## par("usr")
 ##
-par(fig = c(0.05, 0.4, 0.5,0.9), mar=c(5,5,0,0), new=TRUE)
-hist(au_new$prop[au_new$prop < 2], breaks=50,col="grey",xlab="Proportion vaccinated",main="")
+par(fig = c(0.05, 0.4, 0.5,0.9), mar=c(5,5,2,2), new=TRUE)
+hist(au_new$prop[au_new$prop < 2], breaks=50,col="grey",
+     xlab="Proportion vaccinated",main="")
 abline(v=1,col="red",lwd=3)
+#text(x=0.2,y=150,"Area Unit")
+dev.off()
 par(mfrow=c(1,1))
 
 hist(au_new$prop, breaks=100,col="grey",xlab="Proportion vaccination",main="All domiciles")
