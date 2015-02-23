@@ -62,15 +62,23 @@ cols <- findColours(breaks, pal)
 plot(au, col=cols)
 
 ## plot to show Ministry the data issues...
-fixedBreaks <- c(0,0.8,1, 1.2,Inf)
+fixedBreaks <- c(0,0.6,0.8,1, 1.2,1.4,Inf)
 au_new$prop[!is.finite(au_new$prop)] <- NA
-breaks <- classIntervals(au_new$prop, n=4, style="fixed", fixedBreaks=fixedBreaks)
-pal <- brewer.pal("RdGy", n=4)
-pal<-c("darkgrey","lightblue","orange","red")
+breaks <- classIntervals(au_new$prop, n=6, style="fixed", fixedBreaks=fixedBreaks)
+pal <- brewer.pal("RdGy", n=6)
+pal<-c("red","orange","yellow","grey","blue","violet")
 cols <- findColours(breaks, pal)
 par(mfrow=c(1,1))
 plot(au, col=cols)
-legend("topleft",c("0-80%","81-100%","101-120%",">121%","NA")
-       ,fill=c("darkgrey","lightblue","orange","red","white"))
-hist(au_new$prop[au_new$prop < 1.5], breaks=50,col="grey",xlab="Proportion vaccination",main="< 150% vaccinated")
-hist(au_new$prop, breaks=50,col="grey",xlab="Proportion vaccination",main="All domiciles")
+legend("topright",c("0-60%","61-80%","81-100%","101-120%","121-140%",">141%","NA")
+       ,fill=c("red","orange","yellow","grey","blue","violet","white"),
+bty="n",inset=0.1)
+## par("usr")
+##
+par(fig = c(0.05, 0.4, 0.5,0.9), mar=c(5,5,0,0), new=TRUE)
+hist(au_new$prop[au_new$prop < 2], breaks=50,col="grey",xlab="Proportion vaccinated",main="")
+abline(v=1,col="red",lwd=3)
+par(mfrow=c(1,1))
+
+hist(au_new$prop, breaks=100,col="grey",xlab="Proportion vaccination",main="All domiciles")
+abline(v=1,col="red")
