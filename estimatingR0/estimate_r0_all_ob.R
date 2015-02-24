@@ -43,6 +43,8 @@ alpha <- function(col, a)
 average_R0 <- vector("list", length(outbreak_files))
 length_R0  <- vector("list", length(outbreak_files))
 size_R0    <- vector("list", length(outbreak_files))
+start_R0   <- vector("list", length(outbreak_files))
+end_R0     <- vector("list", length(outbreak_files))
 for (i in 1:length(outbreak_files))
 {
   ob_file <- outbreak_files[i]
@@ -116,6 +118,8 @@ for (i in 1:length(outbreak_files))
   }
   length_R0[[i]]  <- length(counts)
   size_R0[[i]]    <- sum(counts)
+  start_R0[[i]]   <- min(date_range)
+  end_R0[[i]]     <- max(date_range)
 }
 
 # plot R0 averages
@@ -137,8 +141,14 @@ for (i in 1:length(average_R0))
   my_vioplot(average_R0[[i]], bw=0.015, border=cols[i], col=cols[i], at=i)
 abline(h=1, col="black")
 
-labels <- size_R0 #c("Early 2009", "Late 2009", "2010", "2011/12", "2014")
-axis(side=1, at=1:length(labels), labels=labels, cex.axis=0.5)
+
+labels <- sapply(start_R0, function(x) { format(x, "%Y") })
+labels[labels == "2013" | labels == "2014"] <- "2013-2014"
+
+rle_lab <- rle(labels)
+
+axis(side=1, at=c(0.5,cumsum(rle_lab$lengths)+0.5), labels=rep("", length(rle_lab$lengths)+1))
+mtext(rle_lab$values, side=1, at=cumsum(rle_lab$lengths)-0.5*rle_lab$lengths + 0.5, line=1)
 dev.off()
 
 
