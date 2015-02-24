@@ -2,6 +2,7 @@
 # and generates a new .csv file with the data from all epidemics
 
 # assumes the variable 'data_file' contains the data file to use
+data_file         <- "../../DHayman_20140627.csv"
 
 # columes that indicate an outbreak
 outbreak_col      <- "Outbrk"
@@ -13,6 +14,7 @@ date_format       <- "%d-%B-%y"
 
 # output folder to create
 output_dir        <- "outbreaks"
+output_dir_ob     <- "all_ob"
 
 # Episurv has a weird week layout as follows:
 # 1. All weeks are Saturday through Friday.
@@ -112,6 +114,58 @@ years <- as.numeric((as.Date(paste(2009:2015, "-01-01", sep="")) - ob_range[1]) 
 axis(1, at=years, labels=rep("", length(years)), line=0.5)
 mtext(2009:2014, side=1, at = years[-length(years)] + diff(years)/2, line=1.2)
 dev.off()
+
+# plot outbreaks by outbreak code
+rows <- notification_weeks > "2008-12-31"
+
+weeks_2007     <- notification_weeks[rows]
+cat_2007       <- all[rows,outbreak_code_col]
+
+pdf("cases_by_outbreak_code_2009_2014.pdf", width=10, height=5)
+ob_range <- range(as.Date(weeks_2007))
+ob_weeks <- matrix(0, length(unique(cat_2007)), diff(ob_range)/7+1)
+colnames(ob_weeks) <- as.character(seq(ob_range[1], ob_range[2], by=7))
+
+rownames(ob_weeks) <- sort(unique(cat_2007))
+t <- table(cat_2007, weeks_2007)
+ob_weeks[rownames(t), colnames(t)] <- t
+cols <- c("black", rainbow(nrow(ob_weeks)-1))
+
+barplot(ob_weeks, col=cols, border=NA, space=0, xaxt="n", ylim=c(0,60), ylab="Cases per week")
+legend(200,60, legend=c("Sporadic", rownames(ob_weeks)[-1]), fill=cols, cex=0.7, ncol=2)
+
+# figure out years...
+years <- as.numeric((as.Date(paste(2009:2015, "-01-01", sep="")) - ob_range[1]) / 7)
+axis(1, at=years, labels=rep("", length(years)), line=0.5)
+mtext(2009:2014, side=1, at = years[-length(years)] + diff(years)/2, line=1.2)
+dev.off()
+
+# dump outbreaks directly
+dir.create(file.path(output_dir_ob), showWarnings = FALSE)
+
+# for each outbreak, compute the incidence
+outbreak_nos <- unique(cat_2007)
+outbreak_nos <- outbreak_nos[outbreak_nos != 0]
+outbreak_weeks <- as.Date(weeks_2007)
+for (ob_num in outbreak_nos)
+{
+  # find the rows
+  ob_rows  <- cat_2007 == ob_num
+
+  # create a date range
+  ob_range <- range(outbreak_weeks[ob_rows])
+  ob_weeks <- rep(0, length=diff(ob_range)/7+1)
+  names(ob_weeks) <- seq(ob_range[1], ob_range[2], by=7)
+
+  # compute the incidence by tabling up
+  t <- table(outbreak_weeks[ob_rows])
+  ob_weeks[names(t)] <- t
+
+  # write out an outbreak file
+  outbreak_data <- data.frame(date=names(ob_weeks), week=1:length(ob_weeks), incidence=ob_weeks)
+  outbreak_file <- file.path(output_dir_ob, sprintf("outbreak%02d.csv", ob_num))
+  write.csv(outbreak_data, outbreak_file, row.names=F)
+}
 
 # plot cases by DHB
 rows <- notification_weeks > "2008-12-31"
