@@ -507,9 +507,39 @@ legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=
 legend("top",c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n",cex=1.8)
 dev.off()
 
-DOB<-as.numeric(levels(data$RptYear))[data$RptYear]-data$AgeInYears
-hist(DOB,breaks=100,col="grey")
+DOB<-as.numeric(levels(testv$RptYear))[testv$RptYear]-testv$AgeInYears
+hist(DOB,breaks=100,col="grey",main="2007- 2014 measles cases",xlab="Date of Birth")
 
+DOBVac<-table(testv$VC,DOB)
+row.names(DOBVac)<-c("Unvaccinated","Dose1","Dose2")
+DOBVac<-t(DOBVac)
+
+pdf(paste("dob_vacc_status.pdf"), width=7, height=5)
+par(mar=c(5,6,4,2)+0.1)
+par(cex.axis=1)
+barplot(t(DOBVac),xlab="Age",col=c("darkgrey","red","orange"),main="",ylab="Frequency",cex.lab=1)
+legend("topleft",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"),cex=1,bty="n")
+dev.off()
+
+pdf(paste("dob_vacc_dose.pdf"), width=7, height=5)
+par(mar=c(5,6,4,2)+0.1)
+par(cex.axis=1)
+par(mfrow=c(2,1))
+barplot(DOBVac[,2],col=rgb(0,0,1,1/4),xlab="Date of Birth",main="",cex.lab=1,ylab="Frequency")
+legend("topleft",c("Dose 1"),col=rgb(0,0,1,1/4),pch=15,bty="n",cex=1)
+par(mar=c(5,6,4,2)+0.1)
+par(cex.axis=1)
+barplot(DOBVac[,3],col=rgb(1,0,0,1/4),xlab="Date of Birth",main="",cex.lab=1,ylab="Frequency")
+legend("topleft",c("Dose 2"),col=rgb(1,0,0,1/4),pch=15,bty="n",cex=1)
+dev.off()
+
+pdf(paste("dob_vacc_unvac.pdf"), width=7, height=5)
+par(mar=c(5,6,4,2)+0.1)
+par(cex.axis=1.5)
+par(mfrow=c(1,1))
+barplot(DOBVac[,2],col="grey",xlab="Date of Birth",main="",cex.lab=1.5,ylab="Frequency")
+legend("topleft",c("Unvaccinated"),col="grey",pch=15,bty="n",cex=1.5)
+dev.off()
 
 require(reshape2)  # this is the library that lets one flatten out data
 require(ggplot2)   # plotting library
