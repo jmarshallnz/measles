@@ -507,6 +507,10 @@ legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=
 legend("top",c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n",cex=1.8)
 dev.off()
 
+DOB<-as.numeric(levels(data$RptYear))[data$RptYear]-data$AgeInYears
+hist(DOB,breaks=100,col="grey")
+
+
 require(reshape2)  # this is the library that lets one flatten out data
 require(ggplot2)   # plotting library
 popimmune<-read.csv("PopnImmunityAll.csv",header=T)
