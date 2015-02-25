@@ -137,9 +137,11 @@ dim(test)
 caseyr<-aggregate( DiseaseName ~ AgeInYears, 
 data = test , FUN=sum)
 caseyr
-test$AgeInYears<-findInterval(test$AgeInYears,c(3,6,18,25))
+# test$AgeInYears<-findInterval(test$AgeInYears,c(3,6,18,25))
+test$AgeInYears<-findInterval(test$AgeInYears,c(2,5,18,25))
 test$AgeInYears<-as.factor(test$AgeInYears)
-tage<-revalue(test$AgeInYears, c("0"="0-2", "1"="3-5","2"="6-17","3"="18-24","4"="25+"));
+#tage<-revalue(test$AgeInYears, c("0"="0-2", "1"="3-5","2"="6-17","3"="18-24","4"="25+"));
+tage<-revalue(test$AgeInYears, c("0"="0-1", "1"="2-4","2"="5-17","3"="18-24","4"="25+"));
 test$AgeInYears<-tage
 #summary(test$EthnicityPrioritised)
 teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MLA",
@@ -219,9 +221,10 @@ dim(test)
 caseyr<-aggregate( DiseaseName ~ AgeInYears, 
 data = test , FUN=sum)
 caseyr
-test$AgeInYears<-findInterval(test$AgeInYears,c(3,6,18,25))
+## for MoH desired ages
+test$AgeInYears<-findInterval(test$AgeInYears,c(2,5,18,25))
 test$AgeInYears<-as.factor(test$AgeInYears)
-tage<-revalue(test$AgeInYears, c("0"="0-2", "1"="3-5","2"="6-17","3"="18-24","4"="25+"));
+tage<-revalue(test$AgeInYears, c("0"="0-1", "1"="2-4","2"="5-17","3"="18-24","4"="25+"));
 test$AgeInYears<-tage
 #summary(test$EthnicityPrioritised)
 teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MLA",
@@ -300,6 +303,17 @@ deth<-revalue(dm$Ethnicity, c("Asian (Prioritised)"="Asian","European (NZ Europe
 "Maori (Prioritised)"="Maori","MELAA"="MLA","Pacific People (Prioritised)"="Pacific"));
 dm$Ethnicity<-deth
 head(dm)
+
+## here's the additional fudge the MoH asked for.
+## add 5 year olds to next class
+dm[11:15,3:12]<-dm[11:15,3:12]+round(dm[6:10,3:12]/3,0)
+dm[6:10,3:12]<-round(dm[6:10,3:12]*2/3,0)
+## add 2 year olds to next class
+dm[6:10,3:12]<-dm[6:10,3:12]+round(dm[1:5,3:12]/3,0)
+dm[1:5,3:12]<-round(dm[1:5,3:12]*2/3,0)
+## 
+# rename
+dm$Age<-revalue(dm$Age, c("0-2"="0-1", "3-5"="2-4","6-17"="5-17"));
 
 popn<-melt(dm,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
 colnames(popn)<-c("Age","Ethnicity","NZDep","Popn")
@@ -455,9 +469,9 @@ pdf(paste("Cases_regmodel.pdf"), width=7, height=5)
 par(cex.axis=2)
 par(mar=c(5,6,4,2)+0.1)
 hist(tpsub$cases,xlab="Number of cases",main='',col='grey',breaks=20,ylab="Number of categories",cex.lab=2)
+dev.off()
 #res<-predict(model3)
 res<-predict(model2)
-dev.off()
 
 pdf(paste("Cases_regmodel_prediction.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
@@ -508,7 +522,7 @@ legend("top",c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n",cex=1.
 dev.off()
 
 DOB<-as.numeric(levels(testv$RptYear))[testv$RptYear]-testv$AgeInYears
-hist(DOB,breaks=100,col="grey",main="2007- 2014 measles cases",xlab="Date of Birth")
+#hist(DOB,breaks=100,col="grey",main="2007- 2014 measles cases",xlab="Date of Birth")
 
 DOBVac<-table(testv$VC,DOB)
 row.names(DOBVac)<-c("Unvaccinated","Dose1","Dose2")
