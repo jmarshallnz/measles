@@ -537,7 +537,7 @@ pdf(paste("dob_vacc_unvac.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
 par(cex.axis=1.5)
 par(mfrow=c(1,1))
-barplot(DOBVac[,2],col="grey",xlab="Date of Birth",main="",cex.lab=1.5,ylab="Frequency")
+barplot(DOBVac[,1],col="grey",xlab="Date of Birth",main="",cex.lab=1.5,ylab="Frequency")
 legend("topleft",c("Unvaccinated"),col="grey",pch=15,bty="n",cex=1.5)
 dev.off()
 
@@ -579,9 +579,23 @@ naive<-merge(naive,caseyr,by="AgeInYears",all=T)
 colnames(naive)<-c("AgeInYears","Naive","Cases")
 ##
 
+# proportions of the naive population the wuld be covered if vaccinated by age groups now
+propvCohort<-c(
+round((sum(naive$Naive[3:6])/sum(naive$Naive)),2),
+round((sum(naive$Naive[6:12])/sum(naive$Naive)),2),
+round((sum(naive$Naive[6:17])/sum(naive$Naive)),2),
+round((sum(naive$Naive[6:19])/sum(naive$Naive)),2),
+round((sum(naive$Naive[12:17])/sum(naive$Naive)),2),
+round((sum(naive$Naive[12:19])/sum(naive$Naive)),2),
+round((sum(naive$Naive[1:30])/sum(naive$Naive)),2),
+round((sum(naive$Naive[1:45])/sum(naive$Naive)),2),
+round((sum(naive$Naive[8:100])/sum(naive$Naive)),2))
+names(propvCohort)<-c("2-5","5-11","5-16","5-18","11-16","11-18","0-29","0-44",">8")
+write.table(propvCohort,"vaccine_proportions_Cohort.txt",sep=",",row.names=T,col.names=F)
+
 propsv = NULL
 for (i in 1:20 ) {
-  propsv[i] = round((sum(naive$Naive[i:20])/sum(naive$Naive)),2)
+  propsv[i] = round((sum(naive$Naive[i:13])/sum(naive$Naive)),2)
 }
 propsvAge = NULL
 for (i in 1:20 ) {
