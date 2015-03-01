@@ -404,6 +404,7 @@ ggplot(tp, aes(Age, perCap, fill=Ethnicity)) +
 dev.off()
 
 tpsub<-tp[!(tp$Ethnicity=="MLA"),]
+
 pdf(paste("percap_nzdep_age.pdf"), width=7, height=5)
 ggplot(tpsub, aes(NZDep, perCap, fill=Age)) + 
   geom_bar(stat="identity", position="dodge")+
@@ -424,6 +425,21 @@ ggplot(tpsub, aes(Age, perCap, fill=Ethnicity)) +
   #theme(text=element_text(size=45))+
   ylab("Per capita per 10000")
 dev.off()
+##
+#pdf(paste("case_nzdep.pdf"), width=7, height=5)
+#ggplot(tp, aes(NZDep, cases, fill=NZDep)) + 
+#  geom_bar(stat="identity", position="dodge")+
+#  #  theme(text=element_text(size=45))+
+#  ylab("cases")
+#dev.off()
+#
+#pdf(paste("percap_nzdep.pdf"), width=7, height=5)
+#ggplot(tpsub, aes(NZDep, perCap, fill=NZDep)) + 
+#  geom_bar(stat="identity", position="dodge")+
+#  #  theme(text=element_text(size=45))+
+#  ylab("Per capita per 10000")
+#dev.off()
+
 
 # This chunk uses "results=tex"
 library(Hmisc)
@@ -460,9 +476,9 @@ model2<-update(model1,~.-Age:NZDep)
 summary(model2)
 anova(model2,test="F")
 
-#model3<-update(model2,~.-Age:NZDep)
-#summary(model3)
-#anova(model3,test="F")
+model3<-update(model2,~.-Ethnicity:NZDep)
+summary(model3)
+anova(model3,test="F")
 
 
 pdf(paste("Cases_regmodel.pdf"), width=7, height=5)
@@ -470,8 +486,8 @@ par(cex.axis=2)
 par(mar=c(5,6,4,2)+0.1)
 hist(tpsub$cases,xlab="Number of cases",main='',col='grey',breaks=20,ylab="Number of categories",cex.lab=2)
 dev.off()
-#res<-predict(model3)
-res<-predict(model2)
+res<-predict(model3)
+#res<-predict(model2)
 
 pdf(paste("Cases_regmodel_prediction.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
@@ -490,8 +506,8 @@ hist(model2$residuals,main="",xlab="residuals",col="grey",cex.lab=2,ylab="")
 dev.off()
 
 library(xtable)
-#resan<-xtable(anova(model3,test="F"))
-resan<-xtable(anova(model2,test="F"))
+resan<-xtable(anova(model3,test="F"))
+#resan<-xtable(anova(model2,test="F"))
 print(resan,floating = FALSE)
 
 library(xtable)
