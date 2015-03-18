@@ -113,31 +113,32 @@
 
 \section{Abstract}
 
-New Zealand has been working towards elimination of endemic (domestic) measles virus transmission, but has suffered from small, yet significant outbreaks after measles introductions from abroad. In this draft final report we review the draft \emph {Progress Towards Measles Elimination in New Zealand - Final} report from the New Zealand Ministry of Health to the World Health Organization (WHO) Western Pacific Region. We identify additional analyses that may help understand risk of infection in New Zealand. Here we present the results of statistical analyses of risk factors for measles cases in New Zealand during outbreaks since 2007. We provide cost analyses for the measles outbreaks in New Zealand, and include modelling of measles outbreaks, including pre- and post-vaccination scenarios, based on the numbers of na\"{\i}ve people at the District Health Board (DHB) and national level. We provide benefit--cost analyses using the results from those model simulations, along with a number of alternative vaccination strategies to achieve different vaccination coverage levels. Our key findings are:
+New Zealand has been working towards elimination of endemic (domestic) measles virus transmission, but has suffered from small, yet significant outbreaks after measles introductions from abroad. In this draft final report we review the draft \emph {Progress Towards Measles Elimination in New Zealand - Final} report from the New Zealand Ministry of Health to the World Health Organization (WHO) Western Pacific Region. We identify additional analyses that may help understand risk of infection in New Zealand. Here we present the results of statistical analyses of risk factors for measles cases in New Zealand during outbreaks since 2007 until mid-2014. We provide cost analyses for the measles outbreaks in New Zealand, and include modelling of measles outbreaks, including pre- and post-vaccination scenarios, based on the numbers of na\"{\i}ve people at the District Health Board (DHB) and national level. We provide benefit--cost analyses using the results from those model simulations, along with a number of alternative vaccination strategies to achieve different vaccination coverage levels. Our key findings are:
 
 \begin{itemize}
 \item The \emph {Progress Towards Measles Elimination in New Zealand - Final} report was of high quality and contained substantial information and useful analyses.
-\item The regression analyses suggest that age is a particularly strong risk factor for measles.  People of European ethnicity, however, make up the majority of cases. However, our analyses also highlight other groups that are at greater risk of measles on a per capita basis. In particular, Pacific people are at greater risk, as are the more wealthy (NZDep 1--5), and European and Maori 6--17 year old children compared to Asian and Pacific ethnicity children of the same age.
-\item Of the 11\% of the population of New Zealand that are currently considered to be immunologically na\"{\i}ve, it was estimated that approximately 28\% would require additional vaccination to ensure measles does not persist, leading to an additional 131,500 vaccinations.
+\item The regression analyses suggest that age is a particularly strong risk factor for measles.  People of European ethnicity, however, make up the majority of cases. However, our analyses also highlight other groups that are at greater risk of measles on a per capita basis. In particular, Pacific people are at greater risk, as are the more wealthy (NZDep 1--3). However, this was driven by young Pacific children, as 2--24 year old Pacific children are less at risk than European, as are 5--17 year old Asian children.
+\item Of the 11\% of the overall population of New Zealand that are currently considered to be immunologically na\"{\i}ve, it was estimated that approximately 28\% would require additional vaccination to ensure measles does not persist, leading to an additional 131,500 vaccinations.
 \item New Zealand is at risk of frequent measles importation due to travel and endemic measles elsewhere in the globe.
-\item Peak overall travel rates, and thus presumably risk from measles importation, is in December. However, New Zealander and immigrant or non--New Zealander travel is otherwise out of phase, with peak travel for New Zealanders during winter, and non--New Zealanders during summer.
-\item Analyses of outbreak data suggest that measles basic reproduction number ($R_v$, the number of secondary infections in a partially vaccinated population) values often include 1 and the current 2013--2014 outbreak, as analysed from data until June, is well above one. This analysis suggests improved vaccination is a requisite to prevent measles persisting in the population.
-\item The cost of the current 2013--2014 measles outbreak is estimated to be at least \$805,000.
-\item The mean wage loss per measles case is estimated to be \$839
+\item Peak overall overseas travel rates, and thus presumably risk from measles importation, is in December. However, New Zealander and immigrant or non--New Zealander travel is otherwise out of phase, with peak travel for New Zealanders during winter, and non--New Zealanders during summer.
+\item Analyses of outbreak data suggest that measles basic reproduction number ($R_v$, the number of secondary infections in a partially vaccinated population) values often include or exceed 1 and the 2013--2014 outbreaks, as analysed from data until June, is well above 1 (mean estimate 3.66, range 3.4--3.92 for the last outbreak). The range of estimates for $R_v$ between 2009--2014 was 0.18--3.92. This analysis suggests improved vaccination is a requisite to prevent measles persisting in the population.
+\item The cost of the 2013--2014 measles outbreaks is estimated to be approximately \$1,332,539 due to earnings lost relating to cases and contacts, case management and hospitalisation costs.
+\item The mean wage loss per measles case is estimated to be approximately \$852.
 \item The mean cost per measles case attending hospital is estimated to be \$1,877 per case, and approximately 17\% of measles cases attend hospital
-\item The mean management cost per case is \$1,765
-\item The benefit--cost (B/C) ratio analyses suggest additional vaccination is extremely beneficial financially (B/C $>$1).
-\item Outbreaks, with a mean size of 61 cases per year, median of 2 cases, but possibly a peak size of up to many thousands, may occur due to importation, despite $R_v$ being below one and the epidemic predicted to die out following additional vaccinations.
+\item The mean public health service cost per case is \$1,765 excluding hospitalisation costs.
+\item The average number of contacts requiring quarantine was 2.11, requiring 7.3 days of quarantine on average, at a cost of \$170.4 per day.
+\item The benefit--cost (B/C) ratio analyses suggest additional vaccination is extremely beneficial financially (B/C $>$1), with vaccine costs required to exceed \$8,214 per vaccine before the costs exceed the benefits.
+\item Measles introductions to New Zealand with a mean size of 61 cases per year, median of 2 cases, but rarely a peak size of up to many thousands, may occur due to importation, despite $R_v$ being below one and the epidemic predicted to die out following additional vaccinations.
 \end{itemize}
 
 \section{Background}
 
 As a member of the World Health Organization (WHO) Western Pacific Region, New Zealand is committed to work towards measles elimination, defined as the interruption of endemic (domestic) measles virus transmission, as achieved in the Americas in 2002. The Western Pacific Region is expected to be the second WHO region to  achieve measles elimination and it was announced in March 2014 that Australia, Macao, Mongolia and the Republic of Korea have achieved measles elimination.
 
-The last widespread measles outbreaks in New Zealand occurred in 1991 and in 1997. Since then, smaller but significant outbreaks have occurred in 2009 (mainly in Canterbury) and in 2011--2012 (mainly in the Auckland region) and another significant outbreak is currently ongoing in the Auckland and Waikato regions. The outbreak in 2011--2012 lasted for more than 12 months and the current 2013--2014 outbreak started at the end of December 2013 and is ongoing (as of \date{3 July 2014}). In 2013, but prior to the current 2013--2014 outbreak, New Zealand was advised by the Western Pacific Regional Verification Commission for Measles Elimination (RVC) that it can request verification of non-endemic status three years after the last case of the 2011--12 outbreak in June 2012.
+The last widespread measles outbreaks in New Zealand occurred in 1991 and in 1997. Since then, smaller but significant outbreaks have occurred in 2009 (mainly in Canterbury) and in 2011--2012 (mainly in the Auckland region) and other significant outbreaks occurred in the Auckland and Waikato regions in 2013--2014. The outbreak in 2011--2012 lasted for more than 12 months. In 2013--2014 outbreaks started at the end of December 2013, and the last finished in August 2014. In 2013, but prior to the 2013--2014 outbreaks, New Zealand was advised by the Western Pacific Regional Verification Commission for Measles Elimination (RVC) that it can request verification of non-endemic status three years after the last case of the 2011--12 outbreak in June 2012.
 
 Previous measles analyses, including two in New Zealand by Prof. Roberts, estimated the interruption of measles virus transmission can be achieved by herd immunity when approximately 95 percent of the population is homogeneously immune to measles %\citep{roberts0,roberts4}.
-Thus, while New Zealand immunisation activities have led to measles outbreaks becoming less frequent, with decreasing numbers of cases, outbreaks still occur (as described above). Current estimates suggest that approximately 85 to 90 percent of the population is immune to measles (see \autoref{sub:immunestat}), thus the reasons for the ongoing outbreaks are likely due to overall population immunity being less than 95 percent and there being pockets of susceptible, non-immune population remaining. Since 2009, all the outbreaks in New Zealand have been linked to infections acquired (imported) from overseas, though previous work suggests these outbreaks still largely affect school-aged children and children under two years of age. Those under two year olds are thought be be consistently among the most affected age groups because the first of two doses of measles, mumps and rubella vaccine (MMR) is not due until fifteen months.
+Thus, while New Zealand immunisation activities have led to measles outbreaks becoming less frequent, with decreasing numbers of cases, outbreaks still occur (as described above). Current estimates suggest that approximately 85 to 90 percent of the population is immune to measles (see \autoref{sub:immunestat}), thus the reasons for the ongoing outbreaks are likely due to overall population immunity being less than 95 percent and there being pockets of susceptible, non-immune population remaining. Since 2009, all the outbreaks in New Zealand have been linked to infections acquired (imported) from overseas, though previous work suggests these outbreaks still largely affect school-aged children (especially young adults) and children under two years of age. Those under two year olds are thought to be consistently among the most affected age groups because the first of two doses of measles, mumps and rubella vaccine (MMR) is not due until fifteen months.
 
 \section{Risk analysis review}
 
@@ -209,20 +210,20 @@ head(test)
 dim(test)
 @
 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% par(mfrow=c(1,1))
-% par(mar=c(5,6,4,2)+0.1)
-% par(cex.axis=2)
-% hist(time$AgeInYears,col="grey",xlab="Age in years",main="",breaks=90,include.lowest=TRUE,right=F,ylab="Frequency",cex.lab=2)
-% hist(test$AgeInYears,col="black",breaks=90,include.lowest=TRUE,right=F,add=T)
-% legend("topright",c("1997-2014","2007-2014"),col=c("grey","black"),pch=15,bty="n",cex=2)
-% @
-% \end{center}
-% \caption{Numbers and age of measles cases in years in New Zealand for two periods, 1997--2014 and 2007--2014}
-% \label{fig:ageinyears}
-% \end{figure}
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+par(mfrow=c(1,1))
+par(mar=c(5,6,4,2)+0.1)
+par(cex.axis=2)
+hist(time$AgeInYears,col="grey",xlab="Age in years",main="",breaks=90,include.lowest=TRUE,right=F,ylab="Frequency",cex.lab=2)
+hist(test$AgeInYears,col="black",breaks=90,include.lowest=TRUE,right=F,add=T)
+legend("topright",c("1997-2014","2007-2014"),col=c("grey","black"),pch=15,bty="n",cex=2)
+@
+\end{center}
+\caption{Numbers and age of measles cases in years in New Zealand for two periods, 1997--2014 and 2007--2014}
+\label{fig:ageinyears}
+\end{figure}
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 ## plot cases / age class
@@ -561,20 +562,20 @@ head(test)
 dim(test)
 @
 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% par(mfrow=c(1,1))
-% par(mar=c(5,6,4,2)+0.1)
-% par(cex.axis=2)
-% hist(time$AgeInYears,col="grey",xlab="Age in years",main="",breaks=90,include.lowest=TRUE,right=F,ylab="Frequency",cex.lab=2)
-% hist(test$AgeInYears,col="black",breaks=90,include.lowest=TRUE,right=F,add=T)
-% legend("topright",c("1997-2014","2007-2014"),col=c("grey","black"),pch=15,bty="n",cex=2)
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+par(mfrow=c(1,1))
+par(mar=c(5,6,4,2)+0.1)
+par(cex.axis=2)
+hist(time$AgeInYears,col="grey",xlab="Age in years",main="",breaks=90,include.lowest=TRUE,right=F,ylab="Frequency",cex.lab=2)
+hist(test$AgeInYears,col="black",breaks=90,include.lowest=TRUE,right=F,add=T)
+legend("topright",c("1997-2014","2007-2014"),col=c("grey","black"),pch=15,bty="n",cex=2)
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
 
 
 <<echo=FALSE,include=FALSE,results=hide>>=
@@ -906,126 +907,126 @@ colnames(PerCap)<-c("NZDep","Age","Ethnicity","Population","Cases","Per capita")
 tp$perCap<-with(tp,tp$cases/tp$Popn*10000)
 @
 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% ggplot(tp, aes(NZDep, cases, fill=Age)) + 
-%   geom_bar(stat="identity", position="dodge")+
-%  # theme(text=element_text(size=45))+
-%   ylab("cases")
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
-% 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% ggplot(tp, aes(NZDep, cases, fill=Ethnicity)) + 
-%   geom_bar(stat="identity", position="dodge")+
-% #  theme(text=element_text(size=45))+
-%   ylab("cases")
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
-% 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% ggplot(tp, aes(Age, cases, fill=Ethnicity)) + 
-%   geom_bar(stat="identity", position="dodge")+
-% #  theme(text=element_text(size=45))+
-%   ylab("cases")
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
-% 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% ggplot(tp, aes(NZDep, perCap, fill=Age)) + 
-%   geom_bar(stat="identity", position="dodge")+
-%  # theme(text=element_text(size=45))+
-%   ylab("Per capita per 10000")
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
-% 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% ggplot(tp, aes(NZDep, perCap, fill=Ethnicity)) + 
-%   geom_bar(stat="identity", position="dodge")+
-%   #theme(text=element_text(size=45))+
-%   ylab("Per capita per 10000")
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
-% 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% ggplot(tp, aes(Age, perCap, fill=Ethnicity)) + 
-%   geom_bar(stat="identity", position="dodge")+
-%   #theme(text=element_text(size=45))+
-%   ylab("Per capita per 10000")
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+ggplot(tp, aes(NZDep, cases, fill=Age)) + 
+  geom_bar(stat="identity", position="dodge")+
+ # theme(text=element_text(size=45))+
+  ylab("cases")
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+ggplot(tp, aes(NZDep, cases, fill=Ethnicity)) + 
+  geom_bar(stat="identity", position="dodge")+
+#  theme(text=element_text(size=45))+
+  ylab("cases")
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+ggplot(tp, aes(Age, cases, fill=Ethnicity)) + 
+  geom_bar(stat="identity", position="dodge")+
+#  theme(text=element_text(size=45))+
+  ylab("cases")
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+ggplot(tp, aes(NZDep, perCap, fill=Age)) + 
+  geom_bar(stat="identity", position="dodge")+
+ # theme(text=element_text(size=45))+
+  ylab("Per capita per 10000")
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+ggplot(tp, aes(NZDep, perCap, fill=Ethnicity)) + 
+  geom_bar(stat="identity", position="dodge")+
+  #theme(text=element_text(size=45))+
+  ylab("Per capita per 10000")
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+ggplot(tp, aes(Age, perCap, fill=Ethnicity)) + 
+  geom_bar(stat="identity", position="dodge")+
+  #theme(text=element_text(size=45))+
+  ylab("Per capita per 10000")
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 tpsub<-tp[!(tp$Ethnicity=="MLA"),]
 @
 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% ggplot(tpsub, aes(NZDep, perCap, fill=Age)) + 
-%   geom_bar(stat="identity", position="dodge")+
-%   #theme(text=element_text(size=45))+
-%   ylab("Per capita per 10000")
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
-% 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% ggplot(tpsub, aes(NZDep, perCap, fill=Ethnicity)) + 
-%   geom_bar(stat="identity", position="dodge")+
-%   #theme(text=element_text(size=45))+
-%   ylab("Per capita per 10000")
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
-% 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% ggplot(tpsub, aes(Age, perCap, fill=Ethnicity)) + 
-%   geom_bar(stat="identity", position="dodge")+
-%   #theme(text=element_text(size=45))+
-%   ylab("Per capita per 10000")
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+ggplot(tpsub, aes(NZDep, perCap, fill=Age)) + 
+  geom_bar(stat="identity", position="dodge")+
+  #theme(text=element_text(size=45))+
+  ylab("Per capita per 10000")
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+ggplot(tpsub, aes(NZDep, perCap, fill=Ethnicity)) + 
+  geom_bar(stat="identity", position="dodge")+
+  #theme(text=element_text(size=45))+
+  ylab("Per capita per 10000")
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+ggplot(tpsub, aes(Age, perCap, fill=Ethnicity)) + 
+  geom_bar(stat="identity", position="dodge")+
+  #theme(text=element_text(size=45))+
+  ylab("Per capita per 10000")
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 # This chunk uses "results=tex"
@@ -1068,52 +1069,52 @@ summary(model3)
 anova(model3,test="F")
 @
 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% par(cex.axis=2)
-% par(mar=c(5,6,4,2)+0.1)
-% hist(tpsub$cases,xlab="Number of cases",main='',col='grey',breaks=20,ylab="Number of categories",cex.lab=2)
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+par(cex.axis=2)
+par(mar=c(5,6,4,2)+0.1)
+hist(tpsub$cases,xlab="Number of cases",main='',col='grey',breaks=20,ylab="Number of categories",cex.lab=2)
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 res<-predict(model3)
 #res<-predict(model2)
 @
 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% par(mar=c(5,6,4,2)+0.1)
-% par(cex.axis=2)
-% plot(exp(res),tpsub$cases,xlab="cases",ylab='predictions',main="",pch=16,col="darkgrey",cex.lab=2,cex=2)
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+par(mar=c(5,6,4,2)+0.1)
+par(cex.axis=2)
+plot(exp(res),tpsub$cases,xlab="cases",ylab='predictions',main="",pch=16,col="darkgrey",cex.lab=2,cex=2)
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 cor(exp(res),tpsub$cases)
 cor.test(exp(res),tpsub$cases)
 @
 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% par(mar=c(5,6,4,2)+0.1)
-% par(cex.axis=2)
-% #hist(model3$residuals,main="",xlab="residuals",col="grey",cex.lab=2,ylab="")
-% hist(model2$residuals,main="",xlab="residuals",col="grey",cex.lab=2,ylab="")
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+par(mar=c(5,6,4,2)+0.1)
+par(cex.axis=2)
+#hist(model3$residuals,main="",xlab="residuals",col="grey",cex.lab=2,ylab="")
+hist(model2$residuals,main="",xlab="residuals",col="grey",cex.lab=2,ylab="")
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 library(xtable)
@@ -1131,35 +1132,35 @@ row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
 AgeVac<-t(AgeVac)
 @
 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% par(mar=c(5,6,4,2)+0.1)
-% par(cex.axis=2)
-% barplot(t(AgeVac),xlab="Age",col=c("darkgrey","red","orange"),main="",ylab="Frequency",cex.lab=2)
-% legend("topright",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"),cex=1.8,bty="n")
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
-% 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% par(mar=c(5,6,4,2)+0.1)
-% par(cex.axis=2)
-% hist(vac$Dose1Mths,breaks=100,col=rgb(0,0,1,1/4),xlab="Age in months",main="",cex.lab=2,ylab="Frequency")
-% abline(v=12,col="blue")
-% hist(vac$Dose2Mths,breaks=50,add=T,col=rgb(1,0,0,1/4))
-% abline(v=60,col="red")
-% legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=15,bty="n",cex=1.8)
-% legend("top",c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n",cex=1.8)
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+par(mar=c(5,6,4,2)+0.1)
+par(cex.axis=2)
+barplot(t(AgeVac),xlab="Age",col=c("darkgrey","red","orange"),main="",ylab="Frequency",cex.lab=2)
+legend("topright",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"),cex=1.8,bty="n")
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+par(mar=c(5,6,4,2)+0.1)
+par(cex.axis=2)
+hist(vac$Dose1Mths,breaks=100,col=rgb(0,0,1,1/4),xlab="Age in months",main="",cex.lab=2,ylab="Frequency")
+abline(v=12,col="blue")
+hist(vac$Dose2Mths,breaks=50,add=T,col=rgb(1,0,0,1/4))
+abline(v=60,col="red")
+legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=15,bty="n",cex=1.8)
+legend("top",c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n",cex=1.8)
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 DOB<-as.numeric(levels(testv$RptYear))[testv$RptYear]-testv$AgeInYears
@@ -1230,19 +1231,19 @@ length(pop)
 naive<-round(pop-(pop*impop))
 @
 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-% par(cex.axis=2)
-% par(mar=c(5,6,4,2)+0.1)
-% plot(pop,xlab="Age",ylab="Population",cex.lab=2)
-% points(naive,pch=16)
-% legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
-% @
-% \end{center}
-% \caption{test}
-% %\label{fig:test}
-% \end{figure}
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+par(cex.axis=2)
+par(mar=c(5,6,4,2)+0.1)
+plot(pop,xlab="Age",ylab="Population",cex.lab=2)
+points(naive,pch=16)
+legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
 
 <<echo=FALSE,include=FALSE,results=hide>>=
 
@@ -1277,6 +1278,20 @@ round((sum(naive$Naive[1:45])/sum(naive$Naive)),2),
 round((sum(naive$Naive[8:100])/sum(naive$Naive)),2))
 names(propvCohort)<-c("2-5","5-11","5-16","5-18","11-16","11-18","0-29","0-44",">8")
 write.table(propvCohort,"vaccine_proportions_Cohort.txt",sep=",",row.names=T,col.names=F)
+@
+
+\begin{table}[hbtp]
+\footnotesize
+\caption{proportions of the naive population the wuld be covered if vaccinated by age groups}
+<<results=tex,echo=FALSE>>=
+# This chunk uses "results=tex"
+library(Hmisc)
+latex(propvCohort, file="", table.env=FALSE,rowname=NULL)
+@
+\label{table:vaccine_cohort}
+\end{table}
+
+<<echo=FALSE,include=FALSE,results=hide>>=
 
 propsv = NULL
 for (i in 1:20 ) {
