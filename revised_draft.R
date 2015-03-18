@@ -444,7 +444,7 @@ dev.off()
 # This chunk uses "results=tex"
 library(Hmisc)
 latex(PerCap, file="", table.env=FALSE,rowname=NULL)
-
+write.csv(PerCap,"percap.csv")
 ## plot this figure?
 #hist(tp$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
 tp$Ethnicity<- relevel(tp$Ethnicity, "European")
@@ -479,7 +479,8 @@ anova(model2,test="F")
 model3<-update(model2,~.-Ethnicity:NZDep)
 summary(model3)
 anova(model3,test="F")
-
+anovap<-anova(model3,test="F")
+write.csv(anovap,"anovap.csv")
 
 pdf(paste("Cases_regmodel.pdf"), width=7, height=5)
 par(cex.axis=2)
