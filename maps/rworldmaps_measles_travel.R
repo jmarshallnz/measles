@@ -383,6 +383,7 @@ dim(m3)
 head(immigration)
 class(immigration$Month.of.Arrival)
 summary(immigration$Month.of.Arrival)
+immigration<-subset(immigration, Age.Range=="0-19 Years")
 newdata<-immigration[which(immigration$Month.of.Arrival%in%c("2013-01",
                                                            "2013-02",
                                                            "2013-03",
