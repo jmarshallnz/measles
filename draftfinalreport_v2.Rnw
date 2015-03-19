@@ -1028,6 +1028,75 @@ ggplot(tpsub, aes(Age, perCap, fill=Ethnicity)) +
 %\label{fig:test}
 \end{figure}
 
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+ggplot(tp, aes(merge, cases, fill=Ethnicity)) + 
++     geom_bar(stat="identity", position="dodge")+
++     # theme(text=element_text(size=45))+
++     ylab("cases")+theme(axis.text.x = element_text(angle = 90, hjust = 0))
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+tpsub$order <- factor(tpsub$merge, as.character(tpsub$merge))
+ggplot(tpsub, aes(x=order, cases, fill=Ethnicity)) +
+     geom_bar(stat="identity", position="dodge")+
+     # theme(text=element_text(size=45))+
+     ylab("cases")+theme(axis.text.x = element_text(angle = 90, vjust=0,hjust = 0))
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+ggplot(tpsub, aes(x=order, perCap, fill=Ethnicity)) +
+     geom_bar(stat="identity", position="dodge")+
+     # theme(text=element_text(size=45))+
+     ylab("per capita")+theme(axis.text.x = element_text(angle = 90, vjust=0, hjust = 1))
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+tpsub1<-tpsub[ order(tpsub$Age), ]
+tpsub1$order <- factor(tpsub1$merge, as.character(tpsub1$merge))
+ggplot(tpsub1, aes(order, cases, fill=Ethnicity)) +
+     geom_bar(stat="identity", position="dodge")+
+     # theme(text=element_text(size=45))+
+     ylab("cases")+theme(axis.text.x = element_text(angle = 90, hjust = 0))
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
+ggplot(tpsub1, aes(order, perCap, fill=Ethnicity)) +
+     geom_bar(stat="identity", position="dodge")+
+     # theme(text=element_text(size=45))+
+     ylab("per captita")+theme(axis.text.x = element_text(angle = 90, hjust = 0))
+@
+\end{center}
+\caption{test}
+%\label{fig:test}
+\end{figure}
+
+
 <<echo=FALSE,include=FALSE,results=hide>>=
 # This chunk uses "results=tex"
 library(Hmisc)
