@@ -48,10 +48,10 @@ dim(test)
 pdf(paste("case_age_dist.pdf"), width=7, height=5)
 par(mfrow=c(1,1))
 par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-hist(time$AgeInYears,col="grey",xlab="Age in years",main="",breaks=90,include.lowest=TRUE,right=F,ylab="Frequency",cex.lab=2)
+par(cex.axis=1)
+hist(time$AgeInYears,col="grey",xlab="Age in years",main="",breaks=90,include.lowest=TRUE,right=F,ylab="Frequency",cex.lab=1)
 hist(test$AgeInYears,col="black",breaks=90,include.lowest=TRUE,right=F,add=T)
-legend("topright",c("1997-2014","2007-2014"),col=c("grey","black"),pch=15,bty="n",cex=2)
+legend("topright",c("1997-2014","2007-2014"),col=c("grey","black"),pch=15,bty="n",cex=1)
 dev.off()
 ## plot cases / age class
 caseyr<-aggregate( DiseaseName ~ AgeInYears, 
@@ -445,17 +445,17 @@ ggplot(tpsub1, aes(x=ordert,y= cases, fill=Ethnicity)) +
 dev.off()
 ##
 pdf(paste("percap_merge.pdf"), width=10, height=5)
-ggplot(tp, aes(x=merge, y=cases, fill=Ethnicity)) + 
+ggplot(tp, aes(x=merge, y=perCap, fill=Ethnicity)) + 
   geom_bar(stat="identity", position="dodge")+
   # theme(text=element_text(size=45))+
-  ylab("cases")+xlab("")+theme(axis.text.x = element_text(angle = 90, hjust = 0))
+  ylab("Per capita per 10000")+xlab("")+theme(axis.text.x = element_text(angle = 90, hjust = 0))
 dev.off()
 #
 pdf(paste("percap_ordert.pdf"), width=10, height=5)
-ggplot(tpsub, aes(x=ordert, y=cases, fill=Ethnicity)) +
+ggplot(tpsub, aes(x=ordert, y=perCap, fill=Ethnicity)) +
   geom_bar(stat="identity", position="dodge")+
   # theme(text=element_text(size=45))+
-  ylab("cases")+xlab("")+theme(axis.text.x = element_text(angle = 90, vjust=0,hjust = 0))
+  ylab("Per capita per 10000")+xlab("")+theme(axis.text.x = element_text(angle = 90, vjust=0,hjust = 0))
 dev.off()
 
 
@@ -501,17 +501,17 @@ anovap<-anova(model3,test="F")
 write.csv(anovap,"anovap.csv")
 
 pdf(paste("Cases_regmodel.pdf"), width=7, height=5)
-par(cex.axis=2)
+par(cex.axis=1)
 par(mar=c(5,6,4,2)+0.1)
-hist(tpsub$cases,xlab="Number of cases",main='',col='grey',breaks=20,ylab="Number of categories",cex.lab=2)
+hist(tpsub$cases,xlab="Number of cases",main='',col='grey',breaks=20,ylab="Number of categories",cex.lab=1)
 dev.off()
 res<-predict(model3)
 #res<-predict(model2)
 
 pdf(paste("Cases_regmodel_prediction.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-plot(exp(res),tpsub$cases,xlab="cases",ylab='predictions',main="",pch=16,col="darkgrey",cex.lab=2,cex=2)
+par(cex.axis=1)
+plot(exp(res),tpsub$cases,xlab="cases",ylab='predictions',main="",pch=16,col="darkgrey",cex.lab=1,cex=1)
 dev.off()
 
 cor(exp(res),tpsub$cases)
@@ -519,9 +519,9 @@ cor.test(exp(res),tpsub$cases)
 
 pdf(paste("Cases_regmodel_resid.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-#hist(model3$residuals,main="",xlab="residuals",col="grey",cex.lab=2,ylab="")
-hist(model2$residuals,main="",xlab="residuals",col="grey",cex.lab=2,ylab="")
+par(cex.axis=1)
+#hist(model3$residuals,main="",xlab="residuals",col="grey",cex.lab=1,ylab="")
+hist(model2$residuals,main="",xlab="residuals",col="grey",cex.lab=1,ylab="")
 dev.off()
 
 resan<-xtable(anova(model3,test="F"))
@@ -538,20 +538,20 @@ AgeVac<-t(AgeVac)
 
 pdf(paste("vacc_status.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-barplot(t(AgeVac),xlab="Age",col=c("darkgrey","red","orange"),main="",ylab="Frequency",cex.lab=2)
-legend("topright",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"),cex=1.8,bty="n")
+par(cex.axis=1)
+barplot(t(AgeVac),xlab="Age",col=c("darkgrey","red","orange"),main="",ylab="Frequency",cex.lab=1)
+legend("topright",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"),cex=1,bty="n")
 dev.off()
 
 pdf(paste("vacc_age.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-hist(vac$Dose1Mths,breaks=100,col=rgb(0,0,1,1/4),xlab="Age in months",main="",cex.lab=2,ylab="Frequency")
+par(cex.axis=1)
+hist(vac$Dose1Mths,breaks=100,col=rgb(0,0,1,1/4),xlab="Age in months",main="",cex.lab=1,ylab="Frequency")
 abline(v=12,col="blue")
 hist(vac$Dose2Mths,breaks=50,add=T,col=rgb(1,0,0,1/4))
 abline(v=60,col="red")
-legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=15,bty="n",cex=1.8)
-legend("top",c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n",cex=1.8)
+legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=15,bty="n",cex=1)
+legend("top",c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n",cex=1)
 dev.off()
 
 DOB<-as.numeric(levels(testv$RptYear))[testv$RptYear]-testv$AgeInYears
@@ -599,11 +599,11 @@ length(pop)
 naive<-round(pop-(pop*impop))
 
 pdf(paste("naive_allPop.pdf"), width=7, height=5)
-par(cex.axis=2)
+par(cex.axis=1)
 par(mar=c(5,6,4,2)+0.1)
-plot(pop,xlab="Age",ylab="Population",cex.lab=2)
+plot(pop,xlab="Age",ylab="Population",cex.lab=1)
 points(naive,pch=16)
-legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
+legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1)
 dev.off()
 
 popimmune<-read.csv("PopnImmunityAll.csv",header=T)
@@ -627,13 +627,13 @@ colnames(naive)<-c("AgeInYears","Naive","Cases")
 pdf(paste("numvac.pdf"), width=7, height=5)
 par(mfrow=c(1,1))
 par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
+par(cex.axis=1)
 plot(naive$Naive ,col="black",bg="black",pch=1,ylab="Number to vaccinate",xlab="Age in Years",
-     main="",cex.lab=2,cex=3)
-points(round(0.28*naive$Naive),col="grey",bg="red",pch=21,cex=2)
-points(x=3:18,y=naive$Naive[3:18],col="grey",bg="orange",pch=23,cex=2) # 
+     main="",cex.lab=1,cex=1)
+points(round(0.28*naive$Naive),col="grey",bg="red",pch=21,cex=1)
+points(x=3:18,y=naive$Naive[3:18],col="grey",bg="orange",pch=23,cex=1) # 
 legend("topright",c("Naive","28% naive, all ages","28% naive, all 2-17 yr olds"),
-       bty="n",pch=c(1,21,23),col=c("black","grey","grey"),pt.bg=c("black","red","orange"),cex=2)
+       bty="n",pch=c(1,21,23),col=c("black","grey","grey"),pt.bg=c("black","red","orange"),cex=1)
 dev.off()
 
 # proportions of the naive population the wuld be covered if vaccinated by age groups now
@@ -825,7 +825,7 @@ np1<-ggplot(dpdf, aes(map_id = id))  +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
   ylab("latitude") +
-  theme(text = element_text(size=30))+
+  theme(text = element_text(size=20))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
 
 np2<-ggplot(dpdf, aes(map_id = id))  +
@@ -833,7 +833,7 @@ np2<-ggplot(dpdf, aes(map_id = id))  +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
   ylab("latitude") +
-  theme(text = element_text(size=30))+
+  theme(text = element_text(size=20))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
 
 np3<-ggplot(dpdf, aes(map_id = id))  +
@@ -841,7 +841,7 @@ np3<-ggplot(dpdf, aes(map_id = id))  +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
   ylab("latitude") +
-  theme(text = element_text(size=30))+
+  theme(text = element_text(size=20))+
   scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
 
 #grid.arrange(np1, np2, np3, ncol=3, main="")
@@ -851,7 +851,7 @@ np4<-ggplot(dpdf, aes(map_id = id)) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
   ylab("latitude") +
-  theme(text = element_text(size=30))+
+  theme(text = element_text(size=20))+
   scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
 #np4
 # output top countries
@@ -861,7 +861,7 @@ imnp1<-ggplot(dpdf, aes(map_id = id))  +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
   ylab("latitude") +
-  theme(text = element_text(size=30))+
+  theme(text = element_text(size=20))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
 
 imnp4<-ggplot(dpdf, aes(map_id = id)) +
@@ -869,7 +869,7 @@ imnp4<-ggplot(dpdf, aes(map_id = id)) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
   ylab("latitude") +
-  theme(text = element_text(size=30))+
+  theme(text = element_text(size=20))+
   scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
 #np4
 dpdf<-read.csv("mapdata_nzers.csv",header=T)
@@ -878,7 +878,7 @@ nznp1<-ggplot(dpdf, aes(map_id = id))  +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
   ylab("latitude") +
-  theme(text = element_text(size=30))+
+  theme(text = element_text(size=20))+
   scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
 
 nznp4<-ggplot(dpdf, aes(map_id = id)) +
@@ -886,7 +886,7 @@ nznp4<-ggplot(dpdf, aes(map_id = id)) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
   ylab("latitude") +
-  theme(text = element_text(size=30))+
+  theme(text = element_text(size=20))+
   scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
 #np4
 
@@ -897,16 +897,16 @@ costtable3<-read.csv("costtable3.csv",header=T)
 
 hosp<-read.csv("hospital.csv",header=T)
 
-p<-ggplot(data=hosp, aes(x=Days, y=Number)) + geom_bar(stat="identity")+theme(axis.title.x = element_text(size=25),axis.title.y = element_text(size=25),axis.text.x  = element_text(size=16),axis.text.y  = element_text(size=16))
+p<-ggplot(data=hosp, aes(x=Days, y=Number)) + geom_bar(stat="identity")+theme(axis.title.x = element_text(size=20),axis.title.y = element_text(size=16),axis.text.x  = element_text(size=14),axis.text.y  = element_text(size=14))
 
 ###
 # pdf(paste("ageinyears.pdf"), width=7, height=5)
 # par(mfrow=c(1,1))
 # par(mar=c(5,6,4,2)+0.1)
-# par(cex.axis=2)
-# hist(time$AgeInYears,col="grey",xlab="Age in years",main="",breaks=90,include.lowest=TRUE,right=F,ylab="Frequency",cex.lab=2)
+# par(cex.axis=1)
+# hist(time$AgeInYears,col="grey",xlab="Age in years",main="",breaks=90,include.lowest=TRUE,right=F,ylab="Frequency",cex.lab=1)
 # hist(time_yr$AgeInYears,col="black",breaks=90,include.lowest=TRUE,right=F,add=T)
-# legend("topright",c("1997-2014","2007-2014"),col=c("grey","black"),pch=15,bty="n",cex=2)
+# legend("topright",c("1997-2014","2007-2014"),col=c("grey","black"),pch=15,bty="n",cex=1)
 # dev.off()
 
 ###
@@ -1053,21 +1053,21 @@ legMn<-as.factor(paste("mean =",c(round(mean(sizes)))))
 ###
 pdf(paste("sim.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-hist(sizes,xlim=c(0,200),col="grey",breaks=1000,xlab="Outbreak size",main="",cex.lab=2)
+par(cex.axis=1)
+hist(sizes,xlim=c(0,200),col="grey",breaks=1000,xlab="Outbreak size",main="",cex.lab=1)
 #summary(sizes)
 abline(v=median(sizes),col="orange",lty=3,lwd=8)
 abline(v=mean(sizes),col="red",lty=3,lwd=8)
 #length(which(sizes>5))/1000
-legend('topright',c(levels(legMd),levels(legMn)),lty=rep(3,2),col=c("orange","red"),bty="n",lwd=8,cex=2)
+legend('topright',c(levels(legMd),levels(legMn)),lty=rep(3,2),col=c("orange","red"),bty="n",lwd=8,cex=1)
 dev.off()
 
 ###
 pdf(paste("sim1.pdf"), width=7, height=5)
 par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-hist(sizes,breaks=1000,xlab="Outbreak size",main="",cex.lab=2,ylim=c(0,20))
+par(cex.axis=1)
+hist(sizes,breaks=1000,xlab="Outbreak size",main="",cex.lab=1,ylim=c(0,20))
 abline(v=median(sizes),col="orange",lty=3,lwd=8)
 abline(v=mean(sizes),col="red",lty=3,lwd=8)
-legend('topright',c(levels(legMd),levels(legMn)),lty=rep(3,2),col=c("orange","red"),bty="n",lwd=8,cex=2)
+legend('topright',c(levels(legMd),levels(legMn)),lty=rep(3,2),col=c("orange","red"),bty="n",lwd=8,cex=1)
 dev.off()

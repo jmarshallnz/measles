@@ -1,6 +1,6 @@
 
 \documentclass{article}
-
+\usepackage{longtable}
 \usepackage{times}
 \usepackage{hyperref}
 \usepackage{tikz}
@@ -164,12 +164,12 @@ Thus in this report we include regression analyses that help understand risk fac
 
 In this section we provide work that we believe will help inform the Ministry of Health regarding the understanding of risk from measles. These analyses are intended to build on the analyses already included in the \emph {Progress Towards Measles Elimination in New Zealand - Final} report reviewed above. We include multivariate modelling to account for confounding within the univariate analyses for measles cases in New Zealand (\autoref{sub:regression}), descriptive analyses of risk of infection due to previous vaccination history (\autoref{sub:immunestat}), and current rates of immunity within the population (\autoref{sub:immunestat}). In light of the apparent increasing trend in measles incidence in the last few years (\autoref{fig:incidence1997}), we reviewed the information on measles importation and the origins of the introductions of measles into New Zealand. To help understand the risk of measles importation, with a particular goal of enabling the Ministry to better inform travellers and understand high risk periods, we sought to quantitatively evaluate the risk of measles importation from travel (\autoref{sub:imp_risk}). The details of the methods and approaches are given in the text below for each section.
 
-\begin{figure}
+\begin{sidewaysfigure}
      %\centering
      \includegraphics[width=0.9\textwidth]{incidence_1997_2014.pdf}
      \caption{Measles incidence in New Zealand from 1997 to 2014}
      \label{fig:incidence1997}
-\end{figure}
+\end{sidewaysfigure}
 
 
 \subsection{Risk of measles infection in New Zealand analyses methods}
@@ -181,6 +181,7 @@ The University of Otago denominator data provided were not to the same detail as
 With the 10 NZDep classes, Prioritized Ethnicities, and the age classes above, the numerous combinations of variables led us to have 250 categories. Because for measles cases the very young appear to be disproportionately affected (\autoref{fig:ageinyears}), we split the 0--5 age category into two classes, 0--2 and 3--5 years old for each of the University of Otago denominator data, assuming equal numbers of young were born into each age group over the last five years (which is supported by data from NZ statistics \citep{stats14}).
 
 <<echo=FALSE,include=FALSE,results=hide>>=
+rm(list=ls())
 library(adehabitat)
 library(classInt)
 library(ggplot2)   # plotting library
@@ -204,213 +205,6 @@ library(raster)
 library(sp)
 library(utils)
 library(xtable)
-#library(SDMTools)
-#gpclibPermit()
-
-# read data
-data<-read.csv("DHayman_20140627.csv",header=T)
-vac<-read.csv("DHayman_20140715_Vacc.csv",header=T)
-# names(data)
-data$RptYear<-as.factor(data$RptYear)
-data$SurvWeek<-as.factor(data$SurvWeek)
-data$NZDep01<-as.factor(data$NZDep01)
-data$NZDep06<-as.factor(data$NZDep06)
-data$NZDep13<-as.factor(data$NZDep13)
-#data$AgeInYears<-as.factor(data$AgeInYears)
-data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
-
-
-time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear,# + Dose1Mths + Dose2Mths, 
-                 data = data , FUN=sum)
-time_yr<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
-
-caseyr<-aggregate( DiseaseName ~ AgeInYears, 
-                   data = time_yr , FUN=sum)
-
-popimmune<-read.csv("PopnImmunityAll.csv",header=T)
-popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
-         rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-naive<-round(pop-(pop*impop))
-
-## match cases per age
-AgeInYears<-0:100
-naive<-cbind(AgeInYears,naive)
-colnames(naive)<-c("AgeInYears","Naive")
-naive<-merge(naive,caseyr,by="AgeInYears",all=T)
-colnames(naive)<-c("AgeInYears","Naive","Cases")
-
-dose1=as.factor(round(vac$Dose1Mths/12,0));
-dose1<-summary(dose1)
-dose1<-as.data.frame(dose1)
-dose1$AgeInYears<-rownames(dose1)
-dose2=as.factor(round(na.omit(vac$Dose2Mths/12,0)));
-dose2<-summary(dose2)
-dose2<-as.data.frame(dose2)
-dose2$AgeInYears<-rownames(dose2)
-
-## need to merge vaccination data with data
-## to get years the cases were from
-datav<-merge(vac,data,by="CaseCode",all=T)
-##
-datav$Dose1Mths[which(is.na(datav$Dose1Mths))] <- 9999
-datav$Dose2Mths[which(is.na(datav$Dose2Mths))] <- 9999
-#########################
-datav$RptYear<-as.factor(datav$RptYear)
-datav$SurvWeek<-as.factor(datav$SurvWeek)
-datav$NZDep01<-as.factor(datav$NZDep01)
-datav$NZDep06<-as.factor(datav$NZDep06)
-datav$NZDep13<-as.factor(datav$NZDep13)
-datav$Dose1Mths<-as.factor(datav$Dose1Mths)
-datav$Dose2Mths<-as.factor(datav$Dose2Mths)
-
-#data$AgeInYears<-as.factor(data$AgeInYears)
-datav$EthnicityPrioritised<-as.factor(datav$EthnicityPrioritised)
-
-timev<-aggregate( cbind( DiseaseName) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear+ Dose1Mths +Dose2Mths, 
-                 data = datav , FUN=sum,na.rm=F,na.action=na.pass)
-
-testv<-subset(timev, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
-
-testv$Dose1Mths<-revalue(testv$Dose1Mths, c("9999"=NA));
-testv$Dose2Mths<-revalue(testv$Dose2Mths, c("9999"=NA));
-testv$Dose1Mths<-as.numeric(testv$Dose1Mths)
-testv$Dose2Mths<-as.numeric(testv$Dose2Mths)
-testv$D2vac<-ifelse(testv$Dose1Mths > -1 & testv$Dose2Mths >= testv$Dose1Mths,testv$Dose2Mths,NA)
-testv$D1vac<-ifelse(testv$Dose1Mths > -1 & is.na(testv$D2vac) == T,testv$Dose1Mths,NA)
-testv$Unvac<-ifelse(is.na(testv$Dose1Mths) == T & is.na(testv$Dose2Mths) == T,testv$AgeInYears,NA)
-
-testv$VC<-ifelse(is.na(testv$Dose1Mths) == T & is.na(testv$Dose2Mths) == T,0,
-                 ifelse(testv$Dose1Mths >= 0 & is.na(testv$Dose2Mths) == T,1,2))
-AgeVac<-table(testv$VC,testv$AgeInYears)
-
-row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
-AgeVac<-t(AgeVac)
-AgeInYears<-(as.numeric(rownames(AgeVac)))
-AgeVac<-cbind(AgeVac,AgeInYears)       
-AgeInYears<-(as.numeric(rownames(pop)))
-pop<-cbind(pop,AgeInYears)
-colnames(pop)<-c("Population","AgeInYears")
-AgeV<-merge(pop,AgeVac,by="AgeInYears",all=T)
-
-### denominator data
-# setwd("~/Massey_2014/measles/data")
-data<-read.csv("DHayman_20140627.csv",header=T)
-vac<-read.csv("DHayman_20140715_Vacc.csv",header=T)
-names(data)
-data$RptYear<-as.factor(data$RptYear)
-data$SurvWeek<-as.factor(data$SurvWeek)
-data$NZDep01<-as.factor(data$NZDep01)
-data$NZDep06<-as.factor(data$NZDep06)
-data$NZDep13<-as.factor(data$NZDep13)
-#data$AgeInYears<-as.factor(data$AgeInYears)
-data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
-
-time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear,# + Dose1Mths + Dose2Mths, 
-                 data = data , FUN=sum)
-
-test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
-caseyr<-aggregate( DiseaseName ~ AgeInYears, 
-                   data = test , FUN=sum)
-test$AgeInYears<-findInterval(test$AgeInYears,c(3,6,18,25))
-test$AgeInYears<-as.factor(test$AgeInYears)
-tage<-revalue(test$AgeInYears, c("0"="0-2", "1"="3-5","2"="6-17","3"="18-24","4"="25+"));
-test$AgeInYears<-tage
-#summary(test$EthnicityPrioritised)
-teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MLA",
-                                     "Pacific Peoples"="Pacific","Response cannot be classified"="None","Unknown"="None"));
-
-test$EthnicityPrioritised<-teth
-
-test <- within(test, NZDep06[NZDep06 == "0"]<-NA)
-test <- within(test, NZDep13[NZDep13 == "0"]<-NA)
-
-# want to set NZ Deprivation to the appropriate year
-
-testt <- within(test, NZDep<- ifelse (test$RptYear == "2007",test$NZDep06,
-                              ifelse (test$RptYear == "2008",test$NZDep06,
-                              ifelse (test$RptYear == "2009",test$NZDep06,
-                              ifelse (test$RptYear == "2010",test$NZDep06,
-                              ifelse (test$RptYear == "2011",test$NZDep06,
-                              ifelse (test$RptYear == "2012",test$NZDep06,
-                              ifelse (test$RptYear == "2013",test$NZDep13,NZDep13))))))))
-testt$NZDep<-as.factor(testt$NZDep-1)
-
-testtable<-aggregate( cbind( DiseaseName) #+ as.numeric(SurvWeek))
-                      ~ NZDep+AgeInYears+EthnicityPrioritised + RptYear, 
-                 data = testt , FUN=sum)
-
-colnames(testtable)<-c("NZDep","Age","Ethnicity","Year","Cases")
-
-
-tnzd<-revalue(testtable$NZDep, c("1"="1-5","2"="1-5","3"="1-5","4"="1-5",
-                                 "5"="1-5","6"="6-10","7"="6-10","8"="6-10",
-                                 "9"="6-10","10"="6-10"));
-
-testtable$NZDep<-tnzd
-
-tt<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity + Year, 
-                 data = testtable , FUN=sum)
-
-ttyr<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity, 
-                 data = testtable , FUN=sum)
-denom<-read.csv("NZDep2006Denominators.csv",header=T)
-denom<-denom[,-c(9)]
-
-denom<-denom[,1:18]
-row.has.na <- apply(denom, 1, function(x){any(is.na(x))})
-
-denomt <- denom[!row.has.na,]
-
-denomt<-denomt[denomt$Sex_code==99,]
-denomt$Eth_Level<-as.factor(denomt$Eth_Level)
-denomt<-denomt[denomt$Eth_Level %in% c("24","21","66",'22','77'),]
-dm<-cbind(denomt[,c(3,6,9:18)])
-
-dm<-dm[dm$Age_Label %in% c("A: 0- 5 yrs", "A: 6-17 yrs","A:18-24 yrs","A:25-64 yrs","A:65+ yrs"),]
-dage<-revalue(dm$Age_Label, c("A: 0- 5 yrs"="<6", "A: 6-17 yrs"="6-17","A:18-24 yrs"="18-24","A:25-64 yrs"="25+","A:65+ yrs"="25+"));
-dm$Age_Label<-dage
-colnames(dm)<-c('Age','Ethnicity',"Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10")
-
-datadm<-dm[dm$Age=="<6",]
-dataA<-(rbind(datadm,datadm)/2)
-dataA<-round(dataA[,3:12])
-dataA<-cbind(c(rep("0-2",5),rep("3-5",5)),rep(datadm$Ethnicity[1:5],2),dataA)
-colnames(dataA)<-c('Age','Ethnicity',"Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10")
-ddm<-dm[!dm$Age=="<6",]
-dm<-rbind(dataA,ddm)
-dm$Ethnicity <- factor(dm$Ethnicity)
-deth<-revalue(dm$Ethnicity, c("Asian (Prioritised)"="Asian","European (NZ European and Other European)"="European",
-                              "Maori (Prioritised)"="Maori","MELAA"="MLA","Pacific People (Prioritised)"="Pacific"));
-dm$Ethnicity<-deth
-head(dm)
-
-popn<-melt(dm,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
-colnames(popn)<-c("Age","Ethnicity","NZDep","Popn")
-pnzd<-revalue(popn$NZDep, c("Dep1"="1-5","Dep2"="1-5","Dep3"="1-5","Dep4"="1-5",
-                                 "Dep5"="1-5","Dep6"="6-10","Dep7"="6-10","Dep8"="6-10",
-                                 "Dep9"="6-10","Dep10"="6-10"));
-
-popn$NZDep<-pnzd
-tp<-aggregate( cbind(Popn) ~ NZDep+Age+Ethnicity, 
-               data = popn , FUN=sum)
-
-tp$merge <- paste(tp$NZDep, tp$Age, tp$Ethnicity)
-ttyr$merge <- paste(ttyr$NZDep, ttyr$Age, ttyr$Ethnicity)
-ttyr <- ttyr[ttyr$Ethnicity!="None",]
-
-tp$cases <- 0
-cases <- matrix(0, length(tp$merge),1)
-rownames(cases) <- tp$merge
-cases[ttyr$merge,] <- ttyr$Cases
-tp$cases <- cases
-PerCapita<-(tp$cases/tp$Popn)
-PerCap<-cbind(tp[,c(1:4,6)],round(PerCapita*10000,4))
-colnames(PerCap)<-c("NZDep","Age","Ethnicity","Population","Cases","Per capita")
-
 ## get data
 # set wd
 # setwd("~/Massey 2014/DHayman_20140627")
@@ -427,10 +221,11 @@ data$NZDep13<-as.factor(data$NZDep13)
 data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
 
 
-time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear,# + Dose1Mths + Dose2Mths, 
-data = data , FUN=sum)
+time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear,data = data , FUN=sum)
 
 test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
+head(test)
+dim(test)
 
 caseyr<-aggregate( DiseaseName ~ AgeInYears, 
 data = test , FUN=sum)
@@ -440,8 +235,7 @@ popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7
 pop<-read.csv("popnsize.csv",header=T)
 colnames(pop)<-0:100
 pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
-rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
+impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5), rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
 
 naive<-round(pop-(pop*impop))
 
@@ -479,11 +273,9 @@ datav$Dose2Mths<-as.factor(datav$Dose2Mths)
 #data$AgeInYears<-as.factor(data$AgeInYears)
 datav$EthnicityPrioritised<-as.factor(datav$EthnicityPrioritised)
 
-timev<-aggregate( cbind( DiseaseName) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear+ Dose1Mths +Dose2Mths, 
-data = datav , FUN=sum,na.rm=F,na.action=na.pass)
+timev<-aggregate( cbind( DiseaseName) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear+ Dose1Mths +Dose2Mths, data = datav , FUN=sum,na.rm=F,na.action=na.pass)
 
 testv<-subset(timev, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
-
 testv$Dose1Mths<-revalue(testv$Dose1Mths, c("9999"=NA));
 testv$Dose2Mths<-revalue(testv$Dose2Mths, c("9999"=NA));
 testv$Dose1Mths<-as.numeric(testv$Dose1Mths)
@@ -506,7 +298,6 @@ colnames(pop)<-c("Population","AgeInYears")
 AgeV<-merge(pop,AgeVac,by="AgeInYears",all=T)
 
 ## regression analyses - measles
-# setwd("~/Massey 2014/DHayman_20140627")
 # read data
 data<-read.csv("DHayman_20140627.csv",header=T)
 vac<-read.csv("DHayman_20140715_Vacc.csv",header=T)
@@ -519,27 +310,20 @@ data$NZDep13<-as.factor(data$NZDep13)
 #data$AgeInYears<-as.factor(data$AgeInYears)
 data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
 
-time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear,# + Dose1Mths + Dose2Mths, 
-data = data , FUN=sum)
-
+time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear, data = data , FUN=sum)
 
 test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
 
 caseyr<-aggregate( DiseaseName ~ AgeInYears, 
 data = test , FUN=sum)
 
-# test$AgeInYears<-findInterval(test$AgeInYears,c(3,6,18,25))
 test$AgeInYears<-findInterval(test$AgeInYears,c(2,5,18,25))
 test$AgeInYears<-as.factor(test$AgeInYears)
-#tage<-revalue(test$AgeInYears, c("0"="0-2", "1"="3-5","2"="6-17","3"="18-24","4"="25+"));
 tage<-revalue(test$AgeInYears, c("0"="0-1", "1"="2-4","2"="5-17","3"="18-24","4"="25+"));
 test$AgeInYears<-tage
-#summary(test$EthnicityPrioritised)
-teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MLA",
-"Pacific Peoples"="Pacific","Response cannot be classified"="None","Unknown"="None"));
+teth<-revalue(test$EthnicityPrioritised, c("European or Other"="European", "Middle Eastern/Latin American/African"="MLA","Pacific Peoples"="Pacific","Response cannot be classified"="None","Unknown"="None"));
 
 test$EthnicityPrioritised<-teth
-
 test <- within(test, NZDep06[NZDep06 == "0"]<-NA)
 test <- within(test, NZDep13[NZDep13 == "0"]<-NA)
 
@@ -555,9 +339,7 @@ ifelse (test$RptYear == "2013",test$NZDep13,NZDep13))))))))
 
 testt$NZDep<-as.factor(testt$NZDep-1)
 
-testtable<-aggregate( cbind( DiseaseName) #+ as.numeric(SurvWeek))
-~ NZDep+AgeInYears+EthnicityPrioritised + RptYear, 
-data = testt , FUN=sum)
+testtable<-aggregate( cbind( DiseaseName) ~ NZDep+AgeInYears+EthnicityPrioritised + RptYear,  data = testt , FUN=sum)
 dim(testtable)
 colnames(testtable)<-c("NZDep","Age","Ethnicity","Year","Cases")
 head(testtable)
@@ -568,18 +350,20 @@ tnzd<-revalue(testtable$NZDep, c("1"="1-3","2"="1-3","3"="1-3","4"="4-7",
 
 
 testtable$NZDep<-tnzd
-
+# head(testtable)
 tt<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity + Year, 
 data = testtable , FUN=sum)
 
 ttyr<-aggregate( cbind(Cases) ~ NZDep+Age+Ethnicity, 
 data = testtable , FUN=sum)
 ttyr <- ttyr[ttyr$Ethnicity=="None",]
-### denominator data
 
+# latex(ttyr, file="",table.env=FALSE,rowname=NULL)
+
+### denominator data
 data<-read.csv("DHayman_20140627.csv",header=T)
 vac<-read.csv("DHayman_20140715_Vacc.csv",header=T)
-
+names(data)
 data$RptYear<-as.factor(data$RptYear)
 data$SurvWeek<-as.factor(data$SurvWeek)
 data$NZDep01<-as.factor(data$NZDep01)
@@ -591,9 +375,9 @@ data$EthnicityPrioritised<-as.factor(data$EthnicityPrioritised)
 time<-aggregate( cbind( DiseaseName ) ~ NZDep01 +NZDep06+NZDep13+AgeInYears+EthnicityPrioritised + SurvWeek + RptYear,# + Dose1Mths + Dose2Mths, 
 data = data , FUN=sum)
 
-
 test<-subset(time, (RptYear %in% c("2007","2008","2009","2010","2011","2012","2013","2014")))
-
+head(test)
+dim(test)
 caseyr<-aggregate( DiseaseName ~ AgeInYears, 
 data = test , FUN=sum)
 caseyr
@@ -620,7 +404,9 @@ ifelse (test$RptYear == "2010",test$NZDep06,
 ifelse (test$RptYear == "2011",test$NZDep06,
 ifelse (test$RptYear == "2012",test$NZDep06,
 ifelse (test$RptYear == "2013",test$NZDep13,NZDep13))))))))
-
+head(testt)
+tail(testt)
+str(testt)
 testt$NZDep<-as.factor(testt$NZDep-1)
 
 testtable<-aggregate( cbind( DiseaseName) #+ as.numeric(SurvWeek))
@@ -629,6 +415,10 @@ data = testt , FUN=sum)
 dim(testtable)
 colnames(testtable)<-c("NZDep","Age","Ethnicity","Year","Cases")
 head(testtable)
+
+#tnzd<-revalue(testtable$NZDep, c("1"="1-5","2"="1-5","3"="1-5","4"="1-5",
+#"5"="1-5","6"="6-10","7"="6-10","8"="6-10",
+#"9"="6-10","10"="6-10"));
 
 tnzd<-revalue(testtable$NZDep, c("1"="1-3","2"="1-3","3"="1-3","4"="4-7",
                                  "5"="4-7","6"="4-7","7"="4-7","8"="8-10",
@@ -688,6 +478,9 @@ dm$Age<-revalue(dm$Age, c("0-2"="0-1", "3-5"="2-4","6-17"="5-17"));
 popn<-melt(dm,id.vars=c("Age","Ethnicity"),measure.vars=c("Dep1","Dep2","Dep3","Dep4",'Dep5','Dep6','Dep7','Dep8','Dep9',"Dep10"))
 colnames(popn)<-c("Age","Ethnicity","NZDep","Popn")
 popn
+#pnzd<-revalue(popn$NZDep, c("Dep1"="1-5","Dep2"="1-5","Dep3"="1-5","Dep4"="1-5",
+#"Dep5"="1-5","Dep6"="6-10","Dep7"="6-10","Dep8"="6-10",
+#"Dep9"="6-10","Dep10"="6-10"));
 
 pnzd<-revalue(popn$NZDep, c("Dep1"="1-3","Dep2"="1-3","Dep3"="1-3","Dep4"="4-7",
                             "Dep5"="4-7","Dep6"="4-7","Dep7"="4-7","Dep8"="8-10",
@@ -713,14 +506,13 @@ PerCap<-cbind(tp[,c(1:4,6)],round(PerCapita*10000,4))
 colnames(PerCap)<-c("NZDep","Age","Ethnicity","Population","Cases","Per capita")
 
 tp$perCap<-with(tp,tp$cases/tp$Popn*10000)
-
 tpsub<-tp[!(tp$Ethnicity=="MLA"),]
 tpsub$ordert <- factor(tpsub$merge, as.character(tpsub$merge))
 
 tpsub1<-tpsub[ order(tpsub$Age), ]
 tpsub1$ordert <- factor(tpsub1$merge, as.character(tpsub1$merge))
 
-
+#hist(tp$cases,xlab="Cases",main='Histogram of cases per category',col='grey',breaks=20)
 tp$Ethnicity<- relevel(tp$Ethnicity, "European")
 model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=tp,family="quasipoisson")
 summary(model)
@@ -734,6 +526,7 @@ summary(model2)
 anova(model2,test="F")
 
 ## use tpsub
+#hist(tpsub$cases,xlab="Cases",main='Histogram of cases per category',col="darkgrey",breaks=20)
 
 model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=tpsub,family="quasipoisson")
 summary(model)
@@ -752,27 +545,33 @@ anova(model2,test="F")
 model3<-update(model2,~.-Ethnicity:NZDep)
 summary(model3)
 anova(model3,test="F")
+anovap<-anova(model3,test="F")
+
+res<-predict(model3)
+#res<-predict(model2)
+
+cor(exp(res),tpsub$cases)
+cor.test(exp(res),tpsub$cases)
+
+resan<-xtable(anova(model3,test="F"))
+#resan<-xtable(anova(model2,test="F"))
+# print(resan,floating = FALSE)
+
+#xtb<-xtable(summary(model3))
+xtb<-xtable(summary(model2))
+# print(xtb,floating = FALSE)
 
 AgeVac<-table(testv$VC,testv$AgeInYears)
 row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
 AgeVac<-t(AgeVac)
 
 DOB<-as.numeric(levels(testv$RptYear))[testv$RptYear]-testv$AgeInYears
- hist(DOB,breaks=100,col="grey",main="2007- 2014 measles cases",xlab="Date of Birth")
- DOBVac<-table(testv$VC,DOB)
- row.names(DOBVac)<-c("Unvaccinated","Dose1","Dose2")
- DOBVac<-t(DOBVac)
+#hist(DOB,breaks=100,col="grey",main="2007- 2014 measles cases",xlab="Date of Birth")
 
+DOBVac<-table(testv$VC,DOB)
+row.names(DOBVac)<-c("Unvaccinated","Dose1","Dose2")
+DOBVac<-t(DOBVac)
 
-popimmune<-read.csv("PopnImmunityAll.csv",header=T)
-popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
-rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-length(pop)
-naive<-round(pop-(pop*impop))
 
 popimmune<-read.csv("PopnImmunityAll.csv",header=T)
 popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
@@ -791,6 +590,7 @@ naive<-merge(naive,caseyr,by="AgeInYears",all=T)
 #naive[is.na(naive)] <- 0
 colnames(naive)<-c("AgeInYears","Naive","Cases")
 ##
+###
 
 # proportions of the naive population the wuld be covered if vaccinated by age groups now
 propvCohort<-c(
@@ -848,113 +648,11 @@ table11<-cbind(Age=rownames(table11),table11)
 rownames(table11)<-1:11
 colnames(table11)<-c("Age","Proportion")
 
+# write.table(table11,"vaccine_proportions_11yrOlds.txt",sep=",",row.names=F)
+# write.table(table120,"vaccine_proportions_1_20yrOlds.txt",sep=",",row.names=F)
+# write.table(table201,"vaccine_proportions_20_1yrOlds.txt",sep=",",row.names=F)
+
 ###
-
-tp$Ethnicity<- relevel(tp$Ethnicity, "European")
-model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=tp,family="quasipoisson")
-summary(model)
-
-model1<-update(model,~.-Age:Ethnicity:NZDep)
-summary(model1)
-anova(model1,test="F") # F test, not Chisq, because dispersion estimated by moments
-
-model2<-update(model1,~.-Age:NZDep)
-summary(model2)
-anova(model2,test="F")
-
-
-tpsub<-tp[!(tp$Ethnicity=="MLA"),]
-
-model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=tpsub,family="quasipoisson")
-summary(model)
-
-model1<-update(model,~.-Age:Ethnicity:NZDep)
-summary(model1)
-anova(model1,test="F")
-
-model2<-update(model1,~.-Ethnicity:NZDep)
-summary(model2)
-anova(model2,test="F")
-
-model3<-update(model2,~.-Age:NZDep)
-summary(model3)
-anova(model3,test="F")
-
-res<-predict(model3)
-cor(exp(res),tpsub$cases)
-cor.test(exp(res),tpsub$cases)
-
-AgeVac<-table(testv$VC,testv$AgeInYears)
-row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
-AgeVac<-t(AgeVac)
-
-# read in data from NIR
-data_d <- read.table("NIR_MMR_data_20060101-20140731/NIR_MMR_data_20060101-20140731.txt", header=T, sep="|")
-
-# read in domicile <-> AU map
-data_dom <- read.csv("NIR_MMR_data_20060101-20140731/domicile_code.csv")
-
-# merge NIR with domicile/AU so we have AU for each NIR
-data_merge <- merge(data_d, data_dom, by.x = "DOMICILE_CODE", by.y="dom", all=T)
-
-# TODO: figure out how many kids are immunised in each AU
-# find number of kids by BIRTH_CALENDAR_YEAR, AU, VACCINE_DOSE
-
-num_kids <- table(data_merge$BIRTH_CALENDAR_YEAR, data_merge$area.unit, data_merge$VACCINE_DOSE)
-# drop the 0's from vaccine_dose
-dose1 <- t(num_kids[,,2])
-dose2 <- t(num_kids[,,3])
-dose1 <- as.data.frame(dose1[,-ncol(dose1)])
-dose2 <- as.data.frame(dose2[,-ncol(dose2)])
-dose1$cau <- rownames(dose1)
-dose2$cau <- rownames(dose2)
-
-
-# read in shapefile for AU's
-au <- readShapeSpatial("AU2013_GV_Full")
-
-au_data <- slot(au, "data")
-
-# read in denominator data for AU's
-data_denom<-read.csv("2013-mb-dataset-Total-New-Zealand-individual-part-1_AU.csv",header=T)
-denom<-data_denom[,1]
-for (i in 1:5)
-  denom <- cbind(denom, data_denom[,3]/5)
-for (i in 1:5)
-  denom <- cbind(denom, data_denom[,4]/5)
-colnames(denom)[2:11] <- 2013:(2013-9)
-denom <- denom[,c(1,9:2)]
-
-dose2_merge <- merge(dose2, denom, by.x="cau", by.y="denom", all=T)
-diff <- dose2_merge[,2:8+7] - dose2_merge[,2:8]
-image(as.matrix(diff > 0))
-
-dose2_num <- data.frame(cau=dose2_merge$cau, vacc = rowSums(dose2_merge[,2:5]), total = rowSums(dose2_merge[,10:13]))
-diff <- dose2_num$total - dose2_num$vacc
-
-dose1_merge <- merge(dose1, denom, by.x="cau", by.y="denom", all=T)
-diff <- dose1_merge[,2:8] - dose1_merge[,2:8+7]
-image(as.matrix(diff > 0))
-
-au_new <- merge(au_data, dose2_num, by.x="AU2013", by.y="cau", all.x=T)
-au_new$prop <- au_new$vacc / au_new$total
-
-fixedBreaks <- c(0,0.5,0.7, 0.9, 1.1, 1.3, 1.5, Inf)
-au_new$prop[!is.finite(au_new$prop)] <- NA
-breaks <- classIntervals(au_new$prop, n=7, style="fixed", fixedBreaks=fixedBreaks)
-pal <- brewer.pal("Spectral", n=7)
-
-cols <- findColours(breaks, pal)
-plot(au, col=cols)
-
-## plot to show Ministry the data issues...
-fixedBreaks <- c(0,0.6,0.8,1, 1.2,1.4,Inf)
-au_new$prop[!is.finite(au_new$prop)] <- NA
-breaks <- classIntervals(au_new$prop, n=6, style="fixed", fixedBreaks=fixedBreaks)
-pal <- brewer.pal("RdGy", n=6)
-pal<-c("red","orange","grey","blue","green","yellow")
-cols <- findColours(breaks, pal)
-
 popimmune<-read.csv("PopnImmunityAll.csv",header=T)
 popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
 pop<-read.csv("popnsize.csv",header=T)
@@ -1000,132 +698,26 @@ imrisk<-(topimrisk[1:30,c(1,5)])
 imrisk[,2]<-round(imrisk[,2],0)
 # haven't had time to sort out which packages I need
 
-#getwd()
-#setwd("~/data")
-#unzip("TM_WORLD_BORDERS_SIMPL-0.3.zip")
-load("world.ggmap.Rda")
-n <- length(unique(world.ggmap$id))
-id = unique(world.ggmap$id)
-id<-as.data.frame(id)
-dpdf<-read.csv("mapdata_tot.csv",header=T)
-# output top countries
-
-np1<-ggplot(dpdf, aes(map_id = id))  +
-  geom_map(aes(fill = immigration), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-   xlab("longitude") +
-  ylab("latitude") +
-   theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
-
-np2<-ggplot(dpdf, aes(map_id = id))  +
-  geom_map(aes(fill = incidence), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-  xlab("longitude") +
-  ylab("latitude") +
-   theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
-
-np3<-ggplot(dpdf, aes(map_id = id))  +
-  geom_map(aes(fill = cover), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-  xlab("longitude") +
-  ylab("latitude") +
-  theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "red", high = "blue", guide = "colorbar")
-
-#grid.arrange(np1, np2, np3, ncol=3, main="")
-
-np4<-ggplot(dpdf, aes(map_id = id)) +
-  geom_map(aes(fill = risk), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-   xlab("longitude") +
-  ylab("latitude") +
-  theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
-#np4
-# output top countries
-dpdf<-read.csv("mapdata_immigration.csv",header=T)
-imnp1<-ggplot(dpdf, aes(map_id = id))  +
-  geom_map(aes(fill = immigration), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-   xlab("longitude") +
-  ylab("latitude") +
-   theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
-
-imnp4<-ggplot(dpdf, aes(map_id = id)) +
-  geom_map(aes(fill = risk), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-   xlab("longitude") +
-  ylab("latitude") +
-  theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
-#np4
-dpdf<-read.csv("mapdata_nzers.csv",header=T)
-nznp1<-ggplot(dpdf, aes(map_id = id))  +
-  geom_map(aes(fill = immigration), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-   xlab("longitude") +
-  ylab("latitude") +
-   theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "blue", high = "red", guide = "colorbar")
-
-nznp4<-ggplot(dpdf, aes(map_id = id)) +
-  geom_map(aes(fill = risk), map =world.ggmap) +
-  expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
-   xlab("longitude") +
-  ylab("latitude") +
-  theme(text = element_text(size=30))+
-  scale_fill_gradient("",low = "yellow", high = "red", guide = "colorbar")
-#np4
-
 change<-read.csv("change.csv",header=T)
 costtable1<-read.csv("costtable1.csv",header=T)
 costtable2<-read.csv("costtable2v2.csv",header=T)
 costtable3<-read.csv("costtable3.csv",header=T)
-
-hosp<-read.csv("hospital.csv",header=T)
-
-p<-ggplot(data=hosp, aes(x=Days, y=Number)) + geom_bar(stat="identity")+theme(axis.title.x = element_text(size=25),axis.title.y = element_text(size=25),axis.text.x  = element_text(size=16),axis.text.y  = element_text(size=16))
-
 costtable4<-read.csv("costtable4v2.csv",header=T)
 costtable5<-read.csv("costtable5v2.csv",header=T)
-vacp<-read.csv("vacc_predictions.csv",header=T)
-
 costtable20<-read.csv("cost_benefit_20.csv",header=T)
 costtable50<-read.csv("cost_benefit_50.csv",header=T)
 
-popimmune<-read.csv("PopnImmunityAll.csv",header=T)
-popimmune$Age = factor(popimmune$Age,levels(popimmune$Age)[c(2,3,6,8,10:12,4,5,7,9,1)])
-pop<-read.csv("popnsize.csv",header=T)
-colnames(pop)<-0:100
-pop<-t(pop)
-impop<-c(popimmune$Immunity[1:6],rep(popimmune$Immunity[7],8),rep(popimmune$Immunity[8],5),rep(popimmune$Immunity[9],5),
-         rep(popimmune$Immunity[10],9),rep(popimmune$Immunity[11],20),rep(popimmune$Immunity[12],48))
-length(pop)
-naive<-round(pop-(pop*impop))
+vacp<-read.csv("vacc_predictions.csv",header=T)
+hosp<-read.csv("hospital.csv",header=T)
+resan<-xtable(anova(model3,test="F"))
+xtb<-xtable(summary(model3))
 
-## match cases per age
-AgeInYears<-0:100
-naive<-cbind(AgeInYears,naive)
-colnames(naive)<-c("AgeInYears","Naive")
-naive<-merge(naive,caseyr,by="AgeInYears",all=T)
-#naive[is.na(naive)] <- 0
-colnames(naive)<-c("AgeInYears","Naive","Cases")
 @
 
 \begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-par(mfrow=c(1,1))
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-hist(time$AgeInYears,col="grey",xlab="Age in years",main="",breaks=90,include.lowest=TRUE,right=F,ylab="Frequency",cex.lab=2)
-hist(time_yr$AgeInYears,col="black",breaks=90,include.lowest=TRUE,right=F,add=T)
-legend("topright",c("1997-2014","2007-2014"),col=c("grey","black"),pch=15,bty="n",cex=2)
-@
-\end{center}
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{case_age_dist.pdf}
+     \end{center}
 \caption{Numbers and age of measles cases in years in New Zealand for two periods, 1997--2014 and 2007--2014}
 \label{fig:ageinyears}
 \end{figure}
@@ -1134,8 +726,7 @@ This large number of categories, some with small population sizes, leads to both
 
 The Prioritized Ethnicities for cases are:  European; Maori; Pacific Peoples; Asian; Middle Eastern/Latin American/African (MLA); Other Ethnicity; Residual Categories. For the analyses in this report only the first five are used, as these categories cover the overwhelming number of cases, with only 1.9\% (22/1137) of cases having no Prioritized Ethnicity (see \emph{None}, \autoref{table:none}). 
 
-\begin{table}[hbtp]
-\footnotesize
+\begin{table}[hbtp]\scriptsize
 <<results=tex,echo=FALSE>>=# This chunk uses "results=tex"
 latex(ttyr, file="",table.env=FALSE,rowname=NULL)
 @
@@ -1143,323 +734,25 @@ latex(ttyr, file="",table.env=FALSE,rowname=NULL)
 \label{table:none}
 \end{table}
 
-
-\begin{figure}
+\begin{sidewaysfigure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-ggplot(tp, aes(x=NZDep, y=cases, fill=Age)) + 
-  geom_bar(stat="identity", position="dodge")+
- # theme(text=element_text(size=45))+
-  ylab("cases")
-@
+     \includegraphics[width=0.9\textwidth]{percap_ordert.pdf}
 \end{center}
 \caption{test}
-%\label{fig:test}
-\end{figure}
+\label{fig:percap_all}
+\end{sidewaysfigure}
 
-\begin{figure}
+\begin{sidewaysfigure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-ggplot(tp, aes(x=NZDep, y=cases, fill=Ethnicity)) + 
-  geom_bar(stat="identity", position="dodge")+
-#  theme(text=element_text(size=45))+
-  ylab("cases")
-@
+     \includegraphics[width=0.9\textwidth]{case_ordert.pdf}
 \end{center}
 \caption{test}
-%\label{fig:test}
-\end{figure}
+\label{fig:cases_all}
+\end{sidewaysfigure}
 
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-ggplot(tp, aes(x=Age, y=cases, fill=Ethnicity)) + 
-  geom_bar(stat="identity", position="dodge")+
-#  theme(text=element_text(size=45))+
-  ylab("cases")
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
+Two way interactions are shown in \autoref{sec:app} (\autoref{fig:CaseAgeNzdep}, \autoref{fig:CaseNzdepEth}, \autoref{fig:CaseAgeEth}, \autoref{fig:PerCapAgeNzdep}, \autoref{fig:PerCapNzdepEth}, \autoref{fig:PerCapAgeEth}).
 
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-ggplot(tp, aes(x=NZDep,y= perCap, fill=Age)) + 
-  geom_bar(stat="identity", position="dodge")+
- # theme(text=element_text(size=45))+
-  ylab("Per capita per 10000")
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-ggplot(tp, aes(x=NZDep, y=perCap, fill=Ethnicity)) + 
-  geom_bar(stat="identity", position="dodge")+
-  #theme(text=element_text(size=45))+
-  ylab("Per capita per 10000")
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-ggplot(tp, aes(x=Age,y= perCap, fill=Ethnicity)) + 
-  geom_bar(stat="identity", position="dodge")+
-  #theme(text=element_text(size=45))+
-  ylab("Per capita per 10000")
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-ggplot(tpsub, aes(x=NZDep,y= perCap, fill=Age)) + 
-  geom_bar(stat="identity", position="dodge")+
-  #theme(text=element_text(size=45))+
-  ylab("Per capita per 10000")
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-ggplot(tpsub, aes(x=NZDep,y= perCap, fill=Ethnicity)) + 
-  geom_bar(stat="identity", position="dodge")+
-  #theme(text=element_text(size=45))+
-  ylab("Per capita per 10000")
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-ggplot(tpsub, aes(x=Age, y=perCap, fill=Ethnicity)) + 
-  geom_bar(stat="identity", position="dodge")+
-  #theme(text=element_text(size=45))+
-  ylab("Per capita per 10000")
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-ggplot(tp, aes(x=merge, y=cases, fill=Ethnicity)) + 
-     geom_bar(stat="identity", position="dodge")+
-     # theme(text=element_text(size=45))+
-     ylab("cases")+theme(axis.text.x = element_text(angle = 90, hjust = 0))
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-ggplot(tpsub, aes(x=ordert, y=cases, fill=Ethnicity)) +
-     geom_bar(stat="identity", position="dodge")+
-     # theme(text=element_text(size=45))+
-     ylab("cases")+theme(axis.text.x = element_text(angle = 90, vjust=0,hjust = 0))
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-ggplot(tpsub, aes(x=ordert, y=perCap, fill=Ethnicity)) +
-     geom_bar(stat="identity", position="dodge")+
-     # theme(text=element_text(size=45))+
-     ylab("per capita")+theme(axis.text.x = element_text(angle = 90, vjust=0, hjust = 1))
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-
-ggplot(tpsub1, aes(x=ordert,y= cases, fill=Ethnicity)) +
-     geom_bar(stat="identity", position="dodge")+
-     # theme(text=element_text(size=45))+
-     ylab("cases")+theme(axis.text.x = element_text(angle = 90, hjust = 0))
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-ggplot(tpsub1, aes(x=ordert,y= perCap, fill=Ethnicity)) +
-     geom_bar(stat="identity", position="dodge")+
-     # theme(text=element_text(size=45))+
-     ylab("per captita")+theme(axis.text.x = element_text(angle = 90, hjust = 0))
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-par(cex.axis=2)
-par(mar=c(5,6,4,2)+0.1)
-hist(tpsub$cases,xlab="Number of cases",main='',col='grey',breaks=20,ylab="Number of categories",cex.lab=2)
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-plot(exp(res),tpsub$cases,xlab="cases",ylab='predictions',main="",pch=16,col="darkgrey",cex.lab=2,cex=2)
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-<<echo=FALSE,include=FALSE>>=
-#cor(exp(res),tpsub$cases)
-cor.test(exp(res),tpsub$cases)
-@
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-#hist(model3$residuals,main="",xlab="residuals",col="grey",cex.lab=2,ylab="")
-hist(model2$residuals,main="",xlab="residuals",col="grey",cex.lab=2,ylab="")
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-barplot(t(AgeVac),xlab="Age",col=c("darkgrey","red","orange"),main="",ylab="Frequency",cex.lab=2)
-legend("topright",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"),cex=1.8,bty="n")
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-hist(vac$Dose1Mths,breaks=100,col=rgb(0,0,1,1/4),xlab="Age in months",main="",cex.lab=2,ylab="Frequency")
-abline(v=12,col="blue")
-hist(vac$Dose2Mths,breaks=50,add=T,col=rgb(1,0,0,1/4))
-abline(v=60,col="red")
-legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=15,bty="n",cex=1.8)
-legend("top",c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n",cex=1.8)
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
- \begin{figure}
- \begin{center}
- <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
- par(mar=c(5,6,4,2)+0.1)
- par(cex.axis=1)
- barplot(t(DOBVac),xlab="Age",col=c("darkgrey","red","orange"),main="",ylab="Frequency",cex.lab=1)
- legend("topleft",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"),cex=1,bty="n")
-@
- \end{center}
- \caption{test}
-%\label{fig:test}
- \end{figure}
- 
- \begin{figure}
- \begin{center}
- <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
- par(mar=c(5,6,4,2)+0.1)
- par(cex.axis=1)
- par(mfrow=c(2,1))
- barplot(DOBVac[,2],col=rgb(0,0,1,1/4),xlab="Date of Birth",main="",cex.lab=1,ylab="Frequency")
- legend("topleft",c("Dose 1"),col=rgb(0,0,1,1/4),pch=15,bty="n",cex=1)
- par(mar=c(5,6,4,2)+0.1)
- par(cex.axis=1)
- barplot(DOBVac[,3],col=rgb(1,0,0,1/4),xlab="Date of Birth",main="",cex.lab=1,ylab="Frequency")
-legend("topleft",c("Dose 2"),col=rgb(1,0,0,1/4),pch=15,bty="n",cex=1)
- @
- \end{center}
- \caption{test}
-\label{fig:test}
- \end{figure}
-
- \begin{figure}
- \begin{center}
- <<fig=TRUE,echo=FALSE,width = 15,height=12>>=
- par(mar=c(5,6,4,2)+0.1)
- par(cex.axis=1.5)
- par(mfrow=c(1,1))
- barplot(DOBVac[,1],col="grey",xlab="Date of Birth",main="",cex.lab=1.5,ylab="Frequency")
- legend("topleft",c("Unvaccinated"),col="grey",pch=15,bty="n",cex=1.5)
- @
- \end{center}
- \caption{test}
-\label{fig:test}
- \end{figure}
-
-\begin{figure}
-\begin{center}
-<<fig=TRUE,echo=FALSE,width = 15,height=12>>=
-par(cex.axis=2)
-par(mar=c(5,6,4,2)+0.1)
-plot(pop,xlab="Age",ylab="Population",cex.lab=2)
-points(naive,pch=16)
-legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
-@
-\end{center}
-\caption{test}
-%\label{fig:test}
-\end{figure}
-
-\begin{table}[hbtp]
-\footnotesize
+\begin{table}[hbtp]\scriptsize
 \caption{Per capita measles rates}
 <<results=tex,echo=FALSE>>=
 latex(PerCap, file="", table.env=FALSE,rowname=NULL)
@@ -1467,9 +760,8 @@ latex(PerCap, file="", table.env=FALSE,rowname=NULL)
 \label{table:percap_rates}
 \end{table}
 
-\begin{table}[hbtp]
-\footnotesize
-\caption{proportions of the naive population the would be covered if vaccinated by age groups}
+\begin{table}[hbtp]\footnotesize
+\caption{Proportions of the naive population the would be covered if vaccinated by age groups}
 <<results=tex,echo=FALSE>>=
 latex(propvCohort, file="", table.env=FALSE)
 @
@@ -1479,27 +771,8 @@ latex(propvCohort, file="", table.env=FALSE)
 
 The numbers of cases per category and population sizes for the complete data set from 2007-2014 can be seen in \autoref{table:percap}. Subsequent regression analyses (not shown) also suggested that the MLA category was over-- or underrepresented in per capita rates given the very small sample sizes for this classification (\autoref{fig:percap}, \autoref{table:percap}), leading to very large standard error in regression analyses. However, there are numerous issues with the data for MLA ethnicity category above and beyond the small population sizes (see \autoref{table:percap}), thus creating issues for estimating the denominator data for this group (University of Otago, personal communication). Thus, we removed this grouping for our subsequent analyses and are left with Asian, European, Maori and Pacific as Prioritized Ethnicities. This left us with 1102/1115 (99\%) of the measles cases with Prioritized Ethnicity recorded from 2007, and 1102/1137 (97\%) of all measles cases recorded since 2007 (\autoref{table:percap}).
 
-% \begin{figure}
-% \begin{center}
-% <<fig=TRUE,echo=FALSE,width = 15,height=11>>=
-% par(mar=c(12,6,4,2)+0.1)
-% par(cex.axis=2)
-% plot(tp$cases/tp$Popn*10000,main="",ylab="Per Capita Rate Per 10,000",pch=16,cex=2,col=c(rep(1,10),rep(2,10),rep(3,10),rep(4,10),rep(6,10)),
-%      xlab="",cex.lab=2,xaxt="n")
-% axis(side = 1, at = 1:50, labels=rep(c("0-2yr, 1-5","0-2yr, 6-10","3-5yr, 1-5","3-5yr, 6-10","6-17yr, 1-5","6-17yr, 6-10","18-24yr, 1-5",'18-24yr, 1-5',"25+yr, 1-5","25+yr, 6-10"),5),las=2,cex.axis=1.5)
-% mtext(side=1,line=10,text="Age and NZDep",cex=2)
-% legend("topleft",c("Asian","European","Maori","MLA","Pacific"),
-%        col=c(1:4,6),pch=16,bty="n",cex=1.8)
-% par(mar = c(5,4,4,2) + 0.1)
-% @
-% \end{center}
-% \caption{Per capita rates of measles infections for specific age categories (0--2, 3--5, 6--17, 18--24, and 24+ years) and New Zealand deprivation indices (NZDep, 1--5 and 6--10) for 2007--2014, broken down by ethnicity (\autoref{table:percap} for details)}
-% \label{fig:percap}
-% \end{figure}
-
-\begin{table}[hbtp]
-\footnotesize
-\caption{Numbers of measles cases (Cases), population sizes (Ppulation) and per capita rates per 10,000 (Per capita) of measles in specific age (Age), ethnicity (Ethnicity) and socio-economic deprivation (NZDep) categories from 2007-2014}
+\begin{table}[hbtp] \scriptsize
+\caption{Measles cases (Cases), population sizes (Population) and per capita rates per 10,000 (Per capita) of measles in specific age (Age), ethnicity (Ethnicity) and socio-economic deprivation (NZDep) categories from 2007-2014}
 <<results=tex,echo=FALSE>>=
 latex(PerCap, file="", table.env=FALSE,rowname=NULL)
 @
@@ -1520,11 +793,7 @@ Where $\alpha$ is the intercept, $y$ signifies cases, $_a$ signifies age, $_e$ s
 The distribution of the measles cases per category used in the regression analyses are in \autoref{fig:histcasecat}.
 \begin{figure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-par(cex.axis=2)
-par(mar=c(5,6,4,2)+0.1)
-hist(tpsub$cases,xlab="Number of cases",main='',col='grey',breaks=20,ylab="Number of categories",cex.lab=2)
-@
+     \includegraphics[width=0.9\textwidth]{Cases_regmodel.pdf}
 \end{center}
 \caption{Distribution of measles cases per category (\autoref{table:percap}) used in the final regression model (\autoref{eq:reg})}
 \label{fig:histcasecat}
@@ -1533,11 +802,7 @@ hist(tpsub$cases,xlab="Number of cases",main='',col='grey',breaks=20,ylab="Numbe
 The predicted values from the regression model plotted against the reported cases are shown in \autoref{fig:predict}, and the residuals are shown in \autoref{fig:resid}.
 \begin{figure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width =11, height=11>>=
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-plot(exp(res),tpsub$cases,xlab="cases",ylab='predictions',main="",pch=16,col="darkgrey",cex.lab=2,cex=2)
-@
+     \includegraphics[width=0.9\textwidth]{Cases_regmodel_prediction.pdf}
 \end{center}
 \caption{Regression model (\autoref{eq:reg}) predictions plotted against the case data (\autoref{table:percap})}
 \label{fig:predict}
@@ -1546,43 +811,36 @@ plot(exp(res),tpsub$cases,xlab="cases",ylab='predictions',main="",pch=16,col="da
 
 \begin{figure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-hist(model3$residuals,main="",xlab="residuals",col="grey",cex.lab=2,ylab="")
-@
+     \includegraphics[width=0.9\textwidth]{Cases_regmodel_resid.pdf}
 \end{center}
 \caption{Histogram of residuals from the regression model (\autoref{eq:reg})}
 \label{fig:resid}
 \end{figure}
 
 The significance of the different predictor variables can be seen in the ANOVA results (\autoref{table:anova}).
-\par
+
 \vspace{5mm} %5mm vertical space
 \begin{table}
-<<label=regmodelanova,include=FALSE,echo=FALSE,results=tex>>=
-resan<-xtable(anova(model3,test="F"))
+<<include=FALSE,echo=FALSE,results=tex>>=
 print(resan,floating = FALSE)
 @
 \caption{Significance of different predictor variables for measles risk factors from 2007-2014, estimated using \autoref{eq:reg} and a quasipoisson error structure}
 \label{table:anova}
 \end{table}
-\vspace{5mm} %5mm vertical space
 
 A summary of the regression model (\autoref{eq:reg}) with the individual effects and the statistical support for the estimated coefficients can be seen in \autoref{table:regression_riskfactors}.
 
 \vspace{5mm} %5mm vertical space
 \begin{table}
-  <<label=regmodel,include=FALSE,results=tex,echo=FALSE>>=
-  xtb<-xtable(summary(model3))
+<<include=FALSE,echo=FALSE,results=tex>>=
   print(xtb,floating = FALSE)
-  @
+@
 \caption{Summary of the regression model results for measles risk factors for cases from 2007-2014}
 \label{table:regression_riskfactors}
 \end{table}
 \vspace{5mm} %5mm vertical space
 
-\par Apart from over-representation of some MLA categories discussed above and not included here, the results of the regression model suggest that age is a strong predictor of being a measles case. Indeed, all age categories are significantly less likely to be measles cases compared to 0-2 year olds, and the likelihood generally decreases with age (see also \autoref{fig:ageinyears}).
+Apart from over-representation of some MLA categories discussed above and not included here, the results of the regression model suggest that age is a strong predictor of being a measles case. Indeed, all age categories are significantly less likely to be measles cases compared to 0-2 year olds, and the likelihood generally decreases with age (see also \autoref{fig:ageinyears}).
 
 The majority of measles cases are among people of European ancestry (\autoref{table:percap} and \autoref{fig:ageinyears}), however, people of Pacific origin are also over-represented as measles cases on a per capita basis ($\beta$ = 1.16, standard error (SE) = 0.2, p--value < 0.0001). Those people in NZDep levels 6-10 are under-represented ($\beta$ = -0.21, SE = 0.085, p--value = 0.02), and there are some other age:ethnicity classes that are significantly less represented in the data compared to Europeans in those ages classes, particularly in the 6--17 age classes. In later measles outbreaks (since 2007) there has been a shift in the distribution of ages infected. The very young (<2 years old) are still most likely to be infected, but school aged children and older teenagers are more likely to be represented then the under tens (\autoref{fig:ageinyears} and \autoref{fig:ageandvac}, \autoref{table:sero}, and \autoref{sub:popim}). This pattern suggests that improving vaccination coverage in the young is reducing the burden of measles in those age categories (\autoref{table:percap}). Interestingly the regression results suggest risk of measles in the 6--17 year age category was greater for Europeans and Maori.
 
@@ -1623,12 +881,7 @@ The majority of the measles cases (82.8\%, 955/1154) from 2007--2014 were in unv
 
 \begin{figure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-barplot(t(AgeVac),xlab="Age",col=c("darkgrey","red","orange"),main="",ylab="Frequency",cex.lab=2)
-legend("topright",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","orange"),cex=1.8,bty="n")
-@
+     \includegraphics[width=0.9\textwidth]{vacc_status.pdf}
 \end{center}
 \caption{Age and vaccination status of measles cases, 2007--2014}
 \label{fig:ageandvac}
@@ -1638,16 +891,7 @@ legend("topright",c("Unvaccinated","Dose 1","Dose 2"),fill=c("darkgrey","red","o
 
 \begin{figure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-hist(vac$Dose1Mths,breaks=100,col=rgb(0,0,1,1/4),xlab="Age in months",main="",cex.lab=2,ylab="Frequency")
-abline(v=12,col="blue")
-hist(vac$Dose2Mths,breaks=50,add=T,col=rgb(1,0,0,1/4))
-abline(v=60,col="red")
-legend("topright",c("Dose 1","Dose 2"),col=c(rgb(0,0,1,1/4),rgb(1,0,0,1/4)),pch=15,bty="n",cex=1.8)
-legend("top",c("12 months","60 months"),col=c("blue","red"),lty=1,bty="n",cex=1.8)
-@
+     \includegraphics[width=0.9\textwidth]{vacc_age.pdf}
 \end{center}
 \caption{Age of vaccination of vaccinated measles cases, 2007--2014}
 \label{fig:vaccstat}
@@ -1664,22 +908,7 @@ For our measles importation risk analyses, we use arrivals data from New Zealand
 
 \begin{figure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-par(mfrow=c(1,1))
-# pdf(paste("nir_census.pdf"), width=7, height=5)
-plot(au, col=cols)
-legend("topright",c("0-60%","61-80%","81-100%","101-120%","121-140%",">141%","NA")
-       ,fill=c("red","orange","grey","blue","green","yellow","white"),
-       bty="n",inset=0.1,title="Percent vaccinated")
-## par("usr")
-##
-par(fig = c(0.05, 0.4, 0.5,0.9), mar=c(5,5,2,2), new=TRUE)
-hist(au_new$prop[au_new$prop < 2], breaks=50,col="grey",
-     xlab="Proportion vaccinated",main="")
-abline(v=1,col="red",lwd=3)
-#text(x=0.2,y=150,"Area Unit")
-#dev.off()
-@
+     \includegraphics[width=0.9\textwidth]{naive_au.pdf}
 \end{center}
 \caption{New Zealand population by age and estimated numbers of na\"{\i}ve people in each age class using National Immunisation Register level data and national census data as the denominator}
 \label{fig:naive_au}
@@ -1687,19 +916,13 @@ abline(v=1,col="red",lwd=3)
 
 \begin{figure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-par(mfrow=c(1,1))
-par(cex.axis=1)
-hist(au_new$prop, breaks=100,col="grey",xlab="Proportion vaccination",main="")
-abline(v=1,col="red")
-@
+     \includegraphics[width=0.9\textwidth]{naive_au_prop.pdf}
 \end{center}
 \caption{New Zealand population by age and estimated numbers of na\"{\i}ve people in each age class using National Immunisation Register level data and national census data as the denominator}
 \label{fig:naive_au_prop}
 \end{figure}
 
-The majority of the na\"{\i}ve among the general New Zealand population are in their first years of life (\autoref{fig:naive}). However, the distribution of na\"{\i}ve at a national level shows that the recent MMR vaccination schemes are reducing the proportions of na\"{\i}ve population in the 3--5 year old age group to greater levels than in older young people  (\autoref{fig:naive}). Plotting the breakdown of these figures by DHB clearly shows that the greatest numbers of na\"{\i}ve people are in DHBs with larger urban areas (\autoref{fig:naive_map}). The distribution of the numbers of na\"{\i}ve and the total na\"{\i}ve populations per DHB, assuming national immunisation and immunity rates are representative, are given in the following figures:
-
+The majority of the na\"{\i}ve among the general New Zealand population are in their first years of life (\autoref{fig:naive}). However, the distribution of na\"{\i}ve at a national level shows that the recent MMR vaccination schemes are reducing the proportions of na\"{\i}ve population in the 3--5 year old age group to greater levels than in older young people  (\autoref{fig:naive}). Plotting the breakdown of these figures by DHB clearly shows that the greatest numbers of na\"{\i}ve people are in DHBs with larger urban areas (\autoref{fig:naive_map}). The distribution of the numbers of na\"{\i}ve and the total na\"{\i}ve populations per DHB, assuming national immunisation and immunity rates are representative, are given in the following figures in the \autoref{sec:app}: 
 \begin{itemize}[noitemsep,nolistsep]
 \item Northland: \autoref{fig:Northland}
 \item Waitemata: \autoref{fig:Waitemata}
@@ -1723,18 +946,13 @@ The majority of the na\"{\i}ve among the general New Zealand population are in t
 \item Southern: \autoref{fig:Southern}
 \end{itemize}
 
+
 Plotting the lower level data available from the NIR database highlights the issue of surveillance data requiring appropriate denominator data, as these analyses show that there is a lack of correspondence between the national census data and the NIR data (\autoref{fig:nir})
 
 
 \begin{figure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-par(cex.axis=2)
-par(mar=c(5,6,4,2)+0.1)
-plot(pop,xlab="Age",ylab="Population",cex.lab=2)
-points(naive,pch=16)
-legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
-@
+     \includegraphics[width=0.9\textwidth]{naive_allPop.pdf}
 \end{center}
 \caption{New Zealand population by age and estimated numbers of na\"{\i}ve people in each age class using national immunity data (\autoref{table:sero})}
 \label{fig:naive}
@@ -1742,171 +960,10 @@ legend("topright",c("Population","Naive"),pch=c(1,16),bty="n",cex=1.8)
 
 \begin{figure}[H]
      \begin{center}
-     \includegraphics[width=1.2\textwidth]{naive_map.pdf}
+     \includegraphics[width=0.9\textwidth]{naive_map.pdf}
      \end{center}
      \caption{Numbers of na\"{\i}ve individuals per District Health Board, using national immunity data (\autoref{table:sero})}
      \label{fig:naive_map}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb1.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Northland District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Northland}
-\end{figure}
-
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb2.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Waitemata District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Waitemata}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb3.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Auckland District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Auckland}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb4.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Counties Manukau District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Counties_Manukau}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb5.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Waikato District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Waikato}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb6.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Lakes District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Lakes}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb7.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Bay of Plenty District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:BayofPlenty}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb8.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Tairawhiti District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Tairawhiti}
-\end{figure}
-
-\begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=0.6\textwidth]{dhb9.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Taranaki District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Taranaki}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb10.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Hawke's Bay District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:HawkesBay}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb11.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Whanganui District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Whanganui}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb12.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Midcentral District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Midcentral}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb13.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Hutt District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Hutt}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb14.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Capital and Coast District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:CapitalandCoast}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb15.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Wairarapa District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Wairarapa}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb16.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Nelson Marlborough District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:NelsonMarlborough}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb17.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, West Coast District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:WestCoast}
-\end{figure}
-
-\begin{figure}[H]
-   \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb18.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Canterbury District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Canterbury}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb19.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, South Canterbury District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:SouthCanterbury}
-\end{figure}
-
-\begin{figure}[H]
-     \begin{center}
-     \includegraphics[width=0.6\textwidth]{dhb20.pdf}
-     \end{center}
-     \caption{Numbers of na\"{\i}ve individuals per age class, Southern District Health Board, using national immunity data (\autoref{table:sero})}
-     \label{fig:Southern}
 \end{figure}
 
 \subsection{Measles importation risk results}
@@ -1990,87 +1047,71 @@ Globally, analyses of the most complete and recent year of data available, 2013,
 
 The measles incidence and vaccination coverage for those countries identified as posing the greatest risk for measles importation to New Zealand are in \autoref{table:toprisk}. WHO measles coverage is the percent of children that receive one dose of measles vaccine by their second birthday.
 
-\begin{figure}
+\begin{sidewaysfigure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np2)
-@
+     \includegraphics[width=0.9\textwidth]{incidence12.pdf}
 \end{center}
 \caption{Measles incidence per million, 2012. Data: WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Grey indicates not reported.}
 \label{fig:incidence12}
-\end{figure}
+\end{sidewaysfigure}
 
-\begin{figure}
+\begin{sidewaysfigure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np3)
-@
+     \includegraphics[width=0.9\textwidth]{cover12.pdf}
 \end{center}
 \caption{Measles vaccination cover (\% coverage of children that receive one dose of measles vaccine by their second birthday.), 2012. Data: WHO (\href{http://www.who.int/research/en/}{www.who.int/research/en/}). Grey indicates not reported.}
 \label{fig:cover12}
-\end{figure}
+\end{sidewaysfigure}
 
 
-\begin{figure}
+\begin{sidewaysfigure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(imnp1)
-@
+     \includegraphics[width=0.9\textwidth]{immigration12.pdf}
 \end{center}
 \caption{Non-New Zealander international travel and immigration, 2012 }
 \label{fig:immigration12}
-\end{figure}
+\end{sidewaysfigure}
 
-\begin{figure}
+\begin{sidewaysfigure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(nznp1)
-@
+     \includegraphics[width=0.9\textwidth]{nztravel12.pdf}
 \end{center}
 \caption{New Zealander international travel, 2012 }
 \label{fig:nztravel12}
-\end{figure}
+\end{sidewaysfigure}
 
 
-\begin{figure}
+\begin{sidewaysfigure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np1)
-@
+     \includegraphics[width=0.9\textwidth]{travel12.pdf}
 \end{center}
 \caption{Total international travel, 2012 }
 \label{fig:travel12}
-\end{figure}
+\end{sidewaysfigure}
 
-\begin{figure}
+\begin{sidewaysfigure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(np4)
-@
+     \includegraphics[width=0.9\textwidth]{risk12.pdf}
 \end{center}
 \caption{Risk map for measles importation, 2012 }
 \label{fig:risk12}
-\end{figure}
+\end{sidewaysfigure}
 
-\begin{figure}
+\begin{sidewaysfigure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(nznp4)
-@
+     \includegraphics[width=0.9\textwidth]{nzrisk12.pdf}
 \end{center}
 \caption{Risk map for measles importation from New Zealander international travel, 2012 }
 \label{fig:nzrisk12}
-\end{figure}
+\end{sidewaysfigure}
 
-\begin{figure}
+\begin{sidewaysfigure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(imnp4)
-@
+     \includegraphics[width=0.9\textwidth]{imrisk12.pdf}
 \end{center}
 \caption{Risk map for measles importation from non-New Zealander international travel and immigration, 2012 }
 \label{fig:imrisk12}
-\end{figure}
+\end{sidewaysfigure}
 
 
 \begin{figure}
@@ -2142,40 +1183,26 @@ The quantity that determines whether an epidemic will occur is the basic reprodu
 
 To understand the transmission dynamics of measles in the partially immune population and how likely an outbreak was of becoming endemic, we estimated $R_v$ from all the outbreaks in New Zealand since 2009. To do this we estimated $R_t$, following an adaptation of the methods in \citep{obidia12,wallinga4}. We are required to compute the generation time for measles to do so. The generation time is the average time an index case infects others after becoming infected. We used a lognormal distribution with mean 12.0 and standard deviation (s.d.) 3.5 from \citep{klinkenberg11}. We then estimated $R_t$ from the incidence data for each outbreak, defining outbreaks in the dataset given their temporal and geographic correlations (\autoref{fig:dhbcases}). The outbreaks we used in our analyses are shown in \autoref{fig:outbreaks}.
 
-\begin{figure}[H]
+\begin{sidewaysfigure}[H]
       \centering
      \includegraphics[width=0.9\textwidth]{cases_by_dhb_2009_2014.pdf}
      \caption{Measles cases by District Health Board (DHB) from 2009 to 2014}
      \label{fig:dhbcases}
-\end{figure}
+\end{sidewaysfigure}
 
-% \begin{figure}[H]
-%      \centering
-%      \includegraphics[width=0.9\textwidth]{outbreaks_for_R0.pdf}
-%      \caption{Measles data classified as outbreaks for reproduction number of the infection ($R_v$) estimation from 2009 to 2014}
-%      \label{fig:outbreaks}
-% \end{figure}
-% 
-% \begin{figure}[H]
-%      \centering
-%      \includegraphics[width=0.9\textwidth]{averageR0.pdf}
-%      \caption{Estimates of $R_v$ for the outbreaks each year, as classified by outbreaks in \autoref{fig:outbreaks}. Sporadic cases are excluded.}
-%      \label{fig:r0}
-% \end{figure}
-
-\begin{figure}[H]
+\begin{sidewaysfigure}[H]
      \centering
      \includegraphics[width=0.9\textwidth]{outbreaks_2009_2014.pdf}
      \caption{Measles data classified as outbreaks for reproduction number of the infection ($R_v$) estimation from 2009 to 2014}
      \label{fig:outbreaks}
-\end{figure}
+\end{sidewaysfigure}
 
-\begin{figure}[H]
+\begin{sidewaysfigure}[H]
      \centering
      \includegraphics[width=0.9\textwidth]{averageR0_all_ob.pdf}
      \caption{Estimates of $R_v$ for the outbreaks each year, as classified by outbreaks in \autoref{fig:outbreaks}. Sporadic cases are excluded.}
      \label{fig:r0}
-\end{figure}
+\end{sidewaysfigure}
 
 To estimate the proportion of the population requiring vaccination utilising our estimates of $R_v$, we use the well-known equation for the final size of an epidemic in a homogeneously mixing susceptible population \citep{diekmann13}:
 
@@ -2215,11 +1242,9 @@ To use the results from our modelling exercise to help inform the appropriate me
 
 The results of these modelling exercises suggest vaccination levels are close to eliminating the possibility of endemic measles transmission, as estimates of $R_v$ typically include 1 (\autoref{fig:r0}). However, the na\"{\i}ve population (\autoref{fig:naive} and \autoref{fig:naive_map}) and the higher $R_v$ for some of the 2009--2014 outbreaks (\autoref{fig:r0}) suggests that catch up vaccination is necessary (\autoref{table:attack}). The results of these analyses support other studies that suggest very high rates of vaccination are required to eliminate measles and prevent epidemics. Vaccinating 85\% of susceptible children aged one to seven years at five-yearly intervals was suggested to be sufficient to prevent epidemics in Israel \citep{agur93}, but nearly all other studies in Europe suggest no strategies succeeded if coverage rates were below approximately 87\%, which the population level immunity in New Zealand has only just reached, with approximately 11\% currently na\"{\i}ve. Analysis of measles vaccination in various regions suggest that 85\% coverage at MMR1 and MMR2 could be sufficient to prevent future measles epidemics \citep{agur93, babad95, edmunds0, gay98, wallinga1}, whereas \citep{glass4} showed that high overall levels of measles vaccination can obscure pockets of poor coverage, resulting in localised regions with increased risk of infection making effective immunisation difficult. Future analyses at a smaller, more local level would be useful, but the lack of appropriate data matching between the NIR data and the census unit area data currently prevent these.
 
-\begin{table}[htdp]
-
+\begin{table}[htdp]\small
 \begin{center}
-
-\begin{tabular}{lrrrr}
+\begin{tabular}{lrrrrr}
 \hline
 DHB  & Size  & Na\"{\i}ve    &   Attack	& Vacc	& Vacc (\%)	\\
 \hline
@@ -2228,7 +1253,7 @@ Bay of Plenty	&	206000	&	20679	&	8437	&	4585	& 22\\
 Canterbury	&	482180	&	51357	&	24695	&	13687	& 27\\
 Capital and Coast	&	283700	&	32625	&	18403	&	10461 & 32	\\
 Counties Manukau	&	469300	&	55544	&	32903	&	18880	& 33\\
-Hawke's Bay	&	151700	&	15602	&	6846	&	3751 &	& 24\\
+Hawke's Bay	&	151700	&	15602	&	6846	&	3751 & 24\\
 Hutt Valley	&	138380	&	15198	&	7836	&	4388	& 29\\
 Lakes	&	98196	&	10558	&	5192	&	2886	& 27\\
 MidCentral	&	162560	&	17328	&	8348	&	4628	& 27\\
@@ -2277,7 +1302,7 @@ Italy has the highest reported annual cost of measles among industrialised count
 
 An outbreak of measles occurred in Sydney, Australia, lasting nearly 2 months in 2011 and resulted in 26 confirmed cases \citep{flego13}. Seven (27\%) of the cases required hospitalisation for more than 1 day and 10 (38\%) resulted in management within a hospital emergency department. During this outbreak, a total of 1,395 contacts were identified and managed by a public health unit in western Sydney. The mean number of contacts per case was 54 (median = 28, maximum = 206). The estimated cost to the public health unit for contact management for the epidemic was in excess of AUS\$48,000, with 90\% of this being associated with staff time. 
 
-Germany implemented a two-dose measles vaccination program in 1991 and has seen the benefits in recent years. In 2001 more than 6,000 cases were reported, but by 2004 this number fell to 122 \citep{wichmann9}. However, in 2005 more than 500 cases were reported by the middle of the year in two German states, with the vast majority (>95\%) in non-vaccinated children \citep{siedler6}. An economic analysis was performed of the 614 measles cases reported in an 8-month period in Duisburg in the state of North Rhine-Wesphalia (NRW). In that study, they estimated the health-care provider costs to be approximately \euro 229,000,\footnote{Jan 2005 \$ to \euro rate 0.5375: \$426046} or \euro 373\footnote{Jan 2005 \$ to \euro rate 0.5375: \$694} per case. Approximately 78\% of these costs were associated with the 95 (15.5\%) of the cases that were hospitalised. The mean costs of the hospitalised patients was  \euro 1,877,\footnote{Jan 2005 \$ to \euro rate 0.5375: \$3492} including one patient with encephalitis at a cost of \euro 35,623.\footnote{Jan 2005 \$ to \euro rate 0.5375: \$66275} In addition to the health-care provider costs, additional costs of \euro 89,400\footnote{Jan 2005 \$ to \euro rate 0.5375: \$166325} were incurred by the district public health office, the majority (\euro 85,000,\footnote{Jan 2005 \$ to \euro rate 0.5375: \$158140} 95.1\%) for personnel, \euro 2,300\footnote{Jan 2005 \$ to \euro rate 0.5375: \$4279} (2.6\%) for vaccination, and \euro 2,100\footnote{Jan 2005 \$ to \euro rate 0.5375: \$3907} (2.3\%) for serologic testing. Therefore the combined direct costs of these 612 cases amounted to \euro 318,400,\footnote{Jan 2005 \$ to \euro rate 0.5375: \$592372} or \euro 520\footnote{Jan 2005 \$ to \euro rate 0.5375: \$967} per case. To determine the total impact, it would be necessary to include the indirect losses associated with lost production of cases and care givers.
+Germany implemented a two-dose measles vaccination program in 1991 and has seen the benefits in recent years. In 2001 more than 6,000 cases were reported, but by 2004 this number fell to 122 \citep{wichmann9}. However, in 2005 more than 500 cases were reported by the middle of the year in two German states, with the vast majority (>95\%) in non-vaccinated children \citep{siedler6}. An economic analysis was performed of the 614 measles cases reported in an 8-month period in Duisburg in the state of North Rhine-Wesphalia (NRW). In that study, they estimated the health-care provider costs to be approximately \euro 229,000,\footnote{Jan 2005 \$ to \euro\ rate 0.5375: \$426046} or \euro 373\footnote{Jan 2005 \$ to \euro\ rate 0.5375: \$694} per case. Approximately 78\% of these costs were associated with the 95 (15.5\%) of the cases that were hospitalised. The mean costs of the hospitalised patients was  \euro 1,877,\footnote{Jan 2005 \$ to \euro\ rate 0.5375: \$3492} including one patient with encephalitis at a cost of \euro 35,623.\footnote{Jan 2005 \$ to \euro\ rate 0.5375: \$66275} In addition to the health-care provider costs, additional costs of \euro 89,400\footnote{Jan 2005 \$ to \euro\ rate 0.5375: \$166325} were incurred by the district public health office, the majority (\euro 85,000,\footnote{Jan 2005 \$ to \euro\ rate 0.5375: \$158140} 95.1\%) for personnel, \euro 2,300\footnote{Jan 2005 \$ to \euro\ rate 0.5375: \$4279} (2.6\%) for vaccination, and \euro 2,100\footnote{Jan 2005 \$ to \euro\ rate 0.5375: \$3907} (2.3\%) for serologic testing. Therefore the combined direct costs of these 612 cases amounted to \euro 318,400,\footnote{Jan 2005 \$ to \euro\ rate 0.5375: \$592372} or \euro 520\footnote{Jan 2005 \$ to \euro\ rate 0.5375: \$967} per case. To determine the total impact, it would be necessary to include the indirect losses associated with lost production of cases and care givers.
 
 Although measles was declared eliminated from the United States in 2000, it remains a concern due to its endemic nature around the world \citep{parker6}. Several studies have been conducted in the United States to assess the economic impact of recent measles outbreaks due to imported cases.  The economic impact to public health departments in the US as the result of 16 outbreaks in 2011 has been estimated \citep{ortegasanchez14}. The outbreaks lasted an average of 22 days and resulted in 107 confirmed cases; however, from these 107 cases, they estimated between approximately 8,900 and 17,500 contacts with confirmed cases, requiring between 42,600 and 83,100 personnel hours at a cost of between US\$2.7\footnote{Jan 2011 \$ to US\$ rate 0.7653: \$3.53million} and 5.3\footnote{Jan 2011 \$ to US\$ rate 0.7653: \$6.93million} million. Overall, it was estimated that each contact required 4.7 personnel hours at a cost of US\$298\footnote{Jan 2011 \$ to US\$ rate 0.7653: \$389} per contact.
 
@@ -2348,9 +1373,7 @@ The length of hospital stay for the 293 cases reported between 2000 and 2014 ran
 
 \begin{figure}
 \begin{center}
-<<fig=TRUE,echo=FALSE,width = 11>>=
-print(p)
-@
+     \includegraphics[width=0.8\textwidth]{p.pdf}
 \end{center}
 \caption{Number of measles cases attending hospital and stay duration from 2000--2014}
 \label{fig:hosp}
@@ -2417,161 +1440,43 @@ Attack:	  Number infected in DHB in an outbreak of measles in the absence of any
 Vacc:		Number to be vaccinated in DHB to reduce $\Rr_V$ below one  $\left(\left(x_0-1/\Ro\right)\times\text{Size}\right)$; Proportion: the proportion of the currently na\"{i}ve population requiring vaccination; Na\"{i}ve.post.vaccination: the na\"{i}ve population following catch up vaccination; with Median.outbreak and Mean.outbreak: the expected median and mean outbreak size post--vaccination catch up from 1000 simulations of a stochastic model}\footnote{Note that the median value is what is expected, however, the mean values from 1000 simulations are espeically skewed the small numbers of large outbreaks. The distribution of these outbreaks sizes can be seen in \autoref{fig:sim1} and \autoref{fig:sim}}
 
 <<results=tex,echo=FALSE>>=
+colnames(vacp) <- c("Age range", "Proportion")
 latex(vacp, file="", table.env=FALSE,rowname=NULL)
 @
 \label{table:vacp}
 \end{sidewaystable}
 
-The numbers of susceptible people to vaccinate in New Zealand, assuming a homogeneously mixed population to achieve the 28\% currently na\"{i}ve catch up in vaccination numbers and using \autoref{eq:prop} are shown in \autoref{fig:numvac}.
-
-\begin{figure}[width=1\textwidth]
-     \centering
-<<fig=TRUE,echo=FALSE,width = 11,height=11>>=
-##
-par(mfrow=c(1,1))
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-plot(naive$Naive ,col="black",bg="black",pch=1,ylab="Number to vaccinate",xlab="Age in Years",
-     main="",cex.lab=2,cex=3)
-points(round(0.28*naive$Naive),col="grey",bg="red",pch=21,cex=2)
-points(x=3:18,y=naive$Naive[3:18],col="grey",bg="orange",pch=23,cex=2) # 
-legend("topright",c("Naive","28% naive, all ages","28% naive, all 2-17 yr olds"),
-       bty="n",pch=c(1,21,23),col=c("black","grey","grey"),pt.bg=c("black","red","orange"),cex=2)
-@
-     \caption{The estimated numbers of the currently na\"{\i}ve New Zealand population requiring additional vaccination to reduce the $R_v$ to less than one (\autoref{section:epidemic_modelling}, \autoref{table:cost20} and \autoref{table:cost50})}
-     \label{fig:numvac}
-\end{figure}
+The numbers of susceptible people to vaccinate in New Zealand, assuming a homogeneously mixed population to achieve the 28\% currently na\"{i}ve catch up in vaccination numbers and using \autoref{eq:prop} are shown in \autoref{table:vacp}.
 
 The expected number of cases in New Zealand, assuming homogenous mixing, in a na\"{\i}ve population of subsequently lower (~8\%) numbers of na\"{\i}ve of the population and assuming measles $R_v$ is <1 is shown in \autoref{fig:sim} and \autoref{fig:sim1}. These simulations show that even in scenarios when $R_v$ is lower than one, and thus deterministically should fail to persist (i.e. become endemic), outbreaks can occur due to stochastic processes following measles importation. The most likely scenario is that very few cases occur, with the median value from 1000 simulations low (2 cases). Thus most measles introductions will be single cases or lead to minor outbreaks. In this modelling exercise the mean value was 61 cases, suggesting this is likely to be an outbreak size to be expected. The maximum predicted number of cases was nearly 8,000 cases. Note, however, that larger values are very rarely predicted and this does not take into account spatial variation or heterogeneous contact rates.
 
-<<echo=FALSE,include=FALSE,results=hide>>=
-## simulate measles outbreaks/epidemics using GT and R0 from data.
-# http://www.sciencedirect.com/science/article/pii/S0022519311003146
-mu    <- 12
-sigma <- 3.5
-sigma_logn <- sqrt(log(1 + (sigma/mu)^2))
-mu_logn    <- log(mu) - log(1 + (sigma/mu)^2) / 2
-
-# then exp(rnorm(n, mu_logn, sigma_logn)) simulates from lognormal with the given mean and sd.
-
-# the R0 library 
-require(R0)
-#source("estR0.R")
-
-# generation time 
-genTime <- generation.time(type="lognormal", val=c(12, 3.5))
-
-jm.epid <- function (epid.nb, GT, R0, epid.length, family, negbin.size = NULL, 
-          peak.value = 300000, popn = 300000) 
-{
-  if (class(GT) != "R0.GT") {
-    stop("GT object must be of class R0.GT.")
-  }
-  if (family == "negbin" & is.null(negbin.size)) {
-    negbin.size <- R0/4
-  }
-  GT <- GT$GT
-  epidemics <- matrix(data = 0, nrow = epid.length, ncol = epid.nb)
-  for (n in 1:epid.nb) {
-    sim.epid = c(1, rep(0, epid.length - 1))
-    for (t in 1:epid.length) {
-      if (family == "poisson") {
-        susc <- max(0,popn - sum(sim.epid, na.rm=T))
-    #    peak.value[t]<-susc
-        new <- rbinom(sim.epid[t], susc, min(1, R0/susc))
-        if (sum(new) > susc) # arggrggg
-        {
-    #      cat("doing the new thing", susc, sim.epid[t], sum(sim.epid[1:t]),"\n")
-          new <- rep(0, sim.epid[t])
-          for (i in 1:sim.epid[t]) {
-   #         cat("taking a random number, susc=", susc, "\n")
-            new[i] <- rbinom(1, susc, min(1, R0/susc))
-            susc <- susc - new[i]
-            if (susc == 0)
-            {
- #             cat("got 'em all", sum(new), "\n")
-              break;
-            }
-          }
-        }
-#        cat("generating", new[1], "individuals from first, susc=", susc, "\n")
-      }
-      else if (family == "negbin") {
-        new <- rnbinom(sim.epid[t], size = negbin.size, 
-                       mu = R0)
-      }
-if (is.na(sum(new)))
-  break
-
-      newd <- rmultinom(1, sum(new), GT)[, 1]
-      sim.epid[t:(t + length(GT) - 1)] <- sim.epid[t:(t + 
-                                                        length(GT) - 1)] + newd
-      if (sim.epid[t + 1] > peak.value & t < (epid.length - 
-                                                1)) {
-        sim.epid[(t + 2):epid.length] <- 0
-        break
-      }
-    }
-    sim.epid <- sim.epid[!is.na(sim.epid)]
-    epidemics[, n] <- sim.epid
-  }
-  return(epidemics)
-}
-
-
-## if R 0 == 2
-set.seed(1) # all infected
-res<-jm.epid(epid.nb=1000,GT=genTime,R0=0.99,epid.length=365*5,popn=331385
-             ,family="poisson",peak.value=331385)
-sizes<-colSums(res)
-#sizes
-legMd<-as.factor(paste("median =",c(median(sizes))))
-legMn<-as.factor(paste("mean =",c(round(mean(sizes)))))
-@
-
 \begin{figure}
      \centering
-<<fig=TRUE,echo=FALSE,width = 11>>=
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-hist(sizes,xlim=c(0,200),col="grey",breaks=1000,xlab="Outbreak size",main="",cex.lab=2)
-#summary(sizes)
-abline(v=median(sizes),col="orange",lty=3,lwd=8)
-abline(v=mean(sizes),col="red",lty=3,lwd=8)
-#length(which(sizes>5))/1000
-legend('topright',c(levels(legMd),levels(legMn)),lty=rep(3,2),col=c("orange","red"),bty="n",lwd=8,cex=2)
-@
+     \includegraphics[width=0.9\textwidth]{sim.pdf}
      \caption{A subset of the expected number of measles cases from 1000 simulations of a model (\autoref{section:epidemic_modelling}) in a homogeneously mixed population in New Zealand with 28\% of the currently 11\% susceptible to measles infection vaccinated, using an $R_v$ <1. The full distribution of results can be seen in \autoref{fig:sim1}}
      \label{fig:sim}
 \end{figure}
 
 \begin{figure}
      \centering
-<<fig=TRUE,echo=FALSE,width = 11>>=
-par(mar=c(5,6,4,2)+0.1)
-par(cex.axis=2)
-hist(sizes,breaks=1000,xlab="Outbreak size",main="",cex.lab=2,ylim=c(0,20))
-abline(v=median(sizes),col="orange",lty=3,lwd=8)
-abline(v=mean(sizes),col="red",lty=3,lwd=8)
-legend('topright',c(levels(legMd),levels(legMn)),lty=rep(3,2),col=c("orange","red"),bty="n",lwd=8,cex=2)
-@
-     \caption{The distribution of the expected number of measles cases from 1000 simulations of a model (\autoref{section:epidemic_modelling}) in a homogeneously mixed population in New Zealand with 28\% of the currently 11\% susceptible to measles infection vaccinated, using an $R_v$ <1, showing the rare but possible large epidemic sizes possible. A subset of the distribution of results can be seen in \autoref{fig:sim}}
+     \includegraphics[width=0.9\textwidth]{sim1.pdf}
+  \caption{The distribution of the expected number of measles cases from 1000 simulations of a model (\autoref{section:epidemic_modelling}) in a homogeneously mixed population in New Zealand with 28\% of the currently 11\% susceptible to measles infection vaccinated, using an $R_v$ <1, showing the rare but possible large epidemic sizes possible. A subset of the distribution of results can be seen in \autoref{fig:sim}}
      \label{fig:sim1}
 \end{figure}
 
 \begin{sidewaystable}\small
-\caption{Benefit--cost analyses with 20 dollars per vaccine. \textit{Vacc} is numbers to vaccinate (see \autoref{table:attack}); \textit{Vacc costs} is cost for the catch up vaccination programme; \textit{Wages saved} is wages of care givers and cases saved (\$839 per case); \textit{Manage saved} is management costs saved (\$1,765 per case); \textit{Hospitalised} is number of hospitalisations saved, given the proportion of cases hospitalised 0.17; \textit{Hosp saved} is the hospitalisation costs saved (\$1,877 per case); \textit{Costs save}	is the discounted costs saved; \textit{Outbreak}	is the predicted outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations; \textit{OB costs}	is costs expected due to continued measles importations based on 10 introdcutions of measles, one per year, but costs discounted on the same discounted rate; \textit{B/C} is the benefit--cost ratio.}
+\caption{Benefit--cost analyses with 20 dollars per vaccine. \textit{Vacc} is numbers to vaccinate (see \autoref{table:attack}); \textit{Vacc costs} is cost for the catch up vaccination programme; \textit{Wages saved} is wages of care givers and cases saved (\$839 per case); \textit{Contacts} is costs saved through contact exclusion; \textit{Manage saved} is management costs saved (\$1,765 per case); \textit{Hosp saved} is the hospitalisation costs saved (\$1,877 per case); \textit{Costs save}	is the discounted costs saved; \textit{Outbreak}	is the predicted outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations; \textit{OB costs}	is costs expected due to continued measles importations based on 10 introdcutions of measles, one per year, but costs discounted on the same discounted rate; \textit{B/C} is the benefit--cost ratio.}
 <<results=tex,echo=FALSE>>=
-colnames(costtable20)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hospitalised", "Hosp saved", "Costs saved", "Outbreak", "OB costs", "B/C")
+colnames(costtable20)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C")
 latex(costtable20, file="", table.env=FALSE,rowname=NULL)
 @
 \label{table:cost20}
 \end{sidewaystable}
 
 \begin{sidewaystable}\small
-\caption{Benefit--cost analyses with 50 dollars per vaccine. \textit{Vacc} is numbers to vaccinate (see \autoref{table:attack}); \textit{Vacc costs} is cost for the catch up vaccination programme; \textit{Wages saved} is wages of care givers and cases saved (\$839 per case); \textit{Manage saved} is management costs saved (\$1,765 per case); \textit{Hospitalised} is number of hospitalisations saved, given the proportion of cases hospitalised 0.17; \textit{Hosp saved} is the hospitalisation costs saved (\$1,877 per case); \textit{Costs save}  is the discounted costs saved; \textit{Outbreak}	is the predicted outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations; \textit{OB costs}	is costs expected due to continued measles importations based on 10 introdcutions of measles, one per year, but costs discounted on the same discounted rate; \textit{B/C} is the benefit--cost ratio.}
+\caption{Benefit--cost analyses with 50 dollars per vaccine. \textit{Vacc} is numbers to vaccinate (see \autoref{table:attack}); \textit{Vacc costs} is cost for the catch up vaccination programme; \textit{Wages saved} is wages of care givers and cases saved (\$839 per case); \textit{Contacts} is costs saved through contact exclusion; \textit{Manage saved} is management costs saved (\$1,765 per case); \textit{Hosp saved} is the hospitalisation costs saved (\$1,877 per case); \textit{Costs save}  is the discounted costs saved; \textit{Outbreak}	is the predicted outbreak size despite $R_v < 1$ due to measles importation from 1000 simulations; \textit{OB costs}	is costs expected due to continued measles importations based on 10 introdcutions of measles, one per year, but costs discounted on the same discounted rate; \textit{B/C} is the benefit--cost ratio.}
 <<results=tex,echo=FALSE>>=
-colnames(costtable50)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hospitalised", "Hosp saved", "Costs saved", "Outbreak", "OB costs", "B/C")
+colnames(costtable50)<-c("DHB", "Vacc", "Vacc costs", "Wages saved", "Manage saved", "Hosp saved", "Contacts","Costs saved", "Outbreak", "OB costs", "B/C")
 latex(costtable50, file="", table.env=FALSE,rowname=NULL)
 @
 \label{table:cost50}
@@ -2584,11 +1489,11 @@ The model estimates for each DHB, with the vaccination percentages and the expec
 
 It is worth noting that vaccination strategies that target the very young (<1 year old) may be less effective, as our analyses of the vaccinated cases suggests a substantial proportion of vaccinated cases that were vaccinated (\autoref{fig:ageandvac}) were vaccinated with a single vaccine at a very young age (\autoref{fig:vaccstat}). Furthermore, it may be unnecessary to vaccinate very young, as it appears possible to reach the appropriate figure (28\% of currently na\"{\i}ve) by vaccinating all the currently na\"{\i}ve 2--17 year olds, so pre-school and school age children. However, there are a number of different vaccination schemes that will lead to sufficient coverage and these are given in \autoref{table:cohort_vac}. The appropriate cover could be reached by catch up vaccination of all school aged children.
 
-\begin{table}[htdp]
+\begin{table}[htdp]\small
 \begin{center}
 \begin{tabular}{lrrrr}
 \hline
-Age range in years for vaccination & Proportion of the currently na\"{\i}ve population it would cover \\
+Age range (yrs) & Proportion of na\"{\i}ve population\\
 \hline
 2--5 & 0.04\\
 5--11 & 0.15\\
@@ -2601,6 +1506,7 @@ Age range in years for vaccination & Proportion of the currently na\"{\i}ve popu
 >8 & 0.8 \\ 
 \hline
 \end{tabular}
+\caption{Proportion of the currently na\"{\i}ve New Zealand population that would be vaccinated if all na\"{\i}ve people in each age range were vaccinated. The estimated additional proportion of the population requiring vaccination is 28\%}
 \end{center}
 \label{table:cohort_vac}
 \end{table}%
@@ -2614,7 +1520,7 @@ The results presented here are based on available data. While some of the data a
 
 Detailed measles outbreak management costs were provided for the period of January 1 -- March 9, 2014. Similar data are needed for the period preceding 2014. In the abscence of these data we have used mean case data from aggregated data available. It may be unrealistic to assume that these costs would be linearly related with the number of measles cases, making it difficult to extrapolate these costs outside the reported period for 2014, but we have done so for these purposes.
 
-In other outbreaks, the average cost per measles case was estimated to be US\$254\footnote{Jan 2001 \$ to US\$ rate 0.4445: \$571}, US\$276\footnote{Jan 2001 \$ to US\$ rate 0.4445: \$621}, and US\$307\footnote{Jan 2001 \$ to US\$ rate 0.4445: \$691} for Canada, the Netherlands, and the UK, respectively  \citep{carabin2}. These values are substantially lower than our estimates, however, it is noticable that these estimates are also from more than a decade ago. The containment of a single case (also 2 secondary cases) of measles in 2004 in Iowa, USA was estimated to cost US\$142,542.\footnote{Jan 2004 \$ to US\$ rate 0.6724: \$211990} In this outbreak, more than 2500 hours of personnel time were needed to investigate and respond to the outbreak \citep{dayan5}. They estimated direct costs per case to be less than US\$500.\footnote{Jan 2004 \$ to US\$ rate 0.6724: \$774} However, the combined direct costs of \euro 520\footnote{Jan 2005 \$ to \euro rate 0.5375: \$967} per case in Germany \citep{siedler6} suggests costs may be higher. Thus, our estimates of the additional costs, including indirect costs and wages lost may be appropriate.
+In other outbreaks, the average cost per measles case was estimated to be US\$254\footnote{Jan 2001 \$ to US\$ rate 0.4445: \$571}, US\$276\footnote{Jan 2001 \$ to US\$ rate 0.4445: \$621}, and US\$307\footnote{Jan 2001 \$ to US\$ rate 0.4445: \$691} for Canada, the Netherlands, and the UK, respectively  \citep{carabin2}. These values are substantially lower than our estimates, however, it is noticable that these estimates are also from more than a decade ago. The containment of a single case (also 2 secondary cases) of measles in 2004 in Iowa, USA was estimated to cost US\$142,542.\footnote{Jan 2004 \$ to US\$ rate 0.6724: \$211990} In this outbreak, more than 2500 hours of personnel time were needed to investigate and respond to the outbreak \citep{dayan5}. They estimated direct costs per case to be less than US\$500.\footnote{Jan 2004 \$ to US\$ rate 0.6724: \$774} However, the combined direct costs of \euro 520\footnote{Jan 2005 \$ to \euro\ rate 0.5375: \$967} per case in Germany \citep{siedler6} suggests costs may be higher. Thus, our estimates of the additional costs, including indirect costs and wages lost may be appropriate.
 
 The annual cost for long-term care of people with moderate of severe mental retardation over a period of 50 years is estimated at US\$31,059\footnote{Jan 2012 \$ to US\$ rate 0.8007: \$38790} and US\$78,448,\footnote{Jan 2012 \$ to US\$ rate 0.8007: \$97974} respectively in Minnesota \citep{prouty1}. In 2000 expenditures for care in large state mental retardation/developmental disabilities (MR/DD) facilities continued to increase and reached a national annual average of US\$113,864\footnote{Jan 2012 \$ to US\$ rate 0.8007: \$221612} per person. In 2000 the average annual expenditures for care in large state MR/DD facilities were \$113,864.\footnote{Jan 2012 \$ to US\$ rate 0.8007: \$221612} The cost of a case of measles was estimated to range from \$71\footnote{Jan 2012 \$ to US\$ rate 0.8007: \$138} (no complications and no hospitalisation) to \$29,556\footnote{Jan 2012 \$ to US\$ rate 0.8007: \$57524} (encephalitis and hospitalisation for 8.7 days). They estimated the annual cost of measles vaccination in the US with its vaccination program to be \$1,234,083\footnote{Jan 2012 \$ to US\$ rate 0.8007: \$2401874} (52.5\% direct cost and 47.5\% indirect cost) \citep{zhou4}. Work by others also finds that measles vaccination is extremely cost effective, however, in their analyses they also include the costs of mumps and rubella (see \autoref{table:zhou}) \citep{zhou4}. However, the cost of measles in their analyses was substantially higher than mumps and rubella (\autoref{table:zhou}) \citep{zhou4}.
 
@@ -2891,5 +1797,218 @@ Zhou, F, S. Reef, M. Massoudi, M.~J. Papania, H.~R. Yusuf, B. Bardenheier, L. Zi
 \newblock \emph{Journal of Infectious Diseases}, 189, S131--45.
 
 \end{thebibliography}
+
+\section{Appendix}
+\label{sec:app}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{case_age_nzdep.pdf}
+     \end{center}
+     \caption{Full details are given in (\autoref{fig:cases_all})}
+     \label{fig:CaseAgeNzdep}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{case_eth_nzdep.pdf}
+     \end{center}
+     \caption{Full details are given in (\autoref{fig:cases_all})}
+     \label{fig:CaseNzdepEth}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{case_age_eth.pdf}
+     \end{center}
+     \caption{Full details are given in (\autoref{fig:cases_all})}
+     \label{fig:CaseAgeEth}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{percap_nzdep_age.pdf}
+     \end{center}
+     \caption{Full details are given in (\autoref{fig:percap_all})}
+     \label{fig:PerCapAgeNzdep}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{percap_eth_nzdep.pdf}
+     \end{center}
+     \caption{Full details are given in (\autoref{fig:percap_all})}
+     \label{fig:PerCapNzdepEth}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{percap_eth_age.pdf}
+     \end{center}
+     \caption{Full details are given in (\autoref{fig:percap_all})}
+     \label{fig:PerCapAgeEth}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb1.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Northland District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Northland}
+\end{figure}
+
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb2.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Waitemata District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Waitemata}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb3.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Auckland District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Auckland}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb4.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Counties Manukau District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Counties_Manukau}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb5.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Waikato District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Waikato}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb6.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Lakes District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Lakes}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb7.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Bay of Plenty District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:BayofPlenty}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb8.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Tairawhiti District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Tairawhiti}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{dhb9.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Taranaki District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Taranaki}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb10.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Hawke's Bay District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:HawkesBay}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb11.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Whanganui District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Whanganui}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb12.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Midcentral District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Midcentral}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb13.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Hutt District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Hutt}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb14.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Capital and Coast District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:CapitalandCoast}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb15.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Wairarapa District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Wairarapa}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb16.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Nelson Marlborough District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:NelsonMarlborough}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb17.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, West Coast District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:WestCoast}
+\end{figure}
+
+\begin{figure}[H]
+   \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb18.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Canterbury District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Canterbury}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb19.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, South Canterbury District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:SouthCanterbury}
+\end{figure}
+
+\begin{figure}[H]
+     \begin{center}
+     \includegraphics[width=0.9\textwidth]{dhb20.pdf}
+     \end{center}
+     \caption{Numbers of na\"{\i}ve individuals per age class, Southern District Health Board, using national immunity data (\autoref{table:sero})}
+     \label{fig:Southern}
+\end{figure}
+
 
 \end{document}
