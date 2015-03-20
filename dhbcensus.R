@@ -43,7 +43,10 @@ for (i in 1:20){
   pdf(paste("dhb", i, ".pdf", sep = ""))
   plot(naivedhb[,i],ylim=c(0,8000),main=colnames(naivedhb)[i],xlab="Age",ylab="Numbers",
        pch=16,cex=1.1)
-  legend("topright",legend=c(c("Total naive", round(sum(naivedhb[,i]))),c("Total population", signif(popdhb[i],5))),bty="n")
+  legend("topright",legend=c(c("Total naive", round(sum(naivedhb[,i]))),
+                             c("Total population", signif(popdhb[i],5)),
+                             c("Percent naive",round(sum(naivedhb[,i])/popdhb[i],3)*100)),
+                             bty="n")
   dev.off()
 }  
 
