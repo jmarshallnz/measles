@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.26)  20 MAR 2015 22:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.22)  22 MAR 2015 01:29
 entering extended mode
 **draftfinalreport_v2.tex
-(C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport_v2.tex
+("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport_v2.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
 croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
 ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
  lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
@@ -133,9 +133,9 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count95
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen105
@@ -1151,7 +1151,7 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aer.fd"
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 ))))
-(C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport_v2.aux)
+("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport_v2.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
 LaTeX Font Info:    ... okay on input line 100.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
@@ -1189,8 +1189,8 @@ LaTeX Info: Redefining \ref on input line 100.
 LaTeX Info: Redefining \pageref on input line 100.
 LaTeX Info: Redefining \nameref on input line 100.
 
-(C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport_v2.out)
-(C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport_v2.out)
+("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport_v2.out")
+("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport_v2.out")
 \@outlinefile=\write5
 
 ABD: EveryShipout initializing macros
@@ -1215,8 +1215,8 @@ Package caption Info: rotating package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-(C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport_v2-concordance.tex
-)
+("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport_v2-concordanc
+e.tex")
 LaTeX Font Info:    Try loading font information for U+msa on input line 113.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1248,465 +1248,441 @@ LaTeX Font Info:    Try loading font information for T1+aess on input line 178.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aess.fd"
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
-) [5] [6 <C:/Users/dtshayma/Documents/GitHub/measles/incidence_1997_2014.pdf>]
+) [5] [6 <C:/Users/David Hayman/Documents/GitHub/measles/incidence_1997_2014.pd
+f>]
 <case_age_dist.pdf, id=173, 505.89pt x 361.35pt>
 File: case_age_dist.pdf Graphic file (type pdf)
  <use case_age_dist.pdf>
 Package pdftex.def Info: case_age_dist.pdf used on input line 187.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-[7 <C:/Users/dtshayma/Documents/GitHub/measles/case_age_dist.pdf>]
+[7 <C:/Users/David Hayman/Documents/GitHub/measles/case_age_dist.pdf>]
 
-LaTeX Warning: Float too large for page by 9.59998pt on input line 270.
+LaTeX Warning: Reference `table:none' on page 8 undefined on input line 195.
 
-<percap_ordert.pdf, id=188, 722.7pt x 361.35pt>
+<percap_ordert.pdf, id=187, 722.7pt x 361.35pt>
 File: percap_ordert.pdf Graphic file (type pdf)
  <use percap_ordert.pdf>
-Package pdftex.def Info: percap_ordert.pdf used on input line 274.
+Package pdftex.def Info: percap_ordert.pdf used on input line 207.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<case_ordert.pdf, id=189, 722.7pt x 361.35pt>
+<case_ordert.pdf, id=188, 722.7pt x 361.35pt>
 File: case_ordert.pdf Graphic file (type pdf)
  <use case_ordert.pdf>
-Package pdftex.def Info: case_ordert.pdf used on input line 282.
+Package pdftex.def Info: case_ordert.pdf used on input line 215.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
 
-LaTeX Warning: Float too large for page by 103.59998pt on input line 375.
+LaTeX Warning: Reference `fig:percap' on page 8 undefined on input line 253.
 
 
-LaTeX Warning: Reference `fig:percap' on page 8 undefined on input line 399.
+LaTeX Warning: Float too large for page by 127.59998pt on input line 340.
 
-
-LaTeX Warning: Float too large for page by 127.59998pt on input line 486.
-
-<Cases_regmodel.pdf, id=202, 505.89pt x 361.35pt>
+[8] [9 <C:/Users/David Hayman/Documents/GitHub/measles/percap_ordert.pdf>]
+[10 <C:/Users/David Hayman/Documents/GitHub/measles/case_ordert.pdf>] [11]
+<Cases_regmodel.pdf, id=241, 505.89pt x 361.35pt>
 File: Cases_regmodel.pdf Graphic file (type pdf)
  <use Cases_regmodel.pdf>
-Package pdftex.def Info: Cases_regmodel.pdf used on input line 502.
+Package pdftex.def Info: Cases_regmodel.pdf used on input line 356.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-[8] [9] [10 <C:/Users/dtshayma/Documents/GitHub/measles/percap_ordert.pdf>]
-[11 <C:/Users/dtshayma/Documents/GitHub/measles/case_ordert.pdf>] [12]
-<Cases_regmodel_prediction.pdf, id=255, 505.89pt x 361.35pt>
+<Cases_regmodel_prediction.pdf, id=248, 505.89pt x 361.35pt>
 File: Cases_regmodel_prediction.pdf Graphic file (type pdf)
 
 <use Cases_regmodel_prediction.pdf>
-Package pdftex.def Info: Cases_regmodel_prediction.pdf used on input line 511.
+Package pdftex.def Info: Cases_regmodel_prediction.pdf used on input line 365.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-<Cases_regmodel_resid.pdf, id=260, 505.89pt x 361.35pt>
+<Cases_regmodel_resid.pdf, id=253, 505.89pt x 361.35pt>
 File: Cases_regmodel_resid.pdf Graphic file (type pdf)
 
 <use Cases_regmodel_resid.pdf>
-Package pdftex.def Info: Cases_regmodel_resid.pdf used on input line 520.
+Package pdftex.def Info: Cases_regmodel_resid.pdf used on input line 374.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-Overfull \hbox (1.06569pt too wide) in paragraph at lines 526--527
+Overfull \hbox (1.06569pt too wide) in paragraph at lines 380--381
 []\T1/aer/m/n/10 The sig-nif-i-cance of the dif-fer-ent pre-dic-tor vari-ables 
 can be seen in the ANOVA
  []
 
 
-Overfull \hbox (0.66412pt too wide) in paragraph at lines 532--542
+Overfull \hbox (0.66412pt too wide) in paragraph at lines 386--396
 [][] 
  []
 
-[13] [14] [15 <C:/Users/dtshayma/Documents/GitHub/measles/Cases_regmodel.pdf> <
-C:/Users/dtshayma/Documents/GitHub/measles/Cases_regmodel_prediction.pdf>]
-[16 <C:/Users/dtshayma/Documents/GitHub/measles/Cases_regmodel_resid.pdf>]
-[17]
+[12 <C:/Users/David Hayman/Documents/GitHub/measles/Cases_regmodel.pdf>]
+[13 <C:/Users/David Hayman/Documents/GitHub/measles/Cases_regmodel_prediction.p
+df> <C:/Users/David Hayman/Documents/GitHub/measles/Cases_regmodel_resid.pdf>]
+[14] [15]
 
-LaTeX Warning: Reference `fig:yearandvac' on page 18 undefined on input line 62
-0.
+LaTeX Warning: Reference `fig:yearandvac' on page 16 undefined on input line 47
+4.
 
 
-LaTeX Warning: Reference `fig:yearandvacf' on page 18 undefined on input line 6
-20.
+LaTeX Warning: Reference `fig:yearandvacf' on page 16 undefined on input line 4
+74.
 
-<vacc_status.pdf, id=326, 505.89pt x 361.35pt>
+<vacc_status.pdf, id=315, 505.89pt x 361.35pt>
 File: vacc_status.pdf Graphic file (type pdf)
  <use vacc_status.pdf>
-Package pdftex.def Info: vacc_status.pdf used on input line 625.
+Package pdftex.def Info: vacc_status.pdf used on input line 479.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-<vacc_age.pdf, id=327, 505.89pt x 361.35pt>
+<vacc_age.pdf, id=316, 505.89pt x 361.35pt>
 File: vacc_age.pdf Graphic file (type pdf)
  <use vacc_age.pdf>
-Package pdftex.def Info: vacc_age.pdf used on input line 635.
+Package pdftex.def Info: vacc_age.pdf used on input line 489.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- [18] [19 <C:/Users/dtshayma/Documents/GitHub/measles/vacc_status.pdf> <C:/User
-s/dtshayma/Documents/GitHub/measles/vacc_age.pdf>] <naive_au.pdf, id=353, 505.8
-9pt x 361.35pt>
+ [16] [17 <C:/Users/David Hayman/Documents/GitHub/measles/vacc_status.pdf> <C:/
+Users/David Hayman/Documents/GitHub/measles/vacc_age.pdf>]
+<naive_au.pdf, id=341, 505.89pt x 361.35pt>
 File: naive_au.pdf Graphic file (type pdf)
+ <use naive_au.pdf>
+Package pdftex.def Info: naive_au.pdf used on input line 506.
+(pdftex.def)             Requested size: 494.99664pt x 353.57472pt.
 
-<use naive_au.pdf>
-Package pdftex.def Info: naive_au.pdf used on input line 652.
-(pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- <naive_au_prop.pdf, id=354, 505.89pt x 361.35pt>
+<naive_au_prop.pdf, id=342, 505.89pt x 361.35pt>
 File: naive_au_prop.pdf Graphic file (type pdf)
-
-<use naive_au_prop.pdf>
-Package pdftex.def Info: naive_au_prop.pdf used on input line 660.
+ <use naive_au_prop.pdf>
+Package pdftex.def Info: naive_au_prop.pdf used on input line 514.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- [20 <C:/Users/dtshayma/Documents/GitHub/measles/naive_au.pdf>] [21 <C:/Users/d
-tshayma/Documents/GitHub/measles/naive_au_prop.pdf>]
 
-LaTeX Warning: Reference `fig:nir' on page 22 undefined on input line 691.
 
-<naive_allPop.pdf, id=399, 505.89pt x 361.35pt>
+LaTeX Warning: Reference `fig:nir' on page 18 undefined on input line 545.
+
+<naive_allPop.pdf, id=367, 505.89pt x 361.35pt>
 File: naive_allPop.pdf Graphic file (type pdf)
  <use naive_allPop.pdf>
-Package pdftex.def Info: naive_allPop.pdf used on input line 696.
+Package pdftex.def Info: naive_allPop.pdf used on input line 550.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-<naive_map.pdf, id=402, 728.7225pt x 447.6725pt>
+<naive_map.pdf, id=370, 728.7225pt x 447.6725pt>
 File: naive_map.pdf Graphic file (type pdf)
  <use naive_map.pdf>
-Package pdftex.def Info: naive_map.pdf used on input line 704.
+Package pdftex.def Info: naive_map.pdf used on input line 558.
 (pdftex.def)             Requested size: 310.4979pt x 190.7467pt.
- [22]
-[23 <C:/Users/dtshayma/Documents/GitHub/measles/naive_allPop.pdf> <C:/Users/dts
-hayma/Documents/GitHub/measles/naive_map.pdf>]
-<incidence12.pdf, id=474, 722.7pt x 361.35pt>
+ [18]
+[19 <C:/Users/David Hayman/Documents/GitHub/measles/naive_au.pdf>] [20 <C:/User
+s/David Hayman/Documents/GitHub/measles/naive_au_prop.pdf>] [21 <C:/Users/David
+ Hayman/Documents/GitHub/measles/naive_allPop.pdf> <C:/Users/David Hayman/Docum
+ents/GitHub/measles/naive_map.pdf>]
+<incidence12.pdf, id=463, 722.7pt x 361.35pt>
 File: incidence12.pdf Graphic file (type pdf)
  <use incidence12.pdf>
-Package pdftex.def Info: incidence12.pdf used on input line 1079.
+Package pdftex.def Info: incidence12.pdf used on input line 933.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<cover12.pdf, id=477, 722.7pt x 361.35pt>
+<cover12.pdf, id=466, 722.7pt x 361.35pt>
 File: cover12.pdf Graphic file (type pdf)
  <use cover12.pdf>
-Package pdftex.def Info: cover12.pdf used on input line 1087.
+Package pdftex.def Info: cover12.pdf used on input line 941.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<immigration12.pdf, id=480, 722.7pt x 361.35pt>
+<immigration12.pdf, id=469, 722.7pt x 361.35pt>
 File: immigration12.pdf Graphic file (type pdf)
  <use immigration12.pdf>
-Package pdftex.def Info: immigration12.pdf used on input line 1096.
+Package pdftex.def Info: immigration12.pdf used on input line 950.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<nztravel12.pdf, id=481, 722.7pt x 361.35pt>
+<nztravel12.pdf, id=470, 722.7pt x 361.35pt>
 File: nztravel12.pdf Graphic file (type pdf)
  <use nztravel12.pdf>
-Package pdftex.def Info: nztravel12.pdf used on input line 1104.
+Package pdftex.def Info: nztravel12.pdf used on input line 958.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<travel12.pdf, id=482, 722.7pt x 361.35pt>
+<travel12.pdf, id=471, 722.7pt x 361.35pt>
 File: travel12.pdf Graphic file (type pdf)
  <use travel12.pdf>
-Package pdftex.def Info: travel12.pdf used on input line 1113.
+Package pdftex.def Info: travel12.pdf used on input line 967.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<risk12.pdf, id=483, 722.7pt x 361.35pt>
+<risk12.pdf, id=472, 722.7pt x 361.35pt>
 File: risk12.pdf Graphic file (type pdf)
  <use risk12.pdf>
-Package pdftex.def Info: risk12.pdf used on input line 1121.
+Package pdftex.def Info: risk12.pdf used on input line 975.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<nzrisk12.pdf, id=484, 722.7pt x 361.35pt>
+<nzrisk12.pdf, id=473, 722.7pt x 361.35pt>
 File: nzrisk12.pdf Graphic file (type pdf)
  <use nzrisk12.pdf>
-Package pdftex.def Info: nzrisk12.pdf used on input line 1129.
+Package pdftex.def Info: nzrisk12.pdf used on input line 983.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<imrisk12.pdf, id=485, 722.7pt x 361.35pt>
+<imrisk12.pdf, id=474, 722.7pt x 361.35pt>
 File: imrisk12.pdf Graphic file (type pdf)
  <use imrisk12.pdf>
-Package pdftex.def Info: imrisk12.pdf used on input line 1137.
+Package pdftex.def Info: imrisk12.pdf used on input line 991.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<draftfinalreport_v2-017.pdf, id=486, 433.62pt x 433.62pt>
-File: draftfinalreport_v2-017.pdf Graphic file (type pdf)
+<draftfinalreport_v2-015.pdf, id=475, 433.62pt x 433.62pt>
+File: draftfinalreport_v2-015.pdf Graphic file (type pdf)
 
-<use draftfinalreport_v2-017.pdf>
-Package pdftex.def Info: draftfinalreport_v2-017.pdf used on input line 1146.
+<use draftfinalreport_v2-015.pdf>
+Package pdftex.def Info: draftfinalreport_v2-015.pdf used on input line 1000.
 (pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
- <nzers.pdf, id=487, 361.35pt x 361.35pt>
+ <nzers.pdf, id=476, 361.35pt x 361.35pt>
 File: nzers.pdf Graphic file (type pdf)
 
 <use nzers.pdf>
-Package pdftex.def Info: nzers.pdf used on input line 1154.
+Package pdftex.def Info: nzers.pdf used on input line 1008.
 (pdftex.def)             Requested size: 310.4979pt x 310.50131pt.
- [24] [25] [26] [27] [28] [29] [30] [31] [32] [33 <C:/Users/dtshayma/Documents/
-GitHub/measles/incidence12.pdf>] [34 <C:/Users/dtshayma/Documents/GitHub/measle
-s/cover12.pdf>] [35 <C:/Users/dtshayma/Documents/GitHub/measles/immigration12.p
-df>] [36 <C:/Users/dtshayma/Documents/GitHub/measles/nztravel12.pdf>] [37 <C:/U
-sers/dtshayma/Documents/GitHub/measles/travel12.pdf>] [38 <C:/Users/dtshayma/Do
-cuments/GitHub/measles/risk12.pdf>] [39 <C:/Users/dtshayma/Documents/GitHub/mea
-sles/nzrisk12.pdf>] [40 <C:/Users/dtshayma/Documents/GitHub/measles/imrisk12.pd
-f>] [41 <C:/Users/dtshayma/Documents/GitHub/measles/draftfinalreport_v2-017.pdf
->] [42 <C:/Users/dtshayma/Documents/GitHub/measles/nzers.pdf>]
+ [22] [23] [24] [25] [26] [27] [28] [29] [30] [31 <C:/Users/David Hayman/Docume
+nts/GitHub/measles/incidence12.pdf>] [32 <C:/Users/David Hayman/Documents/GitHu
+b/measles/cover12.pdf>] [33 <C:/Users/David Hayman/Documents/GitHub/measles/imm
+igration12.pdf>] [34 <C:/Users/David Hayman/Documents/GitHub/measles/nztravel12
+.pdf>] [35 <C:/Users/David Hayman/Documents/GitHub/measles/travel12.pdf>] [36 <
+C:/Users/David Hayman/Documents/GitHub/measles/risk12.pdf>]
+[37 <C:/Users/David Hayman/Documents/GitHub/measles/nzrisk12.pdf>] [38 <C:/User
+s/David Hayman/Documents/GitHub/measles/imrisk12.pdf>] [39 <C:/Users/David Haym
+an/Documents/GitHub/measles/draftfinalreport_v2-015.pdf>] [40 <C:/Users/David H
+ayman/Documents/GitHub/measles/nzers.pdf>]
 
-LaTeX Warning: Reference `fig:' on page 43 undefined on input line 1168.
+LaTeX Warning: Reference `fig:' on page 41 undefined on input line 1022.
 
-[43] [44]
-
-LaTeX Warning: Reference `fig:dhbcases' on page 45 undefined on input line 1203
-.
-
-
-LaTeX Warning: Reference `fig:outbreaks' on page 45 undefined on input line 120
-3.
-
-[45] <cases_by_dhb_2009_2014.pdf, id=733, 722.7pt x 361.35pt>
+[41] [42] [43] <cases_by_dhb_2009_2014.pdf, id=724, 722.7pt x 361.35pt>
 File: cases_by_dhb_2009_2014.pdf Graphic file (type pdf)
 
 <use cases_by_dhb_2009_2014.pdf>
-Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 1207.
+Package pdftex.def Info: cases_by_dhb_2009_2014.pdf used on input line 1061.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<outbreaks_2009_2014.pdf, id=734, 722.7pt x 361.35pt>
+<outbreaks_2009_2014.pdf, id=725, 722.7pt x 361.35pt>
 File: outbreaks_2009_2014.pdf Graphic file (type pdf)
 
 <use outbreaks_2009_2014.pdf>
-Package pdftex.def Info: outbreaks_2009_2014.pdf used on input line 1214.
+Package pdftex.def Info: outbreaks_2009_2014.pdf used on input line 1069.
 (pdftex.def)             Requested size: 494.99664pt x 247.5012pt.
 
-<averageR0_all_ob.pdf, id=735, 578.16pt x 433.62pt>
+<averageR0_all_ob.pdf, id=726, 578.16pt x 433.62pt>
 File: averageR0_all_ob.pdf Graphic file (type pdf)
  <use averageR0_all_ob.pdf>
-Package pdftex.def Info: averageR0_all_ob.pdf used on input line 1221.
+Package pdftex.def Info: averageR0_all_ob.pdf used on input line 1077.
 (pdftex.def)             Requested size: 494.99664pt x 371.2452pt.
 
-
-LaTeX Warning: Reference `fig:outbreaks' on page 46 undefined on input line 122
-2.
-
-
-LaTeX Warning: Reference `fig:outbreaks' on page 46 undefined on input line 122
-2.
-
-
-LaTeX Warning: Reference `fig:r0' on page 46 undefined on input line 1256.
-
-[46]
-
-LaTeX Warning: Reference `fig:r0' on page 47 undefined on input line 1262.
-
-
-LaTeX Warning: Reference `fig:r0' on page 47 undefined on input line 1262.
-
-[47]
-Overfull \hbox (0.49591pt too wide) in paragraph at lines 1306--1307
+[44] [45 <C:/Users/David Hayman/Documents/GitHub/measles/cases_by_dhb_2009_2014
+.pdf>] [46 <C:/Users/David Hayman/Documents/GitHub/measles/outbreaks_2009_2014.
+pdf>] [47 <C:/Users/David Hayman/Documents/GitHub/measles/averageR0_all_ob.pdf>
+] [48]
+Overfull \hbox (0.49591pt too wide) in paragraph at lines 1163--1164
 []\T1/aer/m/n/10 The re-pro-duc-tion num-ber for measles in the par-tially im-m
 une New Zealand
  []
 
-[48] [49] [50] [51] [52] [53] [54] <p.pdf, id=905, 505.89pt x 361.35pt>
+[49] [50] [51] [52] [53] [54] [55] <p.pdf, id=933, 505.89pt x 361.35pt>
 File: p.pdf Graphic file (type pdf)
 
 <use p.pdf>
-Package pdftex.def Info: p.pdf used on input line 1438.
+Package pdftex.def Info: p.pdf used on input line 1295.
 (pdftex.def)             Requested size: 276.00105pt x 197.14412pt.
 
 
-LaTeX Warning: Float too large for page by 9.84518pt on input line 1510.
+LaTeX Warning: Float too large for page by 9.84518pt on input line 1367.
 
-[55] [56] [57 <C:/Users/dtshayma/Documents/GitHub/measles/p.pdf>] [58]
-<sim.pdf, id=954, 505.89pt x 361.35pt>
+[56] [57] [58 <C:/Users/David Hayman/Documents/GitHub/measles/p.pdf>] [59]
+Overfull \hbox (19.61333pt too wide) in paragraph at lines 1423--1449
+ [] 
+ []
+
+<sim.pdf, id=981, 505.89pt x 361.35pt>
 File: sim.pdf Graphic file (type pdf)
  <use sim.pdf>
-Package pdftex.def Info: sim.pdf used on input line 1601.
+Package pdftex.def Info: sim.pdf used on input line 1458.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-<sim1.pdf, id=959, 505.89pt x 361.35pt>
+<sim1.pdf, id=986, 505.89pt x 361.35pt>
 File: sim1.pdf Graphic file (type pdf)
  <use sim1.pdf>
-Package pdftex.def Info: sim1.pdf used on input line 1608.
+Package pdftex.def Info: sim1.pdf used on input line 1465.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
 
-Overfull \hbox (104.47002pt too wide) in paragraph at lines 1617--1642
+Overfull \hbox (58.38487pt too wide) in paragraph at lines 1474--1499
  [] 
  []
 
 
-Overfull \hbox (104.47002pt too wide) in paragraph at lines 1649--1674
+Overfull \hbox (58.38487pt too wide) in paragraph at lines 1506--1531
  [] 
  []
 
 
-Package caption Warning: \label without proper \caption on input line 1703.
+Package caption Warning: \label without proper \caption on input line 1560.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `table:cohort_vac' on page 59 undefined on input line 
-1682.
+LaTeX Warning: Reference `table:cohort_vac' on page 60 undefined on input line 
+1539.
 
-[59] [60] [61 <C:/Users/dtshayma/Documents/GitHub/measles/sim.pdf>] [62 <C:/Use
-rs/dtshayma/Documents/GitHub/measles/sim1.pdf>] [63] [64] [65] [66] [67]
-[68] [69] [70] [71] [72] <case_age_nzdep.pdf, id=1118, 505.89pt x 361.35pt>
+[60] [61] [62 <C:/Users/David Hayman/Documents/GitHub/measles/sim.pdf>]
+[63 <C:/Users/David Hayman/Documents/GitHub/measles/sim1.pdf>] [64] [65]
+[66] [67] [68] [69] [70] [71] [72] [73]
+<case_age_nzdep.pdf, id=1146, 505.89pt x 361.35pt>
 File: case_age_nzdep.pdf Graphic file (type pdf)
-
-<use case_age_nzdep.pdf>
-Package pdftex.def Info: case_age_nzdep.pdf used on input line 1998.
+ <use case_age_nzdep.pdf>
+Package pdftex.def Info: case_age_nzdep.pdf used on input line 1855.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- <case_eth_nzdep.pdf, id=1121, 505.89pt x 361.35pt>
+
+<case_eth_nzdep.pdf, id=1149, 505.89pt x 361.35pt>
 File: case_eth_nzdep.pdf Graphic file (type pdf)
-
-<use case_eth_nzdep.pdf>
-Package pdftex.def Info: case_eth_nzdep.pdf used on input line 2006.
+ <use case_eth_nzdep.pdf>
+Package pdftex.def Info: case_eth_nzdep.pdf used on input line 1863.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- [73 <C:/Users/dtshayma/Documents/GitHub/measles/case_age_nzdep.pdf>] <case_age
-_eth.pdf, id=1135, 505.89pt x 361.35pt>
+
+[74 <C:/Users/David Hayman/Documents/GitHub/measles/case_age_nzdep.pdf>]
+<case_age_eth.pdf, id=1162, 505.89pt x 361.35pt>
 File: case_age_eth.pdf Graphic file (type pdf)
-
-<use case_age_eth.pdf>
-Package pdftex.def Info: case_age_eth.pdf used on input line 2014.
+ <use case_age_eth.pdf>
+Package pdftex.def Info: case_age_eth.pdf used on input line 1871.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- <percap_nzdep_age.pdf, id=1138, 505.89pt x 361.35pt>
+
+<percap_nzdep_age.pdf, id=1165, 505.89pt x 361.35pt>
 File: percap_nzdep_age.pdf Graphic file (type pdf)
 
 <use percap_nzdep_age.pdf>
-Package pdftex.def Info: percap_nzdep_age.pdf used on input line 2022.
+Package pdftex.def Info: percap_nzdep_age.pdf used on input line 1879.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- [74 <C:/Users/dtshayma/Documents/GitHub/measles/case_eth_nzdep.pdf> <C:/Users/
-dtshayma/Documents/GitHub/measles/case_age_eth.pdf>]
-<percap_eth_nzdep.pdf, id=1157, 505.89pt x 361.35pt>
+ [75 <C:/Users/David Hayman/Documents/GitHub/measles/case_eth_nzdep.pdf> <C:/Us
+ers/David Hayman/Documents/GitHub/measles/case_age_eth.pdf>] <percap_eth_nzdep.
+pdf, id=1184, 505.89pt x 361.35pt>
 File: percap_eth_nzdep.pdf Graphic file (type pdf)
 
 <use percap_eth_nzdep.pdf>
-Package pdftex.def Info: percap_eth_nzdep.pdf used on input line 2030.
+Package pdftex.def Info: percap_eth_nzdep.pdf used on input line 1887.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- <percap_eth_age.pdf, id=1160, 505.89pt x 361.35pt>
+ <percap_eth_age.pdf, id=1187, 505.89pt x 361.35pt>
 File: percap_eth_age.pdf Graphic file (type pdf)
 
 <use percap_eth_age.pdf>
-Package pdftex.def Info: percap_eth_age.pdf used on input line 2038.
+Package pdftex.def Info: percap_eth_age.pdf used on input line 1895.
 (pdftex.def)             Requested size: 310.4979pt x 221.78508pt.
- [75 <C:/Users/dtshayma/Documents/GitHub/measles/percap_nzdep_age.pdf> <C:/User
-s/dtshayma/Documents/GitHub/measles/percap_eth_nzdep.pdf>] <dhb1.pdf, id=1179, 
-505.89pt x 505.89pt>
+ [76 <C:/Users/David Hayman/Documents/GitHub/measles/percap_nzdep_age.pdf> <C:/
+Users/David Hayman/Documents/GitHub/measles/percap_eth_nzdep.pdf>] <dhb1.pdf, i
+d=1206, 505.89pt x 505.89pt>
 File: dhb1.pdf Graphic file (type pdf)
  <use dhb1.pdf>
-Package pdftex.def Info: dhb1.pdf used on input line 2046.
+Package pdftex.def Info: dhb1.pdf used on input line 1903.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [76 <C:/Users/dtshayma/Documents/GitHub/measles/percap_eth_age.pdf>]
-<dhb2.pdf, id=1192, 505.89pt x 505.89pt>
+ [77 <C:/Users/David Hayman/Documents/GitHub/measles/percap_eth_age.pdf>]
+<dhb2.pdf, id=1219, 505.89pt x 505.89pt>
 File: dhb2.pdf Graphic file (type pdf)
  <use dhb2.pdf>
-Package pdftex.def Info: dhb2.pdf used on input line 2055.
+Package pdftex.def Info: dhb2.pdf used on input line 1912.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [77 <C:/Users/dtshayma/Documents/GitHub/measles/dhb1.pdf>] <dhb3.pdf, id=1206,
- 505.89pt x 505.89pt>
+ [78 <C:/Users/David Hayman/Documents/GitHub/measles/dhb1.pdf>]
+<dhb3.pdf, id=1232, 505.89pt x 505.89pt>
 File: dhb3.pdf Graphic file (type pdf)
-
-<use dhb3.pdf>
-Package pdftex.def Info: dhb3.pdf used on input line 2063.
+ <use dhb3.pdf>
+Package pdftex.def Info: dhb3.pdf used on input line 1920.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [78 <C:/Users/dtshayma/Documents/GitHub/measles/dhb2.pdf>]
-<dhb4.pdf, id=1220, 505.89pt x 505.89pt>
+ [79 <C:/Users/David Hayman/Documents/GitHub/measles/dhb2.pdf>]
+<dhb4.pdf, id=1246, 505.89pt x 505.89pt>
 File: dhb4.pdf Graphic file (type pdf)
  <use dhb4.pdf>
-Package pdftex.def Info: dhb4.pdf used on input line 2071.
+Package pdftex.def Info: dhb4.pdf used on input line 1928.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [79 <C:/Users/dtshayma/Documents/GitHub/measles/dhb3.pdf>] <dhb5.pdf, id=1235,
- 505.89pt x 505.89pt>
+ [80 <C:/Users/David Hayman/Documents/GitHub/measles/dhb3.pdf>]
+<dhb5.pdf, id=1259, 505.89pt x 505.89pt>
 File: dhb5.pdf Graphic file (type pdf)
-
-<use dhb5.pdf>
-Package pdftex.def Info: dhb5.pdf used on input line 2079.
+ <use dhb5.pdf>
+Package pdftex.def Info: dhb5.pdf used on input line 1936.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [80 <C:/Users/dtshayma/Documents/GitHub/measles/dhb4.pdf>]
-<dhb6.pdf, id=1249, 505.89pt x 505.89pt>
+ [81 <C:/Users/David Hayman/Documents/GitHub/measles/dhb4.pdf>]
+<dhb6.pdf, id=1272, 505.89pt x 505.89pt>
 File: dhb6.pdf Graphic file (type pdf)
  <use dhb6.pdf>
-Package pdftex.def Info: dhb6.pdf used on input line 2087.
+Package pdftex.def Info: dhb6.pdf used on input line 1944.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [81 <C:/Users/dtshayma/Documents/GitHub/measles/dhb5.pdf>] <dhb7.pdf, id=1263,
- 505.89pt x 505.89pt>
+ [82 <C:/Users/David Hayman/Documents/GitHub/measles/dhb5.pdf>]
+<dhb7.pdf, id=1285, 505.89pt x 505.89pt>
 File: dhb7.pdf Graphic file (type pdf)
-
-<use dhb7.pdf>
-Package pdftex.def Info: dhb7.pdf used on input line 2095.
+ <use dhb7.pdf>
+Package pdftex.def Info: dhb7.pdf used on input line 1952.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [82 <C:/Users/dtshayma/Documents/GitHub/measles/dhb6.pdf>]
-<dhb8.pdf, id=1277, 505.89pt x 505.89pt>
+ [83 <C:/Users/David Hayman/Documents/GitHub/measles/dhb6.pdf>]
+<dhb8.pdf, id=1298, 505.89pt x 505.89pt>
 File: dhb8.pdf Graphic file (type pdf)
  <use dhb8.pdf>
-Package pdftex.def Info: dhb8.pdf used on input line 2103.
+Package pdftex.def Info: dhb8.pdf used on input line 1960.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [83 <C:/Users/dtshayma/Documents/GitHub/measles/dhb7.pdf>] <dhb9.pdf, id=1291,
- 505.89pt x 505.89pt>
+ [84 <C:/Users/David Hayman/Documents/GitHub/measles/dhb7.pdf>]
+<dhb9.pdf, id=1311, 505.89pt x 505.89pt>
 File: dhb9.pdf Graphic file (type pdf)
-
-<use dhb9.pdf>
-Package pdftex.def Info: dhb9.pdf used on input line 2111.
+ <use dhb9.pdf>
+Package pdftex.def Info: dhb9.pdf used on input line 1968.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [84 <C:/Users/dtshayma/Documents/GitHub/measles/dhb8.pdf>]
-<dhb10.pdf, id=1305, 505.89pt x 505.89pt>
+ [85 <C:/Users/David Hayman/Documents/GitHub/measles/dhb8.pdf>]
+<dhb10.pdf, id=1325, 505.89pt x 505.89pt>
 File: dhb10.pdf Graphic file (type pdf)
  <use dhb10.pdf>
-Package pdftex.def Info: dhb10.pdf used on input line 2119.
+Package pdftex.def Info: dhb10.pdf used on input line 1976.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [85 <C:/Users/dtshayma/Documents/GitHub/measles/dhb9.pdf>]
-<dhb11.pdf, id=1320, 505.89pt x 505.89pt>
+ [86 <C:/Users/David Hayman/Documents/GitHub/measles/dhb9.pdf>]
+<dhb11.pdf, id=1338, 505.89pt x 505.89pt>
 File: dhb11.pdf Graphic file (type pdf)
  <use dhb11.pdf>
-Package pdftex.def Info: dhb11.pdf used on input line 2127.
+Package pdftex.def Info: dhb11.pdf used on input line 1984.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [86 <C:/Users/dtshayma/Documents/GitHub/measles/dhb10.pdf>]
-<dhb12.pdf, id=1334, 505.89pt x 505.89pt>
+ [87 <C:/Users/David Hayman/Documents/GitHub/measles/dhb10.pdf>]
+<dhb12.pdf, id=1351, 505.89pt x 505.89pt>
 File: dhb12.pdf Graphic file (type pdf)
  <use dhb12.pdf>
-Package pdftex.def Info: dhb12.pdf used on input line 2135.
+Package pdftex.def Info: dhb12.pdf used on input line 1992.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [87 <C:/Users/dtshayma/Documents/GitHub/measles/dhb11.pdf>]
-<dhb13.pdf, id=1348, 505.89pt x 505.89pt>
+ [88 <C:/Users/David Hayman/Documents/GitHub/measles/dhb11.pdf>]
+<dhb13.pdf, id=1364, 505.89pt x 505.89pt>
 File: dhb13.pdf Graphic file (type pdf)
  <use dhb13.pdf>
-Package pdftex.def Info: dhb13.pdf used on input line 2143.
+Package pdftex.def Info: dhb13.pdf used on input line 2000.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [88 <C:/Users/dtshayma/Documents/GitHub/measles/dhb12.pdf>]
-<dhb14.pdf, id=1362, 505.89pt x 505.89pt>
+ [89 <C:/Users/David Hayman/Documents/GitHub/measles/dhb12.pdf>]
+<dhb14.pdf, id=1377, 505.89pt x 505.89pt>
 File: dhb14.pdf Graphic file (type pdf)
  <use dhb14.pdf>
-Package pdftex.def Info: dhb14.pdf used on input line 2151.
+Package pdftex.def Info: dhb14.pdf used on input line 2008.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [89 <C:/Users/dtshayma/Documents/GitHub/measles/dhb13.pdf>]
-<dhb15.pdf, id=1376, 505.89pt x 505.89pt>
+ [90 <C:/Users/David Hayman/Documents/GitHub/measles/dhb13.pdf>]
+<dhb15.pdf, id=1390, 505.89pt x 505.89pt>
 File: dhb15.pdf Graphic file (type pdf)
  <use dhb15.pdf>
-Package pdftex.def Info: dhb15.pdf used on input line 2159.
+Package pdftex.def Info: dhb15.pdf used on input line 2016.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [90 <C:/Users/dtshayma/Documents/GitHub/measles/dhb14.pdf>]
-<dhb16.pdf, id=1390, 505.89pt x 505.89pt>
+ [91 <C:/Users/David Hayman/Documents/GitHub/measles/dhb14.pdf>]
+<dhb16.pdf, id=1404, 505.89pt x 505.89pt>
 File: dhb16.pdf Graphic file (type pdf)
  <use dhb16.pdf>
-Package pdftex.def Info: dhb16.pdf used on input line 2167.
+Package pdftex.def Info: dhb16.pdf used on input line 2024.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [91 <C:/Users/dtshayma/Documents/GitHub/measles/dhb15.pdf>]
-<dhb17.pdf, id=1405, 505.89pt x 505.89pt>
+ [92 <C:/Users/David Hayman/Documents/GitHub/measles/dhb15.pdf>]
+<dhb17.pdf, id=1417, 505.89pt x 505.89pt>
 File: dhb17.pdf Graphic file (type pdf)
  <use dhb17.pdf>
-Package pdftex.def Info: dhb17.pdf used on input line 2175.
+Package pdftex.def Info: dhb17.pdf used on input line 2032.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [92 <C:/Users/dtshayma/Documents/GitHub/measles/dhb16.pdf>]
-<dhb18.pdf, id=1419, 505.89pt x 505.89pt>
+ [93 <C:/Users/David Hayman/Documents/GitHub/measles/dhb16.pdf>]
+<dhb18.pdf, id=1430, 505.89pt x 505.89pt>
 File: dhb18.pdf Graphic file (type pdf)
  <use dhb18.pdf>
-Package pdftex.def Info: dhb18.pdf used on input line 2183.
+Package pdftex.def Info: dhb18.pdf used on input line 2040.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [93 <C:/Users/dtshayma/Documents/GitHub/measles/dhb17.pdf>]
-<dhb19.pdf, id=1433, 505.89pt x 505.89pt>
+ [94 <C:/Users/David Hayman/Documents/GitHub/measles/dhb17.pdf>]
+<dhb19.pdf, id=1443, 505.89pt x 505.89pt>
 File: dhb19.pdf Graphic file (type pdf)
  <use dhb19.pdf>
-Package pdftex.def Info: dhb19.pdf used on input line 2191.
+Package pdftex.def Info: dhb19.pdf used on input line 2048.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [94 <C:/Users/dtshayma/Documents/GitHub/measles/dhb18.pdf>]
-<dhb20.pdf, id=1447, 505.89pt x 505.89pt>
+ [95 <C:/Users/David Hayman/Documents/GitHub/measles/dhb18.pdf>]
+<dhb20.pdf, id=1456, 505.89pt x 505.89pt>
 File: dhb20.pdf Graphic file (type pdf)
  <use dhb20.pdf>
-Package pdftex.def Info: dhb20.pdf used on input line 2199.
+Package pdftex.def Info: dhb20.pdf used on input line 2056.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
- [95 <C:/Users/dtshayma/Documents/GitHub/measles/dhb19.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2206.
- [96 <C:/Users/dtshayma/Documents/GitHub/measles/dhb20.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2206.
+ [96 <C:/Users/David Hayman/Documents/GitHub/measles/dhb19.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2063.
+ [97 <C:/Users/David Hayman/Documents/GitHub/measles/dhb20.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2063.
 
-(C:\Users\dtshayma\Documents\GitHub\measles\draftfinalreport_v2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2206.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2206.
+("C:\Users\David Hayman\Documents\GitHub\measles\draftfinalreport_v2.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2063.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2063.
 
 Package rerunfilecheck Info: File `draftfinalreport_v2.out' has not changed.
 (rerunfilecheck)             Checksum: 256C346705678CBCF54066B119638B90;1838.
@@ -1714,13 +1690,13 @@ Package rerunfilecheck Info: File `draftfinalreport_v2.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2206.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2063.
  ) 
 Here is how much of TeX's memory you used:
- 19658 strings out of 493921
- 333061 string characters out of 3147273
- 476559 words of memory out of 3000000
- 22150 multiletter control sequences out of 15000+200000
+ 19659 strings out of 493921
+ 333103 string characters out of 3147261
+ 452342 words of memory out of 3000000
+ 22149 multiletter control sequences out of 15000+200000
  56732 words of font info for 114 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  61i,12n,96p,1972b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1748,9 +1724,9 @@ ype1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmti7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr1
 0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on draftfinalreport_v2.pdf (96 pages, 5918223 bytes).
+Output written on draftfinalreport_v2.pdf (97 pages, 6057173 bytes).
 PDF statistics:
- 1619 PDF objects out of 1728 (max. 8388607)
- 291 named destinations out of 1000 (max. 500000)
+ 1627 PDF objects out of 1728 (max. 8388607)
+ 293 named destinations out of 1000 (max. 500000)
  492 words of extra memory for PDF output out of 10000 (max. 10000000)
 

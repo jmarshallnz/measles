@@ -33,7 +33,7 @@ df<-df[,2:21]/5
 popdhb<-colSums(df)
 naivedhb<-df*(1-impop[1:90])
 head(naivedhb)
-matplot(naivedhb,type="l")
+#matplot(naivedhb,type="l")
 colnames(naivedhb)<-c("Northland","Waitemata","Auckland","Counties Manukau",
                       "Waikato","Lakes","Bay of Plenty","Tairawhiti","Taranaki",
                       "Hawke's Bay","Whanganui","Midcentral","Hutt","Capital and Coast",
@@ -41,8 +41,9 @@ colnames(naivedhb)<-c("Northland","Waitemata","Auckland","Counties Manukau",
                       "Southern")
 for (i in 1:20){
   pdf(paste("dhb", i, ".pdf", sep = ""))
-  plot(naivedhb[,i],ylim=c(0,8000),main=colnames(naivedhb)[i],xlab="Age",ylab="Numbers",
-       pch=16,cex=1.1,cex.lab=1.1,cex.main=1.1,cex.axis=1.1)
+  barplot(naivedhb[,i],ylim=c(0,8000),main=colnames(naivedhb)[i],xlab="Age",ylab="Numbers",
+       #type="l",
+       cex=1.1,cex.lab=1.1,cex.main=1.1,cex.axis=1.1)
   legend("topright",legend=c(c("Total naive", round(sum(naivedhb[,i]))),
                              c("Total population", signif(popdhb[i],5)),
                              c("Percent naive",round(sum(naivedhb[,i])/popdhb[i],3)*100)),
@@ -56,7 +57,7 @@ library(maptools)
 
 # read in shapefile for AU's
 dhb <- readShapeSpatial("nz-district-health-boards-2012.shp")
-plot(dhb,xlim=c(170,180))
+#plot(dhb,xlim=c(170,180))
 
 head(naivedhb)
 # library(plyr)

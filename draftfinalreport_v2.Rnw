@@ -527,6 +527,7 @@ anova(model2,test="F")
 
 ## use tpsub
 #hist(tpsub$cases,xlab="Cases",main='Histogram of cases per category',col="darkgrey",breaks=20)
+tpsub$Ethnicity<- relevel(tpsub$Ethnicity, "European")
 
 model<-glm(cases~Age*Ethnicity*NZDep+offset(log(Popn)),data=tpsub,family="quasipoisson")
 summary(model)
@@ -554,12 +555,7 @@ cor(exp(res),tpsub$cases)
 cor.test(exp(res),tpsub$cases)
 
 resan<-xtable(anova(model3,test="F"))
-#resan<-xtable(anova(model2,test="F"))
-# print(resan,floating = FALSE)
-
-#xtb<-xtable(summary(model3))
-xtb<-xtable(summary(model2))
-# print(xtb,floating = FALSE)
+xtb<-xtable(summary(model3))
 
 AgeVac<-table(testv$VC,testv$AgeInYears)
 row.names(AgeVac)<-c("Unvaccinated","Dose1","Dose2")
@@ -603,9 +599,10 @@ round((sum(naive$Naive[12:19])/sum(naive$Naive)),2),
 round((sum(naive$Naive[1:30])/sum(naive$Naive)),2),
 round((sum(naive$Naive[1:45])/sum(naive$Naive)),2),
 round((sum(naive$Naive[8:100])/sum(naive$Naive)),2))
-names(propvCohort)<-c("2-5","5-11","5-16","5-18","11-16","11-18","0-29","0-44",">8")
+yr_range<-c("2-5","5-11","5-16","5-18","11-16","11-18","0-29","0-44",">8")
+propvCohort<-cbind(yr_range,propvCohort)
+propvCohort<-as.data.frame(propvCohort)
 write.table(propvCohort,"vaccine_proportions_Cohort.txt",sep=",",row.names=T,col.names=F)
-
 propsv = NULL
 for (i in 1:20 ) {
   propsv[i] = round((sum(naive$Naive[i:13])/sum(naive$Naive)),2)
@@ -709,8 +706,6 @@ costtable50<-read.csv("cost_benefit_50.csv",header=T)
 
 vacp<-read.csv("vacc_predictions.csv",header=T)
 hosp<-read.csv("hospital.csv",header=T)
-resan<-xtable(anova(model3,test="F"))
-xtb<-xtable(summary(model3))
 
 @
 
@@ -726,13 +721,13 @@ This large number of categories, some with small population sizes, leads to both
 
 The Prioritized Ethnicities for cases are:  European; Maori; Pacific Peoples; Asian; Middle Eastern/Latin American/African (MLA); Other Ethnicity; Residual Categories. For the analyses in this report only the first five are used, as these categories cover the overwhelming number of cases, with only 1.9\% (22/1137) of cases having no Prioritized Ethnicity (see \emph{None}, \autoref{table:none}). 
 
-\begin{table}[hbtp]\scriptsize
-<<results=tex,echo=FALSE>>=# This chunk uses "results=tex"
-latex(ttyr, file="",table.env=FALSE,rowname=NULL)
-@
-\caption{Absolute number of measles cases with no ethnicity recorded for specific age and socio-economic deprivation (NZDep) categories from 2007-2014.}
-\label{table:none}
-\end{table}
+% \begin{table}[hbtp]\scriptsize
+% <<results=tex,echo=FALSE>>=# This chunk uses "results=tex"
+% latex(ttyr, file="",table.env=FALSE,rowname=NULL)
+% @
+% \caption{Absolute number of measles cases with no ethnicity recorded for specific age and socio-economic deprivation (NZDep) categories from 2007-2014.}
+% \label{table:none}
+% \end{table}
 
 \begin{sidewaysfigure}
 \begin{center}
@@ -752,18 +747,19 @@ latex(ttyr, file="",table.env=FALSE,rowname=NULL)
 
 Two way interactions are shown in \autoref{sec:app} (\autoref{fig:CaseAgeNzdep}, \autoref{fig:CaseNzdepEth}, \autoref{fig:CaseAgeEth}, \autoref{fig:PerCapAgeNzdep}, \autoref{fig:PerCapNzdepEth}, \autoref{fig:PerCapAgeEth}).
 
-\begin{table}[hbtp]\scriptsize
-\caption{Per capita measles rates}
-<<results=tex,echo=FALSE>>=
-latex(PerCap, file="", table.env=FALSE,rowname=NULL)
-@
-\label{table:percap_rates}
-\end{table}
+% \begin{table}[hbtp]\scriptsize
+% \caption{Per capita measles rates}
+% <<results=tex,echo=FALSE>>=
+% latex(PerCap, file="", table.env=FALSE,rowname=NULL)
+% @
+% \label{table:percap_rates}
+% \end{table}
 
 \begin{table}[hbtp]\footnotesize
-\caption{Proportions of the naive population the would be covered if vaccinated by age groups}
+\caption{Proportions of the na\"{\i}ve population the would be covered if vaccinated by age groups}
 <<results=tex,echo=FALSE>>=
-latex(propvCohort, file="", table.env=FALSE)
+colnames(propvCohort) <- c("Age range", "Proportion")
+latex(propvCohort, file="", table.env=FALSE,rowname=NULL)
 @
 \label{table:vaccine_cohort}
 \end{table}
@@ -774,6 +770,7 @@ The numbers of cases per category and population sizes for the complete data set
 \begin{table}[hbtp] \scriptsize
 \caption{Measles cases (Cases), population sizes (Population) and per capita rates per 10,000 (Per capita) of measles in specific age (Age), ethnicity (Ethnicity) and socio-economic deprivation (NZDep) categories from 2007-2014}
 <<results=tex,echo=FALSE>>=
+colnames(PerCap)<-c("NZDep","Age","Ethnicity","Population","Cases","Per capita")
 latex(PerCap, file="", table.env=FALSE,rowname=NULL)
 @
 \label{table:percap}
@@ -906,13 +903,13 @@ For our measles importation risk analyses, we use arrivals data from New Zealand
 \label{sub:popim}
 
 
-\begin{figure}
+\begin{sidewaysfigure}
 \begin{center}
      \includegraphics[width=0.9\textwidth]{naive_au.pdf}
 \end{center}
 \caption{New Zealand population by age and estimated numbers of na\"{\i}ve people in each age class using National Immunisation Register level data and national census data as the denominator}
 \label{fig:naive_au}
-\end{figure}
+\end{sidewaysfigure}
 
 \begin{figure}
 \begin{center}
@@ -1183,23 +1180,26 @@ The quantity that determines whether an epidemic will occur is the basic reprodu
 
 To understand the transmission dynamics of measles in the partially immune population and how likely an outbreak was of becoming endemic, we estimated $R_v$ from all the outbreaks in New Zealand since 2009. To do this we estimated $R_t$, following an adaptation of the methods in \citep{obidia12,wallinga4}. We are required to compute the generation time for measles to do so. The generation time is the average time an index case infects others after becoming infected. We used a lognormal distribution with mean 12.0 and standard deviation (s.d.) 3.5 from \citep{klinkenberg11}. We then estimated $R_t$ from the incidence data for each outbreak, defining outbreaks in the dataset given their temporal and geographic correlations (\autoref{fig:dhbcases}). The outbreaks we used in our analyses are shown in \autoref{fig:outbreaks}.
 
-\begin{sidewaysfigure}[H]
-      \centering
+\begin{sidewaysfigure}
+\begin{center}
      \includegraphics[width=0.9\textwidth]{cases_by_dhb_2009_2014.pdf}
-     \caption{Measles cases by District Health Board (DHB) from 2009 to 2014}
+          \end{center}
+\caption{Measles cases by District Health Board (DHB) from 2009 to 2014}
      \label{fig:dhbcases}
 \end{sidewaysfigure}
 
-\begin{sidewaysfigure}[H]
-     \centering
+\begin{sidewaysfigure}
+\begin{center}
      \includegraphics[width=0.9\textwidth]{outbreaks_2009_2014.pdf}
+     \end{center}
      \caption{Measles data classified as outbreaks for reproduction number of the infection ($R_v$) estimation from 2009 to 2014}
      \label{fig:outbreaks}
 \end{sidewaysfigure}
 
-\begin{sidewaysfigure}[H]
-     \centering
+\begin{sidewaysfigure}
+\begin{center}
      \includegraphics[width=0.9\textwidth]{averageR0_all_ob.pdf}
+     \end{center}
      \caption{Estimates of $R_v$ for the outbreaks each year, as classified by outbreaks in \autoref{fig:outbreaks}. Sporadic cases are excluded.}
      \label{fig:r0}
 \end{sidewaysfigure}
@@ -1440,7 +1440,6 @@ Attack:	  Number infected in DHB in an outbreak of measles in the absence of any
 Vacc:		Number to be vaccinated in DHB to reduce $\Rr_V$ below one  $\left(\left(x_0-1/\Ro\right)\times\text{Size}\right)$; Proportion: the proportion of the currently na\"{i}ve population requiring vaccination; Na\"{i}ve.post.vaccination: the na\"{i}ve population following catch up vaccination; with Median.outbreak and Mean.outbreak: the expected median and mean outbreak size post--vaccination catch up from 1000 simulations of a stochastic model}\footnote{Note that the median value is what is expected, however, the mean values from 1000 simulations are espeically skewed the small numbers of large outbreaks. The distribution of these outbreaks sizes can be seen in \autoref{fig:sim1} and \autoref{fig:sim}}
 
 <<results=tex,echo=FALSE>>=
-colnames(vacp) <- c("Age range", "Proportion")
 latex(vacp, file="", table.env=FALSE,rowname=NULL)
 @
 \label{table:vacp}
