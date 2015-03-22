@@ -46,7 +46,7 @@ diff <- dose2_num$total - dose2_num$vacc
 
 dose1_merge <- merge(dose1, denom, by.x="cau", by.y="denom", all=T)
 diff <- dose1_merge[,2:8] - dose1_merge[,2:8+7]
-image(as.matrix(diff > 0))
+# image(as.matrix(diff > 0))
 
 au_new <- merge(au_data, dose2_num, by.x="AU2013", by.y="cau", all.x=T)
 au_new$prop <- au_new$vacc / au_new$total
@@ -70,7 +70,7 @@ pal<-c("red","orange","grey","blue","green","yellow")
 cols <- findColours(breaks, pal)
 par(mfrow=c(1,1))
 pdf(paste("nir_census.pdf"), width=7, height=5)
-plot(au, col=cols)
+plot(au, col=cols,lwd=1,lty=3)
 legend("topright",c("0-60%","61-80%","81-100%","101-120%","121-140%",">141%","NA")
        ,fill=c("red","orange","grey","blue","green","yellow","white"),
        bty="n",inset=0.1,title="Percent vaccinated")

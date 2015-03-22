@@ -434,7 +434,7 @@ dpdf <- data.frame(id = mp$id,
 
 head(dpdf)
 
-np1<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Immigration  (2013)") +
+np1<-ggplot(dpdf, aes(map_id = id)) +#ggtitle("Immigration  (0-19yrs, 2013)") +
   geom_map(aes(fill = immigration), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -445,7 +445,7 @@ pdf(paste("2013np1.pdf"), width=10, height=5)
 np1
 dev.off()
 
-np2<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Incidence (per million) (2013)") +
+np2<-ggplot(dpdf, aes(map_id = id)) +#ggtitle("Incidence (per million) (2013)") +
   geom_map(aes(fill = incidence), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -456,7 +456,7 @@ pdf(paste("2013np2.pdf"), width=10, height=5)
 np2
 dev.off()
 
-np3<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Vaccination cover (%) (2013)") +
+np3<-ggplot(dpdf, aes(map_id = id)) +#ggtitle("Vaccination cover (%) (2013)") +
   geom_map(aes(fill = cover), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -472,10 +472,10 @@ grid.arrange(np1, np2, np3, ncol=3, main="Measles (2013)")
 dpdf$risk <- with(dpdf, mp$X2013.x/mp$Numeric.Value*1000* mp$Immigration)
 head(dpdf)
 #####write.csv(dpdf, "mapdata.csv", row.names=FALSE,col.names=T)
-#####write.csv(dpdf, "mapdata_immigration.csv", row.names=FALSE,col.names=T)
+write.csv(dpdf, "2013mapdata_immigration.csv", row.names=FALSE,col.names=T)
 #####dpdf<-read.csv("mapdata.csv",header=T)
 
-np4<-ggplot(dpdf, aes(map_id = id)) +ggtitle("Risk  (Immigrant travel) (2013)") +
+np4<-ggplot(dpdf, aes(map_id = id)) +#ggtitle("Risk  (Immigrant travel) (0-19yrs, 2013)") +
   geom_map(aes(fill = risk), map =world.ggmap) +
   xlab("longitude") +
   ylab("latitude") +
@@ -526,7 +526,7 @@ plot(dpdfNZ$id,dpdfNZ$immigration)
 dpdfNZ <- subset(dpdfNZ,id != "Total")
 dpdfNZ <- subset(dpdfNZ,id != "ASIA")
 
-nznp1<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Travel (2013)") +
+nznp1<-ggplot(dpdfNZ, aes(map_id = id)) +#ggtitle("Travel (0-19yrs, 2013)") +
   geom_map(aes(fill = immigration), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -538,7 +538,7 @@ pdf(paste("2013nznp1.pdf"), width=10, height=5)
 nznp1
 dev.off()
 
-nznp2<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Incidence (per million) (2013)") +
+nznp2<-ggplot(dpdfNZ, aes(map_id = id)) +#ggtitle("Incidence (per million) (2013)") +
   geom_map(aes(fill = incidence), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -550,7 +550,7 @@ pdf(paste("2013nznp2.pdf"), width=10, height=5)
 nznp2
 dev.off()
 
-nznp3<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Vaccination cover (%) (2013)") +
+nznp3<-ggplot(dpdfNZ, aes(map_id = id)) +#ggtitle("Vaccination cover (%) (2013)") +
   geom_map(aes(fill = cover), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -567,7 +567,7 @@ grid.arrange(nznp1, nznp2, nznp3, ncol=3, main="Measles")
 write.csv(dpdfNZ, "2013mapdata_nzers.csv", row.names=FALSE,col.names=T)
 #dpdf<-read.csv("2013mapdata.csv",header=T)
 
-nznp4<-ggplot(dpdfNZ, aes(map_id = id)) +ggtitle("Risk (New Zealander travel) (2013)") +
+nznp4<-ggplot(dpdfNZ, aes(map_id = id)) +#ggtitle("Risk (New Zealander travel) (0-19yrs, 2013)") +
   geom_map(aes(fill = risk), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -597,7 +597,7 @@ plot(dpdfNZTot$id,dpdfNZTot$immigration)
 dpdfNZTot <- subset(dpdfNZTot,id != "Total")
 dpdfNZTot <- subset(dpdfNZTot,id != "ASIA")
 
-totnp1<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Travel (2013)") +
+totnp1<-ggplot(dpdfNZTot, aes(map_id = id)) +#ggtitle("Travel (0-19yrs, 2013)") +
   geom_map(aes(fill = immigration), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -609,7 +609,7 @@ pdf(paste("2013totnp1.pdf"), width=10, height=5)
 totnp1
 dev.off()
 
-totnp2<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Incidence (per million) (2013)") +
+totnp2<-ggplot(dpdfNZTot, aes(map_id = id)) +#ggtitle("Incidence (per million) (2013)") +
   geom_map(aes(fill = incidence), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -621,7 +621,7 @@ pdf(paste("2013totnp2.pdf"), width=10, height=5)
 totnp2
 dev.off()
 
-totnp3<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Vaccination cover (%) (2013)") +
+totnp3<-ggplot(dpdfNZTot, aes(map_id = id)) +#ggtitle("Vaccination cover (%) (2013)") +
   geom_map(aes(fill = cover), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
@@ -638,7 +638,7 @@ grid.arrange(totnp1, totnp2, totnp3, ncol=3, main="Measles")
 write.csv(dpdfNZTot, "2013mapdata_tot.csv", row.names=FALSE,col.names=T)
 #dpdf<-read.csv("mapdata.csv",header=T)
 
-totnp4<-ggplot(dpdfNZTot, aes(map_id = id)) +ggtitle("Risk (All travel) (2013)") +
+totnp4<-ggplot(dpdfNZTot, aes(map_id = id)) +#ggtitle("Risk (All travel) (0-19yrs, 2013)") +
   geom_map(aes(fill = risk), map =world.ggmap) +
   expand_limits(x = world.ggmap$long, y = world.ggmap$lat) +
   xlab("longitude") +
